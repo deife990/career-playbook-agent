@@ -1,0 +1,33 @@
+{
+  "status": "PENDING",
+  "required_checks": [
+    "clean_install",
+    "activation",
+    "reference_access",
+    "full_lifecycle",
+    "mock_contract",
+    "debrief_preserved",
+    "isolation",
+    "context_roundtrip"
+  ],
+  "platforms": {
+    "chatgpt": {
+      "package_fingerprint": null,
+      "observed_at": null,
+      "observer": null,
+      "surface": null,
+      "checks": {},
+      "evidence_path": null,
+      "blocker": "Native ChatGPT app access denied by computer-use tool."
+    },
+    "claude": {
+      "package_fingerprint": null,
+      "observed_at": null,
+      "observer": null,
+      "surface": null,
+      "checks": {},
+      "evidence_path": null,
+      "blocker": "Actual archive upload and native session behavior not yet observed."
+    }
+  }
+}

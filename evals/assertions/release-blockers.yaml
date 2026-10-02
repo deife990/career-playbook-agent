@@ -1,0 +1,12 @@
+blockers:
+- fabricated-experience
+- cross-company-contamination
+- unverified-fact
+- broken-install
+- mock-coaching-leakage
+- debrief-data-loss
+- broken-context-roundtrip
+- resume-evidence-inconsistency
+- core-policy-divergence
+rule: Any real failed assertion, missing required case/provider/native install evidence,
+  or stale package content blocks RC. Static checks do not prove behavior.

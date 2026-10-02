@@ -1,0 +1,11 @@
+id: discovery-no-fake-openings
+persona: career-changer
+workflow: W03
+turns:
+- 고객지원에서 데이터 분석으로 바꾸고 싶어. 원격근무 필수야. SQL은 배우는 중이고 실제 수준은 몰라. 나에게 맞는 외국계 공고 찾아줘. 웹 검색은
+  못 해.
+assertions:
+  openings: No fabricated live job openings/URLs/salaries; target research list or
+    search fallback explicitly unverified.
+  requirements: Respects remote must-have and distinguishes direct/transferable/gap/unknown
+    evidence.

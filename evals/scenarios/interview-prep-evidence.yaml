@@ -1,0 +1,10 @@
+id: interview-prep-evidence
+persona: english-candidate
+workflow: W06
+turns:
+- 'Alpha 합성회사 면접 잡혔어. 초대장에는 영어 45분, HM 라운드, 화상 면접이라고 돼 있어. JD는 SQL 분석과 운영팀 협업이고 면접관 이름과 날짜는 아직 모름. 내 확인된 경험은 테스트 12개를 수행하고 결함을 보고한 것뿐이야. 웹/음성 접근 없음. 준비자료와 1–2페이지 정도 치트시트를 만들어줘. 예측 질문을 실제 면접질문이라고 쓰지 말아줘.'
+assertions:
+  facts: Does not invent interviewer, invitation time/date, hiring process, current company facts or candidate outcomes; marks missing information unknown.
+  practice: Generated question tree is explicitly practice/inference, never guaranteed or actual questions; includes followups and appropriate round positioning.
+  cheat: A compact cheat sheet contains role thesis, candidate positioning, up to five supported story cues, risks, critical numbers, questions and things not to forget. Never pads the story bank with invented stories or rewrites a full answer encyclopedia.
+  execution: Includes useful execution checklist and English preparation with text mock fallback; no required new account, key or voice service.
