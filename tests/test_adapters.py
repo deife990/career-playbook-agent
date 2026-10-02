@@ -26,3 +26,9 @@ def test_generator_rejects_external_symlink(tmp_path):
     from scripts.generate_adapters import sync_tree
     source=tmp_path/'source';source.mkdir();(source/'link.md').symlink_to(ROOT/'README.md')
     with pytest.raises(ValueError,match='symlink'):sync_tree(source,tmp_path/'destination')
+
+def test_unchanged_generation_does_not_rewrite_runtime_files():
+    from scripts.package_inventory import inventory
+    for platform in ['chatgpt','claude']:
+        root=generate(platform);before={p:(root/p).stat().st_mtime_ns for p in inventory(root,platform)}
+        generate(platform);assert before=={p:(root/p).stat().st_mtime_ns for p in inventory(root,platform)}

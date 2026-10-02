@@ -30,17 +30,17 @@ def copy_references(destination):
     if ref.exists():
         for path in ref.iterdir():
             if path.is_dir() and path.name not in ['core','schemas','templates']: shutil.rmtree(path)
-    (destination/'core-index.json').write_text(json.dumps(core_hashes(),indent=2)+'\n')
+    write_if_changed(destination/'core-index.json',(json.dumps(core_hashes(),indent=2)+'\n').encode())
 def generate(platform):
     workflows={frontmatter(p)[0]['id']:p.name for p in (ROOT/'core/workflows').glob('w*.md')}
     target=ROOT/'adapters'/platform if platform=='chatgpt' else ROOT/'adapters/claude/careerpilot'
     copy_references(target)
     host=ROOT/f'adapters/{platform}/host.md'
-    (target/'references/host.md').write_bytes(host.read_bytes())
+    write_if_changed(target/'references/host.md',host.read_bytes())
     if platform=='chatgpt':
         skills=target/'skills'
         manifest=load(target/'plugin.json'); manifest['version']=(ROOT/'VERSION').read_text().strip()
-        (target/'plugin.json').write_text(json.dumps(manifest,indent=2)+'\n')
+        write_if_changed(target/'plugin.json',(json.dumps(manifest,indent=2)+'\n').encode())
         for entry in load(ROOT/'adapters/skills.json'):
             name=entry['name']; workflow=entry['workflow']; base='../../references'
             selected=f"{base}/core/workflows/{workflows[workflow]}" if workflow else f'{base}/core/router/routing.md' if name=='careerpilot-router' else f'{base}/core/state/state.md' if name=='career-state' else f'{base}/core/capabilities/experience-mining.md'
@@ -83,7 +83,7 @@ No voice: text mock. No accessible reference files: explain the limitation, do n
 Invent evidence, mix companies, promote inference to fact, teach during mock, overwrite debriefs,
 submit/send/accept/decline without explicit user authorization, require any new service/key/account.
 '''
-            p=skills/name/'SKILL.md'; p.parent.mkdir(parents=True,exist_ok=True); p.write_text(text)
+            p=skills/name/'SKILL.md'; write_if_changed(p,text.encode())
             validate_skill(p,True)
         expected={e['name'] for e in load(ROOT/'adapters/skills.json')}
         for path in skills.iterdir():
@@ -128,14 +128,22 @@ Follow the selected artifact contract with Sources/Unknowns/one next action. Mai
 evidence links, opportunity isolation and append-only interview history. Use only available host
 capabilities. No generic numeric fit score or hiring prediction. The user makes final decisions.
 '''
-        (target/'SKILL.md').write_text(text); validate_skill(target/'SKILL.md')
+        write_if_changed(target/'SKILL.md',text.encode()); validate_skill(target/'SKILL.md')
         # Convenience references required by the specification, generated from canonical Core.
         for w,file in workflows.items():
-            (target/'references'/f'{w.lower()}.md').write_text(f'# {w}\nRead [workflow](core/workflows/{file}) and execute it.\n')
+            write_if_changed(target/'references'/f'{w.lower()}.md',f'# {w}\nRead [workflow](core/workflows/{file}) and execute it.\n'.encode())
         for alias,path in {'state':'core/state/state.md','evidence':'core/principles/evidence-policy.md','research':'core/principles/research-policy.md','artifacts':'core/artifacts/candidate-strategy.md'}.items():
-            (target/'references'/f'{alias}.md').write_text(f'# {alias}\nRead [contract]({path}).\n')
+            write_if_changed(target/'references'/f'{alias}.md',f'# {alias}\nRead [contract]({path}).\n'.encode())
         templates=target/'templates'
         sync_tree(ROOT/'templates',templates)
+    from scripts.package_inventory import inventory
+    allowed=set(inventory(target,platform))|({'README.md','host.md'} if platform=='chatgpt' else set())
+    for path in sorted(target.rglob('*'),reverse=True):
+        if path.is_file() and path.relative_to(target).as_posix() not in allowed: path.unlink(missing_ok=True)
+        elif path.is_dir():
+            try:
+                if not any(path.iterdir()): path.rmdir()
+            except FileNotFoundError: pass
     validate_links(target)
     return target
 def main():
