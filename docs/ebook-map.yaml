@@ -1,69 +1,91 @@
 ebook: AI-Powered Job Search Playbook
-chapter_source: Manuscript not provided; do not invent chapter numbers.
+chapter_source: Verified local final manuscript; see fixtures/ebook/chapter-index.json
 topics:
 - topic_id: requirements
   topic: 이직 조건 정의
-  chapter: null
+  chapter: 2
   workflow: W01
   capabilities:
   - career-analysis
   book_to_agent_cta: Try this with CareerPilot
   agent_to_book_ref:
     topic_id: requirements
-    chapter: null
+    chapter: 2
+    chapter_ids: &id001
+    - CH02
+  chapters: *id001
 - topic_id: market-position
   topic: 현재 커리어와 시장가치
-  chapter: null
+  chapter: 2
   workflow: W02
   capabilities:
   - career-analysis
   book_to_agent_cta: Try this with CareerPilot
   agent_to_book_ref:
     topic_id: market-position
-    chapter: null
+    chapter: 2
+    chapter_ids: &id002
+    - CH02
+    - CH05
+  chapters: *id002
 - topic_id: role-models
   topic: 롤모델과 로드맵
-  chapter: null
+  chapter: 5
   workflow: W02
   capabilities:
   - career-analysis
   book_to_agent_cta: Try this with CareerPilot
   agent_to_book_ref:
     topic_id: role-models
-    chapter: null
+    chapter: 5
+    chapter_ids: &id003
+    - CH05
+  chapters: *id003
 - topic_id: target-mapping
   topic: 회사/직무와 Core·Stretch·Strategic Entry
-  chapter: null
+  chapter: 5
   workflow: W03
   capabilities:
   - role-mapping
   book_to_agent_cta: Try this with CareerPilot
   agent_to_book_ref:
     topic_id: target-mapping
-    chapter: null
+    chapter: 5
+    chapter_ids: &id004
+    - CH05
+    - CH06
+  chapters: *id004
 - topic_id: job-intelligence
   topic: JD·산업·과거채용·공개 경력패턴·채용가설
-  chapter: null
+  chapter: 7
   workflow: W04
   capabilities:
   - job-research
   book_to_agent_cta: Try this with CareerPilot
   agent_to_book_ref:
     topic_id: job-intelligence
-    chapter: null
+    chapter: 7
+    chapter_ids: &id005
+    - CH07
+    - CH08
+  chapters: *id005
 - topic_id: ideal-candidate
   topic: 독립 Ideal Candidate와 근거 매핑
-  chapter: null
+  chapter: 8
   workflow: W04
   capabilities:
   - job-research
   book_to_agent_cta: Try this with CareerPilot
   agent_to_book_ref:
     topic_id: ideal-candidate
-    chapter: null
+    chapter: 8
+    chapter_ids: &id006
+    - CH08
+    - CH09
+  chapters: *id006
 - topic_id: experience
   topic: 경험 채굴과 STAR
-  chapter: null
+  chapter: 3
   workflow: W05
   capabilities:
   - experience-mining
@@ -71,10 +93,14 @@ topics:
   book_to_agent_cta: Try this with CareerPilot
   agent_to_book_ref:
     topic_id: experience
-    chapter: null
+    chapter: 3
+    chapter_ids: &id007
+    - CH03
+    - CH16
+  chapters: *id007
 - topic_id: application
   topic: 이력서·지원답변·LinkedIn·포트폴리오
-  chapter: null
+  chapter: 10
   workflow: W05
   capabilities:
   - resume
@@ -84,30 +110,43 @@ topics:
   book_to_agent_cta: Try this with CareerPilot
   agent_to_book_ref:
     topic_id: application
-    chapter: null
+    chapter: 10
+    chapter_ids: &id008
+    - CH10
+    - CH11
+    - CH12
+    - CH13
+  chapters: *id008
 - topic_id: outreach
   topic: 리크루터·네트워킹
-  chapter: null
+  chapter: 11
   workflow: W05
   capabilities:
   - networking
   book_to_agent_cta: Try this with CareerPilot
   agent_to_book_ref:
     topic_id: outreach
-    chapter: null
+    chapter: 11
+    chapter_ids: &id009
+    - CH11
+    - CH13
+  chapters: *id009
 - topic_id: red-team
   topic: 리크루터·HM·회의적 면접관
-  chapter: null
+  chapter: 14
   workflow: W05
   capabilities:
   - red-team
   book_to_agent_cta: Try this with CareerPilot
   agent_to_book_ref:
     topic_id: red-team
-    chapter: null
+    chapter: 14
+    chapter_ids: &id010
+    - CH14
+  chapters: *id010
 - topic_id: interview
   topic: 라운드·면접관·질문트리·치트시트
-  chapter: null
+  chapter: 15
   workflow: W06
   capabilities:
   - interviewer-intelligence
@@ -115,10 +154,16 @@ topics:
   book_to_agent_cta: Try this with CareerPilot
   agent_to_book_ref:
     topic_id: interview
-    chapter: null
+    chapter: 15
+    chapter_ids: &id011
+    - CH15
+    - CH16
+    - CH18
+    - CH19
+  chapters: *id011
 - topic_id: mock
   topic: 모의면접과 음성
-  chapter: null
+  chapter: 17
   workflow: W07
   capabilities:
   - voice-mock
@@ -126,43 +171,307 @@ topics:
   book_to_agent_cta: Try this with CareerPilot
   agent_to_book_ref:
     topic_id: mock
-    chapter: null
+    chapter: 17
+    chapter_ids: &id012
+    - CH17
+  chapters: *id012
 - topic_id: debrief
   topic: 실제 면접 복기와 피드백 루프
-  chapter: null
+  chapter: 17
   workflow: W08
   capabilities:
   - story-bank
   book_to_agent_cta: Try this with CareerPilot
   agent_to_book_ref:
     topic_id: debrief
-    chapter: null
+    chapter: 17
+    chapter_ids: &id013
+    - CH17
+    - CH18
+  chapters: *id013
 - topic_id: offer
   topic: 보상·레퍼런스·검증·오퍼결정
-  chapter: null
+  chapter: 20
   workflow: W09
   capabilities:
   - compensation
   book_to_agent_cta: Try this with CareerPilot
   agent_to_book_ref:
     topic_id: offer
-    chapter: null
+    chapter: 20
+    chapter_ids: &id014
+    - CH20
+    - CH21
+  chapters: *id014
 - topic_id: pipeline
   topic: 지원현황·거절학습
-  chapter: null
+  chapter: 6
   workflow: W03
   capabilities:
   - application-pipeline
   book_to_agent_cta: Try this with CareerPilot
   agent_to_book_ref:
     topic_id: pipeline
-    chapter: null
+    chapter: 6
+    chapter_ids: &id015
+    - CH06
+    - CH22
+  chapters: *id015
 - topic_id: portable-context
   topic: Career Context Pack
-  chapter: null
+  chapter: 3
   workflow: W01
   capabilities: []
   book_to_agent_cta: Try this with CareerPilot
   agent_to_book_ref:
     topic_id: portable-context
-    chapter: null
+    chapter: 3
+    chapter_ids: &id016
+    - CH03
+    - CH04
+    - CH22
+  chapters: *id016
+manuscript_sha256: 8e35a2060e035160cfbd3128058d37f333a2448026395b25fa8fd346514f4a65
+chapters:
+- id: CH01
+  number: 1
+  title: AI에게 결과를 맡기는 취업 준비
+  workflows:
+  - W01
+  book_to_agent_cta: Try this with CareerPilot
+  topics: []
+- id: CH02
+  number: 2
+  title: 원하는 이직과 현재 위치를 함께 정의하기
+  workflows:
+  - W01
+  - W02
+  book_to_agent_cta: Try this with CareerPilot
+  topics:
+  - requirements
+  - market-position
+- id: CH03
+  number: 3
+  title: 경력을 사실과 이야기로 정리하기
+  workflows:
+  - W01
+  - W05
+  book_to_agent_cta: Try this with CareerPilot
+  topics:
+  - experience
+  - portable-context
+- id: CH04
+  number: 4
+  title: 프로젝트로 맥락을 유지하기
+  workflows:
+  - W01
+  book_to_agent_cta: Try this with CareerPilot
+  topics:
+  - portable-context
+- id: CH05
+  number: 5
+  title: Role Model로 다음 직무의 이름 찾기
+  workflows:
+  - W02
+  - W03
+  book_to_agent_cta: Try this with CareerPilot
+  topics:
+  - market-position
+  - role-models
+  - target-mapping
+- id: CH06
+  number: 6
+  title: 지원할 공고를 선별하기
+  workflows:
+  - W03
+  book_to_agent_cta: Try this with CareerPilot
+  topics:
+  - target-mapping
+  - pipeline
+- id: CH07
+  number: 7
+  title: 회사·산업·조직의 단서 읽기
+  workflows:
+  - W04
+  book_to_agent_cta: Try this with CareerPilot
+  topics:
+  - job-intelligence
+- id: CH08
+  number: 8
+  title: JD에서 채용 가설과 후보자 기준 만들기
+  workflows:
+  - W04
+  book_to_agent_cta: Try this with CareerPilot
+  topics:
+  - job-intelligence
+  - ideal-candidate
+- id: CH09
+  number: 9
+  title: 내가 어떤 후보자로 기억될지 정하기
+  workflows:
+  - W04
+  - W05
+  book_to_agent_cta: Try this with CareerPilot
+  topics:
+  - ideal-candidate
+- id: CH10
+  number: 10
+  title: Master Resume에서 회사별 Resume로
+  workflows:
+  - W05
+  book_to_agent_cta: Try this with CareerPilot
+  topics:
+  - application
+- id: CH11
+  number: 11
+  title: LinkedIn을 발견 가능한 경력으로 만들기
+  workflows:
+  - W05
+  book_to_agent_cta: Try this with CareerPilot
+  topics:
+  - application
+  - outreach
+- id: CH12
+  number: 12
+  title: Digital Footprint와 Portfolio로 증거 보여주기
+  workflows:
+  - W05
+  - W06
+  book_to_agent_cta: Try this with CareerPilot
+  topics:
+  - application
+- id: CH13
+  number: 13
+  title: Cover Letter와 지원 질문에 답하기
+  workflows:
+  - W05
+  book_to_agent_cta: Try this with CareerPilot
+  topics:
+  - application
+  - outreach
+- id: CH14
+  number: 14
+  title: 제출 전에 탈락 이유 찾기
+  workflows:
+  - W05
+  book_to_agent_cta: Try this with CareerPilot
+  topics:
+  - red-team
+- id: CH15
+  number: 15
+  title: 각 면접 라운드의 평가 목적 읽기
+  workflows:
+  - W06
+  book_to_agent_cta: Try this with CareerPilot
+  topics:
+  - interview
+- id: CH16
+  number: 16
+  title: 예상 질문을 Story Bank와 연결하기
+  workflows:
+  - W06
+  - W07
+  book_to_agent_cta: Try this with CareerPilot
+  topics:
+  - experience
+  - interview
+- id: CH17
+  number: 17
+  title: GPT-Live 모의면접과 실제 면접 복기 연결하기
+  workflows:
+  - W07
+  - W08
+  book_to_agent_cta: Try this with CareerPilot
+  topics:
+  - mock
+  - debrief
+- id: CH18
+  number: 18
+  title: 라운드별로 답변과 질문을 바꾸기
+  workflows:
+  - W06
+  - W08
+  book_to_agent_cta: Try this with CareerPilot
+  topics:
+  - interview
+  - debrief
+- id: CH19
+  number: 19
+  title: 면접 당일의 운영 실수 줄이기
+  workflows:
+  - W06
+  book_to_agent_cta: Try this with CareerPilot
+  topics:
+  - interview
+- id: CH20
+  number: 20
+  title: Compensation·Reference·Background Check 준비하기
+  workflows:
+  - W09
+  book_to_agent_cta: Try this with CareerPilot
+  topics:
+  - offer
+- id: CH21
+  number: 21
+  title: Offer를 연봉과 커리어 자본으로 비교하기
+  workflows:
+  - W09
+  book_to_agent_cta: Try this with CareerPilot
+  topics:
+  - offer
+- id: CH22
+  number: 22
+  title: 탈락을 다음 지원의 자료로 바꾸기
+  workflows:
+  - W03
+  - W08
+  - W09
+  book_to_agent_cta: Try this with CareerPilot
+  topics:
+  - pipeline
+  - portable-context
+- id: CH23
+  number: 23
+  title: 여러 단계의 일을 맡기는 Agent Brief
+  workflows:
+  - W01
+  - W04
+  - W05
+  - W06
+  book_to_agent_cta: Try this with CareerPilot
+  topics: []
+- id: CH24
+  number: 24
+  title: 네 가지 실습으로 채용 프로젝트 운영하기
+  workflows:
+  - W03
+  - W04
+  - W05
+  - W06
+  - W07
+  - W08
+  book_to_agent_cta: Try this with CareerPilot
+  topics: []
+minimum_files:
+- book_file: Career Facts Sheet
+  state_files:
+  - career-profile.json
+  - preferences.json
+- book_file: Master Resume
+  state_files:
+  - career-profile.json:resume_versions
+- book_file: Story Bank
+  state_files:
+  - story-bank.json
+- book_file: Target Company Notes
+  state_files:
+  - applications/<id>.json:opportunity.research
+  - applications/<id>.json:sources
+  - applications/<id>.json:claims
+- book_file: Application Tracker
+  state_files:
+  - applications/<id>.json:opportunity.status_history
+  - applications/<id>.json:next_actions
+- book_file: Interview Log
+  state_files:
+  - applications/<id>.json:interviews

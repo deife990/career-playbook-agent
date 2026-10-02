@@ -5,7 +5,8 @@ selected applications/<id>.json. Persistent context availability is a host capab
 promise. Never claim a write or cross-chat memory without an actual save/read capability.
 Global: profile/goals/skills/evidence/stories/original requirements, Master Resume, global LinkedIn
 review/portfolio decisions and their source/claim provenance. Persist these in career-profile.json
-resume_versions/linkedin_reviews/portfolio_artifacts/claims; opportunity_id stays null. Opportunity: company/role/JD,
+resume_versions/linkedin_reviews/portfolio_artifacts/claims; global direction decisions and roadmap
+next actions persist in decisions/next_actions, with opportunity_id null. Opportunity: company/role/JD,
 sources/claims/research/hypotheses/strategy/resumes/interviews/offers/decisions/next actions.
 Assign stable IDs when persisting. Every local entity carries the selected opportunity_id.
 Do not resolve a company from a generic “여기” with several active applications; ask which one.

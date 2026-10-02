@@ -35,3 +35,10 @@
   under the computer-use tool policy for software outside a recognized marketplace. Package
   preparation and CLI behavioral evaluation do not require this confirmation. Native evidence
   remains pending until actual observed installation and behavior; no simulated signoff.
+
+- D013: Final local ebook manuscript discovered under the requested workspace outputs directory.
+  Replaced provisional null chapter mapping with verified CH01–CH24 titles and an immutable source
+  hash snapshot. Private author notes/case material are not copied. Chapter numbers are now sourced.
+- D014: Global career-direction decisions and roadmap actions also require portable recovery,
+  stored in CareerProfile decisions/next_actions with null opportunity_id. Added regional/global/
+  teammate/reference round types and explicit ebook-derived preparation coverage before freezing RC.

@@ -29,3 +29,11 @@ def test_progressive_reference_shim_loads_only_selected_workflow():
         _,hashes=package_context(generate(platform),platform,case)
         workflows=[p for p in hashes if '/core/workflows/' in p]
         assert len(workflows)==1 and 'w07' in workflows[0]
+
+def test_shim_resolves_host_temp_directory_aliases(tmp_path):
+    from scripts.generate_adapters import generate
+    from scripts.run_model_evals import package_context
+    target=generate('chatgpt');alias=tmp_path/'alias';alias.symlink_to(target,target_is_directory=True)
+    case=yaml.safe_load((ROOT/'evals/scenarios/interview-prep-evidence.yaml').read_text())
+    _,hashes=package_context(alias,'chatgpt',case)
+    assert 'skills/interview-prep/SKILL.md' in hashes

@@ -29,7 +29,9 @@ invitation/round, prior actual debrief and confirmed story bank. Multiple compan
 7. Apply [English/global mode](../capabilities/english-global.md) if requested. Decide whether
    [portfolio/interview handout](../capabilities/portfolio.md) materially helps this round.
 8. Create execution checklist: invite/time zone/link or venue, equipment, necessary documents,
-   answer pacing, clarification, questions, closing and follow-up plan using actual facts.
+   answer pacing, clarification, questions, closing and follow-up plan using actual facts. Include
+   appropriate clothing, travel/arrival buffer, printed materials and equipment/connection backup
+   for the actual format; proposed buffers are recommendations, never invented invitation times.
 9. Output [Interview Pack](../artifacts/interview-pack.md) and printable
    [cheat sheet](../artifacts/interview-cheat-sheet.md) with seven sections and at most five stories.
 10. Offer W07 practice; [voice_mock](../capabilities/voice-mock.md) when the host supports it,

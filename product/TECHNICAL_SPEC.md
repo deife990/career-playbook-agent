@@ -66,5 +66,5 @@ in CI may require an already-authenticated self-hosted runner; never add a runti
 
 ## Book integration
 docs/ebook-map.yaml maps topics to workflows/capabilities and stable topic IDs for bidirectional
-links. No fabricated chapter numbers; chapter metadata remains null until the actual manuscript
-is available. Independent use never requires the book.
+links. Chapter IDs/titles are verified against the local final 24-chapter manuscript; the index records
+its hash without copying private author material. Independent use never requires the book.

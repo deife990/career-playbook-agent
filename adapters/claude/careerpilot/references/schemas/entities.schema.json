@@ -1405,6 +1405,11 @@
             "EXECUTIVE",
             "FINAL",
             "UNKNOWN",
+            "TEAMMATE",
+            "REGIONAL",
+            "GLOBAL",
+            "REFERENCE",
+            "BACKGROUND_CHECK",
             null
           ]
         },
@@ -2370,6 +2375,38 @@
             "anyOf": [
               {
                 "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/Claim"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "decisions": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/Decision"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "next_actions": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/NextAction"
               },
               {
                 "type": "null"

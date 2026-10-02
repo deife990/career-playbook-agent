@@ -80,3 +80,8 @@ def test_unknown_collection_flag_still_preserves_debrief():
 def test_jd_source_must_reference_source_entity():
     p=fixture();p['applications/alpha.json']['opportunity']['job_analysis']={'id':'jd-a','opportunity_id':'alpha','jd_source_ids':['profile']}
     with pytest.raises(ValueError,match='Dangling'): validate(p)
+
+def test_global_roadmap_choices_and_next_actions_survive_export():
+    p=fixture();p['career-profile.json']['decisions']=[{'id':'direction-choice','opportunity_id':None,'subject':'Career direction','choice':'Operations analytics','user_confirmed':True}]
+    p['career-profile.json']['next_actions']=[{'id':'roadmap-action','opportunity_id':None,'text':'Confirm one testing story','owner':'USER','status':'OPEN','evidence_ids':['e-1']}]
+    restored=import_pack(export(p));assert restored['career-profile.json']==p['career-profile.json']

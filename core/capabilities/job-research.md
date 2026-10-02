@@ -12,3 +12,6 @@ confidence and recruiter verification questions. First-90-day hypothesis uses de
 outcomes, never invented actual team OKRs. Independent Ideal Candidate precedes user mapping.
 Research budget defaults to relevant evidence for the decision; disclose unanswered stages.
 No tools→supplied-source analysis with explicit uncertainty; no “verified” badge on model guesses.
+
+For global employers distinguish HQ, APAC/regional and local-country responsibilities using
+actual sources. Country presence alone does not establish reporting lines or local authority.

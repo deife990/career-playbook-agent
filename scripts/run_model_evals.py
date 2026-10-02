@@ -28,6 +28,7 @@ def extract_json(text):
     fenced=re.search(r'```(?:json)?\s*\n(.*?)\n```',text,re.S)
     return json.loads(fenced.group(1) if fenced else text)
 def package_context(root,platform,case):
+    root=Path(root).resolve()
     ref=root/'references'; paths=[ref/'host.md',ref/'core/router/routing.md',ref/'core/router/intent-catalog.yaml',ref/'core/state/state.md',*sorted((ref/'core/principles').glob('*.md'))]
     if case.get('workflow'):
         workflow=next(p for p in (ref/'core/workflows').glob('w*.md') if frontmatter(p)[0]['id']==case['workflow'])
@@ -131,7 +132,7 @@ def main():
     # Immutable package snapshot prevents builds/generation in the shared workspace from changing
     # the package under a running subject. The evaluated snapshot's digest is recorded.
     snapshot=tempfile.TemporaryDirectory(prefix='careerpilot-package-')
-    root=Path(snapshot.name)/'careerpilot'; shutil.copytree(source,root); digest=fingerprint(root)
+    root=Path(snapshot.name).resolve()/'careerpilot'; shutil.copytree(source,root); digest=fingerprint(root)
     suite=sorted((ROOT/'evals/scenarios').glob('*.yaml'))
     suite_digest=hashlib.sha256(''.join(p.read_text() for p in suite).encode()).hexdigest()
     report_path=ROOT/f'dist/evals/{args.platform}.json'; report_path.parent.mkdir(parents=True,exist_ok=True)
