@@ -1,0 +1,74 @@
+[
+  {
+    "name": "careerpilot-router",
+    "workflow": null,
+    "description": "Route natural career planning, job, application, interview and offer requests. Use when the next step is unclear.",
+    "output": "Career planning and next-step routing."
+  },
+  {
+    "name": "career-setup",
+    "workflow": "W01",
+    "description": "Start job-change preparation, organize career facts and requirements. Use for 이직 준비 시작 or career setup.",
+    "output": "Career Brief"
+  },
+  {
+    "name": "career-strategy",
+    "workflow": "W02",
+    "description": "Choose career direction and build a roadmap from evidence and original requirements.",
+    "output": "Career Roadmap"
+  },
+  {
+    "name": "opportunity-discovery",
+    "workflow": "W03",
+    "description": "Find and screen target companies and roles as Core, Stretch or Strategic Entry.",
+    "output": "Target Opportunity List"
+  },
+  {
+    "name": "job-intelligence",
+    "workflow": "W04",
+    "description": "Analyze a job URL, JD text, PDF, screenshot or company and role. Use for 이 공고 어때 or job intelligence.",
+    "output": "Candidate Strategy Brief + Sources"
+  },
+  {
+    "name": "experience-mining",
+    "workflow": null,
+    "description": "Extract truthful career evidence from conversation, supplied files or explicitly authorized available sources.",
+    "output": "Confirmed Career Evidence"
+  },
+  {
+    "name": "application-prep",
+    "workflow": "W05",
+    "description": "Prepare truthful resumes, LinkedIn audit, portfolio decisions, cover letters, answers and recruiter drafts.",
+    "output": "Application Pack"
+  },
+  {
+    "name": "interview-prep",
+    "workflow": "W06",
+    "description": "Prepare a scheduled or next-round interview, stories, questions and a compact cheat sheet.",
+    "output": "Interview Intelligence Pack"
+  },
+  {
+    "name": "mock-interview",
+    "workflow": "W07",
+    "description": "Run a one-question-at-a-time mock interview with feedback only after explicit end, including English and pressure modes.",
+    "output": "Mock Review after explicit end"
+  },
+  {
+    "name": "interview-debrief",
+    "workflow": "W08",
+    "description": "Collect actual questions and answers first after 면접 끝났어, then revise next-round strategy and preserve records.",
+    "output": "Next Round Strategy"
+  },
+  {
+    "name": "offer-decision",
+    "workflow": "W09",
+    "description": "Evaluate actual offers against original requirements and prepare negotiation, reference and background-check decisions.",
+    "output": "Offer Decision Brief"
+  },
+  {
+    "name": "career-state",
+    "workflow": null,
+    "description": "Export or restore a portable Career Context Pack and select company-specific context without mixing applications.",
+    "output": "Portable Career Context Pack"
+  }
+]

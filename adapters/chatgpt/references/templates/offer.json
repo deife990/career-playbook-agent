@@ -1,0 +1,14 @@
+{
+  "id": null,
+  "opportunity_id": null,
+  "compensation": null,
+  "deadline": null,
+  "role": null,
+  "location": null,
+  "manager": null,
+  "conditions": null,
+  "original_requirement_ids": null,
+  "evaluation": null,
+  "decision": null,
+  "decision_event": null
+}
