@@ -41,6 +41,8 @@ def validate(pack):
             if not isinstance(interview,dict): continue
             if interview.get('round'): rounds[interview['round']['id']]=interview['round']
             for key,field in [('question_ids','questions'),('answer_ids','answers')]: typed[key].update({v['id']:v for v in interview.get(field) or [] if isinstance(v,dict)})
+    evidence={v['id']:v for v in profile.get('evidence') or [] if isinstance(v,dict)}
+    sources=dict(typed['source_ids'])
     for file in declared:
         path=file['path']; reject(not PATH.fullmatch(path),'Unsafe path')
         expected_schema=path[:-5] if '/' not in path else 'application'
@@ -58,7 +60,7 @@ def validate(pack):
                 index[node['id']]=node; contexts[node['id']]=scope
                 if 'opportunity_id' in node or scope:
                     reject(node.get('opportunity_id')!=scope,'Cross-company scope contamination')
-            if 'own_role' in node:
+            if node.get('id') in evidence:
                 reject(scope is not None,'Career evidence must remain global')
                 evidence[node['id']]=node
                 reject(node.get('sensitive') is True,'Sensitive evidence cannot be exported')
@@ -84,7 +86,7 @@ def validate(pack):
                 reject(not refs or node.get('verification')!='VERIFIED','Unsupported verified claim')
                 support=[sources.get(s) for s in refs]
                 reject(any(s is None or s.get('access_status')!='ACCESSED' for s in support),'Unread source as fact')
-                reject(all(s.get('kind') in ['COMMUNITY','CANDIDATE_REPORT','USER_SUPPLIED'] for s in support),'Weak sources cannot verify organization fact')
+                reject(not any(s.get('kind') in ['OFFICIAL','PRIMARY','INSTITUTIONAL','REPORTING','PROFESSIONAL_PROFILE'] for s in support),'Weak sources cannot verify organization fact')
         if node.get('classification')=='INFERENCE': reject(node.get('verification')=='VERIFIED','Inference promoted to fact')
         if 'url' in node and node.get('url'):
             parsed=urlparse(node['url']); reject(parsed.scheme not in ['http','https'] or not parsed.netloc or parsed.username is not None,'Unsafe source URL')

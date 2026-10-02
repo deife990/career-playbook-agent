@@ -90,3 +90,16 @@ def test_unknown_original_requirements_can_be_filled_progressively():
     old=fixture();old['preferences.json']['original_requirements']=None
     new=fixture();new['manifest.json']['revision']=1
     assert import_pack(export(new),old)['preferences.json']['original_requirements']==new['preferences.json']['original_requirements']
+
+def test_partial_evidence_is_recognized_without_optional_own_role_field():
+    p=fixture();del p['career-profile.json']['evidence'][0]['own_role']
+    p['applications/alpha.json']['resume_versions']=[{'id':'resume-a','opportunity_id':'alpha','bullets':[{'text':'Tested 12 cases','evidence_ids':['e-1'],'action':'KEEP'}]}]
+    validate(p)
+    p['career-profile.json']['evidence'][0]['sensitive']=True
+    with pytest.raises(ValueError,match='Sensitive'):validate(p)
+
+def test_unknown_source_quality_cannot_verify_organization_fact():
+    p=fixture();app=p['applications/alpha.json']
+    app['sources']=[{'id':'src-a','opportunity_id':'alpha','kind':None,'access_status':'ACCESSED'}]
+    app['claims']=[{'id':'claim-a','opportunity_id':'alpha','text':'Team grows','classification':'VERIFIED FACT','verification':'VERIFIED','source_ids':['src-a']}]
+    with pytest.raises(ValueError,match='Weak'):validate(p)
