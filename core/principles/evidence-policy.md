@@ -30,3 +30,9 @@ Strong Evidence: directly relevant, confirmed user's actions/outcomes.
 Transferable Evidence: analogous skill with an explicit bridge and acknowledged limitation.
 Gap: known missing requirement after asking, not assumed from resume omission.
 Unknown: insufficient information. Do not turn absence in a resume into absence of ability.
+
+## Draft integrity
+Factual draft sentences must be supported too. Do not infer exhaustive scope, process improvements,
+handover efficiency, independent decisions or causal impact from merely checking/documenting.
+When outcome unknown, retain the observed action only. “Confirm this draft” is not permission to
+add plausible experience. Illustrative future actions stay explicitly conditional recommendations.

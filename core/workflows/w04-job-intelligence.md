@@ -55,6 +55,10 @@ Execute stages in this order, using [research capability](../capabilities/job-re
 10. **user_evidence_mapping**: now inspect confirmed profile/evidence. Map each criterion as Strong
     Evidence / Transferable Evidence / Gap / Unknown with IDs, bridge and limitation. Ask only
     missing high-impact examples through [experience mining](../capabilities/experience-mining.md).
+    A criterion with no supplied/confirmed evidence is Unknown, never Gap. Use Gap only when the
+    user confirms a missing skill or evidence establishes a mismatch. Do not put unknown SQL,
+    qualifications or experience in the Gaps section, even labeled “미확인” or “potential gap”.
+    Keep unknown criteria exclusively in Unknowns and ask a verification question.
 11. **candidate_positioning**: construct a truthful positioning thesis supported by 2–3 evidence
     anchors; name what the user can prove and where to acknowledge a gap.
 12. **risks_unknowns_verification**: use [red team](../capabilities/red-team.md) for recruiter/HM/

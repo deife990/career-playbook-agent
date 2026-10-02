@@ -14,3 +14,10 @@ Audit each draft against evidence, Master Resume, LinkedIn, dates/scale/role and
 JD. Run [red team](red-team.md), then repeat consistency audit after fixes. Discrepancies stop final
 status; request correction. Give a change rationale and unsupported-items checklist.
 Finalize only after factual confirmation. No automatic upload/submission or editing a live profile.
+
+## No invented qualitative impact, including drafts
+If outcomes are Unknown, describe only actual actions. Never add “exhaustive review”, efficiency
+gain, standards creation, handover improvement or defect prioritization unless confirmed evidence
+supports those exact actions/results. Qualitative does not mean plausible or assumed. Drafts obey
+the same rule: “user confirmation needed” does not authorize invented draft facts. Hypothetical
+possibilities belong in a separate conditional verification question, never in a candidate bullet.

@@ -2312,6 +2312,70 @@
               }
             ]
           }
+        },
+        "resume_versions": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/ResumeVersion"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "linkedin_reviews": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/LinkedInReview"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "portfolio_artifacts": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/PortfolioArtifact"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "claims": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/Claim"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
         }
       },
       "required": [

@@ -40,3 +40,34 @@ def test_invalid_import_is_atomic():
     p=fixture(); before=copy.deepcopy(p)
     with pytest.raises(ValueError): import_pack('{}',p)
     assert p==before
+
+def test_global_master_resume_survives_portable_roundtrip():
+    p=fixture(); p['career-profile.json']['resume_versions']=[{'id':'master-resume','opportunity_id':None,'kind':'MASTER','bullets':[{'text':'Tested 12 cases','evidence_ids':['e-1'],'action':'KEEP'}]}]
+    restored=import_pack(export(p)); assert restored['career-profile.json']['resume_versions']==p['career-profile.json']['resume_versions']
+def test_wrong_entity_type_cannot_be_a_source():
+    p=fixture(); p['applications/alpha.json']['claims']=[{'id':'claim-a','opportunity_id':'alpha','source_ids':['profile']}]
+    with pytest.raises(ValueError,match='Dangling'): validate(p)
+def test_partial_debrief_can_complete_without_losing_prior_fields():
+    p=fixture(); p['applications/alpha.json']['interviews']=[{'id':'int-a','opportunity_id':'alpha','round':{'id':'round-a','opportunity_id':'alpha'},'debriefs':[{'id':'debrief-a','opportunity_id':'alpha','round_id':'round-a','new_company_information':['Original observation'],'collection_complete':False}]}]
+    incoming=copy.deepcopy(p); incoming['manifest.json']['revision']=1
+    d=incoming['applications/alpha.json']['interviews'][0]['debriefs'][0]; d['collection_complete']=True;d['new_company_information'].append('Additional observation')
+    assert import_pack(export(incoming),p)['applications/alpha.json']['interviews'][0]['debriefs'][0]['collection_complete']
+    d['new_company_information'][0]='Replaced observation'
+    with pytest.raises(ValueError,match='Debrief'): import_pack(export(incoming),p)
+
+def test_import_cannot_rewrite_original_requirements_for_offer():
+    old=fixture();new=copy.deepcopy(old);new['manifest.json']['revision']=1
+    new['preferences.json']['original_requirements'][0]['text']='Accept any workplace'
+    with pytest.raises(ValueError,match='Original requirements'): import_pack(export(new),old)
+
+def test_partial_debrief_cannot_regress_complete_flag_to_unknown():
+    from scripts.context_pack import preserved
+    assert preserved({'collection_complete':False},{'collection_complete':True})
+    assert not preserved({'collection_complete':False},{'collection_complete':None})
+
+def test_unread_source_cannot_confirm_lifecycle():
+    p=fixture(); app=p['applications/alpha.json']
+    app['sources']=[{'id':'src-a','opportunity_id':'alpha','kind':'OFFICIAL','access_status':'UNAVAILABLE'}]
+    app['opportunity']['status']='SCREENING'
+    app['opportunity']['status_history']=[{'from':'DISCOVERED','to':'SCREENING','event':'Posting says screening','confirmed_by':'VERIFIED_SOURCE','source_ids':['src-a']}]
+    with pytest.raises(ValueError,match='not verified'): validate(p)

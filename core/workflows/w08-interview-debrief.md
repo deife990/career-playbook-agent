@@ -52,3 +52,9 @@ collection checkpoint plus full export. No earlier hypothesis→baseline actual 
 ## Do not
 Open with praise or success prediction, overwrite previous rounds, fabricate answers, turn new
 company statements into VERIFIED FACT without sources or lose data on next-round transition.
+
+## First response and repair constraints
+The first substantive sentence asks for actual questions or resolves company scope; no prefatory
+praise, reassurance, performance assessment or success prediction. Preserve the seven-field
+collection order. Story repairs must not invent analysis/prioritization/decision/efficiency actions;
+ask whether these actually happened or leave a placeholder, never upgrade support to ownership.

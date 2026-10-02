@@ -11,5 +11,9 @@
   "evidence": null,
   "target_roles": null,
   "target_companies": null,
-  "sources": null
+  "sources": null,
+  "resume_versions": null,
+  "linkedin_reviews": null,
+  "portfolio_artifacts": null,
+  "claims": null
 }

@@ -43,10 +43,18 @@ versions. Qualitative supported outcomes are acceptable; invented precision is n
 Application Pack with requested copy, decision on optional assets, audit and next action.
 ## State updates
 CareerEvidence/Story globally; Application/ResumeVersion/LinkedInReview/PortfolioArtifact/Decision/
-NextAction within scope (Master/LinkedIn may be global in host context, export per targeted versions).
+NextAction within scope; global Master/LinkedIn/portfolio records export through career-profile.json
+resume_versions/linkedin_reviews/portfolio_artifacts with null opportunity_id, alongside global claims.
 APPLYING on explicit preparation intent; APPLIED only on confirmed actual submission, with event.
 ## Fallbacks
 No resume: confirmed evidence inventory then draft. No company strategy: limited draft marked
 Unknown or W04 first. No connectors: manual/file mining. No persistent files: portable pack.
 ## Do not
 Fabricate metrics/leadership, optimize without audit, force optional assets, submit/send silently.
+
+## Partial delivery rule
+When requested components are blocked by missing facts, return supported interim decisions for
+each requested component before asking the next one/two questions. For example: no portfolio
+request + one day remaining → SKIP/DEFER with reason; missing LinkedIn profile → audit pending,
+invite profile text and provide a self-check list. Do not omit these requests just because the JD
+or outcomes are unknown. Never manufacture qualitative achievements to make an interim draft.
