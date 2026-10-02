@@ -10,11 +10,26 @@ def core_hashes():
     for folder in ['core','schemas','templates']:
         paths += [p for p in (ROOT/folder).rglob('*') if p.is_file() and p.name!='.gitkeep']
     return {p.relative_to(ROOT).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(paths)}
+def write_if_changed(path,data):
+    path.parent.mkdir(parents=True,exist_ok=True)
+    if not path.exists() or path.read_bytes()!=data: path.write_bytes(data)
+def sync_tree(source,destination):
+    # Keep unchanged directories/files in place, including on synced Desktop filesystems.
+    if any(p.is_symlink() for p in source.rglob('*')): raise ValueError('Canonical symlink forbidden')
+    expected={p.relative_to(source) for p in source.rglob('*') if p.is_file() and p.name!='.gitkeep'}
+    for relative in sorted(expected): write_if_changed(destination/relative,(source/relative).read_bytes())
+    if destination.exists():
+        for path in sorted(destination.rglob('*'),reverse=True):
+            if path.is_file() and path.relative_to(destination) not in expected: path.unlink()
+            elif path.is_dir() and not any(path.iterdir()): path.rmdir()
 def copy_references(destination):
     ref=destination/'references'
-    if ref.exists(): shutil.rmtree(ref)
     for folder in ['core','schemas','templates']:
-        shutil.copytree(ROOT/folder,ref/folder,ignore=shutil.ignore_patterns('.gitkeep'))
+        sync_tree(ROOT/folder,ref/folder)
+    # These directories are generated-only; discard stale/duplicate generated directories.
+    if ref.exists():
+        for path in ref.iterdir():
+            if path.is_dir() and path.name not in ['core','schemas','templates']: shutil.rmtree(path)
     (destination/'core-index.json').write_text(json.dumps(core_hashes(),indent=2)+'\n')
 def generate(platform):
     workflows={frontmatter(p)[0]['id']:p.name for p in (ROOT/'core/workflows').glob('w*.md')}
@@ -24,7 +39,6 @@ def generate(platform):
     (target/'references/host.md').write_bytes(host.read_bytes())
     if platform=='chatgpt':
         skills=target/'skills'
-        if skills.exists(): shutil.rmtree(skills)
         manifest=load(target/'plugin.json'); manifest['version']=(ROOT/'VERSION').read_text().strip()
         (target/'plugin.json').write_text(json.dumps(manifest,indent=2)+'\n')
         for entry in load(ROOT/'adapters/skills.json'):
@@ -71,6 +85,9 @@ submit/send/accept/decline without explicit user authorization, require any new 
 '''
             p=skills/name/'SKILL.md'; p.parent.mkdir(parents=True,exist_ok=True); p.write_text(text)
             validate_skill(p,True)
+        expected={e['name'] for e in load(ROOT/'adapters/skills.json')}
+        for path in skills.iterdir():
+            if path.is_dir() and path.name not in expected: shutil.rmtree(path)
         # Repository source adapter includes authoring host.md; bundled host content is references/host.md.
     else:
         workflow_links='\n'.join(f'- [{w}]({"references/core/workflows/"+file})' for w,file in sorted(workflows.items()))
@@ -118,8 +135,7 @@ capabilities. No generic numeric fit score or hiring prediction. The user makes 
         for alias,path in {'state':'core/state/state.md','evidence':'core/principles/evidence-policy.md','research':'core/principles/research-policy.md','artifacts':'core/artifacts/candidate-strategy.md'}.items():
             (target/'references'/f'{alias}.md').write_text(f'# {alias}\nRead [contract]({path}).\n')
         templates=target/'templates'
-        if templates.exists(): shutil.rmtree(templates)
-        shutil.copytree(ROOT/'templates',templates,ignore=shutil.ignore_patterns('.gitkeep'))
+        sync_tree(ROOT/'templates',templates)
     validate_links(target)
     return target
 def main():

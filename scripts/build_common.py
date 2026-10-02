@@ -11,6 +11,7 @@ def catalog():
 
 def build(platform):
     source=generate(platform)
+    if any(p.is_symlink() for p in source.rglob('*')): raise ValueError('Runtime symlink forbidden')
     destination=ROOT/'dist'/platform/'careerpilot'
     if destination.exists(): shutil.rmtree(destination)
     shutil.copytree(source,destination,ignore=shutil.ignore_patterns('README.md','.gitkeep'))
