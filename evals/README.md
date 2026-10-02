@@ -18,3 +18,13 @@ Absent auth is BLOCKED, never PASS; model/eval/native evidence must match curren
 Final 1.0.0-rc.1 actual CLI evidence: both platforms 15/15 PASS, archived in reports/.
 Resume reuse requires the same package plus scenario/persona/seed-content fingerprint; changes
 in any evaluation input invalidate reuse. Native consumer signoff remains separate and pending.
+
+CI integration: validate/build jobs use hosted Python 3.12 runners. Actual model jobs require
+a trusted self-hosted runner labeled `self-hosted, careerpilot-evals`, existing Codex/Claude CLI
+logins, and repository variable `CAREERPILOT_MODEL_EVALS_ENABLED=true`. This external runner is
+not registered/enabled by this implementation. Do not put CLI credentials in the repository.
+Manual/nightly/reusable pre-release jobs are wired but remain skipped until the owner enables
+that runner. PR code never runs on the authenticated runner. The release job requires a tag
+matching VERSION plus current model evidence and observed native signoffs; a disabled runner
+or missing evidence cannot publish a release. These are developer release tools, not runtime
+installation requirements for CareerPilot users.

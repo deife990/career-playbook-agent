@@ -17,7 +17,7 @@ behavioral gate. Static evidence does not clear native installation or actual-mo
 | Claude adapter | One short generated entry, on-demand references and templates; shared Core parity pass |
 | Evals | 10 personas / 15 scenarios per platform. ChatGPT 15/15 and Claude 15/15 actual cases PASS for current package/suite fingerprints; all recorded assertions pass and lossless context checks pass |
 | Packaging | PASS: deterministic archives, exact runtime inventory, extraction/reference/parity/checksum tests and current actual-model evidence |
-| Clean install | Fresh Git clone plus fresh Python 3.12 environment: 77 tests, static validation, both builds and ZIPs PASS at 2efbc4d. Native consumer host checks remain PENDING; OpenAI CLI installed/enabled the exact evaluated archive |
+| Clean install | Fresh Git clone plus fresh Python 3.12 environment: 77 tests, static validation, both builds and ZIPs PASS at 5d4666e. Native consumer host checks remain PENDING; OpenAI CLI installed/enabled the exact evaluated archive |
 | Release Candidate | Not cleared; current model evidence is complete; observed native consumer signoffs remain required |
 
 Actual model reports: [ChatGPT](../evals/reports/chatgpt-1.0.0-rc.1.json),

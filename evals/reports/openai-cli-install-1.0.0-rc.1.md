@@ -17,6 +17,8 @@ The default-config CLI first rejected its configured model. A per-command suppor
 returned a truthful fallback, but host file tooling could not read the installed references
 (the tool reported a malformed Unicode Python executable path). No global configuration was
 changed and the installed package fingerprint remained intact. An isolated-config source-tree
-reading test is separate from installed-plugin automatic activation. Installation alone is not
+reading test successfully loaded router/W01 and linked policy/state/host files from adapters/chatgpt
+and returned a Korean Career Brief with USER FACT/INFERENCE separation and two onboarding
+questions. It is separate from installed-plugin automatic activation. Installation alone is not
 a passing ChatGPT UI activation/lifecycle/context-recovery signoff. Consumer native checks remain
 PENDING; this evidence must not be promoted to a full native PASS.
