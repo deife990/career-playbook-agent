@@ -20,3 +20,12 @@ def test_roundtrip_allows_only_added_unknown_nulls():
     assert not lossless({'facts':[12]},{'facts':[12],'invented':'outcome'})
     assert not lossless({'unknown':None},{})
     assert not lossless({'facts':[12]},{'facts':[12,13]})
+
+def test_progressive_reference_shim_loads_only_selected_workflow():
+    from scripts.generate_adapters import generate
+    from scripts.run_model_evals import package_context
+    for platform in ['chatgpt','claude']:
+        case=yaml.safe_load((ROOT/'evals/scenarios/english-mock.yaml').read_text())
+        _,hashes=package_context(generate(platform),platform,case)
+        workflows=[p for p in hashes if '/core/workflows/' in p]
+        assert len(workflows)==1 and 'w07' in workflows[0]

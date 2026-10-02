@@ -4,7 +4,7 @@ from pathlib import Path
 if __package__ in (None, ''):
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
-import argparse, hashlib, json, re, subprocess, tempfile, time
+import argparse, hashlib, json, re, shutil, subprocess, tempfile, time
 from pathlib import Path
 from datetime import datetime, timezone
 import yaml
@@ -12,6 +12,7 @@ from scripts.common import ROOT, load, frontmatter
 from scripts.generate_adapters import generate
 from scripts.context_pack import import_pack
 JUDGE_SCHEMA={'type':'object','properties':{'assertions':{'type':'array','items':{'type':'object','properties':{'id':{'type':'string'},'pass':{'type':'boolean'},'reason':{'type':'string'},'evidence_quote':{'type':'string'}},'required':['id','pass','reason','evidence_quote'],'additionalProperties':False}}},'required':['assertions'],'additionalProperties':False}
+class RateLimitError(RuntimeError): pass
 def fingerprint(root):
     return hashlib.sha256(''.join(p.relative_to(root).as_posix()+hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(root.rglob('*')) if p.is_file() and p.relative_to(root).as_posix() not in ['README.md','host.md'] and '.agents' not in p.relative_to(root).parts and p.name!='.gitkeep').encode()).hexdigest()
 def lossless(original,restored):
@@ -49,6 +50,10 @@ def package_context(root,platform,case):
         for relative in re.findall(r'\[[^\]]*\]\(([^)]+)\)',path.read_text()):
             if ':' in relative or relative.startswith('#'): continue
             linked=(path.parent/relative.split('#')[0]).resolve()
+            if case.get('workflow'):
+                # Entry links are a menu, not an instruction to preload all nine workflows.
+                if linked.parent==ref.resolve()/'core/workflows' and linked.name!=workflow.name: continue
+                if (ref/'schemas').resolve() in linked.parents or (ref/'templates').resolve() in linked.parents: continue
             if linked.is_relative_to(root.resolve()) and linked.is_file() and linked not in [p.resolve() for p in paths]: paths.append(linked)
     unique=list(dict.fromkeys(p.resolve() for p in paths))
     hashes={p.relative_to(root).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in unique}
@@ -68,6 +73,9 @@ def call_model(platform,prompt,folder,stem,schema=None):
     with tempfile.TemporaryDirectory(prefix='careerpilot-eval-') as isolated:
         result=subprocess.run(cmd,input=prompt,text=True,capture_output=True,cwd=isolated,timeout=300)
     (folder/f'{stem}.stdout.txt').write_text(result.stdout); (folder/f'{stem}.stderr.txt').write_text(result.stderr)
+    error_text=result.stderr+result.stdout
+    if result.returncode and ('hit your limit' in error_text or 'hit your usage limit' in error_text):
+        raise RateLimitError(f'{platform}: account usage limit; see {stem}.stdout.txt/{stem}.stderr.txt for reset time')
     if result.returncode: raise RuntimeError(f'{platform} CLI exited {result.returncode}; see {stem}.stderr.txt')
     if platform=='chatgpt':
         if not output.is_file(): raise RuntimeError('Missing actual model output')
@@ -119,7 +127,11 @@ def run_case(root,platform,case,folder):
     return {'id':case['id'],'persona':case['persona'],'status':'PASS' if all(r['pass'] for r in rows) else 'FAIL','assertions':rows,'model_ids':sorted(model_ids),'judge_model':judge_model,'loaded_files':hashes,'transcript':history,'deterministic_roundtrip':deterministic}
 def main():
     parser=argparse.ArgumentParser(); parser.add_argument('--platform',choices=['chatgpt','claude'],required=True); parser.add_argument('--scenario',action='append'); parser.add_argument('--resume',action='store_true'); args=parser.parse_args()
-    root=generate(args.platform); digest=fingerprint(root)
+    source=generate(args.platform)
+    # Immutable package snapshot prevents builds/generation in the shared workspace from changing
+    # the package under a running subject. The evaluated snapshot's digest is recorded.
+    snapshot=tempfile.TemporaryDirectory(prefix='careerpilot-package-')
+    root=Path(snapshot.name)/'careerpilot'; shutil.copytree(source,root); digest=fingerprint(root)
     suite=sorted((ROOT/'evals/scenarios').glob('*.yaml'))
     suite_digest=hashlib.sha256(''.join(p.read_text() for p in suite).encode()).hexdigest()
     report_path=ROOT/f'dist/evals/{args.platform}.json'; report_path.parent.mkdir(parents=True,exist_ok=True)
@@ -138,7 +150,10 @@ def main():
         if case['id'] in completed: continue
         print(f"Evaluating {args.platform}: {case['id']}",flush=True)
         folder=ROOT/f"work/model-evals/{args.platform}/{case['id']}"
+        limited=False
         try: row=run_case(root,args.platform,case,folder)
+        except RateLimitError as error:
+            row={'id':case['id'],'persona':case['persona'],'status':'ERROR','error':str(error)}; limited=True
         except Exception as error: row={'id':case['id'],'persona':case['persona'],'status':'ERROR','error':str(error)}
         report['cases']=[r for r in report['cases'] if r['id']!=case['id']]+[row]
         expected={yaml.safe_load(p.read_text())['id'] for p in suite}
@@ -147,5 +162,8 @@ def main():
         report['updated_at']=datetime.now(timezone.utc).isoformat()
         report_path.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
         print(f"{case['id']}: {row['status']}",flush=True)
+        if limited:
+            print('Account usage limit: preserved completed results; stop until host reset.',flush=True)
+            break
     if report.get('status')!='PASS': raise SystemExit(1)
 if __name__=='__main__': main()
