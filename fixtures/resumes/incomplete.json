@@ -1,0 +1,17 @@
+{
+  "synthetic": true,
+  "facts": [
+    "Supported migration testing",
+    "Tested 12 cases",
+    "Reported defects"
+  ],
+  "unknown": [
+    "dates",
+    "project ownership",
+    "business impact"
+  ],
+  "forbidden_inventions": [
+    "led project",
+    "40% defect reduction"
+  ]
+}
