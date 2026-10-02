@@ -17,3 +17,7 @@ Final Claude W05 regression: a DRAFT bullet added “검토 및 인계 기반 �
 although only process checking and documentation were supplied. Strengthened action-only fallback
 and per-assertion audit for every outward-facing draft. Pending re-evaluation; an earlier pass does
 not clear this finding against modified content.
+
+Claude active mock regression: “Which project, and what was your role?” bundled episode identity
+and own role despite one question mark. Added silent single-slot follow-up selection, an explicit
+counterexample, and repair-before-repeat. Post-end repairs also cannot assert unknown actions.

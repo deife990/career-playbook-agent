@@ -14,6 +14,13 @@ from scripts.context_pack import import_pack
 from scripts.package_inventory import inventory
 JUDGE_SCHEMA={'type':'object','properties':{'assertions':{'type':'array','items':{'type':'object','properties':{'id':{'type':'string'},'pass':{'type':'boolean'},'reason':{'type':'string'},'evidence_quote':{'type':'string'}},'required':['id','pass','reason','evidence_quote'],'additionalProperties':False}}},'required':['assertions'],'additionalProperties':False}
 class RateLimitError(RuntimeError): pass
+def suite_fingerprint(paths,root=ROOT):
+    files=set(paths)
+    for path in paths:
+        case=yaml.safe_load(path.read_text())
+        if case.get('persona'): files.add(root/f"evals/personas/{case['persona']}.yaml")
+        if case.get('context_fixture'): files.add(root/case['context_fixture'])
+    return hashlib.sha256(''.join(p.relative_to(root).as_posix()+hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(files)).encode()).hexdigest()
 def fingerprint(root):
     platform='chatgpt' if (root/'plugin.json').is_file() else 'claude'
     return hashlib.sha256(''.join(relative+hashlib.sha256((root/relative).read_bytes()).hexdigest() for relative in inventory(root,platform)).encode()).hexdigest()
@@ -145,13 +152,13 @@ def main():
         path=root/relative;path.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(source/relative,path)
     digest=fingerprint(root)
     suite=sorted((ROOT/'evals/scenarios').glob('*.yaml'))
-    suite_digest=hashlib.sha256(''.join(p.read_text() for p in suite).encode()).hexdigest()
+    suite_digest=suite_fingerprint(suite)
     report_path=ROOT/f'dist/evals/{args.platform}.json'; report_path.parent.mkdir(parents=True,exist_ok=True)
     report={'platform':args.platform,'package_fingerprint':digest,'suite_fingerprint':suite_digest,'started_at':datetime.now(timezone.utc).isoformat(),'scope':'Development CLI behavior; not native installation','cases':[]}
     if args.resume and report_path.exists():
         old=load(report_path)
         old_ids={r['id'] for r in old['cases']}
-        subset_digest=hashlib.sha256(''.join(p.read_text() for p in suite if yaml.safe_load(p.read_text())['id'] in old_ids).encode()).hexdigest()
+        subset_digest=suite_fingerprint([p for p in suite if yaml.safe_load(p.read_text())['id'] in old_ids])
         # Preserve verified results for an unchanged suite, or an additive-only suite extension.
         if old['package_fingerprint']==digest and old['suite_fingerprint'] in [suite_digest,subset_digest]:
             report=old; report['suite_fingerprint']=suite_digest

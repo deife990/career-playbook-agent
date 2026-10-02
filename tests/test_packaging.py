@@ -45,7 +45,7 @@ def test_failed_actual_assertion_cannot_hide_under_pass_header(tmp_path,monkeypa
     cases=tmp_path/'evals/scenarios';cases.mkdir(parents=True)
     definition={'id':'case','assertions':{'scope':'Preserve company isolation'}}
     text=yaml.safe_dump(definition);(cases/'case.yaml').write_text(text)
-    report={'platform':'chatgpt','status':'PASS','package_fingerprint':'current','suite_fingerprint':hashlib.sha256(text.encode()).hexdigest(),'cases':[{'id':'case','status':'PASS','model_ids':['actual-model'],'judge_model':'judge','assertions':[{'id':'scope','pass':False,'reason':'leaked company','evidence_quote':'Beta'}],'transcript':[{'role':'assistant','content':'Beta'}]}]}
+    report={'platform':'chatgpt','status':'PASS','package_fingerprint':'current','suite_fingerprint':readiness.suite_fingerprint([cases/'case.yaml'],tmp_path),'cases':[{'id':'case','status':'PASS','model_ids':['actual-model'],'judge_model':'judge','assertions':[{'id':'scope','pass':False,'reason':'leaked company','evidence_quote':'Beta'}],'transcript':[{'role':'assistant','content':'Beta'}]}]}
     monkeypatch.setattr(readiness,'ROOT',tmp_path)
     monkeypatch.setattr(readiness,'generate',lambda platform:tmp_path)
     monkeypatch.setattr(readiness,'fingerprint',lambda root:'current')

@@ -9,13 +9,13 @@ from datetime import datetime
 import yaml
 from scripts.common import ROOT, load
 from scripts.generate_adapters import generate
-from scripts.run_model_evals import fingerprint, grade
+from scripts.run_model_evals import fingerprint, grade, suite_fingerprint
 import json
 CHECKS={'clean_install','activation','reference_access','full_lifecycle','mock_contract','debrief_preserved','isolation','context_roundtrip'}
 
 def check():
     cases=sorted((ROOT/'evals/scenarios').glob('*.yaml'))
-    suite=hashlib.sha256(''.join(p.read_text() for p in cases).encode()).hexdigest()
+    suite=suite_fingerprint(cases,ROOT)
     expected={yaml.safe_load(p.read_text())['id'] for p in cases}
     native=load(ROOT/'evals/native-install.json')
     if native.get('status')!='PASS': raise ValueError('Native clean-install signoff pending')

@@ -13,6 +13,19 @@ def test_judge_cannot_omit_or_fabricate_evidence():
     with pytest.raises(ValueError): grade({'scope':'clarify'},bad,transcript)
 def test_fenced_json(): assert extract_json('```json\n{"x":1}\n```')=={'x':1}
 
+def test_suite_digest_tracks_persona_and_seed_changes(tmp_path):
+    from scripts.run_model_evals import suite_fingerprint
+    cases=tmp_path/'evals/scenarios';cases.mkdir(parents=True)
+    personas=tmp_path/'evals/personas';personas.mkdir()
+    case=cases/'case.yaml';case.write_text('id: case\npersona: user\ncontext_fixture: seed.json\n')
+    persona=personas/'user.yaml';persona.write_text('experience: null\n')
+    seed=tmp_path/'seed.json';seed.write_text('{"fact":null}')
+    original=suite_fingerprint([case],tmp_path)
+    persona.write_text('experience: testing\n')
+    changed=suite_fingerprint([case],tmp_path);assert changed!=original
+    seed.write_text('{"fact":"confirmed"}')
+    assert suite_fingerprint([case],tmp_path)!=changed
+
 def test_roundtrip_allows_only_added_unknown_nulls():
     from scripts.run_model_evals import lossless
     assert lossless({'facts':[{'number':12}]},{'facts':[{'number':12,'optional':None}],'unknown':None})
