@@ -46,3 +46,8 @@
 - D015: Actual Claude account UI on 2026-10-02 exposes Customize → Skills → Add skill →
   Upload skill directly. Updated consumer docs; older official UI labels remain a fallback.
   Only navigation was observed; no upload/installation has occurred.
+
+- D016 (2026-10-03): The actual OpenAI archive is accepted by the official CLI local marketplace
+  installer and reported installed/enabled without new authentication. Exact installed runtime
+  fingerprint matches actual model evidence. This supplementary CLI observation does not replace
+  native ChatGPT consumer UI activation and lifecycle signoff.

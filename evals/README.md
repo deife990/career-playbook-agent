@@ -14,3 +14,7 @@ schema/scope/round-trip verification. Outputs remain in ignored work/ and dist/e
 Development CLI harness is not evidence of native consumer UI installation or automatic activation.
 No API keys are required by CareerPilot. Developer runners must be authenticated separately.
 Absent auth is BLOCKED, never PASS; model/eval/native evidence must match current content hashes.
+
+Final 1.0.0-rc.1 actual CLI evidence: both platforms 15/15 PASS, archived in reports/.
+Resume reuse requires the same package plus scenario/persona/seed-content fingerprint; changes
+in any evaluation input invalidate reuse. Native consumer signoff remains separate and pending.
