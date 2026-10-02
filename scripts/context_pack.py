@@ -136,7 +136,8 @@ def import_pack(text,current=None):
         old=current['manifest.json']; new=incoming['manifest.json']
         reject(old['pack_id']!=new['pack_id'],'Different pack: explicit merge decision required')
         reject(new['revision']<old['revision'],'Stale revision')
-        reject(current['preferences.json'].get('original_requirements')!=incoming['preferences.json'].get('original_requirements'),'Original requirements changed')
+        original=current['preferences.json'].get('original_requirements')
+        reject(original is not None and original!=incoming['preferences.json'].get('original_requirements'),'Original requirements changed')
         if new['revision']==old['revision']:
             left=deepcopy(current); right=deepcopy(incoming)
             for p in [left,right]:

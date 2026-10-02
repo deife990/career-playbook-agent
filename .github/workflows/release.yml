@@ -5,9 +5,12 @@ on:
 permissions:
   contents: write
 jobs:
+  evaluate:
+    uses: ./.github/workflows/eval.yml
   release:
+    needs: evaluate
     # Never run untrusted PR code on the authenticated evaluation runner.
-    runs-on: [self-hosted, careerpilot-evals]
+    runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
@@ -21,8 +24,10 @@ jobs:
       - run: pip install -r requirements-dev.txt
       - run: python -m scripts.run_static_evals
       - run: python -m pytest -q
-      - run: python -m scripts.run_model_evals --platform chatgpt
-      - run: python -m scripts.run_model_evals --platform claude
+      - uses: actions/download-artifact@v4
+        with:
+          name: careerpilot-actual-model-evidence
+          path: .
       - run: python -m scripts.package_release --require-ready
       - run: git diff --exit-code -- adapters
       - name: Create GitHub release

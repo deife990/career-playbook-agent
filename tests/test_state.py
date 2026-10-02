@@ -85,3 +85,8 @@ def test_global_roadmap_choices_and_next_actions_survive_export():
     p=fixture();p['career-profile.json']['decisions']=[{'id':'direction-choice','opportunity_id':None,'subject':'Career direction','choice':'Operations analytics','user_confirmed':True}]
     p['career-profile.json']['next_actions']=[{'id':'roadmap-action','opportunity_id':None,'text':'Confirm one testing story','owner':'USER','status':'OPEN','evidence_ids':['e-1']}]
     restored=import_pack(export(p));assert restored['career-profile.json']==p['career-profile.json']
+
+def test_unknown_original_requirements_can_be_filled_progressively():
+    old=fixture();old['preferences.json']['original_requirements']=None
+    new=fixture();new['manifest.json']['revision']=1
+    assert import_pack(export(new),old)['preferences.json']['original_requirements']==new['preferences.json']['original_requirements']

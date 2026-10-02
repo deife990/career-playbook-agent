@@ -14,11 +14,11 @@ Native check observations belong in evals/native-install.json with a nonempty re
 file; record only synthetic observations. [Native checklist](native-install-test.md).
 
 CI Validate and Build run without host credentials on every PR/push. Actual model evaluation is
-manual/nightly/tag-triggered on a private self-hosted `careerpilot-evals` runner with existing Codex
+manual/nightly and called before tag releases on a private self-hosted `careerpilot-evals` runner with existing Codex
 and Claude CLI logins. Set repository variable CAREERPILOT_MODEL_EVALS_ENABLED only when that runner
 exists. This developer configuration is optional and is never an installation requirement.
 Skipped CI model jobs do not clear release gates. Local authenticated evaluation remains available.
 No credentials or CLI session data are uploaded; artifact paths contain synthetic transcripts only.
-Semver tags run all checks and refuse release until native and model evidence matches that version.
+Semver tags call the evaluation workflow once, then download its actual reports and run all checks and refuse release until native and model evidence matches that version.
 The release workflow initially publishes prereleases; promote a candidate only after explicit
 human release decision. Source VERSION is independent of state schema_version.
