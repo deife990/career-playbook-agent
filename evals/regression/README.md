@@ -12,3 +12,8 @@ native/model signoffs. Judge grading is fallible; disputed/ambiguous results req
 - Judge sometimes stripped Markdown or joined distant quotes; invalid literal evidence remains
   ERROR and gets one independent regrade. Persona seed now supplied to the judge to avoid falsely
   calling supplied university-project context invented. No behavioral assertion weakened.
+
+Final Claude W05 regression: a DRAFT bullet added “검토 및 인계 기반 마련” and scope/method qualifiers
+although only process checking and documentation were supplied. Strengthened action-only fallback
+and per-assertion audit for every outward-facing draft. Pending re-evaluation; an earlier pass does
+not clear this finding against modified content.

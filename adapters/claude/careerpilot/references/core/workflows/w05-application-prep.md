@@ -40,6 +40,8 @@ an opportunity; company-tailored material requires selection. Missing strategyâ†
 JD demands are not career facts. No numeric inflation, fictional credentials or contradictory
 versions. Qualitative supported outcomes are acceptable; invented precision is not.
 ## Output
+Before presenting any interim/final bullet or message, run the assertion audit in
+[resume](../capabilities/resume.md). Unknown outcomes mean action-only copy with no claimed benefit.
 Application Pack with requested copy, decision on optional assets, audit and next action.
 ## State updates
 CareerEvidence/Story globally; Application/ResumeVersion/LinkedInReview/PortfolioArtifact/Decision/
