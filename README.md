@@ -6,7 +6,7 @@ AI-Powered Job Search Playbook을 실행하는 이직 준비 도우미. 커리�
 공개 디렉터리 등록 제품은 아닙니다. [설치 안내](docs/install-chatgpt.md).
 
 ## Install for Claude
-단일 `careerpilot-claude-v1.0.0-rc.1.zip`을 Customize → Skills에서 업로드하고 켜세요.
+단일 `careerpilot-claude-v1.0.0-rc.1.zip`을 Customize → Skills → 스킬 추가 → 스킬 업로드에서 올리고 켜세요.
 [설치 안내](docs/install-claude.md).
 
 ## Start

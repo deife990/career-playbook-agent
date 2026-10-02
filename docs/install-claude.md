@@ -1,7 +1,8 @@
 # Claude에 CareerPilot 설치하기
 하나의 Skill ZIP만 설치하면 됩니다. 여러 Skill을 따로 설치할 필요가 없습니다.
 1. `careerpilot-claude-v1.0.0-rc.1.zip`을 받으세요. ZIP 안에 `careerpilot/SKILL.md`가 있어야 합니다.
-2. Claude의 Customize(사용자 지정) → Skills에서 `+` → Create skill → Upload a skill을 선택하세요.
+2. Claude의 Customize(사용자 지정) → Skills(스킬) → 스킬 추가 → 스킬 업로드를 선택하세요.
+   현재 계정 화면에서 이 경로를 확인했습니다. 다른 UI에서는 `+` → Create skill → Upload a skill로 표시될 수 있습니다.
 3. ZIP을 업로드하고 CareerPilot을 켜세요. 새 대화에서 “이직 준비 시작하고 싶어.”라고 말하세요.
 4. Skills를 사용할 수 없으면 Settings → Capabilities의 Code execution and file creation을
    확인하세요. 회사 계정에서는 관리자가 Skills/사용자 생성 Skill을 허용해야 할 수 있습니다.

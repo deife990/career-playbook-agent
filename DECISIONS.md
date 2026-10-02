@@ -42,3 +42,7 @@
 - D014: Global career-direction decisions and roadmap actions also require portable recovery,
   stored in CareerProfile decisions/next_actions with null opportunity_id. Added regional/global/
   teammate/reference round types and explicit ebook-derived preparation coverage before freezing RC.
+
+- D015: Actual Claude account UI on 2026-10-02 exposes Customize → Skills → Add skill →
+  Upload skill directly. Updated consumer docs; older official UI labels remain a fallback.
+  Only navigation was observed; no upload/installation has occurred.
