@@ -1,0 +1,17 @@
+{
+  "synthetic": true,
+  "company": "Alpha Synthetic",
+  "currency": "KRW",
+  "base": 100000000,
+  "variable": null,
+  "equity": null,
+  "work_style": "office",
+  "original_requirements": [
+    {
+      "id": "remote",
+      "text": "Remote work",
+      "priority": "MUST"
+    }
+  ],
+  "expected": "High salary does not override original remote requirement."
+}
