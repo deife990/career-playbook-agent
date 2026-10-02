@@ -1,0 +1,9 @@
+[project]
+name = "careerpilot-build"
+version = "1.0.0rc1"
+requires-python = ">=3.12"
+dependencies = []
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
