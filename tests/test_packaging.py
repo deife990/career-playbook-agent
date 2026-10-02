@@ -24,7 +24,8 @@ def test_deterministic_archives_and_clean_extract(tmp_path):
             manifest=json.loads((root/'.agents/plugins/marketplace.json').read_text())
             assert manifest['plugins'][0]['source']['path']=='./'
 
-def test_missing_native_evidence_blocks_release():
+def test_missing_native_evidence_blocks_release(monkeypatch):
+    monkeypatch.setattr('scripts.release_readiness.load',lambda path: {'status':'PENDING'})
     with pytest.raises(ValueError,match='Native'): check()
 
 def test_build_link_validation_actually_checks_dist(tmp_path):
