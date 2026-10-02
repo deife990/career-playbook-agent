@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0.0",
+  "id": "profile",
+  "name": null,
+  "current_role": null,
+  "experience_years": null,
+  "summary": null,
+  "goals": null,
+  "skills": null,
+  "achievements": null,
+  "evidence": null,
+  "target_roles": null,
+  "target_companies": null,
+  "sources": null
+}
