@@ -71,3 +71,12 @@ def test_unread_source_cannot_confirm_lifecycle():
     app['opportunity']['status']='SCREENING'
     app['opportunity']['status_history']=[{'from':'DISCOVERED','to':'SCREENING','event':'Posting says screening','confirmed_by':'VERIFIED_SOURCE','source_ids':['src-a']}]
     with pytest.raises(ValueError,match='not verified'): validate(p)
+
+def test_unknown_collection_flag_still_preserves_debrief():
+    old=fixture();old['applications/alpha.json']['interviews']=[{'id':'int-a','opportunity_id':'alpha','debriefs':[{'id':'debrief-a','opportunity_id':'alpha','new_company_information':['Original recall']}]}]
+    new=copy.deepcopy(old);new['manifest.json']['revision']=1;new['applications/alpha.json']['interviews']=[]
+    with pytest.raises(ValueError,match='Debrief'): import_pack(export(new),old)
+
+def test_jd_source_must_reference_source_entity():
+    p=fixture();p['applications/alpha.json']['opportunity']['job_analysis']={'id':'jd-a','opportunity_id':'alpha','jd_source_ids':['profile']}
+    with pytest.raises(ValueError,match='Dangling'): validate(p)

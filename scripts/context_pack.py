@@ -23,7 +23,8 @@ def validate(pack):
     reject(set(pack)!={'manifest.json',*paths},'Missing or undeclared files')
     reject(not {'career-profile.json','preferences.json','story-bank.json'} <= set(paths),'Missing global context')
     index={}; contexts={}; evidence={}; sources={}; requirements={}; opportunities=set()
-    typed={key:{} for key in ['source_ids','claim_ids','story_ids','question_ids','answer_ids','previous_hypothesis_ids','updated_hypothesis_ids']}
+    typed={key:{} for key in ['source_ids','claim_ids','story_ids','question_ids','answer_ids','previous_hypothesis_ids','updated_hypothesis_ids','ideal_candidate_id']}
+    typed['jd_source_ids']=typed['source_ids']
     profile=pack.get('career-profile.json',{}); stories=pack.get('story-bank.json',{})
     for key,values in [('source_ids',profile.get('sources')),('claim_ids',profile.get('claims')),('story_ids',stories.get('stories'))]:
         typed[key].update({v['id']:v for v in values or [] if isinstance(v,dict)})
@@ -31,6 +32,8 @@ def validate(pack):
     for path,app in pack.items():
         if not path.startswith('applications/') or not isinstance(app,dict): continue
         for key,field in [('source_ids','sources'),('claim_ids','claims')]: typed[key].update({v['id']:v for v in app.get(field) or [] if isinstance(v,dict)})
+        ideal=(app.get('opportunity') or {}).get('ideal_candidate')
+        if isinstance(ideal,dict): typed['ideal_candidate_id'][ideal['id']]=ideal
         for v in (app.get('opportunity') or {}).get('hiring_hypotheses') or []:
             if isinstance(v,dict):
                 typed['previous_hypothesis_ids'][v['id']]=v; typed['updated_hypothesis_ids'][v['id']]=v
@@ -65,7 +68,7 @@ def validate(pack):
     reject(manifest.get('active_opportunity_id') is not None and manifest['active_opportunity_id'] not in opportunities,'Unknown active opportunity')
     for entity_id,node in index.items():
         scope=contexts[entity_id]
-        for key in ['evidence_ids','source_ids','claim_ids','story_ids','question_ids','answer_ids','previous_hypothesis_ids','updated_hypothesis_ids','original_requirement_ids']:
+        for key in ['evidence_ids','source_ids','jd_source_ids','claim_ids','story_ids','question_ids','answer_ids','previous_hypothesis_ids','updated_hypothesis_ids','original_requirement_ids']:
             for reference in node.get(key) or []:
                 target=requirements if key=='original_requirement_ids' else evidence if key=='evidence_ids' else typed.get(key,index)
                 reject(reference not in target,f'Dangling {key}: {reference}')
@@ -73,7 +76,7 @@ def validate(pack):
         for key in ['round_id','question_id','followup_to_id','previous_round_id','ideal_candidate_id','previous_id','supersedes_id']:
             ref_id=node.get(key)
             if ref_id:
-                reject(ref_id not in (rounds if key in ['round_id','previous_round_id'] else typed['question_ids'] if key in ['question_id','followup_to_id'] else index),f'Dangling {key}')
+                reject(ref_id not in (rounds if key in ['round_id','previous_round_id'] else typed['question_ids'] if key in ['question_id','followup_to_id'] else typed['ideal_candidate_id'] if key=='ideal_candidate_id' else index),f'Dangling {key}')
                 reject(contexts[ref_id]!=scope,'Cross-company reference')
         if 'text' in node and 'classification' in node:
             if node['classification']=='VERIFIED FACT':
@@ -101,7 +104,7 @@ def validate(pack):
         if path=='manifest.json': continue
         scope=Path(path).stem if path.startswith('applications/') else None
         for node in nodes(value):
-            for key in ['evidence_ids','source_ids','claim_ids','story_ids','original_requirement_ids']:
+            for key in ['evidence_ids','source_ids','jd_source_ids','claim_ids','story_ids','original_requirement_ids']:
                 for reference in node.get(key) or []:
                     target=requirements if key=='original_requirement_ids' else evidence if key=='evidence_ids' else typed.get(key,index)
                     reject(reference not in target,f'Dangling artifact {key}')
@@ -139,8 +142,8 @@ def import_pack(text,current=None):
             for p in [left,right]:
                 for f in p['manifest.json']['files']: f['sha256']=None
             reject(left!=right,'Revision conflict')
-        old_debriefs={n['id']:n for n in nodes(current) if 'collection_complete' in n}
-        new_debriefs={n['id']:n for n in nodes(incoming) if 'collection_complete' in n}
+        old_debriefs={d['id']:d for n in nodes(current) for d in n.get('debriefs') or [] if isinstance(d,dict)}
+        new_debriefs={d['id']:d for n in nodes(incoming) for d in n.get('debriefs') or [] if isinstance(d,dict)}
         for k,v in old_debriefs.items():
             candidate=new_debriefs.get(k)
             reject(candidate is None,'Debrief loss or destructive overwrite')
