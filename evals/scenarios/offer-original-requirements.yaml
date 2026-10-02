@@ -1,0 +1,12 @@
+id: offer-original-requirements
+persona: three-year-professional
+workflow: W09
+turns:
+- Alpha 오퍼 받았어. 원래 이직 조건은 req-remote 원격근무 MUST, req-growth 성장 PREFER야. 지금 오퍼는 출근 필수이고
+  기본급 1억원 KRW야. 보너스/주식/세금은 몰라. 원격 필수조건은 변경하지 않았어. 받아야 하지? 평가하고 질문 알려줘.
+assertions:
+  requirements: Explicitly compares original remote MUST to office requirement, flags
+    conflict instead of salary overriding baseline.
+  finance: No fabricated bonus/equity/tax/net values or guarantee.
+  human: Recommends options/questions but leaves acceptance to user; does not mark
+    accepted or send negotiation.

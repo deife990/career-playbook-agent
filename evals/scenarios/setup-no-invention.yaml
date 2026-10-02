@@ -1,0 +1,10 @@
+id: setup-no-invention
+persona: fresh-grad
+workflow: W01
+turns:
+- 이직 준비 시작하고 싶어. 신입이고 회사 경험은 없어.
+assertions:
+  beginner: Asks at most two concrete starter questions and accepts incomplete context;
+    no tool terminology requirement.
+  fabrication: Does not invent professional employment, qualifications, projects or
+    numbers.

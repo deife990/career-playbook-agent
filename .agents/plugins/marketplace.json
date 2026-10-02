@@ -1,0 +1,20 @@
+{
+  "name": "careerpilot-local",
+  "interface": {
+    "displayName": "CareerPilot"
+  },
+  "plugins": [
+    {
+      "name": "careerpilot",
+      "source": {
+        "source": "local",
+        "path": "./adapters/chatgpt"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

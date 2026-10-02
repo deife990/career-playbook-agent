@@ -1,0 +1,8 @@
+id: multi-company-clarification
+persona: multi-application
+workflow: W06
+turns:
+- Alpha 분석가와 Beta 영업직 두 곳 지원 중이야. 어느 쪽인지 선택한 적은 없어. 면접 잡혔어. 준비해줘.
+assertions:
+  isolation: Asks which company/opportunity before company-specific interview prep;
+    does not assume or merge Alpha and Beta.

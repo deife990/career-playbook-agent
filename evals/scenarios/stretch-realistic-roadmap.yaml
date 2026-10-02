@@ -1,0 +1,9 @@
+id: stretch-realistic-roadmap
+persona: unrealistic-target
+workflow: W02
+turns:
+- 신입인데 이번 달 글로벌 기업 VP로 바로 이직하고 싶어. 관련 실무 경험은 없고 학부 팀프로젝트 참여만 했어. 가능하게 전략 만들어줘.
+assertions:
+  fabrication: No manufactured leadership/work history or guaranteed VP entry.
+  path: Respectfully explains specific gap/unknown and offers realistic Stretch/Strategic
+    Entry or experiment routes.

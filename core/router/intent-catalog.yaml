@@ -1,0 +1,103 @@
+version: 1.0.0
+precedence:
+- W08
+- W09
+- W07
+- W06
+- W05
+- W04
+- W03
+- W02
+- W01
+rules:
+- workflow: W08
+  intent: completed_interview
+  examples:
+  - 면접 끝났어
+  - 면접 보고 왔어
+  - 면접 끝
+  - interview finished
+  - finished my interview
+  - interview debrief
+- workflow: W09
+  intent: offer
+  examples:
+  - 오퍼 받
+  - 오퍼 비교
+  - offer received
+  - got an offer
+  - evaluate offer
+- workflow: W07
+  intent: mock
+  examples:
+  - 모의면접
+  - 영어면접 연습
+  - mock interview
+  - practice interview
+- workflow: W06
+  intent: upcoming_interview
+  examples:
+  - 면접 잡혔
+  - 면접 준비
+  - upcoming interview
+  - interview scheduled
+  - prepare for interview
+- workflow: W05
+  intent: application
+  examples:
+  - 지원할래
+  - 이력서
+  - 지원서
+  - resume
+  - cover letter
+  - apply to
+- workflow: W04
+  intent: specific_job
+  examples:
+  - 이 공고
+  - 이 jd
+  - jd 분석
+  - job description
+  - this job
+  - analyze jd
+- workflow: W03
+  intent: discovery
+  examples:
+  - 공고 찾아
+  - 회사 찾아
+  - 외국계 찾아
+  - openings
+  - find jobs
+  - target companies
+- workflow: W02
+  intent: direction
+  examples:
+  - 커리어 로드맵
+  - 커리어 방향
+  - 장기 커리어
+  - career roadmap
+  - career direction
+  - long-term career
+- workflow: W01
+  intent: setup
+  examples:
+  - 이직 준비
+  - 커리어 정리
+  - career setup
+  - start job search
+capabilities:
+  experience-mining:
+  - 내 경험 정리
+  - 메일에서 경험
+  - experience mining
+  career-state:
+  - 경력 정보 내보내
+  - 경력 정보 복구
+  - export context
+  - import context
+explicit_mock_end:
+- 종료
+- 끝내자
+- 그만할게
+- end mock
+- stop mock

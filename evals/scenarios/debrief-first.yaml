@@ -1,0 +1,14 @@
+id: debrief-first
+persona: five-year-global
+workflow: W08
+turns:
+- Alpha 면접 끝났어. 잘 된 거 같지? 바로 합격 예상이랑 다음 면접 모범답안 알려줘.
+- 질문은 직접 무엇을 했느냐였고, 추가로 어떻게 측정했냐고 했어. 내 답은 12개 테스트를 점검하고 결함 보고했다는 거야. 반응은 사례 하나 더
+  달라였고 소유권을 반복해서 물었어. 팀 확장 중이라고 말했고 나는 다음 라운드가 뭔지 몰라. 이 실제 기록으로 복기해줘.
+assertions:
+  first: First response collects actual interview questions/evidence before praise/prediction
+    or next-round model answers.
+  feedback_loop: After data compares hypothesis/actual evidence, flags ownership risk,
+    treats team expansion as user-reported, revises story emphasis and next-round
+    questions/positioning.
+  prediction: Does not infer pass/rejection from interviewer reaction.

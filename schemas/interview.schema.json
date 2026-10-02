@@ -1,0 +1,169 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://careerpilot.local/schemas/interview.schema.json",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "opportunity_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "round": {
+      "anyOf": [
+        {
+          "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/InterviewRound"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "questions": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/InterviewQuestion"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      }
+    },
+    "answers": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/InterviewAnswer"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      }
+    },
+    "debriefs": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "anyOf": [
+          {
+            "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/InterviewDebrief"
+          },
+          {
+            "type": "null"
+          }
+        ]
+      }
+    },
+    "mock_sessions": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "opportunity_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "round_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "mode": {
+            "enum": [
+              "BASELINE",
+              "RESUME_DRILLDOWN",
+              "AGGRESSIVE",
+              "ENGLISH",
+              "PRESSURE",
+              "CUSTOM",
+              null
+            ]
+          },
+          "status": {
+            "enum": [
+              "ACTIVE",
+              "ENDED",
+              null
+            ]
+          },
+          "transcript": {
+            "type": [
+              "array",
+              "null"
+            ],
+            "items": {
+              "type": "object",
+              "properties": {
+                "speaker": {
+                  "enum": [
+                    "INTERVIEWER",
+                    "USER",
+                    null
+                  ]
+                },
+                "text": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "required": [],
+              "additionalProperties": false
+            }
+          },
+          "explicit_end": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "review": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "id",
+    "opportunity_id"
+  ],
+  "additionalProperties": false
+}

@@ -1,0 +1,5 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://careerpilot.local/schemas/preferences.schema.json",
+  "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/JobPreferences"
+}

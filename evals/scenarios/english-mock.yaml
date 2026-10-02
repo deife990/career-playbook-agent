@@ -1,0 +1,15 @@
+id: english-mock
+persona: english-candidate
+workflow: W07
+turns:
+- ENGLISH mock for Alpha analyst. My verified experience is supporting testing of
+  12 cases. Start with one question.
+- I supported tests and reported defects. Please correct my grammar during the interview;
+  do not end yet.
+- End mock and give focused feedback.
+assertions:
+  english: Active interviewer turns are English, professional and one question at
+    a time.
+  no_leakage: No in-session grammar coaching/praise/rubric disclosure before explicit
+    end.
+  review: After end gives evidence-based focused review without inventing outcomes.

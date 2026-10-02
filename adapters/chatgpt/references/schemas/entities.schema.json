@@ -1,0 +1,3090 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://careerpilot.local/schemas/entities.schema.json",
+  "$defs": {
+    "CareerGoal": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "opportunity_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "direction": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "horizon": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "success_criteria": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "priority": {
+          "type": [
+            "number",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "Skill": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "opportunity_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "level": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "evidence_ids": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "Achievement": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "opportunity_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "description": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "evidence_ids": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "metric": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "CareerEvidence": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "opportunity_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "description": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "own_role": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "context": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "action": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "outcome": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "scale": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "skills": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "classification": {
+          "enum": [
+            "USER FACT",
+            "VERIFIED FACT",
+            "INFERENCE",
+            "RECOMMENDATION",
+            null
+          ]
+        },
+        "source_ids": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "user_confirmed": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "sensitive": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "verification": {
+          "enum": [
+            "USER_CONFIRMED",
+            "EXTERNAL_VERIFIED",
+            "UNCONFIRMED",
+            "CONTRADICTED",
+            null
+          ]
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "Story": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "opportunity_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "evidence_ids": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "situation": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "task": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "action": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "result": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reflection": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "variants": {
+          "anyOf": [
+            {
+              "type": "object",
+              "properties": {
+                "seconds_30": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "seconds_60": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "seconds_120": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "required": [],
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "tags": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "revisions": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "object",
+            "properties": {
+              "date": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "reason": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "text": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "TargetRole": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "opportunity_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "rationale": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "category": {
+          "enum": [
+            "CORE",
+            "STRETCH",
+            "STRATEGIC_ENTRY",
+            null
+          ]
+        },
+        "claim_ids": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "TargetCompany": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "opportunity_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "rationale": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "claim_ids": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "Source": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "opportunity_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "url": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        },
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "publisher": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "kind": {
+          "enum": [
+            "OFFICIAL",
+            "PRIMARY",
+            "INSTITUTIONAL",
+            "REPORTING",
+            "PROFESSIONAL_PROFILE",
+            "CANDIDATE_REPORT",
+            "COMMUNITY",
+            "USER_SUPPLIED",
+            null
+          ]
+        },
+        "published_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "retrieved_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "access_status": {
+          "enum": [
+            "ACCESSED",
+            "USER_SUPPLIED",
+            "UNAVAILABLE",
+            null
+          ]
+        },
+        "freshness": {
+          "enum": [
+            "CURRENT",
+            "STALE",
+            "UNDATED",
+            "UNKNOWN",
+            null
+          ]
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "Claim": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "opportunity_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "text": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "classification": {
+          "enum": [
+            "USER FACT",
+            "VERIFIED FACT",
+            "INFERENCE",
+            "RECOMMENDATION",
+            null
+          ]
+        },
+        "source_ids": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "confidence": {
+          "enum": [
+            "HIGH",
+            "MEDIUM",
+            "LOW",
+            "UNKNOWN",
+            null
+          ]
+        },
+        "verification": {
+          "enum": [
+            "VERIFIED",
+            "PARTIAL",
+            "UNVERIFIED",
+            "CONTRADICTED",
+            "INFERENCE",
+            null
+          ]
+        },
+        "retrieved_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "freshness": {
+          "enum": [
+            "CURRENT",
+            "STALE",
+            "UNDATED",
+            "UNKNOWN",
+            null
+          ]
+        },
+        "supersedes_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "CompanyResearch": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "opportunity_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "claim_ids": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "business": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "industry": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "historical_hiring": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "people_patterns": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "official_guides": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "unknowns": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "JobAnalysis": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "opportunity_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "jd_source_ids": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "must_haves": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "nice_to_haves": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "outcomes": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "constraints": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "keywords": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "ambiguities": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "HiringHypothesis": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "opportunity_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "text": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "claim_ids": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "alternatives": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "confidence": {
+          "enum": [
+            "HIGH",
+            "MEDIUM",
+            "LOW",
+            "UNKNOWN",
+            null
+          ]
+        },
+        "questions_to_verify": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "first_90_days": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "revision": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "previous_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "IdealCandidate": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "opportunity_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "criteria": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "claim_ids": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "defined_before_mapping": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "CandidateStrategy": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "opportunity_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "thesis": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "positioning": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ideal_candidate_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "mapping": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "object",
+            "properties": {
+              "criterion": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "category": {
+                "enum": [
+                  "STRONG_EVIDENCE",
+                  "TRANSFERABLE_EVIDENCE",
+                  "GAP",
+                  "UNKNOWN",
+                  null
+                ]
+              },
+              "evidence_ids": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "rationale": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        "risks": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "questions_to_verify": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "round_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "ResumeVersion": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "opportunity_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "kind": {
+          "enum": [
+            "MASTER",
+            "TAILORED",
+            null
+          ]
+        },
+        "language": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "bullets": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "object",
+            "properties": {
+              "text": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "evidence_ids": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "action": {
+                "enum": [
+                  "KEEP",
+                  "REWRITE",
+                  "MOVE",
+                  "REMOVE",
+                  "ADD_FROM_EVIDENCE",
+                  null
+                ]
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        "experience_dates": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "review_status": {
+          "enum": [
+            "DRAFT",
+            "FACT_CHECKED",
+            "USER_APPROVED",
+            null
+          ]
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "LinkedInReview": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "opportunity_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "findings": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "proposed_copy": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "evidence_ids": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "consistency_issues": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "digital_footprint": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "PortfolioArtifact": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "opportunity_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "decision": {
+          "enum": [
+            "CREATE",
+            "SKIP",
+            "DEFER",
+            null
+          ]
+        },
+        "rationale": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "audience": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "purpose": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "format": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "length": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "cases": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "evidence_ids": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "InterviewRound": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "opportunity_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "type": {
+          "enum": [
+            "RECRUITER",
+            "HM",
+            "TECHNICAL",
+            "CASE",
+            "PANEL",
+            "BEHAVIORAL",
+            "EXECUTIVE",
+            "FINAL",
+            "UNKNOWN",
+            "TEAMMATE",
+            "REGIONAL",
+            "GLOBAL",
+            "REFERENCE",
+            "BACKGROUND_CHECK",
+            null
+          ]
+        },
+        "scheduled_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "completed_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "interviewer": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "interviewer_source_ids": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "previous_round_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "objectives": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "positioning": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "language": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "InterviewQuestion": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "opportunity_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "round_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "text": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "origin": {
+          "enum": [
+            "ACTUAL_USER_RECALL",
+            "OFFICIAL_GUIDE",
+            "CANDIDATE_REPORT",
+            "PRACTICE_INFERENCE",
+            null
+          ]
+        },
+        "followup_to_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_ids": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "story_ids": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "InterviewAnswer": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "opportunity_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "round_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "question_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "text": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "evidence_ids": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "recalled": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "uncertainty": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "InterviewDebrief": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "opportunity_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "round_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "question_ids": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "answer_ids": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "followups": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "interviewer_reactions": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "repeated_topics": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "new_company_information": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "user_uncertainty": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "previous_hypothesis_ids": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "updated_hypothesis_ids": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "candidate_risks": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "story_updates": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "next_round_objectives": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "next_questions": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "next_positioning": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "collection_complete": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "CompensationPackage": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "opportunity_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "currency": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "base": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "variable": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "equity": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sign_on": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "benefits": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "vesting": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "conditions": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "source_ids": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "estimated_net": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "net_assumptions": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "Offer": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "opportunity_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "compensation": {
+          "anyOf": [
+            {
+              "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/CompensationPackage"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "deadline": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "role": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "location": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "manager": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "conditions": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "original_requirement_ids": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "evaluation": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "object",
+            "properties": {
+              "requirement_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "assessment": {
+                "enum": [
+                  "MET",
+                  "NOT_MET",
+                  "UNKNOWN",
+                  null
+                ]
+              },
+              "reason": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        "decision": {
+          "enum": [
+            "ACCEPT",
+            "DECLINE",
+            "NEGOTIATE",
+            "DEFER",
+            null
+          ]
+        },
+        "decision_event": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "Decision": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "opportunity_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "subject": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "choice": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "user_confirmed": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "claim_ids": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "created_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "NextAction": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "opportunity_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "text": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "owner": {
+          "enum": [
+            "USER",
+            "AI",
+            null
+          ]
+        },
+        "due_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "status": {
+          "enum": [
+            "OPEN",
+            "DONE",
+            "ON_HOLD",
+            null
+          ]
+        },
+        "evidence_ids": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "CareerProfile": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "1.0.0"
+        },
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "current_role": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "experience_years": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "summary": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "goals": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/CareerGoal"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "skills": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/Skill"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "achievements": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/Achievement"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "evidence": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/CareerEvidence"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "target_roles": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/TargetRole"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "target_companies": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/TargetCompany"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "sources": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/Source"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "resume_versions": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/ResumeVersion"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "linkedin_reviews": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/LinkedInReview"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "portfolio_artifacts": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/PortfolioArtifact"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "claims": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/Claim"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "decisions": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/Decision"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "next_actions": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/NextAction"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        }
+      },
+      "required": [
+        "schema_version",
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "JobPreferences": {
+      "type": "object",
+      "properties": {
+        "schema_version": {
+          "const": "1.0.0"
+        },
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "requirements": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "text": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "priority": {
+                "enum": [
+                  "MUST",
+                  "PREFER",
+                  "AVOID",
+                  null
+                ]
+              },
+              "rationale": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        "target_roles": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "target_locations": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "salary_floor": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "currency": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "language": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "work_style": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "timeline": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "original_requirements": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "text": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "priority": {
+                "enum": [
+                  "MUST",
+                  "PREFER",
+                  "AVOID",
+                  null
+                ]
+              },
+              "rationale": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "schema_version",
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "Opportunity": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "opportunity_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "company": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "role": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "url": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "uri"
+        },
+        "status": {
+          "enum": [
+            "DISCOVERED",
+            "SCREENING",
+            "INTERESTED",
+            "APPLYING",
+            "APPLIED",
+            "RECRUITER",
+            "INTERVIEWING",
+            "FINAL",
+            "OFFER",
+            "ACCEPTED",
+            "REJECTED",
+            "WITHDRAWN",
+            "ON_HOLD",
+            "DECLINED",
+            null
+          ]
+        },
+        "category": {
+          "enum": [
+            "CORE",
+            "STRETCH",
+            "STRATEGIC_ENTRY",
+            null
+          ]
+        },
+        "status_history": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "object",
+            "properties": {
+              "from": {
+                "enum": [
+                  "DISCOVERED",
+                  "SCREENING",
+                  "INTERESTED",
+                  "APPLYING",
+                  "APPLIED",
+                  "RECRUITER",
+                  "INTERVIEWING",
+                  "FINAL",
+                  "OFFER",
+                  "ACCEPTED",
+                  "REJECTED",
+                  "WITHDRAWN",
+                  "ON_HOLD",
+                  "DECLINED",
+                  null
+                ]
+              },
+              "to": {
+                "enum": [
+                  "DISCOVERED",
+                  "SCREENING",
+                  "INTERESTED",
+                  "APPLYING",
+                  "APPLIED",
+                  "RECRUITER",
+                  "INTERVIEWING",
+                  "FINAL",
+                  "OFFER",
+                  "ACCEPTED",
+                  "REJECTED",
+                  "WITHDRAWN",
+                  "ON_HOLD",
+                  "DECLINED",
+                  null
+                ]
+              },
+              "event": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "confirmed_by": {
+                "enum": [
+                  "USER",
+                  "VERIFIED_SOURCE",
+                  null
+                ]
+              },
+              "source_ids": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "at": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        "research": {
+          "anyOf": [
+            {
+              "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/CompanyResearch"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "job_analysis": {
+          "anyOf": [
+            {
+              "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/JobAnalysis"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "hiring_hypotheses": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/HiringHypothesis"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "ideal_candidate": {
+          "anyOf": [
+            {
+              "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/IdealCandidate"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "candidate_strategies": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/CandidateStrategy"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "Application": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "opportunity_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "opportunity": {
+          "anyOf": [
+            {
+              "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/Opportunity"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "submitted_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "resume_versions": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/ResumeVersion"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "linkedin_reviews": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/LinkedInReview"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "portfolio_artifacts": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/PortfolioArtifact"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "cover_letter": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "answers": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "object",
+            "properties": {
+              "question": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "answer": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "evidence_ids": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        "messages": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "enum": [
+                  "RECRUITER",
+                  "NETWORKING",
+                  "REFERENCE",
+                  null
+                ]
+              },
+              "text": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "sent": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        "red_team": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "object",
+            "properties": {
+              "perspective": {
+                "enum": [
+                  "RECRUITER",
+                  "HM",
+                  "SKEPTICAL_INTERVIEWER",
+                  null
+                ]
+              },
+              "risk": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "severity": {
+                "enum": [
+                  "HIGH",
+                  "MEDIUM",
+                  "LOW",
+                  null
+                ]
+              },
+              "evidence_ids": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "fix": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        "interviews": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "https://careerpilot.local/schemas/interview.schema.json"
+          }
+        },
+        "offers": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/Offer"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "sources": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/Source"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "claims": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/Claim"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "decisions": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/Decision"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "next_actions": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "anyOf": [
+              {
+                "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/NextAction"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    }
+  }
+}
