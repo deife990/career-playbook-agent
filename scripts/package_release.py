@@ -7,6 +7,7 @@ if __package__ in (None, ''):
 import argparse, hashlib, re, zipfile
 from scripts.common import ROOT
 from scripts.build_common import build
+from scripts.package_inventory import inventory
 
 def package():
     version=(ROOT/'VERSION').read_text().strip()
@@ -17,8 +18,9 @@ def package():
     for platform in ['chatgpt','claude']:
         root=build(platform); archive=destination/f'careerpilot-{platform}-v{version}.zip'
         with zipfile.ZipFile(archive,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=9) as z:
-            for path in sorted(root.rglob('*')):
-                if not path.is_file(): continue
+            files=inventory(root,platform)+(['.agents/plugins/marketplace.json'] if platform=='chatgpt' else [])
+            for relative in sorted(files):
+                path=root/relative
                 name=path.relative_to(root.parent).as_posix()
                 entry=zipfile.ZipInfo(name,(2020,1,1,0,0,0));entry.compress_type=zipfile.ZIP_DEFLATED
                 entry.create_system=3;entry.external_attr=0o100644<<16

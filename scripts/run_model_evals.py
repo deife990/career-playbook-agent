@@ -11,10 +11,12 @@ import yaml
 from scripts.common import ROOT, load, frontmatter
 from scripts.generate_adapters import generate
 from scripts.context_pack import import_pack
+from scripts.package_inventory import inventory
 JUDGE_SCHEMA={'type':'object','properties':{'assertions':{'type':'array','items':{'type':'object','properties':{'id':{'type':'string'},'pass':{'type':'boolean'},'reason':{'type':'string'},'evidence_quote':{'type':'string'}},'required':['id','pass','reason','evidence_quote'],'additionalProperties':False}}},'required':['assertions'],'additionalProperties':False}
 class RateLimitError(RuntimeError): pass
 def fingerprint(root):
-    return hashlib.sha256(''.join(p.relative_to(root).as_posix()+hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(root.rglob('*')) if p.is_file() and p.relative_to(root).as_posix() not in ['README.md','host.md'] and '.agents' not in p.relative_to(root).parts and p.name!='.gitkeep').encode()).hexdigest()
+    platform='chatgpt' if (root/'plugin.json').is_file() else 'claude'
+    return hashlib.sha256(''.join(relative+hashlib.sha256((root/relative).read_bytes()).hexdigest() for relative in inventory(root,platform)).encode()).hexdigest()
 def lossless(original,restored):
     # Optional schema knowledge fields may be materialized as null; existing values stay exact.
     # Schema validation is performed separately before this comparator.
@@ -132,7 +134,10 @@ def main():
     # Immutable package snapshot prevents builds/generation in the shared workspace from changing
     # the package under a running subject. The evaluated snapshot's digest is recorded.
     snapshot=tempfile.TemporaryDirectory(prefix='careerpilot-package-')
-    root=Path(snapshot.name).resolve()/'careerpilot'; shutil.copytree(source,root); digest=fingerprint(root)
+    root=Path(snapshot.name).resolve()/'careerpilot'
+    for relative in inventory(source,args.platform):
+        path=root/relative;path.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(source/relative,path)
+    digest=fingerprint(root)
     suite=sorted((ROOT/'evals/scenarios').glob('*.yaml'))
     suite_digest=hashlib.sha256(''.join(p.read_text() for p in suite).encode()).hexdigest()
     report_path=ROOT/f'dist/evals/{args.platform}.json'; report_path.parent.mkdir(parents=True,exist_ok=True)

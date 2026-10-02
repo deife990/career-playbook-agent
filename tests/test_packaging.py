@@ -32,3 +32,22 @@ def test_build_link_validation_actually_checks_dist(tmp_path):
     root=tmp_path/'dist'/'package';root.mkdir(parents=True)
     (root/'bad.md').write_text('[broken](missing.md)')
     with pytest.raises(ValueError,match='Broken'): validate_links(root)
+
+def test_behavior_fingerprint_excludes_incidental_generated_duplicates():
+    root=generate('claude');before=fingerprint(root)
+    duplicate=root/'templates/career-profile 2.json';duplicate.write_text('{"unexpected":"must not ship"}')
+    try: assert fingerprint(root)==before
+    finally:duplicate.unlink(missing_ok=True)
+
+def test_failed_actual_assertion_cannot_hide_under_pass_header(tmp_path,monkeypatch):
+    import hashlib,yaml
+    import scripts.release_readiness as readiness
+    cases=tmp_path/'evals/scenarios';cases.mkdir(parents=True)
+    definition={'id':'case','assertions':{'scope':'Preserve company isolation'}}
+    text=yaml.safe_dump(definition);(cases/'case.yaml').write_text(text)
+    report={'platform':'chatgpt','status':'PASS','package_fingerprint':'current','suite_fingerprint':hashlib.sha256(text.encode()).hexdigest(),'cases':[{'id':'case','status':'PASS','model_ids':['actual-model'],'judge_model':'judge','assertions':[{'id':'scope','pass':False,'reason':'leaked company','evidence_quote':'Beta'}],'transcript':[{'role':'assistant','content':'Beta'}]}]}
+    monkeypatch.setattr(readiness,'ROOT',tmp_path)
+    monkeypatch.setattr(readiness,'generate',lambda platform:tmp_path)
+    monkeypatch.setattr(readiness,'fingerprint',lambda root:'current')
+    monkeypatch.setattr(readiness,'load',lambda path: {'status':'PASS'} if path.name=='native-install.json' else report)
+    with pytest.raises(ValueError,match='failed assertion'):readiness.check()
