@@ -1,0 +1,31 @@
+name: Release verified packages
+on:
+  push:
+    tags: ['v*']
+permissions:
+  contents: write
+jobs:
+  release:
+    # Never run untrusted PR code on the authenticated evaluation runner.
+    runs-on: [self-hosted, careerpilot-evals]
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check tag matches source version
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: python -c "import os,pathlib; assert os.environ['RELEASE_TAG']=='v'+pathlib.Path('VERSION').read_text().strip()"
+      - run: pip install -r requirements-dev.txt
+      - run: python -m scripts.run_static_evals
+      - run: python -m pytest -q
+      - run: python -m scripts.run_model_evals --platform chatgpt
+      - run: python -m scripts.run_model_evals --platform claude
+      - run: python -m scripts.package_release --require-ready
+      - run: git diff --exit-code -- adapters
+      - name: Create GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" dist/releases/* --verify-tag --generate-notes --prerelease

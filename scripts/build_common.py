@@ -1,15 +1,28 @@
 from pathlib import Path
-import shutil
-from scripts.common import ROOT, load, validate_links, validate_skill
+import json, shutil
+from scripts.common import ROOT, validate_links, validate_skill
+from scripts.generate_adapters import generate
+from scripts.validate_manifest import validate_manifest
+
+def catalog():
+    data=json.loads((ROOT/'.agents/plugins/marketplace.json').read_text())
+    data['plugins'][0]['source']['path']='./'
+    return data
+
 def build(platform):
-    source=ROOT/'adapters'/platform
+    source=generate(platform)
     destination=ROOT/'dist'/platform/'careerpilot'
     if destination.exists(): shutil.rmtree(destination)
-    shutil.copytree(source if platform=='chatgpt' else source/'careerpilot', destination)
+    shutil.copytree(source,destination,ignore=shutil.ignore_patterns('README.md','.gitkeep'))
     if platform=='chatgpt':
-        manifest=load(destination/'plugin.json')
-        if manifest['name']!='careerpilot' or manifest['version']!=ROOT.joinpath('VERSION').read_text().strip(): raise ValueError('Manifest/version mismatch')
-        if any(k in manifest for k in ['mcpServers','apps']): raise ValueError('Unexpected service dependency')
+        (destination/'host.md').unlink(missing_ok=True)
+        validate_manifest(destination)
+        path=destination/'.agents/plugins/marketplace.json';path.parent.mkdir(parents=True,exist_ok=True)
+        path.write_text(json.dumps(catalog(),indent=2)+'\n')
+    for p in destination.rglob('*'):
+        if p.is_symlink(): raise ValueError('Runtime symlink forbidden')
+        if p.is_file() and p.suffix not in ['.md','.json','.yaml']:
+            raise ValueError(f'Unexpected runtime artifact: {p.name}')
     for p in destination.rglob('SKILL.md'): validate_skill(p,platform=='chatgpt')
     validate_links(destination)
     return destination

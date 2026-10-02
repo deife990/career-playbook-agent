@@ -1,0 +1,74 @@
+scope: Full V1
+coverage:
+- topic_id: requirements
+  workflow: W01
+  files:
+  - core/capabilities/career-analysis.md
+- topic_id: market-position
+  workflow: W02
+  files:
+  - core/capabilities/career-analysis.md
+- topic_id: role-models
+  workflow: W02
+  files:
+  - core/capabilities/career-analysis.md
+- topic_id: target-mapping
+  workflow: W03
+  files:
+  - core/capabilities/role-mapping.md
+- topic_id: job-intelligence
+  workflow: W04
+  files:
+  - core/capabilities/job-research.md
+- topic_id: ideal-candidate
+  workflow: W04
+  files:
+  - core/capabilities/job-research.md
+- topic_id: experience
+  workflow: W05
+  files:
+  - core/capabilities/experience-mining.md
+  - core/capabilities/story-bank.md
+- topic_id: application
+  workflow: W05
+  files:
+  - core/capabilities/resume.md
+  - core/capabilities/application-writing.md
+  - core/capabilities/linkedin.md
+  - core/capabilities/portfolio.md
+- topic_id: outreach
+  workflow: W05
+  files:
+  - core/capabilities/networking.md
+- topic_id: red-team
+  workflow: W05
+  files:
+  - core/capabilities/red-team.md
+- topic_id: interview
+  workflow: W06
+  files:
+  - core/capabilities/interviewer-intelligence.md
+  - core/capabilities/english-global.md
+- topic_id: mock
+  workflow: W07
+  files:
+  - core/capabilities/voice-mock.md
+  - core/capabilities/english-global.md
+- topic_id: debrief
+  workflow: W08
+  files:
+  - core/capabilities/story-bank.md
+- topic_id: offer
+  workflow: W09
+  files:
+  - core/capabilities/compensation.md
+- topic_id: pipeline
+  workflow: W03
+  files:
+  - core/capabilities/application-pipeline.md
+- topic_id: portable-context
+  workflow: W01
+  files: []
+canonical_entities_schema: schemas/entities.schema.json
+model_personas: evals/personas
+release_blockers: evals/assertions/release-blockers.yaml

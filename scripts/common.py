@@ -30,7 +30,7 @@ def validate_links(root):
     root = Path(root).resolve()
     errors=[]
     for path in root.rglob('*.md'):
-        if any(x in path.parts for x in ['.venv','.git','dist','work']): continue
+        if any(x in path.relative_to(root).parts for x in ['.venv','.git','dist','work']): continue
         for url in re.findall(r'!?\[[^\]]*\]\(([^)]+)\)',path.read_text()):
             if re.match(r'^[a-z][a-z0-9+.-]*:',url) or url.startswith('#'): continue
             target=url.split('#')[0].strip('<>')

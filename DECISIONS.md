@@ -19,3 +19,19 @@
   user may manually move this chat into AI Career 전자책. Local project is not proof of ChatGPT linkage.
 - D007: Authenticated developer CLI sessions may run model evals without new API keys. They do not
   establish native ChatGPT/Claude UI installation. Missing native evidence keeps RC gate blocked.
+- D008: Correct OpenAI authoring reference is https://developers.openai.com/plugins/build/plugins.
+  Marketplace source.path resolves from the marketplace root. Repository catalog points to
+  ./adapters/chatgpt; the extracted ChatGPT ZIP catalog points to ./ for its own plugin root.
+  Official portable schema pinned offline in fixtures/platform; no runtime validation dependency.
+- D009: Unknown skills are distinct from evidenced gaps; an unprovided SQL history cannot appear
+  in Gaps even with a qualifier. Added after an actual Claude model regression.
+- D010: Global Master resumes, LinkedIn/portfolio records and claims persist in career-profile.json.
+  Optional schema fields added compatibly at schema_version 1.0.0 before first release. Partial
+  debriefs may append/fill unknowns without losing observations; completed captures are preserved.
+- D011: Lossless model export may add schema-valid optional null fields. This is unknown-field
+  normalization, not new career information; no existing field/value/list order may change or
+  disappear. Deterministic eval checks this explicitly after schema/scope validation.
+- D012: Native custom-package installation through computer UI requires action-time confirmation
+  under the computer-use tool policy for software outside a recognized marketplace. Package
+  preparation and CLI behavioral evaluation do not require this confirmation. Native evidence
+  remains pending until actual observed installation and behavior; no simulated signoff.

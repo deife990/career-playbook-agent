@@ -1,9 +1,12 @@
-name: Validate
-on: [push, pull_request]
+name: Build install packages
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
 permissions:
   contents: read
 jobs:
-  validate:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -12,5 +15,10 @@ jobs:
           python-version: '3.12'
       - run: pip install -r requirements-dev.txt
       - run: python -m scripts.run_static_evals
-      - run: python -m pytest -q
+      - run: python -m scripts.package_release
       - run: git diff --exit-code -- adapters
+      - uses: actions/upload-artifact@v4
+        with:
+          name: careerpilot-install-packages
+          path: dist/releases/*
+          if-no-files-found: error

@@ -1,0 +1,33 @@
+name: Actual model evaluations
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 19 * * *'
+  push:
+    tags: ['v*']
+permissions:
+  contents: read
+jobs:
+  model-evals:
+    # Existing authenticated CLIs on a trusted private runner; no product API key dependency.
+    # A disabled runner is visibly skipped and cannot create a passing release report.
+    if: vars.CAREERPILOT_MODEL_EVALS_ENABLED == 'true'
+    runs-on: [self-hosted, careerpilot-evals]
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements-dev.txt
+      - run: python -m scripts.run_static_evals
+      - run: python -m scripts.run_model_evals --platform chatgpt
+      - run: python -m scripts.run_model_evals --platform claude
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: careerpilot-actual-model-evidence
+          path: |
+            dist/evals/*.json
+            work/model-evals/
+          if-no-files-found: error
