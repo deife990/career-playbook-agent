@@ -66,3 +66,9 @@
   Chrome inspection was rejected for an unrelated private selected tab. Keep the bound plugin tab
   only. Existing model/fresh-clone evidence predates this metadata-only change and does not certify
   the current full package; release remains blocked until all current-package gates pass.
+
+- D019 (2026-10-04): The user confirmed the metadata-complete package still fails web upload.
+  Official onboardingSkill is a relative included-file path, not a skill identifier. Corrected
+  it to ./skills/careerpilot-router/SKILL.md and validate shape/existence/traversal before build.
+  This confirms a package defect but does not prove the generic error's sole cause. Provide a
+  distinct upload-fix filename for the corrected bytes; no native pass or release claim yet.

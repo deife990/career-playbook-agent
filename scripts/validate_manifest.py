@@ -5,6 +5,7 @@ if __package__ in (None, ''):
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from jsonschema import Draft202012Validator
+from pathlib import PurePosixPath
 from scripts.common import ROOT, load
 
 def validate_manifest(root):
@@ -27,6 +28,15 @@ def validate_manifest(root):
             raise ValueError('Invalid ChatGPT upload interface.'+name)
     if '\n' in interface['shortDescription']:
         raise ValueError('ChatGPT shortDescription must fit on one line')
+    onboarding=manifest.get('extensions', {}).get('com.openai', {}).get('onboardingSkill')
+    if onboarding is not None:
+        if not isinstance(onboarding,str) or not onboarding.startswith('./'):
+            raise ValueError('onboardingSkill must be a ./skills/<name>/SKILL.md path')
+        path=PurePosixPath(onboarding)
+        if len(path.parts)!=3 or path.parts[0]!='skills' or path.parts[2]!='SKILL.md' or '..' in path.parts:
+            raise ValueError('Invalid onboardingSkill path')
+        if not (root/path).is_file() or (root/path).is_symlink():
+            raise ValueError('onboardingSkill must reference an included skill')
 
 def main(): validate_manifest(ROOT/'adapters/chatgpt'); print('Official portable manifest schema PASS')
 if __name__=='__main__': main()

@@ -22,3 +22,14 @@ Screenshot: consumer output `chatgpt-web-upload-failed.jpg`, captured from the b
 Sources:
 - https://developers.openai.com/plugins/build/plugins
 - https://developers.openai.com/plugins/deploy/submission-errors
+
+## Follow-up: onboarding path correction
+
+The user reported the same generic error with the metadata-complete package. Direct comparison with official documentation found `onboardingSkill` incorrectly set to the bare identifier `careerpilot-router`. The documented field is a relative path to an included SKILL.md, now `./skills/careerpilot-router/SKILL.md`. This is a confirmed package defect; the generic server error does not establish it as the sole cause.
+
+A regression validator rejects bare identifiers, traversal and missing onboarding files. Static checks, both builds, ZIP generation and 79 tests pass. Native acceptance remains unverified.
+
+Newest package fingerprint: `7ab1d1c9e1700a403a156ec09c15721ecae4895fd9adb7d79bd8fa09a8e1065f`
+Consumer retry file: `careerpilot-chatgpt-v1.0.0-rc.1-upload-fix.zip` (identical bytes to the newest canonical ChatGPT ZIP, distinct filename to avoid old-file selection). Earlier full-package model and clean-clone evidence remain historical until refreshed.
+
+Reference: https://developers.openai.com/plugins/deploy/submission#automatically-provide-submission-and-review-information

@@ -8,3 +8,4 @@
 - Add deterministic ZIPs, official manifest validation, static regressions and actual model evals.
 - Require current behavioral and native installation evidence before releasing; native tests pending.
 - Add documented ChatGPT archive author/interface metadata and reject portable-only manifests at the upload validation gate.
+- Fix onboardingSkill to the included SKILL.md path and validate missing/unsafe onboarding paths.

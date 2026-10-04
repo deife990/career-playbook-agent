@@ -29,7 +29,7 @@
           "\uba74\uc811 \ub05d\ub0ac\uc5b4."
         ]
       },
-      "onboardingSkill": "careerpilot-router"
+      "onboardingSkill": "./skills/careerpilot-router/SKILL.md"
     }
   }
 }

@@ -44,3 +44,17 @@ def test_portable_only_manifest_cannot_pass_chatgpt_upload_gate(tmp_path):
     del manifest['extensions']['com.openai']['interface']['displayName']
     (tmp_path/'plugin.json').write_text(json.dumps(manifest))
     with pytest.raises(ValueError,match='displayName'):validate_manifest(tmp_path)
+
+def test_onboarding_requires_an_included_skill_file(tmp_path):
+    import json,pytest
+    from scripts.validate_manifest import validate_manifest
+    manifest=load(generate('chatgpt')/'plugin.json')
+    for invalid in ['careerpilot-router','./skills/missing/SKILL.md','./skills/../SKILL.md']:
+        manifest['extensions']['com.openai']['onboardingSkill']=invalid
+        (tmp_path/'plugin.json').write_text(json.dumps(manifest))
+        with pytest.raises(ValueError,match='onboardingSkill'):validate_manifest(tmp_path)
+    path=tmp_path/'skills/careerpilot-router/SKILL.md';path.parent.mkdir(parents=True)
+    path.write_text('---\nname: careerpilot-router\ndescription: Career routing\n---\nRoute career requests.')
+    manifest['extensions']['com.openai']['onboardingSkill']='./skills/careerpilot-router/SKILL.md'
+    (tmp_path/'plugin.json').write_text(json.dumps(manifest))
+    validate_manifest(tmp_path)
