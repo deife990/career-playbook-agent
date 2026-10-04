@@ -1,0 +1,9 @@
+id: concise-second-opportunity
+persona: multi-application
+workflow: W04
+turns:
+- '[시뮬레이션] Alpha와 Beta는 별도 회사야. 지금 Beta Marketing Analyst 공고만 분석해줘. 합성 JD: campaign analysis, local-team collaboration. 조직/숫자/도구 정보 없음. 사용자 확인 경력은 운영 분석 3년, 테스트 12개 수행과 결함 보고뿐. 캠페인/SQL 경험·성과는 모름. 외부 웹 없음. 아주 짧게 Candidate Strategy Brief 전체를 만들어줘.'
+assertions:
+  sections: Keeps all 15 Candidate Strategy Brief section headings in order, even with short Unknown entries. No merged/omitted Confirmed Context, Unknowns, risks or Sources.
+  integrity: No invented candidate skill/quality/outcome from testing/reporting. Campaign experience unknown, not presumed absent. No numeric fit score or verified organizational claims.
+  isolation: Beta strategy contains no invented Alpha facts or Alpha SQL requirements.

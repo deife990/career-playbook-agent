@@ -7,3 +7,4 @@ turns:
 assertions:
   provenance: User confirmation remains USER FACT, optionally user_confirmed=true. No VERIFIED BY USER, Verified Experience, or VERIFIED FACT labels for self-reported experience.
   integrity: Keeps SQL/outcomes/education unknown and original remote requirement intact; no invented achievement.
+  scope: Neither brief nor positioning asserts clear/structured reporting, analytical skill, collaboration, process improvement, learning or impact from the two bare actions. Any role interpretation must be explicitly INFERENCE and not saved as career evidence.

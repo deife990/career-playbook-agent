@@ -41,6 +41,10 @@ Invitation/user recall is USER FACT, source-backed process VERIFIED FACT, propos
 INFERENCE. No “these are the actual questions” without direct support; no interviewer mind-reading.
 ## Output
 Interview Intelligence Pack + compact cheat sheet + next practice action.
+Before sending, include an explicit practice invitation even in concise output. With no voice
+access, say that text mock practice is available (for example, “텍스트 모의면접으로 연습할 수 있어요”).
+Mentioning a backup connection or English rehearsal does not satisfy this fallback. Wait for the
+user to request W07 before starting an interviewer question.
 ## State updates
 InterviewRound/InterviewQuestion (origins)/CandidateStrategy (round-specific)/Source/Claim/NextAction.
 Schedule/status updates require actual user event; do not overwrite prior round or debrief.

@@ -26,9 +26,14 @@ Final resume bullets/story variants retain evidence links; source content remain
 
 ## Portable export (canonical recovery fallback)
 Create manifest.json, career-profile.json, preferences.json, story-bank.json and one
-applications/<id>.json per included opportunity. Manifest lists exact paths, matching schema types,
-schema_version, product_version, pack_id, revision, export date, active opportunity and privacy
-review. Defaults live in [templates](../../templates/context-manifest.json). Do not invent hashes;
+applications/<id>.json per included opportunity.
+The filename stem must equal both application.opportunity_id and opportunity.id exactly: an
+opportunity with id opp-alpha belongs in applications/opp-alpha.json, not applications/alpha.json.
+After packaging, inspect the ZIP member list: include only the declared JSON files plus manifest
+and optional README; remove stale duplicate opportunity files. Check each round, question, answer,
+debrief, offer and next-action ID against the pre-export state before claiming a complete export.
+Manifest lists exact paths, matching schema types, schema_version, product_version, pack_id,
+revision, export date, active opportunity and privacy review. Defaults live in [templates](../../templates/context-manifest.json). Do not invent hashes;
 sha256 may be null on hosts without file hashing. Exclude secrets/raw connected-source documents.
 Confirm included opportunities and offer a redacted export; do not silently omit interview data.
 If files are unavailable, output individually named JSON blocks and a compact resume card. The

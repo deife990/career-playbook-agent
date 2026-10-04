@@ -1,5 +1,7 @@
 # Candidate Strategy Brief contract
 Required sections, in order:
+Keep every named section, including for a short brief or a second company. A one-line Unknown
+entry is sufficient; do not merge or omit Unknowns, Confirmed Context, risks or Sources.
 - Executive Summary
 - What This Role Appears To Be
 - Why It May Be Open

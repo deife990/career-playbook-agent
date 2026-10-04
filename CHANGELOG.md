@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0-rc.3
+
+- Native simulation repairs: preserve factual scope in brief/positioning, retain every Candidate Strategy section, explicitly invite text mock when voice is unavailable.
+- Portable export now explicitly requires filename/ID equality and final ZIP member/history checks after a native rc.2 export mismatch.
+- rc.2 failed observations remain historical evidence; rc.3 requires fresh behavioral and native acceptance.
+
 ## 1.0.0-rc.2 — Unreleased
 - Native synthetic ChatGPT testing exposed user-confirmed experience labeled as externally verified.
 - Keep self-confirmation as USER FACT and generate the small shared classification contract into both platform entries.

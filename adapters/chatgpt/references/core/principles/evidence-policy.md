@@ -8,6 +8,13 @@ VERIFIED FACT: accessible sources directly support this exact claim, subject, da
 INFERENCE: a reasoned hypothesis with evidence, alternatives and confidence; never a fact.
 RECOMMENDATION: an action proposal with rationale and constraints; never a forecast or guarantee.
 Unknown is a lack of information, not an assertion; preserve null, ask targeted verification.
+Preserve the exact factual scope even in summaries and positioning. “Performed 12 tests and
+reported defects” does not establish clear/structured reporting, analytical skill, learning,
+collaboration or improvement. Omit unsupported quality/skill/impact claims or explicitly label
+role interpretations INFERENCE; never persist them as CareerEvidence or factual resume/story text.
+Do not add a new action when paraphrasing: “reported defects” does not establish documentation,
+a written defect report, a reporting tool or a process. Preserve “reported defects” until the user
+confirms the method. Repetition of an assistant draft is not a user confirmation.
 
 ## Career evidence
 Capture own role, generalized context, actions, outcome, scale, skills, source IDs, user confirmation.

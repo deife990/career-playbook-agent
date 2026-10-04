@@ -12,16 +12,16 @@
   ],
   "platforms": {
     "chatgpt": {
-      "package_fingerprint": "7bd6b0f88360fa6fe328952e7bcb10c6bd080bc9ba8711182af11c84bd0d5254",
-      "observed_at": "2026-10-04",
+      "package_fingerprint": "ee0c08926420eb9302a9ca75dcaad495e228ff7c6c92e21408612fc6ef60a107",
+      "observed_at": "2026-10-05",
       "observer": "Codex via CUA",
       "surface": "ChatGPT web Work / Chrome / GPT-5.6 Terra Medium",
       "checks": {
         "activation": true
       },
-      "evidence_path": "evals/reports/chatgpt-native-e2e-1.0.0-rc.2.md",
-      "blocker": "Synthetic native lifecycle test in progress. rc.1 Chat self-confirmation was incorrectly labeled verified; repaired in rc.2. Fresh rc.2 clean-install and remaining native gates unverified.",
-      "supplementary_evidence": "evals/reports/chatgpt-web-install-1.0.0-rc.1.md"
+      "evidence_path": "evals/reports/chatgpt-native-regression-1.0.0-rc.3.md",
+      "blocker": "Actual existing-plugin rc.3 upgrade accepted. Targeted native repair tests in progress; full current native lifecycle and clean install not certified.",
+      "supplementary_evidence": "evals/reports/chatgpt-native-e2e-1.0.0-rc.2.md"
     },
     "claude": {
       "package_fingerprint": null,
@@ -45,5 +45,23 @@
     "evidence_path": "evals/reports/chatgpt-web-install-1.0.0-rc.1.md",
     "blocker": "Actual ChatGPT web upload, install and router onboarding activation observed. Native reference access/full lifecycle/mock/debrief/isolation/export-import remain unverified. Current whole-package model/fresh-clone evidence also needs refresh before release.",
     "supplementary_evidence": "evals/reports/openai-cli-install-1.0.0-rc.1.md"
+  },
+  "historical_chatgpt_rc2": {
+    "package_fingerprint": "7bd6b0f88360fa6fe328952e7bcb10c6bd080bc9ba8711182af11c84bd0d5254",
+    "observed_at": "2026-10-05",
+    "observer": "Codex via CUA",
+    "surface": "ChatGPT web Work / Chrome / GPT-5.6 Terra Medium",
+    "checks": {
+      "activation": true,
+      "reference_access": true,
+      "full_lifecycle": false,
+      "mock_contract": true,
+      "debrief_preserved": true,
+      "isolation": true,
+      "context_roundtrip": true
+    },
+    "evidence_path": "evals/reports/chatgpt-native-e2e-1.0.0-rc.2.md",
+    "blocker": "Native lifecycle exercised; initial unsupported documentation/quality and malformed export means overall acceptance FAIL. Export path and explicitly clarified evidence repaired, history and restored continuation preserved. New prep objectives/positioning persistence incomplete.",
+    "supplementary_evidence": "evals/reports/chatgpt-web-install-1.0.0-rc.1.md"
   }
 }

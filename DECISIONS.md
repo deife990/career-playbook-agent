@@ -80,3 +80,15 @@
   Their individual causality is not isolated. Local build directories/repo catalogs still support
   marketplace installation; consumer ZIPs represent exactly one plugin. No auth data was recorded.
   Native installation pass alone is not full lifecycle or release readiness.
+
+- D021 (2026-10-05): Native synthetic rc.2 lifecycle exposed both unsupported qualitative language
+  and a new documentation action inferred from defect reporting. Keep factual scope guidance
+  visible in generated entries, prohibit assistant repetition as user confirmation, and add
+  model regressions. Also make no-voice text practice and concise artifact section coverage explicit.
+  rc.3 repair is not automatically evidence that the whole native lifecycle passes.
+
+- D022 (2026-10-05): Native portable export schemas passed individually but its file stems did
+  not match opportunity IDs. Existing full validator rejected the original; native model repair
+  preserved all non-path data exactly and then passed. Clarify stem/ID equality and inspect final
+  ZIP members in the shared runtime protocol. No runtime Python dependency is added. Fresh-chat
+  byte-identical re-export proves lossless transport; separately test continuation and new-round save.
