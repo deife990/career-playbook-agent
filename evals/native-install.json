@@ -12,13 +12,13 @@
   ],
   "platforms": {
     "chatgpt": {
-      "package_fingerprint": null,
-      "observed_at": null,
-      "observer": null,
-      "surface": null,
+      "package_fingerprint": "83ff1e37a880a479619b9fe398c7df97c036bf23cefbc91e7464e5d19f48fe08",
+      "observed_at": "2026-10-04",
+      "observer": "Codex via CUA",
+      "surface": "ChatGPT web / Chrome",
       "checks": {},
-      "evidence_path": null,
-      "blocker": "Desktop app automation restricted. ChatGPT web Personal list is empty; archive upload, activation and lifecycle are pending action-time confirmation.",
+      "evidence_path": "evals/reports/chatgpt-web-install-1.0.0-rc.1.md",
+      "blocker": "Original ZIP selected via native picker; two Add plugin attempts returned a generic failure. Missing upload metadata is now repaired. Re-selection of the repaired ZIP needs user file selection because broad native Chrome inspection was rejected while an unrelated private page was selected. Acceptance and lifecycle remain unverified.",
       "supplementary_evidence": "evals/reports/openai-cli-install-1.0.0-rc.1.md"
     },
     "claude": {

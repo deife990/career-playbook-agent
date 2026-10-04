@@ -32,3 +32,15 @@ def test_unchanged_generation_does_not_rewrite_runtime_files():
     for platform in ['chatgpt','claude']:
         root=generate(platform);before={p:(root/p).stat().st_mtime_ns for p in inventory(root,platform)}
         generate(platform);assert before=={p:(root/p).stat().st_mtime_ns for p in inventory(root,platform)}
+
+def test_portable_only_manifest_cannot_pass_chatgpt_upload_gate(tmp_path):
+    import json,pytest
+    from scripts.validate_manifest import validate_manifest
+    manifest=load(generate('chatgpt')/'plugin.json')
+    del manifest['author']
+    (tmp_path/'plugin.json').write_text(json.dumps(manifest))
+    with pytest.raises(ValueError,match='author.name'):validate_manifest(tmp_path)
+    manifest['author']={'name':'deife990'}
+    del manifest['extensions']['com.openai']['interface']['displayName']
+    (tmp_path/'plugin.json').write_text(json.dumps(manifest))
+    with pytest.raises(ValueError,match='displayName'):validate_manifest(tmp_path)

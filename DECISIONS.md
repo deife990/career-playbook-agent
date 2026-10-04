@@ -57,3 +57,12 @@
   therefore not evidence of this account's web registration. Actual UI exposes Plugins → Personal
   → Add → Upload plugin archive. Added this observed path to consumer installation docs. ZIP
   acceptance, web activation and lifecycle remain unobserved until upload confirmation and testing.
+
+- D018 (2026-10-04): User authorized the ChatGPT private ZIP install. Native file selection worked
+  without granting persistent extension file access, but two Add plugin attempts returned only a
+  generic failure. Official upload documentation adds author/interface requirements beyond the
+  portable schema; added those metadata fields and regression validation. Generic UI errors do not
+  prove this was the cause. Repaired package acceptance is pending user file selection after native
+  Chrome inspection was rejected for an unrelated private selected tab. Keep the bound plugin tab
+  only. Existing model/fresh-clone evidence predates this metadata-only change and does not certify
+  the current full package; release remains blocked until all current-package gates pass.

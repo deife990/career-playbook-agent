@@ -7,3 +7,4 @@
 - Add beginner installation/recovery docs and ebook topic mapping without invented chapter numbers.
 - Add deterministic ZIPs, official manifest validation, static regressions and actual model evals.
 - Require current behavioral and native installation evidence before releasing; native tests pending.
+- Add documented ChatGPT archive author/interface metadata and reject portable-only manifests at the upload validation gate.
