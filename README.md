@@ -2,7 +2,8 @@
 AI-Powered Job Search Playbook을 실행하는 이직 준비 도우미. 커리어 정리부터 지원, 면접, 오퍼 결정까지.
 
 ## Install for ChatGPT
-지원되는 데스크톱/Work 환경에서 CareerPilot marketplace 원본을 등록하고 Plugins에서 설치하세요.
+웹에서는 플러그인 → 개인용 → 추가 → 플러그인 압축 파일 업로드를 사용하세요.
+데스크톱/로컬 환경에서는 CareerPilot marketplace 원본을 등록하고 Plugins에서 설치하세요.
 공개 디렉터리 등록 제품은 아닙니다. [설치 안내](docs/install-chatgpt.md).
 
 ## Install for Claude

@@ -51,3 +51,9 @@
   installer and reported installed/enabled without new authentication. Exact installed runtime
   fingerprint matches actual model evidence. This supplementary CLI observation does not replace
   native ChatGPT consumer UI activation and lifecycle signoff.
+
+- D017 (2026-10-04): The authenticated ChatGPT web account has an empty Personal plugin list
+  while the local OpenAI installer reports CareerPilot installed/enabled. Local installation is
+  therefore not evidence of this account's web registration. Actual UI exposes Plugins → Personal
+  → Add → Upload plugin archive. Added this observed path to consumer installation docs. ZIP
+  acceptance, web activation and lifecycle remain unobserved until upload confirmation and testing.
