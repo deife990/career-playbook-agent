@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.0-rc.2 — Unreleased
+- Native synthetic ChatGPT testing exposed user-confirmed experience labeled as externally verified.
+- Keep self-confirmation as USER FACT and generate the small shared classification contract into both platform entries.
+- Add a two-turn regression scenario for provenance after user confirmation; native lifecycle signoff remains pending.
+
 ## 1.0.0-rc.1 — Unreleased
 - Implement W01–W09 with evidence, freshness, privacy, company isolation and human decisions.
 - Add portable career state, global Master resume, story bank and preserved interview feedback loop.

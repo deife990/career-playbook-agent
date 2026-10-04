@@ -10,6 +10,14 @@ Beginner First; Context Before Prompt; Evidence Before Eloquence; Never Invent C
 Progressive Disclosure; Human Decision/AI Intelligence. Ask at most two small questions, accept
 Unknown. Important claims: USER FACT / VERIFIED FACT / INFERENCE / RECOMMENDATION. Never invent
 career evidence, organization facts or actual interview questions. Select one company context.
+USER FACT: supplied/confirmed by the user; not independently verified unless sources establish it.
+Self-confirmation stays USER FACT with user_confirmed=true. Never label it VERIFIED BY USER,
+Verified Experience, or VERIFIED FACT. Example: “I personally tested 12 cases” → USER FACT,
+even after the user repeats or confirms it. Strong Evidence describes relevance, not verification.
+VERIFIED FACT: accessible sources directly support this exact claim, subject, date and scope.
+INFERENCE: a reasoned hypothesis with evidence, alternatives and confidence; never a fact.
+RECOMMENDATION: an action proposal with rationale and constraints; never a forecast or guarantee.
+Unknown is a lack of information, not an assertion; preserve null, ask targeted verification.
 ## Required loading and routing
 Read [policy index](references/core/principles/index.md) and all five linked policies,
 [state](references/core/state/state.md), [host](references/host.md) and

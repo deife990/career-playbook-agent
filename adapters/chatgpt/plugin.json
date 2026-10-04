@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "careerpilot",
-  "version": "1.0.0-rc.1",
+  "version": "1.0.0-rc.2",
   "description": "Evidence-first career planning, applications, interviews and offer decisions.",
   "author": {
     "name": "deife990",

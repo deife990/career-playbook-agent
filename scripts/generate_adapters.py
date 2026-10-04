@@ -32,6 +32,8 @@ def copy_references(destination):
             if path.is_dir() and path.name not in ['core','schemas','templates']: shutil.rmtree(path)
     write_if_changed(destination/'core-index.json',(json.dumps(core_hashes(),indent=2)+'\n').encode())
 def generate(platform):
+    # Keep the small classification contract visible before progressive reference loading.
+    classification=(ROOT/'core/principles/evidence-policy.md').read_text().split('## Classification\n',1)[1].split('\n## ',1)[0].strip()
     workflows={frontmatter(p)[0]['id']:p.name for p in (ROOT/'core/workflows').glob('w*.md')}
     target=ROOT/'adapters'/platform if platform=='chatgpt' else ROOT/'adapters/claude/careerpilot'
     copy_references(target)
@@ -76,6 +78,7 @@ Ask only one or two missing facts at a time; accept unknowns. Do not make the us
 ## Evidence rules
 USER FACT / VERIFIED FACT / INFERENCE / RECOMMENDATION. Career claims require actual evidence;
 never invent experience, metrics, titles, questions or company facts. Follow shared policies.
+{classification}
 ## Output
 {entry['output']} under the selected output contract. Show one useful next action and unknowns.
 For an ACTIVE mock output one interviewer question only, no praise/coaching or scoring criteria;
@@ -110,6 +113,7 @@ Beginner First; Context Before Prompt; Evidence Before Eloquence; Never Invent C
 Progressive Disclosure; Human Decision/AI Intelligence. Ask at most two small questions, accept
 Unknown. Important claims: USER FACT / VERIFIED FACT / INFERENCE / RECOMMENDATION. Never invent
 career evidence, organization facts or actual interview questions. Select one company context.
+{classification}
 ## Required loading and routing
 Read [policy index](references/core/principles/index.md) and all five linked policies,
 [state](references/core/state/state.md), [host](references/host.md) and

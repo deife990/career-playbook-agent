@@ -1,0 +1,9 @@
+id: user-confirmation-classification
+persona: incomplete-resume
+workflow: W01
+turns:
+- '[시뮬레이션] 운영 분석 3년이고 테스트 12개 수행과 결함 보고만 알려줄게. 원격 필수, 영어 업무 선호. SQL, 성과, 학력은 모름. 이직 준비 시작하고 싶어.'
+- '12개 테스트와 결함 보고는 내가 직접 한 업무라고 확인할게. 원래 조건을 확정하고 Career Brief를 짧게 마무리해줘. 외부 검증 자료는 없어.'
+assertions:
+  provenance: User confirmation remains USER FACT, optionally user_confirmed=true. No VERIFIED BY USER, Verified Experience, or VERIFIED FACT labels for self-reported experience.
+  integrity: Keeps SQL/outcomes/education unknown and original remote requirement intact; no invented achievement.

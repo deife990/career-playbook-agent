@@ -10,6 +10,12 @@ def test_chatgpt_all_entries_have_structured_contract():
     dest=generate('chatgpt'); paths=list((dest/'skills').glob('*/SKILL.md'))
     assert len(paths)==12
     for path in paths: validate_skill(path,True)
+
+def test_classification_contract_is_visible_and_identical_on_both_hosts():
+    contract=(ROOT/'core/principles/evidence-policy.md').read_text().split('## Classification\n',1)[1].split('\n## ',1)[0].strip()
+    chatgpt=generate('chatgpt');claude=generate('claude')
+    for path in [*chatgpt.glob('skills/*/SKILL.md'),claude/'SKILL.md']:
+        assert contract in path.read_text()
 def test_claude_single_progressive_entry():
     dest=generate('claude'); assert len(list(dest.rglob('SKILL.md')))==1
     assert len((dest/'SKILL.md').read_text().splitlines())<500
