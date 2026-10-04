@@ -12,13 +12,16 @@
   ],
   "platforms": {
     "chatgpt": {
-      "package_fingerprint": "7ab1d1c9e1700a403a156ec09c15721ecae4895fd9adb7d79bd8fa09a8e1065f",
+      "package_fingerprint": "74b4d72eee216ecf414f088108cb55466cfdf13c963663d79031850fa024b452",
       "observed_at": "2026-10-04",
       "observer": "Codex via CUA",
       "surface": "ChatGPT web / Chrome",
-      "checks": {},
+      "checks": {
+        "clean_install": "PASS",
+        "activation": "PASS"
+      },
       "evidence_path": "evals/reports/chatgpt-web-install-1.0.0-rc.1.md",
-      "blocker": "User confirmed the metadata-complete ZIP still returns the generic Add plugin error. Found and repaired onboardingSkill value: it must point to ./skills/careerpilot-router/SKILL.md, not a bare skill name. Current corrected ZIP passes local validation; native acceptance/activation/lifecycle remain unverified.",
+      "blocker": "Actual ChatGPT web upload, install and router onboarding activation observed. Native reference access/full lifecycle/mock/debrief/isolation/export-import remain unverified. Current whole-package model/fresh-clone evidence also needs refresh before release.",
       "supplementary_evidence": "evals/reports/openai-cli-install-1.0.0-rc.1.md"
     },
     "claude": {

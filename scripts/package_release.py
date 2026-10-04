@@ -18,7 +18,8 @@ def package():
     for platform in ['chatgpt','claude']:
         root=build(platform); archive=destination/f'careerpilot-{platform}-v{version}.zip'
         with zipfile.ZipFile(archive,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=9) as z:
-            files=inventory(root,platform)+(['.agents/plugins/marketplace.json'] if platform=='chatgpt' else [])
+            # Consumer uploads contain one plugin, not its local marketplace catalog.
+            files=inventory(root,platform)
             for relative in sorted(files):
                 path=root/relative
                 name=path.relative_to(root.parent).as_posix()

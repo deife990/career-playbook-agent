@@ -33,3 +33,23 @@ Newest package fingerprint: `7ab1d1c9e1700a403a156ec09c15721ecae4895fd9adb7d79bd
 Consumer retry file: `careerpilot-chatgpt-v1.0.0-rc.1-upload-fix.zip` (identical bytes to the newest canonical ChatGPT ZIP, distinct filename to avoid old-file selection). Earlier full-package model and clean-clone evidence remain historical until refreshed.
 
 Reference: https://developers.openai.com/plugins/deploy/submission#automatically-provide-submission-and-review-information
+
+## Single-plugin archive recognition and observed acceptance
+
+On the user-confirmed upload-fix ZIP, browser-scoped developer diagnostics observed a POST initiated by the visible Add plugin control. It returned HTTP 400 with `{"detail":"Expected a single plugin archive"}`. The request had one file_id and one etag; no authentication headers, cookies, unrelated requests or personal content were exported.
+
+Changed the ChatGPT consumer ZIP to exclude the local marketplace catalog. Added the documented `.codex-plugin/plugin.json` compatibility manifest, generated from root portable metadata, with `skills: ./skills/`. These two packaging changes were tested together; the individual root cause is not isolated. Core and skill references remain unchanged.
+
+Selected the new archive through the native picker after bringing only the bound CareerPilot tab to the foreground. The visible Add plugin action returned HTTP 201, and the actual CareerPilot detail page displayed 12 skills and version 1.0.0-rc.1. User-approved Install completed with the “CareerPilot 사용 준비가 완료되었습니다” dialog. Setup opened a new actual ChatGPT router skill session and began career setup. Installation PASS; further behavior gates are not certified by this alone.
+
+Accepted plugin page: https://chatgpt.com/plugins/Plugin_b31659d536648191b9cf174e43ab90b2
+Accepted package fingerprint: `74b4d72eee216ecf414f088108cb55466cfdf13c963663d79031850fa024b452`
+Accepted archive SHA-256: `b38a999e961e0de0867a9f463c608e344e5eb5b35f08d124fda330f214969a4e`
+
+Static checks, both builds, deterministic extraction/parity tests and all 79 tests pass. Current full-package eval/clean-clone release evidence remains pending.
+
+## Observed onboarding activation
+
+After Setup, the actual new conversation visibly selected the careerpilot-router Skill and linked CareerPilot. It completed a career setup response and asked two missing onboarding questions. The host also used existing personal Memory; personal facts and memory contents are intentionally not copied into repository evidence. No invented test inputs or answers were added to the real user's setup conversation. Activation PASS. Reference file access and the remaining six native behavior gates are still unverified.
+
+Installed-state screenshot: consumer output `chatgpt-installed.jpg` shows CareerPilot, “채팅에서 사용해 보기” and 12 skills. Captured from the bound plugin page with private navigation excluded. Developer Network observation was disabled after diagnosis. The user's onboarding chat is left open; its personal contents are not in this repository.

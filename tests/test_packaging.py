@@ -21,8 +21,14 @@ def test_deterministic_archives_and_clean_extract(tmp_path):
         assert fingerprint(root)==fingerprint(generate(platform))
         if platform=='claude': assert (root/'SKILL.md').is_file()
         else:
-            manifest=json.loads((root/'.agents/plugins/marketplace.json').read_text())
-            assert manifest['plugins'][0]['source']['path']=='./'
+            assert not (root/'.agents/plugins/marketplace.json').exists()
+            portable=json.loads((root/'plugin.json').read_text())
+            compatibility=json.loads((root/'.codex-plugin/plugin.json').read_text())
+            assert compatibility['name']==portable['name']
+            assert compatibility['version']==portable['version']
+            assert compatibility['skills']=='./skills/'
+            assert compatibility['interface']==portable['extensions']['com.openai']['interface']
+            assert compatibility['extensions']['com.openai']['onboardingSkill']==portable['extensions']['com.openai']['onboardingSkill']
 
 def test_missing_native_evidence_blocks_release(monkeypatch):
     monkeypatch.setattr('scripts.release_readiness.load',lambda path: {'status':'PENDING'})

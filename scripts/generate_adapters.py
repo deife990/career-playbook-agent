@@ -41,6 +41,13 @@ def generate(platform):
         skills=target/'skills'
         manifest=load(target/'plugin.json'); manifest['version']=(ROOT/'VERSION').read_text().strip()
         write_if_changed(target/'plugin.json',(json.dumps(manifest,indent=2)+'\n').encode())
+        # Generate compatibility metadata from the portable source of truth.
+        settings=manifest.get('extensions',{}).get('com.openai',{})
+        overlay={k:v for k,v in manifest.items() if k not in ['$schema','extensions']}
+        overlay['skills']='./skills/'
+        overlay['interface']=settings.get('interface',{})
+        overlay['extensions']={'com.openai':{k:v for k,v in settings.items() if k!='interface'}}
+        write_if_changed(target/'.codex-plugin/plugin.json',(json.dumps(overlay,indent=2)+'\n').encode())
         for entry in load(ROOT/'adapters/skills.json'):
             name=entry['name']; workflow=entry['workflow']; base='../../references'
             selected=f"{base}/core/workflows/{workflows[workflow]}" if workflow else f'{base}/core/router/routing.md' if name=='careerpilot-router' else f'{base}/core/state/state.md' if name=='career-state' else f'{base}/core/capabilities/experience-mining.md'

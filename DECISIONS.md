@@ -72,3 +72,11 @@
   it to ./skills/careerpilot-router/SKILL.md and validate shape/existence/traversal before build.
   This confirms a package defect but does not prove the generic error's sole cause. Provide a
   distinct upload-fix filename for the corrected bytes; no native pass or release claim yet.
+
+- D020 (2026-10-04): Scoped browser diagnostics exposed HTTP 400 “Expected a single plugin
+  archive” for the upload-fix ZIP. Consumer ChatGPT archives now exclude the local marketplace
+  catalog and include a generated .codex-plugin/plugin.json compatibility manifest. Both changes
+  together were accepted with HTTP 201, 12 skills visible, and actual web installation completed.
+  Their individual causality is not isolated. Local build directories/repo catalogs still support
+  marketplace installation; consumer ZIPs represent exactly one plugin. No auth data was recorded.
+  Native installation pass alone is not full lifecycle or release readiness.

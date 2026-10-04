@@ -1,0 +1,35 @@
+{
+  "name": "careerpilot",
+  "version": "1.0.0-rc.1",
+  "description": "Evidence-first career planning, applications, interviews and offer decisions.",
+  "author": {
+    "name": "deife990",
+    "url": "https://github.com/deife990"
+  },
+  "repository": "https://github.com/deife990/career-playbook-agent",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "CareerPilot",
+    "shortDescription": "Evidence-first career support",
+    "longDescription": "Plan your career, analyze opportunities, prepare applications and interviews, practice mock interviews, preserve interview debriefs, and evaluate offers using your actual evidence. No new account, API key or server is required.",
+    "developerName": "deife990",
+    "category": "Productivity",
+    "capabilities": [
+      "Career planning",
+      "Job analysis",
+      "Application preparation",
+      "Interview practice",
+      "Offer decisions"
+    ],
+    "defaultPrompt": [
+      "\uc774\uc9c1 \uc900\ube44 \uc2dc\uc791\ud558\uace0 \uc2f6\uc5b4.",
+      "\uc774 \uacf5\uace0 \uc5b4\ub54c?",
+      "\uba74\uc811 \ub05d\ub0ac\uc5b4."
+    ]
+  },
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./skills/careerpilot-router/SKILL.md"
+    }
+  }
+}

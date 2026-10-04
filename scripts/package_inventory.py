@@ -12,6 +12,7 @@ def inventory(root,platform):
         if platform=='claude' and relative.parts[0]=='templates':paths.add(path)
     if platform=='chatgpt':
         paths.add('plugin.json')
+        paths.add('.codex-plugin/plugin.json')
         paths.update(f"skills/{e['name']}/SKILL.md" for e in load(ROOT/'adapters/skills.json'))
     elif platform=='claude':
         paths.add('SKILL.md')

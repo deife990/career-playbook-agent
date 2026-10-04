@@ -9,3 +9,4 @@
 - Require current behavioral and native installation evidence before releasing; native tests pending.
 - Add documented ChatGPT archive author/interface metadata and reject portable-only manifests at the upload validation gate.
 - Fix onboardingSkill to the included SKILL.md path and validate missing/unsafe onboarding paths.
+- Package one consumer plugin separately from its local marketplace catalog and generate Codex compatibility metadata; actual ChatGPT web upload and install accepted.

@@ -11,20 +11,14 @@ CareerPilot은 계정 연결이 필요 없는 Skill 전용 플러그인입니다
 4. 새 채팅에서 `@`를 입력해 CareerPilot 또는 해당 Skill이 나타나는지 확인한 뒤
    “이직 준비 시작하고 싶어.”라고 말하세요.
 
-2026-10-04 실제 계정에서 개인용 목록과 ZIP 업로드 메뉴를 확인하고 업로드를 시도했습니다.
-최초 파일은 추가 단계에서 구체적 원인이 없는 오류를 반환했습니다. 공식 업로드 기준의
-제작자·표시 정보와 시작 Skill 파일 경로를 보완한 새 파일을 준비했으며, 이 파일의 수락·활성화·대화 동작은 아직
-확인하지 않았습니다. 계정별로 메뉴가 다를 수 있습니다.
-로컬 설치가 웹 계정에 자동 등록되었다고 가정하지 마세요.
+2026-10-04 실제 계정에서 수정된 단일 플러그인 ZIP 수락과 설치 완료, 12개 Skill 표시를
+확인했습니다. 설치 화면의 **CareerPilot 설정**을 누르면 시작 대화가 열립니다.
+전체 이직 lifecycle 검증과 최종 출시 검증은 별도로 진행 중입니다.
 
-## 데스크톱/로컬 환경에서 ZIP을 받았을 때
-1. `careerpilot-chatgpt-v1.0.0-rc.1.zip`을 풀어 `careerpilot` 폴더를 안전한 위치에 보관하세요.
-2. 폴더에는 `plugin.json`, `skills`, `references`, `.agents/plugins/marketplace.json`이 있습니다.
-3. 지원되는 ChatGPT 데스크톱/Work 환경에서 해당 폴더를 로컬 프로젝트/marketplace 원본으로
-   사용하세요. 한 번의 등록에 CLI를 이용한다면 `codex plugin marketplace add "/압축 푼 위치/careerpilot"`
-   을 실행할 수 있습니다. CareerPilot 사용 중에는 이 명령이 필요하지 않습니다.
-4. 앱을 다시 열고 Plugins의 원본 목록에서 CareerPilot을 찾아 설치하세요. 설치 후 새 대화에서
-   “이직 준비 시작하고 싶어.”라고 말하세요. 설치 항목과 Skill 활성화 여부를 확인하세요.
+## ZIP 구성과 로컬 설치
+웹 업로드용 ZIP에는 `plugin.json`, `.codex-plugin/plugin.json`, `skills`, `references`가 있습니다.
+로컬 marketplace 목록은 웹 ZIP에 넣지 않습니다. 데스크톱/CLI에서 저장소를 사용하려면
+아래 개발 저장소 경로의 marketplace 등록을 사용하세요. 계정별 메뉴가 다를 수 있습니다.
 
 ## 개발 저장소를 사용할 때
 저장소 루트의 `.agents/plugins/marketplace.json`은 `adapters/chatgpt`를 가리킵니다. Core를 변경한
