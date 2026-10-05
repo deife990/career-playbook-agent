@@ -5,7 +5,8 @@
 - Preserve Unknown consistently in discovery table cells, positioning and interview risks; a confirmed requirement plus confirmed absence is needed for Gap.
 - Add regressions for native Claude rc.6 Unknown-to-Gap and Unknown-to-absence failures. Original failures remain recorded.
 - Native ChatGPT rc.6 pure restore/re-export is byte-identical; functional continuation is checked separately.
-- rc.6 Claude CLI passed 18/18; ChatGPT CLI stopped at 8/18 due account usage limit. rc.7 needs new model/native acceptance.
+- Both rc.7 actual model suites passed 20/20. Both native web hosts passed the eight mandatory acceptance checks, including W01–W09, full export validation, fresh-chat lossless restore and company-isolated continuation.
+- Strict release readiness and deterministic archive identity passed; clean clone passed 83 tests. Quality and coverage notes remain in the native reports. No public release.
 
 ## 1.0.0-rc.6
 

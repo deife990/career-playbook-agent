@@ -13,3 +13,8 @@ Claude의 Skill 기능은 위 호스트 설정을 요구할 수 있습니다. Ca
 업로드가 성공했더라도 새 대화에서 활성화·파일 접근을 확인해야 합니다.
 2026-10-02 확인: [공식 사용 안내](https://support.claude.com/en/articles/12512180-use-skills-in-claude),
 [공식 ZIP 구조 안내](https://support.claude.com/en/articles/12512198-how-to-create-custom-skills).
+
+2026-10-05 실제 계정에서 rc.7 단일 ZIP 교체 업로드, 새 시뮬레이션 채팅의 Skill 활성화,
+W01–W09 실행과 경력 정보 내보내기·새 채팅 복원·복원 후 이어가기를 확인했습니다.
+기존 Skill은 해당 Skill의 교체/업로드 메뉴로 업데이트할 수 있습니다.
+[실제 테스트 결과와 알려진 품질 메모](../evals/reports/claude-native-e2e-1.0.0-rc.7.md).

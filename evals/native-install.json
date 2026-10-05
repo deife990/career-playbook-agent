@@ -1,5 +1,5 @@
 {
-  "status": "PENDING",
+  "status": "PASS",
   "required_checks": [
     "clean_install",
     "activation",
@@ -12,25 +12,44 @@
   ],
   "platforms": {
     "chatgpt": {
-      "package_fingerprint": "38b9fb7a998c7af993f07882b30384990f0882c8321c9a73cbd81b244fc0cf00",
+      "package_fingerprint": "011ea89c00e2af304669477a1c1c0deaaace884c3e699a080c4b262597a1be1e",
       "observed_at": "2026-10-05",
       "observer": "Codex via CUA",
-      "surface": "ChatGPT web Work / Chrome / GPT-6.1 Sol Medium (initial GPT-5.6 Terra quota block)",
+      "surface": "ChatGPT web Work / Chrome / GPT-6.1 Sol Medium",
       "checks": {
-        "activation": true
+        "clean_install": true,
+        "activation": true,
+        "reference_access": true,
+        "full_lifecycle": true,
+        "mock_contract": true,
+        "debrief_preserved": true,
+        "isolation": true,
+        "context_roundtrip": true
       },
-      "evidence_path": "evals/reports/chatgpt-native-regression-1.0.0-rc.4.md",
-      "blocker": "rc.4 upgrade accepted; W04/W06 targeted native repairs observed on alternate model. Full current lifecycle, newly serialized persistence/recovery and clean installation pending.",
-      "supplementary_evidence": "evals/reports/chatgpt-native-e2e-1.0.0-rc.2.md"
+      "evidence_path": "evals/reports/chatgpt-native-e2e-1.0.0-rc.7.md",
+      "blocker": null,
+      "state_evidence_path": "evals/reports/chatgpt-native-state-1.0.0-rc.7.json",
+      "acceptance_scope": "Existing account accepted current archive; fresh synthetic lifecycle, export, fresh-chat restore and isolated continuation. No fresh-account provisioning or live voice test."
     },
     "claude": {
-      "package_fingerprint": null,
-      "observed_at": null,
-      "observer": null,
-      "surface": null,
-      "checks": {},
-      "evidence_path": null,
-      "blocker": "Actual archive upload and native session behavior not yet observed."
+      "package_fingerprint": "04c59d81c489cf5eda1d3ca5d19ae86716e163744ae127e8fb771589a39f268d",
+      "observed_at": "2026-10-05",
+      "observer": "Codex via CUA",
+      "surface": "Claude web / Chrome / Sonnet 5.5 Medium",
+      "checks": {
+        "clean_install": true,
+        "activation": true,
+        "reference_access": true,
+        "full_lifecycle": true,
+        "mock_contract": true,
+        "debrief_preserved": true,
+        "isolation": true,
+        "context_roundtrip": true
+      },
+      "evidence_path": "evals/reports/claude-native-e2e-1.0.0-rc.7.md",
+      "blocker": null,
+      "state_evidence_path": "evals/reports/claude-native-state-1.0.0-rc.7.json",
+      "acceptance_scope": "Existing account accepted current archive; fresh synthetic lifecycle, export, fresh-chat restore and isolated continuation. No fresh-account provisioning or live voice test."
     }
   },
   "historical_chatgpt_install": {
@@ -74,6 +93,18 @@
     },
     "evidence_path": "evals/reports/chatgpt-native-regression-1.0.0-rc.3.md",
     "blocker": "Actual existing-plugin rc.3 upgrade accepted. Targeted native repair tests in progress; full current native lifecycle and clean install not certified.",
+    "supplementary_evidence": "evals/reports/chatgpt-native-e2e-1.0.0-rc.2.md"
+  },
+  "historical_chatgpt_rc4": {
+    "package_fingerprint": "38b9fb7a998c7af993f07882b30384990f0882c8321c9a73cbd81b244fc0cf00",
+    "observed_at": "2026-10-05",
+    "observer": "Codex via CUA",
+    "surface": "ChatGPT web Work / Chrome / GPT-6.1 Sol Medium (initial GPT-5.6 Terra quota block)",
+    "checks": {
+      "activation": true
+    },
+    "evidence_path": "evals/reports/chatgpt-native-regression-1.0.0-rc.4.md",
+    "blocker": "rc.4 upgrade accepted; W04/W06 targeted native repairs observed on alternate model. Full current lifecycle, newly serialized persistence/recovery and clean installation pending.",
     "supplementary_evidence": "evals/reports/chatgpt-native-e2e-1.0.0-rc.2.md"
   }
 }

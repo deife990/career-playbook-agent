@@ -22,8 +22,11 @@ CareerPilot 전용 계정·API key·서버가 필요하지 않습니다. 호스�
 전자책 없이 독립 사용 가능하며 [주제 연결표](docs/ebook-map.yaml)로 연계합니다.
 
 ## Release status
-Full V1 implementation, 1.0.0-rc.7 candidate version. Native install signoffs and actual model
-evaluations determine eligibility; a candidate version label is not a release-readiness claim.
+Full V1 release candidate: 1.0.0-rc.7. Both platforms passed 20 actual-model scenarios and
+eight required native acceptance checks, including W01–W09 and fresh-chat state recovery.
+The fresh-clone development suite passed 83 tests. This is a tested candidate, not a public-directory release.
+[ChatGPT native report](evals/reports/chatgpt-native-e2e-1.0.0-rc.7.md) and
+[Claude native report / quality and coverage notes](evals/reports/claude-native-e2e-1.0.0-rc.7.md).
 See [gate evidence](docs/GATES.md) and [native signoff checklist](docs/native-install-test.md).
 
 ## Developer verification
