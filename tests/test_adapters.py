@@ -21,6 +21,14 @@ def test_claude_single_progressive_entry():
     assert len((dest/'SKILL.md').read_text().splitlines())<500
     assert all((dest/f'references/w{i:02}.md').exists() for i in range(1,10))
 
+def test_entry_safeguards_and_strategy_sections_have_core_parity():
+    contract=(ROOT/'core/principles/entry-guards.md').read_text().strip()
+    sections=[line[2:] for line in (ROOT/'core/artifacts/candidate-strategy.md').read_text().splitlines() if line.startswith('- ')]
+    chatgpt=generate('chatgpt');claude=generate('claude')
+    for path in [*chatgpt.glob('skills/*/SKILL.md'),claude/'SKILL.md']:
+        text=path.read_text();assert contract in text
+        assert '; '.join(sections) in text
+
 def test_regeneration_preserves_directory_identity_and_removes_generated_duplicates():
     dest=generate('chatgpt');tracked=dest/'references/schemas';before=tracked.stat().st_ino
     duplicate=dest/'skills/career-strategy 2';duplicate.mkdir(exist_ok=True)

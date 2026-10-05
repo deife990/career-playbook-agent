@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0-rc.4
+
+- Generate visible Core entry safeguards and W04 section order for both hosts after native rc.3 omitted brief sections.
+- Preserve prepared round objectives/positioning, distinguish missing collections from empty ones on recovery, and count mock continuation checks as questions.
+- Preserve rc.3 native and Claude failures; no release signoff inferred from CLI success.
+
 ## 1.0.0-rc.3
 
 - Native simulation repairs: preserve factual scope in brief/positioning, retain every Candidate Strategy section, explicitly invite text mock when voice is unavailable.

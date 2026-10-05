@@ -92,3 +92,11 @@
   preserved all non-path data exactly and then passed. Clarify stem/ID equality and inspect final
   ZIP members in the shared runtime protocol. No runtime Python dependency is added. Fresh-chat
   byte-identical re-export proves lossless transport; separately test continuation and new-round save.
+
+- D023 (2026-10-05): rc.3 CLI ChatGPT passed 18/18 but native W04 still replaced the required
+  artifact with a generic short summary. Generate a small visible safeguard contract from Core
+  and the actual artifact heading list into both host entries, without hand-maintaining a second
+  list or expanding all workflows into one prompt. rc.4 also clarifies the observed mock
+  procedural-question limit, omission/null preservation, unsupported identification/goal inference
+  and persistence of already prepared round objectives. Assertions remain strict; rc.3 Claude
+  missing-field-to-empty-list mutation remains a failed roundtrip, not reclassified as a pass.

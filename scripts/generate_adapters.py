@@ -34,6 +34,9 @@ def copy_references(destination):
 def generate(platform):
     # Keep the small classification contract visible before progressive reference loading.
     classification=(ROOT/'core/principles/evidence-policy.md').read_text().split('## Classification\n',1)[1].split('\n## ',1)[0].strip()
+    safeguards=(ROOT/'core/principles/entry-guards.md').read_text().strip()
+    strategy_sections=[line[2:] for line in (ROOT/'core/artifacts/candidate-strategy.md').read_text().splitlines() if line.startswith('- ')]
+    safeguards+='\nFor W04 output ALL Candidate Strategy Brief sections in this order, even when concise:\n'+ '; '.join(strategy_sections)+'.\nUse a short Unknown entry where needed; never merge/omit a section.'
     workflows={frontmatter(p)[0]['id']:p.name for p in (ROOT/'core/workflows').glob('w*.md')}
     target=ROOT/'adapters'/platform if platform=='chatgpt' else ROOT/'adapters/claude/careerpilot'
     copy_references(target)
@@ -79,6 +82,7 @@ Ask only one or two missing facts at a time; accept unknowns. Do not make the us
 USER FACT / VERIFIED FACT / INFERENCE / RECOMMENDATION. Career claims require actual evidence;
 never invent experience, metrics, titles, questions or company facts. Follow shared policies.
 {classification}
+{safeguards}
 ## Output
 {entry['output']} under the selected output contract. Show one useful next action and unknowns.
 For an ACTIVE mock output one interviewer question only, no praise/coaching or scoring criteria;
@@ -114,6 +118,7 @@ Progressive Disclosure; Human Decision/AI Intelligence. Ask at most two small qu
 Unknown. Important claims: USER FACT / VERIFIED FACT / INFERENCE / RECOMMENDATION. Never invent
 career evidence, organization facts or actual interview questions. Select one company context.
 {classification}
+{safeguards}
 ## Required loading and routing
 Read [policy index](references/core/principles/index.md) and all five linked policies,
 [state](references/core/state/state.md), [host](references/host.md) and

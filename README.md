@@ -7,7 +7,7 @@ AI-Powered Job Search Playbook을 실행하는 이직 준비 도우미. 커리�
 공개 디렉터리 등록 제품은 아닙니다. [설치 안내](docs/install-chatgpt.md).
 
 ## Install for Claude
-단일 `careerpilot-claude-v1.0.0-rc.3.zip`을 Customize → Skills → 스킬 추가 → 스킬 업로드에서 올리고 켜세요.
+단일 `careerpilot-claude-v1.0.0-rc.4.zip`을 Customize → Skills → 스킬 추가 → 스킬 업로드에서 올리고 켜세요.
 [설치 안내](docs/install-claude.md).
 
 ## Start
@@ -22,7 +22,7 @@ CareerPilot 전용 계정·API key·서버가 필요하지 않습니다. 호스�
 전자책 없이 독립 사용 가능하며 [주제 연결표](docs/ebook-map.yaml)로 연계합니다.
 
 ## Release status
-Full V1 implementation, 1.0.0-rc.3 candidate version. Native install signoffs and actual model
+Full V1 implementation, 1.0.0-rc.4 candidate version. Native install signoffs and actual model
 evaluations determine eligibility; a candidate version label is not a release-readiness claim.
 See [gate evidence](docs/GATES.md) and [native signoff checklist](docs/native-install-test.md).
 

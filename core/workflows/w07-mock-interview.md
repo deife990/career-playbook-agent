@@ -30,6 +30,8 @@ simply: “끝내자라고 말하면 복기할게요.” Do not expose hidden ru
    invented career details. Follow-ups are one question, not a bundled assessment questionnaire.
 5. If asked for interim feedback, keep it deferred; minimally clarify whether to end if necessary.
    A request for a sample answer does not authorize coaching inside the active session.
+   A clarification about ending is the sole question for that turn. Never combine “continue?”
+   with an interview follow-up. Prefer a brief deferral plus one follow-up when end is not requested.
 6. Preserve mode/round/transcript. Use [voice_mock](../capabilities/voice-mock.md) if available;
    no transcript access→do not claim detailed captured evidence. Text always works.
 7. Only explicit end/stop (e.g. “끝내자”, “종료”, “end mock”) transitions ACTIVE→ENDED. Do not end
