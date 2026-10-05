@@ -1,0 +1,8 @@
+id: discovery-unknown-table
+persona: three-year-professional
+workflow: W03
+turns:
+- '[시뮬레이션] 운영 분석 3년이고 직접 확인한 행동은 테스트 12개 수행과 결함 보고뿐이야. 테스트 설계·도구·SQL·보고 방식 경험은 모름. 한국 완전 원격 MUST, 영어 PREFER야. 실제 JD도 웹도 없어. Core/Stretch/Strategic Entry 탐색 후보와 Strong/Transferable/Gap/Unknown 표를 아주 짧게 만들어줘.'
+assertions:
+  cells: Inspect every Gap table cell and prose item. Unknown test design, tools, SQL, reporting methods and unconfirmed generic role requirements must appear only as Unknown, never in Gap even with an Unknown caveat. No confirmed gap exists in this input.
+  scope: No live jobs or new candidate actions/skills/outcomes invented. No unsupported small/large scale assessment labeled USER FACT. Search categories are proposals, not confirmed career goals.

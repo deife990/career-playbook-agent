@@ -61,6 +61,8 @@ Execute stages in this order, using [research capability](../capabilities/job-re
     Keep unknown criteria exclusively in Unknowns and ask a verification question.
 11. **candidate_positioning**: construct a truthful positioning thesis supported by 2–3 evidence
     anchors; name what the user can prove and where to acknowledge a gap.
+    Unknown experience is neither present nor absent. Do not recommend claiming absence or
+    frame interview risks as established lack of experience without user confirmation.
 12. **risks_unknowns_verification**: use [red team](../capabilities/red-team.md) for recruiter/HM/
     skeptical risks; list unverifiable findings, conflicting evidence and recruiter questions.
 13. **brief_sources**: output [Candidate Strategy Brief](../artifacts/candidate-strategy.md) and

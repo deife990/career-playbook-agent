@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "head": "0e712d2e2a22d46218781cb9bdd861e044373e1b",
+  "fresh_checkout": "/var/folders/pm/w49m8f8j1p502jl_28_2k5080000gn/T/careerpilot-clean-rc6-l1n7274k/repo",
+  "fresh_python": "/var/folders/pm/w49m8f8j1p502jl_28_2k5080000gn/T/careerpilot-clean-rc6-l1n7274k/venv/bin/python",
+  "steps": [
+    {
+      "step": [
+        "git",
+        "clone",
+        "--quiet",
+        "--no-local",
+        "/Users/jhwang/Desktop/AI Career 전자책/career-playbook-agent",
+        "/var/folders/pm/w49m8f8j1p502jl_28_2k5080000gn/T/careerpilot-clean-rc6-l1n7274k/repo"
+      ],
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "step": [
+        "uv",
+        "venv",
+        "--python",
+        "3.12",
+        "/var/folders/pm/w49m8f8j1p502jl_28_2k5080000gn/T/careerpilot-clean-rc6-l1n7274k/venv"
+      ],
+      "exit_code": 0,
+      "output": "Using CPython 3.12.13\nCreating virtual environment at: /var/folders/pm/w49m8f8j1p502jl_28_2k5080000gn/T/careerpilot-clean-rc6-l1n7274k/venv\nActivate with: source /var/folders/pm/w49m8f8j1p502jl_28_2k5080000gn/T/careerpilot-clean-rc6-l1n7274k/venv/bin/activate\n"
+    },
+    {
+      "step": [
+        "uv",
+        "pip",
+        "install",
+        "--offline",
+        "--python",
+        "/var/folders/pm/w49m8f8j1p502jl_28_2k5080000gn/T/careerpilot-clean-rc6-l1n7274k/venv/bin/python",
+        "-r",
+        "/var/folders/pm/w49m8f8j1p502jl_28_2k5080000gn/T/careerpilot-clean-rc6-l1n7274k/repo/requirements-dev.txt"
+      ],
+      "exit_code": 0,
+      "output": "Using Python 3.12.13 environment at: /var/folders/pm/w49m8f8j1p502jl_28_2k5080000gn/T/careerpilot-clean-rc6-l1n7274k/venv\nResolved 12 packages in 5ms\nInstalled 12 packages in 20ms\n + attrs==26.1.0\n + iniconfig==2.3.0\n + jsonschema==4.26.0\n + jsonschema-specifications==2025.9.1\n + packaging==26.3\n + pluggy==1.6.0\n + pygments==2.21.0\n + pytest==9.0.2\n + pyyaml==6.0.3\n + referencing==0.37.0\n + rpds-py==2026.9.1\n + typing-extensions==4.16.0\n"
+    },
+    {
+      "step": [
+        "/var/folders/pm/w49m8f8j1p502jl_28_2k5080000gn/T/careerpilot-clean-rc6-l1n7274k/venv/bin/python",
+        "-m",
+        "scripts.run_static_evals"
+      ],
+      "exit_code": 0,
+      "output": "Schemas and default templates valid\nWorkflow contracts: 9 valid\nOfficial portable manifest schema PASS\nFrontmatter: 13 skills valid\nInternal references valid\n/private/var/folders/pm/w49m8f8j1p502jl_28_2k5080000gn/T/careerpilot-clean-rc6-l1n7274k/repo/dist/chatgpt/careerpilot\n/private/var/folders/pm/w49m8f8j1p502jl_28_2k5080000gn/T/careerpilot-clean-rc6-l1n7274k/repo/dist/claude/careerpilot\nStatic evals PASS (not a live model evaluation)\n"
+    },
+    {
+      "step": [
+        "/var/folders/pm/w49m8f8j1p502jl_28_2k5080000gn/T/careerpilot-clean-rc6-l1n7274k/venv/bin/python",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "exit_code": 0,
+      "output": "........................................................................ [ 86%]\n...........                                                              [100%]\n83 passed in 1.76s\n"
+    },
+    {
+      "step": [
+        "/var/folders/pm/w49m8f8j1p502jl_28_2k5080000gn/T/careerpilot-clean-rc6-l1n7274k/venv/bin/python",
+        "-m",
+        "scripts.package_release"
+      ],
+      "exit_code": 0,
+      "output": "/private/var/folders/pm/w49m8f8j1p502jl_28_2k5080000gn/T/careerpilot-clean-rc6-l1n7274k/repo/dist/releases/careerpilot-chatgpt-v1.0.0-rc.6.zip\n/private/var/folders/pm/w49m8f8j1p502jl_28_2k5080000gn/T/careerpilot-clean-rc6-l1n7274k/repo/dist/releases/careerpilot-claude-v1.0.0-rc.6.zip\n/private/var/folders/pm/w49m8f8j1p502jl_28_2k5080000gn/T/careerpilot-clean-rc6-l1n7274k/repo/dist/releases/checksums-v1.0.0-rc.6.sha256\n"
+    }
+  ],
+  "deterministic_archives": true
+}

@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.0-rc.7 — Unreleased
+
+- Preserve Unknown consistently in discovery table cells, positioning and interview risks; a confirmed requirement plus confirmed absence is needed for Gap.
+- Add regressions for native Claude rc.6 Unknown-to-Gap and Unknown-to-absence failures. Original failures remain recorded.
+- Native ChatGPT rc.6 pure restore/re-export is byte-identical; functional continuation is checked separately.
+- rc.6 Claude CLI passed 18/18; ChatGPT CLI stopped at 8/18 due account usage limit. rc.7 needs new model/native acceptance.
+
 ## 1.0.0-rc.6
 
 - Clarify the manifest JSON-data digest after a native export used valid byte hashes that the portable validator rejected.

@@ -115,3 +115,10 @@
   the existing JSON-data algorithm in Core and schema annotations; no schema shape/version or
   runtime dependency change. The validator stays strict; null is allowed when exact hashing is
   unavailable. Prepared-round persistence was separately verified in the repaired native ZIP.
+
+- D026 (2026-10-05): Native Claude rc.6 discovery prose preserved Unknown but put test design,
+  tools and unconfirmed role requirements into Gap table cells. Its W04 Gaps section was correct,
+  yet positioning recommended admitting absent marketing experience that was still Unknown.
+  Keep these actual failures and add two model scenarios checking every table cell and later
+  prose, not policy mentions alone. Put a compact classification consistency check in the shared
+  Core entry guard and strengthen W03/W04. No schema/backend/runtime dependency is added.

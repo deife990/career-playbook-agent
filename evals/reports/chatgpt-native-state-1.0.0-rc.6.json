@@ -1,0 +1,33 @@
+{
+  "pure_roundtrip": {
+    "status": "PASS",
+    "scope": "pure restore/re-export transport; no new functional state update",
+    "exact_json_equal": true,
+    "zip_byte_identical": true,
+    "sha256": "3977269161524b75edc85386ad7305a9c882e6f4a2ad5496a62071c84ae4cf1b",
+    "members": [
+      "manifest.json",
+      "career-profile.json",
+      "preferences.json",
+      "story-bank.json",
+      "applications/opp-beta-marketing-analyst.json"
+    ]
+  },
+  "functional_continuation": {
+    "status": "PASS",
+    "synthetic": true,
+    "scope": "functional post-restore new second-round debrief + separate Alpha offer, full schema/hash/ID/scope validation",
+    "checks": {
+      "global_json_exact": true,
+      "first_round_exact": true,
+      "second_round_prepared_exact": true,
+      "prior_questions_preserved": true,
+      "new_actual_answer": true,
+      "second_recall_nulls": true,
+      "both_company_files": true,
+      "alpha_offer_status": true,
+      "beta_interview_status": true
+    },
+    "zip_sha256": "6e75947a8b02da0dabafd69c78d6edad041f7cb334d3888483a417f46355fbdc"
+  }
+}

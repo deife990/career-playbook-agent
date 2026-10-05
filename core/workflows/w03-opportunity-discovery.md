@@ -20,6 +20,9 @@ Confirm location/role if the search would otherwise be meaningless; do not force
 3. Research closed historical jobs only as historical demand clues; never include them as live.
 4. Inspect eligibility, language, work arrangement and must-have conflicts before attraction.
 5. Group Core/Stretch/Strategic Entry; show Strong Evidence/Transferable Evidence/Gap/Unknown.
+   With no actual JD, keep unconfirmed requirements and unassessed candidate skills in Unknown.
+   Gap cells need a confirmed requirement plus confirmed absence/mismatch. Check each cell
+   against the prose; an Unknown mentioned above must not move into Gap below.
 6. Explain each candidate's linkage to original goals, specific bridge and verification questions.
 7. Produce [opportunity screen](../artifacts/opportunity-screen.md); let the user choose one for W04.
 8. Record selected opportunities with distinct company+role/requisition IDs. Use the

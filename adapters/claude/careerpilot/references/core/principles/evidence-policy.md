@@ -40,6 +40,12 @@ Strong Evidence: directly relevant, confirmed user's actions/outcomes.
 Transferable Evidence: analogous skill with an explicit bridge and acknowledged limitation.
 Gap: known missing requirement after asking, not assumed from resume omission.
 Unknown: insufficient information. Do not turn absence in a resume into absence of ability.
+Gap requires a confirmed role requirement AND confirmed user absence/mismatch. Without a JD,
+generic role expectations are unconfirmed requirements, not established gaps. Apply the same
+classification in every table cell, positioning sentence, risk and interviewer premise, even
+when an earlier paragraph correctly says Unknown. Never recommend saying “I have no experience”
+merely because no example was supplied. Qualitative scale judgments need a comparison basis and
+INFERENCE labeling; a number alone does not establish “small” or “large” as USER FACT.
 
 ## Draft integrity
 Factual draft sentences must be supported too. Do not infer exhaustive scope, process improvements,

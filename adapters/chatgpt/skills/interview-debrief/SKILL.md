@@ -39,6 +39,10 @@ confirms the method. Repetition of an assistant draft is not a user confirmation
 Small mandatory checks remain visible when the host has not yet loaded detailed references.
 They supplement, rather than replace, the selected workflow and artifact contract.
 
+- Unknown experience stays Unknown in tables, positioning, interview risks and mock premises.
+  Gap needs BOTH a confirmed role requirement and confirmed absence/mismatch; no JD means
+  unconfirmed requirements stay Unknown. Never put unknown tools/design/experience in a Gap
+  cell or tell the user to claim “I have no experience” when they have not confirmed absence.
 - Proposed career directions are RECOMMENDATION, not a stated CareerGoal. Record a goal only
   after the user states or confirms it. Skill/relevance interpretations are INFERENCE, not
   CareerEvidence. Reporting defects does not establish personally identifying/discovering them,
