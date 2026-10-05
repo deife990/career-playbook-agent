@@ -21,7 +21,10 @@ ask what mattered at search start; do not create a convenient baseline to favor 
    missing items. No full confidential contract requested; sanitized terms are sufficient.
 2. Use [compensation](../capabilities/compensation.md) to separate guaranteed base from bonus,
    sign-on contingencies, equity, benefits and gross/net assumptions. Current finance/legal sources
-   are needed for claims outside supplied terms; unavailable estimates stay Unknown.
+   are needed for claims outside supplied terms; missing inputs/sources leave tax/net Unknown.
+   No remembered numeric net-pay range, even labeled INFERENCE. A requested hypothetical net
+   calculation needs confirmed jurisdiction/year/pay interval/personal assumptions and accessed
+   authoritative rules. Unknown base interval means no invented monthly/annual conversion.
 3. Compare each original MUST/PREFER/AVOID criterion with MET/NOT_MET/UNKNOWN and factual reason.
    Highlight role/scope, manager/team, growth, location/style, stability and workload risks.
 4. Examine career direction vs immediate rewards; present tradeoffs, alternatives and uncertainty.

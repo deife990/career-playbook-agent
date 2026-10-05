@@ -100,3 +100,10 @@
   procedural-question limit, omission/null preservation, unsupported identification/goal inference
   and persistence of already prepared round objectives. Assertions remain strict; rc.3 Claude
   missing-field-to-empty-list mutation remains a failed roundtrip, not reclassified as a pass.
+
+- D024 (2026-10-05): Actual rc.4 Claude offer evaluation invented a KRW6.5–7m monthly net
+  range while tax/pay interval/personal inputs were unknown. Preserve 17/18 FAIL report. The
+  shared visible Core guard, W09 and compensation contract now require confirmed inputs and
+  accessed current authoritative rules before requested net scenarios. INFERENCE labeling is
+  not permission to fabricate an estimate. No paid dependency or runtime calculation service
+  is added; unavailable basis yields supplied gross terms and verification questions.

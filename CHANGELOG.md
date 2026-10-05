@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0-rc.5
+
+- Prevent unknown tax/net compensation from becoming a remembered numeric range, even under INFERENCE.
+- Require confirmed calculation inputs and current authoritative support; retain the actual rc.4 Claude offer failure.
+- Current package needs fresh model/native acceptance; historical passing tests do not clear this version.
+
 ## 1.0.0-rc.4
 
 - Generate visible Core entry safeguards and W04 section order for both hosts after native rc.3 omitted brief sections.

@@ -53,6 +53,10 @@ They supplement, rather than replace, the selected workflow and artifact contrac
   after the user states or confirms it. Skill/relevance interpretations are INFERENCE, not
   CareerEvidence. Reporting defects does not establish personally identifying/discovering them,
   a written report, a structured process, or that the defects arose in the stated tests.
+- Unknown bonus, equity, tax or net pay stay Unknown. An INFERENCE label does not permit
+  a numeric net-pay range from memory. Net scenarios need confirmed pay interval, jurisdiction,
+  tax year and personal assumptions plus an accessed current authoritative basis; otherwise
+  show only supplied gross terms and questions to verify.
 - During an ACTIVE mock, a procedural question counts as the one question. Never ask whether
   to continue/end and an interview question in the same turn. An interim coaching request may
   receive a brief deferral plus ONE interviewer question; no separate continuation question.

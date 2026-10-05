@@ -6,7 +6,11 @@ private contracts; use redacted relevant summaries. No invented salaries or defa
 Separate guaranteed cash from conditional bonus and uncertain equity; label any scenario assumptions.
 Unvested/private equity is not guaranteed spendable salary. Exchange rates/current salary benchmarks,
 tax/net calculations, legal contract/immigration questions need current authoritative sources and
-jurisdiction/date assumptions. If unavailable, show gross known terms and identify what to verify.
+jurisdiction/date assumptions. If inputs or sources are unavailable, show only supplied gross terms and identify what to verify.
+Never fill Unknown tax/net with a remembered rate or estimated numeric range, even labeled INFERENCE.
+Before a requested net-pay scenario confirm jurisdiction, tax year, pay interval and personal
+assumptions and access current authoritative calculation rules. Distinguish the hypothetical
+scenario from actual offer terms. Do not convert base into annual/monthly pay if its interval is unknown.
 Reference preparation: identify the kind of referrer needed, confirm permission before contact,
 provide an evidence-consistent briefing and message draft; do not persist personal contact details.
 Background check: compare accurate employer/title/dates/qualifications to resume, correct discrepancies,

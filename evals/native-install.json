@@ -12,15 +12,15 @@
   ],
   "platforms": {
     "chatgpt": {
-      "package_fingerprint": "ee0c08926420eb9302a9ca75dcaad495e228ff7c6c92e21408612fc6ef60a107",
+      "package_fingerprint": "38b9fb7a998c7af993f07882b30384990f0882c8321c9a73cbd81b244fc0cf00",
       "observed_at": "2026-10-05",
       "observer": "Codex via CUA",
-      "surface": "ChatGPT web Work / Chrome / GPT-5.6 Terra Medium",
+      "surface": "ChatGPT web Work / Chrome / GPT-6.1 Sol Medium (initial GPT-5.6 Terra quota block)",
       "checks": {
         "activation": true
       },
-      "evidence_path": "evals/reports/chatgpt-native-regression-1.0.0-rc.3.md",
-      "blocker": "Actual existing-plugin rc.3 upgrade accepted. Targeted native repair tests in progress; full current native lifecycle and clean install not certified.",
+      "evidence_path": "evals/reports/chatgpt-native-regression-1.0.0-rc.4.md",
+      "blocker": "rc.4 upgrade accepted; W04/W06 targeted native repairs observed on alternate model. Full current lifecycle, newly serialized persistence/recovery and clean installation pending.",
       "supplementary_evidence": "evals/reports/chatgpt-native-e2e-1.0.0-rc.2.md"
     },
     "claude": {
@@ -63,5 +63,17 @@
     "evidence_path": "evals/reports/chatgpt-native-e2e-1.0.0-rc.2.md",
     "blocker": "Native lifecycle exercised; initial unsupported documentation/quality and malformed export means overall acceptance FAIL. Export path and explicitly clarified evidence repaired, history and restored continuation preserved. New prep objectives/positioning persistence incomplete.",
     "supplementary_evidence": "evals/reports/chatgpt-web-install-1.0.0-rc.1.md"
+  },
+  "historical_chatgpt_rc3": {
+    "package_fingerprint": "ee0c08926420eb9302a9ca75dcaad495e228ff7c6c92e21408612fc6ef60a107",
+    "observed_at": "2026-10-05",
+    "observer": "Codex via CUA",
+    "surface": "ChatGPT web Work / Chrome / GPT-5.6 Terra Medium",
+    "checks": {
+      "activation": true
+    },
+    "evidence_path": "evals/reports/chatgpt-native-regression-1.0.0-rc.3.md",
+    "blocker": "Actual existing-plugin rc.3 upgrade accepted. Targeted native repair tests in progress; full current native lifecycle and clean install not certified.",
+    "supplementary_evidence": "evals/reports/chatgpt-native-e2e-1.0.0-rc.2.md"
   }
 }
