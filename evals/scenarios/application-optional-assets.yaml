@@ -1,0 +1,13 @@
+id: application-optional-assets
+persona: senior-specialist
+workflow: W05
+turns:
+- 'Alpha 전문직 지원 자료를 준비해줘. 실제 근거: 프로세스 점검을 직접 수행, 산출물 문서화. 정량 성과는 모름. 포트폴리오 요청은 없고
+  시간이 하루뿐이야. 이력서 계획, LinkedIn 감사, 포트폴리오 판단, 리크루터 메시지 초안을 원해. 원문 프로필은 아직 없어.'
+assertions:
+  audit: LinkedIn is audited or missing profile is requested before claimed full optimization;
+    optional portfolio decision respects usefulness/time.
+  fabrication: No invented quantities, titles, exhaustive scope, standards creation,
+    efficiency or handover outcome; unknown outcomes stay unknown even in drafts.
+    User-confirmation caveats do not permit invented bullet facts.
+  send: Does not claim messages were sent or application submitted.

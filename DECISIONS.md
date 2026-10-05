@@ -19,3 +19,108 @@
   user may manually move this chat into AI Career 전자책. Local project is not proof of ChatGPT linkage.
 - D007: Authenticated developer CLI sessions may run model evals without new API keys. They do not
   establish native ChatGPT/Claude UI installation. Missing native evidence keeps RC gate blocked.
+- D008: Correct OpenAI authoring reference is https://developers.openai.com/plugins/build/plugins.
+  Marketplace source.path resolves from the marketplace root. Repository catalog points to
+  ./adapters/chatgpt; the extracted ChatGPT ZIP catalog points to ./ for its own plugin root.
+  Official portable schema pinned offline in fixtures/platform; no runtime validation dependency.
+- D009: Unknown skills are distinct from evidenced gaps; an unprovided SQL history cannot appear
+  in Gaps even with a qualifier. Added after an actual Claude model regression.
+- D010: Global Master resumes, LinkedIn/portfolio records and claims persist in career-profile.json.
+  Optional schema fields added compatibly at schema_version 1.0.0 before first release. Partial
+  debriefs may append/fill unknowns without losing observations; completed captures are preserved.
+- D011: Lossless model export may add schema-valid optional null fields. This is unknown-field
+  normalization, not new career information; no existing field/value/list order may change or
+  disappear. Deterministic eval checks this explicitly after schema/scope validation.
+- D012: Native custom-package installation through computer UI requires action-time confirmation
+  under the computer-use tool policy for software outside a recognized marketplace. Package
+  preparation and CLI behavioral evaluation do not require this confirmation. Native evidence
+  remains pending until actual observed installation and behavior; no simulated signoff.
+
+- D013: Final local ebook manuscript discovered under the requested workspace outputs directory.
+  Replaced provisional null chapter mapping with verified CH01–CH24 titles and an immutable source
+  hash snapshot. Private author notes/case material are not copied. Chapter numbers are now sourced.
+- D014: Global career-direction decisions and roadmap actions also require portable recovery,
+  stored in CareerProfile decisions/next_actions with null opportunity_id. Added regional/global/
+  teammate/reference round types and explicit ebook-derived preparation coverage before freezing RC.
+
+- D015: Actual Claude account UI on 2026-10-02 exposes Customize → Skills → Add skill →
+  Upload skill directly. Updated consumer docs; older official UI labels remain a fallback.
+  Only navigation was observed; no upload/installation has occurred.
+
+- D016 (2026-10-03): The actual OpenAI archive is accepted by the official CLI local marketplace
+  installer and reported installed/enabled without new authentication. Exact installed runtime
+  fingerprint matches actual model evidence. This supplementary CLI observation does not replace
+  native ChatGPT consumer UI activation and lifecycle signoff.
+
+- D017 (2026-10-04): The authenticated ChatGPT web account has an empty Personal plugin list
+  while the local OpenAI installer reports CareerPilot installed/enabled. Local installation is
+  therefore not evidence of this account's web registration. Actual UI exposes Plugins → Personal
+  → Add → Upload plugin archive. Added this observed path to consumer installation docs. ZIP
+  acceptance, web activation and lifecycle remain unobserved until upload confirmation and testing.
+
+- D018 (2026-10-04): User authorized the ChatGPT private ZIP install. Native file selection worked
+  without granting persistent extension file access, but two Add plugin attempts returned only a
+  generic failure. Official upload documentation adds author/interface requirements beyond the
+  portable schema; added those metadata fields and regression validation. Generic UI errors do not
+  prove this was the cause. Repaired package acceptance is pending user file selection after native
+  Chrome inspection was rejected for an unrelated private selected tab. Keep the bound plugin tab
+  only. Existing model/fresh-clone evidence predates this metadata-only change and does not certify
+  the current full package; release remains blocked until all current-package gates pass.
+
+- D019 (2026-10-04): The user confirmed the metadata-complete package still fails web upload.
+  Official onboardingSkill is a relative included-file path, not a skill identifier. Corrected
+  it to ./skills/careerpilot-router/SKILL.md and validate shape/existence/traversal before build.
+  This confirms a package defect but does not prove the generic error's sole cause. Provide a
+  distinct upload-fix filename for the corrected bytes; no native pass or release claim yet.
+
+- D020 (2026-10-04): Scoped browser diagnostics exposed HTTP 400 “Expected a single plugin
+  archive” for the upload-fix ZIP. Consumer ChatGPT archives now exclude the local marketplace
+  catalog and include a generated .codex-plugin/plugin.json compatibility manifest. Both changes
+  together were accepted with HTTP 201, 12 skills visible, and actual web installation completed.
+  Their individual causality is not isolated. Local build directories/repo catalogs still support
+  marketplace installation; consumer ZIPs represent exactly one plugin. No auth data was recorded.
+  Native installation pass alone is not full lifecycle or release readiness.
+
+- D021 (2026-10-05): Native synthetic rc.2 lifecycle exposed both unsupported qualitative language
+  and a new documentation action inferred from defect reporting. Keep factual scope guidance
+  visible in generated entries, prohibit assistant repetition as user confirmation, and add
+  model regressions. Also make no-voice text practice and concise artifact section coverage explicit.
+  rc.3 repair is not automatically evidence that the whole native lifecycle passes.
+
+- D022 (2026-10-05): Native portable export schemas passed individually but its file stems did
+  not match opportunity IDs. Existing full validator rejected the original; native model repair
+  preserved all non-path data exactly and then passed. Clarify stem/ID equality and inspect final
+  ZIP members in the shared runtime protocol. No runtime Python dependency is added. Fresh-chat
+  byte-identical re-export proves lossless transport; separately test continuation and new-round save.
+
+- D023 (2026-10-05): rc.3 CLI ChatGPT passed 18/18 but native W04 still replaced the required
+  artifact with a generic short summary. Generate a small visible safeguard contract from Core
+  and the actual artifact heading list into both host entries, without hand-maintaining a second
+  list or expanding all workflows into one prompt. rc.4 also clarifies the observed mock
+  procedural-question limit, omission/null preservation, unsupported identification/goal inference
+  and persistence of already prepared round objectives. Assertions remain strict; rc.3 Claude
+  missing-field-to-empty-list mutation remains a failed roundtrip, not reclassified as a pass.
+
+- D024 (2026-10-05): Actual rc.4 Claude offer evaluation invented a KRW6.5–7m monthly net
+  range while tax/pay interval/personal inputs were unknown. Preserve 17/18 FAIL report. The
+  shared visible Core guard, W09 and compensation contract now require confirmed inputs and
+  accessed current authoritative rules before requested net scenarios. INFERENCE labeling is
+  not permission to fabricate an estimate. No paid dependency or runtime calculation service
+  is added; unavailable basis yields supplied gross terms and verification questions.
+
+- D025 (2026-10-05): Native rc.4 export correctly hashed formatted file bytes, but the
+  reference validator expects JSON-data hashes and the runtime contract did not state the
+  algorithm. Preserve original interoperability FAIL. Native manifest-only repair passed with
+  every other file byte-identical, two prepared rounds and recalled history preserved. Clarify
+  the existing JSON-data algorithm in Core and schema annotations; no schema shape/version or
+  runtime dependency change. The validator stays strict; null is allowed when exact hashing is
+  unavailable. Prepared-round persistence was separately verified in the repaired native ZIP.
+
+- D026 (2026-10-05): Native Claude rc.6 discovery prose preserved Unknown but put test design,
+  tools and unconfirmed role requirements into Gap table cells. Its W04 Gaps section was correct,
+  yet positioning recommended admitting absent marketing experience that was still Unknown.
+  Keep these actual failures and add two model scenarios checking every table cell and later
+  prose, not policy mentions alone. Put a compact classification consistency check in the shared
+  Core entry guard and strengthen W03/W04. No schema/backend/runtime dependency is added.
+
+- D027 (2026-10-05): User requested the GitHub repository match the latest verified product and Korean consumer installation documentation. Promote the tested rc.7 implementation to main after required CI; publish the exact native-tested, locally strict-gated ZIPs as a GitHub prerelease. Documentation-only edits preserve both package fingerprints; no public OpenAI directory submission, new license or repository visibility change. GitHub's automatic model evaluation is not enabled (CAREERPILOT_MODEL_EVALS_ENABLED is unset), so the existing automated release gate remains unchanged; this candidate's manual packaging uses the already recorded current 20/20 reports per host and eight-check native signoffs, not fabricated or skipped passing evidence.

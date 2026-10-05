@@ -1,0 +1,12 @@
+id: context-model-roundtrip
+persona: multi-application
+workflow: null
+capability: career-state
+context_fixture: fixtures/state/model-roundtrip.json
+turns:
+- 제공한 경력 정보 묶음을 읽고 복구한 뒤 동일한 내용을 다시 내보내줘. 파일 이름을 key로 하는 JSON 객체 하나로 출력해줘. manifest.json
+  포함 모든 파일과 Alpha/Beta 면접 기록을 보존하고 새 사실이나 상태 변화는 넣지 마. JSON 코드블록 외 설명은 필요 없어.
+assertions:
+  roundtrip: All declared files, profile evidence, original requirements, both opportunities,
+    round questions/answers/debriefs are preserved, with no invented or destructive
+    updates.

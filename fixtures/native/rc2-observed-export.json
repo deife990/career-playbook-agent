@@ -1,0 +1,1080 @@
+{
+  "manifest.json": {
+    "schema_version": "1.0.0",
+    "product_version": "careerpilot-1.0.0-rc.2",
+    "pack_id": "simulation-careerpilot-e2e-rc2-20261005",
+    "revision": 1,
+    "exported_at": "2026-10-05T00:05:20+09:00",
+    "active_opportunity_id": null,
+    "files": [
+      {
+        "path": "career-profile.json",
+        "schema": "career-profile",
+        "sha256": null
+      },
+      {
+        "path": "preferences.json",
+        "schema": "preferences",
+        "sha256": null
+      },
+      {
+        "path": "story-bank.json",
+        "schema": "story-bank",
+        "sha256": null
+      },
+      {
+        "path": "applications/opp-alpha-analyst.json",
+        "schema": "application",
+        "sha256": null
+      },
+      {
+        "path": "applications/opp-beta-marketing-analyst.json",
+        "schema": "application",
+        "sha256": null
+      }
+    ],
+    "privacy": "SANITIZED"
+  },
+  "career-profile.json": {
+    "schema_version": "1.0.0",
+    "id": "profile-sim-001",
+    "name": "Synthetic Candidate",
+    "current_role": "Operations analysis (synthetic)",
+    "experience_years": 3,
+    "summary": "Synthetic candidate in Korea exploring Operations Analyst and QA paths. Only confirmed direct actions are performing 12 tests and documenting/reporting defects. SQL, quality, outcomes, education, change reason, and compensation expectation are unknown.",
+    "goals": [
+      {
+        "id": "goal-ops-qa",
+        "opportunity_id": null,
+        "direction": "Explore Operations Analyst and QA paths",
+        "horizon": null,
+        "success_criteria": [
+          "Fully remote work from Korea",
+          "English work preferred"
+        ],
+        "priority": null
+      }
+    ],
+    "skills": [
+      {
+        "id": "skill-testing",
+        "opportunity_id": null,
+        "name": "Testing",
+        "level": "Confirmed action only; proficiency unknown",
+        "evidence_ids": [
+          "ev-test-12"
+        ]
+      },
+      {
+        "id": "skill-defect-reporting",
+        "opportunity_id": null,
+        "name": "Defect reporting",
+        "level": "Confirmed action only; process depth unknown",
+        "evidence_ids": [
+          "ev-defect-reporting"
+        ]
+      },
+      {
+        "id": "skill-sql",
+        "opportunity_id": null,
+        "name": "SQL",
+        "level": "UNKNOWN",
+        "evidence_ids": null
+      }
+    ],
+    "achievements": [],
+    "evidence": [
+      {
+        "id": "ev-ops-analysis-3y",
+        "opportunity_id": null,
+        "description": "Operations analysis experience: 3 years.",
+        "own_role": "Synthetic candidate",
+        "context": "Synthetic career setup",
+        "action": null,
+        "outcome": null,
+        "scale": "3 years",
+        "skills": null,
+        "classification": "USER FACT",
+        "source_ids": [
+          "src-simulation-chat"
+        ],
+        "user_confirmed": true,
+        "sensitive": false,
+        "verification": "USER_CONFIRMED"
+      },
+      {
+        "id": "ev-test-12",
+        "opportunity_id": null,
+        "description": "Performed 12 tests.",
+        "own_role": "Synthetic candidate",
+        "context": "System/service not provided",
+        "action": "Performed 12 tests",
+        "outcome": null,
+        "scale": "12 tests",
+        "skills": [
+          "Testing"
+        ],
+        "classification": "USER FACT",
+        "source_ids": [
+          "src-simulation-chat"
+        ],
+        "user_confirmed": true,
+        "sensitive": false,
+        "verification": "USER_CONFIRMED"
+      },
+      {
+        "id": "ev-defect-reporting",
+        "opportunity_id": null,
+        "description": "Documented and reported defects.",
+        "own_role": "Synthetic candidate",
+        "context": "Reporting method and outcome not provided",
+        "action": "Documented and reported defects",
+        "outcome": null,
+        "scale": null,
+        "skills": [
+          "Defect reporting"
+        ],
+        "classification": "USER FACT",
+        "source_ids": [
+          "src-simulation-chat"
+        ],
+        "user_confirmed": true,
+        "sensitive": false,
+        "verification": "USER_CONFIRMED"
+      }
+    ],
+    "target_roles": [
+      {
+        "id": "target-operations-analyst",
+        "opportunity_id": null,
+        "title": "Operations Analyst / Business Operations Analyst",
+        "rationale": "Core exploration target based on stated operations analysis experience; actual scope is unknown.",
+        "category": "CORE",
+        "claim_ids": null
+      },
+      {
+        "id": "target-qa-analyst",
+        "opportunity_id": null,
+        "title": "QA Analyst / Manual QA Analyst",
+        "rationale": "Stretch target based on confirmed testing and defect-reporting actions; QA scope and outcomes are unknown.",
+        "category": "STRETCH",
+        "claim_ids": null
+      },
+      {
+        "id": "target-qa-tester",
+        "opportunity_id": null,
+        "title": "Junior QA Tester / Test Analyst",
+        "rationale": "Strategic-entry exploration route; no live vacancy was claimed.",
+        "category": "STRATEGIC_ENTRY",
+        "claim_ids": null
+      }
+    ],
+    "target_companies": [],
+    "sources": [
+      {
+        "id": "src-simulation-chat",
+        "opportunity_id": null,
+        "url": null,
+        "title": "CareerPilot E2E rc.2 simulation conversation",
+        "publisher": "User",
+        "kind": "USER_SUPPLIED",
+        "published_at": null,
+        "retrieved_at": "2026-10-05T00:05:20+09:00",
+        "access_status": "USER_SUPPLIED",
+        "freshness": "UNDATED",
+        "notes": "All persons, companies, interviews, and offers are synthetic. No web or external user context used."
+      }
+    ],
+    "resume_versions": [],
+    "linkedin_reviews": [],
+    "portfolio_artifacts": [],
+    "claims": [],
+    "decisions": [],
+    "next_actions": [
+      {
+        "id": "next-global-sql",
+        "opportunity_id": null,
+        "text": "Confirm whether any actual SQL experience exists and, if so, the data, queries, and level used.",
+        "owner": "USER",
+        "due_at": null,
+        "status": "OPEN",
+        "evidence_ids": null
+      },
+      {
+        "id": "next-global-defect-process",
+        "opportunity_id": null,
+        "text": "Confirm the actual defect-reporting tool, format, recipient, and follow-up process before using it in a resume or interview answer.",
+        "owner": "USER",
+        "due_at": null,
+        "status": "OPEN",
+        "evidence_ids": [
+          "ev-defect-reporting"
+        ]
+      }
+    ]
+  },
+  "preferences.json": {
+    "schema_version": "1.0.0",
+    "id": "preferences-sim-001",
+    "requirements": [
+      {
+        "id": "req-remote-korea",
+        "text": "Fully remote work from Korea",
+        "priority": "MUST",
+        "rationale": "Original confirmed simulation requirement"
+      },
+      {
+        "id": "req-english-work",
+        "text": "English work environment",
+        "priority": "PREFER",
+        "rationale": "Original confirmed simulation preference"
+      }
+    ],
+    "target_roles": [
+      "Operations Analyst",
+      "QA Analyst",
+      "Manual QA Analyst"
+    ],
+    "target_locations": [
+      "Korea (fully remote required)"
+    ],
+    "salary_floor": null,
+    "currency": "KRW",
+    "language": "English preferred for work",
+    "work_style": "Fully remote from Korea required",
+    "timeline": null,
+    "original_requirements": [
+      {
+        "id": "req-remote-korea",
+        "text": "Fully remote work from Korea",
+        "priority": "MUST",
+        "rationale": "Original confirmed simulation requirement"
+      },
+      {
+        "id": "req-english-work",
+        "text": "English work environment",
+        "priority": "PREFER",
+        "rationale": "Original confirmed simulation preference"
+      }
+    ]
+  },
+  "story-bank.json": {
+    "schema_version": "1.0.0",
+    "stories": [
+      {
+        "id": "story-testing-defects",
+        "opportunity_id": null,
+        "title": "Testing and defect reporting",
+        "evidence_ids": [
+          "ev-test-12",
+          "ev-defect-reporting"
+        ],
+        "situation": null,
+        "task": null,
+        "action": "Performed 12 tests and documented/reported defects.",
+        "result": null,
+        "reflection": null,
+        "variants": {
+          "seconds_30": "I performed 12 tests and documented defect reports.",
+          "seconds_60": null,
+          "seconds_120": null
+        },
+        "tags": [
+          "testing",
+          "defect-reporting"
+        ],
+        "revisions": [
+          {
+            "date": "2026-10-05",
+            "reason": "Preserve only confirmed actions; no quality, improvement, or outcome claim.",
+            "text": "Performed 12 tests and documented/reported defects."
+          }
+        ]
+      }
+    ]
+  },
+  "applications/opp-alpha-analyst.json": {
+    "id": "application-alpha-analyst",
+    "opportunity_id": "opp-alpha-analyst",
+    "opportunity": {
+      "id": "opp-alpha-analyst",
+      "opportunity_id": "opp-alpha-analyst",
+      "company": "Alpha (synthetic)",
+      "role": "Analyst",
+      "url": null,
+      "status": "OFFER",
+      "category": "STRETCH",
+      "status_history": [
+        {
+          "from": null,
+          "to": "INTERVIEWING",
+          "event": "Synthetic Alpha interview process",
+          "confirmed_by": "USER",
+          "source_ids": [
+            "src-alpha-jd"
+          ],
+          "at": null
+        },
+        {
+          "from": "INTERVIEWING",
+          "to": "OFFER",
+          "event": "Synthetic Alpha offer received",
+          "confirmed_by": "USER",
+          "source_ids": [
+            "src-alpha-offer"
+          ],
+          "at": null
+        }
+      ],
+      "research": {
+        "id": "research-alpha",
+        "opportunity_id": "opp-alpha-analyst",
+        "claim_ids": null,
+        "business": null,
+        "industry": null,
+        "historical_hiring": null,
+        "people_patterns": null,
+        "official_guides": null,
+        "unknowns": [
+          "Organization",
+          "metrics",
+          "current company information",
+          "work location details"
+        ]
+      },
+      "job_analysis": {
+        "id": "analysis-alpha",
+        "opportunity_id": "opp-alpha-analyst",
+        "jd_source_ids": [
+          "src-alpha-jd"
+        ],
+        "title": "Analyst",
+        "must_haves": [
+          "SQL analysis"
+        ],
+        "nice_to_haves": null,
+        "outcomes": [
+          "Collaborate with operations team",
+          "Improve customer workflows"
+        ],
+        "constraints": [
+          "Offer states in-office attendance is required"
+        ],
+        "keywords": [
+          "SQL",
+          "operations",
+          "customer workflow",
+          "data validation"
+        ],
+        "ambiguities": [
+          "Organization",
+          "numeric goals",
+          "SQL depth",
+          "work location",
+          "bonus",
+          "equity"
+        ]
+      },
+      "hiring_hypotheses": [
+        {
+          "id": "hyp-alpha-data-validation",
+          "opportunity_id": "opp-alpha-analyst",
+          "text": "The role may require routine SQL-based data validation and operational analysis.",
+          "claim_ids": null,
+          "alternatives": [
+            "SQL may be required at a narrower reporting level"
+          ],
+          "confidence": "MEDIUM",
+          "questions_to_verify": [
+            "What SQL tasks are performed daily?",
+            "What SQL depth is expected at start?",
+            "How is data validated before operational decisions?"
+          ],
+          "first_90_days": null,
+          "revision": 2,
+          "previous_id": null
+        }
+      ],
+      "ideal_candidate": {
+        "id": "ideal-alpha",
+        "opportunity_id": "opp-alpha-analyst",
+        "criteria": [
+          "SQL analysis",
+          "Operational-team collaboration",
+          "Customer-workflow improvement",
+          "Clear data-validation approach"
+        ],
+        "claim_ids": null,
+        "defined_before_mapping": true
+      },
+      "candidate_strategies": [
+        {
+          "id": "strategy-alpha",
+          "opportunity_id": "opp-alpha-analyst",
+          "thesis": "User-supplied JD indicates an Analyst role involving SQL analysis, operations collaboration, and customer workflow improvement.",
+          "positioning": "I can confirm that I performed 12 tests and reported defects. My SQL depth is not confirmed, so I would clarify the expected SQL tasks and data-validation standards.",
+          "ideal_candidate_id": "ideal-alpha",
+          "mapping": [
+            {
+              "criterion": "Testing and issue documentation",
+              "category": "TRANSFERABLE_EVIDENCE",
+              "evidence_ids": [
+                "ev-test-12",
+                "ev-defect-reporting"
+              ],
+              "rationale": "Confirmed actions are relevant to structured checking and issue reporting, but not proof of SQL or workflow improvement."
+            },
+            {
+              "criterion": "SQL analysis",
+              "category": "UNKNOWN",
+              "evidence_ids": null,
+              "rationale": "SQL experience was never confirmed."
+            },
+            {
+              "criterion": "Operations collaboration and workflow improvement",
+              "category": "UNKNOWN",
+              "evidence_ids": null,
+              "rationale": "No direct confirmed example."
+            }
+          ],
+          "risks": [
+            "SQL depth unknown",
+            "No confirmed data-validation method",
+            "No confirmed workflow-improvement outcome",
+            "In-office requirement conflicts with fully remote MUST"
+          ],
+          "questions_to_verify": [
+            "What SQL tasks are performed daily?",
+            "What SQL depth is expected at the start?",
+            "Can a fully remote arrangement be documented?"
+          ],
+          "round_id": null
+        }
+      ]
+    },
+    "submitted_at": null,
+    "resume_versions": [
+      {
+        "id": "resume-alpha-draft",
+        "opportunity_id": "opp-alpha-analyst",
+        "kind": "TAILORED",
+        "language": "English",
+        "bullets": [
+          {
+            "text": "Performed 12 tests.",
+            "evidence_ids": [
+              "ev-test-12"
+            ]
+          },
+          {
+            "text": "Documented and reported defects.",
+            "evidence_ids": [
+              "ev-defect-reporting"
+            ]
+          }
+        ]
+      }
+    ],
+    "cover_letter": null,
+    "answers": [],
+    "messages": [],
+    "red_team": [
+      {
+        "perspective": "HM",
+        "risk": "SQL is required and used daily according to a recalled interviewer statement, but candidate SQL depth is unknown.",
+        "severity": "HIGH",
+        "evidence_ids": null,
+        "fix": "Confirm actual SQL experience; otherwise be transparent and ask about expected level."
+      },
+      {
+        "perspective": "SKEPTICAL_INTERVIEWER",
+        "risk": "No recalled response to how defects were reported.",
+        "severity": "MEDIUM",
+        "evidence_ids": [
+          "ev-defect-reporting"
+        ],
+        "fix": "Confirm actual reporting tool, format, recipient, and follow-up process."
+      }
+    ],
+    "interviews": [
+      {
+        "id": "interview-alpha-r1",
+        "opportunity_id": "opp-alpha-analyst",
+        "round": {
+          "id": "round-alpha-r1",
+          "opportunity_id": "opp-alpha-analyst",
+          "type": "HM",
+          "scheduled_at": null,
+          "completed_at": null,
+          "interviewer": null,
+          "interviewer_source_ids": null,
+          "previous_round_id": null,
+          "objectives": null,
+          "positioning": null,
+          "language": "English"
+        },
+        "questions": [
+          {
+            "id": "alpha-r1-q1",
+            "opportunity_id": "opp-alpha-analyst",
+            "round_id": "round-alpha-r1",
+            "text": "What did you personally do?",
+            "origin": "ACTUAL_USER_RECALL",
+            "followup_to_id": null,
+            "source_ids": null,
+            "story_ids": [
+              "story-testing-defects"
+            ]
+          },
+          {
+            "id": "alpha-r1-q2",
+            "opportunity_id": "opp-alpha-analyst",
+            "round_id": "round-alpha-r1",
+            "text": "How did you report the defects?",
+            "origin": "ACTUAL_USER_RECALL",
+            "followup_to_id": "alpha-r1-q1",
+            "source_ids": null,
+            "story_ids": [
+              "story-testing-defects"
+            ]
+          }
+        ],
+        "answers": [
+          {
+            "id": "alpha-r1-a1",
+            "opportunity_id": "opp-alpha-analyst",
+            "round_id": "round-alpha-r1",
+            "question_id": "alpha-r1-q1",
+            "text": "Tested 12 cases",
+            "evidence_ids": [
+              "ev-test-12"
+            ],
+            "recalled": true
+          }
+        ],
+        "debriefs": [
+          {
+            "id": "debrief-alpha-r1",
+            "opportunity_id": "opp-alpha-analyst",
+            "round_id": "round-alpha-r1",
+            "question_ids": [
+              "alpha-r1-q1",
+              "alpha-r1-q2"
+            ],
+            "answer_ids": [
+              "alpha-r1-a1"
+            ],
+            "followups": [
+              "How did you report the defects?"
+            ],
+            "interviewer_reactions": [
+              "Unknown"
+            ],
+            "repeated_topics": [
+              "Unknown"
+            ],
+            "new_company_information": [
+              "Interviewer said: Team may expand (user recollection; unverified)."
+            ],
+            "user_uncertainty": [
+              "SQL depth"
+            ],
+            "previous_hypothesis_ids": null,
+            "updated_hypothesis_ids": [
+              "hyp-alpha-data-validation"
+            ],
+            "candidate_risks": [
+              "Defect-reporting process answer unknown"
+            ],
+            "story_updates": [
+              "Preserve only tests and defect reporting; do not add an outcome."
+            ],
+            "next_round_objectives": [
+              "Explain direct testing and defect-reporting actions factually",
+              "Clarify SQL depth"
+            ],
+            "next_questions": [
+              "What SQL depth is expected?",
+              "How are defects followed up within the team?"
+            ],
+            "next_positioning": "I performed 12 tests and reported defects; I will describe the reporting process only from confirmed facts.",
+            "collection_complete": true
+          }
+        ],
+        "mock_sessions": [
+          {
+            "id": "mock-alpha-en-001",
+            "opportunity_id": "opp-alpha-analyst",
+            "round_id": "round-alpha-r1",
+            "mode": "ENGLISH",
+            "status": "ENDED",
+            "transcript": [
+              {
+                "speaker": "INTERVIEWER",
+                "text": "Please tell me about yourself."
+              },
+              {
+                "speaker": "USER",
+                "text": "I worked in operations and did some testing. I helped make things better."
+              },
+              {
+                "speaker": "INTERVIEWER",
+                "text": "What did you personally do?"
+              }
+            ],
+            "explicit_end": true,
+            "review": "Only confirmed repair: I have three years of experience in operations analysis. I performed 12 tests and documented defect reports."
+          }
+        ]
+      },
+      {
+        "id": "interview-alpha-r2",
+        "opportunity_id": "opp-alpha-analyst",
+        "round": {
+          "id": "round-alpha-r2",
+          "opportunity_id": "opp-alpha-analyst",
+          "type": "TEAMMATE",
+          "scheduled_at": null,
+          "completed_at": null,
+          "interviewer": null,
+          "interviewer_source_ids": null,
+          "previous_round_id": "round-alpha-r1",
+          "objectives": [
+            "Describe direct testing/defect-reporting actions",
+            "Clarify SQL depth"
+          ],
+          "positioning": "I have three years of experience in operations analysis. The work I can directly confirm is performing 12 tests and reporting defects.",
+          "language": "English"
+        },
+        "questions": [
+          {
+            "id": "alpha-r2-q1",
+            "opportunity_id": "opp-alpha-analyst",
+            "round_id": "round-alpha-r2",
+            "text": "How would you validate data?",
+            "origin": "ACTUAL_USER_RECALL",
+            "followup_to_id": null,
+            "source_ids": null,
+            "story_ids": null
+          }
+        ],
+        "answers": [
+          {
+            "id": "alpha-r2-a1",
+            "opportunity_id": "opp-alpha-analyst",
+            "round_id": "round-alpha-r2",
+            "question_id": "alpha-r2-q1",
+            "text": "I have not confirmed SQL experience.",
+            "evidence_ids": null,
+            "recalled": true
+          }
+        ],
+        "debriefs": [
+          {
+            "id": "debrief-alpha-r2",
+            "opportunity_id": "opp-alpha-analyst",
+            "round_id": "round-alpha-r2",
+            "question_ids": [
+              "alpha-r2-q1"
+            ],
+            "answer_ids": [
+              "alpha-r2-a1"
+            ],
+            "followups": [
+              "Unknown"
+            ],
+            "interviewer_reactions": [
+              "Unknown"
+            ],
+            "repeated_topics": [
+              "SQL depth"
+            ],
+            "new_company_information": [
+              "Interviewer said: SQL is used daily (user recollection; unverified)."
+            ],
+            "user_uncertainty": [
+              "SQL difficulty"
+            ],
+            "previous_hypothesis_ids": [
+              "hyp-alpha-data-validation"
+            ],
+            "updated_hypothesis_ids": [
+              "hyp-alpha-data-validation"
+            ],
+            "candidate_risks": [
+              "No described data-validation method",
+              "SQL depth unknown"
+            ],
+            "story_updates": [
+              "No new achievement added."
+            ],
+            "next_round_objectives": [
+              "Confirm expected SQL tasks",
+              "Prepare only fact-supported answers"
+            ],
+            "next_questions": [
+              "What SQL tasks are performed daily?",
+              "What level is expected at the start?",
+              "How does the team validate data before operational decisions?"
+            ],
+            "next_positioning": "I can confirm that I performed 12 tests and reported defects. My SQL depth is not confirmed, so I would clarify the expected SQL tasks and data-validation standards.",
+            "collection_complete": true
+          }
+        ],
+        "mock_sessions": []
+      }
+    ],
+    "offers": [
+      {
+        "id": "offer-alpha-001",
+        "opportunity_id": "opp-alpha-analyst",
+        "compensation": {
+          "id": "comp-alpha-001",
+          "opportunity_id": "opp-alpha-analyst",
+          "currency": "KRW",
+          "base": 60000000,
+          "variable": null,
+          "equity": null,
+          "sign_on": null,
+          "benefits": null,
+          "vesting": null,
+          "conditions": [
+            "Base-pay period/payment structure unknown",
+            "Bonus unknown",
+            "Equity unknown"
+          ],
+          "source_ids": [
+            "src-alpha-offer"
+          ],
+          "estimated_net": null,
+          "net_assumptions": null
+        },
+        "deadline": null,
+        "role": "Analyst",
+        "location": null,
+        "manager": null,
+        "conditions": [
+          "In-office attendance required"
+        ],
+        "original_requirement_ids": [
+          "req-remote-korea",
+          "req-english-work"
+        ],
+        "evaluation": [
+          {
+            "requirement_id": "req-remote-korea",
+            "assessment": "NOT_MET",
+            "reason": "Original MUST is fully remote work from Korea; offer requires in-office attendance."
+          },
+          {
+            "requirement_id": "req-english-work",
+            "assessment": "UNKNOWN",
+            "reason": "Offer did not state English work environment."
+          }
+        ],
+        "decision": "DEFER",
+        "decision_event": "No actual acceptance, decline, negotiation, or contact performed."
+      }
+    ],
+    "sources": [
+      {
+        "id": "src-alpha-jd",
+        "opportunity_id": "opp-alpha-analyst",
+        "url": null,
+        "title": "Alpha synthetic Analyst JD",
+        "publisher": "User",
+        "kind": "USER_SUPPLIED",
+        "published_at": null,
+        "retrieved_at": "2026-10-05T00:05:20+09:00",
+        "access_status": "USER_SUPPLIED",
+        "freshness": "UNDATED",
+        "notes": "SQL analysis required; operations collaboration and customer-workflow improvement stated. Organization and numeric goals unknown."
+      },
+      {
+        "id": "src-alpha-offer",
+        "opportunity_id": "opp-alpha-analyst",
+        "url": null,
+        "title": "Alpha synthetic offer summary",
+        "publisher": "User",
+        "kind": "USER_SUPPLIED",
+        "published_at": null,
+        "retrieved_at": "2026-10-05T00:05:20+09:00",
+        "access_status": "USER_SUPPLIED",
+        "freshness": "UNDATED",
+        "notes": "Base KRW 60,000,000; bonus/equity unknown; in-office required."
+      }
+    ]
+  },
+  "applications/opp-beta-marketing-analyst.json": {
+    "id": "application-beta-marketing-analyst",
+    "opportunity_id": "opp-beta-marketing-analyst",
+    "opportunity": {
+      "id": "opp-beta-marketing-analyst",
+      "opportunity_id": "opp-beta-marketing-analyst",
+      "company": "Beta (synthetic)",
+      "role": "Marketing Analyst",
+      "url": null,
+      "status": "INTERVIEWING",
+      "category": "STRETCH",
+      "status_history": [
+        {
+          "from": null,
+          "to": "INTERVIEWING",
+          "event": "Synthetic Beta interview process",
+          "confirmed_by": "USER",
+          "source_ids": [
+            "src-beta-jd"
+          ],
+          "at": null
+        }
+      ],
+      "research": {
+        "id": "research-beta",
+        "opportunity_id": "opp-beta-marketing-analyst",
+        "claim_ids": null,
+        "business": null,
+        "industry": null,
+        "historical_hiring": null,
+        "people_patterns": null,
+        "official_guides": null,
+        "unknowns": [
+          "Company business",
+          "campaign KPIs",
+          "tools",
+          "team structure",
+          "work arrangement",
+          "language requirements"
+        ]
+      },
+      "job_analysis": {
+        "id": "analysis-beta",
+        "opportunity_id": "opp-beta-marketing-analyst",
+        "jd_source_ids": [
+          "src-beta-jd"
+        ],
+        "title": "Marketing Analyst",
+        "must_haves": [
+          "Campaign analysis",
+          "Collaboration with local teams"
+        ],
+        "nice_to_haves": null,
+        "outcomes": [
+          "Campaign analysis and local-team collaboration"
+        ],
+        "constraints": null,
+        "keywords": [
+          "campaign",
+          "local teams",
+          "KPI"
+        ],
+        "ambiguities": [
+          "Campaign KPIs",
+          "analysis tools",
+          "data sources",
+          "organization",
+          "numeric goals"
+        ]
+      },
+      "hiring_hypotheses": [
+        {
+          "id": "hyp-beta-campaign",
+          "opportunity_id": "opp-beta-marketing-analyst",
+          "text": "The role may connect campaign performance analysis with execution by local teams.",
+          "claim_ids": null,
+          "alternatives": [
+            "Role may focus on reporting rather than decision support"
+          ],
+          "confidence": "LOW",
+          "questions_to_verify": [
+            "Which campaign KPIs are analyzed?",
+            "What tools/data sources are used?",
+            "How do local teams use the analysis?"
+          ],
+          "first_90_days": null,
+          "revision": 1,
+          "previous_id": null
+        }
+      ],
+      "ideal_candidate": {
+        "id": "ideal-beta",
+        "opportunity_id": "opp-beta-marketing-analyst",
+        "criteria": [
+          "Campaign-performance analysis",
+          "KPI literacy",
+          "Local-team collaboration",
+          "Insight-to-action communication"
+        ],
+        "claim_ids": null,
+        "defined_before_mapping": true
+      },
+      "candidate_strategies": [
+        {
+          "id": "strategy-beta",
+          "opportunity_id": "opp-beta-marketing-analyst",
+          "thesis": "User-supplied JD indicates campaign analysis and collaboration with local teams.",
+          "positioning": "I have experience in operations analysis. The work I can directly confirm is performing 12 tests and documenting defect reports. I would like to understand how campaign analysis and local-team collaboration are handled in this role.",
+          "ideal_candidate_id": "ideal-beta",
+          "mapping": [
+            {
+              "criterion": "Structured checking and issue documentation",
+              "category": "TRANSFERABLE_EVIDENCE",
+              "evidence_ids": [
+                "ev-test-12",
+                "ev-defect-reporting"
+              ],
+              "rationale": "Relevant to structured evaluation and documentation but not evidence of campaign analytics."
+            },
+            {
+              "criterion": "Campaign analysis",
+              "category": "UNKNOWN",
+              "evidence_ids": null,
+              "rationale": "No direct confirmed campaign-analysis experience."
+            },
+            {
+              "criterion": "Local-team collaboration",
+              "category": "UNKNOWN",
+              "evidence_ids": null,
+              "rationale": "No direct confirmed local-team collaboration example."
+            }
+          ],
+          "risks": [
+            "Campaign analysis experience unknown",
+            "Campaign KPI knowledge unknown",
+            "Local-team collaboration example unknown"
+          ],
+          "questions_to_verify": [
+            "Which campaign KPIs are analyzed most often?",
+            "What tools and data sources are used?",
+            "How does the role work with local teams?"
+          ],
+          "round_id": null
+        }
+      ]
+    },
+    "submitted_at": null,
+    "resume_versions": [],
+    "cover_letter": null,
+    "answers": [],
+    "messages": [],
+    "red_team": [
+      {
+        "perspective": "HM",
+        "risk": "Candidate stated campaign-analysis experience is not confirmed.",
+        "severity": "HIGH",
+        "evidence_ids": null,
+        "fix": "Do not claim campaign analysis; clarify the expected KPI and analysis scope."
+      }
+    ],
+    "interviews": [
+      {
+        "id": "interview-beta-r1",
+        "opportunity_id": "opp-beta-marketing-analyst",
+        "round": {
+          "id": "round-beta-r1",
+          "opportunity_id": "opp-beta-marketing-analyst",
+          "type": "UNKNOWN",
+          "scheduled_at": null,
+          "completed_at": null,
+          "interviewer": null,
+          "interviewer_source_ids": null,
+          "previous_round_id": null,
+          "objectives": null,
+          "positioning": null,
+          "language": null
+        },
+        "questions": [
+          {
+            "id": "beta-r1-q1",
+            "opportunity_id": "opp-beta-marketing-analyst",
+            "round_id": "round-beta-r1",
+            "text": "How do you evaluate a campaign?",
+            "origin": "ACTUAL_USER_RECALL",
+            "followup_to_id": null,
+            "source_ids": null,
+            "story_ids": null
+          }
+        ],
+        "answers": [
+          {
+            "id": "beta-r1-a1",
+            "opportunity_id": "opp-beta-marketing-analyst",
+            "round_id": "round-beta-r1",
+            "question_id": "beta-r1-q1",
+            "text": "I have not confirmed campaign analysis experience.",
+            "evidence_ids": null,
+            "recalled": true
+          }
+        ],
+        "debriefs": [
+          {
+            "id": "debrief-beta-r1",
+            "opportunity_id": "opp-beta-marketing-analyst",
+            "round_id": "round-beta-r1",
+            "question_ids": [
+              "beta-r1-q1"
+            ],
+            "answer_ids": [
+              "beta-r1-a1"
+            ],
+            "followups": [
+              "Unknown"
+            ],
+            "interviewer_reactions": [
+              "Unknown"
+            ],
+            "repeated_topics": [
+              "Unknown"
+            ],
+            "new_company_information": [
+              "Interviewer said: Local teams manage campaigns (user recollection; unverified)."
+            ],
+            "user_uncertainty": [
+              "Campaign KPI"
+            ],
+            "previous_hypothesis_ids": [
+              "hyp-beta-campaign"
+            ],
+            "updated_hypothesis_ids": [
+              "hyp-beta-campaign"
+            ],
+            "candidate_risks": [
+              "No confirmed campaign-analysis experience",
+              "Campaign KPI knowledge unknown"
+            ],
+            "story_updates": [
+              "No new achievement added."
+            ],
+            "next_round_objectives": [
+              "Clarify campaign KPI and analysis process",
+              "Do not claim unconfirmed marketing experience"
+            ],
+            "next_questions": [
+              "Which campaign KPIs does this role analyze most often?",
+              "What tools and data sources are used?",
+              "How are results used by local teams?"
+            ],
+            "next_positioning": "I would like to understand how the team evaluates campaigns and how local teams use that analysis.",
+            "collection_complete": true
+          }
+        ],
+        "mock_sessions": []
+      }
+    ],
+    "offers": [],
+    "sources": [
+      {
+        "id": "src-beta-jd",
+        "opportunity_id": "opp-beta-marketing-analyst",
+        "url": null,
+        "title": "Beta synthetic Marketing Analyst JD",
+        "publisher": "User",
+        "kind": "USER_SUPPLIED",
+        "published_at": null,
+        "retrieved_at": "2026-10-05T00:05:20+09:00",
+        "access_status": "USER_SUPPLIED",
+        "freshness": "UNDATED",
+        "notes": "Campaign analysis and local-team collaboration stated. Organization, KPIs, tools, and numeric goals unknown."
+      }
+    ]
+  }
+}

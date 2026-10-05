@@ -1,0 +1,130 @@
+{
+  "manifest.json": {
+    "schema_version": "1.0.0",
+    "product_version": "1.0.0-rc.1",
+    "pack_id": "synthetic-pack",
+    "revision": 0,
+    "exported_at": null,
+    "active_opportunity_id": "alpha",
+    "privacy": "SANITIZED",
+    "files": [
+      {
+        "path": "career-profile.json",
+        "schema": "career-profile",
+        "sha256": null
+      },
+      {
+        "path": "preferences.json",
+        "schema": "preferences",
+        "sha256": null
+      },
+      {
+        "path": "story-bank.json",
+        "schema": "story-bank",
+        "sha256": null
+      },
+      {
+        "path": "applications/alpha.json",
+        "schema": "application",
+        "sha256": null
+      },
+      {
+        "path": "applications/beta.json",
+        "schema": "application",
+        "sha256": null
+      }
+    ]
+  },
+  "career-profile.json": {
+    "schema_version": "1.0.0",
+    "id": "profile",
+    "name": null,
+    "current_role": null,
+    "experience_years": null,
+    "summary": null,
+    "goals": null,
+    "skills": null,
+    "achievements": null,
+    "evidence": [
+      {
+        "id": "e-1",
+        "opportunity_id": null,
+        "description": "Supported migration testing",
+        "own_role": "Tested 12 cases",
+        "action": "Tested 12 cases",
+        "outcome": "Reported defects",
+        "classification": "USER FACT",
+        "source_ids": [],
+        "user_confirmed": true,
+        "sensitive": false,
+        "verification": "USER_CONFIRMED"
+      }
+    ],
+    "target_roles": null,
+    "target_companies": null,
+    "sources": null
+  },
+  "preferences.json": {
+    "schema_version": "1.0.0",
+    "id": "preferences",
+    "requirements": [
+      {
+        "id": "req-remote",
+        "text": "Remote work",
+        "priority": "MUST",
+        "rationale": "Family"
+      }
+    ],
+    "target_roles": null,
+    "target_locations": null,
+    "salary_floor": null,
+    "currency": null,
+    "language": null,
+    "work_style": null,
+    "timeline": null,
+    "original_requirements": [
+      {
+        "id": "req-remote",
+        "text": "Remote work",
+        "priority": "MUST",
+        "rationale": "Family"
+      }
+    ]
+  },
+  "story-bank.json": {
+    "schema_version": "1.0.0",
+    "stories": []
+  },
+  "applications/alpha.json": {
+    "id": "app-alpha",
+    "opportunity_id": "alpha",
+    "opportunity": {
+      "id": "alpha",
+      "opportunity_id": "alpha",
+      "company": "Alpha Synthetic",
+      "role": "Analyst",
+      "status": "DISCOVERED",
+      "status_history": []
+    },
+    "interviews": [],
+    "sources": [],
+    "claims": [],
+    "offers": []
+  },
+  "applications/beta.json": {
+    "id": "app-beta",
+    "opportunity_id": "beta",
+    "opportunity": {
+      "id": "beta",
+      "opportunity_id": "beta",
+      "company": "Beta Synthetic",
+      "role": "Analyst",
+      "status": "DISCOVERED",
+      "status_history": []
+    },
+    "interviews": [],
+    "sources": [],
+    "claims": [],
+    "offers": []
+  }
+}

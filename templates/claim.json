@@ -1,0 +1,12 @@
+{
+  "id": null,
+  "opportunity_id": null,
+  "text": null,
+  "classification": null,
+  "source_ids": null,
+  "confidence": null,
+  "verification": null,
+  "retrieved_at": null,
+  "freshness": null,
+  "supersedes_id": null
+}

@@ -1,0 +1,67 @@
+{
+  "export": {
+    "status": "PASS",
+    "synthetic": true,
+    "scope": "Native downloaded export, critical lifecycle data audit; fresh-session roundtrip separate",
+    "checks": {
+      "full_schema_hash_id_scope": true,
+      "two_companies": true,
+      "two_actual_rounds": true,
+      "first_question_literal": true,
+      "first_answer_literal": true,
+      "second_question_literal": true,
+      "second_answer_literal": true,
+      "first_company_recall": true,
+      "second_company_recall": true,
+      "second_round_history_link": true,
+      "second_prepared_objectives_positioning": true,
+      "mock_explicit_end": true,
+      "global_master_resume": true,
+      "no_promoted_mock_outcome": true,
+      "original_must_and_prefer": true,
+      "offer_remote_not_met": true,
+      "offer_unconfirmed_compensation_null": true,
+      "offer_gross_only": true,
+      "no_offer_decision": true,
+      "beta_interviewing_alpha_offer": true
+    },
+    "zip_sha256": "a81e9915e3f7e65edf3ab59eae8345ed7039f2bbb1d58e4380daafebd098a831",
+    "notes": [
+      "Original export product_version is the valid older template value 1.0.0-rc.1; installed archive identity is recorded separately as rc.7.",
+      "First prep had no explicit objectives in its visible response; its round objectives remain null. Second-round prepared objectives/positioning are retained.",
+      "Deferred direction decision retained; unconfirmed proposed roadmap not promoted to goals."
+    ]
+  },
+  "pure_roundtrip": {
+    "status": "PASS",
+    "synthetic": true,
+    "full_schema_hash_scope_validation": true,
+    "exact_json_equal": true,
+    "zip_byte_identical": false,
+    "original_zip_sha256": "a81e9915e3f7e65edf3ab59eae8345ed7039f2bbb1d58e4380daafebd098a831",
+    "restored_zip_sha256": "c3168b855360026506769022b50a11db5f80406706a527c446d3e1645dfa1046",
+    "member_json_bytes_equal": true,
+    "members": [
+      "manifest.json",
+      "career-profile.json",
+      "preferences.json",
+      "story-bank.json",
+      "applications/opp-beta-marketing-analyst.json",
+      "applications/opp-alpha-operations-analyst.json"
+    ]
+  },
+  "functional_continuation": {
+    "status": "PASS",
+    "synthetic": true,
+    "scope": "Native fresh-restore functional continuation with one explicit Alpha deadline update",
+    "checks": {
+      "global_json_exact": true,
+      "beta_json_exact": true,
+      "new_alpha_deadline": true,
+      "no_accept_decline": true,
+      "revision_incremented": true,
+      "validated_import_with_prior_state": true
+    },
+    "zip_sha256": "57ffac83c61c706c39c4a3b84ca37c3f7048cc9c079a723009c8134d526f1503"
+  }
+}

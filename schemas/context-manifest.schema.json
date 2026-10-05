@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://careerpilot.local/schemas/context-manifest.schema.json",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "product_version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "pack_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "exported_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "active_opportunity_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "pattern": "^(career-profile\\.json|preferences\\.json|story-bank\\.json|applications/[a-z0-9-]+\\.json)$"
+          },
+          "schema": {
+            "enum": [
+              "career-profile",
+              "preferences",
+              "story-bank",
+              "application"
+            ]
+          },
+          "sha256": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[a-f0-9]{64}$",
+            "description": "Optional SHA-256 of JSON data: recursively sorted object keys, unchanged array order/value types, Unicode directly encoded as UTF-8, no structural whitespace or trailing newline. Not the formatted file-byte hash. Null when exact computation is unavailable."
+          }
+        },
+        "required": [
+          "path",
+          "schema"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "privacy": {
+      "enum": [
+        "SANITIZED",
+        "REVIEW_REQUIRED",
+        null
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "pack_id",
+    "revision",
+    "files"
+  ],
+  "additionalProperties": false
+}

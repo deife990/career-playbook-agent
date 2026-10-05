@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "synthetic": true,
+  "error": null,
+  "sha256": "452ef062dddd84a843bcc2d2c98a0546cf9872eb4e9d8644af460537f9e81b79",
+  "scope": "native generated ZIP full validator"
+}

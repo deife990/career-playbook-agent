@@ -1,0 +1,63 @@
+{
+  "export": {
+    "status": "PASS",
+    "synthetic": true,
+    "scope": "Native downloaded export, critical lifecycle data audit; fresh-session roundtrip separate",
+    "checks": {
+      "full_schema_hash_id_scope": true,
+      "two_companies": true,
+      "two_actual_rounds": true,
+      "first_question_literal": true,
+      "first_answer_literal": true,
+      "second_question_literal": true,
+      "second_answer_literal": true,
+      "first_company_recall": true,
+      "second_company_recall": true,
+      "second_round_history_link": true,
+      "second_prepared_objectives_positioning": true,
+      "mock_explicit_end": true,
+      "global_master_resume": true,
+      "no_promoted_mock_outcome": true,
+      "original_must_and_prefer": true,
+      "offer_remote_not_met": true,
+      "offer_unconfirmed_compensation_null": true,
+      "offer_gross_only": true,
+      "no_offer_decision": true,
+      "beta_interviewing_alpha_offer": true
+    },
+    "zip_sha256": "13bed4930374cd2a20fac28f600f39498b59dfcaa948586bcbef8c2ab4467c0d",
+    "notes": []
+  },
+  "pure_roundtrip": {
+    "status": "PASS",
+    "synthetic": true,
+    "full_schema_hash_scope_validation": true,
+    "exact_json_equal": true,
+    "zip_byte_identical": true,
+    "original_zip_sha256": "13bed4930374cd2a20fac28f600f39498b59dfcaa948586bcbef8c2ab4467c0d",
+    "restored_zip_sha256": "13bed4930374cd2a20fac28f600f39498b59dfcaa948586bcbef8c2ab4467c0d",
+    "member_json_bytes_equal": true,
+    "members": [
+      "career-profile.json",
+      "preferences.json",
+      "story-bank.json",
+      "applications/opp-beta-marketing-analyst.json",
+      "applications/opp-alpha-operations-analyst.json",
+      "manifest.json"
+    ]
+  },
+  "functional_continuation": {
+    "status": "PASS",
+    "synthetic": true,
+    "scope": "Native fresh-restore functional continuation with one explicit Alpha deadline update",
+    "checks": {
+      "global_json_exact": true,
+      "beta_json_exact": true,
+      "new_alpha_deadline": true,
+      "no_accept_decline": true,
+      "revision_incremented": true,
+      "validated_import_with_prior_state": true
+    },
+    "zip_sha256": "103af7d419aa169ded32b2c8f2b0ec98353f65aa1709e47a802b89ce78c1fe9f"
+  }
+}

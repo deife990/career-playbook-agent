@@ -1,0 +1,25 @@
+{
+  "synthetic": true,
+  "company": "Alpha Synthetic",
+  "questions": [
+    "What did you personally do?"
+  ],
+  "followups": [
+    "How was that measured?"
+  ],
+  "user_answers": [
+    "I tested 12 cases and reported defects."
+  ],
+  "interviewer_reactions": [
+    "Asked for one more example"
+  ],
+  "repeated_topics": [
+    "ownership"
+  ],
+  "new_company_information": [
+    "Interviewer said team is expanding; not independently verified."
+  ],
+  "user_uncertainty": [
+    "Next round format unknown"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "id": "preferences",
+  "requirements": null,
+  "target_roles": null,
+  "target_locations": null,
+  "salary_floor": null,
+  "currency": null,
+  "language": null,
+  "work_style": null,
+  "timeline": null,
+  "original_requirements": null
+}

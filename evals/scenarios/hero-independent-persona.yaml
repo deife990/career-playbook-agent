@@ -1,0 +1,14 @@
+id: hero-independent-persona
+persona: five-year-global
+workflow: W04
+turns:
+- '이 공고 어때? 합성회사 Alpha, Business Analyst. JD: SQL 분석 필수, 고객 업무흐름 개선, 운영팀 협업. 수치 목표와
+  조직정보는 없어. 나는 글로벌 커뮤니케이션 5년 경력이지만 SQL 경험은 확인되지 않았어. 회사정보/웹 도구 없음. 회사가 내부 구조조정해서 뽑는
+  것으로 가정하지 말아줘. 먼저 이상적인 후보를 정의하고 내 근거를 연결해줘.'
+assertions:
+  independent: Ideal candidate explicitly includes SQL and workflow-analysis requirements
+    independently of the user communication strengths, then maps user evidence.
+  verified: No invented organization/hiring/90-day metrics or current facts; hypotheses/unknowns
+    distinguished.
+  mapping: Uses evidence categories with SQL Unknown rather than assumed Gap or numeric
+    fit score.

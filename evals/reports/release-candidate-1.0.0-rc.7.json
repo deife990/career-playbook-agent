@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "version": "1.0.0-rc.7",
+  "observed_at": "2026-10-05",
+  "scope": "Release candidate gate and final deterministic archive identity; source unchanged since fresh-clone evidence f782405",
+  "steps": [
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "scripts.run_static_evals"
+      ],
+      "exit_code": 0,
+      "output": "Schemas and default templates valid\nWorkflow contracts: 9 valid\nOfficial portable manifest schema PASS\nFrontmatter: 13 skills valid\nInternal references valid\n/Users/jhwang/Desktop/AI Career 전자책/career-playbook-agent/dist/chatgpt/careerpilot\n/Users/jhwang/Desktop/AI Career 전자책/career-playbook-agent/dist/claude/careerpilot\nStatic evals PASS (not a live model evaluation)\n"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "scripts.package_release",
+        "--require-ready"
+      ],
+      "exit_code": 0,
+      "output": "Release readiness PASS: actual model and native evidence current\n/Users/jhwang/Desktop/AI Career 전자책/career-playbook-agent/dist/releases/careerpilot-chatgpt-v1.0.0-rc.7.zip\n/Users/jhwang/Desktop/AI Career 전자책/career-playbook-agent/dist/releases/careerpilot-claude-v1.0.0-rc.7.zip\n/Users/jhwang/Desktop/AI Career 전자책/career-playbook-agent/dist/releases/checksums-v1.0.0-rc.7.sha256\n"
+    }
+  ],
+  "archives": {
+    "chatgpt": {
+      "filename": "careerpilot-chatgpt-v1.0.0-rc.7.zip",
+      "sha256": "2b08aafe5646b070b2280d1effaf9cf1412df36e50a35ffd6bcbcc07759f38b2",
+      "package_fingerprint": "011ea89c00e2af304669477a1c1c0deaaace884c3e699a080c4b262597a1be1e",
+      "matches_native_tested_archive": true
+    },
+    "claude": {
+      "filename": "careerpilot-claude-v1.0.0-rc.7.zip",
+      "sha256": "f4a6626528446afa99bd21c427682a820fb7195ee2c0ac86d82312030e6ffb49",
+      "package_fingerprint": "04c59d81c489cf5eda1d3ca5d19ae86716e163744ae127e8fb771589a39f268d",
+      "matches_native_tested_archive": true
+    }
+  },
+  "source_changed_since_clean_clone": false,
+  "public_release": false,
+  "native_evidence": "evals/native-install.json",
+  "quality_and_coverage_notes": "evals/reports/claude-native-e2e-1.0.0-rc.7.md"
+}

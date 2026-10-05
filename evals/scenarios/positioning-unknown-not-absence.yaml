@@ -1,0 +1,8 @@
+id: positioning-unknown-not-absence
+persona: three-year-professional
+workflow: W04
+turns:
+- '[시뮬레이션] Beta 합성회사 Marketing Analyst, JD는 캠페인 분석·현지팀 협업. 조직·도구·조건은 모름. 운영 분석 3년, 테스트 12개 수행과 결함 보고만 확인했어. 캠페인과 협업 경험은 있다고도 없다고도 확인되지 않았어. 웹 없이 아주 짧은 Candidate Strategy Brief 전체를 만들어줘.'
+assertions:
+  absence: In positioning, risks and all other sections, does not say or recommend saying campaign/marketing/collaboration experience is absent. Missing examples remain Unknown, not Gap; risks concern unverified support, not a confirmed lack of experience.
+  brief: All 15 required Candidate Strategy Brief sections retained. Ideal Candidate defined from JD before user mapping; no invented career evidence or current company facts; no numeric fit score.

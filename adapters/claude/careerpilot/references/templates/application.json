@@ -1,0 +1,25 @@
+{
+  "id": "application-example",
+  "opportunity_id": "example",
+  "opportunity": {
+    "id": "example",
+    "opportunity_id": "example",
+    "company": null,
+    "role": null,
+    "status": null
+  },
+  "submitted_at": null,
+  "resume_versions": null,
+  "linkedin_reviews": null,
+  "portfolio_artifacts": null,
+  "cover_letter": null,
+  "answers": null,
+  "messages": null,
+  "red_team": null,
+  "interviews": null,
+  "offers": null,
+  "sources": null,
+  "claims": null,
+  "decisions": null,
+  "next_actions": null
+}

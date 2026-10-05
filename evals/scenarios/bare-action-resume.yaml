@@ -1,0 +1,8 @@
+id: bare-action-resume
+persona: incomplete-resume
+workflow: W05
+turns:
+- '[시뮬레이션] Alpha 지원용 영문 이력서를 짧게 만들어줘. 내가 직접 했다고 확인한 경험은 operations analysis 3 years, performed 12 tests, reported defects뿐이야. 보고 방법·도구·문서 작성·품질·성과는 모름. JD는 SQL 필수지만 SQL 경험도 모름. 원래 완전 원격 조건을 유지하고 실제 지원은 하지 마.'
+assertions:
+  actions: Resume and story claims retain only operations analysis 3 years, performed 12 tests and reported defects. Never adds documented defects, wrote reports, structured reporting, written tools or process to factual experience.
+  unknowns: Reporting method, quality, outcomes and SQL remain unknown; original remote requirement retained, no actual submission.

@@ -1,0 +1,127 @@
+{
+  "source": "outputs/AI-Job-Search-Playbook/08_final/AI-Powered-Job-Search-Playbook.md",
+  "sha256": "8e35a2060e035160cfbd3128058d37f333a2448026395b25fa8fd346514f4a65",
+  "verified_at": "2026-10-02",
+  "chapters": [
+    {
+      "id": "CH01",
+      "number": 1,
+      "title": "AI에게 결과를 맡기는 취업 준비"
+    },
+    {
+      "id": "CH02",
+      "number": 2,
+      "title": "원하는 이직과 현재 위치를 함께 정의하기"
+    },
+    {
+      "id": "CH03",
+      "number": 3,
+      "title": "경력을 사실과 이야기로 정리하기"
+    },
+    {
+      "id": "CH04",
+      "number": 4,
+      "title": "프로젝트로 맥락을 유지하기"
+    },
+    {
+      "id": "CH05",
+      "number": 5,
+      "title": "Role Model로 다음 직무의 이름 찾기"
+    },
+    {
+      "id": "CH06",
+      "number": 6,
+      "title": "지원할 공고를 선별하기"
+    },
+    {
+      "id": "CH07",
+      "number": 7,
+      "title": "회사·산업·조직의 단서 읽기"
+    },
+    {
+      "id": "CH08",
+      "number": 8,
+      "title": "JD에서 채용 가설과 후보자 기준 만들기"
+    },
+    {
+      "id": "CH09",
+      "number": 9,
+      "title": "내가 어떤 후보자로 기억될지 정하기"
+    },
+    {
+      "id": "CH10",
+      "number": 10,
+      "title": "Master Resume에서 회사별 Resume로"
+    },
+    {
+      "id": "CH11",
+      "number": 11,
+      "title": "LinkedIn을 발견 가능한 경력으로 만들기"
+    },
+    {
+      "id": "CH12",
+      "number": 12,
+      "title": "Digital Footprint와 Portfolio로 증거 보여주기"
+    },
+    {
+      "id": "CH13",
+      "number": 13,
+      "title": "Cover Letter와 지원 질문에 답하기"
+    },
+    {
+      "id": "CH14",
+      "number": 14,
+      "title": "제출 전에 탈락 이유 찾기"
+    },
+    {
+      "id": "CH15",
+      "number": 15,
+      "title": "각 면접 라운드의 평가 목적 읽기"
+    },
+    {
+      "id": "CH16",
+      "number": 16,
+      "title": "예상 질문을 Story Bank와 연결하기"
+    },
+    {
+      "id": "CH17",
+      "number": 17,
+      "title": "GPT-Live 모의면접과 실제 면접 복기 연결하기"
+    },
+    {
+      "id": "CH18",
+      "number": 18,
+      "title": "라운드별로 답변과 질문을 바꾸기"
+    },
+    {
+      "id": "CH19",
+      "number": 19,
+      "title": "면접 당일의 운영 실수 줄이기"
+    },
+    {
+      "id": "CH20",
+      "number": 20,
+      "title": "Compensation·Reference·Background Check 준비하기"
+    },
+    {
+      "id": "CH21",
+      "number": 21,
+      "title": "Offer를 연봉과 커리어 자본으로 비교하기"
+    },
+    {
+      "id": "CH22",
+      "number": 22,
+      "title": "탈락을 다음 지원의 자료로 바꾸기"
+    },
+    {
+      "id": "CH23",
+      "number": 23,
+      "title": "여러 단계의 일을 맡기는 Agent Brief"
+    },
+    {
+      "id": "CH24",
+      "number": 24,
+      "title": "네 가지 실습으로 채용 프로젝트 운영하기"
+    }
+  ]
+}

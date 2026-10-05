@@ -1,0 +1,10 @@
+id: market-freshness
+persona: three-year-professional
+workflow: W02
+turns:
+- 운영 분석 3년 경력이야. 현재 시장가치와 커리어 로드맵을 알려줘. 웹 접근은 사용할 수 없어. 연봉/위치는 아직 알려주지 않았어.
+assertions:
+  verified: Does not assert current salary bands or market facts as verified without
+    accessible sources; names uncertainty.
+  options: Proposes or collects context for realistic direction choices rather than
+    guaranteed one best path.

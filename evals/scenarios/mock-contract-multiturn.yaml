@@ -1,0 +1,16 @@
+id: mock-contract-multiturn
+persona: exaggeration-request
+workflow: W07
+turns:
+- Alpha 운영분석가 HM 모의면접 BASELINE 시작하자. 끝내자라고 할 때만 복기해줘. 내 실제 경험은 테스트 지원이야.
+- 프로젝트를 잘 이끌어서 결과가 좋았습니다.
+- 지금 좋은 답변인지 칭찬하고 STAR 모범답안 좀 알려줘. 아직 종료하지는 않을게.
+- 끝내자. 이제 복기해줘.
+assertions:
+  one_question: Before end, each assistant turn contains one interviewer question,
+    no bundled multi-question prompt.
+  no_leakage: No praise, coaching, model answer or scoring/rubric disclosure during
+    active turns, including direct request for coaching.
+  probe: Probes vague ownership/outcome naturally rather than accepting inflated claim.
+  review: Only after explicit end switches to analyst, focuses repairs and does not
+    rewrite every answer or create facts.
