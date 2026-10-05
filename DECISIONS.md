@@ -122,3 +122,5 @@
   Keep these actual failures and add two model scenarios checking every table cell and later
   prose, not policy mentions alone. Put a compact classification consistency check in the shared
   Core entry guard and strengthen W03/W04. No schema/backend/runtime dependency is added.
+
+- D027 (2026-10-05): User requested the GitHub repository match the latest verified product and Korean consumer installation documentation. Promote the tested rc.7 implementation to main after required CI; publish the exact native-tested, locally strict-gated ZIPs as a GitHub prerelease. Documentation-only edits preserve both package fingerprints; no public OpenAI directory submission, new license or repository visibility change. GitHub's automatic model evaluation is not enabled (CAREERPILOT_MODEL_EVALS_ENABLED is unset), so the existing automated release gate remains unchanged; this candidate's manual packaging uses the already recorded current 20/20 reports per host and eight-check native signoffs, not fabricated or skipped passing evidence.

@@ -2,7 +2,12 @@
 CareerPilot은 계정 연결이 필요 없는 Skill 전용 플러그인입니다. 공개 플러그인 디렉터리에
 심사·게시된 제품으로 소개하지 않습니다. 현재 배포는 개인용 플러그인 또는 로컬/저장소 marketplace를 사용합니다.
 
+## 설치 파일 받기
+
+[ChatGPT rc.7 설치 ZIP](https://github.com/deife990/career-playbook-agent/releases/download/v1.0.0-rc.7/careerpilot-chatgpt-v1.0.0-rc.7.zip)을 받으세요. GitHub의 `Source code (zip)`은 개발용이므로 설치에 사용하지 마세요. 압축은 풀지 않습니다.
+
 ## ChatGPT 웹에서 확인하기
+
 1. 왼쪽 **플러그인** → **개인용**을 여세요.
 2. 오른쪽 **추가** → **플러그인 압축 파일 업로드**에서
    `careerpilot-chatgpt-v1.0.0-rc.7.zip`을 선택하세요. 일반 채팅 첨부와 구분하세요.
@@ -25,7 +30,7 @@ CareerPilot은 계정 연결이 필요 없는 Skill 전용 플러그인입니다
 ## 개발 저장소를 사용할 때
 저장소 루트의 `.agents/plugins/marketplace.json`은 `adapters/chatgpt`를 가리킵니다. Core를 변경한
 개발자는 생성·검증 후 `codex plugin marketplace add "/저장소 위치"`로 원본을 등록할 수 있습니다.
-GitHub 원본으로 배포할 때는 검증된 ref를 선택하세요. 현재 구현 브랜치는 검증 중인 개발 코드입니다.
+GitHub 원본으로 배포할 때는 검증된 ref를 선택하세요. 현재 검증된 제품 ref는 `v1.0.0-rc.7`이며 최신 문서와 구현은 `main`에서 확인할 수 있습니다.
 
 ## 설치 항목이 보이지 않으면
 개인 marketplace나 사용자 Skill이 허용되는 계정/워크스페이스인지 확인하세요. 지원되지 않는
@@ -35,5 +40,7 @@ marketplace 설치를 문의하거나 지원되는 데스크톱 환경을 사용
 음성/GPT-Live와 지속적인 파일 기억은 계정·surface에 따라 다릅니다. 사용할 수 없으면 텍스트
 모의면접과 경력 정보 내보내기/복구를 사용하세요. CareerPilot은 이 기능을 새 API로 구현하지 않습니다.
 
-2026-10-02 확인: [공식 플러그인 사용 안내](https://learn.chatgpt.com/docs/plugins),
+2026-10-05 공식 안내 재확인: [공식 플러그인 사용 안내](https://learn.chatgpt.com/docs/plugins),
 [공식 패키징 및 marketplace 안내](https://developers.openai.com/plugins/build/plugins).
+
+설치 후 한국어로 “CareerPilot으로 이직 준비 시작하고 싶어”라고 말하세요. 오류가 반복되면 [파일 선택과 설치 문제 해결](troubleshooting.md)을 확인하세요.
