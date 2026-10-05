@@ -37,7 +37,11 @@ and optional README; remove stale duplicate opportunity files. Check each round,
 debrief, offer and next-action ID against the pre-export state before claiming a complete export.
 Manifest lists exact paths, matching schema types, schema_version, product_version, pack_id,
 revision, export date, active opportunity and privacy review. Defaults live in [templates](../../templates/context-manifest.json). Do not invent hashes;
-sha256 may be null on hosts without file hashing. Exclude secrets/raw connected-source documents.
+sha256 is the SHA-256 of JSON DATA, not formatted file bytes: recursively sort object keys,
+preserve array order and value types, serialize Unicode directly as UTF-8 with no structural
+whitespace or trailing newline, then hash that byte sequence. Different indentation must not
+change the digest. If this exact digest cannot be computed, use null; never substitute a file-byte
+hash or invent one. Exclude secrets/raw connected-source documents.
 Confirm included opportunities and offer a redacted export; do not silently omit interview data.
 If files are unavailable, output individually named JSON blocks and a compact resume card. The
 user can save/upload them; never require Python. Check all referenced IDs before saying complete.

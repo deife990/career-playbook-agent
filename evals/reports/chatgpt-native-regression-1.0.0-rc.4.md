@@ -1,6 +1,6 @@
 # ChatGPT rc.4 native synthetic regression
 
-Status: IN PROGRESS; not a complete native lifecycle or release signoff.
+Status: original native export FAIL; native manifest-only repair PASS. Targeted regression, not complete native release signoff.
 Date: 2026-10-05 (Asia/Seoul), observer Codex via CUA.
 Actual existing CareerPilot New version upload confirmed success, rc.4 and 12 skills.
 Runtime fingerprint: `38b9fb7a998c7af993f07882b30384990f0882c8321c9a73cbd81b244fc0cf00`.
@@ -42,3 +42,22 @@ newly serialized state persistence and fresh-chat recovery on rc.4 still need ob
   praise or separate continue question.
 - Explicit `끝내자` switches to Mock Review. Unsupported improvement is excluded from career
   evidence; focused action/structure repairs, not a fabricated complete STAR story.
+
+## Debrief, continuation and actual serialized state
+
+W08 began by asking recalled questions, before analysis/praise/prediction. Seven recall categories
+were collected with Unknowns. The question `How do you evaluate a campaign?`, answer
+`I have not confirmed campaign analysis experience.` and attributed unverified `Local teams manage
+campaigns` were preserved. Next HM/English/30-minute/video round reused those recalls without
+converting hypothetical campaign strategy into career evidence.
+
+Downloaded actual ZIP: original full validation FAIL because manifest hashes are correct formatted
+file-byte SHA-256, while the existing validator requires JSON-data hashes. Core/schema did not
+state that algorithm clearly; rc.6 clarifies it without weakening the validator or adding a runtime
+dependency. Native model manifest-only correction then passed full schemas/references/scope/path/
+digest checks. Every other file was byte-identical. Both rounds' objectives and positioning were
+non-null, first actual questions/answers/debrief were preserved, and mock improvement was excluded
+from CareerEvidence. This separately resolves the earlier prepared-state completeness regression.
+Original failed ZIP retained. New-chat recovery on the repaired file remains a separate test.
+
+Independent result: [state validation](chatgpt-native-state-1.0.0-rc.4.json).

@@ -1,0 +1,19 @@
+{
+  "original_status": "FAIL",
+  "original_error": "Hash mismatch: byte digest differs from JSON-data digest",
+  "native_repair_status": "PASS",
+  "schema_references_scope_paths": "PASS",
+  "nonmanifest_files_byte_identical": true,
+  "two_round_objectives_and_positioning_preserved": true,
+  "first_round_questions_answers_and_debrief_preserved": true,
+  "mock_improvement_not_career_evidence": true,
+  "fresh_chat_recovery": "PENDING",
+  "chat": "https://chatgpt.com/c/6ac2fe92-8408-83ee-bb0c-e9d095771a45",
+  "synthetic_only": true,
+  "observer": "Codex via CUA + independent portable validator",
+  "observed_at": "2026-10-05",
+  "files": {
+    "careerpilot-simulation-rc4.zip": "f3d9b0beb1500368f1861ce86e11a45776c8d587972e7fc2a5a6786e234bd9a0",
+    "careerpilot-simulation-rc4-corrected.zip": "3977269161524b75edc85386ad7305a9c882e6f4a2ad5496a62071c84ae4cf1b"
+  }
+}

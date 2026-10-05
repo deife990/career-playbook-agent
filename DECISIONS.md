@@ -107,3 +107,11 @@
   accessed current authoritative rules before requested net scenarios. INFERENCE labeling is
   not permission to fabricate an estimate. No paid dependency or runtime calculation service
   is added; unavailable basis yields supplied gross terms and verification questions.
+
+- D025 (2026-10-05): Native rc.4 export correctly hashed formatted file bytes, but the
+  reference validator expects JSON-data hashes and the runtime contract did not state the
+  algorithm. Preserve original interoperability FAIL. Native manifest-only repair passed with
+  every other file byte-identical, two prepared rounds and recalled history preserved. Clarify
+  the existing JSON-data algorithm in Core and schema annotations; no schema shape/version or
+  runtime dependency change. The validator stays strict; null is allowed when exact hashing is
+  unavailable. Prepared-round persistence was separately verified in the repaired native ZIP.

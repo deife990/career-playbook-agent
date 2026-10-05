@@ -56,7 +56,8 @@
               "string",
               "null"
             ],
-            "pattern": "^[a-f0-9]{64}$"
+            "pattern": "^[a-f0-9]{64}$",
+            "description": "Optional SHA-256 of JSON data: recursively sorted object keys, unchanged array order/value types, Unicode directly encoded as UTF-8, no structural whitespace or trailing newline. Not the formatted file-byte hash. Null when exact computation is unavailable."
           }
         },
         "required": [

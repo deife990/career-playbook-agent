@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.0-rc.6
+
+- Clarify the manifest JSON-data digest after a native export used valid byte hashes that the portable validator rejected.
+- Hash algorithm is explicit in Core state and manifest schema; null remains the safe fallback. No runtime dependency added.
+- rc.5 actual model suites passed 18/18 on each platform; new package requires fresh checks.
+
 ## 1.0.0-rc.5
 
 - Prevent unknown tax/net compensation from becoming a remembered numeric range, even under INFERENCE.
