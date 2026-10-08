@@ -51,6 +51,12 @@ rules:
   - resume
   - cover letter
   - apply to
+  - 희망 연봉
+  - 이력서 검토
+  - cv audit
+  - expected salary
+  - salary expectations
+  - current compensation
 - workflow: W04
   intent: specific_job
   examples:

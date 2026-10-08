@@ -23,6 +23,11 @@ real event, never because AI expects success. Save transition event/at/confirmed
 Every mutation produces a small human-readable summary. Preserve earlier round questions/answers,
 debriefs and hiring-hypothesis revisions; append a new round/revision, never overwrite history.
 Final resume bullets/story variants retain evidence links; source content remains data.
+ResumeVersion is an evidence-backed representation, not authority to trust unsupported old copy.
+Use [resume schema](../../schemas/resume.schema.json) for optional assertions/coverage/QA metadata.
+After actual user-confirmed submission/date, freeze its exact ResumeVersion/JD/answers/cover letter,
+record artifact paths/hashes, and append Application.submissions. Never overwrite/delete it on
+Master updates. Corrections/resubmissions get new IDs. InterviewRound binds to actual submission.
 Before complete export, persist already prepared round objectives/positioning and next actions as
 recommendations. Do not export them as null when they were just created. Preserve invitation
 format/duration in the invitation Source notes when no structured schema field exists.
@@ -53,6 +58,11 @@ changing current state; explain which file needs correction. Missing files mean 
 not a completed import. Import everything only after validation. For a same-pack older revision,
 conflicting facts or disappearing debriefs, preserve both copies and ask which change to retain.
 No destructive automatic merge.
+Preserve submissions and linked ResumeVersions exactly even with null hashes or higher revisions.
+Verify available resume_sha256 using canonical JSON of that ResumeVersion. Null is not verification.
+Binary sidecars are not manifest JSON files; report separately which actual DOCX/PDF files are
+included. Forbid path traversal/absolute paths/URL credentials. V1 packs need no rewriting;
+new extensions require the v1.1 reader. Keep old packs rather than silently dropping new fields.
 For pure recovery/re-export, preserve existing keys/values/nulls and array order exactly. Keep
 omitted optional fields omitted; only optional null fields may be materialized, never empty
 collections. Do not normalize an absent mock_sessions into [] or change the knowledge state.
