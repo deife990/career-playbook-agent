@@ -118,6 +118,8 @@ def validate(pack):
                 question=index.get(node['question_id'])
                 reject(question is None or question.get('round_id')!=node.get('round_id'),'Answer/round mismatch')
             if node.get('round_id'): reject(node['round_id'] not in rounds or contexts.get(node['round_id'])!=scope,'Round scope mismatch')
+    from scripts.submission_oracle import validate_submissions
+    validate_submissions(pack)
     return deepcopy(pack)
 def export(pack):
     result=deepcopy(pack)
@@ -154,6 +156,8 @@ def import_pack(text,current=None):
         old_actual={n['id']:n for n in nodes(current) if n.get('origin')=='ACTUAL_USER_RECALL' or n.get('recalled') is True}
         new_actual={n['id']:n for n in nodes(incoming) if n.get('origin')=='ACTUAL_USER_RECALL' or n.get('recalled') is True}
         reject(any(new_actual.get(k)!=v for k,v in old_actual.items()),'Actual interview record loss')
+        from scripts.submission_oracle import preserve_submissions
+        preserve_submissions(current,incoming)
     return incoming
 def read_directory(root):
     root=Path(root).resolve(); manifest=load(root/'manifest.json'); schema_validator('context-manifest').validate(manifest)

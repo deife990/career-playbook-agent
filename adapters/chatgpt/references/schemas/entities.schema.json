@@ -247,6 +247,25 @@
             "CONTRADICTED",
             null
           ]
+        },
+        "confidence": {
+          "enum": [
+            "HIGH",
+            "MEDIUM",
+            "LOW",
+            "UNKNOWN",
+            null
+          ]
+        },
+        "responsibility": {
+          "enum": [
+            "EXPOSURE",
+            "CONTRIBUTOR",
+            "OWNER",
+            "LEADER",
+            "UNKNOWN",
+            null
+          ]
         }
       },
       "required": [
@@ -857,6 +876,83 @@
               "null"
             ]
           }
+        },
+        "requirements": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "key": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "text": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "category": {
+                "enum": [
+                  "REQUIRED",
+                  "PREFERRED",
+                  "RESPONSIBILITIES",
+                  "DOMAIN",
+                  "TOOLS_TECHNOLOGIES",
+                  "STAKEHOLDERS",
+                  "SENIORITY",
+                  "BUSINESS_OUTCOMES",
+                  "HIDDEN_INFERRED",
+                  null
+                ]
+              },
+              "classification": {
+                "enum": [
+                  "USER FACT",
+                  "VERIFIED FACT",
+                  "INFERENCE",
+                  "RECOMMENDATION",
+                  null
+                ]
+              },
+              "source_ids": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "confidence": {
+                "enum": [
+                  "HIGH",
+                  "MEDIUM",
+                  "LOW",
+                  "UNKNOWN",
+                  null
+                ]
+              },
+              "verification_question": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": false
+          }
         }
       },
       "required": [
@@ -1189,6 +1285,100 @@
                   "ADD_FROM_EVIDENCE",
                   null
                 ]
+              },
+              "bullet_key": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "story_ids": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "claim_ids": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "confidence": {
+                "enum": [
+                  "HIGH",
+                  "MEDIUM",
+                  "LOW",
+                  "UNKNOWN",
+                  null
+                ]
+              },
+              "evidence_status": {
+                "enum": [
+                  "CONFIRMED",
+                  "UNCONFIRMED",
+                  "CONTRADICTED",
+                  "UNKNOWN",
+                  null
+                ]
+              },
+              "role_relevance": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "requirement_keys": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "responsibility": {
+                "enum": [
+                  "EXPOSURE",
+                  "CONTRIBUTOR",
+                  "OWNER",
+                  "LEADER",
+                  "UNKNOWN",
+                  null
+                ]
+              },
+              "previous_text": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "used_in_round_ids": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
               }
             },
             "required": [],
@@ -1214,6 +1404,669 @@
             "USER_APPROVED",
             null
           ]
+        },
+        "revision": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "derived_from_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "created_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "target_role": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "summary": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "skills": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "sections": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "heading": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "text": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "evidence_ids": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "employment": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "company": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "title": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "start": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "end": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "scope": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "evidence_ids": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "assertions": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "field": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "text": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "evidence_ids": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "story_ids": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "claim_ids": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "profile_path": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "user_confirmed": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "confidence": {
+                "enum": [
+                  "HIGH",
+                  "MEDIUM",
+                  "LOW",
+                  "UNKNOWN",
+                  null
+                ]
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "artifacts": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "path": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "format": {
+                "enum": [
+                  "DOCX",
+                  "PDF",
+                  null
+                ]
+              },
+              "sha256": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "qa_status": {
+                "enum": [
+                  "ATS-Ready",
+                  "ATS-Risky",
+                  "ATS-Broken",
+                  "NOT_CHECKED",
+                  null
+                ]
+              },
+              "page_count": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "extracted_text": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "checked_at": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "method": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "checks": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "object",
+                    "null"
+                  ],
+                  "properties": {
+                    "check": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "result": {
+                      "enum": [
+                        "PASS",
+                        "FAIL",
+                        "UNKNOWN",
+                        null
+                      ]
+                    },
+                    "observation": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "screening": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "mode": {
+              "enum": [
+                "BUILD_MASTER",
+                "AUDIT_EXISTING",
+                "TAILOR_TO_JOB",
+                "FINAL_SUBMISSION",
+                null
+              ]
+            },
+            "depth": {
+              "enum": [
+                "QUICK",
+                "STANDARD",
+                "DEEP",
+                null
+              ]
+            },
+            "resume_version_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "coverage": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "requirement_key": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "match": {
+                    "enum": [
+                      "DIRECT_MATCH",
+                      "TRANSFERABLE",
+                      "PARTIAL",
+                      "GAP",
+                      "UNKNOWN",
+                      null
+                    ]
+                  },
+                  "evidence_ids": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    }
+                  },
+                  "story_ids": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    }
+                  },
+                  "rationale": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "missing": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "selected_bullet_keys": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    }
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "selection_strategy": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "stages": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "name": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "BLOCKED",
+                      "PENDING",
+                      "NOT_APPLICABLE",
+                      null
+                    ]
+                  },
+                  "findings": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {
+                      "type": [
+                        "object",
+                        "null"
+                      ],
+                      "properties": {
+                        "dimension": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "result": {
+                          "enum": [
+                            "Strong",
+                            "Adequate",
+                            "Weak",
+                            "Risk",
+                            "PASS",
+                            "FAIL",
+                            "UNKNOWN",
+                            null
+                          ]
+                        },
+                        "observation": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "evidence_ids": {
+                          "type": [
+                            "array",
+                            "null"
+                          ],
+                          "items": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        },
+                        "bullet_keys": {
+                          "type": [
+                            "array",
+                            "null"
+                          ],
+                          "items": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        },
+                        "fix": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "classification": {
+                          "enum": [
+                            "USER FACT",
+                            "VERIFIED FACT",
+                            "INFERENCE",
+                            "RECOMMENDATION",
+                            null
+                          ]
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  },
+                  "reason": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "concerns": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "concern": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "evidence_ids": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    }
+                  },
+                  "surface": {
+                    "enum": [
+                      "RESUME",
+                      "APPLICATION",
+                      "RECRUITER_SCREEN",
+                      "INTERVIEW",
+                      null
+                    ]
+                  },
+                  "explanation_confirmed": {
+                    "type": [
+                      "boolean",
+                      "null"
+                    ]
+                  },
+                  "response": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "voice_edits": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "before": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "after": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "reason": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "meaning_preserved": {
+                    "type": [
+                      "boolean",
+                      "null"
+                    ]
+                  },
+                  "assertion_fields_unchanged": {
+                    "type": [
+                      "boolean",
+                      "null"
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "ready": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            }
+          },
+          "additionalProperties": false
         }
       },
       "required": [
@@ -1468,6 +2321,18 @@
           ]
         },
         "language": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "resume_version_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "submission_id": {
           "type": [
             "string",
             "null"
@@ -2899,6 +3764,100 @@
                     "null"
                   ]
                 }
+              },
+              "field_key": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "type": {
+                "enum": [
+                  "WHY_COMPANY",
+                  "WHY_ROLE",
+                  "ABOUT",
+                  "EXPERIENCE_YEARS",
+                  "SKILL",
+                  "WORK_AUTHORIZATION",
+                  "SALARY",
+                  "LOCATION",
+                  "BEHAVIORAL",
+                  "PORTFOLIO",
+                  "ADDITIONAL",
+                  "OTHER",
+                  null
+                ]
+              },
+              "source_ids": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "story_ids": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "claim_ids": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "limit": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "minimum": 0
+              },
+              "limit_unit": {
+                "enum": [
+                  "CHARACTERS",
+                  "WORDS",
+                  "BYTES",
+                  null
+                ]
+              },
+              "status": {
+                "enum": [
+                  "DRAFT",
+                  "USER_APPROVED",
+                  "BLOCKED",
+                  null
+                ]
+              },
+              "user_confirmed": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "motivation_confirmed": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
               }
             },
             "required": [],
@@ -3079,6 +4038,758 @@
               }
             ]
           }
+        },
+        "submissions": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "opportunity_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "resume_version_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "jd_source_ids": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "jd_text": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "submitted_at": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "user_confirmed": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "resume_sha256": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "answers": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "question": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "answer": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "evidence_ids": {
+                      "type": [
+                        "array",
+                        "null"
+                      ],
+                      "items": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      }
+                    },
+                    "field_key": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "type": {
+                      "enum": [
+                        "WHY_COMPANY",
+                        "WHY_ROLE",
+                        "ABOUT",
+                        "EXPERIENCE_YEARS",
+                        "SKILL",
+                        "WORK_AUTHORIZATION",
+                        "SALARY",
+                        "LOCATION",
+                        "BEHAVIORAL",
+                        "PORTFOLIO",
+                        "ADDITIONAL",
+                        "OTHER",
+                        null
+                      ]
+                    },
+                    "source_ids": {
+                      "type": [
+                        "array",
+                        "null"
+                      ],
+                      "items": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      }
+                    },
+                    "story_ids": {
+                      "type": [
+                        "array",
+                        "null"
+                      ],
+                      "items": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      }
+                    },
+                    "claim_ids": {
+                      "type": [
+                        "array",
+                        "null"
+                      ],
+                      "items": {
+                        "type": [
+                          "string",
+                          "null"
+                        ]
+                      }
+                    },
+                    "limit": {
+                      "type": [
+                        "integer",
+                        "null"
+                      ],
+                      "minimum": 0
+                    },
+                    "limit_unit": {
+                      "enum": [
+                        "CHARACTERS",
+                        "WORDS",
+                        "BYTES",
+                        null
+                      ]
+                    },
+                    "status": {
+                      "enum": [
+                        "DRAFT",
+                        "USER_APPROVED",
+                        "BLOCKED",
+                        null
+                      ]
+                    },
+                    "user_confirmed": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    },
+                    "motivation_confirmed": {
+                      "type": [
+                        "boolean",
+                        "null"
+                      ]
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "cover_letter": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "notes": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "screening": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "mode": {
+              "enum": [
+                "BUILD_MASTER",
+                "AUDIT_EXISTING",
+                "TAILOR_TO_JOB",
+                "FINAL_SUBMISSION",
+                null
+              ]
+            },
+            "depth": {
+              "enum": [
+                "QUICK",
+                "STANDARD",
+                "DEEP",
+                null
+              ]
+            },
+            "resume_version_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "coverage": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "requirement_key": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "match": {
+                    "enum": [
+                      "DIRECT_MATCH",
+                      "TRANSFERABLE",
+                      "PARTIAL",
+                      "GAP",
+                      "UNKNOWN",
+                      null
+                    ]
+                  },
+                  "evidence_ids": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    }
+                  },
+                  "story_ids": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    }
+                  },
+                  "rationale": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "missing": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "selected_bullet_keys": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    }
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "selection_strategy": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "stages": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "name": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "status": {
+                    "enum": [
+                      "PASS",
+                      "BLOCKED",
+                      "PENDING",
+                      "NOT_APPLICABLE",
+                      null
+                    ]
+                  },
+                  "findings": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {
+                      "type": [
+                        "object",
+                        "null"
+                      ],
+                      "properties": {
+                        "dimension": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "result": {
+                          "enum": [
+                            "Strong",
+                            "Adequate",
+                            "Weak",
+                            "Risk",
+                            "PASS",
+                            "FAIL",
+                            "UNKNOWN",
+                            null
+                          ]
+                        },
+                        "observation": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "evidence_ids": {
+                          "type": [
+                            "array",
+                            "null"
+                          ],
+                          "items": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        },
+                        "bullet_keys": {
+                          "type": [
+                            "array",
+                            "null"
+                          ],
+                          "items": {
+                            "type": [
+                              "string",
+                              "null"
+                            ]
+                          }
+                        },
+                        "fix": {
+                          "type": [
+                            "string",
+                            "null"
+                          ]
+                        },
+                        "classification": {
+                          "enum": [
+                            "USER FACT",
+                            "VERIFIED FACT",
+                            "INFERENCE",
+                            "RECOMMENDATION",
+                            null
+                          ]
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  },
+                  "reason": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "concerns": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "concern": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "evidence_ids": {
+                    "type": [
+                      "array",
+                      "null"
+                    ],
+                    "items": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    }
+                  },
+                  "surface": {
+                    "enum": [
+                      "RESUME",
+                      "APPLICATION",
+                      "RECRUITER_SCREEN",
+                      "INTERVIEW",
+                      null
+                    ]
+                  },
+                  "explanation_confirmed": {
+                    "type": [
+                      "boolean",
+                      "null"
+                    ]
+                  },
+                  "response": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "voice_edits": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": [
+                  "object",
+                  "null"
+                ],
+                "properties": {
+                  "before": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "after": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "reason": {
+                    "type": [
+                      "string",
+                      "null"
+                    ]
+                  },
+                  "meaning_preserved": {
+                    "type": [
+                      "boolean",
+                      "null"
+                    ]
+                  },
+                  "assertion_fields_unchanged": {
+                    "type": [
+                      "boolean",
+                      "null"
+                    ]
+                  }
+                },
+                "additionalProperties": false
+              }
+            },
+            "ready": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "compensation_conversations": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "properties": {
+              "stage": {
+                "enum": [
+                  "APPLICATION",
+                  "RECRUITER_SCREEN",
+                  "MID_PROCESS",
+                  "PRE_OFFER",
+                  "FORMAL_OFFER",
+                  null
+                ]
+              },
+              "recorded_at": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "question": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "currency": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "basis": {
+                "enum": [
+                  "BASE",
+                  "TOTAL",
+                  "UNKNOWN",
+                  null
+                ]
+              },
+              "period": {
+                "enum": [
+                  "ANNUAL",
+                  "MONTHLY",
+                  "HOURLY",
+                  "UNKNOWN",
+                  null
+                ]
+              },
+              "location": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "company_range": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "candidate_range": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "range_source_ids": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "user_confirmed": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "disclosed_answer": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "scope_change": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "jurisdiction": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "legal_status": {
+                "enum": [
+                  "VERIFIED",
+                  "UNVERIFIED",
+                  "UNKNOWN",
+                  null
+                ]
+              },
+              "legal_source_ids": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                }
+              },
+              "primary_script": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "backup_script": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "ats_vendor": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "vendor": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "status": {
+              "enum": [
+                "CONFIRMED",
+                "LIKELY",
+                "UNKNOWN",
+                null
+              ]
+            },
+            "observed_url": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "source_ids": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "checked_at": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "company_match_confirmed": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "notes": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          },
+          "additionalProperties": false
         }
       },
       "required": [
