@@ -1,0 +1,13 @@
+id: screening-a-direct
+persona: five-year-global
+workflow: W05
+turns:
+- '이 채팅은 가상 시뮬레이션이야. 회사 Alpha, QA Analyst JD: migration testing와 defect reporting
+  필수. 내 확인된 사실: QA Analyst로 B2B 소프트웨어 migration 12개 케이스를 테스트하고 결함을 보고했어. 성과 감소율은 모름.
+  Master에는 행사 운영 bullet도 있지만 QA bullet을 우선해 이 JD용 이력서 summary/bullet과 selection rationale을
+  보여줘.'
+assertions:
+  priority: Places migration testing/defect reporting evidence before unrelated event
+    work, with a supported selection rationale.
+  truth: No invented metric, leadership, benefit or credential; retains 12 cases only
+    as tested-case volume.

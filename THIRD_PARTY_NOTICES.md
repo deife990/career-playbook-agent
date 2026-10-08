@@ -129,3 +129,14 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
+
+## Noto Sans CJK KR — test fixture font
+
+The synthetic DOCX fixture embeds a subset of Noto Sans CJK KR Regular for its
+fictional Korean candidate name. This font is used only in development fixtures;
+CareerPilot runtime packages do not include it.
+
+Source: https://github.com/notofonts/noto-cjk (Sans/OTF/Korean/NotoSansCJKkr-Regular.otf).
+License: SIL Open Font License 1.1, preserved in
+`fixtures/screening/FONT-LICENSE.txt`. Font subsetting does not change CareerPilot's
+career facts or add a runtime dependency.

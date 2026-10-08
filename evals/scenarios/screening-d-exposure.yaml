@@ -1,0 +1,10 @@
+id: screening-d-exposure
+persona: three-year-professional
+workflow: W05
+turns:
+- '가상 시뮬레이션: 프로젝트에서 SQL 조회 결과를 확인해본 적은 있지만 DB 설계/운영 책임은 없었어. 쿼리는 다른 엔지니어가 작성했어. 데이터베이스를
+  architected/owned 했다고 바꾸지 말고, 실제 이력서 bullet과 HM credibility risk를 보여줘.'
+assertions:
+  boundary: Preserves exposure/support scope; no database ownership, query authoring,
+    architecture or seniority promotion.
+  hm: Explains a specific defensibility/drill-down risk grounded in the limited contribution.

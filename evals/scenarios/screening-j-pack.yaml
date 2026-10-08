@@ -1,0 +1,10 @@
+id: screening-j-pack
+persona: multi-application
+capability: career-state
+context_fixture: fixtures/state/submitted-v11.json
+turns:
+- 시뮬레이션의 경력 정보 복구 및 내보내기 테스트야. 제공된 pack을 복구한 뒤 모든 파일을 한 JSON 객체로 다시 출력해줘. 기존 key/value/null/순서,
+  submitted 기록과 resume-a를 그대로 유지하고 내용을 분석하거나 수정하지 마. JSON만 출력.
+assertions:
+  frozen: Preserves submitted record, actual resume and later Master independently,
+    no replacement or company mixing.

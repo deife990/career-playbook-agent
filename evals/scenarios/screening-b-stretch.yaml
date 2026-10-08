@@ -1,0 +1,11 @@
+id: screening-b-stretch
+persona: career-changer
+workflow: W05
+turns:
+- '시뮬레이션: Beta data analyst JD 필수 SQL/Python, 우대 retail domain, stakeholder reporting.
+  실제 나는 retail 운영에서 Excel 주간 보고를 만들고 매장 담당자와 협업했어. SQL/Python은 사용한 적 없어. 이 공고로 이력서
+  tailoring하고 JD coverage를 구분해줘.'
+assertions:
+  bridge: Distinguishes transferable retail/reporting evidence from confirmed SQL/Python
+    gaps, without arbitrary fit percentages.
+  skills: Does not add SQL or Python to actual experience or skill list.

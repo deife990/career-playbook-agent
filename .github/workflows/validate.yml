@@ -11,6 +11,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install -r requirements-dev.txt
+      - run: sudo apt-get update && sudo apt-get install -y poppler-utils
       - run: python -m scripts.run_static_evals
       - run: python -m pytest -q
       - run: git diff --exit-code -- adapters

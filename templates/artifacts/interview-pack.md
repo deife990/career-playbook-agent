@@ -39,3 +39,7 @@ Opportunity / Round: {{selected_scope}}
 
 ## Next Action
 {{next_action}}
+
+## Submitted Resume Baseline
+{{actual_submission_resume_ids_or_unknown}}
+{{submitted_claim_drilldown_and_later_discrepancies}}

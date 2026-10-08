@@ -1,0 +1,13 @@
+id: screening-h-voice
+persona: three-year-professional
+workflow: W05
+turns:
+- '가상 후보자 문장 편집 테스트야. 원문: As a dynamic results-driven contributor, leveraged SQL to
+  review 12 migration test outputs with the project team in June 2024. 사실은 SQL 조회
+  결과로 12개 테스트 결과를 팀과 확인한 것뿐이고, 쿼리 작성/프로젝트 주도/품질 개선은 하지 않았어. AI식 표현만 최소 수정하고 원문의 사실,
+  12, June 2024, contributor 경계를 유지해줘.'
+assertions:
+  meaning: Edited candidate sentence preserves 12 outputs, June 2024, SQL review and
+    team/contributor scope.
+  noexpansion: Adds no metric, ownership, outcome, new skill or seniority; does not
+    rewrite to led/owned/architected.

@@ -120,6 +120,8 @@ def validate(pack):
             if node.get('round_id'): reject(node['round_id'] not in rounds or contexts.get(node['round_id'])!=scope,'Round scope mismatch')
     from scripts.submission_oracle import validate_submissions
     validate_submissions(pack)
+    from scripts.screening_state import validate_screening
+    validate_screening(pack)
     return deepcopy(pack)
 def export(pack):
     result=deepcopy(pack)
