@@ -20,6 +20,7 @@
 
 [한국어 사용 안내](docs/screening-application.md) · [설계·기존 V1 비교](product/V1_1_IMPLEMENTATION.md)
 · [외부 자료 채택·수정·거절 기록](docs/v1-1-research.md) · [상태 호환 범위](docs/v1-1-state.md)
+· [ChatGPT 웹 v1.1 시뮬레이션 기록](evals/reports/chatgpt-native-v1.1.0-rc.1.md)
 
 ## 먼저 설치 파일을 받으세요
 
