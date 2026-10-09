@@ -4,9 +4,22 @@
 
 전자책 **AI-Powered Job Search Playbook**을 실제 대화로 실행하는 도구입니다. ChatGPT 또는 Claude에 설치한 뒤 원하는 일을 한국어로 말하면 됩니다. 전자책을 읽지 않았거나 이력서가 없어도 시작할 수 있습니다. 모든 직종을 대상으로 하며, 외국계·글로벌 기업 지원과 영어 면접도 준비합니다.
 
-> 현재 버전: **1.0.0-rc.7 — Full V1 출시 후보** · 검증일: **2026-10-05**
+> 개발 버전: **1.1.0-rc.1 — Screening & Application Engine Upgrade** · 검증 진행일: **2026-10-09**
 >
-> ChatGPT·Claude 실제 웹 환경에서 전체 이직 과정과 새 채팅 복원을 시험했습니다. 공개 플러그인 디렉터리에 등록된 제품은 아니며, 아래 ZIP으로 직접 설치합니다.
+> v1.1은 경력 근거에 연결된 맞춤 이력서, 채용담당자·현업 관리자 검사, 지원 질문,
+> 제출본 보존과 면접 연결을 강화합니다. 아래 rc.7 다운로드는 이전 검증 완료 버전입니다.
+> v1.1 설치 ZIP은 이 브랜치의 CI Build 결과 또는 로컬 빌드에서 받으며, 새 웹 설치·동작
+> 검증 결과가 확정되기 전에는 이전 버전의 통과 기록을 v1.1 검증으로 간주하지 않습니다.
+
+## v1.1 이력서·지원서 준비
+
+“이력서를 검토해줘”, “이 공고에 맞춰 준비하자”, “제출할 DOCX와 PDF를 만들어줘”라고
+말하세요. 실제 경험을 조정하고 근거·채용 시스템 구조·채용담당자 첫인상·현업 신뢰도·
+차별화·문장 표현을 점검합니다. 숫자와 책임을 만들지 않으며, 실제 제출한 버전을 보관해
+다음 면접의 기준으로 사용합니다. 추가 Skill 설치는 필요 없습니다.
+
+[한국어 사용 안내](docs/screening-application.md) · [설계·기존 V1 비교](product/V1_1_IMPLEMENTATION.md)
+· [외부 자료 채택·수정·거절 기록](docs/v1-1-research.md) · [상태 호환 범위](docs/v1-1-state.md)
 
 ## 먼저 설치 파일을 받으세요
 
@@ -138,7 +151,7 @@ Mail·Drive 같은 외부 자료 연결은 필수가 아닙니다. 사용 환경
 
 [문제 해결 전체 안내](docs/troubleshooting.md) · [한 페이지 빠른 시작](docs/quick-start.md)
 
-## 현재 버전의 검증 범위
+## 이전 V1 버전의 검증 범위 (rc.7)
 
 | 검사 | rc.7 결과 |
 |---|---|
@@ -161,6 +174,7 @@ Python **3.12** 환경에서:
 
 ```bash
 python -m pip install -r requirements-dev.txt
+# 파일 추출 테스트: macOS는 brew install poppler, Ubuntu는 apt-get install poppler-utils
 python -m scripts.run_static_evals
 python -m pytest -q
 python -m scripts.package_release

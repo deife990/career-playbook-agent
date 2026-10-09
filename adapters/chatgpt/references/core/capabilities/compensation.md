@@ -32,6 +32,9 @@ range from market reports and personal expectations. Reconfirm current market fa
 benchmark, invented percentile, guessed number or default percentage uplift.
 - Application free text: offer discussing role scope/package. Numeric-only: ask the user-approved
   actual figure and basis/interval. Never insert 0, guessed salary or fabricated history to pass a field.
+  Visibly name the stage (예: “지금은 지원서 입력 단계이며 정식 오퍼 협상이 아닙니다”) and that later
+  scope/offer discussion stays possible. Directly ask which annual base number the user chooses to
+  enter (or their acceptable minimum/target); research helps the decision, but the number is theirs.
 - Recruiter screen: offer requesting the employer band first and a user-approved range option;
   explain tradeoffs without claiming the first number determines the offer. Example recommendation:
   “역할 범위와 보상 구성을 먼저 이해하고 싶습니다. 책정된 범위를 알려주실 수 있을까요?”
