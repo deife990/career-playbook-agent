@@ -124,3 +124,19 @@
   Core entry guard and strengthen W03/W04. No schema/backend/runtime dependency is added.
 
 - D027 (2026-10-05): User requested the GitHub repository match the latest verified product and Korean consumer installation documentation. Promote the tested rc.7 implementation to main after required CI; publish the exact native-tested, locally strict-gated ZIPs as a GitHub prerelease. Documentation-only edits preserve both package fingerprints; no public OpenAI directory submission, new license or repository visibility change. GitHub's automatic model evaluation is not enabled (CAREERPILOT_MODEL_EVALS_ENABLED is unset), so the existing automated release gate remains unchanged; this candidate's manual packaging uses the already recorded current 20/20 reports per host and eight-check native signoffs, not fabricated or skipped passing evidence.
+
+- D028 (2026-10-09): v1.1 redesigns external workflow patterns inside shared W05 references,
+  with CareerPilot truth/privacy/Unknown policies taking precedence. Twelve ChatGPT skills and
+  one Claude skill remain the consumer installations. Pinned upstream analysis and rejection
+  rationale live in docs/v1-1-research.md; MIT notices are preserved, not runtime dependencies.
+- D029: Keep schema_version 1.0.0 and canonical applications/<opportunity>.json. Optional
+  screening/submission/compensation extensions preserve old V1 data; old strict readers cannot
+  consume new fields. New readers, lossless roundtrip and immutable previous submissions are
+  explicitly tested. Binary sidecars are separate; JSON-only export does not restore files.
+- D030: Document production uses available host tools only. Extraction and manual visual review
+  are distinct observations. A bilingual fixture exposed a visually missing Korean font despite
+  extracted text; embedded OFL font subsetting repaired it. Poppler is development/CI tooling,
+  not a product dependency. ATS-Ready means observed local readability, never an ATS probability.
+- D031: v1.1.0-rc.1 is a candidate until its own actual model and native acceptance evidence is
+  current. No stale v1.0 signoff or CLI result counts as native installation. Actual web upload
+  uses the existing account and the exact generated candidate archive.

@@ -65,6 +65,16 @@ They supplement, rather than replace, the selected workflow and artifact contrac
   Check declared paths against final ZIP members and retain all prior rounds and requirements.
 - An incomplete host/file read is not a completed workflow. Read the selected detailed contract
   and disclose inaccessible references; never silently substitute a generic short response.
+- For W05 resume/application output report the checks, not only files: JD requirement mapping
+  (Direct Match/Transferable/Partial/Gap/Unknown); Recruiter Scan and Hiring Manager credibility as
+  Strong/Adequate/Weak/Risk citing the observed line; file QA as ATS-Ready/ATS-Risky/ATS-Broken/
+  NOT_CHECKED with what text extraction and page count actually showed. No ATS score/pass odds.
+- State exposure boundaries positively in resume lines (“reviewed results of existing SQL
+  queries”); keep what was not done in gap notes/interview prep unless needed to prevent misreading.
+  Ready is not submitted: ask the user to say when they actually submit so that exact version,
+  JD and answers are frozen; later interview prep starts from the submitted version.
+- Host account memory is optional. Never save simulation/test/fictional data to it. Save real
+  career details there only when the user asks or agrees; the portable pack stays canonical.
 For W04 output ALL Candidate Strategy Brief sections in this order, even when concise:
 Executive Summary; What This Role Appears To Be; Why It May Be Open; Confirmed Context; Hiring Hypothesis; Ideal Candidate; Your Strong Evidence; Transferable Evidence; Gaps; Unknowns; Candidate Positioning; Likely Interview Risks; Questions To Verify; Recommended Next Action; Sources.
 Use a short Unknown entry where needed; never merge/omit a section.

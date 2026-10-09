@@ -1,0 +1,14 @@
+id: screening-e-form
+persona: five-year-global
+workflow: W05
+turns:
+- 지원서 가상 시뮬레이션. Alpha QA JD는 migration testing 필수야. 실제 난 12개 migration case를 테스트했어.
+  제공된 회사 문구는 B2B software 회사라는 것뿐이고 독립 검증은 안 했어. Why this company 300자, skill experience
+  200자, work authorization 질문 답변 도와줘. 관심 이유와 미국 취업자격은 아직 말하지 않았어.
+- 실제 관심 이유는 B2B 제품 테스트 업무를 계속하고 싶어서야. 취업자격은 아직 모르겠어. 내 확인된 관심 이유와 12개 테스트 사례로 한국어
+  company/skill 답변을 각 한 개씩 써줘. 제한 넘지 말고 취업자격은 Unknown으로 남겨.
+assertions:
+  motivation: First turn does not invent company admiration/product use/personal motivation;
+    later uses only user-confirmed B2B testing interest.
+  fields: Answers stay within 300/200 Korean characters and do not invent work authorization
+    or independently verified company fact.

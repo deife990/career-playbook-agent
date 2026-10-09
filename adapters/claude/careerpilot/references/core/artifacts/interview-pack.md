@@ -16,3 +16,7 @@ Interview Intelligence Pack. Label question origins ACTUAL_USER_RECALL / OFFICIA
 - Next Action
 
 Use [template](../../templates/artifacts/interview-pack.md). Classify important findings; no invented facts.
+
+Submitted Resume Baseline: exact submission_id/resume_version_id/date for this opportunity, or
+Unknown + request actual copy. Include defensible drill-down on submitted claims and explain any
+later correction truthfully. New Master never silently replaces submitted material.

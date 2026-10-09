@@ -1,4 +1,7 @@
 # Master and tailored resume
+For mode/depth, selection, five-way coverage, recruiter/HM/differentiation checks and submitted
+version management use [screening engine](screening-engine.md). Final files use
+[artifact production](resume-artifact.md); polishing uses [human voice](human-voice.md).
 Master Resume is global verified/confirmed inventory. Tailored Resume belongs to one opportunity
 and prioritizes relevant true facts. Read evidence + strategy before editing. Analyze a supplied
 resume first: chronology, dates/titles/qualifications, supported ownership/metrics, role relevance.

@@ -1,0 +1,11 @@
+id: screening-c-unknown
+persona: incomplete-resume
+workflow: W05
+turns:
+- '가상 후보자 시뮬레이션. 실제 사실: 매주 프로세스를 점검하고 결과를 문서에 기록했어. 고객 수, 절감 시간, 품질 효과와 성과 숫자는 모름.
+  숫자 없이 이력서 bullet을 강화해줘. 개선 효과는 확인하지 못했어.'
+assertions:
+  unknown: Does not estimate a number or invent a qualitative benefit; uses confirmed
+    weekly checking/documenting context.
+  separate: Any request to verify missing impact remains separate from actual candidate
+    copy.

@@ -7,6 +7,7 @@ capabilities:
 - portfolio
 - english-global
 - voice-mock
+- compensation
 ---
 # W06 Interview Preparation
 ## Purpose
@@ -19,6 +20,11 @@ invitation/round, prior actual debrief and confirmed story bank. Multiple compan
 ## Steps
 1. Detect round, format, timing/time zone, language, interviewer if known using actual invite;
    no invitation→ask only company/format first, mark missing facts Unknown.
+   Read actual submitted resume/answers/cover letter from this opportunity's submissions. Record
+   submission_id/resume_version_id on the round. Prefer the copy named by invite/user; otherwise
+   latest unambiguous actual submission. Uncertain timing/version→clarify. No submission record→
+   request actual copy; never substitute newest Master. Drill down on exact submitted claims.
+   Later corrected evidence flags a discrepancy; do not silently rewrite submitted history.
 2. Read official candidate/career/value/interview guides and refresh relevant current claims.
 3. Use [interviewer intelligence](../capabilities/interviewer-intelligence.md) for public remit and
    likely focus; separate process facts, public history and evaluation hypotheses.
@@ -36,6 +42,8 @@ invitation/round, prior actual debrief and confirmed story bank. Multiple compan
    [cheat sheet](../artifacts/interview-cheat-sheet.md) with seven sections and at most five stories.
 10. Offer W07 practice; [voice_mock](../capabilities/voice-mock.md) when the host supports it,
     otherwise text. Prepare a session brief without forcing a voice service or external key.
+11. For compensation before an offer use [stage-specific support](../capabilities/compensation.md)
+    with prior disclosures; not every salary question is formal negotiation.
 ## Evidence rules
 Invitation/user recall is USER FACT, source-backed process VERIFIED FACT, proposed questions
 INFERENCE. No “these are the actual questions” without direct support; no interviewer mind-reading.

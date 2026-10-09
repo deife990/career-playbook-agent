@@ -81,13 +81,13 @@ def call_model(platform,prompt,folder,stem,schema=None):
         if schema: cmd+=['--json-schema',json.dumps(schema)]
     # Evaluate only synthetic requests. Tool use is prohibited; temp cwd avoids repository instructions.
     with tempfile.TemporaryDirectory(prefix='careerpilot-eval-') as isolated:
-        result=subprocess.run(cmd,input=prompt,text=True,capture_output=True,cwd=isolated,timeout=300)
+        result=subprocess.run(cmd,input=prompt,text=True,capture_output=True,cwd=isolated,timeout=600)
         for retry in range(1,3):
             if not result.returncode or 'Selected model is at capacity' not in result.stderr: break
             (folder/f'{stem}.capacity-{retry}.stdout.txt').write_text(result.stdout)
             (folder/f'{stem}.capacity-{retry}.stderr.txt').write_text(result.stderr)
             time.sleep(5)
-            result=subprocess.run(cmd,input=prompt,text=True,capture_output=True,cwd=isolated,timeout=300)
+            result=subprocess.run(cmd,input=prompt,text=True,capture_output=True,cwd=isolated,timeout=600)
     (folder/f'{stem}.stdout.txt').write_text(result.stdout); (folder/f'{stem}.stderr.txt').write_text(result.stderr)
     error_text=result.stderr+result.stdout
     if result.returncode and ('hit your limit' in error_text or 'hit your usage limit' in error_text):

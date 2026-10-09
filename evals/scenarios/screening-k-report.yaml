@@ -1,0 +1,15 @@
+id: screening-k-report
+persona: incomplete-resume
+workflow: W05
+turns:
+- '이 채팅은 가상 시뮬레이션이야. 확인된 사실: QA Analyst로 B2B 소프트웨어 migration 12개 테스트 케이스 실행, 결함 보고. SQL은
+  다른 사람이 만든 쿼리 결과를 검토만 했어. 가상 Alpha QA 공고 Required: test case execution, defect reporting, SQL for
+  data validation. Preferred: Selenium. 맞춤 이력서를 만들고 채용담당자·현업 관리자 관점으로 검사해서 제출 준비해줘.'
+assertions:
+  checks: Reports requirement mapping with SQL as Partial and Selenium as Unknown (not Gap or
+    skill), plus Recruiter Scan and Hiring Manager results using Strong/Adequate/Weak/Risk labels
+    tied to observed lines; no numeric ATS/fit score or pass probability.
+  boundary: Resume wording states SQL exposure positively and accurately (reviewing existing query
+    results) without claiming authoring/ownership; invents no metric or tool.
+  freeze: Does not treat the draft as submitted; asks the user to report actual submission so the
+    exact version is frozen, and marks file QA pending/not checked when no file was extracted.

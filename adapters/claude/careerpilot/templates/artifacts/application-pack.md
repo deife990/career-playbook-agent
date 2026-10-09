@@ -40,3 +40,22 @@ Status: DRAFT
 
 ## Next Action
 {{next_action}}
+
+## Screening Review
+Mode / depth: {{mode_depth}}
+Selection: {{selection_strategy}}
+JD requirement / category / match / evidence / missing: {{coverage}}
+ATS structure: {{ats_status_and_observations}}
+Recruiter scan: {{recruiter_findings}}
+HM credibility: {{hm_findings}}
+Differentiation: {{evidence_anchors}}
+Concerns and handling surface: {{concerns}}
+Meaning-preserving edits: {{before_after_assertion_checks}}
+
+## Final Files and Observed QA
+{{actual_docx_pdf_links_or_pending}}
+{{extraction_page_count_order_glyph_links_visual_findings}}
+Ready: {{ready_with_remaining_checks}}
+
+## Submitted Version and Interview Handoff
+{{actual_submission_record_or_not_submitted}}

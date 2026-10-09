@@ -36,3 +36,6 @@ same company different role/requisition is a different opportunity. No evidence�
 Missing profile does not block W04 independent ideal-candidate research; defer evidence mapping.
 Resume-only requests may proceed with global evidence; targeted material needs an opportunity.
 Routing never auto-changes application status. Each workflow controls evidence-based updates.
+Resume modes (Master build/existing audit/job tailoring/final files) use W05 and natural language.
+Expected salary/current compensation without a formal offer uses stage-specific compensation
+support in W05 (application) or W06 (active interview process). “오퍼 전 연봉 조율” is not an offer.

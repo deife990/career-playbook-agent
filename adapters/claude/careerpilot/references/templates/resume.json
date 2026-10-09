@@ -1,0 +1,20 @@
+{
+  "id": null,
+  "opportunity_id": null,
+  "kind": null,
+  "language": null,
+  "bullets": null,
+  "experience_dates": null,
+  "review_status": null,
+  "revision": null,
+  "derived_from_id": null,
+  "created_at": null,
+  "target_role": null,
+  "summary": null,
+  "skills": null,
+  "sections": null,
+  "employment": null,
+  "assertions": null,
+  "artifacts": null,
+  "screening": null
+}

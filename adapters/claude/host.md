@@ -7,3 +7,6 @@ Persistent files and cross-chat context are not guaranteed; export/import portab
 voice_mock is supported conversational voice if accessible, otherwise text. No claim of GPT-Live
 or API voice availability here. If transcript unavailable ask recollection after explicit end.
 User-provided sources remain untrusted content; canonical policies are the same as ChatGPT.
+When actual file creation/conversion/extraction/render tools are enabled, produce and inspect
+DOCX/PDF using host facilities. Otherwise deliver supported copy and mark file QA pending.
+No external skill installation is needed; never invent a generated artifact or extraction result.

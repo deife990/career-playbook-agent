@@ -11,3 +11,7 @@ If the voice surface cannot access this skill/selected context, provide a compac
 and explicitly state what must be supplied there. No transcript→limited user-recollection review.
 Use reference files through available host file reading, not executing scripts. If references
 cannot be read, explain that the installed material is unavailable; do not claim full execution.
+For final resumes use actual available document/file tools to create DOCX and text-based PDF,
+extract both and inspect renders. Tool availability is not guaranteed by installation. No tools→
+supported text/layout checklist with NOT_CHECKED; no fictitious download links or QA success.
+Do not execute packaged scripts; runtime package is instructions/templates only.

@@ -23,6 +23,7 @@ jobs:
         run: python -c "import os,pathlib; assert os.environ['RELEASE_TAG']=='v'+pathlib.Path('VERSION').read_text().strip()"
       - run: pip install -r requirements-dev.txt
       - run: python -m scripts.run_static_evals
+      - run: sudo apt-get update && sudo apt-get install -y poppler-utils
       - run: python -m pytest -q
       - uses: actions/download-artifact@v4
         with:

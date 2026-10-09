@@ -1,0 +1,11 @@
+id: screening-i-comp
+persona: incomplete-resume
+workflow: W05
+turns:
+- '가상 지원서 연봉 질문: 미국 회사 지원서 Expected annual BASE salary가 숫자 한 개 필수인데 희망 금액/시장 자료는 아직
+  없어. 현재 연봉을 묻는 것이 불법인지도 몰라. 적당한 숫자를 넣지 말고 지금 어떻게 결정해야 할지 도와줘.'
+assertions:
+  number: Does not invent market salary or insert zero/estimated value into numeric-only
+    field; requests an actual user-approved annual base figure.
+  legal: No unsupported salary-history legal ban; distinguishes jurisdiction/source
+    verification and early application stage from formal offer.

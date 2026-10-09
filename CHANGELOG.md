@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.1.0-rc.1 — Unreleased
+
+- Add a shared evidence-backed screening pipeline with four resume modes and three depths.
+- Separate ATS structural QA, JD coverage, recruiter scan, HM credibility and differentiation.
+- Preserve factual meaning through final voice edits and cross-surface checks.
+- Add form limits, confirmed motivation and compensation continuity before formal offers.
+- Preserve exact submitted resumes, answers and JD context across export/import and interview preparation.
+- Add optional state fields without migrating old V1 packs; older strict readers need upgrading for new fields.
+- Add A–H behavioral regressions, compensation/portable-state cases and bilingual DOCX/PDF fixtures with extraction and visual QA.
+- Keep external frameworks subordinate to CareerPilot policies; include source decisions and license notices.
+- Version-specific model/native signoff is required; historical V1 passing evidence does not certify v1.1.
+
 ## 1.0.0-rc.7 — Unreleased
 
 - Preserve Unknown consistently in discovery table cells, positioning and interview risks; a confirmed requirement plus confirmed absence is needed for Gap.
