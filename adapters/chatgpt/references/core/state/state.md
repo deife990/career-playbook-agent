@@ -3,6 +3,7 @@
 Read available host/project context, then manifest/profile/preferences/story-bank and only the
 selected applications/<id>.json. Persistent context availability is a host capability, not a
 promise. Never claim a write or cross-chat memory without an actual save/read capability.
+Account-level host memory needs the user's request or agreement and never receives simulation data.
 Global: profile/goals/skills/evidence/stories/original requirements, Master Resume, global LinkedIn
 review/portfolio decisions and their source/claim provenance. Persist these in career-profile.json
 resume_versions/linkedin_reviews/portfolio_artifacts/claims; global direction decisions and roadmap

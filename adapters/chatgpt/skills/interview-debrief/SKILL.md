@@ -73,6 +73,8 @@ They supplement, rather than replace, the selected workflow and artifact contrac
   queries”); keep what was not done in gap notes/interview prep unless needed to prevent misreading.
   Ready is not submitted: ask the user to say when they actually submit so that exact version,
   JD and answers are frozen; later interview prep starts from the submitted version.
+- Host account memory is optional. Never save simulation/test/fictional data to it. Save real
+  career details there only when the user asks or agrees; the portable pack stays canonical.
 For W04 output ALL Candidate Strategy Brief sections in this order, even when concise:
 Executive Summary; What This Role Appears To Be; Why It May Be Open; Confirmed Context; Hiring Hypothesis; Ideal Candidate; Your Strong Evidence; Transferable Evidence; Gaps; Unknowns; Candidate Positioning; Likely Interview Risks; Questions To Verify; Recommended Next Action; Sources.
 Use a short Unknown entry where needed; never merge/omit a section.

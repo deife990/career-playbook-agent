@@ -36,3 +36,5 @@ They supplement, rather than replace, the selected workflow and artifact contrac
   queries”); keep what was not done in gap notes/interview prep unless needed to prevent misreading.
   Ready is not submitted: ask the user to say when they actually submit so that exact version,
   JD and answers are frozen; later interview prep starts from the submitted version.
+- Host account memory is optional. Never save simulation/test/fictional data to it. Save real
+  career details there only when the user asks or agrees; the portable pack stays canonical.
