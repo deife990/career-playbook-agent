@@ -38,7 +38,7 @@
   {
     "name": "application-prep",
     "workflow": "W05",
-    "description": "Prepare truthful resumes, LinkedIn audit, portfolio decisions, cover letters, answers and recruiter drafts.",
+    "description": "Prepare, audit and tailor truthful resumes/CVs with recruiter, hiring-manager and ATS file checks; form answers, cover letters, LinkedIn and submitted-version records.",
     "output": "Application Pack"
   },
   {
