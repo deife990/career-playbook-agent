@@ -20,6 +20,7 @@ _line_row['properties'].pop('evidence_quote')
 _line_row['properties']['evidence_line']={'type':'integer','minimum':0}
 _line_row['required']=['id','pass','reason','evidence_line']
 class RateLimitError(RuntimeError): pass
+class ModelTimeoutError(RuntimeError): pass
 def suite_fingerprint(paths,root=ROOT):
     files=set(paths)
     for path in paths:
@@ -69,7 +70,8 @@ def package_context(root,platform,case):
             if case.get('workflow'):
                 # Entry links are a menu, not an instruction to preload all nine workflows.
                 if linked.parent==ref.resolve()/'core/workflows' and linked.name!=workflow.name: continue
-                if (ref/'schemas').resolve() in linked.parents or (ref/'templates').resolve() in linked.parents: continue
+                if (ref/'schemas').resolve() in linked.parents: continue
+                if (ref/'templates').resolve() in linked.parents and linked.suffix!='.md': continue
             if linked.is_relative_to(root.resolve()) and linked.is_file() and linked not in [p.resolve() for p in paths]: paths.append(linked)
     unique=list(dict.fromkeys(p.resolve() for p in paths))
     hashes={p.relative_to(root).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in unique}
@@ -77,6 +79,9 @@ def package_context(root,platform,case):
     return content,hashes
 def call_model(platform,prompt,folder,stem,schema=None):
     folder.mkdir(parents=True,exist_ok=True); output=folder/f'{stem}.txt'
+    # The caller archives prior runs. A fresh invocation must never consume an old response/log.
+    for path in (output,folder/f'{stem}.stdout.txt',folder/f'{stem}.stderr.txt'):
+        path.unlink(missing_ok=True)
     if platform=='chatgpt':
         cmd=['codex','exec','--ignore-user-config','--ephemeral','--skip-git-repo-check','--sandbox','read-only','-o',str(output)]
         if schema:
@@ -85,15 +90,26 @@ def call_model(platform,prompt,folder,stem,schema=None):
     else:
         cmd=['claude','-p','--no-session-persistence','--setting-sources','','--strict-mcp-config','--tools','','--output-format','json']
         if schema: cmd+=['--json-schema',json.dumps(schema)]
+    def invoke(isolated):
+        output.unlink(missing_ok=True)
+        try:
+            return subprocess.run(cmd,input=prompt,text=True,capture_output=True,cwd=isolated,timeout=600)
+        except subprocess.TimeoutExpired as error:
+            def decoded(value):
+                return value.decode('utf-8',errors='replace') if isinstance(value,bytes) else value or ''
+            (folder/f'{stem}.stdout.txt').write_text(decoded(error.stdout))
+            (folder/f'{stem}.stderr.txt').write_text(decoded(error.stderr)+'\nModel invocation timed out after 600 seconds.\n')
+            output.unlink(missing_ok=True)
+            raise ModelTimeoutError(f'{platform}: model invocation timed out; partial logs preserved in {stem}.stdout.txt/{stem}.stderr.txt') from error
     # Evaluate only synthetic requests. Tool use is prohibited; temp cwd avoids repository instructions.
     with tempfile.TemporaryDirectory(prefix='careerpilot-eval-') as isolated:
-        result=subprocess.run(cmd,input=prompt,text=True,capture_output=True,cwd=isolated,timeout=600)
+        result=invoke(isolated)
         for retry in range(1,3):
             if not result.returncode or 'Selected model is at capacity' not in result.stderr: break
             (folder/f'{stem}.capacity-{retry}.stdout.txt').write_text(result.stdout)
             (folder/f'{stem}.capacity-{retry}.stderr.txt').write_text(result.stderr)
             time.sleep(5)
-            result=subprocess.run(cmd,input=prompt,text=True,capture_output=True,cwd=isolated,timeout=600)
+            result=invoke(isolated)
     (folder/f'{stem}.stdout.txt').write_text(result.stdout); (folder/f'{stem}.stderr.txt').write_text(result.stderr)
     error_text=result.stderr+result.stdout
     raw=json.loads(result.stdout) if platform=='claude' and not result.returncode else None
@@ -203,7 +219,7 @@ def main():
         folder=ROOT/f"work/model-evals/{args.platform}/{case['id']}"
         limited=False
         try: row=run_case(root,args.platform,case,folder)
-        except RateLimitError as error:
+        except (RateLimitError,ModelTimeoutError) as error:
             row={'id':case['id'],'persona':case['persona'],'status':'ERROR','error':str(error)}; limited=True
         except Exception as error: row={'id':case['id'],'persona':case['persona'],'status':'ERROR','error':str(error)}
         report['cases']=[r for r in report['cases'] if r['id']!=case['id']]+[row]
@@ -214,7 +230,7 @@ def main():
         report_path.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
         print(f"{case['id']}: {row['status']}",flush=True)
         if limited:
-            print('Model/account service limit: preserved completed results; stop until service recovery or host reset.',flush=True)
+            print('Model/account service interruption: preserved completed results; stop until service recovery or host reset.',flush=True)
             break
     if report.get('status')!='PASS': raise SystemExit(1)
 if __name__=='__main__': main()

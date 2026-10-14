@@ -110,7 +110,7 @@ submit/send/accept/decline without explicit user authorization, require any new 
         workflow_links='\n'.join(f'- [{w}]({"references/core/workflows/"+file})' for w,file in sorted(workflows.items()))
         text=f'''---
 name: careerpilot
-description: Career planning, job analysis, applications, interviews, mock practice, debriefs and offers. Use for 이직 준비, 이 공고 어때, 면접 잡혔어, 면접 끝났어, 오퍼 받았어.
+description: Career planning, job analysis, evidence discovery/Copilot Bridge, resumes, interviews and offers. Use for 이직 준비, 업무기록, 경험 더 찾기, 이 공고 어때, 면접 끝났어.
 ---
 # CareerPilot
 Machine-executable companion to AI-Powered Job Search Playbook; independent use is supported.

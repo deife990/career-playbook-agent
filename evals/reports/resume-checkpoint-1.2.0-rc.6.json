@@ -1,0 +1,35 @@
+{
+  "active_objective": "Complete v1.2 actual-model regressions and scoped readiness after closed v1.1 baseline",
+  "version": "1.2.0-rc.6",
+  "v11_completed_within_user_scope": true,
+  "v11_model_cases_per_host": "33/33 PASS",
+  "v12_implemented": true,
+  "unit_tests": 185,
+  "static_checks": "PASS",
+  "artifact_identity": "PASS",
+  "browser_validation": "EXCLUDED_BY_USER",
+  "expected_model_cases_per_host": 48,
+  "targeted_repairs": "bare-action-resume and concise-second-opportunity PASS on both hosts before roundtrip-assertion clarification; all current 48 cases run fresh",
+  "active_model_sessions": {},
+  "model_reports": {
+    "chatgpt": {
+      "status": "FAIL",
+      "pass": 34,
+      "fail": 1,
+      "error": 1,
+      "package_fingerprint": "6a0d8bec8d4b1e3f000f030ff9da2042675d13c2104d65180f844048242b5463",
+      "suite_fingerprint": "f47e7f9c657076b1ed0ac97225a3390fd09da5b9aa28d674ab4ba7e028d1b331"
+    },
+    "claude": {
+      "status": "INCOMPLETE",
+      "pass": 7,
+      "fail": 0,
+      "error": 2,
+      "package_fingerprint": "8fa3183a4e3b0f8e84423e99201e131752ea3e72dcbdfcdac4a3a5066f413301",
+      "suite_fingerprint": "f47e7f9c657076b1ed0ac97225a3390fd09da5b9aa28d674ab4ba7e028d1b331"
+    }
+  },
+  "remaining": "EVD-08 minimal source retention repair; fresh full 48-case suites after service recovery; scoped readiness. Both rc.6 suites stopped on actual provider usage limits.",
+  "source_review": "tasks/v1-2-source-review.md",
+  "updated_at": "2026-10-14T03:49:41.688759+00:00"
+}

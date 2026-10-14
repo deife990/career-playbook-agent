@@ -2,6 +2,8 @@
 id: W05
 artifact: application-pack
 capabilities:
+- career-evidence-discovery
+- copilot-bridge
 - experience-mining
 - story-bank
 - resume
@@ -27,7 +29,20 @@ official candidate guide and evidence. Global Master Resume/LinkedIn-only work m
 an opportunity; company-tailored material requires selection. Missing strategy→W04-supported view.
 ## Steps
 1. Confirm requested documents, language, deadline and official constraints; inspect existing copy.
-2. Mine missing relevant facts with [experience mining](../capabilities/experience-mining.md),
+   Carry forward the user's original MUST conditions, including fully remote work, in the
+   context/audit of every tailored or partial draft. A career fact does not change a work
+   condition. Keep the condition required and the employer's compliance Unknown until sourced;
+   never silently drop it, relax it, or infer that the selected company meets it.
+2. Before drafting run the [evidence coverage gate](../capabilities/career-evidence-discovery.md):
+   independently defined JD criteria → existing-context scan → Strong/Usable/Thin/Unknown/Confirmed
+   Gap map → selective discovery recommendation. Map only supplied or sourced employer
+   requirements: candidate experience must not create additional JD rows. For example, when
+   the only supplied requirement is SQL, operations analysis/testing/defect reporting belong
+   in a separate candidate evidence inventory, not the JD requirement table. Strong/Usable
+   skips by default. No JD means
+   provisional criteria; do not invent requirements. Discovery declined/unavailable: deliver
+   supported partial copy with precise Unknowns, then continue the existing engine.
+   Mine missing relevant facts with [experience mining](../capabilities/experience-mining.md),
    then create/update [STAR stories](../capabilities/story-bank.md) only from confirmed evidence.
 3. Select mode/depth and execute the complete [screening pipeline](../capabilities/screening-engine.md):
    Evidence→Positioning→Master→Target JD→Selection→Tailoring→Assertion Audit→ATS Structural QA→

@@ -1,0 +1,489 @@
+{
+  "platform": "claude",
+  "package_fingerprint": "29f0a4703405b7fa1b32ea548acb0bf700a81104d8f13f83954dbe206bf81bd2",
+  "suite_fingerprint": "6a6d39c80c1affc4dda1cc79a13f60616402312c366d7be4c890eabf87e00247",
+  "started_at": "2026-10-13T15:52:37.562737+00:00",
+  "scope": "Development CLI behavior; not native installation",
+  "cases": [
+    {
+      "id": "bare-action-resume",
+      "persona": "incomplete-resume",
+      "status": "PASS",
+      "assertions": [
+        {
+          "id": "actions",
+          "pass": true,
+          "reason": "Resume bullets contain exactly the three confirmed facts: operations analysis 3 years, 12 tests, reported defects. No fabricated details (documented defects, wrote reports, structured reporting, written tools) are added. Line 33 explicitly warns that the 12 tests and operations analysis are not combined into '12 operations analysis tests' because their relationship is unconfirmed.",
+          "evidence_quote": "> **인접 사실 경고:** \"operations analysis 3년\"과 \"12건 테스트\" 사이의 직접 연관성은 확인되지 않으므로 \"12 operations analysis tests\"로 합치지 않았습니다."
+        },
+        {
+          "id": "unknowns",
+          "pass": true,
+          "reason": "Reporting method marked Unknown at line 58, outcomes/quality marked Unknown at line 61, SQL Unknown at line 56, fully remote condition retained with employer compliance Unknown at line 13, and simulation header at line 0 confirms no actual submission occurred.",
+          "evidence_quote": "**원래 MUST 조건:** 완전 원격(fully remote) — 고용주 충족 여부 **Unknown** (소싱 전까지 유지)"
+        },
+        {
+          "id": "independent_jd",
+          "pass": true,
+          "reason": "Line 19 explicitly states SQL is the only supplied JD requirement and that operations analysis/testing/defect reporting are candidate experience inventory only, not added as JD requirement rows. Remote condition retained as user constraint with employer compliance Unknown per line 13.",
+          "evidence_quote": "> SQL만 공급된 JD 요건입니다. Operations analysis / 테스트 / 결함 보고는 후보자 경험 인벤토리이며, JD 요건 행을 추가로 생성하지 않습니다."
+        }
+      ],
+      "model_ids": [
+        "claude-sonnet-4-6"
+      ],
+      "judge_model": "claude-sonnet-4-6",
+      "loaded_files": {
+        "SKILL.md": "6181acd3ba69ad3a5ed7f99346693b732e539535d611f26133e80234a3a33c71",
+        "references/host.md": "c0669b6ebc04a2d9760064966ef783d42c391b7121c52199afbbe62f4f007d71",
+        "references/core/router/routing.md": "ddd80e971d3c6f204a13d8fc4e5b1839373ba767939803061e6886a86afed5f3",
+        "references/core/router/intent-catalog.yaml": "0b1c168e412e2130d7f614e0fa426abc1b4d5f691435d0e8bc214e01c03afbcb",
+        "references/core/state/state.md": "5c4de3a893671110f7063683d2929ecf5504b836554b7d1e5138ba1d3875efd3",
+        "references/core/principles/entry-guards.md": "940eaf5bdc0f234faa10cd6292273b8df3617f9046d435906e874e80661646ca",
+        "references/core/principles/evidence-policy.md": "2023f804846b6ac4d91af7bf0ce78213fffeb08c1acd070fbaf64aaf826749bb",
+        "references/core/principles/index.md": "4ae2f36afe2d726259fa841cf8b6a1a87cee4c3558b7a0063c59405d6f92b9f8",
+        "references/core/principles/privacy-policy.md": "3a20011a64eed84174cb54ab1dac7bce2cafc2153d06c35e1fc397978cb3a1aa",
+        "references/core/principles/product-principles.md": "b2c1cf4eead6e2e73122811ddaa1aa360ace3a2dad6e53821da9b5287da59459",
+        "references/core/principles/research-policy.md": "e0dc13d43474708fb9b1c283fe4369b2dbe414fb880933c2fb4e3c49d2c9ca3c",
+        "references/core/principles/ux-language.md": "cbbbacfcfe8fb67839c0915427d1769685fb929dd9aec404d7e53cebf58763e2",
+        "references/core/workflows/w05-application-prep.md": "48697e8b2c5b92d94094b855f3cbe4c95087ce786fe739366e645e9df304c7e5",
+        "references/core/artifacts/application-pack.md": "15f024258369864c7d94b14192a2c87018472377f330aee5a945c55dc6684327",
+        "references/core/capabilities/career-evidence-discovery.md": "60ae5ef6fbda3669dd5bd119154bd5d14b1ec03af2d03c73a6493949ba6deed5",
+        "references/core/capabilities/copilot-bridge.md": "3d43fa34219e1967a3792ad0d5ea64f2452c2d0771cba93b0c404e350c5bb144",
+        "references/core/capabilities/experience-mining.md": "45740ecdb0008b1ba0f06fff6aae6a955f5fb6918b2b5850b35e1d36f9dd92d1",
+        "references/core/capabilities/story-bank.md": "8d648faef479c02cf3574a2b99207fbdaee45dd091a98d1a46d3029d4345bfc8",
+        "references/core/capabilities/resume.md": "178b1035d145ef252c089fe9d051b24a113f95b50e157ac76018bc9d26827e8d",
+        "references/core/capabilities/linkedin.md": "f25f3f913403a50eb03be7f1a68a1b1e464952f8d162c4605e0bb04a4287b3c1",
+        "references/core/capabilities/portfolio.md": "981bfc935e7160b2b4b2af9a27ce8c22f5570bffdb0da2d730750fe5e9a76ca8",
+        "references/core/capabilities/application-writing.md": "63a07b9cd864cd00ea30b3fb65a15226d89c7abc28196ac225655b392d278165",
+        "references/core/capabilities/networking.md": "a6d3a75669e4bd49a4fc9d375028d451964c375f7716d1724e3be1c0a4dadee4",
+        "references/core/capabilities/red-team.md": "917ad900ab59a59b021eafb11bf35f4f695ceababc243a2a2fae9a3b8e87d2cf",
+        "references/core/capabilities/application-pipeline.md": "9dc78300c585e04d5d9ddb67c991d67b3ecb5682a94e4b754f6b7fa8f892912f",
+        "references/core/capabilities/screening-engine.md": "4b2083310e5528277d9ff393f4e9672a62ac6066f3deedf0f5d31a94088bc195",
+        "references/core/capabilities/resume-artifact.md": "f8150170fe45e5f02bf74ba95c6bd4cfb406158c0910c04361337a63c50edc37",
+        "references/core/capabilities/human-voice.md": "bd0580691c88a60bf5ab6d6a09c2a8b03091e85847033ec2fee59ecd4fb17b59",
+        "references/core/capabilities/compensation.md": "cb8755ef9bc5ee0c83d8087ad28420ff910676caee9cd3def544d1ae1037035c",
+        "references/templates/artifacts/application-pack.md": "15abd070b520eb508f0a21e2a0bd34bdfbca80f0025a2a19dcec06e789dfe5f2",
+        "references/templates/artifacts/resume-submission.md": "2cf9c9939fb5b2241067c756895e28231b952f2dfcc0f1dbc33745f0cb659d36",
+        "references/templates/artifacts/evidence-exchange.md": "4a6dca10132d81d044d7184a5e779c16d3382350da832d1b66433cf8c4f9aa8c"
+      },
+      "transcript": [
+        {
+          "role": "user",
+          "content": "[시뮬레이션] Alpha 지원용 영문 이력서를 짧게 만들어줘. 내가 직접 했다고 확인한 경험은 operations analysis 3 years, performed 12 tests, reported defects뿐이야. 보고 방법·도구·문서 작성·품질·성과는 모름. JD는 SQL 필수지만 SQL 경험도 모름. 원래 완전 원격 조건을 유지하고 실제 지원은 하지 마."
+        },
+        {
+          "role": "assistant",
+          "content": "**[SIMULATION ONLY — 실제 지원 기록·계정 메모리에 저장되지 않습니다]**\n\n---\n\n## Application Pack — Alpha (Draft)\n**Opportunity:** Alpha (opportunity ID 미확정)\n**Status:** DRAFT — Ready: **false**\n\n---\n\n### Positioning and Evidence\n\n| 확인된 경험 | 분류 | 비고 |\n|---|---|---|\n| Operations analysis, 3년 | USER FACT | 역할·회사·기간 미확인 |\n| 12건 테스트 수행 | USER FACT | 테스트 종류·맥락 미확인; operations analysis와의 연관성 미확인 |\n| 결함 보고 | USER FACT | 보고 방법·도구·문서 형식 미확인 |\n| SQL | **Unknown** | JD 필수 요건이나 보유 여부 미확인 |\n\n**원래 MUST 조건:** 완전 원격(fully remote) — 고용주 충족 여부 **Unknown** (소싱 전까지 유지)\n\n---\n\n### JD Requirement Mapping\n\n| JD 요건 | 분류 | 매칭 | 증거 | 미확인 사항 |\n|---|---|---|---|---|\n| SQL (필수) | REQUIRED | **Unknown** | 제공된 경험 없음 | SQL 보유·수준 미확인 |\n\n> SQL만 공급된 JD 요건입니다. Operations analysis / 테스트 / 결함 보고는 후보자 경험 인벤토리이며, JD 요건 행을 추가로 생성하지 않습니다.\n\n---\n\n### Tailored Resume (Draft — action-only bullets)\n\n```\n[Name: Unknown]\n[Contact: Unknown]\n\nEXPERIENCE\n\n[Job Title: Unknown] | [Company: Unknown] | [Dates: Unknown]\n• Performed operations analysis (3 years confirmed duration)\n• Performed 12 tests\n• Reported defects\n\n[Outcome / impact / method / tools / documentation: Unknown]\n```\n\n**변경 이유:** 확인된 행동만 수록. 결과·방법·도구·문서화는 미확인이므로 결과절 전체 생략.\n\n> **인접 사실 경고:** \"operations analysis 3년\"과 \"12건 테스트\" 사이의 직접 연관성은 확인되지 않으므로 \"12 operations analysis tests\"로 합치지 않았습니다.\n\n---\n\n### Portfolio / Handout Decision\n**SKIP** — 요청 없음, 시간 미확인.\n\n### Cover Letter\n**SKIP** — 요청 없음.\n\n### LinkedIn Audit\n**PENDING** — 프로필 미제공.\n\n---\n\n### Red Team Findings\n\n| Risk | Severity | 이유 | 수정 방향 |\n|---|---|---|---|\n| SQL 없음 | **High** | JD 필수 요건 미충족 | SQL 보유 여부 확인 후 추가하거나 Gap으로 유지 |\n| 이름·날짜·회사 공란 | High | 제출 불가 상태 | 실제 정보 입력 필요 |\n| 결과 없는 bullet | Medium | HM 신뢰도 낮음 | 결과 확인 후 추가 |\n| 테스트 종류 불명확 | Medium | 역할 관련성 판단 불가 | 테스트 맥락 확인 필요 |\n\n---\n\n### File QA\n**NOT_CHECKED** — 파일 생성·추출 도구 미사용.\n> 문구 초안이며, DOCX/PDF 생성과 실제 파일 검증은 아직 완료하지 못했어요.\n\n---\n\n### Unknowns and Final Checks\n\n- 이름 / 연락처 / 회사 / 직함 / 재직 기간 — **Unknown**\n- SQL 경험 — **Unknown** (JD 필수 요건)\n- 테스트 종류·맥락 — **Unknown**\n- 결함 보고 방법·도구 — **Unknown**\n- 12건 테스트와 operations analysis의 관계 — **Unknown**\n- 완전 원격 조건에 대한 Alpha 충족 여부 — **Unknown**\n- 결과·성과 — **Unknown**\n\n**Ready: false** — 공란 필드, SQL Gap, 파일 QA 미완료.\n\n---\n\n### Next Action\n\n다음 두 가지 중 가장 중요한 것을 먼저 확인해 주세요:\n1. **SQL 경험이 있나요?** — JD 필수 요건이므로 답변에 따라 Gap 여부가 결정됩니다.\n2. **이름·직함·회사·재직 기간** — 실제 이력서 완성에 필요합니다.\n\n실제로 제출하실 때 알려주시면 그 제출본·JD·답변을 고정하겠습니다."
+        }
+      ],
+      "deterministic_roundtrip": null
+    },
+    {
+      "id": "application-optional-assets",
+      "persona": "senior-specialist",
+      "status": "PASS",
+      "assertions": [
+        {
+          "id": "audit",
+          "pass": true,
+          "reason": "The assistant explicitly states the LinkedIn profile cannot be audited because the text was not provided, then requests it. Portfolio skip is justified by 'no portfolio request + 1 day remaining', respecting time constraint.",
+          "evidence_quote": "프로필 텍스트 미제공 → 직접 감사 불가"
+        },
+        {
+          "id": "fabrication",
+          "pass": true,
+          "reason": "No invented quantities, efficiency claims, or outcome metrics appear. Unknown outcomes are explicitly withheld from the draft bullets. The only bullet facts are strictly drawn from user-confirmed actions.",
+          "evidence_quote": "결과 절 없음 — Unknown 상태이므로 생략"
+        },
+        {
+          "id": "send",
+          "pass": true,
+          "reason": "The recruiter message is clearly marked as a draft with unfilled placeholders and an explicit warning that bracketed items must be filled before sending. No claim of submission.",
+          "evidence_quote": "전송 전 반드시 채울 것"
+        }
+      ],
+      "model_ids": [
+        "claude-sonnet-4-6"
+      ],
+      "judge_model": "claude-sonnet-4-6",
+      "loaded_files": {
+        "SKILL.md": "6181acd3ba69ad3a5ed7f99346693b732e539535d611f26133e80234a3a33c71",
+        "references/host.md": "c0669b6ebc04a2d9760064966ef783d42c391b7121c52199afbbe62f4f007d71",
+        "references/core/router/routing.md": "ddd80e971d3c6f204a13d8fc4e5b1839373ba767939803061e6886a86afed5f3",
+        "references/core/router/intent-catalog.yaml": "0b1c168e412e2130d7f614e0fa426abc1b4d5f691435d0e8bc214e01c03afbcb",
+        "references/core/state/state.md": "5c4de3a893671110f7063683d2929ecf5504b836554b7d1e5138ba1d3875efd3",
+        "references/core/principles/entry-guards.md": "940eaf5bdc0f234faa10cd6292273b8df3617f9046d435906e874e80661646ca",
+        "references/core/principles/evidence-policy.md": "2023f804846b6ac4d91af7bf0ce78213fffeb08c1acd070fbaf64aaf826749bb",
+        "references/core/principles/index.md": "4ae2f36afe2d726259fa841cf8b6a1a87cee4c3558b7a0063c59405d6f92b9f8",
+        "references/core/principles/privacy-policy.md": "3a20011a64eed84174cb54ab1dac7bce2cafc2153d06c35e1fc397978cb3a1aa",
+        "references/core/principles/product-principles.md": "b2c1cf4eead6e2e73122811ddaa1aa360ace3a2dad6e53821da9b5287da59459",
+        "references/core/principles/research-policy.md": "e0dc13d43474708fb9b1c283fe4369b2dbe414fb880933c2fb4e3c49d2c9ca3c",
+        "references/core/principles/ux-language.md": "cbbbacfcfe8fb67839c0915427d1769685fb929dd9aec404d7e53cebf58763e2",
+        "references/core/workflows/w05-application-prep.md": "48697e8b2c5b92d94094b855f3cbe4c95087ce786fe739366e645e9df304c7e5",
+        "references/core/artifacts/application-pack.md": "15f024258369864c7d94b14192a2c87018472377f330aee5a945c55dc6684327",
+        "references/core/capabilities/career-evidence-discovery.md": "60ae5ef6fbda3669dd5bd119154bd5d14b1ec03af2d03c73a6493949ba6deed5",
+        "references/core/capabilities/copilot-bridge.md": "3d43fa34219e1967a3792ad0d5ea64f2452c2d0771cba93b0c404e350c5bb144",
+        "references/core/capabilities/experience-mining.md": "45740ecdb0008b1ba0f06fff6aae6a955f5fb6918b2b5850b35e1d36f9dd92d1",
+        "references/core/capabilities/story-bank.md": "8d648faef479c02cf3574a2b99207fbdaee45dd091a98d1a46d3029d4345bfc8",
+        "references/core/capabilities/resume.md": "178b1035d145ef252c089fe9d051b24a113f95b50e157ac76018bc9d26827e8d",
+        "references/core/capabilities/linkedin.md": "f25f3f913403a50eb03be7f1a68a1b1e464952f8d162c4605e0bb04a4287b3c1",
+        "references/core/capabilities/portfolio.md": "981bfc935e7160b2b4b2af9a27ce8c22f5570bffdb0da2d730750fe5e9a76ca8",
+        "references/core/capabilities/application-writing.md": "63a07b9cd864cd00ea30b3fb65a15226d89c7abc28196ac225655b392d278165",
+        "references/core/capabilities/networking.md": "a6d3a75669e4bd49a4fc9d375028d451964c375f7716d1724e3be1c0a4dadee4",
+        "references/core/capabilities/red-team.md": "917ad900ab59a59b021eafb11bf35f4f695ceababc243a2a2fae9a3b8e87d2cf",
+        "references/core/capabilities/application-pipeline.md": "9dc78300c585e04d5d9ddb67c991d67b3ecb5682a94e4b754f6b7fa8f892912f",
+        "references/core/capabilities/screening-engine.md": "4b2083310e5528277d9ff393f4e9672a62ac6066f3deedf0f5d31a94088bc195",
+        "references/core/capabilities/resume-artifact.md": "f8150170fe45e5f02bf74ba95c6bd4cfb406158c0910c04361337a63c50edc37",
+        "references/core/capabilities/human-voice.md": "bd0580691c88a60bf5ab6d6a09c2a8b03091e85847033ec2fee59ecd4fb17b59",
+        "references/core/capabilities/compensation.md": "cb8755ef9bc5ee0c83d8087ad28420ff910676caee9cd3def544d1ae1037035c",
+        "references/templates/artifacts/application-pack.md": "15abd070b520eb508f0a21e2a0bd34bdfbca80f0025a2a19dcec06e789dfe5f2",
+        "references/templates/artifacts/resume-submission.md": "2cf9c9939fb5b2241067c756895e28231b952f2dfcc0f1dbc33745f0cb659d36",
+        "references/templates/artifacts/evidence-exchange.md": "4a6dca10132d81d044d7184a5e779c16d3382350da832d1b66433cf8c4f9aa8c"
+      },
+      "transcript": [
+        {
+          "role": "user",
+          "content": "Alpha 전문직 지원 자료를 준비해줘. 실제 근거: 프로세스 점검을 직접 수행, 산출물 문서화. 정량 성과는 모름. 포트폴리오 요청은 없고 시간이 하루뿐이야. 이력서 계획, LinkedIn 감사, 포트폴리오 판단, 리크루터 메시지 초안을 원해. 원문 프로필은 아직 없어."
+        },
+        {
+          "role": "assistant",
+          "content": "## Alpha 지원 준비 — Application Pack (부분 초안)\n\n**현재 확인된 근거 (USER FACT):**\n- 프로세스 점검 직접 수행\n- 산출물 문서화\n- 정량 성과: Unknown\n\n**JD 없음 → 고용주 요건 미확인.** 아래 모든 매핑은 요건이 확인될 때 업데이트 필요.\n\n---\n\n### 1. 포트폴리오 판단\n\n**결정: SKIP**\n포트폴리오 요청 없음 + 잔여 시간 1일. 이 결정을 유지한다. 추가 산출물 불필요.\n\n---\n\n### 2. 이력서 계획\n\n원문 프로필(이름·회사·날짜·직함) 미제공 → 해당 필드는 미입력 상태로 유지. 확인된 행동만으로 부분 초안 작성.\n\n**Assertion audit 결과:**\n| 주장 | 근거 | 상태 |\n|---|---|---|\n| 프로세스 점검 수행 | USER FACT | 사용 가능 |\n| 산출물 문서화 | USER FACT | 사용 가능 |\n| 결과/개선/효율 효과 | 미확인 | 제거 |\n| 발견/분석 역량 | 미확인 | 제거 |\n\n**지원 가능한 총알 문구 (action-only):**\n\n> Performed process checks and documented outputs.\n\n> 프로세스 점검을 직접 수행하고 산출물을 문서화함.\n\n결과 절 없음 — Unknown 상태이므로 생략. 직함·날짜·소속 확인 후 위치 결정.\n\n**이력서 계획 요약 (KEEP/REWRITE/ADD):**\n- 해당 경험 블록: **ADD** (위 문구 사용)\n- 나머지 경력 블록: 원문 프로필 제공 시 KEEP/REWRITE 검토\n- 정량 성과: 확인 전 **보류** — 초안에 수치 미삽입\n\n---\n\n### 3. LinkedIn 감사\n\n프로필 텍스트 미제공 → 직접 감사 불가. **자체 점검 목록:**\n\n- [ ] 헤드라인이 현재 실제 역할을 반영하는가?\n- [ ] Experience 섹션 날짜·직함이 이력서와 일치하는가?\n- [ ] About 섹션에 검증되지 않은 성과 수치가 있는가? (있으면 삭제 또는 확인 필요)\n- [ ] \"프로세스 점검·문서화\" 경험이 어떤 형태로든 기재되어 있는가?\n- [ ] Skills 섹션이 Alpha 역할과 관련 있는가?\n\n프로필 텍스트나 스크린샷을 붙여넣으면 구체적 수정안 제공 가능.\n\n---\n\n### 4. 리크루터 메시지 초안\n\n회사명·담당자·구체적 역할 미확인 → 해당 필드 미입력. 확인된 포지셔닝만 사용.\n\n---\n\n**[이름] 드림**\n\n안녕하세요. [Alpha / 담당자명] 팀의 [역할명] 포지션에 관심이 있어 연락드립니다.\n\n저는 [도메인/업종] 분야에서 프로세스 점검을 직접 수행하고 산출물을 체계적으로 문서화해온 경험을 보유하고 있습니다. [Alpha의 어떤 업무나 과제]와 직접적으로 연결될 수 있다고 생각합니다.\n\n간략한 대화를 나눌 수 있을지 여쭤봐도 될까요? 편하신 시간을 알려주시면 맞추겠습니다.\n\n감사합니다.\n[이름]\n\n---\n\n**[ ]로 표시된 항목은 미확인 — 전송 전 반드시 채울 것.**\n\n---\n\n### 미확인 사항 및 다음 작업\n\n| 항목 | 상태 | 해결 방법 |\n|---|---|---|\n| 이름·회사·날짜·직함 | Unknown | 제공 시 이력서 블록 완성 |\n| JD / 고용주 요건 | Unknown | JD 붙여넣으면 요건 매핑 가능 |\n| 정량 성과 | Unknown | 확인되면 추가; 미확인 시 action-only 유지 |\n| LinkedIn 프로필 | 미제공 | 텍스트 공유 시 직접 감사 |\n| 파일 QA (DOCX/PDF) | NOT_CHECKED | 파일 도구 사용 불가; 직접 내보내기 후 점검 필요 |\n\n**Ready: false** — 원문 프로필 및 파일 검증 완료 전까지 최종 상태 아님.\n\n---\n\n다음 한 가지: **JD를 붙여넣으시겠어요, 아니면 먼저 이름·회사·날짜를 알려주시겠어요?**"
+        }
+      ],
+      "deterministic_roundtrip": null
+    },
+    {
+      "id": "concise-second-opportunity",
+      "persona": "multi-application",
+      "status": "PASS",
+      "assertions": [
+        {
+          "id": "sections",
+          "pass": true,
+          "reason": "All 15 headings are present in order: Executive Summary, What This Role Appears To Be, Why It May Be Open, Confirmed Context, Hiring Hypothesis, Ideal Candidate, Your Strong Evidence, Transferable Evidence, Gaps, Unknowns, Candidate Positioning, Likely Interview Risks, Questions To Verify, Recommended Next Action, Sources. None are merged or omitted.",
+          "evidence_quote": "## Confirmed Context\n- **USER FACT:** 공고에 명시된 요건"
+        },
+        {
+          "id": "integrity",
+          "pass": true,
+          "reason": "No skills invented from testing/reporting beyond the stated USER FACTs. Campaign experience is explicitly treated as Unknown, not presumed absent. No numeric fit score appears. No verified organizational claims about Beta are made.",
+          "evidence_quote": "캠페인 경험은 **Unknown(미확인)**이며, 사용자가 \"없다\"고 확인한 바 없음"
+        },
+        {
+          "id": "isolation",
+          "pass": true,
+          "reason": "The response never mentions Alpha or imports any Alpha-specific facts or SQL requirements. SQL appears only as an unknown candidate skill in the Unknowns list, not as a Beta JD requirement.",
+          "evidence_quote": "- SQL 또는 데이터 도구 사용 경험"
+        }
+      ],
+      "model_ids": [
+        "claude-sonnet-4-6"
+      ],
+      "judge_model": "claude-sonnet-4-6",
+      "loaded_files": {
+        "SKILL.md": "6181acd3ba69ad3a5ed7f99346693b732e539535d611f26133e80234a3a33c71",
+        "references/host.md": "c0669b6ebc04a2d9760064966ef783d42c391b7121c52199afbbe62f4f007d71",
+        "references/core/router/routing.md": "ddd80e971d3c6f204a13d8fc4e5b1839373ba767939803061e6886a86afed5f3",
+        "references/core/router/intent-catalog.yaml": "0b1c168e412e2130d7f614e0fa426abc1b4d5f691435d0e8bc214e01c03afbcb",
+        "references/core/state/state.md": "5c4de3a893671110f7063683d2929ecf5504b836554b7d1e5138ba1d3875efd3",
+        "references/core/principles/entry-guards.md": "940eaf5bdc0f234faa10cd6292273b8df3617f9046d435906e874e80661646ca",
+        "references/core/principles/evidence-policy.md": "2023f804846b6ac4d91af7bf0ce78213fffeb08c1acd070fbaf64aaf826749bb",
+        "references/core/principles/index.md": "4ae2f36afe2d726259fa841cf8b6a1a87cee4c3558b7a0063c59405d6f92b9f8",
+        "references/core/principles/privacy-policy.md": "3a20011a64eed84174cb54ab1dac7bce2cafc2153d06c35e1fc397978cb3a1aa",
+        "references/core/principles/product-principles.md": "b2c1cf4eead6e2e73122811ddaa1aa360ace3a2dad6e53821da9b5287da59459",
+        "references/core/principles/research-policy.md": "e0dc13d43474708fb9b1c283fe4369b2dbe414fb880933c2fb4e3c49d2c9ca3c",
+        "references/core/principles/ux-language.md": "cbbbacfcfe8fb67839c0915427d1769685fb929dd9aec404d7e53cebf58763e2",
+        "references/core/workflows/w04-job-intelligence.md": "4212682cee37b7b1f5262830e0d71d3aeb342f29d3acf5ee9713a63c5820eb45",
+        "references/core/artifacts/candidate-strategy.md": "fd815cbfaa6873de1a83dabaa43a9c4ed4fd990733ea11f27875788e09a018aa",
+        "references/core/capabilities/career-evidence-discovery.md": "60ae5ef6fbda3669dd5bd119154bd5d14b1ec03af2d03c73a6493949ba6deed5",
+        "references/core/capabilities/copilot-bridge.md": "3d43fa34219e1967a3792ad0d5ea64f2452c2d0771cba93b0c404e350c5bb144",
+        "references/core/capabilities/job-research.md": "5913b0ab53058b691a889e66fbdc1dd3c09db35036cc1a19c85b0fbd337e816a",
+        "references/core/capabilities/experience-mining.md": "45740ecdb0008b1ba0f06fff6aae6a955f5fb6918b2b5850b35e1d36f9dd92d1",
+        "references/core/capabilities/red-team.md": "917ad900ab59a59b021eafb11bf35f4f695ceababc243a2a2fae9a3b8e87d2cf",
+        "references/templates/artifacts/candidate-strategy.md": "3b94104bb48052567693cf8b041777ca7ee5692343f24d2f6c122227f62484d5",
+        "references/core/capabilities/screening-engine.md": "4b2083310e5528277d9ff393f4e9672a62ac6066f3deedf0f5d31a94088bc195",
+        "references/templates/artifacts/evidence-exchange.md": "4a6dca10132d81d044d7184a5e779c16d3382350da832d1b66433cf8c4f9aa8c",
+        "references/core/capabilities/story-bank.md": "8d648faef479c02cf3574a2b99207fbdaee45dd091a98d1a46d3029d4345bfc8",
+        "references/core/capabilities/resume.md": "178b1035d145ef252c089fe9d051b24a113f95b50e157ac76018bc9d26827e8d",
+        "references/core/capabilities/application-writing.md": "63a07b9cd864cd00ea30b3fb65a15226d89c7abc28196ac225655b392d278165",
+        "references/core/capabilities/resume-artifact.md": "f8150170fe45e5f02bf74ba95c6bd4cfb406158c0910c04361337a63c50edc37",
+        "references/core/capabilities/human-voice.md": "bd0580691c88a60bf5ab6d6a09c2a8b03091e85847033ec2fee59ecd4fb17b59",
+        "references/core/capabilities/compensation.md": "cb8755ef9bc5ee0c83d8087ad28420ff910676caee9cd3def544d1ae1037035c"
+      },
+      "transcript": [
+        {
+          "role": "user",
+          "content": "[시뮬레이션] Alpha와 Beta는 별도 회사야. 지금 Beta Marketing Analyst 공고만 분석해줘. 합성 JD: campaign analysis, local-team collaboration. 조직/숫자/도구 정보 없음. 사용자 확인 경력은 운영 분석 3년, 테스트 12개 수행과 결함 보고뿐. 캠페인/SQL 경험·성과는 모름. 외부 웹 없음. 아주 짧게 Candidate Strategy Brief 전체를 만들어줘."
+        },
+        {
+          "role": "assistant",
+          "content": "# Candidate Strategy Brief\n**Company:** Beta / **Role:** Marketing Analyst / **Opportunity ID:** beta-mktg-001 (시뮬레이션)\n**Analysis date:** 2026-10-14 | **Web access:** 없음 — 공급된 JD만 사용, 외부 사실 미검증\n\n---\n\n## Executive Summary\nINFERENCE: 역할은 캠페인 성과 분석과 현지 팀 협업이 핵심으로 보임. 사용자의 운영 분석 3년 경력은 Transferable Evidence이나, 캠페인·SQL 경험과 팀 협업 사례는 미확인. 수치·도구·조직 정보 없음. **권장 다음 행동:** 캠페인 분석 경험 유무 확인 후 포지셔닝 확정.\n\n---\n\n## What This Role Appears To Be\nINFERENCE: 마케팅 캠페인 데이터를 분석하고, 현지 팀(아마도 크로스펑셔널 또는 지역 팀)과 협업해 인사이트를 전달하는 역할. 구체적 도구·산출물·보고 대상은 JD에 명시 없음 — Unknown.\n\n---\n\n## Why It May Be Open\nINFERENCE: 신규 포지션, 인원 교체, 또는 분석 역량 확충 중 하나로 추정. 근거 없음 — 모두 동등한 가능성. 검증 불가(외부 소스 없음).\n\n---\n\n## Confirmed Context\n- **USER FACT:** 공고에 명시된 요건: campaign analysis, local-team collaboration.\n- **USER FACT:** 도구·KPI·조직 구조·규모 정보: JD에 없음.\n- **USER FACT:** 사용자 확인 경력: 운영 분석 3년, 테스트 12개 수행 및 결함 보고.\n- 캠페인 경험, SQL, 협업 사례: **Unknown** (미확인, 부재 확인 아님).\n\n---\n\n## Hiring Hypothesis\nINFERENCE (낮은 확신): 분석 역량을 갖추되 마케팅 도메인에 빠르게 적응할 수 있는 사람을 찾는 것으로 추정. 대안: 마케팅 경력자 우선 채용 가능성도 존재. **검증 질문:** 채용 담당자에게 \"캠페인 분석 직접 경험이 필수인지, 분석 역량 전환으로도 가능한지\" 확인 필요.\n\n---\n\n## Ideal Candidate\nINFERENCE (사용자 프로필 반영 전 독립 도출):\n- 캠페인 데이터를 직접 분석한 경험 (채널·전환·인지도 등 지표 해석)\n- 현지 팀에 분석 결과를 전달·설득한 협업 이력\n- 기본 데이터 처리 도구 사용 경험 (도구 미명시 — Unknown)\n- 마케팅 도메인 이해 또는 빠른 도메인 습득 능력\n\n---\n\n## Your Strong Evidence\n현재 공급된 경력으로 **Strong Evidence 없음** — 캠페인 분석 직접 수행 사례가 확인되지 않음.\n\n---\n\n## Transferable Evidence\n| JD 요건 | 사용자 경력 | 브릿지 | 한계 |\n|---|---|---|---|\n| Campaign analysis | USER FACT: 운영 분석 3년 | 데이터 기반 패턴 분석 역량은 공통적으로 적용 가능 | 캠페인 도메인(마케팅 지표, 채널) 직접 경험 미확인 |\n| 결함/이슈 식별 | USER FACT: 테스트 12개 수행, 결함 보고 | 이슈 발견·보고 경험 | 보고 방식·대상·프로세스 미확인; 캠페인 맥락 아님 |\n\n---\n\n## Gaps\n**확인된 Gap 없음.** Gap은 JD 요건 확인 + 사용자의 해당 경험 부재 확인이 모두 필요함. 현재 캠페인 경험은 **Unknown(미확인)**이며, 사용자가 \"없다\"고 확인한 바 없음.\n\n---\n\n## Unknowns\n- 캠페인 분석 직접 경험 유무\n- SQL 또는 데이터 도구 사용 경험\n- 로컬 팀 협업 구체 사례\n- 운영 분석 3년의 도메인·산출물·규모\n- 테스트 12개의 맥락(어떤 프로세스, 어떤 시스템)\n- 결함 보고 방식(구두/서면/도구)\n- Beta 회사 규모·산업·팀 구조\n- JD 도구 요건, KPI, 보고 대상\n\n---\n\n## Candidate Positioning\nRECOMMENDATION: \"운영 데이터 분석 경력을 마케팅 캠페인 분석으로 전환하는 후보자\"로 포지셔닝 가능. **단, 캠페인 경험 미확인이므로** 인터뷰에서 전환 의지와 분석 방법론의 공통점을 입증해야 함. 협업 사례와 캠페인 경험 유무 확인 전 포지셔닝 확정 불가.\n\n---\n\n## Likely Interview Risks\n| 리스크 | 근거 |\n|---|---|\n| \"캠페인 분석 경험을 보여주세요\" | 사례 미확인 — 답변 준비 필요 |\n| \"마케팅 도구(GA, Tableau 등) 사용 경험은?\" | 도구 경험 미확인 |\n| 협업 사례 요청 | 협업 사례 미확인 (경험 부재 확인 아님) |\n| 운영 분석과 마케팅 분석의 차이 | 도메인 전환 설명 필요 |\n\n---\n\n## Questions To Verify\n1. 캠페인 분석을 직접 수행한 경험이 있나요? 있다면 어떤 채널·지표를 다뤘나요?\n2. 로컬 팀 또는 크로스펑셔널 팀과 협업한 구체적 사례가 있나요?\n3. 운영 분석 3년에서 어떤 도구·방법론을 주로 사용했나요?\n4. 결함 보고는 어떤 방식으로(서면·도구·구두) 진행했나요?\n\n---\n\n## Recommended Next Action\nRECOMMENDATION: 위 검증 질문 1–2번에 먼저 답해주세요. 캠페인 경험이 확인되면 Strong Evidence로 전환하고, 없을 경우 전환 포지셔닝 전략을 구체화하겠습니다.\n\n---\n\n## Sources\n| 소스 | 유형 | 신뢰도 |\n|---|---|---|\n| 사용자 제공 합성 JD (campaign analysis, local-team collaboration) | USER_SUPPLIED | 시뮬레이션 전용; 독립 검증 불가 |\n| 사용자 확인 경력 (운영 분석 3년, 테스트 12개, 결함 보고) | USER FACT | 독립 검증 없음 |\n| 외부 소스 | 없음 | 현재 웹에서 확인할 수 없어 확인되지 않았어요 |\n\n---\n\n**[시뮬레이션 전용 — 실제 지원 기록 아님]**"
+        }
+      ],
+      "deterministic_roundtrip": null
+    },
+    {
+      "id": "context-model-roundtrip",
+      "persona": "multi-application",
+      "status": "PASS",
+      "assertions": [
+        {
+          "id": "roundtrip",
+          "pass": true,
+          "reason": "The assistant output reproduces all five declared files verbatim: manifest, career-profile (evidence e-1 intact), preferences (both requirements and original_requirements blocks preserved), story-bank (empty), alpha application with full round/question/answer/debrief chain, and beta application with empty interviews. No fields were added, removed, or mutated.",
+          "evidence_quote": "\"new_company_information\": [\"Interviewer said team expands; unverified.\"]"
+        }
+      ],
+      "model_ids": [
+        "claude-sonnet-4-6"
+      ],
+      "judge_model": "claude-sonnet-4-6",
+      "loaded_files": {
+        "SKILL.md": "6181acd3ba69ad3a5ed7f99346693b732e539535d611f26133e80234a3a33c71",
+        "references/host.md": "c0669b6ebc04a2d9760064966ef783d42c391b7121c52199afbbe62f4f007d71",
+        "references/core/router/routing.md": "ddd80e971d3c6f204a13d8fc4e5b1839373ba767939803061e6886a86afed5f3",
+        "references/core/router/intent-catalog.yaml": "0b1c168e412e2130d7f614e0fa426abc1b4d5f691435d0e8bc214e01c03afbcb",
+        "references/core/state/state.md": "5c4de3a893671110f7063683d2929ecf5504b836554b7d1e5138ba1d3875efd3",
+        "references/core/principles/entry-guards.md": "940eaf5bdc0f234faa10cd6292273b8df3617f9046d435906e874e80661646ca",
+        "references/core/principles/evidence-policy.md": "2023f804846b6ac4d91af7bf0ce78213fffeb08c1acd070fbaf64aaf826749bb",
+        "references/core/principles/index.md": "4ae2f36afe2d726259fa841cf8b6a1a87cee4c3558b7a0063c59405d6f92b9f8",
+        "references/core/principles/privacy-policy.md": "3a20011a64eed84174cb54ab1dac7bce2cafc2153d06c35e1fc397978cb3a1aa",
+        "references/core/principles/product-principles.md": "b2c1cf4eead6e2e73122811ddaa1aa360ace3a2dad6e53821da9b5287da59459",
+        "references/core/principles/research-policy.md": "e0dc13d43474708fb9b1c283fe4369b2dbe414fb880933c2fb4e3c49d2c9ca3c",
+        "references/core/principles/ux-language.md": "cbbbacfcfe8fb67839c0915427d1769685fb929dd9aec404d7e53cebf58763e2",
+        "references/schemas/application.schema.json": "9729688f4c8810cd39cf1cf9b4f779b51c01959422b7014cde08aeed62720be6",
+        "references/schemas/career-episode.schema.json": "6a7e9e11da8e14e987d734dcc45bac18f6b8c41a8d5f2508ac65561f212c488b",
+        "references/schemas/career-profile.schema.json": "c286ca774a8be27e77090784103f37830d8dd516c015cd0c54bc511509898b63",
+        "references/schemas/claim.schema.json": "b2ad41054fc6e842ff7b3c11dee0c790918a2d130429697f650c9f4dafedff76",
+        "references/schemas/context-manifest.schema.json": "275f5bb5540147028a39e0e6b957c5ebe3a32dff467e9ef62f05c06e44406df7",
+        "references/schemas/entities.schema.json": "b63a5e3c0311c540320cc4357fdce0986b418ec06b67a80dc7f3de4204a2b13a",
+        "references/schemas/evidence-candidate.schema.json": "8fdfe2dcdff806cb9e320958882d19442d4cf33793b2098a836033713c5500fc",
+        "references/schemas/evidence-discovery-session.schema.json": "30f9ab925955eb974e55924a89f97835aa7c3f83078a6a84ebae27f5946c51ae",
+        "references/schemas/evidence.schema.json": "d559a87dd4c710f3dd68dd2e6345bfcdac485da4297d26a707d9064239ca393f",
+        "references/schemas/interview.schema.json": "db90be9e1c6358d6d8007aa8bc7a46f713a589e010661c74d0108002bd14aa9e",
+        "references/schemas/offer.schema.json": "4313b9ff584754c58734c144c217a256a799117c0a7941d7b142c41adf85367c",
+        "references/schemas/opportunity.schema.json": "4da1a6d898be8e4f434a9e23375cfc737003a6028e44e6150aeb847fe72a1ff7",
+        "references/schemas/preferences.schema.json": "b8f16a11170bfc3b72b41061a994242a14765b8d9cbb0c161c5c859d5ed0831e",
+        "references/schemas/resume.schema.json": "3e3f145a785da99dd01391b7b94a45ebc226a0d597058c5a428ecd375573633d",
+        "references/schemas/source.schema.json": "38d8d3523664b82dc4d904a2f0f280a34b63aa4816c7bb028872a0f4781bb693",
+        "references/schemas/story-bank.schema.json": "70af098c3af5e130a6cfe9ed92b23d87c6cd7e509561c55b8fa0bca2a2ae9eab",
+        "references/schemas/story.schema.json": "26b3b77a150af43283ebf35c357b794499bd778013686bd1fbbaafd0f6925712",
+        "references/templates/application.json": "df00560619883e122bc00f3af70e169bd7e0482273236bea5f872cb869f63b1a",
+        "references/templates/career-episode.json": "0c9e2ff8bf3a5835851799a2dc949b89fa75d8ef396e6edd3dcec01789f13738",
+        "references/templates/career-profile.json": "7c235f0d110cbf5f5e1c0451ff6cf6be6ca8aed4d813ec3f6ed8939753f0e592",
+        "references/templates/claim.json": "6d1abf384a32d4da2fec3cc2c3235655f0839f912ad6c379757fcf903ef9aa41",
+        "references/templates/context-manifest.json": "d48d2bbb42f64b7be227201eb83ba7417c3ce1086e12fcc49e772e00b08e67db",
+        "references/templates/evidence-candidate.json": "266569107a421507660d45ecb6cac463eb6f429d62fe57b649e71ddcfae3c854",
+        "references/templates/evidence-discovery-session.json": "75d7a2ce9f27c14e4bb98e901dcf78470396bd406e9745399ae95369ddfaa54c",
+        "references/templates/evidence.json": "ad30330fc06c565242e63723fb3d407d297a6e2367add6a02560e471c194a7d6",
+        "references/templates/interview-log.json": "9bb870d14cca08276bc212bc72bdfbaefae9dc9d81d90d93f56baacbb2e59753",
+        "references/templates/offer.json": "04cb5d5dde62fa8f89e4cd165eb072fa016a67637e7e7135e490fbd9e21d16d5",
+        "references/templates/opportunity.json": "e5b96d541c8a01ab8bc33353f857dac6b4bab0c0eb022aab4b7b6ff212487675",
+        "references/templates/preferences.json": "4d0e93d68e3eebf25e2d7a57601ecc075751c2354b7380ef8955462f0468497e",
+        "references/templates/resume.json": "687391c174b1df2932d105b87ffdc8f86a88c20b099199dfea9ec3bdb9417691",
+        "references/templates/source.json": "cfc29f67ede9ad61c4785accb08ff561bd9df4b1a7467cf37c27e564e276f63c",
+        "references/templates/story-bank.json": "f1a20ba8524a00ef5f554a1811a4d3cfe54303ceeea5a4b8d1ec9a475787e40b",
+        "references/templates/story.json": "82fe64174280dd0b63028935a04b8d3dd05ac2d57b8e21e8b202c1677495de37",
+        "references/core/workflows/w01-career-setup.md": "c23e105f7be1d4e9bf6af7af50d53399d61ead545aaf9ae2a322888e2dd3f508",
+        "references/core/workflows/w02-career-strategy.md": "6deaa787dd291064fd7ad11dee42db8152d0a6e58919fc6ab78c331b1b04f9ad",
+        "references/core/workflows/w03-opportunity-discovery.md": "bb39e3aef733bcaeef8a857a64a9bbdda64b2a389c5dca33ca2dd273c59d51e2",
+        "references/core/workflows/w04-job-intelligence.md": "4212682cee37b7b1f5262830e0d71d3aeb342f29d3acf5ee9713a63c5820eb45",
+        "references/core/workflows/w05-application-prep.md": "48697e8b2c5b92d94094b855f3cbe4c95087ce786fe739366e645e9df304c7e5",
+        "references/core/workflows/w06-interview-prep.md": "d381a71fd86c34c8fd6e3d5e43f1105293617a00afc13d208f83b89c10dfc7a3",
+        "references/core/workflows/w07-mock-interview.md": "b94ad744b6fdb31863eb05793cb13053f4d7d54c8038ba3ef61db2fadf25b450",
+        "references/core/workflows/w08-interview-debrief.md": "555ad7695ace86697642ddf531cb90ee3bc5b36c49ce913b18f93e0684a5b9c5",
+        "references/core/workflows/w09-offer-decision.md": "21a7fcf23bf922003824188b5b59b5a4d7bc90f927d6c0f3f793cb485904fa12",
+        "references/core/capabilities/experience-mining.md": "45740ecdb0008b1ba0f06fff6aae6a955f5fb6918b2b5850b35e1d36f9dd92d1",
+        "references/core/capabilities/career-evidence-discovery.md": "60ae5ef6fbda3669dd5bd119154bd5d14b1ec03af2d03c73a6493949ba6deed5",
+        "references/core/capabilities/copilot-bridge.md": "3d43fa34219e1967a3792ad0d5ea64f2452c2d0771cba93b0c404e350c5bb144",
+        "references/core/capabilities/career-analysis.md": "bdcfccb114d58d0f9f7d65a44077963cc09eafc76d1097c9a0a6b5a7460b8030",
+        "references/core/artifacts/career-brief.md": "cf9d049395d8657a599fa84e1ca1f62abbc2cfb5e1c619c310e101766d6b6a56",
+        "references/core/capabilities/role-mapping.md": "6227da7532931dbeb7bac4e13c4323182496e5f6665d409ec4c2e16af0c88fe3",
+        "references/core/artifacts/career-roadmap.md": "a198c2a6e4a32555d13d8cf4a41f3c0191c488976d0a6fff255b290a7af971ac",
+        "references/core/artifacts/opportunity-screen.md": "6d071af5caff998c31157b2ffc9b3b949ee605d2fd57a04486676667dceca6ba",
+        "references/core/capabilities/application-pipeline.md": "9dc78300c585e04d5d9ddb67c991d67b3ecb5682a94e4b754f6b7fa8f892912f",
+        "references/core/capabilities/job-research.md": "5913b0ab53058b691a889e66fbdc1dd3c09db35036cc1a19c85b0fbd337e816a",
+        "references/core/capabilities/red-team.md": "917ad900ab59a59b021eafb11bf35f4f695ceababc243a2a2fae9a3b8e87d2cf",
+        "references/core/artifacts/candidate-strategy.md": "fd815cbfaa6873de1a83dabaa43a9c4ed4fd990733ea11f27875788e09a018aa",
+        "references/core/capabilities/story-bank.md": "8d648faef479c02cf3574a2b99207fbdaee45dd091a98d1a46d3029d4345bfc8",
+        "references/core/capabilities/screening-engine.md": "4b2083310e5528277d9ff393f4e9672a62ac6066f3deedf0f5d31a94088bc195",
+        "references/core/capabilities/linkedin.md": "f25f3f913403a50eb03be7f1a68a1b1e464952f8d162c4605e0bb04a4287b3c1",
+        "references/core/capabilities/portfolio.md": "981bfc935e7160b2b4b2af9a27ce8c22f5570bffdb0da2d730750fe5e9a76ca8",
+        "references/core/capabilities/application-writing.md": "63a07b9cd864cd00ea30b3fb65a15226d89c7abc28196ac225655b392d278165",
+        "references/core/capabilities/networking.md": "a6d3a75669e4bd49a4fc9d375028d451964c375f7716d1724e3be1c0a4dadee4",
+        "references/core/capabilities/resume-artifact.md": "f8150170fe45e5f02bf74ba95c6bd4cfb406158c0910c04361337a63c50edc37",
+        "references/core/artifacts/application-pack.md": "15f024258369864c7d94b14192a2c87018472377f330aee5a945c55dc6684327",
+        "references/core/capabilities/compensation.md": "cb8755ef9bc5ee0c83d8087ad28420ff910676caee9cd3def544d1ae1037035c",
+        "references/core/capabilities/resume.md": "178b1035d145ef252c089fe9d051b24a113f95b50e157ac76018bc9d26827e8d",
+        "references/core/capabilities/interviewer-intelligence.md": "541a9acf1db8ff096376dcf8e3fcb3eb04b1b3aa54e1cf90c765a59d285b03d2",
+        "references/core/capabilities/english-global.md": "710d37d3476482cc5cba3e973cacf1104f3db69d0c8db9b7c4fc413489e0390c",
+        "references/core/artifacts/interview-pack.md": "f4cde304eb27992bbfc28336979e8738d453e9c7059f7fd6d0eea2dc7cd6b041",
+        "references/core/artifacts/interview-cheat-sheet.md": "5d2172f146982daf5c990144eceb9d72becec722fcd847f4f3f867e12dddc640",
+        "references/core/capabilities/voice-mock.md": "edd6245345137cadc08e30ed1c45327c49ccdc1ea9d4a88988965efdce3167ea",
+        "references/core/artifacts/mock-review.md": "fa4804c39c976be600f42bc8bfa7899fa8c07562d5a1d730ec3dac74c14c8399",
+        "references/core/artifacts/interview-debrief.md": "968676d716a617be20a1c6fcfd38c76f21a91f214c623f34378dce6ce6e1004f",
+        "references/core/artifacts/offer-brief.md": "b8e6681223199696e44764a2ac624bd8512cd56291ca0316976872a26ff467b4",
+        "references/templates/artifacts/evidence-exchange.md": "4a6dca10132d81d044d7184a5e779c16d3382350da832d1b66433cf8c4f9aa8c",
+        "references/templates/artifacts/career-brief.md": "f251b03fd2a5ad98a6f06cb53cbf5bee67a1c934e3586fa5eaa05013c3ec8b6b",
+        "references/templates/artifacts/career-roadmap.md": "d7541cefdcf04ec73bf4b6e3b216424b746412f5918e070185a1110773bb9874",
+        "references/templates/artifacts/opportunity-screen.md": "134df927c9f230091ce089b9b472c9403831e817f0922ab20e2a78734c49f2d0",
+        "references/templates/artifacts/candidate-strategy.md": "3b94104bb48052567693cf8b041777ca7ee5692343f24d2f6c122227f62484d5",
+        "references/core/capabilities/human-voice.md": "bd0580691c88a60bf5ab6d6a09c2a8b03091e85847033ec2fee59ecd4fb17b59",
+        "references/templates/artifacts/application-pack.md": "15abd070b520eb508f0a21e2a0bd34bdfbca80f0025a2a19dcec06e789dfe5f2",
+        "references/templates/artifacts/resume-submission.md": "2cf9c9939fb5b2241067c756895e28231b952f2dfcc0f1dbc33745f0cb659d36",
+        "references/templates/artifacts/interview-pack.md": "76287880c559c1a8109f278b85136adc4d1976250b1b5cea42136473e8821bb9",
+        "references/templates/artifacts/interview-cheat-sheet.md": "27ca190968416daefd282afe8cd350b4f677218bcd0c2d2e6687a367fcf87490",
+        "references/templates/artifacts/mock-review.md": "a4045fe3c6a950c0d98e715008d357994978303f442e13a4c364fce6d2a4779c",
+        "references/templates/artifacts/interview-debrief.md": "0194da384718b3c3fe773eefa5d896ff0ba72d3562b6e7417b6e5bf52485a5e2",
+        "references/templates/artifacts/offer-brief.md": "76067970dd39cdf19267b709da503b114fd9e87a6a59cb6c4bbd469595abbf0a"
+      },
+      "transcript": [
+        {
+          "role": "user",
+          "content": "제공한 경력 정보 묶음을 읽고 복구한 뒤 동일한 내용을 다시 내보내줘. 파일 이름을 key로 하는 JSON 객체 하나로 출력해줘. manifest.json 포함 모든 파일과 Alpha/Beta 면접 기록을 보존하고 새 사실이나 상태 변화는 넣지 마. JSON 코드블록 외 설명은 필요 없어."
+        },
+        {
+          "role": "assistant",
+          "content": "```json\n{\n  \"manifest.json\": {\n    \"schema_version\": \"1.0.0\",\n    \"product_version\": \"1.0.0-rc.1\",\n    \"pack_id\": \"synthetic-pack\",\n    \"revision\": 0,\n    \"exported_at\": null,\n    \"active_opportunity_id\": \"alpha\",\n    \"privacy\": \"SANITIZED\",\n    \"files\": [\n      {\"path\": \"career-profile.json\", \"schema\": \"career-profile\", \"sha256\": null},\n      {\"path\": \"preferences.json\", \"schema\": \"preferences\", \"sha256\": null},\n      {\"path\": \"story-bank.json\", \"schema\": \"story-bank\", \"sha256\": null},\n      {\"path\": \"applications/alpha.json\", \"schema\": \"application\", \"sha256\": null},\n      {\"path\": \"applications/beta.json\", \"schema\": \"application\", \"sha256\": null}\n    ]\n  },\n  \"career-profile.json\": {\n    \"schema_version\": \"1.0.0\",\n    \"id\": \"profile\",\n    \"name\": null,\n    \"current_role\": null,\n    \"experience_years\": null,\n    \"summary\": null,\n    \"goals\": null,\n    \"skills\": null,\n    \"achievements\": null,\n    \"evidence\": [\n      {\n        \"id\": \"e-1\",\n        \"opportunity_id\": null,\n        \"description\": \"Supported migration testing\",\n        \"own_role\": \"Tested 12 cases\",\n        \"action\": \"Tested 12 cases\",\n        \"outcome\": \"Reported defects\",\n        \"classification\": \"USER FACT\",\n        \"source_ids\": [],\n        \"user_confirmed\": true,\n        \"sensitive\": false,\n        \"verification\": \"USER_CONFIRMED\"\n      }\n    ],\n    \"target_roles\": null,\n    \"target_companies\": null,\n    \"sources\": null\n  },\n  \"preferences.json\": {\n    \"schema_version\": \"1.0.0\",\n    \"id\": \"preferences\",\n    \"requirements\": [\n      {\n        \"id\": \"req-remote\",\n        \"text\": \"Remote work\",\n        \"priority\": \"MUST\",\n        \"rationale\": \"Family\"\n      }\n    ],\n    \"target_roles\": null,\n    \"target_locations\": null,\n    \"salary_floor\": null,\n    \"currency\": null,\n    \"language\": null,\n    \"work_style\": null,\n    \"timeline\": null,\n    \"original_requirements\": [\n      {\n        \"id\": \"req-remote\",\n        \"text\": \"Remote work\",\n        \"priority\": \"MUST\",\n        \"rationale\": \"Family\"\n      }\n    ]\n  },\n  \"story-bank.json\": {\n    \"schema_version\": \"1.0.0\",\n    \"stories\": []\n  },\n  \"applications/alpha.json\": {\n    \"id\": \"app-alpha\",\n    \"opportunity_id\": \"alpha\",\n    \"opportunity\": {\n      \"id\": \"alpha\",\n      \"opportunity_id\": \"alpha\",\n      \"company\": \"Alpha Synthetic\",\n      \"role\": \"Analyst\",\n      \"status\": \"DISCOVERED\",\n      \"status_history\": []\n    },\n    \"interviews\": [\n      {\n        \"id\": \"int-alpha\",\n        \"opportunity_id\": \"alpha\",\n        \"round\": {\n          \"id\": \"round-alpha\",\n          \"opportunity_id\": \"alpha\",\n          \"type\": \"HM\"\n        },\n        \"questions\": [\n          {\n            \"id\": \"question-alpha\",\n            \"opportunity_id\": \"alpha\",\n            \"round_id\": \"round-alpha\",\n            \"text\": \"What did you personally do?\",\n            \"origin\": \"ACTUAL_USER_RECALL\"\n          }\n        ],\n        \"answers\": [\n          {\n            \"id\": \"answer-alpha\",\n            \"opportunity_id\": \"alpha\",\n            \"round_id\": \"round-alpha\",\n            \"question_id\": \"question-alpha\",\n            \"text\": \"Tested 12 cases\",\n            \"evidence_ids\": [\"e-1\"],\n            \"recalled\": true\n          }\n        ],\n        \"debriefs\": [\n          {\n            \"id\": \"debrief-alpha\",\n            \"opportunity_id\": \"alpha\",\n            \"round_id\": \"round-alpha\",\n            \"question_ids\": [\"question-alpha\"],\n            \"answer_ids\": [\"answer-alpha\"],\n            \"new_company_information\": [\"Interviewer said team expands; unverified.\"],\n            \"collection_complete\": true\n          }\n        ]\n      }\n    ],\n    \"sources\": [],\n    \"claims\": [],\n    \"offers\": []\n  },\n  \"applications/beta.json\": {\n    \"id\": \"app-beta\",\n    \"opportunity_id\": \"beta\",\n    \"opportunity\": {\n      \"id\": \"beta\",\n      \"opportunity_id\": \"beta\",\n      \"company\": \"Beta Synthetic\",\n      \"role\": \"Analyst\",\n      \"status\": \"DISCOVERED\",\n      \"status_history\": []\n    },\n    \"interviews\": [],\n    \"sources\": [],\n    \"claims\": [],\n    \"offers\": []\n  }\n}\n```"
+        }
+      ],
+      "deterministic_roundtrip": true
+    },
+    {
+      "id": "context-v12-model-roundtrip",
+      "persona": "multi-application",
+      "status": "PASS",
+      "assertions": [
+        {
+          "id": "lossless",
+          "pass": true,
+          "reason": "The assistant reproduced all five files verbatim: every evidence item (e-1, e-discovery) with all fields including nulls and source_ids:[], every career episode (episode-discovery) with outcome_owner, evidence_ids order, and sanitization flags, the full discovery session (discovery-alpha) with round_count:1, round_limit:3, stop_reason:SATURATION, stage:STOPPED, all candidates with outcome_owner:UNKNOWN, the submission with exact sha256 and submitted_at, and beta's empty arrays unchanged. No new fields or facts were added.",
+          "evidence_quote": "\"stop_reason\": \"SATURATION\",\n        \"candidates\": ["
+        },
+        {
+          "id": "privacy",
+          "pass": true,
+          "reason": "The assistant introduced no raw email bodies, internal URLs, or synthetic account-memory writes. It explicitly disclaimed account-memory storage. All USER FACT classifications were preserved as-is from the seed, and no reclassification to externally-verified occurred.",
+          "evidence_quote": "실제 제출 이력이나 계정 메모리에 저장되지 않습니다"
+        }
+      ],
+      "model_ids": [
+        "claude-sonnet-4-6"
+      ],
+      "judge_model": "claude-sonnet-4-6",
+      "loaded_files": {
+        "SKILL.md": "6181acd3ba69ad3a5ed7f99346693b732e539535d611f26133e80234a3a33c71",
+        "references/host.md": "c0669b6ebc04a2d9760064966ef783d42c391b7121c52199afbbe62f4f007d71",
+        "references/core/router/routing.md": "ddd80e971d3c6f204a13d8fc4e5b1839373ba767939803061e6886a86afed5f3",
+        "references/core/router/intent-catalog.yaml": "0b1c168e412e2130d7f614e0fa426abc1b4d5f691435d0e8bc214e01c03afbcb",
+        "references/core/state/state.md": "5c4de3a893671110f7063683d2929ecf5504b836554b7d1e5138ba1d3875efd3",
+        "references/core/principles/entry-guards.md": "940eaf5bdc0f234faa10cd6292273b8df3617f9046d435906e874e80661646ca",
+        "references/core/principles/evidence-policy.md": "2023f804846b6ac4d91af7bf0ce78213fffeb08c1acd070fbaf64aaf826749bb",
+        "references/core/principles/index.md": "4ae2f36afe2d726259fa841cf8b6a1a87cee4c3558b7a0063c59405d6f92b9f8",
+        "references/core/principles/privacy-policy.md": "3a20011a64eed84174cb54ab1dac7bce2cafc2153d06c35e1fc397978cb3a1aa",
+        "references/core/principles/product-principles.md": "b2c1cf4eead6e2e73122811ddaa1aa360ace3a2dad6e53821da9b5287da59459",
+        "references/core/principles/research-policy.md": "e0dc13d43474708fb9b1c283fe4369b2dbe414fb880933c2fb4e3c49d2c9ca3c",
+        "references/core/principles/ux-language.md": "cbbbacfcfe8fb67839c0915427d1769685fb929dd9aec404d7e53cebf58763e2",
+        "references/schemas/application.schema.json": "9729688f4c8810cd39cf1cf9b4f779b51c01959422b7014cde08aeed62720be6",
+        "references/schemas/career-episode.schema.json": "6a7e9e11da8e14e987d734dcc45bac18f6b8c41a8d5f2508ac65561f212c488b",
+        "references/schemas/career-profile.schema.json": "c286ca774a8be27e77090784103f37830d8dd516c015cd0c54bc511509898b63",
+        "references/schemas/claim.schema.json": "b2ad41054fc6e842ff7b3c11dee0c790918a2d130429697f650c9f4dafedff76",
+        "references/schemas/context-manifest.schema.json": "275f5bb5540147028a39e0e6b957c5ebe3a32dff467e9ef62f05c06e44406df7",
+        "references/schemas/entities.schema.json": "b63a5e3c0311c540320cc4357fdce0986b418ec06b67a80dc7f3de4204a2b13a",
+        "references/schemas/evidence-candidate.schema.json": "8fdfe2dcdff806cb9e320958882d19442d4cf33793b2098a836033713c5500fc",
+        "references/schemas/evidence-discovery-session.schema.json": "30f9ab925955eb974e55924a89f97835aa7c3f83078a6a84ebae27f5946c51ae",
+        "references/schemas/evidence.schema.json": "d559a87dd4c710f3dd68dd2e6345bfcdac485da4297d26a707d9064239ca393f",
+        "references/schemas/interview.schema.json": "db90be9e1c6358d6d8007aa8bc7a46f713a589e010661c74d0108002bd14aa9e",
+        "references/schemas/offer.schema.json": "4313b9ff584754c58734c144c217a256a799117c0a7941d7b142c41adf85367c",
+        "references/schemas/opportunity.schema.json": "4da1a6d898be8e4f434a9e23375cfc737003a6028e44e6150aeb847fe72a1ff7",
+        "references/schemas/preferences.schema.json": "b8f16a11170bfc3b72b41061a994242a14765b8d9cbb0c161c5c859d5ed0831e",
+        "references/schemas/resume.schema.json": "3e3f145a785da99dd01391b7b94a45ebc226a0d597058c5a428ecd375573633d",
+        "references/schemas/source.schema.json": "38d8d3523664b82dc4d904a2f0f280a34b63aa4816c7bb028872a0f4781bb693",
+        "references/schemas/story-bank.schema.json": "70af098c3af5e130a6cfe9ed92b23d87c6cd7e509561c55b8fa0bca2a2ae9eab",
+        "references/schemas/story.schema.json": "26b3b77a150af43283ebf35c357b794499bd778013686bd1fbbaafd0f6925712",
+        "references/templates/application.json": "df00560619883e122bc00f3af70e169bd7e0482273236bea5f872cb869f63b1a",
+        "references/templates/career-episode.json": "0c9e2ff8bf3a5835851799a2dc949b89fa75d8ef396e6edd3dcec01789f13738",
+        "references/templates/career-profile.json": "7c235f0d110cbf5f5e1c0451ff6cf6be6ca8aed4d813ec3f6ed8939753f0e592",
+        "references/templates/claim.json": "6d1abf384a32d4da2fec3cc2c3235655f0839f912ad6c379757fcf903ef9aa41",
+        "references/templates/context-manifest.json": "d48d2bbb42f64b7be227201eb83ba7417c3ce1086e12fcc49e772e00b08e67db",
+        "references/templates/evidence-candidate.json": "266569107a421507660d45ecb6cac463eb6f429d62fe57b649e71ddcfae3c854",
+        "references/templates/evidence-discovery-session.json": "75d7a2ce9f27c14e4bb98e901dcf78470396bd406e9745399ae95369ddfaa54c",
+        "references/templates/evidence.json": "ad30330fc06c565242e63723fb3d407d297a6e2367add6a02560e471c194a7d6",
+        "references/templates/interview-log.json": "9bb870d14cca08276bc212bc72bdfbaefae9dc9d81d90d93f56baacbb2e59753",
+        "references/templates/offer.json": "04cb5d5dde62fa8f89e4cd165eb072fa016a67637e7e7135e490fbd9e21d16d5",
+        "references/templates/opportunity.json": "e5b96d541c8a01ab8bc33353f857dac6b4bab0c0eb022aab4b7b6ff212487675",
+        "references/templates/preferences.json": "4d0e93d68e3eebf25e2d7a57601ecc075751c2354b7380ef8955462f0468497e",
+        "references/templates/resume.json": "687391c174b1df2932d105b87ffdc8f86a88c20b099199dfea9ec3bdb9417691",
+        "references/templates/source.json": "cfc29f67ede9ad61c4785accb08ff561bd9df4b1a7467cf37c27e564e276f63c",
+        "references/templates/story-bank.json": "f1a20ba8524a00ef5f554a1811a4d3cfe54303ceeea5a4b8d1ec9a475787e40b",
+        "references/templates/story.json": "82fe64174280dd0b63028935a04b8d3dd05ac2d57b8e21e8b202c1677495de37",
+        "references/core/workflows/w01-career-setup.md": "c23e105f7be1d4e9bf6af7af50d53399d61ead545aaf9ae2a322888e2dd3f508",
+        "references/core/workflows/w02-career-strategy.md": "6deaa787dd291064fd7ad11dee42db8152d0a6e58919fc6ab78c331b1b04f9ad",
+        "references/core/workflows/w03-opportunity-discovery.md": "bb39e3aef733bcaeef8a857a64a9bbdda64b2a389c5dca33ca2dd273c59d51e2",
+        "references/core/workflows/w04-job-intelligence.md": "4212682cee37b7b1f5262830e0d71d3aeb342f29d3acf5ee9713a63c5820eb45",
+        "references/core/workflows/w05-application-prep.md": "48697e8b2c5b92d94094b855f3cbe4c95087ce786fe739366e645e9df304c7e5",
+        "references/core/workflows/w06-interview-prep.md": "d381a71fd86c34c8fd6e3d5e43f1105293617a00afc13d208f83b89c10dfc7a3",
+        "references/core/workflows/w07-mock-interview.md": "b94ad744b6fdb31863eb05793cb13053f4d7d54c8038ba3ef61db2fadf25b450",
+        "references/core/workflows/w08-interview-debrief.md": "555ad7695ace86697642ddf531cb90ee3bc5b36c49ce913b18f93e0684a5b9c5",
+        "references/core/workflows/w09-offer-decision.md": "21a7fcf23bf922003824188b5b59b5a4d7bc90f927d6c0f3f793cb485904fa12",
+        "references/core/capabilities/experience-mining.md": "45740ecdb0008b1ba0f06fff6aae6a955f5fb6918b2b5850b35e1d36f9dd92d1",
+        "references/core/capabilities/career-evidence-discovery.md": "60ae5ef6fbda3669dd5bd119154bd5d14b1ec03af2d03c73a6493949ba6deed5",
+        "references/core/capabilities/copilot-bridge.md": "3d43fa34219e1967a3792ad0d5ea64f2452c2d0771cba93b0c404e350c5bb144",
+        "references/core/capabilities/career-analysis.md": "bdcfccb114d58d0f9f7d65a44077963cc09eafc76d1097c9a0a6b5a7460b8030",
+        "references/core/artifacts/career-brief.md": "cf9d049395d8657a599fa84e1ca1f62abbc2cfb5e1c619c310e101766d6b6a56",
+        "references/core/capabilities/role-mapping.md": "6227da7532931dbeb7bac4e13c4323182496e5f6665d409ec4c2e16af0c88fe3",
+        "references/core/artifacts/career-roadmap.md": "a198c2a6e4a32555d13d8cf4a41f3c0191c488976d0a6fff255b290a7af971ac",
+        "references/core/artifacts/opportunity-screen.md": "6d071af5caff998c31157b2ffc9b3b949ee605d2fd57a04486676667dceca6ba",
+        "references/core/capabilities/application-pipeline.md": "9dc78300c585e04d5d9ddb67c991d67b3ecb5682a94e4b754f6b7fa8f892912f",
+        "references/core/capabilities/job-research.md": "5913b0ab53058b691a889e66fbdc1dd3c09db35036cc1a19c85b0fbd337e816a",
+        "references/core/capabilities/red-team.md": "917ad900ab59a59b021eafb11bf35f4f695ceababc243a2a2fae9a3b8e87d2cf",
+        "references/core/artifacts/candidate-strategy.md": "fd815cbfaa6873de1a83dabaa43a9c4ed4fd990733ea11f27875788e09a018aa",
+        "references/core/capabilities/story-bank.md": "8d648faef479c02cf3574a2b99207fbdaee45dd091a98d1a46d3029d4345bfc8",
+        "references/core/capabilities/screening-engine.md": "4b2083310e5528277d9ff393f4e9672a62ac6066f3deedf0f5d31a94088bc195",
+        "references/core/capabilities/linkedin.md": "f25f3f913403a50eb03be7f1a68a1b1e464952f8d162c4605e0bb04a4287b3c1",
+        "references/core/capabilities/portfolio.md": "981bfc935e7160b2b4b2af9a27ce8c22f5570bffdb0da2d730750fe5e9a76ca8",
+        "references/core/capabilities/application-writing.md": "63a07b9cd864cd00ea30b3fb65a15226d89c7abc28196ac225655b392d278165",
+        "references/core/capabilities/networking.md": "a6d3a75669e4bd49a4fc9d375028d451964c375f7716d1724e3be1c0a4dadee4",
+        "references/core/capabilities/resume-artifact.md": "f8150170fe45e5f02bf74ba95c6bd4cfb406158c0910c04361337a63c50edc37",
+        "references/core/artifacts/application-pack.md": "15f024258369864c7d94b14192a2c87018472377f330aee5a945c55dc6684327",
+        "references/core/capabilities/compensation.md": "cb8755ef9bc5ee0c83d8087ad28420ff910676caee9cd3def544d1ae1037035c",
+        "references/core/capabilities/resume.md": "178b1035d145ef252c089fe9d051b24a113f95b50e157ac76018bc9d26827e8d",
+        "references/core/capabilities/interviewer-intelligence.md": "541a9acf1db8ff096376dcf8e3fcb3eb04b1b3aa54e1cf90c765a59d285b03d2",
+        "references/core/capabilities/english-global.md": "710d37d3476482cc5cba3e973cacf1104f3db69d0c8db9b7c4fc413489e0390c",
+        "references/core/artifacts/interview-pack.md": "f4cde304eb27992bbfc28336979e8738d453e9c7059f7fd6d0eea2dc7cd6b041",
+        "references/core/artifacts/interview-cheat-sheet.md": "5d2172f146982daf5c990144eceb9d72becec722fcd847f4f3f867e12dddc640",
+        "references/core/capabilities/voice-mock.md": "edd6245345137cadc08e30ed1c45327c49ccdc1ea9d4a88988965efdce3167ea",
+        "references/core/artifacts/mock-review.md": "fa4804c39c976be600f42bc8bfa7899fa8c07562d5a1d730ec3dac74c14c8399",
+        "references/core/artifacts/interview-debrief.md": "968676d716a617be20a1c6fcfd38c76f21a91f214c623f34378dce6ce6e1004f",
+        "references/core/artifacts/offer-brief.md": "b8e6681223199696e44764a2ac624bd8512cd56291ca0316976872a26ff467b4",
+        "references/templates/artifacts/evidence-exchange.md": "4a6dca10132d81d044d7184a5e779c16d3382350da832d1b66433cf8c4f9aa8c",
+        "references/templates/artifacts/career-brief.md": "f251b03fd2a5ad98a6f06cb53cbf5bee67a1c934e3586fa5eaa05013c3ec8b6b",
+        "references/templates/artifacts/career-roadmap.md": "d7541cefdcf04ec73bf4b6e3b216424b746412f5918e070185a1110773bb9874",
+        "references/templates/artifacts/opportunity-screen.md": "134df927c9f230091ce089b9b472c9403831e817f0922ab20e2a78734c49f2d0",
+        "references/templates/artifacts/candidate-strategy.md": "3b94104bb48052567693cf8b041777ca7ee5692343f24d2f6c122227f62484d5",
+        "references/core/capabilities/human-voice.md": "bd0580691c88a60bf5ab6d6a09c2a8b03091e85847033ec2fee59ecd4fb17b59",
+        "references/templates/artifacts/application-pack.md": "15abd070b520eb508f0a21e2a0bd34bdfbca80f0025a2a19dcec06e789dfe5f2",
+        "references/templates/artifacts/resume-submission.md": "2cf9c9939fb5b2241067c756895e28231b952f2dfcc0f1dbc33745f0cb659d36",
+        "references/templates/artifacts/interview-pack.md": "76287880c559c1a8109f278b85136adc4d1976250b1b5cea42136473e8821bb9",
+        "references/templates/artifacts/interview-cheat-sheet.md": "27ca190968416daefd282afe8cd350b4f677218bcd0c2d2e6687a367fcf87490",
+        "references/templates/artifacts/mock-review.md": "a4045fe3c6a950c0d98e715008d357994978303f442e13a4c364fce6d2a4779c",
+        "references/templates/artifacts/interview-debrief.md": "0194da384718b3c3fe773eefa5d896ff0ba72d3562b6e7417b6e5bf52485a5e2",
+        "references/templates/artifacts/offer-brief.md": "76067970dd39cdf19267b709da503b114fd9e87a6a59cb6c4bbd469595abbf0a"
+      },
+      "transcript": [
+        {
+          "role": "user",
+          "content": "[SIMULATION ONLY] 첨부한 v1.2 Context Pack을 순수 복원하고 그대로 다시 내보내줘. 변경하거나 새 경험을 추출하지 마. 전역 경험 사건, 사용자 확인/개인정보 검토, 후보, 라운드/중단 이유, 실제 제출본/복기와 모든 기존 ID·값·null·배열 순서를 보존해. 응답은 모든 파일명을 키로 하는 하나의 완전한 JSON 객체만 줘. 생략이나 placeholder 없이, 추가 설명 없이 JSON만 줘. 실제 계정 메모리에 저장하지 마."
+        },
+        {
+          "role": "assistant",
+          "content": "**SIMULATION ONLY** — 이 내보내기는 가상 데이터이며 실제 제출 이력이나 계정 메모리에 저장되지 않습니다.\n\n```json\n{\n  \"manifest.json\": {\n    \"schema_version\": \"1.0.0\",\n    \"product_version\": \"1.2.0-rc.4\",\n    \"pack_id\": \"synthetic-pack\",\n    \"revision\": 1,\n    \"exported_at\": null,\n    \"active_opportunity_id\": \"alpha\",\n    \"privacy\": \"SANITIZED\",\n    \"files\": [\n      {\"path\": \"career-profile.json\", \"schema\": \"career-profile\", \"sha256\": null},\n      {\"path\": \"preferences.json\", \"schema\": \"preferences\", \"sha256\": null},\n      {\"path\": \"story-bank.json\", \"schema\": \"story-bank\", \"sha256\": null},\n      {\"path\": \"applications/alpha.json\", \"schema\": \"application\", \"sha256\": null},\n      {\"path\": \"applications/beta.json\", \"schema\": \"application\", \"sha256\": null}\n    ]\n  },\n  \"career-profile.json\": {\n    \"schema_version\": \"1.0.0\",\n    \"id\": \"profile\",\n    \"name\": null,\n    \"current_role\": null,\n    \"experience_years\": null,\n    \"summary\": null,\n    \"goals\": null,\n    \"skills\": null,\n    \"achievements\": null,\n    \"evidence\": [\n      {\n        \"id\": \"e-1\",\n        \"opportunity_id\": null,\n        \"description\": \"Supported migration testing\",\n        \"own_role\": \"Tested 12 cases\",\n        \"action\": \"Tested 12 cases\",\n        \"outcome\": \"Reported defects\",\n        \"classification\": \"USER FACT\",\n        \"source_ids\": [],\n        \"user_confirmed\": true,\n        \"sensitive\": false,\n        \"verification\": \"USER_CONFIRMED\"\n      },\n      {\n        \"id\": \"e-discovery\",\n        \"opportunity_id\": null,\n        \"description\": \"Coordinated installation dates\",\n        \"own_role\": \"Contributor\",\n        \"context\": null,\n        \"action\": \"Coordinated installation dates\",\n        \"scope\": null,\n        \"outcome\": null,\n        \"scale\": null,\n        \"skills\": null,\n        \"classification\": \"USER FACT\",\n        \"source_ids\": null,\n        \"user_confirmed\": true,\n        \"sensitive\": false,\n        \"verification\": \"USER_CONFIRMED\",\n        \"responsibility\": \"CONTRIBUTOR\",\n        \"evidence_source_type\": \"m365_copilot_bridge\",\n        \"bridge_source\": \"Microsoft 365 Copilot\",\n        \"ownership_classification\": \"A\",\n        \"episode_id\": \"episode-discovery\",\n        \"sanitized\": true,\n        \"privacy_reviewed\": true,\n        \"raw_content_stored\": false,\n        \"retrieval_scope\": \"2024-03; approved Outlook email\",\n        \"source_references\": [\n          {\"date\": \"2024-03-17\", \"title\": \"Installation schedule\", \"scope\": null}\n        ]\n      }\n    ],\n    \"target_roles\": null,\n    \"target_companies\": null,\n    \"sources\": null,\n    \"resume_versions\": [\n      {\n        \"id\": \"master-new\",\n        \"opportunity_id\": null,\n        \"kind\": \"MASTER\",\n        \"summary\": \"Later customer-support positioning\"\n      }\n    ],\n    \"career_episodes\": [\n      {\n        \"id\": \"episode-discovery\",\n        \"opportunity_id\": null,\n        \"project\": \"Site rollout\",\n        \"period\": \"2024-03\",\n        \"situation\": null,\n        \"own_role\": \"Contributor\",\n        \"actions\": [\"Coordinated installation dates\"],\n        \"team_actions\": null,\n        \"systems\": null,\n        \"scope\": null,\n        \"outcome\": null,\n        \"outcome_owner\": \"UNKNOWN\",\n        \"evidence_ids\": [\"e-discovery\"],\n        \"uncertainties\": null,\n        \"user_confirmed\": true,\n        \"evidence_source_type\": \"m365_copilot_bridge\",\n        \"bridge_source\": \"Microsoft 365 Copilot\",\n        \"sanitized\": true,\n        \"privacy_reviewed\": true,\n        \"raw_content_stored\": false,\n        \"retrieval_scope\": \"2024-03; approved Outlook email\",\n        \"source_references\": [\n          {\"date\": \"2024-03-17\", \"title\": \"Installation schedule\", \"scope\": null}\n        ]\n      }\n    ]\n  },\n  \"preferences.json\": {\n    \"schema_version\": \"1.0.0\",\n    \"id\": \"preferences\",\n    \"requirements\": [\n      {\n        \"id\": \"req-remote\",\n        \"text\": \"Remote work\",\n        \"priority\": \"MUST\",\n        \"rationale\": \"Family\"\n      }\n    ],\n    \"target_roles\": null,\n    \"target_locations\": null,\n    \"salary_floor\": null,\n    \"currency\": null,\n    \"language\": null,\n    \"work_style\": null,\n    \"timeline\": null,\n    \"original_requirements\": [\n      {\n        \"id\": \"req-remote\",\n        \"text\": \"Remote work\",\n        \"priority\": \"MUST\",\n        \"rationale\": \"Family\"\n      }\n    ]\n  },\n  \"story-bank.json\": {\n    \"schema_version\": \"1.0.0\",\n    \"stories\": [\n      {\n        \"id\": \"story-discovery\",\n        \"opportunity_id\": null,\n        \"title\": \"Site rollout\",\n        \"evidence_ids\": [\"e-discovery\"],\n        \"situation\": null,\n        \"task\": null,\n        \"action\": \"Coordinated installation dates\",\n        \"result\": null,\n        \"reflection\": null\n      }\n    ]\n  },\n  \"applications/alpha.json\": {\n    \"id\": \"app-alpha\",\n    \"opportunity_id\": \"alpha\",\n    \"opportunity\": {\n      \"id\": \"alpha\",\n      \"opportunity_id\": \"alpha\",\n      \"company\": \"Alpha Synthetic\",\n      \"role\": \"Analyst\",\n      \"status\": \"DISCOVERED\",\n      \"status_history\": []\n    },\n    \"interviews\": [],\n    \"sources\": [],\n    \"claims\": [],\n    \"offers\": [],\n    \"resume_versions\": [\n      {\n        \"id\": \"resume-a\",\n        \"opportunity_id\": \"alpha\",\n        \"kind\": \"TAILORED\",\n        \"summary\": \"Testing contributor\",\n        \"bullets\": [\n          {\n            \"text\": \"Tested 12 cases\",\n            \"evidence_ids\": [\"e-1\"],\n            \"action\": \"KEEP\",\n            \"bullet_key\": \"a-1\",\n            \"confidence\": \"HIGH\",\n            \"evidence_status\": \"CONFIRMED\",\n            \"responsibility\": \"CONTRIBUTOR\"\n          }\n        ]\n      }\n    ],\n    \"submissions\": [\n      {\n        \"id\": \"submission-a\",\n        \"opportunity_id\": \"alpha\",\n        \"resume_version_id\": \"resume-a\",\n        \"submitted_at\": \"2026-10-09T09:00:00+09:00\",\n        \"user_confirmed\": true,\n        \"jd_text\": \"Testing required\",\n        \"resume_sha256\": \"a6b0760817f6c71e57b6a7ad9931ad96be444656de1a6f980fce0d25952ccb68\",\n        \"answers\": null,\n        \"cover_letter\": null\n      }\n    ],\n    \"evidence_discovery_sessions\": [\n      {\n        \"id\": \"discovery-alpha\",\n        \"opportunity_id\": \"alpha\",\n        \"criteria\": [\n          {\n            \"criterion_key\": \"vendor\",\n            \"label\": \"Vendor coordination\",\n            \"coverage\": \"Strong\",\n            \"priority\": \"SKIP\",\n            \"evidence_ids\": [\"e-discovery\"],\n            \"requirement_confirmed\": true\n          }\n        ],\n        \"selected_criteria\": [\"vendor\"],\n        \"sources_scanned\": [\"profile\", \"evidence\", \"master_resume\", \"story_bank\", \"tailored_resumes\", \"applications\", \"debriefs\", \"interview_answers\"],\n        \"unavailable_sources\": [\"supplied_files\", \"project_records\"],\n        \"retrieval_scope\": \"2024-03; approved Outlook email\",\n        \"bridge_mode\": \"enterprise_ai_bridge\",\n        \"stage\": \"STOPPED\",\n        \"round_count\": 1,\n        \"round_limit\": 3,\n        \"stop_reason\": \"SATURATION\",\n        \"candidates\": [\n          {\n            \"id\": \"candidate-discovery-alpha-r1-1\",\n            \"opportunity_id\": \"alpha\",\n            \"user_confirmed\": true,\n            \"target_criterion\": \"Vendor coordination\",\n            \"project\": \"Site rollout\",\n            \"period\": \"2024-03\",\n            \"situation\": null,\n            \"my_actions\": [\"Coordinated installation dates\"],\n            \"team_actions\": null,\n            \"systems\": null,\n            \"scope\": null,\n            \"outcome\": null,\n            \"source_references\": [\n              {\"date\": \"2024-03-17\", \"title\": \"Installation schedule\", \"scope\": null}\n            ],\n            \"uncertainties\": null,\n            \"sensitive_information_removed\": \"Yes\",\n            \"sanitized\": true,\n            \"privacy_reviewed\": true,\n            \"raw_content_stored\": false,\n            \"ownership_classification\": \"A\",\n            \"evidence_source_type\": \"m365_copilot_bridge\",\n            \"bridge_source\": \"Microsoft 365 Copilot\",\n            \"retrieval_scope\": \"2024-03; approved Outlook email\",\n            \"outcome_owner\": \"UNKNOWN\"\n          }\n        ]\n      }\n    ]\n  },\n  \"applications/beta.json\": {\n    \"id\": \"app-beta\",\n    \"opportunity_id\": \"beta\",\n    \"opportunity\": {\n      \"id\": \"beta\",\n      \"opportunity_id\": \"beta\",\n      \"company\": \"Beta Synthetic\",\n      \"role\": \"Analyst\",\n      \"status\": \"DISCOVERED\",\n      \"status_history\": []\n    },\n    \"interviews\": [],\n    \"sources\": [],\n    \"claims\": [],\n    \"offers\": []\n  }\n}\n```"
+        }
+      ],
+      "deterministic_roundtrip": true
+    }
+  ],
+  "status": "INCOMPLETE",
+  "updated_at": "2026-10-13T15:58:16.047481+00:00"
+}

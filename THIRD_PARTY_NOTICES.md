@@ -140,3 +140,6 @@ Source: https://github.com/notofonts/noto-cjk (Sans/OTF/Korean/NotoSansCJKkr-Reg
 License: SIL Open Font License 1.1, preserved in
 `fixtures/screening/FONT-LICENSE.txt`. Font subsetting does not change CareerPilot's
 career facts or add a runtime dependency.
+
+V1.2 uses only redesigned workflow concepts from the [documented primary sources](docs/v1-2-research.md).
+No additional third-party code or verbatim skill text was copied or installed. Existing notices above remain intact.

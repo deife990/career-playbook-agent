@@ -1,0 +1,15 @@
+id: evd-02-thin-vendor
+persona: five-year-global
+workflow: W05
+turns:
+- '[SIMULATION ONLY] Alpha JD의 핵심 must-have는 vendor coordination이야. 현재 Career State에서
+  관련 내용은 "vendor support"라는 막연한 표현뿐이고 다른 profile/evidence/Master/stories/지원/복기/답변/파일/프로젝트
+  자료는 제공되지 않았어. 회사 Copilot 사용 가능해. 검색은 2024년 3월, 내 승인된 Outlook 이메일과 Teams에 한정해. 부족한
+  근거를 분류하고 바로 복붙할 검색 요청을 만들어줘. 이력서 작성은 아직 하지 마.'
+assertions:
+  thin: Labels vague vendor support Thin, not confirmed ownership or absence, and
+    checks existing context before proposing retrieval.
+  prompt: Produces a usable bounded criterion-specific prompt with own action versus
+    team/CC/assignment-only limits and the twelve-field Evidence Exchange format.
+  boundary: Leaves corporate execution to the user; no actual mailbox-search claim
+    or mandatory connector/account/credential.

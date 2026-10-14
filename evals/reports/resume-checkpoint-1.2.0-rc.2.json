@@ -1,0 +1,23 @@
+{
+  "active_objective": "Complete v1.2 implementation, all model regressions and scoped readiness after closed v1.1 baseline",
+  "version": "1.2.0-rc.2",
+  "v11_completed_within_user_scope": true,
+  "v11_unit_tests": 144,
+  "v11_model_cases_per_host": "33/33 PASS",
+  "v12_runtime_started": true,
+  "v12_implemented": true,
+  "unit_tests": 185,
+  "static_checks": "PASS",
+  "browser_validation": "EXCLUDED_BY_USER",
+  "expected_model_cases_per_host": 48,
+  "targeted_repairs": "evd-07 and evd-13 PASS on both hosts",
+  "new_model_fixture": "fixtures/state/discovery-v12.json",
+  "plan": "tasks/plan.md",
+  "todo": "tasks/todo.md",
+  "remaining": "Preserve current rc.2 results, repair W05 remote preference and independent JD mapping (plus any further actual failures), then fresh candidate verification and scoped readiness.",
+  "active_model_sessions": {
+    "chatgpt": 42780
+  },
+  "claude_status": "ACCOUNT_LIMIT; reset 2026-10-14 00:30 Asia/Seoul",
+  "pending_repairs": "tasks/v1-2-pending-repairs.md"
+}

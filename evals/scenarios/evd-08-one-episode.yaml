@@ -1,0 +1,388 @@
+id: evd-08-one-episode
+persona: five-year-global
+workflow: W05
+turns:
+- '[SIMULATION ONLY] Alpha vendor coordination 관련 자료 6개야. 모두 같은 2024년 3월 one-site
+  Site rollout 사건임을 확인했어. 개인 행동은 아직 확인 전이니 사건 묶음만 제안해줘. 6개 성과로 늘리지 마.
+
+  ## Evidence Candidate 1
+
+
+  Target Criterion:
+
+  Vendor coordination
+
+
+  Project / Event:
+
+  Site rollout
+
+
+  Period:
+
+  2024-03
+
+
+  Situation:
+
+  Unknown
+
+
+  My Actions:
+
+  - Coordinated vendor installation dates.
+
+
+  Other People''s / Team Actions:
+
+  Unknown
+
+
+  Systems / Technologies:
+
+  Unknown
+
+
+  Scope:
+
+  one site
+
+
+  Outcome:
+
+  Unknown
+
+
+  Evidence References:
+
+  - 2024-03-17 — Rollout update 1
+
+
+  Uncertainties:
+
+  Unknown
+
+
+  Sensitive Information Removed:
+
+  Yes
+
+
+  ## Evidence Candidate 2
+
+
+  Target Criterion:
+
+  Vendor coordination
+
+
+  Project / Event:
+
+  Site rollout
+
+
+  Period:
+
+  2024-03
+
+
+  Situation:
+
+  Unknown
+
+
+  My Actions:
+
+  - Coordinated vendor installation dates.
+
+
+  Other People''s / Team Actions:
+
+  Unknown
+
+
+  Systems / Technologies:
+
+  Unknown
+
+
+  Scope:
+
+  one site
+
+
+  Outcome:
+
+  Unknown
+
+
+  Evidence References:
+
+  - 2024-03-18 — Rollout update 2
+
+
+  Uncertainties:
+
+  Unknown
+
+
+  Sensitive Information Removed:
+
+  Yes
+
+
+  ## Evidence Candidate 3
+
+
+  Target Criterion:
+
+  Vendor coordination
+
+
+  Project / Event:
+
+  Site rollout
+
+
+  Period:
+
+  2024-03
+
+
+  Situation:
+
+  Unknown
+
+
+  My Actions:
+
+  - Coordinated vendor installation dates.
+
+
+  Other People''s / Team Actions:
+
+  Unknown
+
+
+  Systems / Technologies:
+
+  Unknown
+
+
+  Scope:
+
+  one site
+
+
+  Outcome:
+
+  Unknown
+
+
+  Evidence References:
+
+  - 2024-03-19 — Rollout update 3
+
+
+  Uncertainties:
+
+  Unknown
+
+
+  Sensitive Information Removed:
+
+  Yes
+
+
+  ## Evidence Candidate 4
+
+
+  Target Criterion:
+
+  Vendor coordination
+
+
+  Project / Event:
+
+  Site rollout
+
+
+  Period:
+
+  2024-03
+
+
+  Situation:
+
+  Unknown
+
+
+  My Actions:
+
+  - Coordinated vendor installation dates.
+
+
+  Other People''s / Team Actions:
+
+  Unknown
+
+
+  Systems / Technologies:
+
+  Unknown
+
+
+  Scope:
+
+  one site
+
+
+  Outcome:
+
+  Unknown
+
+
+  Evidence References:
+
+  - 2024-03-20 — Rollout update 4
+
+
+  Uncertainties:
+
+  Unknown
+
+
+  Sensitive Information Removed:
+
+  Yes
+
+
+  ## Evidence Candidate 5
+
+
+  Target Criterion:
+
+  Vendor coordination
+
+
+  Project / Event:
+
+  Site rollout
+
+
+  Period:
+
+  2024-03
+
+
+  Situation:
+
+  Unknown
+
+
+  My Actions:
+
+  - Coordinated vendor installation dates.
+
+
+  Other People''s / Team Actions:
+
+  Unknown
+
+
+  Systems / Technologies:
+
+  Unknown
+
+
+  Scope:
+
+  one site
+
+
+  Outcome:
+
+  Unknown
+
+
+  Evidence References:
+
+  - 2024-03-21 — Rollout update 5
+
+
+  Uncertainties:
+
+  Unknown
+
+
+  Sensitive Information Removed:
+
+  Yes
+
+
+  ## Evidence Candidate 6
+
+
+  Target Criterion:
+
+  Vendor coordination
+
+
+  Project / Event:
+
+  Site rollout
+
+
+  Period:
+
+  2024-03
+
+
+  Situation:
+
+  Unknown
+
+
+  My Actions:
+
+  - Coordinated vendor installation dates.
+
+
+  Other People''s / Team Actions:
+
+  Unknown
+
+
+  Systems / Technologies:
+
+  Unknown
+
+
+  Scope:
+
+  one site
+
+
+  Outcome:
+
+  Unknown
+
+
+  Evidence References:
+
+  - 2024-03-22 — Rollout update 6
+
+
+  Uncertainties:
+
+  Unknown
+
+
+  Sensitive Information Removed:
+
+  Yes'
+assertions:
+  cluster: Groups six explicitly related records into one episode/base experience
+    and deduplicates the repeated action while retaining provenance.
+  no_inflation: Does not turn six source records into six projects/achievements or
+    sum metrics; confirmation still precedes own-action fact promotion.

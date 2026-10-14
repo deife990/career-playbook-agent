@@ -1,9 +1,9 @@
-# Planned v1.2 integration locations
+# Implemented v1.2 integration locations
 
-Design notes only: no v1.2 runtime implementation until both current v1.1 suites pass.
-The researched source decisions and acceptance matrix are in plan.md and state-contract.md.
+Implemented after both v1.1 suites passed. Current model verification remains in checkpoint 8.
+The source decisions and acceptance matrix are in plan.md and state-contract.md.
 
-| Existing location | Smallest planned change | Verification |
+| Existing location | Implemented change | Verification |
 |---|---|---|
 | core/capabilities/experience-mining.md | Dispatch targeted discovery after existing-context scan; retain manual/file entry | No duplicate intake; no mandatory corporate access |
 | core/capabilities/career-evidence-discovery.md (new) | Coverage, priorities, sessions, exchange, attribution, clustering, confirmation and stop rules | EVD-01 through EVD-14 |

@@ -32,8 +32,8 @@
   {
     "name": "experience-mining",
     "workflow": null,
-    "description": "Extract truthful career evidence from conversation, supplied files or explicitly authorized available sources.",
-    "output": "Confirmed Career Evidence"
+    "description": "Discover truthful career evidence from existing context, sanitized work summaries or manual/files. Use for 업무기록, 경험 더 찾기, Copilot Bridge and Evidence Candidate.",
+    "output": "Evidence Coverage Map, reviewed candidates and confirmed reusable Career Evidence"
   },
   {
     "name": "application-prep",

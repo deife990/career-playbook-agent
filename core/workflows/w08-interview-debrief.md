@@ -2,6 +2,8 @@
 id: W08
 artifact: interview-debrief
 capabilities:
+- career-evidence-discovery
+- copilot-bridge
 - story-bank
 - interviewer-intelligence
 - application-pipeline
@@ -35,7 +37,12 @@ round/prior hypothesis. If several companies/rounds are possible clarify before 
 5. Update company intelligence and hiring hypothesis as user-reported new information, unless
    current independent sources verify it. Append revisions; keep previous IDs and contradictions.
 6. Assess candidate risks actually exposed by follow-ups/repetition, not fabricated employer feedback.
-7. Refine [story bank](../capabilities/story-bank.md): facts unchanged, emphasis/clarity/missing
+7. Identify genuinely new actual recalled past actions as Potential Career Evidence through
+   [discovery](../capabilities/career-evidence-discovery.md). Preserve original answers/debriefs;
+   separate exact sanitized confirmation is required before global evidence/story promotion.
+   With a concrete new own action, end analysis with one combined fact/safe-reuse confirmation;
+   unknown dates/results need not block an action-only candidate. Clarify first only if action itself is unclear.
+   Already confirmed evidence needs no repeated intake. Then refine [story bank](../capabilities/story-bank.md): facts unchanged, emphasis/clarity/missing
    supporting detail improved; new achievements require confirmation.
 8. Define next-round objectives, positioning, question tree and questions-to-verify using
    [round intelligence](../capabilities/interviewer-intelligence.md). Unknown next round stays unknown.

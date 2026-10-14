@@ -4,6 +4,9 @@ Existing profile/evidence, sanitized resume/notes, or one episode in conversatio
 by default; file only if supplied. Optional host Mail/Drive only when available and the user
 explicitly permits bounded folders/query/date range. Never ask for a new key/account/connector.
 Before connected search confirm scope and exclusions; stop when permission is withdrawn.
+For JD-driven discovery or imported work-record summaries execute the
+[discovery engine](career-evidence-discovery.md) and [bridge](copilot-bridge.md). Existing context
+comes first; corporate records cross only the manual sanitized-summary boundary.
 ## Extract, confirm, persist
 1. Ask a concrete challenge and the user's own role; separate “I” actions from team results.
 2. Extract generalized context, action, non-sensitive scale, verified/confirmed outcome and skills.

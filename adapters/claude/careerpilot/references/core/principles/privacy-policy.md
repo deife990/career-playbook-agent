@@ -14,3 +14,10 @@ advise falsification. Employment law/tax/contract questions require current auth
 and a local qualified professional where a binding interpretation is needed; do not invent rules.
 Career Context exports contain personal data. Offer redaction/review, exclude raw emails/secrets,
 identify what is included, and let the user save/share. No automatic external upload or sending.
+
+Corporate work discovery defaults to the [manual bridge](../capabilities/copilot-bridge.md).
+Technical redaction is insufficient: review customer/employee, contract/pricing, security and
+unreleased business context too. A Copilot privacy declaration does not certify safe transfer.
+Remove unsupported outcomes when their supporting detail cannot be shared; keep Unknown.
+Only generalized confirmed facts and minimal date/title/source-scope references enter global
+state. No raw mail body, internal URL, automatic corporate upload, indexing or background crawl.

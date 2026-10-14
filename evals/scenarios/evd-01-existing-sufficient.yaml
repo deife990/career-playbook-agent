@@ -1,0 +1,14 @@
+id: evd-01-existing-sufficient
+persona: five-year-global
+workflow: W05
+turns:
+- '[SIMULATION ONLY] Alpha QA JD의 필수는 test execution and defect reporting뿐이야. 기존 global
+  CareerEvidence e-strong은 user_confirmed=true, action="Tested 12 migration cases
+  and reported defects.", scope="12 cases", outcome=Unknown야. 이 행동과 범위는 이미 확인했고 민감정보
+  없어. 나머지 제공된 자료에도 새 정보 없어. Coverage Map과 다음 행동만 알려줘. 같은 경험을 다시 묻거나 Copilot 검색을 시키지
+  마.'
+assertions:
+  coverage: Maps the two supplied requirements to Strong/sufficient existing confirmed
+    evidence e-strong without needing an outcome metric.
+  skip: Skips corporate retrieval and does not repeat known work-fact questions; no
+    extra invented action or effect.

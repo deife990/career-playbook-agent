@@ -1,5 +1,52 @@
 # Changelog
 
+## 1.2.0-rc.7 — Unreleased
+
+- Retain each distinct safe date/title/source-scope reference in sanitized candidates and merged-episode proposals; counts alone cannot replace provenance. Deduplicate true repeats without multiplying achievements.
+- Preserve rc.6 actual failures and provider-limit checkpoints before repairs; new package-bound complete verification remains required.
+- Clear stale model response/log files before each invocation and preserve current partial timeout diagnostics. Stop on timeout rather than repeatedly issuing requests to an unavailable provider.
+
+## 1.2.0-rc.6 — Unreleased
+
+- Keep each W04 transferable bridge explicitly INFERENCE with a factual boundary; testing/reporting cannot become unknown accuracy-review experience even with tentative wording.
+- Preserve rc.5 incomplete results and its actual concise-brief failure before regenerating the shared candidate.
+- Clarify v1.2 roundtrip judging to match the preexisting contract: optional schema fields may be added as null; existing values/keys/order must remain intact. Keep the original conflicting judgment and require fresh complete-suite evidence.
+
+## 1.2.0-rc.5 — Unreleased
+
+- Recheck Unknown consistently across red-team risk headings and readiness reasons; an unknown mandatory skill is pending verification, not confirmed absence or qualification failure.
+- Preserve the original rc.4 automatic PASS and a blocking manual FAIL with literal transcript evidence. The full run was stopped for this actual product repair; no earlier passing header certifies rc.5.
+- Add an explicit whole-output contradiction assertion to the existing bare-action scenario.
+
+## 1.2.0-rc.4 — Unreleased
+
+- Reinforce independent employer criteria and retained work conditions in the shared entry guard and screening contract after Claude's rc.3 JD-row regression.
+- Preserve separate confirmed facts without inventing relationships between years of experience and test context.
+- Keep rc.3 targeted results (ChatGPT PASS, Claude FAIL); both current complete model suites remain required.
+
+## 1.2.0-rc.3 — Unreleased
+
+- Retain original MUST work conditions in partial/tailored resume audits and keep employer compliance Unknown until sourced.
+- Map only supplied/sourced JD requirements; keep supplemental candidate experience separate from employer criteria.
+- Preserve rc.2 incomplete reports: ChatGPT 31 PASS, one behavior FAIL and one account-limit ERROR; Claude one PASS and one account-limit ERROR. All fourteen EVD cases and both state roundtrips passed on ChatGPT under rc.2; fresh rc.3 package-bound verification is required.
+
+## 1.2.0-rc.2 — Unreleased
+
+- Do not repeat confidential identifiers even in privacy audit tables or recommend unsupported replacement outcomes.
+- Ask exact safe-reuse confirmation for concrete newly recalled actions without waiting for unknown dates/results.
+- Namespace candidate identities by session/round and preserve episode identity across periods.
+- Preserve original rc.1 targeted failures; both repaired cases passed on both hosts. Full 48-case suites are pending.
+
+## 1.2.0-rc.1 — Unreleased
+
+- Add JD-driven coverage, existing-context exhaustion and selective career evidence discovery.
+- Add bounded broad/focused Microsoft 365 Copilot prompts, generic approved AI and manual/file fallback.
+- Parse Markdown candidate exchange; separate direct action, execution, corroboration, participation and team context.
+- Require contextual privacy review and exact user confirmation; retain only generalized global episodes and minimal source references.
+- Preserve actual interview recall and promote separately confirmed new experience for future application/story reuse.
+- Extend state with optional nullable fields while preserving old packs, submitted versions and confirmed history.
+- Add EVD-01–14 and negative ownership/privacy/conflict regressions; current model signoff remains pending.
+
 ## 1.1.0-rc.7 — Unreleased
 
 - Repair malformed judge citations by selecting actual assistant lines; preserve independent verdicts and original ERROR evidence. No runtime dependency or automatic passing result is added.

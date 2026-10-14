@@ -1,0 +1,85 @@
+{
+  "platform": "chatgpt",
+  "package_fingerprint": "8291b82b9cbfe66a8b22253411e184c3ae2b830f6038d4590b9bfd17b0139bfb",
+  "suite_fingerprint": "ba6b1c98108ca7204dff0a5e00c025c8083a62fb34a8b149e7bc64f89d83c97f",
+  "started_at": "2026-10-13T15:50:00.753710+00:00",
+  "scope": "Development CLI behavior; not native installation",
+  "cases": [
+    {
+      "id": "bare-action-resume",
+      "persona": "incomplete-resume",
+      "status": "PASS",
+      "assertions": [
+        {
+          "id": "actions",
+          "pass": true,
+          "reason": "The resume limits factual experience to the three confirmed claims and explicitly states that unsupported documentation, tools, or impact claims were not added.",
+          "evidence_quote": "- Performed 12 tests.\n- Reported defects."
+        },
+        {
+          "id": "unknowns",
+          "pass": true,
+          "reason": "SQL, reporting details, quality/outcomes, and employer remote compliance remain unknown, while the response explicitly confirms there was no submission.",
+          "evidence_quote": "**Submission:** Not submitted; do not submit."
+        },
+        {
+          "id": "independent_jd",
+          "pass": true,
+          "reason": "The mapping identifies SQL as the supplied requirement, distinguishes candidate evidence from employer requirements, and retains fully remote as a condition whose employer compliance is unknown.",
+          "evidence_quote": "Whether Alpha satisfies it is **Unknown**."
+        }
+      ],
+      "model_ids": [
+        "gpt-5.6-sol"
+      ],
+      "judge_model": "gpt-5.6-sol",
+      "loaded_files": {
+        "skills/application-prep/SKILL.md": "3f6a9c3ab4041ce2302e3fbd85a22e8ab60c99d7b48c46c28ea3f29efffbba9a",
+        "references/host.md": "a03653d3d347e6fafbf3867bc067d5c23a8618fe2813ac737013933bab52479a",
+        "references/core/router/routing.md": "ddd80e971d3c6f204a13d8fc4e5b1839373ba767939803061e6886a86afed5f3",
+        "references/core/router/intent-catalog.yaml": "0b1c168e412e2130d7f614e0fa426abc1b4d5f691435d0e8bc214e01c03afbcb",
+        "references/core/state/state.md": "5c4de3a893671110f7063683d2929ecf5504b836554b7d1e5138ba1d3875efd3",
+        "references/core/principles/entry-guards.md": "c4719b775115f6c67c323b4de206f8752700cfa3a959b720a9e240b2bac65dba",
+        "references/core/principles/evidence-policy.md": "2023f804846b6ac4d91af7bf0ce78213fffeb08c1acd070fbaf64aaf826749bb",
+        "references/core/principles/index.md": "4ae2f36afe2d726259fa841cf8b6a1a87cee4c3558b7a0063c59405d6f92b9f8",
+        "references/core/principles/privacy-policy.md": "3a20011a64eed84174cb54ab1dac7bce2cafc2153d06c35e1fc397978cb3a1aa",
+        "references/core/principles/product-principles.md": "b2c1cf4eead6e2e73122811ddaa1aa360ace3a2dad6e53821da9b5287da59459",
+        "references/core/principles/research-policy.md": "e0dc13d43474708fb9b1c283fe4369b2dbe414fb880933c2fb4e3c49d2c9ca3c",
+        "references/core/principles/ux-language.md": "cbbbacfcfe8fb67839c0915427d1769685fb929dd9aec404d7e53cebf58763e2",
+        "references/core/workflows/w05-application-prep.md": "48697e8b2c5b92d94094b855f3cbe4c95087ce786fe739366e645e9df304c7e5",
+        "references/core/artifacts/application-pack.md": "15f024258369864c7d94b14192a2c87018472377f330aee5a945c55dc6684327",
+        "references/core/capabilities/career-evidence-discovery.md": "60ae5ef6fbda3669dd5bd119154bd5d14b1ec03af2d03c73a6493949ba6deed5",
+        "references/core/capabilities/copilot-bridge.md": "3d43fa34219e1967a3792ad0d5ea64f2452c2d0771cba93b0c404e350c5bb144",
+        "references/core/capabilities/experience-mining.md": "45740ecdb0008b1ba0f06fff6aae6a955f5fb6918b2b5850b35e1d36f9dd92d1",
+        "references/core/capabilities/story-bank.md": "8d648faef479c02cf3574a2b99207fbdaee45dd091a98d1a46d3029d4345bfc8",
+        "references/core/capabilities/resume.md": "178b1035d145ef252c089fe9d051b24a113f95b50e157ac76018bc9d26827e8d",
+        "references/core/capabilities/linkedin.md": "f25f3f913403a50eb03be7f1a68a1b1e464952f8d162c4605e0bb04a4287b3c1",
+        "references/core/capabilities/portfolio.md": "981bfc935e7160b2b4b2af9a27ce8c22f5570bffdb0da2d730750fe5e9a76ca8",
+        "references/core/capabilities/application-writing.md": "63a07b9cd864cd00ea30b3fb65a15226d89c7abc28196ac225655b392d278165",
+        "references/core/capabilities/networking.md": "a6d3a75669e4bd49a4fc9d375028d451964c375f7716d1724e3be1c0a4dadee4",
+        "references/core/capabilities/red-team.md": "917ad900ab59a59b021eafb11bf35f4f695ceababc243a2a2fae9a3b8e87d2cf",
+        "references/core/capabilities/application-pipeline.md": "9dc78300c585e04d5d9ddb67c991d67b3ecb5682a94e4b754f6b7fa8f892912f",
+        "references/core/capabilities/screening-engine.md": "92cbcbb4ad35b88e9e47c5c143e3ffb0f52860365300900410f75c9476d22222",
+        "references/core/capabilities/resume-artifact.md": "f8150170fe45e5f02bf74ba95c6bd4cfb406158c0910c04361337a63c50edc37",
+        "references/core/capabilities/human-voice.md": "bd0580691c88a60bf5ab6d6a09c2a8b03091e85847033ec2fee59ecd4fb17b59",
+        "references/core/capabilities/compensation.md": "cb8755ef9bc5ee0c83d8087ad28420ff910676caee9cd3def544d1ae1037035c",
+        "references/templates/artifacts/application-pack.md": "15abd070b520eb508f0a21e2a0bd34bdfbca80f0025a2a19dcec06e789dfe5f2",
+        "references/templates/artifacts/resume-submission.md": "2cf9c9939fb5b2241067c756895e28231b952f2dfcc0f1dbc33745f0cb659d36",
+        "references/templates/artifacts/evidence-exchange.md": "4a6dca10132d81d044d7184a5e779c16d3382350da832d1b66433cf8c4f9aa8c"
+      },
+      "transcript": [
+        {
+          "role": "user",
+          "content": "[시뮬레이션] Alpha 지원용 영문 이력서를 짧게 만들어줘. 내가 직접 했다고 확인한 경험은 operations analysis 3 years, performed 12 tests, reported defects뿐이야. 보고 방법·도구·문서 작성·품질·성과는 모름. JD는 SQL 필수지만 SQL 경험도 모름. 원래 완전 원격 조건을 유지하고 실제 지원은 하지 마."
+        },
+        {
+          "role": "assistant",
+          "content": "[시뮬레이션 전용] 아래는 확인된 사실만 사용한 Alpha 지원용 부분 초안입니다. 실제 지원 기록이나 계정 메모에는 반영하지 않습니다.\n\n## Short English Resume\n\n**[Name not provided]**  \n**Operations Analysis**\n\n### Professional Summary\n\n3 years of experience in operations analysis.\n\n### Experience\n\n**[Company, Job Title, and Dates not provided]**\n\n- Performed 12 tests.\n- Reported defects.\n\n### Skills\n\n- Operations analysis — 3 years\n- SQL — Unknown\n\n## JD Requirement Mapping\n\n| Alpha requirement | Match | Evidence / unresolved scope |\n|---|---|---|\n| SQL | Unknown | SQL experience has not been confirmed. |\n| Operations analysis | Unknown | Candidate has 3 years of confirmed experience, but this requirement was not supplied in the JD. |\n| Testing / defect reporting | Unknown | Confirmed candidate evidence, but not established as a JD requirement. Test type, method, tools, reporting method, and outcome remain unknown. |\n\n## Screening Review\n\n- **Recruiter Scan — Risk:** “3 years of experience in operations analysis” gives basic direction, but company, title, dates, and SQL evidence are missing.\n- **Hiring Manager Credibility — Risk:** “Performed 12 tests” and “Reported defects” are defensible action statements, but their context, technical depth, and outcomes are unknown.\n- **ATS file QA — NOT_CHECKED:** No DOCX/PDF was created or inspected. Text extraction, page count, reading order, Unicode, and visual rendering were not tested.\n- **Fully remote condition:** Required and unchanged. Whether Alpha satisfies it is **Unknown**.\n- **Ready:** `false`\n- **Submission:** Not submitted; do not submit.\n\n## Other Application Components\n\n- LinkedIn and digital footprint: **DEFER** — no material supplied.\n- Portfolio/handout: **DEFER** — insufficient evidence that it would help this application.\n- Cover letter, application answers, and recruiter messages: **SKIP** — not requested.\n- Consistency audit: Limited to the facts supplied; no unsupported impact, tools, documentation, or SQL claims were added.\n\n## Export/Inspection Checklist\n\nBefore this becomes submission-ready:\n\n- Add the actual employer, job title, and employment dates.\n- Confirm whether any SQL experience exists and its exact scope.\n- Export an editable DOCX and a text-based PDF.\n- Extract both files and verify text, order, bullet boundaries, dates, and Unicode.\n- Check PDF page count and visually inspect every page for clipping, overlap, and missing characters.\n\n다음으로 필요한 두 가지는 **실제 직함·회사명·근무기간**과 **SQL을 사용한 적이 있는지 여부(모름도 가능)**입니다."
+        }
+      ],
+      "deterministic_roundtrip": null
+    }
+  ],
+  "status": "INCOMPLETE",
+  "updated_at": "2026-10-13T15:50:34.553960+00:00"
+}

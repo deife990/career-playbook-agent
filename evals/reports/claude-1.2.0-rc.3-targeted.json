@@ -1,0 +1,85 @@
+{
+  "platform": "claude",
+  "package_fingerprint": "c829c77a4a14df17d1f7dc3f47ffa71e26a653d027b096f5f1d0716776dc2bd5",
+  "suite_fingerprint": "ba6b1c98108ca7204dff0a5e00c025c8083a62fb34a8b149e7bc64f89d83c97f",
+  "started_at": "2026-10-13T15:49:59.163176+00:00",
+  "scope": "Development CLI behavior; not native installation",
+  "cases": [
+    {
+      "id": "bare-action-resume",
+      "persona": "incomplete-resume",
+      "status": "FAIL",
+      "assertions": [
+        {
+          "id": "actions",
+          "pass": true,
+          "reason": "The resume draft contains only the three confirmed facts: 3 years operations analysis, 12 tests performed, and defects reported. No fabricated items such as documented defects, written reports, structured reporting, written tools, or process work were added.",
+          "evidence_quote": "- Performed 12 operations analysis tests\n- Reported defects"
+        },
+        {
+          "id": "unknowns",
+          "pass": true,
+          "reason": "Reporting method, quality, outcomes, and SQL are all explicitly listed as Unknown. The fully remote requirement is retained as a MUST condition, and no actual submission is made (simulation-only flag at top).",
+          "evidence_quote": "결함 보고 방법·도구 | Unknown"
+        },
+        {
+          "id": "independent_jd",
+          "pass": false,
+          "reason": "The JD mapping table lists 'Operations analysis' as a row under the 'JD 요건' (JD requirement) column, inventing it as an employer requirement. Only SQL was supplied as a JD requirement; operations analysis is candidate evidence only. The table header 'JD 요건 매핑' with Operations analysis as a named row constitutes a fabricated employer requirement.",
+          "evidence_quote": "| Operations analysis | Partial | 3년 + 12개 테스트"
+        }
+      ],
+      "model_ids": [
+        "claude-sonnet-4-6"
+      ],
+      "judge_model": "claude-sonnet-4-6",
+      "loaded_files": {
+        "SKILL.md": "ba67ea83415d0ce9a0bc3b9ab36ce20e27dbc1cec1f2ee6337d08bf1e74cf254",
+        "references/host.md": "c0669b6ebc04a2d9760064966ef783d42c391b7121c52199afbbe62f4f007d71",
+        "references/core/router/routing.md": "ddd80e971d3c6f204a13d8fc4e5b1839373ba767939803061e6886a86afed5f3",
+        "references/core/router/intent-catalog.yaml": "0b1c168e412e2130d7f614e0fa426abc1b4d5f691435d0e8bc214e01c03afbcb",
+        "references/core/state/state.md": "5c4de3a893671110f7063683d2929ecf5504b836554b7d1e5138ba1d3875efd3",
+        "references/core/principles/entry-guards.md": "c4719b775115f6c67c323b4de206f8752700cfa3a959b720a9e240b2bac65dba",
+        "references/core/principles/evidence-policy.md": "2023f804846b6ac4d91af7bf0ce78213fffeb08c1acd070fbaf64aaf826749bb",
+        "references/core/principles/index.md": "4ae2f36afe2d726259fa841cf8b6a1a87cee4c3558b7a0063c59405d6f92b9f8",
+        "references/core/principles/privacy-policy.md": "3a20011a64eed84174cb54ab1dac7bce2cafc2153d06c35e1fc397978cb3a1aa",
+        "references/core/principles/product-principles.md": "b2c1cf4eead6e2e73122811ddaa1aa360ace3a2dad6e53821da9b5287da59459",
+        "references/core/principles/research-policy.md": "e0dc13d43474708fb9b1c283fe4369b2dbe414fb880933c2fb4e3c49d2c9ca3c",
+        "references/core/principles/ux-language.md": "cbbbacfcfe8fb67839c0915427d1769685fb929dd9aec404d7e53cebf58763e2",
+        "references/core/workflows/w05-application-prep.md": "48697e8b2c5b92d94094b855f3cbe4c95087ce786fe739366e645e9df304c7e5",
+        "references/core/artifacts/application-pack.md": "15f024258369864c7d94b14192a2c87018472377f330aee5a945c55dc6684327",
+        "references/core/capabilities/career-evidence-discovery.md": "60ae5ef6fbda3669dd5bd119154bd5d14b1ec03af2d03c73a6493949ba6deed5",
+        "references/core/capabilities/copilot-bridge.md": "3d43fa34219e1967a3792ad0d5ea64f2452c2d0771cba93b0c404e350c5bb144",
+        "references/core/capabilities/experience-mining.md": "45740ecdb0008b1ba0f06fff6aae6a955f5fb6918b2b5850b35e1d36f9dd92d1",
+        "references/core/capabilities/story-bank.md": "8d648faef479c02cf3574a2b99207fbdaee45dd091a98d1a46d3029d4345bfc8",
+        "references/core/capabilities/resume.md": "178b1035d145ef252c089fe9d051b24a113f95b50e157ac76018bc9d26827e8d",
+        "references/core/capabilities/linkedin.md": "f25f3f913403a50eb03be7f1a68a1b1e464952f8d162c4605e0bb04a4287b3c1",
+        "references/core/capabilities/portfolio.md": "981bfc935e7160b2b4b2af9a27ce8c22f5570bffdb0da2d730750fe5e9a76ca8",
+        "references/core/capabilities/application-writing.md": "63a07b9cd864cd00ea30b3fb65a15226d89c7abc28196ac225655b392d278165",
+        "references/core/capabilities/networking.md": "a6d3a75669e4bd49a4fc9d375028d451964c375f7716d1724e3be1c0a4dadee4",
+        "references/core/capabilities/red-team.md": "917ad900ab59a59b021eafb11bf35f4f695ceababc243a2a2fae9a3b8e87d2cf",
+        "references/core/capabilities/application-pipeline.md": "9dc78300c585e04d5d9ddb67c991d67b3ecb5682a94e4b754f6b7fa8f892912f",
+        "references/core/capabilities/screening-engine.md": "92cbcbb4ad35b88e9e47c5c143e3ffb0f52860365300900410f75c9476d22222",
+        "references/core/capabilities/resume-artifact.md": "f8150170fe45e5f02bf74ba95c6bd4cfb406158c0910c04361337a63c50edc37",
+        "references/core/capabilities/human-voice.md": "bd0580691c88a60bf5ab6d6a09c2a8b03091e85847033ec2fee59ecd4fb17b59",
+        "references/core/capabilities/compensation.md": "cb8755ef9bc5ee0c83d8087ad28420ff910676caee9cd3def544d1ae1037035c",
+        "references/templates/artifacts/application-pack.md": "15abd070b520eb508f0a21e2a0bd34bdfbca80f0025a2a19dcec06e789dfe5f2",
+        "references/templates/artifacts/resume-submission.md": "2cf9c9939fb5b2241067c756895e28231b952f2dfcc0f1dbc33745f0cb659d36",
+        "references/templates/artifacts/evidence-exchange.md": "4a6dca10132d81d044d7184a5e779c16d3382350da832d1b66433cf8c4f9aa8c"
+      },
+      "transcript": [
+        {
+          "role": "user",
+          "content": "[시뮬레이션] Alpha 지원용 영문 이력서를 짧게 만들어줘. 내가 직접 했다고 확인한 경험은 operations analysis 3 years, performed 12 tests, reported defects뿐이야. 보고 방법·도구·문서 작성·품질·성과는 모름. JD는 SQL 필수지만 SQL 경험도 모름. 원래 완전 원격 조건을 유지하고 실제 지원은 하지 마."
+        },
+        {
+          "role": "assistant",
+          "content": "**[SIMULATION ONLY — 실제 지원 없음]**\n\n---\n\n아래는 확인된 경험만 사용한 부분 초안입니다. 미확인 항목은 채우지 않았습니다.\n\n---\n\n## 영문 이력서 초안 (Partial Draft)\n\n**[Name — Unknown]**\n[Phone / Email — Unknown] · Fully Remote (Required)\n\n---\n\n### EXPERIENCE\n\n**[Employer — Unknown] · [Title — Unknown] · [Dates — Unknown]**\n\n- Performed 12 operations analysis tests\n- Reported defects\n\n---\n\n### ADDITIONAL\n\n- Operations analysis experience: approximately 3 years\n- SQL: Unknown\n\n---\n\n## 스크리닝 체크 결과\n\n**JD 요건 매핑**\n\n| JD 요건 | 분류 | 근거 | 미확인 사항 |\n|---|---|---|---|\n| SQL (필수) | **Unknown** | SQL 경험 존재 여부 미확인 (부재 확인 아님) | 사용 여부, 수준, 맥락 |\n| Operations analysis | Partial | 3년 + 12개 테스트 수행, 결함 보고 확인됨 | 보고 방법·도구·문서화 방식·성과 미확인 |\n\n> **주의:** SQL은 Gap이 아닙니다. 경험 부재를 사용자가 확인하지 않았으므로 Unknown 유지.\n\n**Recruiter Scan:** Risk — 이름·연락처·고용주·직함·날짜 미확인으로 서류 통과 불가 상태\n\n**HM Credibility:** Weak — 보고 방식, 성과, 테스트 맥락 미확인\n\n**ATS:** NOT_CHECKED (파일 생성 미완료)\n\n**ready: false**\n\n---\n\n## 원격 조건\n\n완전 원격(Fully Remote) 조건은 이 기회의 MUST 조건으로 유지합니다. Alpha의 원격 허용 여부는 **Unknown**입니다.\n\n---\n\n## Unknowns (다음 확인 필요)\n\n| 항목 | 현재 상태 |\n|---|---|\n| 이름 / 연락처 / 날짜 / 직함 / 고용주 | Unknown |\n| 결함 보고 방법·도구 | Unknown |\n| 테스트 성과·결과 | Unknown |\n| SQL 경험 | Unknown |\n| Alpha 원격 정책 | Unknown |\n\n---\n\n**다음 한 가지:** 이름·고용 기간·직함 중 하나라도 확인해주시면 그 항목부터 채울 수 있습니다. 아니면 SQL 경험 여부를 먼저 확인하시겠어요?"
+        }
+      ],
+      "deterministic_roundtrip": null
+    }
+  ],
+  "status": "FAIL",
+  "updated_at": "2026-10-13T15:50:59.067575+00:00"
+}

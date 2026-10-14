@@ -11,3 +11,8 @@ when evidenced. Map stories to target criteria and interview question tree, with
 User confirms facts before final versions. W07 review adjusts weak structure/one specific missing
 detail; W08 actual questions enrich or revise story emphasis, not historical achievements.
 Append revisions with date/reason; retain prior factual context and evidence links.
+
+Confirmed [discovery episodes](career-evidence-discovery.md) provide the same global evidence
+spine across future applications, LinkedIn, portfolio and interviews. Keep episode/evidence IDs;
+multiple source records do not create duplicate achievements. Potential interview-derived evidence
+needs separate confirmation before story facts change; actual recalled answers stay unchanged.

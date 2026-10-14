@@ -29,6 +29,10 @@ evidence checks. Unperformed steps remain PENDING, not PASS. A quick audit is no
 3. **Master Resume**: inventory true roles, actual titles/dates, education/certifications/projects,
    skills and candidate bullets. Keep assertions/provenance for summary and sections as well as bullets.
 4. **Target Job Analysis**: reuse W04 JD, version/date/source. Requirements have stable keys and
+   must come from supplied/sourced role evidence, never the candidate's experience. If SQL is the
+   only supplied criterion, it is the only employer-requirement row; other experience belongs in
+   a separate candidate inventory. Preserve original MUST work conditions in a separate audit,
+   with unknown employer compliance explicitly Unknown even for partial drafts. Requirements have
    categories REQUIRED/PREFERRED/RESPONSIBILITIES/DOMAIN/TOOLS_TECHNOLOGIES/STAKEHOLDERS/SENIORITY/
    BUSINESS_OUTCOMES/HIDDEN_INFERRED. Hidden needs always INFERENCE with confidence and verification
    question. Frequency/order are clues, not proof of hard screening rules. Omission is not absence.
@@ -41,6 +45,8 @@ evidence checks. Unperformed steps remain PENDING, not PASS. A quick audit is no
    outcome; trace each part to a confirmed fact, story and source field. Remove unsupported parts
    before presenting drafts. Unknown benefit means no result clause. A source containing a number
    somewhere does not prove that a proposed outcome uses that number correctly.
+   Do not join unrelated facts into invented action context: three years of operations analysis
+   and twelve tests do not establish that those were operations analysis tests.
 8. **ATS Structural QA**: inspect layout/fields using [document QA](resume-artifact.md). No extraction
    capability means NOT_CHECKED, not ATS-Ready. Formatting risk is separate from qualification gaps.
 9. **JD Coverage Analysis**: each requirement maps DIRECT_MATCH (same demonstrated work), TRANSFERABLE
@@ -50,6 +56,10 @@ evidence checks. Unperformed steps remain PENDING, not PASS. A quick audit is no
    Confirmed limited exposure is not wholly Unknown: reviewing others' SQL query results gives
    PARTIAL coverage of SQL data validation. Preserve that exact action and mark validation purpose,
    query authoring and ownership unresolved; this is not DIRECT_MATCH or proof of writing SQL.
+   Propagate that exact state through Red Team findings, risk labels and final readiness reasons:
+   required-but-unknown SQL is "SQL experience unconfirmed", never "no SQL", "SQL Gap" or
+   "mandatory requirement unmet". A partial draft and missing proof establish pending verification,
+   not confirmed qualification failure. Scan the whole output for contradictory absence claims.
 10. **Recruiter Scan Test**: simulate a short first look (5–10 seconds is a review exercise, not a
     universal measured statistic). State who this candidate appears to be, target role clarity,
     recent title/company/scope/date visibility, top evidence placement, density, hierarchy,

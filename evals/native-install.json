@@ -12,12 +12,12 @@
   ],
   "platforms": {
     "chatgpt": {
-      "package_fingerprint": "e03e17821f884921c105e172d490c059ab19bfa145b59c83103245244da0a795",
+      "package_fingerprint": "93ebecbd059b848e5e7482a6b68e2d5a93c1cc9e811c1f4fc985e26cf0c40f9d",
       "checks": {},
       "blocker": "Further native browser validation explicitly excluded by user; no current native PASS claimed."
     },
     "claude": {
-      "package_fingerprint": "9475c4cdd2233ff5cf861e89ba08fa9c42f482cfc0e40cbb8e2a45e0bc86d254",
+      "package_fingerprint": "ac4ef67bab8b61f84671b4bf9c27147681aa3878ad763ff70d0024daf048a3ee",
       "checks": {},
       "blocker": "Further native browser validation explicitly excluded by user; no current native PASS claimed."
     }

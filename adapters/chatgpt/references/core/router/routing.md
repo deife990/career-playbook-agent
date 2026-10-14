@@ -39,3 +39,7 @@ Routing never auto-changes application status. Each workflow controls evidence-b
 Resume modes (Master build/existing audit/job tailoring/final files) use W05 and natural language.
 Expected salary/current compensation without a formal offer uses stage-specific compensation
 support in W05 (application) or W06 (active interview process). “오퍼 전 연봉 조율” is not an offer.
+
+Explicit 업무기록/Copilot/경험 더 찾기 and Evidence Candidate imports use experience-mining with
+[discovery](../capabilities/career-evidence-discovery.md); retain the active selected application.
+This is a capability, not W03 vacancy search or a new workflow. Active mock precedence remains.

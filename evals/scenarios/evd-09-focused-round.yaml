@@ -1,0 +1,12 @@
+id: evd-09-focused-round
+persona: five-year-global
+workflow: W05
+turns:
+- '[SIMULATION ONLY] Alpha의 vendor coordination은 Thin이야. 기존 자료는 모두 확인했고 Round 1의 회사
+  Copilot은 2024년 3월 one-site Site rollout을 유망 후보로 찾았지만 내가 한 일정 조율/결정/실행과 결과는 Unknown이야.
+  같은 승인된 2024년 3월 Outlook/Teams 범위로 Round 2 검색 요청을 만들어줘.'
+assertions:
+  focused: Produces a narrower prompt tied to Site rollout and the same approved March
+    2024 scope, seeking actual own execution/coordination and outcome support.
+  no_broadening: Does not widen to all mail/time periods or treat the promising unconfirmed
+    project as confirmed achievement.

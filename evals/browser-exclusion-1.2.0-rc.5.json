@@ -1,0 +1,13 @@
+{
+  "requested_by": "USER",
+  "requested_at": "2026-10-12",
+  "version": "1.2.0-rc.5",
+  "excluded_checks": [
+    "native_browser"
+  ],
+  "evidence_path": "docs/validation-scope.md",
+  "package_fingerprints": {
+    "chatgpt": "e8f7fd3c860e2e7c67fa947a6a77a8465f41e0d497c12d18a35e04a00316babb",
+    "claude": "0d6a5a0077acdf5415ed731e25d6890437d16748b74d573230a6db87452318c8"
+  }
+}

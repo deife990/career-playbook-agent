@@ -1,0 +1,11 @@
+id: evd-11-manual-fallback
+persona: five-year-global
+workflow: W05
+turns:
+- '[SIMULATION ONLY] Alpha vendor coordination 기준에 쓸 사례가 더 필요해. 현재 표현은 vendor support뿐이라
+  Thin이고 다른 기존 자료는 미제공이야. 우리 회사에는 Copilot이나 승인된 AI가 없고 연결도 할 수 없어. 어떻게 계속하지?'
+assertions:
+  fallback: Gives a concrete work memory cue about vendor schedules/onsite/escalation/work
+    scope or a bounded sanitized-file option; workflow continues.
+  no_dependency: No mandatory Work IQ, Graph, corporate account linking, admin setup,
+    API key or new service.

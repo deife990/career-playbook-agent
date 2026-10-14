@@ -1,0 +1,20 @@
+id: context-v12-model-roundtrip
+persona: multi-application
+capability: career-state
+workflow: null
+context_fixture: fixtures/state/discovery-v12.json
+turns:
+- '[SIMULATION ONLY] 첨부한 v1.2 Context Pack을 순수 복원하고 그대로 다시 내보내줘. 변경하거나 새 경험을 추출하지
+  마. 전역 경험 사건, 사용자 확인/개인정보 검토, 후보, 라운드/중단 이유, 실제 제출본/복기와 모든 기존 ID·값·null·배열 순서를 보존해.
+  응답은 모든 파일명을 키로 하는 하나의 완전한 JSON 객체만 줘. 생략이나 placeholder 없이, 추가 설명 없이 JSON만 줘. 실제
+  계정 메모리에 저장하지 마.'
+assertions:
+  lossless: Preserves every provided v1.2 episode, evidence, candidate, session, boolean/null/ID/order
+    and immutable submitted/actual history in complete JSON; no unrequested new facts
+    or empty-array normalization.
+    Existing keys/values/IDs/nulls/array order must remain unchanged. Adding only schema-supported
+    optional fields with null values is allowed by the existing lossless state contract and is
+    not a new fact. Added empty arrays/objects/non-null facts, omitted original keys or changed
+    existing values still fail.
+  privacy: No raw mail/body/internal URL or synthetic account-memory saving is introduced;
+    confirmed generalized facts remain USER FACT, not externally verified.

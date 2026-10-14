@@ -39,6 +39,52 @@ def test_successful_text_mentioning_429_is_not_a_service_failure(monkeypatch,tmp
         CompletedProcess(cmd,0,'{"is_error":false,"result":"429 is only a fictional example.","modelUsage":{"test-model":{}}}',''))
     assert call_model('claude','synthetic prompt',tmp_path,'turn-1')==('429 is only a fictional example.','test-model')
 
+def test_missing_fresh_output_cannot_reuse_previous_response(monkeypatch,tmp_path):
+    from subprocess import CompletedProcess
+    from scripts.run_model_evals import call_model
+    (tmp_path/'turn-1.txt').write_text('old passing answer')
+    monkeypatch.setattr('scripts.run_model_evals.subprocess.run',lambda cmd,**kwargs:
+        CompletedProcess(cmd,0,'','model: current-model'))
+    with pytest.raises(RuntimeError,match='Missing actual model output'):
+        call_model('chatgpt','synthetic prompt',tmp_path,'turn-1')
+    assert not (tmp_path/'turn-1.txt').exists()
+
+def test_capacity_retry_cannot_reuse_failed_attempt_output(monkeypatch,tmp_path):
+    from subprocess import CompletedProcess
+    from scripts.run_model_evals import call_model
+    calls=[]
+    def run(cmd,**kwargs):
+        calls.append(cmd)
+        if len(calls)==1:
+            (tmp_path/'turn-1.txt').write_text('incomplete failed attempt')
+            return CompletedProcess(cmd,1,'','Selected model is at capacity')
+        return CompletedProcess(cmd,0,'','model: current-model')
+    monkeypatch.setattr('scripts.run_model_evals.subprocess.run',run)
+    monkeypatch.setattr('scripts.run_model_evals.time.sleep',lambda seconds:None)
+    with pytest.raises(RuntimeError,match='Missing actual model output'):
+        call_model('chatgpt','synthetic prompt',tmp_path,'turn-1')
+    assert len(calls)==2 and not (tmp_path/'turn-1.txt').exists()
+    assert 'capacity' in (tmp_path/'turn-1.capacity-1.stderr.txt').read_text()
+
+@pytest.mark.parametrize('partial',[b'partial response','partial response'])
+def test_timeout_preserves_only_current_partial_logs(monkeypatch,tmp_path,partial):
+    from subprocess import TimeoutExpired
+    from scripts.run_model_evals import call_model,ModelTimeoutError
+    for suffix in ('txt','stdout.txt','stderr.txt'):
+        (tmp_path/f'turn-1.{suffix}').write_text('old passing response/log')
+    calls=[]
+    def run(cmd,**kwargs):
+        calls.append(cmd)
+        (tmp_path/'turn-1.txt').write_text('incomplete current output')
+        raise TimeoutExpired(cmd,600,output=partial,stderr=b'current provider diagnostic')
+    monkeypatch.setattr('scripts.run_model_evals.subprocess.run',run)
+    with pytest.raises(ModelTimeoutError):call_model('claude','synthetic prompt',tmp_path,'turn-1')
+    assert len(calls)==1 and not (tmp_path/'turn-1.txt').exists()
+    assert (tmp_path/'turn-1.stdout.txt').read_text()=='partial response'
+    diagnostic=(tmp_path/'turn-1.stderr.txt').read_text()
+    assert 'current provider diagnostic' in diagnostic and 'timed out' in diagnostic
+    assert 'old passing' not in diagnostic
+
 def test_suite_digest_tracks_persona_and_seed_changes(tmp_path):
     from scripts.run_model_evals import suite_fingerprint
     cases=tmp_path/'evals/scenarios';cases.mkdir(parents=True)
@@ -142,3 +188,13 @@ def test_bad_quote_repair_selects_original_line_and_never_changes_verdict(monkey
                           [{'role':'assistant','content':'**Invented**'}],{},None,tmp_path)
     assert len(calls)==2 and rows[0]['pass'] is False
     assert rows[0]['evidence_quote']=='**Invented**'
+
+
+def test_progressive_shim_loads_linked_exchange_markdown_without_unneeded_json_defaults():
+    from scripts.generate_adapters import generate
+    from scripts.run_model_evals import package_context
+    case={'workflow':'W05'}
+    for platform in ('chatgpt','claude'):
+        _,hashes=package_context(generate(platform),platform,case)
+        assert 'references/templates/artifacts/evidence-exchange.md' in hashes
+        assert not any(p.endswith('.json') and '/templates/' in p for p in hashes)

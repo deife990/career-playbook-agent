@@ -1,3 +1,56 @@
+# Current v1.2 candidate — 2026-10-14
+
+**1.2.0-rc.7** implementation, guides and deterministic runtime archives are complete.
+189 deterministic tests and all static checks pass. Both hosts passed all fourteen EVD cases
+and both legacy/v1.2 state roundtrips. Complete current actual-model evidence:
+
+| Host | Current result |
+|---|---|
+| ChatGPT | 48/48 PASS; one objective negation false-positive reviewed on the unchanged subject |
+| Claude | 48/48 PASS; ten cases run fresh after the provider reset |
+
+Claude reported `You've hit your limit · resets 5:50pm (Asia/Seoul)` on 2026-10-14; the ten pending
+cases were run after the reset on the unchanged package. **Scoped release readiness PASS** with strict
+`--require-ready` packaging; exact ZIP hashes match the artifact-identity record.
+Browser validation is EXCLUDED_BY_USER, not native certification; corporate tenant retrieval is
+not executed. No public release was posted. Source commits and distribution preparation are
+documented in [the v1.2 distribution guide](v1-2-release-preparation.md).
+This is a release-candidate gate, not a public release. [Current readiness record](../evals/reports/release-candidate-1.2.0-rc.7.json).
+
+The original ChatGPT 47/48 FAIL report is retained. Its last judge treated “VERIFIED FACT는 없음”
+as assigning VERIFIED FACT, although both actions explicitly remained USER FACT. Manual inspection
+and one completed independent review of the unchanged full response/criteria confirmed the negation;
+package, suite, loaded files and provider response identity were verified.
+[Review audit](../evals/reports/semantic-review-1.2.0-rc.7.json).
+Claude's original timeout ERROR is also retained. Its completed actual submitted-baseline response
+was independently judged with unchanged criteria on available ChatGPT, after provider-output,
+transcript and package/suite identity checks; the Claude subject was not regenerated or substituted.
+[Timeout recovery](../evals/reports/claude-f-timeout-recovery-1.2.0-rc.7.json).
+
+## Earlier v1.2 development checkpoints
+
+1.2.0-rc.7 implements the discovery/bridge upgrade. Deterministic tests: 189 PASS; static checks
+and packaging PASS. The full **48-case** actual-model suites are required; no v1.2 readiness PASS
+is claimed before they finish. Original rc.1 targeted failures are preserved (privacy audit echo;
+new recall confirmation). rc.2 passed all fourteen EVD cases and both state roundtrips on ChatGPT,
+but omitted an original work condition. rc.3 retained that condition but Claude still invented a
+JD row from candidate experience. rc.4 reinforces the shared employer/candidate boundary;
+older package results do not certify it.
+Manual review found a further rc.4 contradiction: SQL stayed Unknown in the mapping but became
+categorical absence/Gap in red-team/readiness notes. The original automatic PASS and manual FAIL
+are both preserved. rc.5 fixes whole-output consistency; its targeted case passed on both hosts
+and was inspected manually. Full current suites and scoped readiness remain pending.
+Rc.6 also repairs W04's unsupported accuracy-review interpretation and clarifies state judging
+against the existing optional-null lossless contract. Both targeted W04/W05 cases passed on both
+hosts; full 48-case suites now run fresh with the clarified assertion and current package.
+Rc.6 full suites stopped on actual usage limits (ChatGPT 34 PASS / one behavior FAIL / one ERROR;
+Claude seven PASS / two ERROR). Its EVD-08 merged proposal lost unique safe date/title references.
+Rc.7 preserves all minimal provenance entries and passes that targeted case on both hosts;
+the actual answers were inspected. New full current suites are running. Model timeouts now
+preserve current logs and stop; stale response files cannot satisfy a new invocation.
+Browser validation remains EXCLUDED_BY_USER, not a native PASS. Corporate tenant retrieval is
+not executed by these synthetic tests. The v1.1 scoped baseline below remains immutable.
+
 # Gate evidence
 The v1.1 baseline **1.1.0-rc.7** passed 144 deterministic tests and both complete
 actual-model suites (33/33 per host). Browser validation is EXCLUDED_BY_USER, not certified.
@@ -61,7 +114,7 @@ mixing in v1.2 work. No v1.2 implementation or Git publication was performed for
 
 rc.5 final model evidence: Claude 32/33 (synthetic submission boundary FAIL), ChatGPT 22 passing cases before account limit. rc.6 repairs the boundary and requires both complete fresh 33-case suites. The user-requested browser exclusion is version/fingerprint-bound in evals/browser-exclusion-1.1.0-rc.6.json.
 
-## Current continuation
+## Historical v1.1 continuation before closure
 
 rc.7 fixes the rc.6 final-handoff omission and debrief outcome reassurance. Claude returned
 `You've hit your limit · resets 5:20am (Asia/Seoul)` during the first rc.7 subject call;

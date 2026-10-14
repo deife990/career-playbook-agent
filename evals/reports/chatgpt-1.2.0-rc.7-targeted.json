@@ -1,0 +1,79 @@
+{
+  "platform": "chatgpt",
+  "package_fingerprint": "93ebecbd059b848e5e7482a6b68e2d5a93c1cc9e811c1f4fc985e26cf0c40f9d",
+  "suite_fingerprint": "5887966e02630b92c2a0324a289ff2b777191626bb701d86cee92fa51a0bae49",
+  "started_at": "2026-10-14T03:51:20.101464+00:00",
+  "scope": "Development CLI behavior; not native installation",
+  "cases": [
+    {
+      "id": "evd-08-one-episode",
+      "persona": "five-year-global",
+      "status": "PASS",
+      "assertions": [
+        {
+          "id": "cluster",
+          "pass": true,
+          "reason": "The assistant groups all six records into one March 2024 one-site rollout episode, represents the repeated action only once as unconfirmed, and retains all six dated evidence references.",
+          "evidence_quote": "- 사건 수: 1건\n- 자료 수: 6개"
+        },
+        {
+          "id": "no_inflation",
+          "pass": true,
+          "reason": "The response explicitly refuses to count the six sources as separate achievements or projects, adds no summed metrics, and keeps the personal action unconfirmed and unpromoted.",
+          "evidence_quote": "개인 행동: **확인 전** — 자료에는 “vendor installation dates 조율”로 기재되어 있으나"
+        }
+      ],
+      "model_ids": [
+        "gpt-5.6-sol"
+      ],
+      "judge_model": "gpt-5.6-sol",
+      "loaded_files": {
+        "skills/application-prep/SKILL.md": "92fe8aa9c51aa38ce514fd1249a2e55b2832c1b889cdff09d2659dc8f1b42dad",
+        "references/host.md": "a03653d3d347e6fafbf3867bc067d5c23a8618fe2813ac737013933bab52479a",
+        "references/core/router/routing.md": "ddd80e971d3c6f204a13d8fc4e5b1839373ba767939803061e6886a86afed5f3",
+        "references/core/router/intent-catalog.yaml": "0b1c168e412e2130d7f614e0fa426abc1b4d5f691435d0e8bc214e01c03afbcb",
+        "references/core/state/state.md": "5c4de3a893671110f7063683d2929ecf5504b836554b7d1e5138ba1d3875efd3",
+        "references/core/principles/entry-guards.md": "af3ce7b503cc784db0f0ac8dbb246bc68c4cf148362a8a4743764b31d0fc2a52",
+        "references/core/principles/evidence-policy.md": "2023f804846b6ac4d91af7bf0ce78213fffeb08c1acd070fbaf64aaf826749bb",
+        "references/core/principles/index.md": "4ae2f36afe2d726259fa841cf8b6a1a87cee4c3558b7a0063c59405d6f92b9f8",
+        "references/core/principles/privacy-policy.md": "3a20011a64eed84174cb54ab1dac7bce2cafc2153d06c35e1fc397978cb3a1aa",
+        "references/core/principles/product-principles.md": "b2c1cf4eead6e2e73122811ddaa1aa360ace3a2dad6e53821da9b5287da59459",
+        "references/core/principles/research-policy.md": "e0dc13d43474708fb9b1c283fe4369b2dbe414fb880933c2fb4e3c49d2c9ca3c",
+        "references/core/principles/ux-language.md": "cbbbacfcfe8fb67839c0915427d1769685fb929dd9aec404d7e53cebf58763e2",
+        "references/core/workflows/w05-application-prep.md": "48697e8b2c5b92d94094b855f3cbe4c95087ce786fe739366e645e9df304c7e5",
+        "references/core/artifacts/application-pack.md": "15f024258369864c7d94b14192a2c87018472377f330aee5a945c55dc6684327",
+        "references/core/capabilities/career-evidence-discovery.md": "f2bddd0b13d9290e9655e4f93d8591e43d250f7056a597916c70d348bab0ef7b",
+        "references/core/capabilities/copilot-bridge.md": "3d43fa34219e1967a3792ad0d5ea64f2452c2d0771cba93b0c404e350c5bb144",
+        "references/core/capabilities/experience-mining.md": "45740ecdb0008b1ba0f06fff6aae6a955f5fb6918b2b5850b35e1d36f9dd92d1",
+        "references/core/capabilities/story-bank.md": "8d648faef479c02cf3574a2b99207fbdaee45dd091a98d1a46d3029d4345bfc8",
+        "references/core/capabilities/resume.md": "178b1035d145ef252c089fe9d051b24a113f95b50e157ac76018bc9d26827e8d",
+        "references/core/capabilities/linkedin.md": "f25f3f913403a50eb03be7f1a68a1b1e464952f8d162c4605e0bb04a4287b3c1",
+        "references/core/capabilities/portfolio.md": "981bfc935e7160b2b4b2af9a27ce8c22f5570bffdb0da2d730750fe5e9a76ca8",
+        "references/core/capabilities/application-writing.md": "63a07b9cd864cd00ea30b3fb65a15226d89c7abc28196ac225655b392d278165",
+        "references/core/capabilities/networking.md": "a6d3a75669e4bd49a4fc9d375028d451964c375f7716d1724e3be1c0a4dadee4",
+        "references/core/capabilities/red-team.md": "917ad900ab59a59b021eafb11bf35f4f695ceababc243a2a2fae9a3b8e87d2cf",
+        "references/core/capabilities/application-pipeline.md": "9dc78300c585e04d5d9ddb67c991d67b3ecb5682a94e4b754f6b7fa8f892912f",
+        "references/core/capabilities/screening-engine.md": "00d8c9a7fadbeaefd5be616f79e8d3a9e27e367216cfc248ccc854fbaf4bbba9",
+        "references/core/capabilities/resume-artifact.md": "f8150170fe45e5f02bf74ba95c6bd4cfb406158c0910c04361337a63c50edc37",
+        "references/core/capabilities/human-voice.md": "bd0580691c88a60bf5ab6d6a09c2a8b03091e85847033ec2fee59ecd4fb17b59",
+        "references/core/capabilities/compensation.md": "cb8755ef9bc5ee0c83d8087ad28420ff910676caee9cd3def544d1ae1037035c",
+        "references/templates/artifacts/application-pack.md": "15abd070b520eb508f0a21e2a0bd34bdfbca80f0025a2a19dcec06e789dfe5f2",
+        "references/templates/artifacts/resume-submission.md": "2cf9c9939fb5b2241067c756895e28231b952f2dfcc0f1dbc33745f0cb659d36",
+        "references/templates/artifacts/evidence-exchange.md": "4a6dca10132d81d044d7184a5e779c16d3382350da832d1b66433cf8c4f9aa8c"
+      },
+      "transcript": [
+        {
+          "role": "user",
+          "content": "[SIMULATION ONLY] Alpha vendor coordination 관련 자료 6개야. 모두 같은 2024년 3월 one-site Site rollout 사건임을 확인했어. 개인 행동은 아직 확인 전이니 사건 묶음만 제안해줘. 6개 성과로 늘리지 마.\n## Evidence Candidate 1\n\nTarget Criterion:\nVendor coordination\n\nProject / Event:\nSite rollout\n\nPeriod:\n2024-03\n\nSituation:\nUnknown\n\nMy Actions:\n- Coordinated vendor installation dates.\n\nOther People's / Team Actions:\nUnknown\n\nSystems / Technologies:\nUnknown\n\nScope:\none site\n\nOutcome:\nUnknown\n\nEvidence References:\n- 2024-03-17 — Rollout update 1\n\nUncertainties:\nUnknown\n\nSensitive Information Removed:\nYes\n\n## Evidence Candidate 2\n\nTarget Criterion:\nVendor coordination\n\nProject / Event:\nSite rollout\n\nPeriod:\n2024-03\n\nSituation:\nUnknown\n\nMy Actions:\n- Coordinated vendor installation dates.\n\nOther People's / Team Actions:\nUnknown\n\nSystems / Technologies:\nUnknown\n\nScope:\none site\n\nOutcome:\nUnknown\n\nEvidence References:\n- 2024-03-18 — Rollout update 2\n\nUncertainties:\nUnknown\n\nSensitive Information Removed:\nYes\n\n## Evidence Candidate 3\n\nTarget Criterion:\nVendor coordination\n\nProject / Event:\nSite rollout\n\nPeriod:\n2024-03\n\nSituation:\nUnknown\n\nMy Actions:\n- Coordinated vendor installation dates.\n\nOther People's / Team Actions:\nUnknown\n\nSystems / Technologies:\nUnknown\n\nScope:\none site\n\nOutcome:\nUnknown\n\nEvidence References:\n- 2024-03-19 — Rollout update 3\n\nUncertainties:\nUnknown\n\nSensitive Information Removed:\nYes\n\n## Evidence Candidate 4\n\nTarget Criterion:\nVendor coordination\n\nProject / Event:\nSite rollout\n\nPeriod:\n2024-03\n\nSituation:\nUnknown\n\nMy Actions:\n- Coordinated vendor installation dates.\n\nOther People's / Team Actions:\nUnknown\n\nSystems / Technologies:\nUnknown\n\nScope:\none site\n\nOutcome:\nUnknown\n\nEvidence References:\n- 2024-03-20 — Rollout update 4\n\nUncertainties:\nUnknown\n\nSensitive Information Removed:\nYes\n\n## Evidence Candidate 5\n\nTarget Criterion:\nVendor coordination\n\nProject / Event:\nSite rollout\n\nPeriod:\n2024-03\n\nSituation:\nUnknown\n\nMy Actions:\n- Coordinated vendor installation dates.\n\nOther People's / Team Actions:\nUnknown\n\nSystems / Technologies:\nUnknown\n\nScope:\none site\n\nOutcome:\nUnknown\n\nEvidence References:\n- 2024-03-21 — Rollout update 5\n\nUncertainties:\nUnknown\n\nSensitive Information Removed:\nYes\n\n## Evidence Candidate 6\n\nTarget Criterion:\nVendor coordination\n\nProject / Event:\nSite rollout\n\nPeriod:\n2024-03\n\nSituation:\nUnknown\n\nMy Actions:\n- Coordinated vendor installation dates.\n\nOther People's / Team Actions:\nUnknown\n\nSystems / Technologies:\nUnknown\n\nScope:\none site\n\nOutcome:\nUnknown\n\nEvidence References:\n- 2024-03-22 — Rollout update 6\n\nUncertainties:\nUnknown\n\nSensitive Information Removed:\nYes"
+        },
+        {
+          "role": "assistant",
+          "content": "[SIMULATION ONLY]\n\n### 사건 묶음 제안 — 확인 전 후보\n\n- 목표 기준: Vendor coordination\n- 사건: 2024년 3월, 한 개 사이트의 Site rollout\n- 사건 수: 1건\n- 자료 수: 6개\n- 범위: one site\n- 상황·팀 행동·시스템·성과: Unknown\n- 개인 행동: **확인 전** — 자료에는 “vendor installation dates 조율”로 기재되어 있으나, 아직 본인의 실제 수행 행동으로 확정하지 않음\n- 소유권 분류: Unknown\n- 상태: 경력 근거나 이력서 문구로 승격하지 않은 후보 묶음\n\nEvidence References:\n\n- 2024-03-17 — Rollout update 1\n- 2024-03-18 — Rollout update 2\n- 2024-03-19 — Rollout update 3\n- 2024-03-20 — Rollout update 4\n- 2024-03-21 — Rollout update 5\n- 2024-03-22 — Rollout update 6\n\n여섯 자료는 같은 사건을 뒷받침하는 개별 출처이며, **6개의 성과나 프로젝트로 계산하지 않습니다.** 개인 행동 확인 전이므로 CareerEvidence나 실제 지원 이력에는 반영하지 않습니다."
+        }
+      ],
+      "deterministic_roundtrip": null
+    }
+  ],
+  "status": "INCOMPLETE",
+  "updated_at": "2026-10-14T03:51:42.385693+00:00"
+}

@@ -1,0 +1,62 @@
+{
+  "version": "1.2.0-rc.7",
+  "reviewed_at": "2026-10-14T04:43:11.616231+00:00",
+  "kind": "MANUAL_AND_INDEPENDENT_SEMANTIC_REVIEW",
+  "case_id": "user-confirmation-classification",
+  "original_report": "evals/reports/chatgpt-1.2.0-rc.7-before-semantic-review.json",
+  "original_status": "FAIL",
+  "original_assertions": [
+    {
+      "id": "provenance",
+      "pass": false,
+      "reason": "The assistant correctly retained the confirmation as a user fact, but it nevertheless introduced the prohibited VERIFIED FACT label.",
+      "evidence_quote": "외부 검증 자료가 없어 **VERIFIED FACT는 없음**"
+    },
+    {
+      "id": "integrity",
+      "pass": true,
+      "reason": "It preserved SQL, outcomes, and education as unknown, retained remote work as mandatory, and did not invent an achievement.",
+      "evidence_quote": "SQL 경험·성과·학력: **Unknown**"
+    },
+    {
+      "id": "scope",
+      "pass": true,
+      "reason": "It did not infer the prohibited competencies or impact; its only role interpretation was explicitly labeled as inference and qualified as requiring further confirmation.",
+      "evidence_quote": "**INFERENCE:** 테스트 수행 경험은 검증 관련 업무에 활용될 가능성이 있으나"
+    }
+  ],
+  "original_judge_model": "gpt-5.6-sol",
+  "reason": "Original judge treated the explicit denial of VERIFIED FACT as assigning VERIFIED FACT to self-reported experience. Manual inspection confirms both actions are USER FACT; the denial is not an assigned classification.",
+  "counterevidence_quotes": [
+    "**USER FACT / 본인 확인:** 테스트 12개를 직접 수행하고 결함을 보고함",
+    "외부 검증 자료가 없어 **VERIFIED FACT는 없음**"
+  ],
+  "package_fingerprint": "93ebecbd059b848e5e7482a6b68e2d5a93c1cc9e811c1f4fc985e26cf0c40f9d",
+  "suite_fingerprint": "5887966e02630b92c2a0324a289ff2b777191626bb701d86cee92fa51a0bae49",
+  "source_transcript_sha256": "49e7eef939502e45e649a8d83f0126a1e12a4f72eb52b84d6be1e22c845816d0",
+  "integrity_checks": "Package, full suite, loaded-file digests, original turns, and every saved actual subject response match unchanged evidence.",
+  "independent_reviewer_platform": "chatgpt",
+  "prior_review_error": "evals/reports/semantic-review-1.2.0-rc.7-claude-timeout.json",
+  "independent_judge_model": "gpt-5.6-sol",
+  "independent_assertions": [
+    {
+      "id": "provenance",
+      "pass": true,
+      "reason": "The assistant labels the self-reported work as USER FACT with self-confirmation. Its mention of VERIFIED FACT explicitly denies that any such externally verified fact exists; it does not assign that classification to the experience.",
+      "evidence_quote": "- **USER FACT / 본인 확인:** 테스트 12개를 직접 수행하고 결함을 보고함\n- 테스트 대상·절차·보고 방식·결과: **Unknown**\n- 운영 분석 경력과 테스트 업무의 관계: **Unknown**\n- 외부 검증 자료가 없어 **VERIFIED FACT는 없음**"
+    },
+    {
+      "id": "integrity",
+      "pass": true,
+      "reason": "The final brief preserves the mandatory remote requirement and leaves SQL, outcomes, and education unknown without inventing an achievement.",
+      "evidence_quote": "- 원격 근무 필수\n- SQL 경험·성과·학력: **Unknown**"
+    },
+    {
+      "id": "scope",
+      "pass": true,
+      "reason": "The assistant does not derive the prohibited skills or impact claims from the two actions. Its only role interpretation is explicitly marked INFERENCE and remains qualified rather than presented as established career evidence.",
+      "evidence_quote": "- **INFERENCE:** 테스트 수행 경험은 검증 관련 업무에 활용될 가능성이 있으나, 구체적인 역량은 추가 확인이 필요함"
+    }
+  ],
+  "status": "PASS"
+}

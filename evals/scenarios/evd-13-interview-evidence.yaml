@@ -1,0 +1,20 @@
+id: evd-13-interview-evidence
+persona: five-year-global
+workflow: W08
+turns:
+- '[SIMULATION ONLY] Alpha 실제 면접 복기야. 질문은 regional coordination 사례였고 후속은 직접 한 일이 무엇인지였어.
+  실제 내 답변 원문은 "I aligned local installation dates with the regional team."이야. 반응은
+  날짜를 물었고 반복 주제는 ownership, 새 회사 정보는 Unknown, 내 불확실성은 결과 Unknown이야. 이 과거 경험은 기존 Evidence
+  Bank에 없고 아직 전역 저장 확인은 안 했어. 실제 답변을 고치지 말고 복기와 신규 근거 후보를 정리해줘.'
+- '[SIMULATION ONLY] 표시한 "I aligned local installation dates with the regional team."
+  행동은 내가 실제로 한 것이 맞아. 기간과 결과는 Unknown으로 두고, 회사 기밀 없는 일반화 요약을 전역 CareerEvidence와 Story
+  Bank에 편입해도 괜찮아. 원래 면접 답변/복기는 그대로 보존해.'
+assertions:
+  potential: First response identifies a new recalled past action as Potential Career
+    Evidence and asks separately before global promotion; analysis request alone does
+    not confirm promotion.
+  preservation: Preserves the actual original answer/debrief rather than replacing
+    it with improved/hypothetical content.
+  confirmed: After explicit confirmation prepares reusable global USER FACT / story
+    evidence with unknown period/outcome preserved, not VERIFIED FACT or invented
+    leadership.

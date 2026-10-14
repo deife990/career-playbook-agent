@@ -1,0 +1,15 @@
+{
+  "id": null,
+  "opportunity_id": null,
+  "criteria": null,
+  "selected_criteria": null,
+  "sources_scanned": null,
+  "unavailable_sources": null,
+  "retrieval_scope": null,
+  "bridge_mode": null,
+  "stage": null,
+  "round_count": null,
+  "round_limit": null,
+  "stop_reason": null,
+  "candidates": null
+}

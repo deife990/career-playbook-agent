@@ -149,3 +149,22 @@
   complete suites, package identity or deterministic regressions. The later v1.2 specification
   requires complete v1.1 model verification before v1.2 runtime implementation, superseding
   the earlier advice that isolated development could begin while v1.1 model tests finished.
+
+- D033 (2026-10-13): v1.2's primary corporate-data pattern is a manual Copilot Bridge: company-
+  approved AI searches inside its environment, the user transfers a reviewed generalized summary,
+  CareerPilot verifies own actions. This adds one copy/paste step but avoids tenant permissions,
+  mandatory corporate linking, raw archive/indexing, a backend and new accounts/keys. Generic
+  approved AI/manual/file fallback remains independent of Microsoft. Direct Work IQ is future only.
+- D034: Keep schema_version 1.0.0 with optional nullable discovery fields. Generalized confirmed
+  episodes/evidence are global; retrieval criteria/candidates/rounds belong to one application.
+  Store date/title/source-scope references, not mail bodies or foreign opportunity source IDs.
+  Preserve submitted versions, actual recall and confirmed history. Self-confirmation remains
+  USER FACT; CC/attendance and team context cannot become an own-action achievement. Python
+  is a development oracle only, never a consumer runtime dependency.
+- D035 (2026-10-14): The user requested completion of distribution packaging and v1.2
+  GitHub commits/push. Preserve the immutable v1.1 rc.7 source baseline as a separate commit,
+  then commit v1.2 rc.7 on the existing branch and update PR #2 while keeping it Draft.
+  Build CI restores committed current-version model reports and requires exact scoped
+  readiness before uploading installation ZIPs/checksums. Browser remains EXCLUDED_BY_USER.
+  No main merge, version promotion, tag, GitHub release or visibility/license change is
+  included in this preparation request. Local distribution files record the source commit.

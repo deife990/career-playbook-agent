@@ -1,0 +1,58 @@
+{
+  "version": "1.2.0-rc.7",
+  "reviewed_at": "2026-10-14T03:56:46.134562+00:00",
+  "scope": "Manually inspected targeted source retention and partial-resume condition/Unknown handling; not full-suite signoff",
+  "status": "PASS",
+  "cases": [
+    {
+      "platform": "chatgpt",
+      "id": "evd-08-one-episode",
+      "package_fingerprint": "93ebecbd059b848e5e7482a6b68e2d5a93c1cc9e811c1f4fc985e26cf0c40f9d",
+      "suite_fingerprint": "5887966e02630b92c2a0324a289ff2b777191626bb701d86cee92fa51a0bae49",
+      "status": "PASS",
+      "transcript_sha256": "0af31975d1370d09ac36bbb845927b9f0b198714a977d32e1c18b90f241c3731",
+      "evidence_quotes": [
+        "2024-03-17 — Rollout update 1",
+        "2024-03-22 — Rollout update 6",
+        "소유권 분류: Unknown"
+      ]
+    },
+    {
+      "platform": "chatgpt",
+      "id": "bare-action-resume",
+      "package_fingerprint": "93ebecbd059b848e5e7482a6b68e2d5a93c1cc9e811c1f4fc985e26cf0c40f9d",
+      "suite_fingerprint": "5887966e02630b92c2a0324a289ff2b777191626bb701d86cee92fa51a0bae49",
+      "status": "PASS",
+      "transcript_sha256": "ffbe9d191096551821ff56910daf9ff7734562c7de0d244531bc5e17929cb295",
+      "evidence_quotes": [
+        "완전 원격 근무 필수",
+        "이는 “SQL 경험 없음”이나 “필수 요건 미충족”을 뜻하지 않습니다."
+      ]
+    },
+    {
+      "platform": "claude",
+      "id": "evd-08-one-episode",
+      "package_fingerprint": "ac4ef67bab8b61f84671b4bf9c27147681aa3878ad763ff70d0024daf048a3ee",
+      "suite_fingerprint": "5887966e02630b92c2a0324a289ff2b777191626bb701d86cee92fa51a0bae49",
+      "status": "PASS",
+      "transcript_sha256": "6f577e82dda790a180ec25b1da3beb6704d7448aa677ae585623a7d385084817",
+      "evidence_quotes": [
+        "2024-03-17 — Rollout update 1",
+        "2024-03-22 — Rollout update 6",
+        "개인 직접 행동 여부 미확인"
+      ]
+    },
+    {
+      "platform": "claude",
+      "id": "bare-action-resume",
+      "package_fingerprint": "ac4ef67bab8b61f84671b4bf9c27147681aa3878ad763ff70d0024daf048a3ee",
+      "suite_fingerprint": "5887966e02630b92c2a0324a289ff2b777191626bb701d86cee92fa51a0bae49",
+      "status": "PASS",
+      "transcript_sha256": "80911cc39cbabe04d6224ca2d6e1e598579a5818a66a9b32312c377cc8433bd4",
+      "evidence_quotes": [
+        "완전 원격 근무",
+        "부재 미확인 → Gap 아님"
+      ]
+    }
+  ]
+}

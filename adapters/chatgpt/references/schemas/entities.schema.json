@@ -266,6 +266,107 @@
             "UNKNOWN",
             null
           ]
+        },
+        "evidence_source_type": {
+          "enum": [
+            "m365_copilot_bridge",
+            "enterprise_ai_bridge",
+            "manual",
+            "user_file",
+            "user_recollection",
+            "mixed",
+            null
+          ]
+        },
+        "bridge_source": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ownership_classification": {
+          "enum": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "UNKNOWN",
+            null
+          ]
+        },
+        "sanitized": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "privacy_reviewed": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "raw_content_stored": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "retrieval_scope": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_references": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "object",
+            "properties": {
+              "date": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date"
+              },
+              "title": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "scope": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "episode_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "scope": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "supersedes_id": {
+          "type": [
+            "string",
+            "null"
+          ]
         }
       },
       "required": [
@@ -3278,6 +3379,15 @@
               }
             ]
           }
+        },
+        "career_episodes": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/CareerEpisode"
+          }
         }
       },
       "required": [
@@ -4790,6 +4900,582 @@
             }
           },
           "additionalProperties": false
+        },
+        "evidence_discovery_sessions": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/EvidenceDiscoverySession"
+          }
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "CareerEpisode": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "opportunity_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "project": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "period": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "situation": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "own_role": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "actions": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "team_actions": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "systems": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "scope": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "outcome": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "outcome_owner": {
+          "enum": [
+            "SELF",
+            "TEAM",
+            "UNKNOWN",
+            null
+          ]
+        },
+        "evidence_ids": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "uncertainties": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "user_confirmed": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "evidence_source_type": {
+          "enum": [
+            "m365_copilot_bridge",
+            "enterprise_ai_bridge",
+            "manual",
+            "user_file",
+            "user_recollection",
+            "mixed",
+            null
+          ]
+        },
+        "bridge_source": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sanitized": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "privacy_reviewed": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "raw_content_stored": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "retrieval_scope": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_references": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "object",
+            "properties": {
+              "date": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date"
+              },
+              "title": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "scope": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "EvidenceCandidate": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "opportunity_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "target_criterion": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "project": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "period": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "situation": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "my_actions": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "team_actions": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "systems": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "scope": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "outcome": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "outcome_owner": {
+          "enum": [
+            "SELF",
+            "TEAM",
+            "UNKNOWN",
+            null
+          ]
+        },
+        "uncertainties": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "sensitive_information_removed": {
+          "enum": [
+            "Yes",
+            "No",
+            "Unsure",
+            null
+          ]
+        },
+        "user_confirmed": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "ownership_basis": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "evidence_source_type": {
+          "enum": [
+            "m365_copilot_bridge",
+            "enterprise_ai_bridge",
+            "manual",
+            "user_file",
+            "user_recollection",
+            "mixed",
+            null
+          ]
+        },
+        "bridge_source": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ownership_classification": {
+          "enum": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "UNKNOWN",
+            null
+          ]
+        },
+        "sanitized": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "privacy_reviewed": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "raw_content_stored": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "retrieval_scope": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "source_references": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "object",
+            "properties": {
+              "date": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date"
+              },
+              "title": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "scope": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": [
+        "id"
+      ],
+      "additionalProperties": false
+    },
+    "EvidenceDiscoverySession": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "opportunity_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "criteria": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "object",
+            "properties": {
+              "criterion_key": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "label": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "coverage": {
+                "enum": [
+                  "Strong",
+                  "Usable",
+                  "Thin",
+                  "Unknown",
+                  "Confirmed Gap",
+                  null
+                ]
+              },
+              "priority": {
+                "enum": [
+                  "HIGH",
+                  "MEDIUM",
+                  "LOW",
+                  "SKIP",
+                  null
+                ]
+              },
+              "evidence_ids": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": "string"
+                }
+              },
+              "requirement_confirmed": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "confirmed_gap": {
+                "type": [
+                  "boolean",
+                  "null"
+                ]
+              },
+              "gap_reason": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "selected_criteria": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "sources_scanned": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "unavailable_sources": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "retrieval_scope": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "bridge_mode": {
+          "enum": [
+            "enterprise_ai_bridge",
+            "file_only",
+            "manual_only",
+            null
+          ]
+        },
+        "stage": {
+          "enum": [
+            "BROAD",
+            "FOCUSED",
+            "STOPPED",
+            null
+          ]
+        },
+        "round_count": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "round_limit": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 10
+        },
+        "stop_reason": {
+          "enum": [
+            "SATURATION",
+            "NO_NEW_EVIDENCE",
+            "USER_STOP",
+            "CONFIRMED_GAP",
+            "PRIVACY_RISK",
+            "SCOPE_LIMIT",
+            null
+          ]
+        },
+        "candidates": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "$ref": "https://careerpilot.local/schemas/entities.schema.json#/$defs/EvidenceCandidate"
+          }
         }
       },
       "required": [

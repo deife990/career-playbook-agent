@@ -15,6 +15,12 @@ Native check observations belong in evals/native-install.json with a nonempty re
 file; record only synthetic observations. [Native checklist](native-install-test.md).
 
 CI Validate and Build run without host credentials on every PR/push. Actual model evaluation is
+archived with its package/suite fingerprints. Build restores both current-version reports and
+requires readiness before uploading consumer ZIPs/checksums. A committed, explicit user browser
+exclusion is applied only to its exact version and runtime fingerprints; otherwise native
+signoff is required. Missing, stale, incomplete or failed evidence blocks the package job.
+See [v1.2 distribution preparation](v1-2-release-preparation.md) for a clean-checkout rebuild.
+Actual model evaluation is
 manual/nightly and called before tag releases on a private self-hosted `careerpilot-evals` runner with existing Codex
 and Claude CLI logins. Set repository variable CAREERPILOT_MODEL_EVALS_ENABLED only when that runner
 exists. This developer configuration is optional and is never an installation requirement.
@@ -43,3 +49,26 @@ omitted assertions and non-boolean verdicts. This never changes FAIL to PASS aut
 Citation-only recovery may rejudge an unchanged saved subject after package/suite checks;
 retain the original ERROR, verify saved provider outputs match the transcript, and record the
 recovery provenance. Behavior failures require a product repair, not a favorable reroll.
+
+V1.2 adds EVD-01–14 (48 total scenarios per host, including v1.2 structured-state roundtrip). The development discovery oracle tests
+coverage, bounded prompts, exchange parsing, exact confirmation, sanitization, episode identity,
+source scope and immutable legacy/actual records. Synthetic CLI tests do not certify a corporate
+Copilot tenant, direct connector, native browser installation or document rendering. Browser
+validation remains explicitly excluded; current fingerprints and all model cases are still required.
+
+A model invocation timeout preserves its current partial logs and stops the runner. Old output/log
+files are cleared before a fresh invocation; a successful CLI exit without a newly written model
+response cannot reuse an earlier answer. A timeout is ERROR, distinct from usage/rate limits.
+
+The rc.7 semantic-review audit preserves an original automatic FAIL where the verdict mistook
+an explicit denial of VERIFIED FACT for assigning it. Full actual response inspection, immutable
+package/suite/loaded-file/provider identity checks and one completed independent review of the
+unchanged assertions confirmed the classification. No subject or criterion was changed. A Claude
+review attempt timed out without a verdict and is preserved separately. This is a diagnosed
+judge error, not a favorable reroll of a real behavioral defect.
+
+The rc.7 Claude submitted-baseline judge also timed out after its actual subject completed.
+The unchanged provider response was verified and independently judged on available ChatGPT;
+its original ERROR and recovery audit are retained. The ten remaining Claude subject cases
+completed after service recovery. Both complete rc.7 suites now pass 48/48; the original
+errors and independent review records remain unchanged.

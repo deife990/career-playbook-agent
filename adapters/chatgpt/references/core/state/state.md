@@ -75,3 +75,20 @@ Maintain compact conversation state: profile/requirements; evidence IDs + factua
 opportunity IDs/company/role/status; current hypotheses; active round; mock mode/status; debrief
 capture progress; next action. At a checkpoint offer the complete portable export, not a lossy
 summary substitute. Following a context reset, ask for the last pack. Explain loss honestly.
+
+## Optional v1.2 discovery state
+Read [discovery protocol](../capabilities/career-evidence-discovery.md) when mining work records.
+CareerProfile.career_episodes holds generalized confirmed global episodes; CareerEvidence links
+them via episode_id, with optional provenance/ownership/scope/privacy fields. Application's
+evidence_discovery_sessions holds only that application's criteria, candidates, rounds and stop
+reason. Use [episode schema](../../schemas/career-episode.schema.json),
+[candidate schema](../../schemas/evidence-candidate.schema.json) and
+[session schema](../../schemas/evidence-discovery-session.schema.json) when persisting them.
+No raw exchange/mail body/internal URL is saved or exported. Stored candidates need sanitization
+and contextual review even before own-action confirmation. A source's Yes is insufficient.
+Global own-action facts require A/B/C plus exact user confirmation; self-confirmation stays USER
+FACT / USER_CONFIRMED. D/E can remain context candidates, not individual achievements.
+Old packs keep schema_version 1.0.0 and omitted keys. New readers accept old packs losslessly;
+older strict readers need updating to consume new fields. Pure re-export adds at most optional
+nulls, never empty collections. Preserve existing confirmed discovery facts and episode history;
+conflicting updates need explicit reconciliation/new revision, not an overwrite.

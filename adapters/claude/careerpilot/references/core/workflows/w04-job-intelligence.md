@@ -2,6 +2,8 @@
 id: W04
 artifact: candidate-strategy
 capabilities:
+- career-evidence-discovery
+- copilot-bridge
 - job-research
 - experience-mining
 - red-team
@@ -59,6 +61,15 @@ Execute stages in this order, using [research capability](../capabilities/job-re
     user confirms a missing skill or evidence establishes a mismatch. Do not put unknown SQL,
     qualifications or experience in the Gaps section, even labeled “미확인” or “potential gap”.
     Keep unknown criteria exclusively in Unknowns and ask a verification question.
+    Before positioning execute the [coverage gate](../capabilities/career-evidence-discovery.md):
+    exhaust existing context, add the five-category Coverage Map inside the existing evidence
+    section, recommend high-value Thin/Unknown discovery, and skip it when evidence suffices.
+    Retain the original match buckets and all fifteen output sections.
+    Transferable Evidence separates USER FACT from each explicitly labeled INFERENCE bridge.
+    Testing/reporting alone does not establish accuracy review, quality review, anomaly detection,
+    analytical competence or structured reporting. If that actual action/method is unknown, do not
+    add it as adjacent experience, even with "may be". State only the confirmed action and the
+    missing role connection; ask whether the needed work actually occurred before claiming it.
 11. **candidate_positioning**: construct a truthful positioning thesis supported by 2–3 evidence
     anchors; name what the user can prove and where to acknowledge a gap.
     Unknown experience is neither present nor absent. Do not recommend claiming absence or

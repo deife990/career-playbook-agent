@@ -30,6 +30,11 @@ Risks contain skeptical questions plus evidence-backed response direction, not f
 Risk titles must preserve Unknown too. Unprovided campaign/collaboration examples are “사례 미확인”,
 not “경험 공백” or confirmed absence. Positioning cannot turn an inferred transferable connection
 into a factual skill, such as anomaly detection or structured reporting, without user evidence.
+Each proposed transferable connection carries its own INFERENCE label and a specific boundary.
+"Performed tests and reported defects" is not "accuracy/quality review experience", even phrased
+as "may be adjacent experience"; that adds an unknown action or method. Keep the confirmed action
+and say the connection to campaign analysis is Unknown pending actual context. Never use a
+Transferable Evidence heading alone as an implicit provenance label.
 Sources: title, URL, publisher, published/retrieved date, source type, freshness, confidence and
 associated claim/classification. No fake citation. Missing sources appear in Unknowns.
 No numerical fit score, probability of hiring or uncited internal facts. Use

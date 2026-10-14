@@ -1,0 +1,12 @@
+id: evd-03-unknown-sql
+persona: five-year-global
+workflow: W05
+turns:
+- '[SIMULATION ONLY] Alpha JD는 SQL data validation이 필수야. 내 자료에는 migration testing과
+  defect reporting만 확인되어 있고 SQL 경험 존재 여부는 아직 모르겠어. 다른 경력 자료는 미제공이야. 회사 AI로 2024년 1분기
+  승인된 업무 문서에서 관련 사례를 찾아볼 수 있어. Coverage와 확인할 다음 행동을 알려줘.'
+assertions:
+  unknown: SQL existence remains Unknown rather than Gap or confirmed absence; generic
+    testing does not prove SQL authorship.
+  verify: Offers criterion-specific source retrieval or concrete verification without
+    inventing SQL work.

@@ -1,0 +1,25 @@
+{
+  "version": "1.2.0-rc.5",
+  "status": "PASS",
+  "scope": "Artifact identity only; actual-model readiness recorded separately",
+  "platforms": {
+    "chatgpt": {
+      "archive": "dist/releases/careerpilot-chatgpt-v1.2.0-rc.5.zip",
+      "sha256": "7fb45ea40674a1b9b7e81ca6c7f00f330b5bdcb669eafdbd436b4fc5ee3da9f5",
+      "members": 111,
+      "inventory_and_bytes": "PASS",
+      "package_fingerprint": "e8f7fd3c860e2e7c67fa947a6a77a8465f41e0d497c12d18a35e04a00316babb",
+      "deterministic_rebuild": "PASS"
+    },
+    "claude": {
+      "archive": "dist/releases/careerpilot-claude-v1.2.0-rc.5.zip",
+      "sha256": "4fa7601a46aad66c5251fd143930b2499e8e1e3ba3327720cd19f50dd74f2656",
+      "members": 139,
+      "inventory_and_bytes": "PASS",
+      "package_fingerprint": "0d6a5a0077acdf5415ed731e25d6890437d16748b74d573230a6db87452318c8",
+      "deterministic_rebuild": "PASS"
+    }
+  },
+  "suite_fingerprint": "cdd54038672eaf57db1d51680490e1e6c3851528373480877bd7413a09b75ccd",
+  "v11_baseline_sha256": "c8be923a948f9ab45929ba73199e10191cce60750acdee75493c440719b1b02f"
+}

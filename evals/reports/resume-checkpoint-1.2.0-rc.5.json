@@ -1,0 +1,35 @@
+{
+  "active_objective": "Complete v1.2 actual-model regressions and scoped readiness after closed v1.1 baseline",
+  "version": "1.2.0-rc.5",
+  "v11_completed_within_user_scope": true,
+  "v11_model_cases_per_host": "33/33 PASS",
+  "v12_implemented": true,
+  "unit_tests": 185,
+  "static_checks": "PASS",
+  "artifact_identity": "PASS",
+  "browser_validation": "EXCLUDED_BY_USER",
+  "expected_model_cases_per_host": 48,
+  "targeted_repairs": "bare-action-resume including whole-output Unknown consistency PASS on both hosts; manually inspected original answers",
+  "active_model_sessions": {
+    "chatgpt": 76001,
+    "claude": 81309
+  },
+  "model_reports": {
+    "chatgpt": {
+      "status": "INCOMPLETE",
+      "pass": 2,
+      "updated_at": "2026-10-13T16:02:35.196426+00:00",
+      "package_fingerprint": "e8f7fd3c860e2e7c67fa947a6a77a8465f41e0d497c12d18a35e04a00316babb",
+      "suite_fingerprint": "cdd54038672eaf57db1d51680490e1e6c3851528373480877bd7413a09b75ccd"
+    },
+    "claude": {
+      "status": "INCOMPLETE",
+      "pass": 2,
+      "updated_at": "2026-10-13T16:02:23.308559+00:00",
+      "package_fingerprint": "0d6a5a0077acdf5415ed731e25d6890437d16748b74d573230a6db87452318c8",
+      "suite_fingerprint": "cdd54038672eaf57db1d51680490e1e6c3851528373480877bd7413a09b75ccd"
+    }
+  },
+  "remaining": "Both current full actual-model suites and scoped readiness; preserve any newly observed failures before repairs.",
+  "source_review": "tasks/v1-2-source-review.md"
+}

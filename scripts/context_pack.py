@@ -122,6 +122,8 @@ def validate(pack):
     validate_submissions(pack)
     from scripts.screening_state import validate_screening
     validate_screening(pack)
+    from scripts.discovery_state import validate_discovery
+    validate_discovery(pack,index,contexts,evidence)
     return deepcopy(pack)
 def export(pack):
     result=deepcopy(pack)
@@ -160,6 +162,8 @@ def import_pack(text,current=None):
         reject(any(new_actual.get(k)!=v for k,v in old_actual.items()),'Actual interview record loss')
         from scripts.submission_oracle import preserve_submissions
         preserve_submissions(current,incoming)
+        from scripts.discovery_state import preserve_discovery
+        preserve_discovery(current,incoming)
     return incoming
 def read_directory(root):
     root=Path(root).resolve(); manifest=load(root/'manifest.json'); schema_validator('context-manifest').validate(manifest)

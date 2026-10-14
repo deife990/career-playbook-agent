@@ -21,5 +21,6 @@
   "sources": null,
   "claims": null,
   "decisions": null,
-  "next_actions": null
+  "next_actions": null,
+  "evidence_discovery_sessions": null
 }

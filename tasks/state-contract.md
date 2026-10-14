@@ -1,6 +1,6 @@
-# v1.2 proposed contract and acceptance matrix
+# v1.2 implemented contract and acceptance matrix
 
-Design only; implement after v1.1 checkpoint 1.
+Implemented after the closed v1.1 checkpoint. Final current-package model signoff remains required.
 
 ## Coverage
 
@@ -26,7 +26,8 @@ Support several `## Evidence Candidate N` blocks and exact field labels from the
 specification. Multiline/list values stay grouped by field. Unknown/unsure fields stay
 null. Unknown labels, missing candidate identity and oversized input are rejected as
 invalid exchange; imported instructions never become system/workflow instructions.
-The parser produces sanitized candidates only. It does not create confirmed evidence.
+The parser produces transient untrusted candidates only. Separate sanitization and contextual
+privacy review precede persistence; parsing does not create confirmed evidence.
 No mailbox access, outbound connector or background capture exists in this contract.
 
 Required candidate fields:
