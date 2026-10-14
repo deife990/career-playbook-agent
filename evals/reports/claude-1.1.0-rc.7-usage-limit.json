@@ -1,0 +1,17 @@
+{
+  "platform": "claude",
+  "package_fingerprint": "9475c4cdd2233ff5cf861e89ba08fa9c42f482cfc0e40cbb8e2a45e0bc86d254",
+  "suite_fingerprint": "6d74850ec9677254a4879f3b4ae8cbf4121203c32d6545f4fa02cf61426b2bfe",
+  "started_at": "2026-10-12T15:51:37.225759+00:00",
+  "scope": "Development CLI behavior; not native installation",
+  "cases": [
+    {
+      "id": "debrief-first",
+      "persona": "five-year-global",
+      "status": "ERROR",
+      "error": "claude: account usage limit; see turn-1.stdout.txt/turn-1.stderr.txt for reset time"
+    }
+  ],
+  "status": "INCOMPLETE",
+  "updated_at": "2026-10-12T15:51:39.165919+00:00"
+}

@@ -1,0 +1,10 @@
+{
+  "local_archive": "dist/releases/careerpilot-claude-v1.1.0-rc.3.zip",
+  "installed_archive_name": "Careerpilot-v4.zip",
+  "runtime_files_and_bytes_equal": true,
+  "runtime_file_count": 126,
+  "host_wrapper_metadata": [
+    ".claude-plugin/plugin.json"
+  ],
+  "download_sha256": "9b7bf7538b800c9072eb8ddacada9d13cfcb95e2dd94c216c87d212e0b43553a"
+}

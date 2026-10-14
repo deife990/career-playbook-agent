@@ -1,5 +1,5 @@
 {
-  "status": "PASS",
+  "status": "EXCLUDED_BY_USER",
   "required_checks": [
     "clean_install",
     "activation",
@@ -11,6 +11,18 @@
     "context_roundtrip"
   ],
   "platforms": {
+    "chatgpt": {
+      "package_fingerprint": "e03e17821f884921c105e172d490c059ab19bfa145b59c83103245244da0a795",
+      "checks": {},
+      "blocker": "Further native browser validation explicitly excluded by user; no current native PASS claimed."
+    },
+    "claude": {
+      "package_fingerprint": "9475c4cdd2233ff5cf861e89ba08fa9c42f482cfc0e40cbb8e2a45e0bc86d254",
+      "checks": {},
+      "blocker": "Further native browser validation explicitly excluded by user; no current native PASS claimed."
+    }
+  },
+  "historical_rc7_platforms": {
     "chatgpt": {
       "package_fingerprint": "011ea89c00e2af304669477a1c1c0deaaace884c3e699a080c4b262597a1be1e",
       "observed_at": "2026-10-05",
@@ -106,5 +118,58 @@
     "evidence_path": "evals/reports/chatgpt-native-regression-1.0.0-rc.4.md",
     "blocker": "rc.4 upgrade accepted; W04/W06 targeted native repairs observed on alternate model. Full current lifecycle, newly serialized persistence/recovery and clean installation pending.",
     "supplementary_evidence": "evals/reports/chatgpt-native-e2e-1.0.0-rc.2.md"
+  },
+  "historical_v11_rc4_platforms": {
+    "chatgpt": {
+      "package_fingerprint": "3f92a11121e22931ca7733cc9f94561a8818c41e4d11e0c559d53eee37f7c234",
+      "observed_at": "2026-10-12",
+      "observer": "Codex via CUA",
+      "surface": "ChatGPT web Work / Chrome / GPT-6.1 Sol High",
+      "checks": {
+        "clean_install": true,
+        "activation": true,
+        "reference_access": true
+      },
+      "evidence_path": "evals/reports/native-observations-1.1.0-rc.4.md",
+      "blocker": "1.1.0-rc.4 current archive accepted by existing account; fresh native lifecycle and roundtrip in progress. No fresh-account provisioning."
+    },
+    "claude": {
+      "package_fingerprint": "40781a1e1e84559495742dd47b83f6991dac320f8b135e0c95abce9a2d8cb476",
+      "observed_at": "2026-10-12",
+      "observer": "Codex via CUA",
+      "surface": "Claude web / Chrome / Sonnet 5.5 Medium",
+      "checks": {
+        "clean_install": true,
+        "activation": true,
+        "reference_access": true
+      },
+      "evidence_path": "evals/reports/native-observations-1.1.0-rc.4.md",
+      "blocker": "1.1.0-rc.4 current archive accepted by existing account; fresh native lifecycle and roundtrip in progress. No fresh-account provisioning."
+    }
+  },
+  "historical_v11_rc5_platforms": {
+    "chatgpt": {
+      "package_fingerprint": "8d2588acd29e8dec617c52fe689369a1ba14b09bf751a9dc549cfbf5f944145a",
+      "observed_at": "2026-10-12",
+      "observer": "Codex via CUA",
+      "surface": "ChatGPT web Work / Chrome / GPT-6.1 Sol High",
+      "checks": {
+        "clean_install": true,
+        "activation": true
+      },
+      "evidence_path": "evals/reports/native-observations-1.1.0-rc.5.md",
+      "blocker": "rc.5 install and W01 activation observed; W02 requested. Further browser verification deferred by user until approval service stabilizes."
+    },
+    "claude": {
+      "package_fingerprint": "12ed700fd2fb5082985bb57ebb960d74319eba35ca0a930612f43eae13b83214",
+      "observed_at": "2026-10-12",
+      "observer": "User manual upload; Codex CUA identity verification",
+      "surface": "Claude web / Chrome / Sonnet 5.5 Medium",
+      "checks": {
+        "clean_install": true
+      },
+      "evidence_path": "evals/reports/native-observations-1.1.0-rc.5.md",
+      "blocker": "User uploaded rc.5; all 126 installed runtime files match. User deferred further native verification until approval service stabilizes after another 429 during new-chat screen reading."
+    }
   }
 }

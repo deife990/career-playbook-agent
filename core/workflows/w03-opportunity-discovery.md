@@ -27,6 +27,8 @@ Confirm location/role if the search would otherwise be meaningless; do not force
 7. Produce [opportunity screen](../artifacts/opportunity-screen.md); let the user choose one for W04.
 8. Record selected opportunities with distinct company+role/requisition IDs. Use the
    [pipeline](../capabilities/application-pipeline.md); do not auto-apply or mark INTERESTED without intent.
+   Unknown past applications remain Unknown, including in table cells. No loaded application
+   records is not evidence of no past applications; only user-confirmed absence permits “없음”.
 ## Evidence rules
 Live opening claims require current accessible official postings. No invented vacancies/salaries,
 no inferred language eligibility, no hidden-org fact from community alone.

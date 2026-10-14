@@ -32,9 +32,10 @@ def package():
     return [*outputs,sums]
 
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('--require-ready',action='store_true');args=parser.parse_args()
+    parser=argparse.ArgumentParser();parser.add_argument('--require-ready',action='store_true');parser.add_argument('--native-exclusion');args=parser.parse_args()
+    if args.native_exclusion and not args.require_ready: parser.error('--native-exclusion requires --require-ready')
     if args.require_ready:
         from scripts.release_readiness import check
-        check()
+        check(native_exclusion=args.native_exclusion)
     for output in package(): print(output)
 if __name__=='__main__': main()

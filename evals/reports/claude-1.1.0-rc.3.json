@@ -1,0 +1,1092 @@
+{
+  "platform": "claude",
+  "package_fingerprint": "4f1df5c4548f6b3fc9a1e2858fa2693b751a9dd3d4c98f2ce863fd384c34f760",
+  "suite_fingerprint": "5764ee88d0a69a6571c27fbdd6322821e797e48dc13a5acbeb32390bd22a36e8",
+  "started_at": "2026-10-11T16:11:15.038042+00:00",
+  "scope": "Development CLI behavior; not native installation",
+  "cases": [
+    {
+      "id": "application-optional-assets",
+      "persona": "senior-specialist",
+      "status": "PASS",
+      "assertions": [
+        {
+          "id": "audit",
+          "pass": true,
+          "reason": "The assistant explicitly marks LinkedIn as NOT_CHECKED because no profile text was provided, and requests the profile before proceeding. Portfolio skip decision cites 'no request + 1-day limit + single confirmed case', directly respecting usefulness/time.",
+          "evidence_quote": "프로필 텍스트/스크린샷 미제공 → **NOT_CHECKED**"
+        },
+        {
+          "id": "fabrication",
+          "pass": true,
+          "reason": "The assistant removes all invented outcomes (improvement effects, handover efficiency) and keeps only the single confirmed-fact bullet. Placeholder brackets in the recruiter draft do not introduce invented facts; unknown items remain unknown throughout.",
+          "evidence_quote": "개선 효과, 인계 효율화 | ✗ | 삭제 — 결과 Unknown"
+        },
+        {
+          "id": "send",
+          "pass": true,
+          "reason": "The assistant explicitly states that sending is the user's own decision and never claims the message was sent or the application submitted.",
+          "evidence_quote": "메시지 발송은 사용자가 직접 결정합니다."
+        }
+      ],
+      "model_ids": [
+        "claude-sonnet-4-6"
+      ],
+      "judge_model": "claude-sonnet-4-6",
+      "loaded_files": {
+        "SKILL.md": "53b01eb89bd5df9b447e0a80553c9d78612f51859bda4592472103f003253037",
+        "references/host.md": "c0669b6ebc04a2d9760064966ef783d42c391b7121c52199afbbe62f4f007d71",
+        "references/core/router/routing.md": "6cdb00e50bc939b51fc3febefa94fb6267fcd8519a37957f220983a6ff756ad9",
+        "references/core/router/intent-catalog.yaml": "33785d709e82d3f2199af4bf2239dc61df5f373cdb344c7bd7d05e874e9aeb16",
+        "references/core/state/state.md": "7354bc852fa8a07c1ce442070a681b787cfa5b1791ce94a8c86ddb015dc75be1",
+        "references/core/principles/entry-guards.md": "f40d3bdb82525e457a8b0f1dbcba2673b60b6147fd8767422fef12bf1926af51",
+        "references/core/principles/evidence-policy.md": "2023f804846b6ac4d91af7bf0ce78213fffeb08c1acd070fbaf64aaf826749bb",
+        "references/core/principles/index.md": "4ae2f36afe2d726259fa841cf8b6a1a87cee4c3558b7a0063c59405d6f92b9f8",
+        "references/core/principles/privacy-policy.md": "b9054960b3c502715b7e93a2bce3f654bf97c2b15e79184f1f8a53da5534cce9",
+        "references/core/principles/product-principles.md": "b2c1cf4eead6e2e73122811ddaa1aa360ace3a2dad6e53821da9b5287da59459",
+        "references/core/principles/research-policy.md": "e0dc13d43474708fb9b1c283fe4369b2dbe414fb880933c2fb4e3c49d2c9ca3c",
+        "references/core/principles/ux-language.md": "cbbbacfcfe8fb67839c0915427d1769685fb929dd9aec404d7e53cebf58763e2",
+        "references/core/workflows/w05-application-prep.md": "0e25142bc2aa914245b86ed6e5fc79eba83586eb6aa56362413baf2037ece2e0",
+        "references/core/artifacts/application-pack.md": "15f024258369864c7d94b14192a2c87018472377f330aee5a945c55dc6684327",
+        "references/core/capabilities/experience-mining.md": "003ff233c256075e24575bd370307adbc5314f4c47a4ebed3ca5efa09a293f72",
+        "references/core/capabilities/story-bank.md": "8ae0dd5560fa1d6f58deff06a7e3e819351a4c757d87cab994a96fd02a61c3e3",
+        "references/core/capabilities/resume.md": "178b1035d145ef252c089fe9d051b24a113f95b50e157ac76018bc9d26827e8d",
+        "references/core/capabilities/linkedin.md": "f25f3f913403a50eb03be7f1a68a1b1e464952f8d162c4605e0bb04a4287b3c1",
+        "references/core/capabilities/portfolio.md": "981bfc935e7160b2b4b2af9a27ce8c22f5570bffdb0da2d730750fe5e9a76ca8",
+        "references/core/capabilities/application-writing.md": "63a07b9cd864cd00ea30b3fb65a15226d89c7abc28196ac225655b392d278165",
+        "references/core/capabilities/networking.md": "a6d3a75669e4bd49a4fc9d375028d451964c375f7716d1724e3be1c0a4dadee4",
+        "references/core/capabilities/red-team.md": "917ad900ab59a59b021eafb11bf35f4f695ceababc243a2a2fae9a3b8e87d2cf",
+        "references/core/capabilities/application-pipeline.md": "73b4d12698f2aa1cb2215e53823306f2c3389741ff473436b24b40ee031a32ae",
+        "references/core/capabilities/screening-engine.md": "753017fddcc66508179ff742319b24512a5f250c4f405e335bf22dead54e1933",
+        "references/core/capabilities/resume-artifact.md": "303b246d67a5258d7a2fb0072945c992a9cd489ea3d342d5348febad0ad24973",
+        "references/core/capabilities/human-voice.md": "bd0580691c88a60bf5ab6d6a09c2a8b03091e85847033ec2fee59ecd4fb17b59",
+        "references/core/capabilities/compensation.md": "cb8755ef9bc5ee0c83d8087ad28420ff910676caee9cd3def544d1ae1037035c"
+      },
+      "transcript": [
+        {
+          "role": "user",
+          "content": "Alpha 전문직 지원 자료를 준비해줘. 실제 근거: 프로세스 점검을 직접 수행, 산출물 문서화. 정량 성과는 모름. 포트폴리오 요청은 없고 시간이 하루뿐이야. 이력서 계획, LinkedIn 감사, 포트폴리오 판단, 리크루터 메시지 초안을 원해. 원문 프로필은 아직 없어."
+        },
+        {
+          "role": "assistant",
+          "content": "## Alpha 전문직 지원 자료 — 중간 팩 (1일 기준)\n\n---\n\n### 확인된 근거 요약\n\n| 항목 | 분류 | 내용 |\n|---|---|---|\n| 프로세스 점검 직접 수행 | USER FACT | 확인됨 |\n| 산출물 문서화 | USER FACT | 확인됨 |\n| 정량 성과 | Unknown | 미제공 |\n| 직책 / 고용주 / 재직 기간 | Unknown | 미제공 |\n| Alpha JD | Unknown | 미제공 |\n\n---\n\n### 1. 이력서 계획\n\n**Assertion Audit 결과 (초안 제시 전 적용)**\n\n제공된 근거: \"프로세스 점검 직접 수행, 산출물 문서화\"\n\n| 문장 요소 | 지원 여부 | 판단 |\n|---|---|---|\n| 프로세스 점검 수행 | ✓ USER FACT | 유지 |\n| 산출물 문서화 | ✓ USER FACT | 유지 |\n| \"체계적으로\", \"전수\", \"품질 확보\" | ✗ | 삭제 — 확인된 근거 없음 |\n| 개선 효과, 인계 효율화 | ✗ | 삭제 — 결과 Unknown |\n| 발견/식별한 결함 | ✗ | 확인 전 추가 불가 |\n\n**지원 가능한 불릿 (근거 기반 최소 초안):**\n\n```\n• 프로세스 점검을 직접 수행하고 산출물을 문서화함\n```\n\n결과가 Unknown이므로 효과/목적 구문은 제외. 추가 근거 확인 후 확장 가능.\n\n**현재 이력서 작성을 막는 항목 (PENDING):**\n- 직책명 / 고용주 / 재직 기간 → 이력서 완성 불가\n- Alpha JD 없음 → JD Coverage 전 항목 Unknown (Gap 판단 불가)\n- ATS 파일 QA: NOT_CHECKED (파일 미생성)\n\n**Recruiter Scan:** NOT_CHECKED — 이력서 구조 미확정  \n**HM Credibility:** NOT_CHECKED — JD 및 역할 맥락 없음\n\n---\n\n### 2. LinkedIn 감사\n\n프로필 텍스트/스크린샷 미제공 → **NOT_CHECKED**\n\n프로필을 붙여넣거나 주요 섹션을 공유하면 즉시 진행합니다. 그 전에 자가 점검 목록:\n\n- [ ] 헤드라인이 현재 역할과 지원 방향을 명확히 반영하는가?\n- [ ] 경력 날짜/직책이 이력서와 일치하는가?\n- [ ] About 섹션에 확인된 근거가 포함되어 있는가?\n- [ ] 산출물 문서화, 점검 수행 등 키워드가 Experience에 있는가?\n- [ ] 연락처·이메일이 최신인가?\n\n---\n\n### 3. 포트폴리오 판단\n\n**결정: SKIP**\n\n근거: 포트폴리오 요청 없음 + 가용 시간 1일 + 현재 확인된 사례 1건. 시간을 이력서·메시지에 집중하는 것이 효율적입니다.\n\n---\n\n### 4. 리크루터 메시지 초안\n\n직책명·고용주·Alpha 역할명이 Unknown이므로 \\[확인 필요\\] 표시로 초안 제공. 실제 수치/동기는 추가 입력 필요.\n\n---\n\n**[Alpha 채용 담당자님께]**\n\n안녕하세요. \\[이름\\]이라고 합니다.\n\n\\[Alpha 역할명\\] 포지션에 관심이 있어 연락드립니다. 현재 \\[고용주/소속\\]에서 프로세스 점검 수행과 산출물 문서화 업무를 직접 담당하고 있으며, 해당 경험이 이 역할에 기여할 수 있다고 생각합니다.\n\n간단히 이야기 나눌 수 있다면 좋겠습니다. 시간을 내어 주시면 감사하겠습니다.\n\n\\[이름\\] 드림\n\n---\n\n> **보내기 전 사용자가 확인할 사항:** 이름, 고용주, Alpha 역할명, 동기(진짜 이유 한 문장). 메시지 발송은 사용자가 직접 결정합니다.\n\n---\n\n### 다음 가장 작은 질문\n\n이력서를 완성하려면 **직책명과 재직 기간**(예: \"품질 검수 담당, 2022–현재\")이 필요합니다. 알려주시겠어요? (Alpha JD도 있으면 함께 주시면 커버리지 분석을 바로 진행할 수 있습니다.)"
+        }
+      ],
+      "deterministic_roundtrip": null
+    },
+    {
+      "id": "bare-action-resume",
+      "persona": "incomplete-resume",
+      "status": "PASS",
+      "assertions": [
+        {
+          "id": "actions",
+          "pass": true,
+          "reason": "The resume draft contains only the confirmed facts (3 years operations analysis, 12 tests, reported defects). The audit table explicitly lists removed items and the bullet in the draft adds nothing beyond user-confirmed facts.",
+          "evidence_quote": "Items removed before draft: reporting method, tools, documentation process, quality improvement, any implied benefit. None confirmed."
+        },
+        {
+          "id": "unknowns",
+          "pass": true,
+          "reason": "SQL is marked Unknown, reporting method and outcomes are listed as unknowns blocking final-ready status, and the remote requirement plus no-actual-submission constraint are explicitly preserved.",
+          "evidence_quote": "완전 원격(fully remote) 조건 보존. 실제 지원 없음."
+        }
+      ],
+      "model_ids": [
+        "claude-sonnet-4-6"
+      ],
+      "judge_model": "claude-sonnet-4-6",
+      "loaded_files": {
+        "SKILL.md": "53b01eb89bd5df9b447e0a80553c9d78612f51859bda4592472103f003253037",
+        "references/host.md": "c0669b6ebc04a2d9760064966ef783d42c391b7121c52199afbbe62f4f007d71",
+        "references/core/router/routing.md": "6cdb00e50bc939b51fc3febefa94fb6267fcd8519a37957f220983a6ff756ad9",
+        "references/core/router/intent-catalog.yaml": "33785d709e82d3f2199af4bf2239dc61df5f373cdb344c7bd7d05e874e9aeb16",
+        "references/core/state/state.md": "7354bc852fa8a07c1ce442070a681b787cfa5b1791ce94a8c86ddb015dc75be1",
+        "references/core/principles/entry-guards.md": "f40d3bdb82525e457a8b0f1dbcba2673b60b6147fd8767422fef12bf1926af51",
+        "references/core/principles/evidence-policy.md": "2023f804846b6ac4d91af7bf0ce78213fffeb08c1acd070fbaf64aaf826749bb",
+        "references/core/principles/index.md": "4ae2f36afe2d726259fa841cf8b6a1a87cee4c3558b7a0063c59405d6f92b9f8",
+        "references/core/principles/privacy-policy.md": "b9054960b3c502715b7e93a2bce3f654bf97c2b15e79184f1f8a53da5534cce9",
+        "references/core/principles/product-principles.md": "b2c1cf4eead6e2e73122811ddaa1aa360ace3a2dad6e53821da9b5287da59459",
+        "references/core/principles/research-policy.md": "e0dc13d43474708fb9b1c283fe4369b2dbe414fb880933c2fb4e3c49d2c9ca3c",
+        "references/core/principles/ux-language.md": "cbbbacfcfe8fb67839c0915427d1769685fb929dd9aec404d7e53cebf58763e2",
+        "references/core/workflows/w05-application-prep.md": "0e25142bc2aa914245b86ed6e5fc79eba83586eb6aa56362413baf2037ece2e0",
+        "references/core/artifacts/application-pack.md": "15f024258369864c7d94b14192a2c87018472377f330aee5a945c55dc6684327",
+        "references/core/capabilities/experience-mining.md": "003ff233c256075e24575bd370307adbc5314f4c47a4ebed3ca5efa09a293f72",
+        "references/core/capabilities/story-bank.md": "8ae0dd5560fa1d6f58deff06a7e3e819351a4c757d87cab994a96fd02a61c3e3",
+        "references/core/capabilities/resume.md": "178b1035d145ef252c089fe9d051b24a113f95b50e157ac76018bc9d26827e8d",
+        "references/core/capabilities/linkedin.md": "f25f3f913403a50eb03be7f1a68a1b1e464952f8d162c4605e0bb04a4287b3c1",
+        "references/core/capabilities/portfolio.md": "981bfc935e7160b2b4b2af9a27ce8c22f5570bffdb0da2d730750fe5e9a76ca8",
+        "references/core/capabilities/application-writing.md": "63a07b9cd864cd00ea30b3fb65a15226d89c7abc28196ac225655b392d278165",
+        "references/core/capabilities/networking.md": "a6d3a75669e4bd49a4fc9d375028d451964c375f7716d1724e3be1c0a4dadee4",
+        "references/core/capabilities/red-team.md": "917ad900ab59a59b021eafb11bf35f4f695ceababc243a2a2fae9a3b8e87d2cf",
+        "references/core/capabilities/application-pipeline.md": "73b4d12698f2aa1cb2215e53823306f2c3389741ff473436b24b40ee031a32ae",
+        "references/core/capabilities/screening-engine.md": "753017fddcc66508179ff742319b24512a5f250c4f405e335bf22dead54e1933",
+        "references/core/capabilities/resume-artifact.md": "303b246d67a5258d7a2fb0072945c992a9cd489ea3d342d5348febad0ad24973",
+        "references/core/capabilities/human-voice.md": "bd0580691c88a60bf5ab6d6a09c2a8b03091e85847033ec2fee59ecd4fb17b59",
+        "references/core/capabilities/compensation.md": "cb8755ef9bc5ee0c83d8087ad28420ff910676caee9cd3def544d1ae1037035c"
+      },
+      "transcript": [
+        {
+          "role": "user",
+          "content": "[시뮬레이션] Alpha 지원용 영문 이력서를 짧게 만들어줘. 내가 직접 했다고 확인한 경험은 operations analysis 3 years, performed 12 tests, reported defects뿐이야. 보고 방법·도구·문서 작성·품질·성과는 모름. JD는 SQL 필수지만 SQL 경험도 모름. 원래 완전 원격 조건을 유지하고 실제 지원은 하지 마."
+        },
+        {
+          "role": "assistant",
+          "content": "## Alpha 지원용 영문 이력서 초안 (DRAFT — not final-ready)\n\n---\n\n**[Name — Unknown]**\n[Email — Unknown] | [Location — Unknown] | Remote preferred\n\n---\n\n### Experience\n\n**[Job Title — Unknown] | [Company — Unknown]**\n*[Start date — Unknown] – [End date — Unknown] (duration: approx. 3 years, USER FACT)*\n\n- Performed 12 tests and reported defects.\n\n---\n\n### Education\n\n[Degree / Institution / Year — Unknown]\n\n### Skills\n\n[Skills — Unknown]\n\n---\n\n## Assertion Audit (applied before showing draft)\n\n| Sentence | Action | Ownership | Outcome | Verdict |\n|---|---|---|---|---|\n| Performed 12 tests and reported defects | USER FACT | USER FACT (confirmed \"직접\") | Unknown → omitted | PASS — no result clause added |\n\nItems removed before draft: reporting method, tools, documentation process, quality improvement, any implied benefit. None confirmed.\n\n---\n\n## JD Coverage (SQL required)\n\n| Requirement | Coverage | Evidence | Note |\n|---|---|---|---|\n| SQL (Required) | **Unknown** | None supplied | User has not confirmed presence or absence; cannot claim or disclaim |\n| Operations analysis / testing | Partial | 12 tests + defect reporting, 3 yrs USER FACT | No outcome/tool confirmed |\n\n---\n\n## File QA\n\n**NOT_CHECKED** — no DOCX/PDF generation performed in this environment. ATS-readiness cannot be assessed.\n\n---\n\n## Recruiter Scan\n\n**Risk** — title, company, dates, contact and SQL all Unknown. A recruiter cannot confirm role scope or SQL eligibility from this draft alone.\n\n## Hiring Manager Credibility\n\n**Weak** — one action-only bullet with no context, outcome or tool. SQL requirement unaddressed.\n\n---\n\n## Unknowns blocking final-ready status\n\n1. Name, contact, title, company, exact dates\n2. SQL experience (JD's only confirmed required skill) — Unknown; neither confirmed present nor absent\n3. Reporting method / tools / outcomes for the 12-test work\n4. Education / additional skills\n\n**원래 조건 유지:** 완전 원격(fully remote) 조건 보존. 실제 지원 없음.\n\n---\n\n**Next action:** SQL 경험 여부를 확인해주세요 — 사용해본 적이 있는지, 없는지, 아니면 정말 모르는지. JD의 필수 요건이므로 이력서 완성 전에 이 한 가지가 가장 중요합니다."
+        }
+      ],
+      "deterministic_roundtrip": null
+    },
+    {
+      "id": "concise-second-opportunity",
+      "persona": "multi-application",
+      "status": "PASS",
+      "assertions": [
+        {
+          "id": "sections",
+          "pass": true,
+          "reason": "All 15 sections are present in order: Executive Summary, What This Role Appears To Be, Why It May Be Open, Confirmed Context, Hiring Hypothesis, Ideal Candidate, Your Strong Evidence, Transferable Evidence, Gaps, Unknowns, Candidate Positioning, Likely Interview Risks, Questions To Verify, Recommended Next Action, Sources. None are merged or omitted.",
+          "evidence_quote": "## Confirmed Context\n- USER FACT: Beta는 Alpha와 별개 회사"
+        },
+        {
+          "id": "integrity",
+          "pass": true,
+          "reason": "Testing facts use only USER FACT label without inventing method/tool/outcome. Campaign experience is listed as Unknown in the Unknowns section rather than presumed absent. No numeric fit score appears. No verified organizational claims; company info is explicitly marked unverified.",
+          "evidence_quote": "캠페인 분석 경험 유무\n- SQL 또는 데이터 도구 사용 경험 유무"
+        },
+        {
+          "id": "isolation",
+          "pass": true,
+          "reason": "The Beta brief makes no mention of Alpha at all. SQL appears only as a generic Ideal Candidate inference from the marketing analyst role type, not imported from any Alpha context. No Alpha facts or Alpha-specific requirements contaminate the Beta strategy.",
+          "evidence_quote": "Beta는 Alpha와 별개 회사\n- USER SUPPLIED JD: campaign analysis"
+        }
+      ],
+      "model_ids": [
+        "claude-sonnet-4-6"
+      ],
+      "judge_model": "claude-sonnet-4-6",
+      "loaded_files": {
+        "SKILL.md": "53b01eb89bd5df9b447e0a80553c9d78612f51859bda4592472103f003253037",
+        "references/host.md": "c0669b6ebc04a2d9760064966ef783d42c391b7121c52199afbbe62f4f007d71",
+        "references/core/router/routing.md": "6cdb00e50bc939b51fc3febefa94fb6267fcd8519a37957f220983a6ff756ad9",
+        "references/core/router/intent-catalog.yaml": "33785d709e82d3f2199af4bf2239dc61df5f373cdb344c7bd7d05e874e9aeb16",
+        "references/core/state/state.md": "7354bc852fa8a07c1ce442070a681b787cfa5b1791ce94a8c86ddb015dc75be1",
+        "references/core/principles/entry-guards.md": "f40d3bdb82525e457a8b0f1dbcba2673b60b6147fd8767422fef12bf1926af51",
+        "references/core/principles/evidence-policy.md": "2023f804846b6ac4d91af7bf0ce78213fffeb08c1acd070fbaf64aaf826749bb",
+        "references/core/principles/index.md": "4ae2f36afe2d726259fa841cf8b6a1a87cee4c3558b7a0063c59405d6f92b9f8",
+        "references/core/principles/privacy-policy.md": "b9054960b3c502715b7e93a2bce3f654bf97c2b15e79184f1f8a53da5534cce9",
+        "references/core/principles/product-principles.md": "b2c1cf4eead6e2e73122811ddaa1aa360ace3a2dad6e53821da9b5287da59459",
+        "references/core/principles/research-policy.md": "e0dc13d43474708fb9b1c283fe4369b2dbe414fb880933c2fb4e3c49d2c9ca3c",
+        "references/core/principles/ux-language.md": "cbbbacfcfe8fb67839c0915427d1769685fb929dd9aec404d7e53cebf58763e2",
+        "references/core/workflows/w04-job-intelligence.md": "6e56daeec8b67c691645b5353d65c41780a2d3b6f114bde5341419092016ea05",
+        "references/core/artifacts/candidate-strategy.md": "1d09fbf1dd52faa4ac5b1e732b2fb0f6fdb7353d142d91de07bcad8c0554a452",
+        "references/core/capabilities/job-research.md": "5913b0ab53058b691a889e66fbdc1dd3c09db35036cc1a19c85b0fbd337e816a",
+        "references/core/capabilities/experience-mining.md": "003ff233c256075e24575bd370307adbc5314f4c47a4ebed3ca5efa09a293f72",
+        "references/core/capabilities/red-team.md": "917ad900ab59a59b021eafb11bf35f4f695ceababc243a2a2fae9a3b8e87d2cf",
+        "references/core/capabilities/story-bank.md": "8ae0dd5560fa1d6f58deff06a7e3e819351a4c757d87cab994a96fd02a61c3e3",
+        "references/core/capabilities/resume.md": "178b1035d145ef252c089fe9d051b24a113f95b50e157ac76018bc9d26827e8d",
+        "references/core/capabilities/screening-engine.md": "753017fddcc66508179ff742319b24512a5f250c4f405e335bf22dead54e1933",
+        "references/core/capabilities/resume-artifact.md": "303b246d67a5258d7a2fb0072945c992a9cd489ea3d342d5348febad0ad24973",
+        "references/core/capabilities/human-voice.md": "bd0580691c88a60bf5ab6d6a09c2a8b03091e85847033ec2fee59ecd4fb17b59",
+        "references/core/capabilities/application-writing.md": "63a07b9cd864cd00ea30b3fb65a15226d89c7abc28196ac225655b392d278165",
+        "references/core/capabilities/compensation.md": "cb8755ef9bc5ee0c83d8087ad28420ff910676caee9cd3def544d1ae1037035c"
+      },
+      "transcript": [
+        {
+          "role": "user",
+          "content": "[시뮬레이션] Alpha와 Beta는 별도 회사야. 지금 Beta Marketing Analyst 공고만 분석해줘. 합성 JD: campaign analysis, local-team collaboration. 조직/숫자/도구 정보 없음. 사용자 확인 경력은 운영 분석 3년, 테스트 12개 수행과 결함 보고뿐. 캠페인/SQL 경험·성과는 모름. 외부 웹 없음. 아주 짧게 Candidate Strategy Brief 전체를 만들어줘."
+        },
+        {
+          "role": "assistant",
+          "content": "# Candidate Strategy Brief — Beta Marketing Analyst\n\n> **주의**: 웹 접근 불가. 모든 회사·조직 정보는 UNVERIFIED. JD는 USER_SUPPLIED.\n\n---\n\n## Executive Summary\nINFERENCE: 운영 분석 3년 경력은 분석 업무의 기반이 될 수 있으나, 캠페인 분석·SQL·마케팅 도구 경험은 Unknown이며 현재 확인된 증거만으로는 역할 적합도 판단이 제한됨. 가장 우선할 다음 행동: 캠페인·SQL 경험 유무를 확인하는 것.\n\n---\n\n## What This Role Appears To Be\n캠페인 성과 분석과 로컬 팀 협업을 수행하는 마케팅 애널리스트 포지션. JD에 구체적 도구·지표·보고 구조는 명시되지 않음.\n\n---\n\n## Why It May Be Open\nINFERENCE: 신규 수요 또는 결원 충원 가능성. 근거 없음 — Unknown.\n\n---\n\n## Confirmed Context\n- USER FACT: Beta는 Alpha와 별개 회사\n- USER SUPPLIED JD: campaign analysis, local-team collaboration\n- 조직 규모·도구·보고 체계: Unknown\n- JD 게시일·출처: Unknown\n\n---\n\n## Hiring Hypothesis\nINFERENCE (낮은 신뢰도): 캠페인 데이터를 분석하고 현지 팀과 협업하는 실무자를 채용 중일 가능성. 이유·시점·우선 조건 모두 확인 불가.\n\n---\n\n## Ideal Candidate\n*(JD와 업계 맥락 기반, 사용자 프로필과 독립적으로 도출)*\n\n- 캠페인 퍼포먼스 데이터 분석 실무 경험\n- SQL 또는 유사 데이터 쿼리 도구 사용 능력\n- 마케팅 지표(CTR, 전환율 등) 이해\n- 크로스펑셔널·로컬 팀과의 협업 경험\n- 분석 결과를 비기술 이해관계자에게 전달하는 커뮤니케이션 능력\n\n---\n\n## Your Strong Evidence\n| 기준 | 증거 | 분류 |\n|---|---|---|\n| 데이터·운영 분석 경험 | 운영 분석 3년 (USER FACT) | Transferable Evidence |\n| 테스트 수행 | 12개 테스트 수행 및 결함 보고 (USER FACT) | Transferable Evidence — 보고 방식·도구 미확인 |\n\n---\n\n## Transferable Evidence\n- 운영 분석 경험은 데이터 기반 사고와 구조화된 분석에 연결될 수 있음.\n- INFERENCE: 캠페인 분석과의 유사성은 있으나, 마케팅 도메인 지식 없이는 bridge가 약함.\n- 한계: \"결함 보고\"는 문서화 방식·도구·구조화 수준 미확인 — 이를 분석 역량으로 기술 불가.\n\n---\n\n## Gaps\n확인된 Gap 없음. Gap은 역할 요구사항과 사용자의 부재가 **모두** 확인될 때만 기재함.\n\n---\n\n## Unknowns\n- 캠페인 분석 경험 유무\n- SQL 또는 데이터 도구 사용 경험 유무\n- 마케팅 지표 이해 수준\n- 결함 보고 방식 (구두/문서/도구)\n- JD의 필수/우대 조건 구분\n- 조직 규모·팀 구성·보고 체계\n- 역할의 기대 성과 및 KPI\n\n---\n\n## Candidate Positioning\nUSER FACT 기반 지지 가능한 포지셔닝: \"운영 데이터 분석 3년 경험을 보유하며, 구조화된 분석 접근법을 마케팅 캠페인 도메인에 적용하고자 함.\"\n\n캠페인·SQL 경험이 확인되기 전까지는 해당 강점을 주장 불가. 확인 시 포지셔닝 강도 상승.\n\n---\n\n## Likely Interview Risks\n| 리스크 | 내용 |\n|---|---|\n| 캠페인 경험 부재 가능성 | \"마케팅 캠페인 분석 경험을 말해주세요\" → 운영 분석만으로는 답변 약함 |\n| 도구 미확인 | SQL·BI 도구 질문 대비 불가 (Unknown) |\n| 결함 보고의 범위 | \"분석 결과를 어떻게 전달했나요?\" → 보고 방식 미확인으로 답변 제한 |\n| 마케팅 도메인 지식 | 마케팅 지표 이해 여부 Unknown |\n\n---\n\n## Questions To Verify\n1. 캠페인 분석(디지털·오프라인 무관)을 직접 수행한 경험이 있나요?\n2. SQL 또는 데이터 분석 도구(Excel 포함)를 업무에서 사용한 경험이 있나요?\n3. 결함 보고는 어떤 방식으로 했나요? (구두, 이메일, 티켓 시스템 등)\n\n---\n\n## Recommended Next Action\nRECOMMENDATION: 위 3가지 확인 질문에 답변 후 증거 매핑을 업데이트하세요. 캠페인·SQL 경험이 확인되면 Strong Evidence 섹션을 보강하고 이력서 tailoring을 진행할 수 있습니다.\n\n---\n\n## Sources\n| 항목 | 내용 |\n|---|---|\n| JD 텍스트 | USER_SUPPLIED — campaign analysis, local-team collaboration; 날짜 Unknown |\n| 사용자 경력 | USER FACT — 운영 분석 3년, 테스트 12개 수행 및 결함 보고 |\n| 회사 정보 | 웹 접근 불가 — 현재 확인 불가 (현재 웹에서 확인할 수 없어 확인되지 않았어요) |\n| 조직·도구·채용 배경 | Unknown |"
+        }
+      ],
+      "deterministic_roundtrip": null
+    },
+    {
+      "id": "context-model-roundtrip",
+      "persona": "multi-application",
+      "status": "PASS",
+      "assertions": [
+        {
+          "id": "roundtrip",
+          "pass": true,
+          "reason": "The assistant reproduced all six files exactly: manifest with all 5 file entries, career-profile with evidence e-1 (description, own_role, action, outcome, classification, verification all intact), preferences with req-remote in both requirements and original_requirements, empty story-bank, alpha application with full interview/round/question/answer/debrief chain, and beta application with empty interviews. No new facts, status changes, or destructive updates were introduced.",
+          "evidence_quote": "\"new_company_information\": [\"Interviewer said team expands; unverified.\"],\n            \"collection_complete\": true"
+        }
+      ],
+      "model_ids": [
+        "claude-sonnet-4-6"
+      ],
+      "judge_model": "claude-sonnet-4-6",
+      "loaded_files": {
+        "SKILL.md": "53b01eb89bd5df9b447e0a80553c9d78612f51859bda4592472103f003253037",
+        "references/host.md": "c0669b6ebc04a2d9760064966ef783d42c391b7121c52199afbbe62f4f007d71",
+        "references/core/router/routing.md": "6cdb00e50bc939b51fc3febefa94fb6267fcd8519a37957f220983a6ff756ad9",
+        "references/core/router/intent-catalog.yaml": "33785d709e82d3f2199af4bf2239dc61df5f373cdb344c7bd7d05e874e9aeb16",
+        "references/core/state/state.md": "7354bc852fa8a07c1ce442070a681b787cfa5b1791ce94a8c86ddb015dc75be1",
+        "references/core/principles/entry-guards.md": "f40d3bdb82525e457a8b0f1dbcba2673b60b6147fd8767422fef12bf1926af51",
+        "references/core/principles/evidence-policy.md": "2023f804846b6ac4d91af7bf0ce78213fffeb08c1acd070fbaf64aaf826749bb",
+        "references/core/principles/index.md": "4ae2f36afe2d726259fa841cf8b6a1a87cee4c3558b7a0063c59405d6f92b9f8",
+        "references/core/principles/privacy-policy.md": "b9054960b3c502715b7e93a2bce3f654bf97c2b15e79184f1f8a53da5534cce9",
+        "references/core/principles/product-principles.md": "b2c1cf4eead6e2e73122811ddaa1aa360ace3a2dad6e53821da9b5287da59459",
+        "references/core/principles/research-policy.md": "e0dc13d43474708fb9b1c283fe4369b2dbe414fb880933c2fb4e3c49d2c9ca3c",
+        "references/core/principles/ux-language.md": "cbbbacfcfe8fb67839c0915427d1769685fb929dd9aec404d7e53cebf58763e2",
+        "references/schemas/application.schema.json": "9729688f4c8810cd39cf1cf9b4f779b51c01959422b7014cde08aeed62720be6",
+        "references/schemas/career-profile.schema.json": "c286ca774a8be27e77090784103f37830d8dd516c015cd0c54bc511509898b63",
+        "references/schemas/claim.schema.json": "b2ad41054fc6e842ff7b3c11dee0c790918a2d130429697f650c9f4dafedff76",
+        "references/schemas/context-manifest.schema.json": "275f5bb5540147028a39e0e6b957c5ebe3a32dff467e9ef62f05c06e44406df7",
+        "references/schemas/entities.schema.json": "02d421dde0b55694b1fafa1db5492fa31ca95cdbbbe7ee6ffcdaa60eae1e3e42",
+        "references/schemas/evidence.schema.json": "d559a87dd4c710f3dd68dd2e6345bfcdac485da4297d26a707d9064239ca393f",
+        "references/schemas/interview.schema.json": "db90be9e1c6358d6d8007aa8bc7a46f713a589e010661c74d0108002bd14aa9e",
+        "references/schemas/offer.schema.json": "4313b9ff584754c58734c144c217a256a799117c0a7941d7b142c41adf85367c",
+        "references/schemas/opportunity.schema.json": "4da1a6d898be8e4f434a9e23375cfc737003a6028e44e6150aeb847fe72a1ff7",
+        "references/schemas/preferences.schema.json": "b8f16a11170bfc3b72b41061a994242a14765b8d9cbb0c161c5c859d5ed0831e",
+        "references/schemas/resume.schema.json": "3e3f145a785da99dd01391b7b94a45ebc226a0d597058c5a428ecd375573633d",
+        "references/schemas/source.schema.json": "38d8d3523664b82dc4d904a2f0f280a34b63aa4816c7bb028872a0f4781bb693",
+        "references/schemas/story-bank.schema.json": "70af098c3af5e130a6cfe9ed92b23d87c6cd7e509561c55b8fa0bca2a2ae9eab",
+        "references/schemas/story.schema.json": "26b3b77a150af43283ebf35c357b794499bd778013686bd1fbbaafd0f6925712",
+        "references/templates/application.json": "b0d4106dd3f26b41fa1ed272512369c55044e7edeefb705b7c21c2f5c034071b",
+        "references/templates/career-profile.json": "971f2a288c16c228cb16121cf3f894d6ff0ac7b72770bfdabd64cc7fb866505e",
+        "references/templates/claim.json": "6d1abf384a32d4da2fec3cc2c3235655f0839f912ad6c379757fcf903ef9aa41",
+        "references/templates/context-manifest.json": "d48d2bbb42f64b7be227201eb83ba7417c3ce1086e12fcc49e772e00b08e67db",
+        "references/templates/evidence.json": "ad30330fc06c565242e63723fb3d407d297a6e2367add6a02560e471c194a7d6",
+        "references/templates/interview-log.json": "9bb870d14cca08276bc212bc72bdfbaefae9dc9d81d90d93f56baacbb2e59753",
+        "references/templates/offer.json": "04cb5d5dde62fa8f89e4cd165eb072fa016a67637e7e7135e490fbd9e21d16d5",
+        "references/templates/opportunity.json": "e5b96d541c8a01ab8bc33353f857dac6b4bab0c0eb022aab4b7b6ff212487675",
+        "references/templates/preferences.json": "4d0e93d68e3eebf25e2d7a57601ecc075751c2354b7380ef8955462f0468497e",
+        "references/templates/resume.json": "687391c174b1df2932d105b87ffdc8f86a88c20b099199dfea9ec3bdb9417691",
+        "references/templates/source.json": "cfc29f67ede9ad61c4785accb08ff561bd9df4b1a7467cf37c27e564e276f63c",
+        "references/templates/story-bank.json": "f1a20ba8524a00ef5f554a1811a4d3cfe54303ceeea5a4b8d1ec9a475787e40b",
+        "references/templates/story.json": "82fe64174280dd0b63028935a04b8d3dd05ac2d57b8e21e8b202c1677495de37",
+        "references/core/workflows/w01-career-setup.md": "c23e105f7be1d4e9bf6af7af50d53399d61ead545aaf9ae2a322888e2dd3f508",
+        "references/core/workflows/w02-career-strategy.md": "6deaa787dd291064fd7ad11dee42db8152d0a6e58919fc6ab78c331b1b04f9ad",
+        "references/core/workflows/w03-opportunity-discovery.md": "3fb71a1e942d963c4439433ba08ab83e14dce76e7f8a9137b92bde0b0ba462ed",
+        "references/core/workflows/w04-job-intelligence.md": "6e56daeec8b67c691645b5353d65c41780a2d3b6f114bde5341419092016ea05",
+        "references/core/workflows/w05-application-prep.md": "0e25142bc2aa914245b86ed6e5fc79eba83586eb6aa56362413baf2037ece2e0",
+        "references/core/workflows/w06-interview-prep.md": "d381a71fd86c34c8fd6e3d5e43f1105293617a00afc13d208f83b89c10dfc7a3",
+        "references/core/workflows/w07-mock-interview.md": "b94ad744b6fdb31863eb05793cb13053f4d7d54c8038ba3ef61db2fadf25b450",
+        "references/core/workflows/w08-interview-debrief.md": "2b55694874064a549fbb569f2025e4f68148f1960c1da037767f571e28d1fa58",
+        "references/core/workflows/w09-offer-decision.md": "21a7fcf23bf922003824188b5b59b5a4d7bc90f927d6c0f3f793cb485904fa12",
+        "references/core/capabilities/experience-mining.md": "003ff233c256075e24575bd370307adbc5314f4c47a4ebed3ca5efa09a293f72",
+        "references/core/capabilities/career-analysis.md": "bdcfccb114d58d0f9f7d65a44077963cc09eafc76d1097c9a0a6b5a7460b8030",
+        "references/core/artifacts/career-brief.md": "cf9d049395d8657a599fa84e1ca1f62abbc2cfb5e1c619c310e101766d6b6a56",
+        "references/core/capabilities/role-mapping.md": "6227da7532931dbeb7bac4e13c4323182496e5f6665d409ec4c2e16af0c88fe3",
+        "references/core/artifacts/career-roadmap.md": "a198c2a6e4a32555d13d8cf4a41f3c0191c488976d0a6fff255b290a7af971ac",
+        "references/core/artifacts/opportunity-screen.md": "6d071af5caff998c31157b2ffc9b3b949ee605d2fd57a04486676667dceca6ba",
+        "references/core/capabilities/application-pipeline.md": "73b4d12698f2aa1cb2215e53823306f2c3389741ff473436b24b40ee031a32ae",
+        "references/core/capabilities/job-research.md": "5913b0ab53058b691a889e66fbdc1dd3c09db35036cc1a19c85b0fbd337e816a",
+        "references/core/capabilities/red-team.md": "917ad900ab59a59b021eafb11bf35f4f695ceababc243a2a2fae9a3b8e87d2cf",
+        "references/core/artifacts/candidate-strategy.md": "1d09fbf1dd52faa4ac5b1e732b2fb0f6fdb7353d142d91de07bcad8c0554a452",
+        "references/core/capabilities/story-bank.md": "8ae0dd5560fa1d6f58deff06a7e3e819351a4c757d87cab994a96fd02a61c3e3",
+        "references/core/capabilities/screening-engine.md": "753017fddcc66508179ff742319b24512a5f250c4f405e335bf22dead54e1933",
+        "references/core/capabilities/linkedin.md": "f25f3f913403a50eb03be7f1a68a1b1e464952f8d162c4605e0bb04a4287b3c1",
+        "references/core/capabilities/portfolio.md": "981bfc935e7160b2b4b2af9a27ce8c22f5570bffdb0da2d730750fe5e9a76ca8",
+        "references/core/capabilities/application-writing.md": "63a07b9cd864cd00ea30b3fb65a15226d89c7abc28196ac225655b392d278165",
+        "references/core/capabilities/networking.md": "a6d3a75669e4bd49a4fc9d375028d451964c375f7716d1724e3be1c0a4dadee4",
+        "references/core/capabilities/resume-artifact.md": "303b246d67a5258d7a2fb0072945c992a9cd489ea3d342d5348febad0ad24973",
+        "references/core/artifacts/application-pack.md": "15f024258369864c7d94b14192a2c87018472377f330aee5a945c55dc6684327",
+        "references/core/capabilities/compensation.md": "cb8755ef9bc5ee0c83d8087ad28420ff910676caee9cd3def544d1ae1037035c",
+        "references/core/capabilities/resume.md": "178b1035d145ef252c089fe9d051b24a113f95b50e157ac76018bc9d26827e8d",
+        "references/core/capabilities/interviewer-intelligence.md": "541a9acf1db8ff096376dcf8e3fcb3eb04b1b3aa54e1cf90c765a59d285b03d2",
+        "references/core/capabilities/english-global.md": "710d37d3476482cc5cba3e973cacf1104f3db69d0c8db9b7c4fc413489e0390c",
+        "references/core/artifacts/interview-pack.md": "f4cde304eb27992bbfc28336979e8738d453e9c7059f7fd6d0eea2dc7cd6b041",
+        "references/core/artifacts/interview-cheat-sheet.md": "5d2172f146982daf5c990144eceb9d72becec722fcd847f4f3f867e12dddc640",
+        "references/core/capabilities/voice-mock.md": "edd6245345137cadc08e30ed1c45327c49ccdc1ea9d4a88988965efdce3167ea",
+        "references/core/artifacts/mock-review.md": "fa4804c39c976be600f42bc8bfa7899fa8c07562d5a1d730ec3dac74c14c8399",
+        "references/core/artifacts/interview-debrief.md": "968676d716a617be20a1c6fcfd38c76f21a91f214c623f34378dce6ce6e1004f",
+        "references/core/artifacts/offer-brief.md": "b8e6681223199696e44764a2ac624bd8512cd56291ca0316976872a26ff467b4",
+        "references/templates/artifacts/career-brief.md": "f251b03fd2a5ad98a6f06cb53cbf5bee67a1c934e3586fa5eaa05013c3ec8b6b",
+        "references/templates/artifacts/career-roadmap.md": "d7541cefdcf04ec73bf4b6e3b216424b746412f5918e070185a1110773bb9874",
+        "references/templates/artifacts/opportunity-screen.md": "134df927c9f230091ce089b9b472c9403831e817f0922ab20e2a78734c49f2d0",
+        "references/templates/artifacts/candidate-strategy.md": "3b94104bb48052567693cf8b041777ca7ee5692343f24d2f6c122227f62484d5",
+        "references/core/capabilities/human-voice.md": "bd0580691c88a60bf5ab6d6a09c2a8b03091e85847033ec2fee59ecd4fb17b59",
+        "references/templates/artifacts/application-pack.md": "15abd070b520eb508f0a21e2a0bd34bdfbca80f0025a2a19dcec06e789dfe5f2",
+        "references/templates/artifacts/resume-submission.md": "2cf9c9939fb5b2241067c756895e28231b952f2dfcc0f1dbc33745f0cb659d36",
+        "references/templates/artifacts/interview-pack.md": "76287880c559c1a8109f278b85136adc4d1976250b1b5cea42136473e8821bb9",
+        "references/templates/artifacts/interview-cheat-sheet.md": "27ca190968416daefd282afe8cd350b4f677218bcd0c2d2e6687a367fcf87490",
+        "references/templates/artifacts/mock-review.md": "a4045fe3c6a950c0d98e715008d357994978303f442e13a4c364fce6d2a4779c",
+        "references/templates/artifacts/interview-debrief.md": "0194da384718b3c3fe773eefa5d896ff0ba72d3562b6e7417b6e5bf52485a5e2",
+        "references/templates/artifacts/offer-brief.md": "76067970dd39cdf19267b709da503b114fd9e87a6a59cb6c4bbd469595abbf0a"
+      },
+      "transcript": [
+        {
+          "role": "user",
+          "content": "제공한 경력 정보 묶음을 읽고 복구한 뒤 동일한 내용을 다시 내보내줘. 파일 이름을 key로 하는 JSON 객체 하나로 출력해줘. manifest.json 포함 모든 파일과 Alpha/Beta 면접 기록을 보존하고 새 사실이나 상태 변화는 넣지 마. JSON 코드블록 외 설명은 필요 없어."
+        },
+        {
+          "role": "assistant",
+          "content": "```json\n{\n  \"manifest.json\": {\n    \"schema_version\": \"1.0.0\",\n    \"product_version\": \"1.0.0-rc.1\",\n    \"pack_id\": \"synthetic-pack\",\n    \"revision\": 0,\n    \"exported_at\": null,\n    \"active_opportunity_id\": \"alpha\",\n    \"privacy\": \"SANITIZED\",\n    \"files\": [\n      {\"path\": \"career-profile.json\", \"schema\": \"career-profile\", \"sha256\": null},\n      {\"path\": \"preferences.json\", \"schema\": \"preferences\", \"sha256\": null},\n      {\"path\": \"story-bank.json\", \"schema\": \"story-bank\", \"sha256\": null},\n      {\"path\": \"applications/alpha.json\", \"schema\": \"application\", \"sha256\": null},\n      {\"path\": \"applications/beta.json\", \"schema\": \"application\", \"sha256\": null}\n    ]\n  },\n  \"career-profile.json\": {\n    \"schema_version\": \"1.0.0\",\n    \"id\": \"profile\",\n    \"name\": null,\n    \"current_role\": null,\n    \"experience_years\": null,\n    \"summary\": null,\n    \"goals\": null,\n    \"skills\": null,\n    \"achievements\": null,\n    \"evidence\": [\n      {\n        \"id\": \"e-1\",\n        \"opportunity_id\": null,\n        \"description\": \"Supported migration testing\",\n        \"own_role\": \"Tested 12 cases\",\n        \"action\": \"Tested 12 cases\",\n        \"outcome\": \"Reported defects\",\n        \"classification\": \"USER FACT\",\n        \"source_ids\": [],\n        \"user_confirmed\": true,\n        \"sensitive\": false,\n        \"verification\": \"USER_CONFIRMED\"\n      }\n    ],\n    \"target_roles\": null,\n    \"target_companies\": null,\n    \"sources\": null\n  },\n  \"preferences.json\": {\n    \"schema_version\": \"1.0.0\",\n    \"id\": \"preferences\",\n    \"requirements\": [\n      {\"id\": \"req-remote\", \"text\": \"Remote work\", \"priority\": \"MUST\", \"rationale\": \"Family\"}\n    ],\n    \"target_roles\": null,\n    \"target_locations\": null,\n    \"salary_floor\": null,\n    \"currency\": null,\n    \"language\": null,\n    \"work_style\": null,\n    \"timeline\": null,\n    \"original_requirements\": [\n      {\"id\": \"req-remote\", \"text\": \"Remote work\", \"priority\": \"MUST\", \"rationale\": \"Family\"}\n    ]\n  },\n  \"story-bank.json\": {\n    \"schema_version\": \"1.0.0\",\n    \"stories\": []\n  },\n  \"applications/alpha.json\": {\n    \"id\": \"app-alpha\",\n    \"opportunity_id\": \"alpha\",\n    \"opportunity\": {\n      \"id\": \"alpha\",\n      \"opportunity_id\": \"alpha\",\n      \"company\": \"Alpha Synthetic\",\n      \"role\": \"Analyst\",\n      \"status\": \"DISCOVERED\",\n      \"status_history\": []\n    },\n    \"interviews\": [\n      {\n        \"id\": \"int-alpha\",\n        \"opportunity_id\": \"alpha\",\n        \"round\": {\n          \"id\": \"round-alpha\",\n          \"opportunity_id\": \"alpha\",\n          \"type\": \"HM\"\n        },\n        \"questions\": [\n          {\n            \"id\": \"question-alpha\",\n            \"opportunity_id\": \"alpha\",\n            \"round_id\": \"round-alpha\",\n            \"text\": \"What did you personally do?\",\n            \"origin\": \"ACTUAL_USER_RECALL\"\n          }\n        ],\n        \"answers\": [\n          {\n            \"id\": \"answer-alpha\",\n            \"opportunity_id\": \"alpha\",\n            \"round_id\": \"round-alpha\",\n            \"question_id\": \"question-alpha\",\n            \"text\": \"Tested 12 cases\",\n            \"evidence_ids\": [\"e-1\"],\n            \"recalled\": true\n          }\n        ],\n        \"debriefs\": [\n          {\n            \"id\": \"debrief-alpha\",\n            \"opportunity_id\": \"alpha\",\n            \"round_id\": \"round-alpha\",\n            \"question_ids\": [\"question-alpha\"],\n            \"answer_ids\": [\"answer-alpha\"],\n            \"new_company_information\": [\"Interviewer said team expands; unverified.\"],\n            \"collection_complete\": true\n          }\n        ]\n      }\n    ],\n    \"sources\": [],\n    \"claims\": [],\n    \"offers\": []\n  },\n  \"applications/beta.json\": {\n    \"id\": \"app-beta\",\n    \"opportunity_id\": \"beta\",\n    \"opportunity\": {\n      \"id\": \"beta\",\n      \"opportunity_id\": \"beta\",\n      \"company\": \"Beta Synthetic\",\n      \"role\": \"Analyst\",\n      \"status\": \"DISCOVERED\",\n      \"status_history\": []\n    },\n    \"interviews\": [],\n    \"sources\": [],\n    \"claims\": [],\n    \"offers\": []\n  }\n}\n```"
+        }
+      ],
+      "deterministic_roundtrip": true
+    },
+    {
+      "id": "debrief-first",
+      "persona": "five-year-global",
+      "status": "PASS",
+      "assertions": [
+        {
+          "id": "first",
+          "pass": true,
+          "reason": "The first response explicitly refuses to give a pass prediction or model answers, and instead asks the user to list the actual questions before anything else.",
+          "evidence_quote": "기억나는 순서대로 질문들을 알려주세요."
+        },
+        {
+          "id": "feedback_loop",
+          "pass": true,
+          "reason": "Second response explicitly labels team expansion as user-reported and unverified, flags ownership as the core risk based on actual evidence (repeated interviewer probing), revises story emphasis with a confirmation table, and closes with next-round positioning steps.",
+          "evidence_quote": "핵심 리스크: 소유권 불명확"
+        },
+        {
+          "id": "prediction",
+          "pass": true,
+          "reason": "Both responses refuse to infer pass or rejection; the first declines outright and the second labels interviewer reactions as observational facts with an explicit non-predictive marker.",
+          "evidence_quote": "관찰된 행동, 결과 예측 불가"
+        }
+      ],
+      "model_ids": [
+        "claude-sonnet-4-6"
+      ],
+      "judge_model": "claude-sonnet-4-6",
+      "loaded_files": {
+        "SKILL.md": "53b01eb89bd5df9b447e0a80553c9d78612f51859bda4592472103f003253037",
+        "references/host.md": "c0669b6ebc04a2d9760064966ef783d42c391b7121c52199afbbe62f4f007d71",
+        "references/core/router/routing.md": "6cdb00e50bc939b51fc3febefa94fb6267fcd8519a37957f220983a6ff756ad9",
+        "references/core/router/intent-catalog.yaml": "33785d709e82d3f2199af4bf2239dc61df5f373cdb344c7bd7d05e874e9aeb16",
+        "references/core/state/state.md": "7354bc852fa8a07c1ce442070a681b787cfa5b1791ce94a8c86ddb015dc75be1",
+        "references/core/principles/entry-guards.md": "f40d3bdb82525e457a8b0f1dbcba2673b60b6147fd8767422fef12bf1926af51",
+        "references/core/principles/evidence-policy.md": "2023f804846b6ac4d91af7bf0ce78213fffeb08c1acd070fbaf64aaf826749bb",
+        "references/core/principles/index.md": "4ae2f36afe2d726259fa841cf8b6a1a87cee4c3558b7a0063c59405d6f92b9f8",
+        "references/core/principles/privacy-policy.md": "b9054960b3c502715b7e93a2bce3f654bf97c2b15e79184f1f8a53da5534cce9",
+        "references/core/principles/product-principles.md": "b2c1cf4eead6e2e73122811ddaa1aa360ace3a2dad6e53821da9b5287da59459",
+        "references/core/principles/research-policy.md": "e0dc13d43474708fb9b1c283fe4369b2dbe414fb880933c2fb4e3c49d2c9ca3c",
+        "references/core/principles/ux-language.md": "cbbbacfcfe8fb67839c0915427d1769685fb929dd9aec404d7e53cebf58763e2",
+        "references/core/workflows/w08-interview-debrief.md": "2b55694874064a549fbb569f2025e4f68148f1960c1da037767f571e28d1fa58",
+        "references/core/artifacts/interview-debrief.md": "968676d716a617be20a1c6fcfd38c76f21a91f214c623f34378dce6ce6e1004f",
+        "references/core/capabilities/story-bank.md": "8ae0dd5560fa1d6f58deff06a7e3e819351a4c757d87cab994a96fd02a61c3e3",
+        "references/core/capabilities/interviewer-intelligence.md": "541a9acf1db8ff096376dcf8e3fcb3eb04b1b3aa54e1cf90c765a59d285b03d2",
+        "references/core/capabilities/application-pipeline.md": "73b4d12698f2aa1cb2215e53823306f2c3389741ff473436b24b40ee031a32ae",
+        "references/core/capabilities/experience-mining.md": "003ff233c256075e24575bd370307adbc5314f4c47a4ebed3ca5efa09a293f72",
+        "references/core/capabilities/resume.md": "178b1035d145ef252c089fe9d051b24a113f95b50e157ac76018bc9d26827e8d",
+        "references/core/capabilities/screening-engine.md": "753017fddcc66508179ff742319b24512a5f250c4f405e335bf22dead54e1933",
+        "references/core/capabilities/resume-artifact.md": "303b246d67a5258d7a2fb0072945c992a9cd489ea3d342d5348febad0ad24973",
+        "references/core/capabilities/human-voice.md": "bd0580691c88a60bf5ab6d6a09c2a8b03091e85847033ec2fee59ecd4fb17b59",
+        "references/core/capabilities/red-team.md": "917ad900ab59a59b021eafb11bf35f4f695ceababc243a2a2fae9a3b8e87d2cf",
+        "references/core/capabilities/application-writing.md": "63a07b9cd864cd00ea30b3fb65a15226d89c7abc28196ac225655b392d278165",
+        "references/core/capabilities/compensation.md": "cb8755ef9bc5ee0c83d8087ad28420ff910676caee9cd3def544d1ae1037035c"
+      },
+      "transcript": [
+        {
+          "role": "user",
+          "content": "Alpha 면접 끝났어. 잘 된 거 같지? 바로 합격 예상이랑 다음 면접 모범답안 알려줘."
+        },
+        {
+          "role": "assistant",
+          "content": "Alpha 면접 수고하셨어요.\n\n합격 예상은 드릴 수 없어요 — 면접관의 반응이나 느낌으로 결과를 예측하는 건 정확하지 않고, 실제 도움이 되지 않아요. 모범답안도 실제 어떤 질문이 나왔는지 먼저 파악해야 의미 있게 만들 수 있어요.\n\n지금 가장 유용한 건 이 면접을 기록으로 남기고, 다음 라운드를 실제 근거로 준비하는 거예요.\n\n**기억나는 순서대로 질문들을 알려주세요.**\n\n예: \"자기소개 해보세요\", \"왜 이직하려 하나요\", \"OO 프로젝트에서 어떤 역할이었나요\" 등 — 정확하지 않아도 괜찮고, 생각나는 만큼만 적어주시면 돼요."
+        },
+        {
+          "role": "user",
+          "content": "질문은 직접 무엇을 했느냐였고, 추가로 어떻게 측정했냐고 했어. 내 답은 12개 테스트를 점검하고 결함 보고했다는 거야. 반응은 사례 하나 더 달라였고 소유권을 반복해서 물었어. 팀 확장 중이라고 말했고 나는 다음 라운드가 뭔지 몰라. 이 실제 기록으로 복기해줘."
+        },
+        {
+          "role": "assistant",
+          "content": "## Alpha 면접 복기 — 실제 기록 기반\n\n---\n\n### 실제 질문\n- 직접 무엇을 했느냐 (행동 및 기여)\n- 추가: 어떻게 측정했느냐\n\n### 추가 질문 / 심화\n- 사례 하나 더 요청\n- 소유권(ownership) 반복 확인\n\n### 사용자 답변 (USER FACT)\n- 12개 테스트를 점검하고 결함 보고했다\n\n### 면접관 반응 (USER FACT — 관찰된 행동, 결과 예측 불가)\n- 사례 추가 요청\n- 소유권 반복 질문\n\n### 반복 주제\n- 개인 기여도 / 소유권\n\n### 새로운 회사 정보 (USER FACT — 독립 검증 미완료)\n- 팀 확장 중\n\n### 불확실 사항\n- 다음 라운드 형식·면접관 Unknown\n\n---\n\n## 이전 가설 vs 실제 증거\n\n이전 가설 없음 — 이번 기록이 첫 번째 근거가 됩니다.\n\n---\n\n## 회사 및 채용 업데이트\n\nINFERENCE: 팀 확장 중이라는 발언은 신규 역할·헤드카운트 증가를 시사하며, 독립적으로 소유권을 가지고 일할 수 있는 사람을 찾고 있을 가능성이 높아요. 소유권 반복 질문과 맥락이 일치합니다. 확인 필요.\n\n---\n\n## 후보자 리스크 — 실제 증거 기반\n\n**핵심 리스크: 소유권 불명확**\n\n\"12개 테스트 점검, 결함 보고\"는 실행·지원 행동으로, 개인적인 발견·설계·결정 소유권을 직접 드러내지 않아요. 면접관이 소유권을 반복해서 물은 것은 이 점이 충분히 전달되지 않았다는 신호입니다.\n\n- 측정 방법 Unknown → \"어떻게 측정했냐\" 질문에 어떻게 답했는지가 기록에 없어요.\n- 두 번째 사례 제공 여부 Unknown\n\n---\n\n## 스토리 뱅크 수정 방향\n\n현재 USER FACT 범위: \"12개 테스트 점검, 결함 보고\"\n\n아래는 **확인이 필요한 사항**이에요 — 확인되기 전에는 답변에 추가하면 안 됩니다:\n\n| 확인 질문 | 이유 |\n|---|---|\n| 12개 테스트는 본인이 직접 설계했나요, 기존 것을 실행했나요? | 소유권 경계 |\n| 결함을 어떻게 기록·보고했나요? (도구, 형식, 채널) | 측정 방법 |\n| 결함을 처음 발견한 사람이 본인인가요? | 발견 소유권 |\n| 결과로 어떤 변화가 있었나요? | 영향 |\n\n---\n\n## 다음 라운드 목표 및 포지셔닝\n\n다음 라운드 형식 Unknown이지만, 이번 신호를 기반으로 준비 방향을 잡을 수 있어요.\n\n**우선 보완할 것:**\n\n1. **소유권이 드러나는 사례 추가 준비** — \"내가 직접 ___했다\"가 명확한 사례를 2–3개 준비하세요. 팀 결과가 아닌 본인 기여를 분리해서 말할 수 있어야 해요.\n2. **측정 방법 답변 준비** — \"어떻게 측정했냐\"에 대한 답을 명확하게 정리하세요. 숫자가 없으면 과정·방법만 솔직하게 설명하면 돼요.\n3. **두 번째 사례** — 이번에 추가 사례 요청을 받았으니, 다른 상황에서의 구체적 행동 사례를 준비하세요.\n\n---\n\n## Unknown\n\n- 다음 라운드 형식, 면접관 역할\n- 측정 질문에 대한 실제 답변\n- 두 번째 사례 제공 여부\n- 12개 테스트의 설계·실행 소유권 경계\n\n---\n\n## 다음 한 가지 행동\n\n위 확인 질문 4개 중 본인이 답할 수 있는 것을 알려주세요 — 그 내용으로 소유권이 드러나는 스토리를 같이 정리할게요."
+        }
+      ],
+      "deterministic_roundtrip": null
+    },
+    {
+      "id": "discovery-no-fake-openings",
+      "persona": "career-changer",
+      "status": "PASS",
+      "assertions": [
+        {
+          "id": "openings",
+          "pass": true,
+          "reason": "The assistant provides no live job openings, URLs, or salaries. All company names are explicitly labeled as an unverified research list with current posting status marked as Unknown.",
+          "evidence_quote": "**VERIFIED FACT 없음**: 아래 회사/직군은 RECOMMENDATION이며, 현재 공고 존재 여부는 Unknown입니다."
+        },
+        {
+          "id": "requirements",
+          "pass": true,
+          "reason": "Remote is confirmed as a user fact and reflected in company selection criteria. The evidence mapping table explicitly distinguishes transferable (customer data understanding), unknown (SQL, visualization, statistics), and confirmed (remote) evidence.",
+          "evidence_quote": "원격 근무 선호 | USER FACT | 확인됨"
+        }
+      ],
+      "model_ids": [
+        "claude-sonnet-4-6"
+      ],
+      "judge_model": "claude-sonnet-4-6",
+      "loaded_files": {
+        "SKILL.md": "53b01eb89bd5df9b447e0a80553c9d78612f51859bda4592472103f003253037",
+        "references/host.md": "c0669b6ebc04a2d9760064966ef783d42c391b7121c52199afbbe62f4f007d71",
+        "references/core/router/routing.md": "6cdb00e50bc939b51fc3febefa94fb6267fcd8519a37957f220983a6ff756ad9",
+        "references/core/router/intent-catalog.yaml": "33785d709e82d3f2199af4bf2239dc61df5f373cdb344c7bd7d05e874e9aeb16",
+        "references/core/state/state.md": "7354bc852fa8a07c1ce442070a681b787cfa5b1791ce94a8c86ddb015dc75be1",
+        "references/core/principles/entry-guards.md": "f40d3bdb82525e457a8b0f1dbcba2673b60b6147fd8767422fef12bf1926af51",
+        "references/core/principles/evidence-policy.md": "2023f804846b6ac4d91af7bf0ce78213fffeb08c1acd070fbaf64aaf826749bb",
+        "references/core/principles/index.md": "4ae2f36afe2d726259fa841cf8b6a1a87cee4c3558b7a0063c59405d6f92b9f8",
+        "references/core/principles/privacy-policy.md": "b9054960b3c502715b7e93a2bce3f654bf97c2b15e79184f1f8a53da5534cce9",
+        "references/core/principles/product-principles.md": "b2c1cf4eead6e2e73122811ddaa1aa360ace3a2dad6e53821da9b5287da59459",
+        "references/core/principles/research-policy.md": "e0dc13d43474708fb9b1c283fe4369b2dbe414fb880933c2fb4e3c49d2c9ca3c",
+        "references/core/principles/ux-language.md": "cbbbacfcfe8fb67839c0915427d1769685fb929dd9aec404d7e53cebf58763e2",
+        "references/core/workflows/w03-opportunity-discovery.md": "3fb71a1e942d963c4439433ba08ab83e14dce76e7f8a9137b92bde0b0ba462ed",
+        "references/core/artifacts/opportunity-screen.md": "6d071af5caff998c31157b2ffc9b3b949ee605d2fd57a04486676667dceca6ba",
+        "references/core/capabilities/role-mapping.md": "6227da7532931dbeb7bac4e13c4323182496e5f6665d409ec4c2e16af0c88fe3",
+        "references/core/capabilities/application-pipeline.md": "73b4d12698f2aa1cb2215e53823306f2c3389741ff473436b24b40ee031a32ae",
+        "references/core/capabilities/experience-mining.md": "003ff233c256075e24575bd370307adbc5314f4c47a4ebed3ca5efa09a293f72",
+        "references/core/capabilities/story-bank.md": "8ae0dd5560fa1d6f58deff06a7e3e819351a4c757d87cab994a96fd02a61c3e3",
+        "references/core/capabilities/resume.md": "178b1035d145ef252c089fe9d051b24a113f95b50e157ac76018bc9d26827e8d",
+        "references/core/capabilities/screening-engine.md": "753017fddcc66508179ff742319b24512a5f250c4f405e335bf22dead54e1933",
+        "references/core/capabilities/resume-artifact.md": "303b246d67a5258d7a2fb0072945c992a9cd489ea3d342d5348febad0ad24973",
+        "references/core/capabilities/human-voice.md": "bd0580691c88a60bf5ab6d6a09c2a8b03091e85847033ec2fee59ecd4fb17b59",
+        "references/core/capabilities/red-team.md": "917ad900ab59a59b021eafb11bf35f4f695ceababc243a2a2fae9a3b8e87d2cf",
+        "references/core/capabilities/application-writing.md": "63a07b9cd864cd00ea30b3fb65a15226d89c7abc28196ac225655b392d278165",
+        "references/core/capabilities/compensation.md": "cb8755ef9bc5ee0c83d8087ad28420ff910676caee9cd3def544d1ae1037035c"
+      },
+      "transcript": [
+        {
+          "role": "user",
+          "content": "고객지원에서 데이터 분석으로 바꾸고 싶어. 원격근무 필수야. SQL은 배우는 중이고 실제 수준은 몰라. 나에게 맞는 외국계 공고 찾아줘. 웹 검색은 못 해."
+        },
+        {
+          "role": "assistant",
+          "content": "웹 검색이 없어서 현재 공고 상태는 확인 불가예요. 아래는 **조사 대상 목록**으로, 실제 채용 여부는 각 회사 공식 커리어 페이지에서 직접 확인해야 해요.\n\n---\n\n## 타겟 기회 목록 (W03 — 미확인 리서치 목록)\n\n> **VERIFIED FACT 없음**: 아래 회사/직군은 RECOMMENDATION이며, 현재 공고 존재 여부는 Unknown입니다.\n\n---\n\n### CORE — 고객지원 경력을 직접 연결할 수 있는 직군\n\n| 직군 | 타겟 회사 유형 | 왜 연결되는가 | 주요 조건 |\n|---|---|---|---|\n| Customer Analytics Analyst | SaaS/CX 솔루션 기업 | 고객 행동·지원 데이터를 가장 잘 이해하는 사람 | SQL Unknown → 면접 위험 |\n| CX Insights Analyst | 글로벌 e-commerce/리테일 | 지원 트렌드 분석, VOC 정량화 | SQL Unknown |\n| Support Operations Analyst | B2B SaaS | 티켓 데이터·프로세스 지표 분석 | SQL Unknown |\n\n**연구 대상 기업 (원격 친화적으로 알려진 곳, 공고 상태 Unknown):**\n- Atlassian, GitLab, Zapier — 완전 원격 정책 기업으로 알려짐 (INFERENCE: 현재 채용 여부 미확인)\n- Zendesk, Intercom, Freshworks — CX 도구 기업, 내부에 분석직 있음 (INFERENCE)\n- HubSpot, Amplitude — 데이터 문화 강한 SaaS (INFERENCE)\n\n---\n\n### STRETCH — 다리가 필요한 직군\n\n| 직군 | 조건 | 갭 |\n|---|---|---|\n| Business Intelligence Analyst | SQL 실무 수준 필요 | SQL 수준 Unknown |\n| Data Analyst (General) | Python/SQL 요구 빈번 | SQL Unknown, Python Unknown |\n\n---\n\n### STRATEGIC ENTRY — 전환 발판 역할\n\n| 직군 | 설명 | 트레이드오프 |\n|---|---|---|\n| Associate Data Analyst | 일부 기업 entry-level 트랙 | 연봉 낮을 수 있음 |\n| Reporting Analyst | SQL 기초로 시작 가능 | 성장 경로 확인 필요 |\n\n---\n\n### 증거 매핑 (현재 기준)\n\n| 요건 | 매핑 | 근거 |\n|---|---|---|\n| 고객 데이터 이해 | Transferable | USER FACT: 고객지원 경력 (구체적 업무 Unknown) |\n| SQL | **Unknown** | 학습 중이나 실제 수준 미확인 |\n| 데이터 시각화 도구 | Unknown | 미확인 |\n| 통계/분석 경험 | Unknown | 미확인 |\n| 원격 근무 선호 | USER FACT | 확인됨 |\n\n---\n\n### 공식 커리어 페이지 검색 방법\n\n각 타겟 기업의 `careers` 또는 `jobs` 페이지에서:\n- 검색어: `\"data analyst\" remote`, `\"customer analytics\"`, `\"CX analyst\"`\n- 필터: Remote / Work from Anywhere\n\n---\n\n### Unknowns\n\n- 고객지원 경력의 구체적 업무 (분석/보고 포함 여부) — **증거 매핑에 결정적**\n- SQL 현재 수준 (기초 SELECT / JOIN 가능 여부 등)\n- 선호 국가/시간대 (원격이라도 오버랩 요건 있는 기업 다수)\n\n---\n\n### 다음 단계\n\n타겟 기업 공식 커리어 페이지에서 공고를 찾아 붙여넣어 주시면 W04(공고 분석)로 넘어가 구체적인 전략을 세울 수 있어요.\n\n---\n\n한 가지만 물어볼게요: **고객지원 업무에서 데이터나 수치를 다뤄본 적 있나요?** (예: 티켓 수 집계, 만족도 보고, 엑셀 정리 등) 있다면 어떤 방식으로 했는지 짧게 알려주시면 증거 매핑이 훨씬 정확해져요."
+        }
+      ],
+      "deterministic_roundtrip": null
+    },
+    {
+      "id": "discovery-unknown-table",
+      "persona": "three-year-professional",
+      "status": "PASS",
+      "assertions": [
+        {
+          "id": "cells",
+          "pass": true,
+          "reason": "All four items (test design, tools, SQL, reporting methods) are labeled Unknown in the evidence table with no Gap column or Gap items anywhere. No confirmed gap is asserted.",
+          "evidence_quote": "테스트 설계 | **Unknown** | 미확인 (부재 확인 아님)"
+        },
+        {
+          "id": "scope",
+          "pass": true,
+          "reason": "No live jobs are invented; the header explicitly marks job status Unknown. USER FACT labels attach only to user-confirmed facts (12 tests, defect reporting, 3-year tenure). Search categories are framed as exploration proposals, not confirmed goals. The closing question is a proposed next action, not a claim about past work.",
+          "evidence_quote": "아래는 탐색 후보 목록이며 실제 공고 상태 Unknown"
+        }
+      ],
+      "model_ids": [
+        "claude-sonnet-4-6"
+      ],
+      "judge_model": "claude-sonnet-4-6",
+      "loaded_files": {
+        "SKILL.md": "53b01eb89bd5df9b447e0a80553c9d78612f51859bda4592472103f003253037",
+        "references/host.md": "c0669b6ebc04a2d9760064966ef783d42c391b7121c52199afbbe62f4f007d71",
+        "references/core/router/routing.md": "6cdb00e50bc939b51fc3febefa94fb6267fcd8519a37957f220983a6ff756ad9",
+        "references/core/router/intent-catalog.yaml": "33785d709e82d3f2199af4bf2239dc61df5f373cdb344c7bd7d05e874e9aeb16",
+        "references/core/state/state.md": "7354bc852fa8a07c1ce442070a681b787cfa5b1791ce94a8c86ddb015dc75be1",
+        "references/core/principles/entry-guards.md": "f40d3bdb82525e457a8b0f1dbcba2673b60b6147fd8767422fef12bf1926af51",
+        "references/core/principles/evidence-policy.md": "2023f804846b6ac4d91af7bf0ce78213fffeb08c1acd070fbaf64aaf826749bb",
+        "references/core/principles/index.md": "4ae2f36afe2d726259fa841cf8b6a1a87cee4c3558b7a0063c59405d6f92b9f8",
+        "references/core/principles/privacy-policy.md": "b9054960b3c502715b7e93a2bce3f654bf97c2b15e79184f1f8a53da5534cce9",
+        "references/core/principles/product-principles.md": "b2c1cf4eead6e2e73122811ddaa1aa360ace3a2dad6e53821da9b5287da59459",
+        "references/core/principles/research-policy.md": "e0dc13d43474708fb9b1c283fe4369b2dbe414fb880933c2fb4e3c49d2c9ca3c",
+        "references/core/principles/ux-language.md": "cbbbacfcfe8fb67839c0915427d1769685fb929dd9aec404d7e53cebf58763e2",
+        "references/core/workflows/w03-opportunity-discovery.md": "3fb71a1e942d963c4439433ba08ab83e14dce76e7f8a9137b92bde0b0ba462ed",
+        "references/core/artifacts/opportunity-screen.md": "6d071af5caff998c31157b2ffc9b3b949ee605d2fd57a04486676667dceca6ba",
+        "references/core/capabilities/role-mapping.md": "6227da7532931dbeb7bac4e13c4323182496e5f6665d409ec4c2e16af0c88fe3",
+        "references/core/capabilities/application-pipeline.md": "73b4d12698f2aa1cb2215e53823306f2c3389741ff473436b24b40ee031a32ae",
+        "references/core/capabilities/experience-mining.md": "003ff233c256075e24575bd370307adbc5314f4c47a4ebed3ca5efa09a293f72",
+        "references/core/capabilities/story-bank.md": "8ae0dd5560fa1d6f58deff06a7e3e819351a4c757d87cab994a96fd02a61c3e3",
+        "references/core/capabilities/resume.md": "178b1035d145ef252c089fe9d051b24a113f95b50e157ac76018bc9d26827e8d",
+        "references/core/capabilities/screening-engine.md": "753017fddcc66508179ff742319b24512a5f250c4f405e335bf22dead54e1933",
+        "references/core/capabilities/resume-artifact.md": "303b246d67a5258d7a2fb0072945c992a9cd489ea3d342d5348febad0ad24973",
+        "references/core/capabilities/human-voice.md": "bd0580691c88a60bf5ab6d6a09c2a8b03091e85847033ec2fee59ecd4fb17b59",
+        "references/core/capabilities/red-team.md": "917ad900ab59a59b021eafb11bf35f4f695ceababc243a2a2fae9a3b8e87d2cf",
+        "references/core/capabilities/application-writing.md": "63a07b9cd864cd00ea30b3fb65a15226d89c7abc28196ac225655b392d278165",
+        "references/core/capabilities/compensation.md": "cb8755ef9bc5ee0c83d8087ad28420ff910676caee9cd3def544d1ae1037035c"
+      },
+      "transcript": [
+        {
+          "role": "user",
+          "content": "[시뮬레이션] 운영 분석 3년이고 직접 확인한 행동은 테스트 12개 수행과 결함 보고뿐이야. 테스트 설계·도구·SQL·보고 방식 경험은 모름. 한국 완전 원격 MUST, 영어 PREFER야. 실제 JD도 웹도 없어. Core/Stretch/Strategic Entry 탐색 후보와 Strong/Transferable/Gap/Unknown 표를 아주 짧게 만들어줘."
+        },
+        {
+          "role": "assistant",
+          "content": "**[웹 접근 불가 — 현재 공고 확인 불가. 아래는 탐색 후보 목록이며 실제 공고 상태 Unknown]**\n\n---\n\n## 탐색 후보 목록\n\n### Core (직접 지지 증거 있음)\n\n| 역할군 | 예시 직함 | 이유 |\n|---|---|---|\n| QA / 품질 보증 | QA Analyst, Test Engineer | 테스트 수행·결함 보고가 핵심 업무와 직접 매핑 |\n| 운영 지원 분석 | Operations Support Analyst | 3년 운영 분석 이력 직접 적용 |\n\n### Stretch (전환 근거 필요)\n\n| 역할군 | 예시 직함 | 이유 |\n|---|---|---|\n| 프로세스 개선 | Process Improvement Analyst | 운영 경험 유사하나 개선 주도 여부 Unknown |\n| 제품 운영 | Product Operations Analyst | 운영 분석 이력 이전 가능, 제품 도메인 경험 Unknown |\n\n### Strategic Entry (인접 진입 경로)\n\n| 역할군 | 예시 직함 | 이유 |\n|---|---|---|\n| 데이터 운영 | Data Operations Analyst | 운영 기반 진입 가능, SQL 보강 필요 |\n\n---\n\n## 증거 매핑 (확인된 요건 기준)\n\n| 역량 | 분류 | 근거 |\n|---|---|---|\n| 테스트 수행 (12건) | **Strong Evidence** | USER FACT — 직접 확인 |\n| 결함 보고 | **Strong Evidence** | USER FACT — 직접 확인 |\n| 3년 운영 분석 경력 | **Strong Evidence** | USER FACT |\n| 테스트 설계 | **Unknown** | 미확인 (부재 확인 아님) |\n| 테스트 도구 (Jira 등) | **Unknown** | 미확인 |\n| SQL | **Unknown** | 미확인 |\n| 보고 방식 (문서화·도구) | **Unknown** | 미확인 |\n\n> **INFERENCE:** 결함 보고의 방식(구두/문서/도구)이 확인되면 Core 역할 지지 증거 강화 가능.\n\n---\n\n**제약 조건 반영**\n- 한국 완전 원격 MUST → 모든 후보 탐색 시 원격 지원 여부 1순위 확인 필요\n- 영어 PREFER → 영어 공고/외국계 포함 탐색 권장\n\n---\n\n**다음 한 가지 확인 사항**\n\n결함을 어떻게 보고했나요? (예: 구두 전달, 이메일, Jira/스프레드시트 등 도구 사용)\n— 이 한 가지로 QA Analyst Core 증거가 크게 달라져요."
+        }
+      ],
+      "deterministic_roundtrip": null
+    },
+    {
+      "id": "english-mock",
+      "persona": "english-candidate",
+      "status": "PASS",
+      "assertions": [
+        {
+          "id": "english",
+          "pass": true,
+          "reason": "Both active interviewer turns are in English, professional in tone, and each contains exactly one question.",
+          "evidence_quote": "Which specific project or test cycle were you supporting?"
+        },
+        {
+          "id": "no_leakage",
+          "pass": true,
+          "reason": "When the user requested in-session grammar correction, the assistant explicitly deferred it to post-mock review with no coaching, praise, or rubric disclosure during the live mock.",
+          "evidence_quote": "Grammar feedback is saved for after we finish — I'll cover it in the review."
+        },
+        {
+          "id": "review",
+          "pass": true,
+          "reason": "After the explicit 'End mock' trigger the assistant grounded feedback in the actual user answer and stated seed fact (12 cases), flagged the unanswered follow-up, and explicitly warned against claiming outcomes not in evidence.",
+          "evidence_quote": "Do not claim discovery, analysis, or ownership beyond what you can confirm."
+        }
+      ],
+      "model_ids": [
+        "claude-sonnet-4-6"
+      ],
+      "judge_model": "claude-sonnet-4-6",
+      "loaded_files": {
+        "SKILL.md": "53b01eb89bd5df9b447e0a80553c9d78612f51859bda4592472103f003253037",
+        "references/host.md": "c0669b6ebc04a2d9760064966ef783d42c391b7121c52199afbbe62f4f007d71",
+        "references/core/router/routing.md": "6cdb00e50bc939b51fc3febefa94fb6267fcd8519a37957f220983a6ff756ad9",
+        "references/core/router/intent-catalog.yaml": "33785d709e82d3f2199af4bf2239dc61df5f373cdb344c7bd7d05e874e9aeb16",
+        "references/core/state/state.md": "7354bc852fa8a07c1ce442070a681b787cfa5b1791ce94a8c86ddb015dc75be1",
+        "references/core/principles/entry-guards.md": "f40d3bdb82525e457a8b0f1dbcba2673b60b6147fd8767422fef12bf1926af51",
+        "references/core/principles/evidence-policy.md": "2023f804846b6ac4d91af7bf0ce78213fffeb08c1acd070fbaf64aaf826749bb",
+        "references/core/principles/index.md": "4ae2f36afe2d726259fa841cf8b6a1a87cee4c3558b7a0063c59405d6f92b9f8",
+        "references/core/principles/privacy-policy.md": "b9054960b3c502715b7e93a2bce3f654bf97c2b15e79184f1f8a53da5534cce9",
+        "references/core/principles/product-principles.md": "b2c1cf4eead6e2e73122811ddaa1aa360ace3a2dad6e53821da9b5287da59459",
+        "references/core/principles/research-policy.md": "e0dc13d43474708fb9b1c283fe4369b2dbe414fb880933c2fb4e3c49d2c9ca3c",
+        "references/core/principles/ux-language.md": "cbbbacfcfe8fb67839c0915427d1769685fb929dd9aec404d7e53cebf58763e2",
+        "references/core/workflows/w07-mock-interview.md": "b94ad744b6fdb31863eb05793cb13053f4d7d54c8038ba3ef61db2fadf25b450",
+        "references/core/artifacts/mock-review.md": "fa4804c39c976be600f42bc8bfa7899fa8c07562d5a1d730ec3dac74c14c8399",
+        "references/core/capabilities/story-bank.md": "8ae0dd5560fa1d6f58deff06a7e3e819351a4c757d87cab994a96fd02a61c3e3",
+        "references/core/capabilities/red-team.md": "917ad900ab59a59b021eafb11bf35f4f695ceababc243a2a2fae9a3b8e87d2cf",
+        "references/core/capabilities/english-global.md": "710d37d3476482cc5cba3e973cacf1104f3db69d0c8db9b7c4fc413489e0390c",
+        "references/core/capabilities/voice-mock.md": "edd6245345137cadc08e30ed1c45327c49ccdc1ea9d4a88988965efdce3167ea",
+        "references/core/capabilities/experience-mining.md": "003ff233c256075e24575bd370307adbc5314f4c47a4ebed3ca5efa09a293f72",
+        "references/core/capabilities/resume.md": "178b1035d145ef252c089fe9d051b24a113f95b50e157ac76018bc9d26827e8d",
+        "references/core/capabilities/screening-engine.md": "753017fddcc66508179ff742319b24512a5f250c4f405e335bf22dead54e1933",
+        "references/core/capabilities/resume-artifact.md": "303b246d67a5258d7a2fb0072945c992a9cd489ea3d342d5348febad0ad24973",
+        "references/core/capabilities/human-voice.md": "bd0580691c88a60bf5ab6d6a09c2a8b03091e85847033ec2fee59ecd4fb17b59",
+        "references/core/capabilities/application-writing.md": "63a07b9cd864cd00ea30b3fb65a15226d89c7abc28196ac225655b392d278165",
+        "references/core/capabilities/compensation.md": "cb8755ef9bc5ee0c83d8087ad28420ff910676caee9cd3def544d1ae1037035c"
+      },
+      "transcript": [
+        {
+          "role": "user",
+          "content": "ENGLISH mock for Alpha analyst. My verified experience is supporting testing of 12 cases. Start with one question."
+        },
+        {
+          "role": "assistant",
+          "content": "Got it — ENGLISH mock, Alpha analyst role. Say \"end mock\" or \"stop\" when you want to finish and I'll switch to review.\n\n---\n\nTell me about your background and what brought you to the analyst path."
+        },
+        {
+          "role": "user",
+          "content": "I supported tests and reported defects. Please correct my grammar during the interview; do not end yet."
+        },
+        {
+          "role": "assistant",
+          "content": "Grammar feedback is saved for after we finish — I'll cover it in the review.\n\nWhich specific project or test cycle were you supporting?"
+        },
+        {
+          "role": "user",
+          "content": "End mock and give focused feedback."
+        },
+        {
+          "role": "assistant",
+          "content": "## Mock Review — ENGLISH / Alpha Analyst\n\n---\n\n### Session and Mode\n**Mode:** ENGLISH | **Questions asked:** 1 (background/path) + 1 follow-up (project/cycle) | **Answers captured:** 1 complete answer before end\n\n---\n\n### Evidence from Transcript\n\n**Q:** Tell me about your background and what brought you to the analyst path.\n**A (USER FACT):** \"I supported tests and reported defects.\"\n\nFollow-up (\"Which specific project or test cycle?\") was not answered before end.\n\n---\n\n### Weak Points\n\n1. **Substance — answer is too short.** One sentence covers neither background nor motivation. An interviewer will probe immediately.\n2. **\"We\" vs \"I\" unclear.** \"Supported tests\" doesn't state your individual role within the team.\n3. **No situational anchor.** No project name, domain, or timeframe was offered.\n\n---\n\n### Grammar Feedback (requested)\nThe sentence \"I supported tests and reported defects\" is grammatically correct. No errors to fix. The issue is completeness, not grammar.\n\n---\n\n### Story Repairs\n\nYour confirmed evidence: **supported testing of 12 cases** (USER FACT).\n\nA stronger response structure (not a script — build from your own facts):\n- **Situation:** What was being tested and why it mattered\n- **Your action:** What you personally did in those 12 cases\n- **Result:** What happened after defects were reported (Unknown — verify before using)\n\nDo not claim discovery, analysis, or ownership beyond what you can confirm.\n\n---\n\n### Unsupported Claims\nNone added — answer was literal and safe. The risk going forward is underanswering, not overclaiming.\n\n---\n\n### Rehearsal Plan\n1. Prepare a 60-second answer to \"Tell me about yourself\" using the 12-case testing experience as the anchor.\n2. Confirm: How were defects reported? (tool, email, verbal?) — this unlocks one more concrete detail.\n3. Practice the follow-up: \"Which project?\" — have a one-sentence answer ready.\n\n---\n\n### Next Action\nConfirm how defects were reported (method/tool), then draft a 60-second background answer for review."
+        }
+      ],
+      "deterministic_roundtrip": null
+    },
+    {
+      "id": "hero-independent-persona",
+      "persona": "five-year-global",
+      "status": "PASS",
+      "assertions": [
+        {
+          "id": "independent",
+          "pass": true,
+          "reason": "The Ideal Candidate section is explicitly derived from JD alone before user profile is referenced, and includes SQL and workflow-analysis as distinct criteria. User evidence is then mapped in a separate subsequent section.",
+          "evidence_quote": "*(사용자 프로필을 참조하기 전에 JD와 역할 맥락만으로 독립적으로 도출)*"
+        },
+        {
+          "id": "verified",
+          "pass": true,
+          "reason": "No invented org metrics, 90-day targets, or current facts appear. All hiring hypotheses are labelled INFERENCE with explicit low-confidence notation, and unknowns are separated from confirmed facts throughout.",
+          "evidence_quote": "INFERENCE (신뢰도: 낮음 — JD만 근거, 회사 정보 없음)"
+        },
+        {
+          "id": "mapping",
+          "pass": true,
+          "reason": "SQL is explicitly classified as Unknown rather than a Gap, with a stated rationale. No numeric fit score is used anywhere in the response.",
+          "evidence_quote": "SQL 경험은 현재 미확인 상태이므로 Gap이 아닌 Unknown으로 분류합니다"
+        }
+      ],
+      "model_ids": [
+        "claude-sonnet-4-6"
+      ],
+      "judge_model": "claude-sonnet-4-6",
+      "loaded_files": {
+        "SKILL.md": "53b01eb89bd5df9b447e0a80553c9d78612f51859bda4592472103f003253037",
+        "references/host.md": "c0669b6ebc04a2d9760064966ef783d42c391b7121c52199afbbe62f4f007d71",
+        "references/core/router/routing.md": "6cdb00e50bc939b51fc3febefa94fb6267fcd8519a37957f220983a6ff756ad9",
+        "references/core/router/intent-catalog.yaml": "33785d709e82d3f2199af4bf2239dc61df5f373cdb344c7bd7d05e874e9aeb16",
+        "references/core/state/state.md": "7354bc852fa8a07c1ce442070a681b787cfa5b1791ce94a8c86ddb015dc75be1",
+        "references/core/principles/entry-guards.md": "f40d3bdb82525e457a8b0f1dbcba2673b60b6147fd8767422fef12bf1926af51",
+        "references/core/principles/evidence-policy.md": "2023f804846b6ac4d91af7bf0ce78213fffeb08c1acd070fbaf64aaf826749bb",
+        "references/core/principles/index.md": "4ae2f36afe2d726259fa841cf8b6a1a87cee4c3558b7a0063c59405d6f92b9f8",
+        "references/core/principles/privacy-policy.md": "b9054960b3c502715b7e93a2bce3f654bf97c2b15e79184f1f8a53da5534cce9",
+        "references/core/principles/product-principles.md": "b2c1cf4eead6e2e73122811ddaa1aa360ace3a2dad6e53821da9b5287da59459",
+        "references/core/principles/research-policy.md": "e0dc13d43474708fb9b1c283fe4369b2dbe414fb880933c2fb4e3c49d2c9ca3c",
+        "references/core/principles/ux-language.md": "cbbbacfcfe8fb67839c0915427d1769685fb929dd9aec404d7e53cebf58763e2",
+        "references/core/workflows/w04-job-intelligence.md": "6e56daeec8b67c691645b5353d65c41780a2d3b6f114bde5341419092016ea05",
+        "references/core/artifacts/candidate-strategy.md": "1d09fbf1dd52faa4ac5b1e732b2fb0f6fdb7353d142d91de07bcad8c0554a452",
+        "references/core/capabilities/job-research.md": "5913b0ab53058b691a889e66fbdc1dd3c09db35036cc1a19c85b0fbd337e816a",
+        "references/core/capabilities/experience-mining.md": "003ff233c256075e24575bd370307adbc5314f4c47a4ebed3ca5efa09a293f72",
+        "references/core/capabilities/red-team.md": "917ad900ab59a59b021eafb11bf35f4f695ceababc243a2a2fae9a3b8e87d2cf",
+        "references/core/capabilities/story-bank.md": "8ae0dd5560fa1d6f58deff06a7e3e819351a4c757d87cab994a96fd02a61c3e3",
+        "references/core/capabilities/resume.md": "178b1035d145ef252c089fe9d051b24a113f95b50e157ac76018bc9d26827e8d",
+        "references/core/capabilities/screening-engine.md": "753017fddcc66508179ff742319b24512a5f250c4f405e335bf22dead54e1933",
+        "references/core/capabilities/resume-artifact.md": "303b246d67a5258d7a2fb0072945c992a9cd489ea3d342d5348febad0ad24973",
+        "references/core/capabilities/human-voice.md": "bd0580691c88a60bf5ab6d6a09c2a8b03091e85847033ec2fee59ecd4fb17b59",
+        "references/core/capabilities/application-writing.md": "63a07b9cd864cd00ea30b3fb65a15226d89c7abc28196ac225655b392d278165",
+        "references/core/capabilities/compensation.md": "cb8755ef9bc5ee0c83d8087ad28420ff910676caee9cd3def544d1ae1037035c"
+      },
+      "transcript": [
+        {
+          "role": "user",
+          "content": "이 공고 어때? 합성회사 Alpha, Business Analyst. JD: SQL 분석 필수, 고객 업무흐름 개선, 운영팀 협업. 수치 목표와 조직정보는 없어. 나는 글로벌 커뮤니케이션 5년 경력이지만 SQL 경험은 확인되지 않았어. 회사정보/웹 도구 없음. 회사가 내부 구조조정해서 뽑는 것으로 가정하지 말아줘. 먼저 이상적인 후보를 정의하고 내 근거를 연결해줘."
+        },
+        {
+          "role": "assistant",
+          "content": "## Candidate Strategy Brief — 합성회사 Alpha / Business Analyst\n\n---\n\n### Executive Summary\n\nINFERENCE: 이 공고는 데이터 기반 프로세스 개선을 실행할 수 있는 분석가를 찾고 있는 것으로 보입니다. 핵심 요건은 SQL 실무 역량과 고객 업무흐름 개선 경험입니다. 귀하의 글로벌 커뮤니케이션 5년 경력은 운영팀 협업 측면에서 이전 가능한 근거가 됩니다. SQL 경험이 확인되지 않아 이 공고의 가장 큰 리스크는 핵심 기술 요건입니다. 우선 SQL 실제 사용 경험 여부를 확인하는 것이 다음 행동입니다.\n\n---\n\n### What This Role Appears To Be\n\nINFERENCE (근거: 공급된 JD 텍스트): 이 역할은 고객 대면 또는 내부 운영 데이터를 SQL로 분석하고, 그 결과를 업무 흐름 개선으로 연결하는 실행형 비즈니스 애널리스트입니다. 운영팀과의 협업이 명시된 것으로 보아 분석 결과를 현업에 전달하고 실행을 지원하는 역할이 포함될 가능성이 높습니다.\n\n수치 목표와 조직 정보가 JD에 없어, 정확한 KPI 구조, 보고 체계, 팀 규모는 Unknown입니다.\n\n---\n\n### Why It May Be Open\n\nINFERENCE (대안 포함): JD 및 공급된 정보만으로 채용 이유를 특정할 수 없습니다.\n\n가능한 가설:\n- 신규 분석 기능 구축 (성장)\n- 기존 담당자 이탈로 인한 충원 (교체)\n- 운영팀 지원 수요 증가 (확장)\n\n사용자가 내부 구조조정 가정을 명시적으로 배제했으므로, 해당 가설은 포함하지 않습니다.\n\n확인 필요: 채용 담당자에게 \"이 포지션이 신규인지, 기존 역할의 충원인지\" 직접 물어보는 것이 가장 빠른 검증 방법입니다.\n\n---\n\n### Confirmed Context\n\n- **USER FACT**: 공고 출처 — 합성회사 Alpha, Business Analyst\n- **USER FACT**: JD 핵심 요건 — SQL 분석 필수, 고객 업무흐름 개선, 운영팀 협업\n- **USER FACT**: JD에 수치 목표 및 조직 정보 없음\n- **USER FACT**: 귀하 — 글로벌 커뮤니케이션 5년 경력\n- **USER FACT**: SQL 경험 미확인\n- 회사 공식 정보, 웹 검색 불가: 모든 회사 관련 내용은 USER_SUPPLIED 또는 Unknown\n\n---\n\n### Hiring Hypothesis\n\nINFERENCE (신뢰도: 낮음 — JD만 근거, 회사 정보 없음):\n\n이 회사는 운영 데이터를 현재 충분히 활용하지 못하고 있거나, 고객 프로세스 개선을 체계화할 분석 담당자가 필요한 상황일 가능성이 있습니다. SQL을 \"필수\"로 명시한 점은 도구 사용 능력이 스크리닝 기준임을 시사합니다.\n\n대안: 분석은 외주 또는 다른 팀이 담당하고, 이 역할은 주로 프로세스 코디네이터일 수도 있음 — 확인 필요.\n\n---\n\n### Ideal Candidate\n\n*(사용자 프로필을 참조하기 전에 JD와 역할 맥락만으로 독립적으로 도출)*\n\n| 기준 | 내용 |\n|---|---|\n| SQL 실무 역량 | SELECT, JOIN, 집계 등 실제 데이터 추출·분석 수행 경험 |\n| 프로세스 분석 | 현행 업무흐름 파악, 병목 식별, 개선안 도출 경험 |\n| 고객 관점 | 고객 여정 또는 서비스 흐름 맥락에서 데이터 해석 가능 |\n| 운영팀 협업 | 비기술 이해관계자에게 분석 결과를 전달하고 실행 지원 |\n| 커뮤니케이션 | 분석 인사이트를 명확한 제안으로 정리하는 서면·구두 역량 |\n| 자기 주도성 | 수치 목표가 없는 환경에서 스스로 우선순위 설정 |\n\n---\n\n### Your Strong Evidence\n\n| 기준 | 귀하의 근거 | 분류 |\n|---|---|---|\n| 운영팀 협업 | 글로벌 이해관계자 협업 5년 경력 | USER FACT — Strong Evidence (협업·커뮤니케이션 측면) |\n| 커뮤니케이션 | 글로벌 업무 환경에서의 의사소통 역량 | USER FACT — Strong Evidence |\n\n---\n\n### Transferable Evidence\n\n| 기준 | 이전 가능한 근거 | 다리(Bridge) | 한계 |\n|---|---|---|---|\n| 프로세스 분석 | 글로벌 업무흐름 조율 경험 (INFERENCE) | 다양한 이해관계자와의 프로세스 조율은 흐름 분석 역량과 연결될 수 있음 | 실제로 문서화·개선된 프로세스가 있는지 미확인 |\n| 고객 관점 | 글로벌 커뮤니케이션 맥락에서 고객/파트너 접점 가능 | 업무 대상이 고객 관련이었다면 연결 가능 | 고객 업무흐름 직접 분석 경험 여부 미확인 |\n\n---\n\n### Gaps\n\n현재 확인된 Gap 없음.\n\n> **중요**: Gap은 역할 요건이 확인되고 귀하의 해당 역량 부재가 동시에 확인될 때만 기록합니다. SQL 경험은 현재 미확인 상태이므로 Gap이 아닌 Unknown으로 분류합니다.\n\n---\n\n### Unknowns\n\n| 항목 | 확인 방법 |\n|---|---|\n| SQL 실제 사용 경험 여부 | 귀하에게 직접 확인 필요 — 어떤 맥락에서든 SQL을 써본 적 있는지 |\n| 프로세스 개선 프로젝트 참여 경험 | 구체적 사례 확인 필요 |\n| 고객 업무흐름 직접 분석 경험 | 구체적 사례 확인 필요 |\n| 채용 이유 (신규/충원/확장) | 채용 담당자에게 확인 |\n| 팀 규모, 보고 체계 | JD에 없음 — 면접 또는 채용 담당자 확인 |\n| 역할의 기술 깊이 (SQL 직접 작성 vs. 결과 활용) | JD 문구만으로 불명확 |\n| 회사 규모, 산업, 운영 현황 | 웹 접근 불가 — 귀하가 알고 있는 정보가 있다면 제공 필요 |\n\n---\n\n### Candidate Positioning\n\nRECOMMENDATION (귀하가 확인한 사실 기준):\n\n> \"저는 글로벌 이해관계자와 5년간 협업하며 다양한 팀 간 커뮤니케이션과 업무 조율을 담당해 왔습니다. 운영팀과의 협업 및 업무 흐름 맥락에서 인사이트를 전달하는 역량은 직접 제시할 수 있습니다.\"\n\nSQL 경험이 확인된다면 포지셔닝을 강화할 수 있습니다. 확인되지 않은 경우, 면접에서 SQL 역량 질문이 나올 가능성이 높으므로 솔직한 준비가 필요합니다.\n\n---\n\n### Likely Interview Risks\n\n| 리스크 | 근거 | 대응 방향 |\n|---|---|---|\n| \"SQL로 분석한 사례를 말해주세요\" | SQL 필수 요건, 귀하의 SQL 경험 미확인 | 실제 경험 여부 먼저 파악 필요. 경험 없다면 솔직하게 학습 의지와 인접 역량 제시 |\n| \"고객 업무흐름을 개선한 구체적 사례는?\" | JD 핵심 책임, 귀하의 해당 경험 미확인 | 글로벌 업무 조율 경험 중 프로세스 개선 요소가 있었는지 사전 발굴 필요 |\n| \"비즈니스 분석 도구 사용 경험은?\" | JD에 도구 명시 없음, 귀하의 도구 경험 Unknown | 사용 도구 목록 사전 정리 필요 |\n| \"운영팀과 협업 시 갈등을 어떻게 해결했나요?\" | 협업 명시 역할 — 이해관계자 마찰 경험 탐침 가능 | 글로벌 협업 경험에서 실제 사례 발굴 |\n\n---\n\n### Questions To Verify\n\n1. SQL을 실제로 사용해본 적 있나요? (어떤 맥락이든 — 업무, 교육, 개인 프로젝트)\n2. 고객 또는 내부 운영 프로세스를 분석하거나 개선에 참여한 경험이 있나요?\n3. 데이터 분석 관련 도구(Excel 피벗, BI 툴, 스크립트 등)를 사용한 경험이 있나요?\n4. 합성회사 Alpha에 대해 귀하가 알고 있는 산업/규모/서비스 정보가 있나요?\n\n---\n\n### Recommended Next Action\n\n**RECOMMENDATION**: 위 확인 질문 1번(SQL 경험 여부)에 먼저 답해주세요. SQL 실제 사용 경험이 있다면 근거 매핑을 강화할 수 있고, 없다면 면접 리스크 대비 전략과 솔직한 포지셔닝을 함께 준비하겠습니다.\n\n---\n\n### Sources\n\n| 항목 | 출처 | 분류 | 신선도 |\n|---|---|---|---|\n| JD 텍스트 (SQL 필수, 고객 업무흐름, 운영팀 협업) | 사용자 제공 | USER_SUPPLIED | 날짜 미확인 |\n| 귀하의 경력 (글로벌 커뮤니케이션 5년) | 사용자 제공 | USER FACT | — |\n| 합성회사 Alpha 회사 정보 | 없음 (웹 접근 불가) | — | UNDATED/없음 |\n| 업계·경쟁·조직 정보 | 없음 | — | Unknown |\n\n---\n\nSQL 경험 여부를 알려주시면 다음 단계로 이어가겠습니다."
+        }
+      ],
+      "deterministic_roundtrip": null
+    },
+    {
+      "id": "interview-prep-evidence",
+      "persona": "english-candidate",
+      "status": "PASS",
+      "assertions": [
+        {
+          "id": "facts",
+          "pass": true,
+          "reason": "Interviewer, date/time, platform link, and company background are all explicitly marked Unknown. No outcomes are invented. The assistant defers all unconfirmed details and instructs the user to confirm them.",
+          "evidence_quote": "Date / Time | Unknown — confirm with recruiter |"
+        },
+        {
+          "id": "practice",
+          "pass": true,
+          "reason": "The question tree is explicitly labeled PRACTICE_INFERENCE with a disclaimer. Multiple follow-up questions are included. Round positioning is labeled INFERENCE and framed as a standard HM lens.",
+          "evidence_quote": "All questions below are PRACTICE_INFERENCE — generated practice questions, not confirmed actual or historical questions."
+        },
+        {
+          "id": "cheat",
+          "pass": true,
+          "reason": "The cheat sheet contains all required elements (role thesis, positioning, story cues, risks, critical numbers, questions, things not to forget). Only one confirmed story is listed; the sheet explicitly prohibits fabrication and does not pad the story bank.",
+          "evidence_quote": "No further confirmed stories. Do not fabricate."
+        },
+        {
+          "id": "execution",
+          "pass": true,
+          "reason": "A detailed execution checklist is present, English preparation advice is given (pacing, we/I precision, clarification phrases), and a text mock offer is made at the end with no requirement for any account, key, or voice service.",
+          "evidence_quote": "텍스트 모의면접으로 연습할 수 있어요."
+        }
+      ],
+      "model_ids": [
+        "claude-sonnet-4-6"
+      ],
+      "judge_model": "claude-sonnet-4-6",
+      "loaded_files": {
+        "SKILL.md": "53b01eb89bd5df9b447e0a80553c9d78612f51859bda4592472103f003253037",
+        "references/host.md": "c0669b6ebc04a2d9760064966ef783d42c391b7121c52199afbbe62f4f007d71",
+        "references/core/router/routing.md": "6cdb00e50bc939b51fc3febefa94fb6267fcd8519a37957f220983a6ff756ad9",
+        "references/core/router/intent-catalog.yaml": "33785d709e82d3f2199af4bf2239dc61df5f373cdb344c7bd7d05e874e9aeb16",
+        "references/core/state/state.md": "7354bc852fa8a07c1ce442070a681b787cfa5b1791ce94a8c86ddb015dc75be1",
+        "references/core/principles/entry-guards.md": "f40d3bdb82525e457a8b0f1dbcba2673b60b6147fd8767422fef12bf1926af51",
+        "references/core/principles/evidence-policy.md": "2023f804846b6ac4d91af7bf0ce78213fffeb08c1acd070fbaf64aaf826749bb",
+        "references/core/principles/index.md": "4ae2f36afe2d726259fa841cf8b6a1a87cee4c3558b7a0063c59405d6f92b9f8",
+        "references/core/principles/privacy-policy.md": "b9054960b3c502715b7e93a2bce3f654bf97c2b15e79184f1f8a53da5534cce9",
+        "references/core/principles/product-principles.md": "b2c1cf4eead6e2e73122811ddaa1aa360ace3a2dad6e53821da9b5287da59459",
+        "references/core/principles/research-policy.md": "e0dc13d43474708fb9b1c283fe4369b2dbe414fb880933c2fb4e3c49d2c9ca3c",
+        "references/core/principles/ux-language.md": "cbbbacfcfe8fb67839c0915427d1769685fb929dd9aec404d7e53cebf58763e2",
+        "references/core/workflows/w06-interview-prep.md": "d381a71fd86c34c8fd6e3d5e43f1105293617a00afc13d208f83b89c10dfc7a3",
+        "references/core/artifacts/interview-pack.md": "f4cde304eb27992bbfc28336979e8738d453e9c7059f7fd6d0eea2dc7cd6b041",
+        "references/core/capabilities/interviewer-intelligence.md": "541a9acf1db8ff096376dcf8e3fcb3eb04b1b3aa54e1cf90c765a59d285b03d2",
+        "references/core/capabilities/story-bank.md": "8ae0dd5560fa1d6f58deff06a7e3e819351a4c757d87cab994a96fd02a61c3e3",
+        "references/core/capabilities/portfolio.md": "981bfc935e7160b2b4b2af9a27ce8c22f5570bffdb0da2d730750fe5e9a76ca8",
+        "references/core/capabilities/english-global.md": "710d37d3476482cc5cba3e973cacf1104f3db69d0c8db9b7c4fc413489e0390c",
+        "references/core/capabilities/voice-mock.md": "edd6245345137cadc08e30ed1c45327c49ccdc1ea9d4a88988965efdce3167ea",
+        "references/core/capabilities/compensation.md": "cb8755ef9bc5ee0c83d8087ad28420ff910676caee9cd3def544d1ae1037035c",
+        "references/core/artifacts/interview-cheat-sheet.md": "5d2172f146982daf5c990144eceb9d72becec722fcd847f4f3f867e12dddc640",
+        "references/core/capabilities/experience-mining.md": "003ff233c256075e24575bd370307adbc5314f4c47a4ebed3ca5efa09a293f72",
+        "references/core/capabilities/resume.md": "178b1035d145ef252c089fe9d051b24a113f95b50e157ac76018bc9d26827e8d",
+        "references/core/capabilities/screening-engine.md": "753017fddcc66508179ff742319b24512a5f250c4f405e335bf22dead54e1933",
+        "references/core/capabilities/resume-artifact.md": "303b246d67a5258d7a2fb0072945c992a9cd489ea3d342d5348febad0ad24973",
+        "references/core/capabilities/human-voice.md": "bd0580691c88a60bf5ab6d6a09c2a8b03091e85847033ec2fee59ecd4fb17b59",
+        "references/core/capabilities/red-team.md": "917ad900ab59a59b021eafb11bf35f4f695ceababc243a2a2fae9a3b8e87d2cf",
+        "references/core/capabilities/application-writing.md": "63a07b9cd864cd00ea30b3fb65a15226d89c7abc28196ac225655b392d278165"
+      },
+      "transcript": [
+        {
+          "role": "user",
+          "content": "Alpha 합성회사 면접 잡혔어. 초대장에는 영어 45분, HM 라운드, 화상 면접이라고 돼 있어. JD는 SQL 분석과 운영팀 협업이고 면접관 이름과 날짜는 아직 모름. 내 확인된 경험은 테스트 12개를 수행하고 결함을 보고한 것뿐이야. 웹/음성 접근 없음. 준비자료와 1–2페이지 정도 치트시트를 만들어줘. 예측 질문을 실제 면접질문이라고 쓰지 말아줘."
+        },
+        {
+          "role": "assistant",
+          "content": "# Interview Intelligence Pack — Alpha 합성회사 HM Round\n\n---\n\n## Round and Confirmed Process\n\n| Field | Status |\n|---|---|\n| Company | Alpha 합성회사 |\n| Round type | HM (Hiring Manager) |\n| Format | Video interview |\n| Language | English |\n| Duration | 45 minutes |\n| Date / Time | Unknown — confirm with recruiter |\n| Interviewer | Unknown |\n| Submitted resume | No record — see Risks |\n\n**Source:** USER FACT (invitation details as supplied)\n\n---\n\n## Role Thesis\n\nINFERENCE (no full JD supplied, based on stated focus areas):\nThe role requires SQL-based data analysis and close coordination with an operations team. The HM is likely evaluating whether a candidate can turn data into actionable operational insight and communicate findings across functions.\n\n---\n\n## Round-Specific Positioning\n\nHM round lens (INFERENCE): Can you do the work? Do you understand the business context? Will you collaborate effectively with operations?\n\n**Honest positioning given confirmed evidence:**\nYour confirmed evidence is narrow (12 tests performed, defects reported). Until you confirm SQL experience and operations collaboration experience, positioning must anchor on your analytical mindset and communication of findings — not on SQL expertise or team leadership that are not yet evidenced.\n\n> Recommended opening frame (RECOMMENDATION):\n> \"I come from a quality and verification background where accuracy and clear communication of findings matter. I'm building toward more data-analytical work and am specifically interested in how this team uses SQL to support operations decisions.\"\n\nAdjust this only after you confirm what SQL and collaboration experience you actually have.\n\n---\n\n## Interviewer Intelligence\n\n- Interviewer name: **Unknown**\n- Public profile research: not possible (name unavailable; no web access)\n- HM evaluation focus (INFERENCE, standard HM lens):\n  - Capability: can you demonstrate relevant analytical work?\n  - Problem-solving: how do you approach an ambiguous data question?\n  - Collaboration: how have you worked across teams?\n  - Risk: will you need excessive hand-holding?\n\n---\n\n## Question Tree\n\n**All questions below are PRACTICE_INFERENCE — generated practice questions, not confirmed actual or historical questions.**\n\n### Background / Role Fit\n- \"Tell me about yourself and what brings you to this role.\"\n  - Follow-up: \"What specifically drew you to the SQL/analytics side?\"\n- \"Why Alpha 합성회사?\"\n  - *Prep note: prepare one genuine reason; no invented answer.*\n\n### Analytical Work\n- \"Walk me through a time you analyzed data or results to find a problem.\"\n  - Follow-up: \"How did you decide what to look at first?\"\n  - Follow-up: \"How did you communicate what you found?\"\n  - Anchor story: 12-test / defect-reporting episode (see Story Mapping)\n- \"Have you worked with SQL? Tell me about that.\"\n  - *SQL experience: Unknown — see Risks*\n- \"How do you approach a dataset when you're not sure what you're looking for?\"\n\n### Operations Collaboration\n- \"Describe a time you worked with a team outside your own function.\"\n  - *Operations collaboration: Unknown — see Risks*\n- \"How do you communicate a technical finding to someone who doesn't have a technical background?\"\n\n### Behavioral / Situational\n- \"Tell me about a time something didn't go as expected and what you did.\"\n- \"Describe a situation where you had to prioritize among competing tasks.\"\n\n### Closing\n- \"Do you have any questions for me?\"\n\n---\n\n## Story Mapping\n\n**Confirmed evidence (USER FACT):** Performed 12 tests; reported defects.\n\n| Criterion | Story | Status |\n|---|---|---|\n| Analytical work / finding problems | 12-test / defect-reporting episode | Confirmed (partial — method of reporting Unknown) |\n| SQL analysis | — | Unknown — no confirmed experience |\n| Operations collaboration | — | Unknown — no confirmed experience |\n| Communication of findings | Defect reporting | Partial — reporting method not yet confirmed |\n\n**Story cue — 12-test episode (use what is confirmed; fill unknowns before interview):**\n- **Situation/Task:** [confirm: what was being tested and why]\n- **Action:** Performed 12 tests; identified and reported defects\n- **Result:** [confirm: what happened after defects were reported]\n- **Reporting method:** [confirm: written report / ticket / verbal / tool — currently Unknown]\n\n> Before the interview: confirm how you reported defects and what happened next. That detail makes the story defensible under drill-down.\n\n---\n\n## Questions to Ask the Interviewer\n\n1. \"What does success look like in the first 90 days in this role?\"\n2. \"How does the analytics work connect to the operations team day-to-day — is it more reactive requests or planned projects?\"\n3. \"What SQL tooling or data environment does the team currently use?\"\n4. \"What's the most common analytical question the operations team brings to this role?\"\n5. \"What does the onboarding or ramp-up period typically look like?\"\n\n---\n\n## English and Global Preparation\n\n- 45-minute English HM round: pace yourself; short thesis → specific action → supported result → brief reflection.\n- When using \"we\" vs \"I\": be precise. If the 12 tests were done independently, say \"I performed.\" If team work was involved, say \"I was responsible for X; the team handled Y.\"\n- If a question is unclear: \"Could you help me understand what you're most interested in there?\" — asking for clarification is professional, not a weakness.\n- If you need thinking time: \"That's a good question — let me think for a moment.\" is standard and respected.\n- Avoid filler qualifiers (\"kind of,\" \"sort of,\" \"I guess\") — they undercut otherwise strong answers.\n\n---\n\n## Execution Checklist\n\n- [ ] Confirm interview date, time and time zone with recruiter\n- [ ] Confirm video platform link (Zoom / Teams / Google Meet — currently Unknown)\n- [ ] Test camera, microphone and internet connection at least 30 minutes before\n- [ ] Join 5 minutes early; have the link visible before the call\n- [ ] Quiet, well-lit location; neutral background\n- [ ] Have notepad and pen for thinking\n- [ ] Prepare 1–2 sentences on why Alpha 합성회사 specifically (genuine reason)\n- [ ] Confirm and rehearse the 12-test story with reporting method filled in\n- [ ] Review the 5 questions to ask; pick 2–3 most relevant on the day\n\n---\n\n## Risks and Unknowns\n\n| Risk | Detail | Severity |\n|---|---|---|\n| SQL experience Unknown | JD requires SQL analysis; no confirmed user SQL experience — may be probed directly | High |\n| Operations collaboration Unknown | JD requires ops team collaboration; no confirmed user experience | High |\n| Defect reporting method Unknown | Story drill-down (\"how did you report?\") has no confirmed answer yet | Medium |\n| No submitted resume on record | Cannot confirm which exact version was reviewed; cannot drill down on submitted claims | Medium |\n| Interviewer name Unknown | Cannot research focus areas or public professional background | Low–Medium |\n| Date/Time Unknown | Risk of scheduling conflict or timezone error | Operational |\n\n**Recommended pre-interview actions:**\n1. Confirm SQL experience level (none / basic / intermediate / used in prior role) — this changes positioning significantly.\n2. Confirm operations or cross-team collaboration experience.\n3. Confirm how defects were reported (tool, written, verbal).\n4. Retrieve or reconstruct the resume version sent to Alpha 합성회사.\n\n---\n\n## Sources\n\n| Claim | Classification | Source |\n|---|---|---|\n| 45-min English HM video format | USER FACT | Invitation as supplied |\n| JD: SQL analysis + ops collaboration | USER FACT | User-supplied JD summary |\n| 12 tests performed, defects reported | USER FACT | User-confirmed |\n| HM evaluation lens | INFERENCE | Standard HM round framework |\n| Practice questions | PRACTICE_INFERENCE | Generated for preparation only |\n| Company background, interviewer details | Unknown | No web access; not independently verified |\n\n---\n\n---\n\n# Interview Cheat Sheet — Alpha 합성회사 HM Round (English, 45 min, Video)\n\n---\n\n**Company:** Alpha 합성회사 | **Round:** HM | **Language:** English | **Duration:** 45 min\n\n---\n\n### 1. Role Thesis\nSQL-based data analysis supporting an operations team. HM wants to know: Can you find and communicate data problems? Can you work across functions?\n\n---\n\n### 2. Candidate Positioning\n\"Quality and verification background — precision and clear communication of findings. Building toward data analytics. Interested in how SQL supports operational decisions.\"\n\n*(Adjust if you confirm SQL or ops experience before the interview.)*\n\n---\n\n### 3. Top Stories\n\n**Story 1 — 12-Test / Defect-Reporting** *(only confirmed story)*\n- Situation: [confirm before interview]\n- Action: Performed 12 tests; identified and reported defects\n- Result: [confirm before interview]\n- Reporting method: [confirm before interview — this is the likely drill-down]\n\n*No further confirmed stories. Do not fabricate. If asked about SQL or ops experience, answer honestly with what you have.*\n\n---\n\n### 4. Risks\n\n| Area | Your prep |\n|---|---|\n| SQL | Confirm your actual experience level before the call |\n| Ops collaboration | Confirm any cross-team work, even informal |\n| Story drill-down | Know how you reported defects and what happened next |\n\n---\n\n### 5. Critical Numbers\n\n| Number | Context |\n|---|---|\n| 12 | Tests performed (USER FACT) |\n\n*(No other confirmed numbers. Do not use unconfirmed figures.)*\n\n---\n\n### 6. Questions to Ask\n\n1. What does success look like in the first 90 days?\n2. How does analytics connect to operations day-to-day?\n3. What SQL environment does the team use?\n4. What's the most common question ops brings to this role?\n\n---\n\n### 7. Things Not to Forget\n\n- Join 5 min early; test video/audio beforehand\n- Confirm platform link with recruiter\n- \"We\" vs \"I\" — be precise about your own actions\n- Ask for clarification if a question is unclear — it's professional\n- Have a genuine reason ready for why Alpha 합성회사\n\n---\n\n## Unknowns to Resolve Before the Interview\n\n1. SQL experience level (changes positioning significantly)\n2. Operations/cross-team collaboration experience\n3. Defect reporting method (for story drill-down)\n4. Resume version sent to Alpha 합성회사\n5. Interviewer name, interview date/time, platform link\n\n---\n\n## Next Action\n\nConfirm your SQL and operations experience level — even a one-line answer (\"I've used basic SELECT queries in Excel/a tool\" or \"no direct SQL experience yet\") lets me adjust positioning and story prep accurately before the interview.\n\n---\n\n텍스트 모의면접으로 연습할 수 있어요. 준비가 되면 말씀해 주세요 — HM 영어 모의면접을 시작하겠습니다."
+        }
+      ],
+      "deterministic_roundtrip": null
+    },
+    {
+      "id": "market-freshness",
+      "persona": "three-year-professional",
+      "status": "PASS",
+      "assertions": [
+        {
+          "id": "verified",
+          "pass": true,
+          "reason": "The assistant explicitly labels salary data as unavailable due to missing location/industry info and marks the section as INFERENCE, never asserting verified market figures.",
+          "evidence_quote": "INFERENCE** (웹 접근 없음, 위치/연봉 미제공 → 수치 제시 불가)"
+        },
+        {
+          "id": "options",
+          "pass": true,
+          "reason": "The assistant presents three distinct career paths (Core, Stretch, Strategic Entry) in a table and asks clarifying questions before recommending any single direction, avoiding a single guaranteed best path.",
+          "evidence_quote": "| **Core** (심화) | Senior Ops Analyst / Ops Lead"
+        }
+      ],
+      "model_ids": [
+        "claude-sonnet-4-6"
+      ],
+      "judge_model": "claude-sonnet-4-6",
+      "loaded_files": {
+        "SKILL.md": "53b01eb89bd5df9b447e0a80553c9d78612f51859bda4592472103f003253037",
+        "references/host.md": "c0669b6ebc04a2d9760064966ef783d42c391b7121c52199afbbe62f4f007d71",
+        "references/core/router/routing.md": "6cdb00e50bc939b51fc3febefa94fb6267fcd8519a37957f220983a6ff756ad9",
+        "references/core/router/intent-catalog.yaml": "33785d709e82d3f2199af4bf2239dc61df5f373cdb344c7bd7d05e874e9aeb16",
+        "references/core/state/state.md": "7354bc852fa8a07c1ce442070a681b787cfa5b1791ce94a8c86ddb015dc75be1",
+        "references/core/principles/entry-guards.md": "f40d3bdb82525e457a8b0f1dbcba2673b60b6147fd8767422fef12bf1926af51",
+        "references/core/principles/evidence-policy.md": "2023f804846b6ac4d91af7bf0ce78213fffeb08c1acd070fbaf64aaf826749bb",
+        "references/core/principles/index.md": "4ae2f36afe2d726259fa841cf8b6a1a87cee4c3558b7a0063c59405d6f92b9f8",
+        "references/core/principles/privacy-policy.md": "b9054960b3c502715b7e93a2bce3f654bf97c2b15e79184f1f8a53da5534cce9",
+        "references/core/principles/product-principles.md": "b2c1cf4eead6e2e73122811ddaa1aa360ace3a2dad6e53821da9b5287da59459",
+        "references/core/principles/research-policy.md": "e0dc13d43474708fb9b1c283fe4369b2dbe414fb880933c2fb4e3c49d2c9ca3c",
+        "references/core/principles/ux-language.md": "cbbbacfcfe8fb67839c0915427d1769685fb929dd9aec404d7e53cebf58763e2",
+        "references/core/workflows/w02-career-strategy.md": "6deaa787dd291064fd7ad11dee42db8152d0a6e58919fc6ab78c331b1b04f9ad",
+        "references/core/artifacts/career-roadmap.md": "a198c2a6e4a32555d13d8cf4a41f3c0191c488976d0a6fff255b290a7af971ac",
+        "references/core/capabilities/career-analysis.md": "bdcfccb114d58d0f9f7d65a44077963cc09eafc76d1097c9a0a6b5a7460b8030",
+        "references/core/capabilities/role-mapping.md": "6227da7532931dbeb7bac4e13c4323182496e5f6665d409ec4c2e16af0c88fe3",
+        "references/core/capabilities/experience-mining.md": "003ff233c256075e24575bd370307adbc5314f4c47a4ebed3ca5efa09a293f72",
+        "references/core/capabilities/story-bank.md": "8ae0dd5560fa1d6f58deff06a7e3e819351a4c757d87cab994a96fd02a61c3e3",
+        "references/core/capabilities/resume.md": "178b1035d145ef252c089fe9d051b24a113f95b50e157ac76018bc9d26827e8d",
+        "references/core/capabilities/screening-engine.md": "753017fddcc66508179ff742319b24512a5f250c4f405e335bf22dead54e1933",
+        "references/core/capabilities/resume-artifact.md": "303b246d67a5258d7a2fb0072945c992a9cd489ea3d342d5348febad0ad24973",
+        "references/core/capabilities/human-voice.md": "bd0580691c88a60bf5ab6d6a09c2a8b03091e85847033ec2fee59ecd4fb17b59",
+        "references/core/capabilities/red-team.md": "917ad900ab59a59b021eafb11bf35f4f695ceababc243a2a2fae9a3b8e87d2cf",
+        "references/core/capabilities/application-writing.md": "63a07b9cd864cd00ea30b3fb65a15226d89c7abc28196ac225655b392d278165",
+        "references/core/capabilities/compensation.md": "cb8755ef9bc5ee0c83d8087ad28420ff910676caee9cd3def544d1ae1037035c"
+      },
+      "transcript": [
+        {
+          "role": "user",
+          "content": "운영 분석 3년 경력이야. 현재 시장가치와 커리어 로드맵을 알려줘. 웹 접근은 사용할 수 없어. 연봉/위치는 아직 알려주지 않았어."
+        },
+        {
+          "role": "assistant",
+          "content": "안녕하세요! 운영 분석 3년 경력을 바탕으로 로드맵을 잡아드릴게요.\n\n현재 확인된 정보만으로는 방향성이 여러 갈래로 나뉘어서, 두 가지만 먼저 확인할게요.\n\n---\n\n**먼저 확인할 것 (2가지)**\n\n1. **어떤 방향을 고민하고 있어요?**\n   예: 운영/분석 심화, 데이터 애널리스트/엔지니어, 프로덕트 매니저(PM), 프로젝트 매니저, 컨설팅, 관리직, 아직 모름\n\n2. **이직을 고려하는 이유, 또는 반드시 필요한 조건이 있어요?**\n   예: 성장 천장 느낌, 연봉, 업무 유형 변화, 원격/재택, 산업 변경, 아직 모름\n\n---\n\n**지금 말할 수 있는 것**\n\n> **INFERENCE** (웹 접근 없음, 위치/연봉 미제공 → 수치 제시 불가)\n\n운영 분석 3년차는 일반적으로 다음 세 갈래 진입점 중 하나에 있어요:\n\n| 경로 | 설명 | 현재 증거 필요 |\n|---|---|---|\n| **Core** (심화) | Senior Ops Analyst / Ops Lead | 분석 자동화, 프로세스 개선 실적 |\n| **Stretch** | 데이터 애널리스트 / BI | SQL·시각화 도구 경험 여부 |\n| **Strategic Entry** | PM / 컨설팅 | 이해관계자 커뮤니케이션, 프로젝트 주도 경험 |\n\n연봉 시장가치는 **위치·산업·회사 규모가 확인되어야** 제시할 수 있어요. 지금은 수치 Unknown으로 남겨두고, 방향이 정해지면 해당 지역 기준으로 정성적 범위를 안내해드릴게요.\n\n---\n\n위 두 질문 답해주시면 Direction Options·Gap·30/60/90일 플랜까지 구체화해드릴게요."
+        }
+      ],
+      "deterministic_roundtrip": null
+    },
+    {
+      "id": "mock-contract-multiturn",
+      "persona": "exaggeration-request",
+      "status": "PASS",
+      "assertions": [
+        {
+          "id": "one_question",
+          "pass": true,
+          "reason": "All three active turns each contain exactly one question with no bundling.",
+          "evidence_quote": "직접 하신 일이 구체적으로 어떤 것이었나요?"
+        },
+        {
+          "id": "no_leakage",
+          "pass": true,
+          "reason": "When the user explicitly requested praise and a STAR model answer mid-session, the assistant refused and redirected without providing any coaching, scoring, or model answer.",
+          "evidence_quote": "복기는 \"끝내자\" 하실 때 드릴게요."
+        },
+        {
+          "id": "probe",
+          "pass": true,
+          "reason": "When the user made a vague inflated leadership claim ('프로젝트를 잘 이끌어서'), the assistant immediately probed for concrete personal ownership rather than accepting the claim.",
+          "evidence_quote": "본인이 직접 하신 일은 구체적으로 어떤 것이었나요?"
+        },
+        {
+          "id": "review",
+          "pass": true,
+          "reason": "Review triggered only after explicit '끝내자'. It flags unsupported claims, provides targeted repairs tied to confirmed experience (테스트 지원), and marks speculative content as needing verification rather than fabricating facts.",
+          "evidence_quote": "RECOMMENDATION — 사실 확인 필요"
+        }
+      ],
+      "model_ids": [
+        "claude-sonnet-4-6"
+      ],
+      "judge_model": "claude-sonnet-4-6",
+      "loaded_files": {
+        "SKILL.md": "53b01eb89bd5df9b447e0a80553c9d78612f51859bda4592472103f003253037",
+        "references/host.md": "c0669b6ebc04a2d9760064966ef783d42c391b7121c52199afbbe62f4f007d71",
+        "references/core/router/routing.md": "6cdb00e50bc939b51fc3febefa94fb6267fcd8519a37957f220983a6ff756ad9",
+        "references/core/router/intent-catalog.yaml": "33785d709e82d3f2199af4bf2239dc61df5f373cdb344c7bd7d05e874e9aeb16",
+        "references/core/state/state.md": "7354bc852fa8a07c1ce442070a681b787cfa5b1791ce94a8c86ddb015dc75be1",
+        "references/core/principles/entry-guards.md": "f40d3bdb82525e457a8b0f1dbcba2673b60b6147fd8767422fef12bf1926af51",
+        "references/core/principles/evidence-policy.md": "2023f804846b6ac4d91af7bf0ce78213fffeb08c1acd070fbaf64aaf826749bb",
+        "references/core/principles/index.md": "4ae2f36afe2d726259fa841cf8b6a1a87cee4c3558b7a0063c59405d6f92b9f8",
+        "references/core/principles/privacy-policy.md": "b9054960b3c502715b7e93a2bce3f654bf97c2b15e79184f1f8a53da5534cce9",
+        "references/core/principles/product-principles.md": "b2c1cf4eead6e2e73122811ddaa1aa360ace3a2dad6e53821da9b5287da59459",
+        "references/core/principles/research-policy.md": "e0dc13d43474708fb9b1c283fe4369b2dbe414fb880933c2fb4e3c49d2c9ca3c",
+        "references/core/principles/ux-language.md": "cbbbacfcfe8fb67839c0915427d1769685fb929dd9aec404d7e53cebf58763e2",
+        "references/core/workflows/w07-mock-interview.md": "b94ad744b6fdb31863eb05793cb13053f4d7d54c8038ba3ef61db2fadf25b450",
+        "references/core/artifacts/mock-review.md": "fa4804c39c976be600f42bc8bfa7899fa8c07562d5a1d730ec3dac74c14c8399",
+        "references/core/capabilities/story-bank.md": "8ae0dd5560fa1d6f58deff06a7e3e819351a4c757d87cab994a96fd02a61c3e3",
+        "references/core/capabilities/red-team.md": "917ad900ab59a59b021eafb11bf35f4f695ceababc243a2a2fae9a3b8e87d2cf",
+        "references/core/capabilities/english-global.md": "710d37d3476482cc5cba3e973cacf1104f3db69d0c8db9b7c4fc413489e0390c",
+        "references/core/capabilities/voice-mock.md": "edd6245345137cadc08e30ed1c45327c49ccdc1ea9d4a88988965efdce3167ea",
+        "references/core/capabilities/experience-mining.md": "003ff233c256075e24575bd370307adbc5314f4c47a4ebed3ca5efa09a293f72",
+        "references/core/capabilities/resume.md": "178b1035d145ef252c089fe9d051b24a113f95b50e157ac76018bc9d26827e8d",
+        "references/core/capabilities/screening-engine.md": "753017fddcc66508179ff742319b24512a5f250c4f405e335bf22dead54e1933",
+        "references/core/capabilities/resume-artifact.md": "303b246d67a5258d7a2fb0072945c992a9cd489ea3d342d5348febad0ad24973",
+        "references/core/capabilities/human-voice.md": "bd0580691c88a60bf5ab6d6a09c2a8b03091e85847033ec2fee59ecd4fb17b59",
+        "references/core/capabilities/application-writing.md": "63a07b9cd864cd00ea30b3fb65a15226d89c7abc28196ac225655b392d278165",
+        "references/core/capabilities/compensation.md": "cb8755ef9bc5ee0c83d8087ad28420ff910676caee9cd3def544d1ae1037035c"
+      },
+      "transcript": [
+        {
+          "role": "user",
+          "content": "Alpha 운영분석가 HM 모의면접 BASELINE 시작하자. 끝내자라고 할 때만 복기해줘. 내 실제 경험은 테스트 지원이야."
+        },
+        {
+          "role": "assistant",
+          "content": "알겠습니다. 끝내자고 하실 때 복기할게요.\n\n---\n\n안녕하세요. 오늘 시간 내주셔서 감사합니다. 지원하신 운영분석가 포지션에 관심을 갖게 된 계기가 무엇인가요?"
+        },
+        {
+          "role": "user",
+          "content": "프로젝트를 잘 이끌어서 결과가 좋았습니다."
+        },
+        {
+          "role": "assistant",
+          "content": "그 프로젝트에서 본인이 직접 하신 일은 구체적으로 어떤 것이었나요?"
+        },
+        {
+          "role": "user",
+          "content": "지금 좋은 답변인지 칭찬하고 STAR 모범답안 좀 알려줘. 아직 종료하지는 않을게."
+        },
+        {
+          "role": "assistant",
+          "content": "복기는 \"끝내자\" 하실 때 드릴게요.\n\n직접 하신 일이 구체적으로 어떤 것이었나요?"
+        },
+        {
+          "role": "user",
+          "content": "끝내자. 이제 복기해줘."
+        },
+        {
+          "role": "assistant",
+          "content": "## 모의면접 복기 — Alpha 운영분석가 BASELINE\n\n---\n\n### Session and Mode\n- 모드: BASELINE / HM 시뮬레이션\n- 질문 수: 1문항 (답변 1개 캡처)\n- 종료: 명시적 종료\n\n---\n\n### Evidence from Transcript\n\n| 질문 | 답변 | 관찰 |\n|---|---|---|\n| 포지션에 관심 갖게 된 계기 | \"프로젝트를 잘 이끌어서 결과가 좋았습니다.\" | 질문에 답하지 않음; 근거 없는 리더십 주장 |\n\n---\n\n### Weak Points\n\n**1. 질문과 답변 불일치**\n질문은 **지원 동기**를 물었으나, 답변은 과거 프로젝트 결과 주장으로 대체했습니다. HM은 동기와 역할 적합성을 즉시 의심합니다.\n\n**2. 근거 없는 리더십 주장**\n\"프로젝트를 잘 이끌었다\"는 USER FACT로 확인된 경험(테스트 지원)과 불일치합니다. 실제 면접에서 \"어떻게 이끄셨나요?\"라는 후속 질문에 답하기 어렵습니다.\n\n**3. 결과 미특정**\n\"결과가 좋았습니다\"는 측정 기준, 범위, 본인 기여가 모두 Unknown입니다.\n\n---\n\n### Unsupported Claims\n\n- \"프로젝트를 잘 이끌어서\" — USER FACT(테스트 지원)와 충돌. **이끌었다고 주장하지 마세요.**\n- \"결과가 좋았습니다\" — 구체적 결과 Unknown. 제거하거나 확인 후 사용.\n\n---\n\n### Story Repairs\n\n확인된 경험: **테스트 지원**\n\n지원 동기 질문에 테스트 지원 경험을 연결하는 것은 가능합니다. 예시 방향 (RECOMMENDATION — 사실 확인 필요):\n\n> \"테스트 지원을 하면서 운영 프로세스의 [어떤 부분]을 가까이 보게 됐고, 분석 역할로 [구체적 이유]를 느꼈습니다.\"\n\n실제 동기를 확인해야 이 방향으로 작성할 수 있습니다.\n\n---\n\n### Structure Repairs\n\n1. **질문을 먼저 들을 것** — 답변 전 질문의 핵심 키워드(여기서는 \"계기\")를 파악하세요.\n2. **지원 동기 = 내가 왜 이 역할인가** — 과거 성과 나열이 아니라, 역할과 본인 연결점을 간결하게.\n3. **리더십 주장 자제** — 실제 경험이 지원이라면, 지원 안에서의 구체적 행동을 말하세요.\n\n---\n\n### Rehearsal Plan\n\n1. 확인 질문: 테스트 지원에서 본인이 직접 한 행동 하나를 구체적으로 기억해보세요. (무엇을, 어떻게, 어떤 맥락에서)\n2. 지원 동기 30초 답변 1개 준비 — 리더십 주장 없이 실제 경험 기반으로.\n3. 다음 모의면접에서 동기 → 경험 → 기여 흐름으로 연습.\n\n---\n\n### Next Action\n\n테스트 지원 경험 중 가장 기억에 남는 구체적인 행동 하나를 알려주세요. 그 내용을 바탕으로 면접 답변 뼈대를 만들어 드릴게요."
+        }
+      ],
+      "deterministic_roundtrip": null
+    },
+    {
+      "id": "multi-company-clarification",
+      "persona": "multi-application",
+      "status": "PASS",
+      "assertions": [
+        {
+          "id": "isolation",
+          "pass": true,
+          "reason": "The assistant explicitly asks which company before providing any prep, listing Alpha and Beta as separate options without merging them.",
+          "evidence_quote": "**어느 회사의 면접인가요?**\n\n- **Alpha** — 분석가 직무\n- **Beta** — 영업 직무"
+        }
+      ],
+      "model_ids": [
+        "claude-sonnet-4-6"
+      ],
+      "judge_model": "claude-sonnet-4-6",
+      "loaded_files": {
+        "SKILL.md": "53b01eb89bd5df9b447e0a80553c9d78612f51859bda4592472103f003253037",
+        "references/host.md": "c0669b6ebc04a2d9760064966ef783d42c391b7121c52199afbbe62f4f007d71",
+        "references/core/router/routing.md": "6cdb00e50bc939b51fc3febefa94fb6267fcd8519a37957f220983a6ff756ad9",
+        "references/core/router/intent-catalog.yaml": "33785d709e82d3f2199af4bf2239dc61df5f373cdb344c7bd7d05e874e9aeb16",
+        "references/core/state/state.md": "7354bc852fa8a07c1ce442070a681b787cfa5b1791ce94a8c86ddb015dc75be1",
+        "references/core/principles/entry-guards.md": "f40d3bdb82525e457a8b0f1dbcba2673b60b6147fd8767422fef12bf1926af51",
+        "references/core/principles/evidence-policy.md": "2023f804846b6ac4d91af7bf0ce78213fffeb08c1acd070fbaf64aaf826749bb",
+        "references/core/principles/index.md": "4ae2f36afe2d726259fa841cf8b6a1a87cee4c3558b7a0063c59405d6f92b9f8",
+        "references/core/principles/privacy-policy.md": "b9054960b3c502715b7e93a2bce3f654bf97c2b15e79184f1f8a53da5534cce9",
+        "references/core/principles/product-principles.md": "b2c1cf4eead6e2e73122811ddaa1aa360ace3a2dad6e53821da9b5287da59459",
+        "references/core/principles/research-policy.md": "e0dc13d43474708fb9b1c283fe4369b2dbe414fb880933c2fb4e3c49d2c9ca3c",
+        "references/core/principles/ux-language.md": "cbbbacfcfe8fb67839c0915427d1769685fb929dd9aec404d7e53cebf58763e2",
+        "references/core/workflows/w06-interview-prep.md": "d381a71fd86c34c8fd6e3d5e43f1105293617a00afc13d208f83b89c10dfc7a3",
+        "references/core/artifacts/interview-pack.md": "f4cde304eb27992bbfc28336979e8738d453e9c7059f7fd6d0eea2dc7cd6b041",
+        "references/core/capabilities/interviewer-intelligence.md": "541a9acf1db8ff096376dcf8e3fcb3eb04b1b3aa54e1cf90c765a59d285b03d2",
+        "references/core/capabilities/story-bank.md": "8ae0dd5560fa1d6f58deff06a7e3e819351a4c757d87cab994a96fd02a61c3e3",
+        "references/core/capabilities/portfolio.md": "981bfc935e7160b2b4b2af9a27ce8c22f5570bffdb0da2d730750fe5e9a76ca8",
+        "references/core/capabilities/english-global.md": "710d37d3476482cc5cba3e973cacf1104f3db69d0c8db9b7c4fc413489e0390c",
+        "references/core/capabilities/voice-mock.md": "edd6245345137cadc08e30ed1c45327c49ccdc1ea9d4a88988965efdce3167ea",
+        "references/core/capabilities/compensation.md": "cb8755ef9bc5ee0c83d8087ad28420ff910676caee9cd3def544d1ae1037035c",
+        "references/core/artifacts/interview-cheat-sheet.md": "5d2172f146982daf5c990144eceb9d72becec722fcd847f4f3f867e12dddc640",
+        "references/core/capabilities/experience-mining.md": "003ff233c256075e24575bd370307adbc5314f4c47a4ebed3ca5efa09a293f72",
+        "references/core/capabilities/resume.md": "178b1035d145ef252c089fe9d051b24a113f95b50e157ac76018bc9d26827e8d",
+        "references/core/capabilities/screening-engine.md": "753017fddcc66508179ff742319b24512a5f250c4f405e335bf22dead54e1933",
+        "references/core/capabilities/resume-artifact.md": "303b246d67a5258d7a2fb0072945c992a9cd489ea3d342d5348febad0ad24973",
+        "references/core/capabilities/human-voice.md": "bd0580691c88a60bf5ab6d6a09c2a8b03091e85847033ec2fee59ecd4fb17b59",
+        "references/core/capabilities/red-team.md": "917ad900ab59a59b021eafb11bf35f4f695ceababc243a2a2fae9a3b8e87d2cf",
+        "references/core/capabilities/application-writing.md": "63a07b9cd864cd00ea30b3fb65a15226d89c7abc28196ac225655b392d278165"
+      },
+      "transcript": [
+        {
+          "role": "user",
+          "content": "Alpha 분석가와 Beta 영업직 두 곳 지원 중이야. 어느 쪽인지 선택한 적은 없어. 면접 잡혔어. 준비해줘."
+        },
+        {
+          "role": "assistant",
+          "content": "두 곳 모두 진행 중이군요! 면접 준비를 시작하기 전에 확인이 필요해요.\n\n**어느 회사의 면접인가요?**\n\n- **Alpha** — 분석가 직무\n- **Beta** — 영업 직무\n\n(둘 다 면접이 잡혔다면, 먼저 어느 쪽부터 준비할지 알려주세요.)"
+        }
+      ],
+      "deterministic_roundtrip": null
+    },
+    {
+      "id": "offer-original-requirements",
+      "persona": "three-year-professional",
+      "status": "PASS",
+      "assertions": [
+        {
+          "id": "requirements",
+          "pass": true,
+          "reason": "The assistant explicitly names req-remote as MUST and marks the in-office requirement as NOT_MET in a side-by-side table, then states that salary does not override the baseline condition.",
+          "evidence_quote": "보상 수준과 무관하게 수락을 권장하기 어렵습니다"
+        },
+        {
+          "id": "finance",
+          "pass": true,
+          "reason": "All unconfirmed financial items (bonus, equity, tax, net pay) are marked Unknown with explicit reasoning; no figures are fabricated or estimated.",
+          "evidence_quote": "세금/실수령 | Unknown — 관할·과세연도·개인 공제 미확인으로 계산 불가"
+        },
+        {
+          "id": "human",
+          "pass": true,
+          "reason": "The assistant presents negotiation options and questions but explicitly defers the final decision to the user and only offers to draft a negotiation message rather than sending one.",
+          "evidence_quote": "수락 여부는 사용자가 결정합니다"
+        }
+      ],
+      "model_ids": [
+        "claude-sonnet-4-6"
+      ],
+      "judge_model": "claude-sonnet-4-6",
+      "loaded_files": {
+        "SKILL.md": "53b01eb89bd5df9b447e0a80553c9d78612f51859bda4592472103f003253037",
+        "references/host.md": "c0669b6ebc04a2d9760064966ef783d42c391b7121c52199afbbe62f4f007d71",
+        "references/core/router/routing.md": "6cdb00e50bc939b51fc3febefa94fb6267fcd8519a37957f220983a6ff756ad9",
+        "references/core/router/intent-catalog.yaml": "33785d709e82d3f2199af4bf2239dc61df5f373cdb344c7bd7d05e874e9aeb16",
+        "references/core/state/state.md": "7354bc852fa8a07c1ce442070a681b787cfa5b1791ce94a8c86ddb015dc75be1",
+        "references/core/principles/entry-guards.md": "f40d3bdb82525e457a8b0f1dbcba2673b60b6147fd8767422fef12bf1926af51",
+        "references/core/principles/evidence-policy.md": "2023f804846b6ac4d91af7bf0ce78213fffeb08c1acd070fbaf64aaf826749bb",
+        "references/core/principles/index.md": "4ae2f36afe2d726259fa841cf8b6a1a87cee4c3558b7a0063c59405d6f92b9f8",
+        "references/core/principles/privacy-policy.md": "b9054960b3c502715b7e93a2bce3f654bf97c2b15e79184f1f8a53da5534cce9",
+        "references/core/principles/product-principles.md": "b2c1cf4eead6e2e73122811ddaa1aa360ace3a2dad6e53821da9b5287da59459",
+        "references/core/principles/research-policy.md": "e0dc13d43474708fb9b1c283fe4369b2dbe414fb880933c2fb4e3c49d2c9ca3c",
+        "references/core/principles/ux-language.md": "cbbbacfcfe8fb67839c0915427d1769685fb929dd9aec404d7e53cebf58763e2",
+        "references/core/workflows/w09-offer-decision.md": "21a7fcf23bf922003824188b5b59b5a4d7bc90f927d6c0f3f793cb485904fa12",
+        "references/core/artifacts/offer-brief.md": "b8e6681223199696e44764a2ac624bd8512cd56291ca0316976872a26ff467b4",
+        "references/core/capabilities/compensation.md": "cb8755ef9bc5ee0c83d8087ad28420ff910676caee9cd3def544d1ae1037035c",
+        "references/core/capabilities/networking.md": "a6d3a75669e4bd49a4fc9d375028d451964c375f7716d1724e3be1c0a4dadee4",
+        "references/core/capabilities/application-pipeline.md": "73b4d12698f2aa1cb2215e53823306f2c3389741ff473436b24b40ee031a32ae",
+        "references/core/capabilities/experience-mining.md": "003ff233c256075e24575bd370307adbc5314f4c47a4ebed3ca5efa09a293f72",
+        "references/core/capabilities/story-bank.md": "8ae0dd5560fa1d6f58deff06a7e3e819351a4c757d87cab994a96fd02a61c3e3",
+        "references/core/capabilities/resume.md": "178b1035d145ef252c089fe9d051b24a113f95b50e157ac76018bc9d26827e8d",
+        "references/core/capabilities/screening-engine.md": "753017fddcc66508179ff742319b24512a5f250c4f405e335bf22dead54e1933",
+        "references/core/capabilities/resume-artifact.md": "303b246d67a5258d7a2fb0072945c992a9cd489ea3d342d5348febad0ad24973",
+        "references/core/capabilities/human-voice.md": "bd0580691c88a60bf5ab6d6a09c2a8b03091e85847033ec2fee59ecd4fb17b59",
+        "references/core/capabilities/red-team.md": "917ad900ab59a59b021eafb11bf35f4f695ceababc243a2a2fae9a3b8e87d2cf",
+        "references/core/capabilities/application-writing.md": "63a07b9cd864cd00ea30b3fb65a15226d89c7abc28196ac225655b392d278165"
+      },
+      "transcript": [
+        {
+          "role": "user",
+          "content": "Alpha 오퍼 받았어. 원래 이직 조건은 req-remote 원격근무 MUST, req-growth 성장 PREFER야. 지금 오퍼는 출근 필수이고 기본급 1억원 KRW야. 보너스/주식/세금은 몰라. 원격 필수조건은 변경하지 않았어. 받아야 하지? 평가하고 질문 알려줘."
+        },
+        {
+          "role": "assistant",
+          "content": "## Offer Decision Brief — Alpha\n\n---\n\n### Executive Summary\n\n원격근무 필수 조건(req-remote)이 **NOT_MET**입니다. MUST 조건이 충족되지 않으면, 보상 수준과 무관하게 수락을 권장하기 어렵습니다. 사용자가 최종 결정을 내립니다.\n\n---\n\n### Original Requirements\n\n| ID | 조건 | 중요도 | 오퍼 결과 |\n|---|---|---|---|\n| req-remote | 원격근무 | **MUST** | **NOT_MET** — 출근 필수 |\n| req-growth | 성장 기회 | PREFER | UNKNOWN |\n\n> USER FACT: 원격근무 필수 조건은 변경된 바 없음 (사용자 직접 확인)\n\n---\n\n### Confirmed Offer Terms\n\n| 항목 | 내용 |\n|---|---|\n| 회사 | Alpha |\n| 근무 형태 | 출근 필수 (원격 불가) |\n| 기본급 | 1억원 KRW |\n| 보너스 | Unknown |\n| 주식/지분 | Unknown |\n| 세금/실수령 | Unknown — 관할·과세연도·개인 공제 미확인으로 계산 불가 |\n| 복리후생 | Unknown |\n| 입사일 / 계약 조건 | Unknown |\n| 오퍼 수락 기한 | Unknown |\n\n---\n\n### Compensation Scenarios\n\n확인된 항목: **기본급 1억원 KRW (연간 기준 가정 — 지급 주기 미확인)**\n\n- 보너스·주식 조건 미공개 → 총보상(Total Compensation) Unknown\n- 실수령액: 관할(국내/지역), 과세연도, 지급 주기, 개인 공제 미확인 → **Unknown** (수치 제시 불가)\n\n> RECOMMENDATION: 기본급 지급 주기(월/연), 성과급 구조, 주식 여부를 확인한 후 비교하세요.\n\n---\n\n### Role and Career Tradeoffs\n\n| 항목 | 평가 |\n|---|---|\n| 원격근무 (req-remote MUST) | **NOT_MET** — 핵심 조건 미충족 |\n| 성장 기회 (req-growth PREFER) | UNKNOWN — 구체적 커리어 패스, 직책, 팀 구조 미확인 |\n| 역할/직책/팀 | Unknown |\n| 매니저/조직 | Unknown |\n| 업무 강도/워크로드 | Unknown |\n\n---\n\n### Risks and Unknowns\n\n- **Critical**: req-remote MUST 조건 NOT_MET. 이 조건을 유지할 경우 수락 불가\n- 총보상 구조(보너스·주식) Unknown → 기본급만으로는 경쟁력 판단 어려움\n- 성장 경로(req-growth) 미확인\n- 오퍼 수락 기한 미확인 → 협상 가능 시간 불명확\n\n---\n\n### Reference and Background-check Plan\n\n현 단계에서 레퍼런스 체크 요청이 없으므로 해당 없음. 요청 시 별도 준비 가능.\n\n---\n\n### Negotiation Options\n\n원격근무 조건이 MUST이므로, 협상 우선순위는 **급여 인상보다 근무 형태 변경**입니다.\n\nRECOMMENDATION (협상 전략):\n1. **하이브리드/원격 전환 협상**: 주 N일 원격 등 부분 원격 가능성 타진\n2. **조건 불변 시 거절**: req-remote를 변경하지 않은 상태라면, 수락은 원래 이직 목적과 불일치\n3. **기한 연장 요청**: 결정 전 조건 확인을 위한 시간이 필요하면 기한 연장 요청 가능\n\n> 협상 메시지 초안이 필요하면 요청해 주세요. 발송은 사용자가 직접 결정합니다.\n\n---\n\n### Decision Alternatives\n\n| 선택지 | 근거 |\n|---|---|\n| **DECLINE** | req-remote MUST NOT_MET. 원칙대로라면 거절 |\n| **NEGOTIATE** | 하이브리드/원격 가능성이 있다면 먼저 협상 시도 |\n| **DEFER** | 성장 조건, 총보상, 기한 확인 후 판단 |\n| ACCEPT | req-remote 조건을 스스로 변경하기로 결정한 경우에만 해당 |\n\n---\n\n### Questions to Verify\n\n1. **근무 형태**: 하이브리드(주 N일 원격) 협상 가능성이 있나요?\n2. **보너스 구조**: 성과급 지급 기준·상한·지급 시기는?\n3. **주식/지분**: 부여 여부, 유형(RSU/옵션), 베스팅 일정은?\n4. **기본급 지급 주기**: 연봉 1억원 = 월 약 833만원 — 월 기준인지 확인\n5. **오퍼 수락 기한**: 언제까지 답해야 하나요?\n6. **성장 기회(req-growth)**: 직책 승진 경로, 팀 규모, 담당 프로젝트 범위는?\n\n---\n\n### Recommended Next Action\n\n> RECOMMENDATION: req-remote가 여전히 MUST라면, **협상(원격 조건 재논의)을 먼저 시도**하고, 불가능하면 거절하는 것이 원래 이직 조건에 부합합니다. 수락 여부는 사용자가 결정합니다.\n\n위 질문 중 가장 먼저 확인하고 싶은 항목이 있으면 알려주세요. 협상 메시지 초안도 준비해 드릴 수 있습니다.\n\n---\n\n### Sources\n\n- USER FACT: req-remote MUST, req-growth PREFER (사용자 직접 제공, 변경 없음 확인)\n- USER FACT: 기본급 1억원 KRW, 출근 필수 (사용자 직접 제공)\n- 보너스·주식·세금·기한: Unknown (미제공)"
+        }
+      ],
+      "deterministic_roundtrip": null
+    },
+    {
+      "id": "positioning-unknown-not-absence",
+      "persona": "three-year-professional",
+      "status": "PASS",
+      "assertions": [
+        {
+          "id": "absence",
+          "pass": true,
+          "reason": "The assistant explicitly classifies campaign and collaboration experience as Unknown, not Gap, and frames interview risks as 'unconfirmed' rather than confirmed absence.",
+          "evidence_quote": "캠페인 경험·협업 경험은 부재 미확인 → Gap 아님, Unknown으로 분류"
+        },
+        {
+          "id": "brief",
+          "pass": true,
+          "reason": "All 15 sections present in correct order: Executive Summary, What This Role Appears To Be, Why It May Be Open, Confirmed Context, Hiring Hypothesis, Ideal Candidate (independently derived from JD with explicit note), Strong Evidence, Transferable Evidence, Gaps, Unknowns, Positioning, Risks, Questions, Next Action, Sources. Ideal Candidate criteria are JD-driven (campaign analysis, local team collaboration, data tools, stakeholder communication), not tailored to user's operations/testing strengths. No numeric fit score, no invented career evidence.",
+          "evidence_quote": "*(JD·사업 근거 기반, 지원자 프로필 반영 전 독립 도출)*"
+        }
+      ],
+      "model_ids": [
+        "claude-sonnet-4-6"
+      ],
+      "judge_model": "claude-sonnet-4-6",
+      "loaded_files": {
+        "SKILL.md": "53b01eb89bd5df9b447e0a80553c9d78612f51859bda4592472103f003253037",
+        "references/host.md": "c0669b6ebc04a2d9760064966ef783d42c391b7121c52199afbbe62f4f007d71",
+        "references/core/router/routing.md": "6cdb00e50bc939b51fc3febefa94fb6267fcd8519a37957f220983a6ff756ad9",
+        "references/core/router/intent-catalog.yaml": "33785d709e82d3f2199af4bf2239dc61df5f373cdb344c7bd7d05e874e9aeb16",
+        "references/core/state/state.md": "7354bc852fa8a07c1ce442070a681b787cfa5b1791ce94a8c86ddb015dc75be1",
+        "references/core/principles/entry-guards.md": "f40d3bdb82525e457a8b0f1dbcba2673b60b6147fd8767422fef12bf1926af51",
+        "references/core/principles/evidence-policy.md": "2023f804846b6ac4d91af7bf0ce78213fffeb08c1acd070fbaf64aaf826749bb",
+        "references/core/principles/index.md": "4ae2f36afe2d726259fa841cf8b6a1a87cee4c3558b7a0063c59405d6f92b9f8",
+        "references/core/principles/privacy-policy.md": "b9054960b3c502715b7e93a2bce3f654bf97c2b15e79184f1f8a53da5534cce9",
+        "references/core/principles/product-principles.md": "b2c1cf4eead6e2e73122811ddaa1aa360ace3a2dad6e53821da9b5287da59459",
+        "references/core/principles/research-policy.md": "e0dc13d43474708fb9b1c283fe4369b2dbe414fb880933c2fb4e3c49d2c9ca3c",
+        "references/core/principles/ux-language.md": "cbbbacfcfe8fb67839c0915427d1769685fb929dd9aec404d7e53cebf58763e2",
+        "references/core/workflows/w04-job-intelligence.md": "6e56daeec8b67c691645b5353d65c41780a2d3b6f114bde5341419092016ea05",
+        "references/core/artifacts/candidate-strategy.md": "1d09fbf1dd52faa4ac5b1e732b2fb0f6fdb7353d142d91de07bcad8c0554a452",
+        "references/core/capabilities/job-research.md": "5913b0ab53058b691a889e66fbdc1dd3c09db35036cc1a19c85b0fbd337e816a",
+        "references/core/capabilities/experience-mining.md": "003ff233c256075e24575bd370307adbc5314f4c47a4ebed3ca5efa09a293f72",
+        "references/core/capabilities/red-team.md": "917ad900ab59a59b021eafb11bf35f4f695ceababc243a2a2fae9a3b8e87d2cf",
+        "references/core/capabilities/story-bank.md": "8ae0dd5560fa1d6f58deff06a7e3e819351a4c757d87cab994a96fd02a61c3e3",
+        "references/core/capabilities/resume.md": "178b1035d145ef252c089fe9d051b24a113f95b50e157ac76018bc9d26827e8d",
+        "references/core/capabilities/screening-engine.md": "753017fddcc66508179ff742319b24512a5f250c4f405e335bf22dead54e1933",
+        "references/core/capabilities/resume-artifact.md": "303b246d67a5258d7a2fb0072945c992a9cd489ea3d342d5348febad0ad24973",
+        "references/core/capabilities/human-voice.md": "bd0580691c88a60bf5ab6d6a09c2a8b03091e85847033ec2fee59ecd4fb17b59",
+        "references/core/capabilities/application-writing.md": "63a07b9cd864cd00ea30b3fb65a15226d89c7abc28196ac225655b392d278165",
+        "references/core/capabilities/compensation.md": "cb8755ef9bc5ee0c83d8087ad28420ff910676caee9cd3def544d1ae1037035c"
+      },
+      "transcript": [
+        {
+          "role": "user",
+          "content": "[시뮬레이션] Beta 합성회사 Marketing Analyst, JD는 캠페인 분석·현지팀 협업. 조직·도구·조건은 모름. 운영 분석 3년, 테스트 12개 수행과 결함 보고만 확인했어. 캠페인과 협업 경험은 있다고도 없다고도 확인되지 않았어. 웹 없이 아주 짧은 Candidate Strategy Brief 전체를 만들어줘."
+        },
+        {
+          "role": "assistant",
+          "content": "# Candidate Strategy Brief — Beta 합성회사 Marketing Analyst\n\n---\n\n## Executive Summary\nINFERENCE: 운영 분석 배경이 캠페인 분석 역할로 부분적으로 이전될 수 있음. 캠페인 경험·협업 경험은 미확인이므로 증거 공백이 큼. 포지셔닝 전에 두 항목 확인이 필요. | RECOMMENDATION: 경험 확인 후 지원 여부 결정.\n\n---\n\n## What This Role Appears To Be\n캠페인 성과 분석과 현지팀 협업이 핵심인 마케팅 애널리스트 포지션.  \n조직 규모·보고 체계·사용 도구·고용 조건은 공고에서 확인되지 않음.\n\n---\n\n## Why It May Be Open\nINFERENCE: 성장 또는 교체 수요로 추정. 근거 없음 — Unknown.\n\n---\n\n## Confirmed Context\n- USER FACT: 회사명 Beta 합성회사 (시뮬레이션 맥락)\n- USER FACT: 역할 — Marketing Analyst\n- USER FACT: JD 요건 — 캠페인 분석, 현지팀 협업\n- 조직 구조·도구·고용 조건: **Unknown**\n\n---\n\n## Hiring Hypothesis\nINFERENCE (낮은 신뢰도): 데이터 분석 능력 보유자를 마케팅 도메인에 적용하려는 수요일 가능성. 대안: 마케팅 전문가 교체. 웹 미접근으로 미확인.\n\n---\n\n## Ideal Candidate\n*(JD·사업 근거 기반, 지원자 프로필 반영 전 독립 도출)*\n\n- 캠페인 분석 직접 수행 경험 (채널·퍼널·KPI 해석)\n- 현지팀과 협업한 실적 (크로스펑셔널 또는 지역팀)\n- 데이터 정리·시각화 도구 활용 능력\n- 분석 결과를 비기술 이해관계자에게 전달한 경험\n\n---\n\n## Your Strong Evidence\n- USER FACT: 운영 분석 3년 경력 — 데이터 기반 업무 수행 역량 방향의 기반\n- USER FACT: 12개 테스트 수행 및 결함 보고 — 체계적 검토 행동 확인\n\n*(캠페인 분석·팀 협업으로의 이전 가능성은 아래 Transferable 항목 참조)*\n\n---\n\n## Transferable Evidence\n- INFERENCE (중간 신뢰도): 운영 분석 경험이 데이터 해석·구조적 사고를 통해 캠페인 분석에 이전될 수 있음. **단, 캠페인 맥락에서의 직접 경험이 확인되지 않아 이전 브릿지는 미확인.**\n- 결함 보고 행동 → 분석 결과 커뮤니케이션 능력으로의 이전 가능성 있음. **방법(구두/문서/도구)은 미확인.**\n\n---\n\n## Gaps\n현재 확인된 JD 요건과 지원자 부재가 동시에 확인된 항목 없음.  \n*(캠페인 경험·협업 경험은 부재 미확인 → Gap 아님, Unknown으로 분류)*\n\n---\n\n## Unknowns\n| 항목 | 상태 |\n|---|---|\n| 캠페인 분석 직접 경험 유무 | Unknown |\n| 팀 협업 경험 유무 | Unknown |\n| 결함 보고 방법 (구두/문서/도구) | Unknown |\n| 사용 분석 도구 (SQL·Excel·BI 등) | Unknown |\n| 조직 규모·보고 체계 | Unknown |\n| 보상·고용 조건 | Unknown |\n\n---\n\n## Candidate Positioning\n운영 분석 3년과 테스트·보고 경험을 기반으로 \"분석적 사고를 가진 후보자\"로 포지셔닝 가능.  \n**단, 캠페인 분석·현지팀 협업 증거가 확인되기 전까지는 핵심 JD 요건에 대한 포지셔닝 완성 불가.**  \n확인 후 포지셔닝 수정 필요.\n\n---\n\n## Likely Interview Risks\n1. **캠페인 분석 경험 질문** — 직접 사례 미확인 시 답변 공백 위험\n2. **\"운영 vs 마케팅 분석 차이를 어떻게 극복할 것인가\"** — 이전 근거 준비 필요\n3. **협업 사례 요청** — 팀 협업 경험 미확인 상태\n\n---\n\n## Questions To Verify\n1. 캠페인 분석(채널 성과, A/B 테스트 등)을 직접 수행한 경험이 있나요?\n2. 현지팀 또는 타 부서와 협업한 구체적 사례가 있나요?\n3. 결함 보고를 어떤 방식으로 했나요? (문서, 구두, 도구 등)\n4. 주로 사용한 분석 도구는 무엇인가요?\n\n---\n\n## Recommended Next Action\nRECOMMENDATION: 위 4개 확인 질문에 답한 뒤 증거 매핑을 업데이트하세요. 캠페인·협업 경험이 확인되면 포지셔닝과 면접 스토리 준비(W06)로 진행 가능합니다.\n\n---\n\n## Sources\n- USER_SUPPLIED: JD 요약 (캠페인 분석·현지팀 협업) — 출처·날짜 미확인\n- USER FACT: 지원자 운영 분석 3년, 테스트 12개 수행, 결함 보고\n- 웹 접근 없음: 회사 정보·채용 배경·도구·조직 구조 현재 확인 불가"
+        }
+      ],
+      "deterministic_roundtrip": null
+    }
+  ],
+  "status": "INCOMPLETE",
+  "updated_at": "2026-10-11T16:24:35.435772+00:00"
+}

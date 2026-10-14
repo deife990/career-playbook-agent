@@ -1,6 +1,15 @@
 # Gate evidence
+The v1.1 baseline **1.1.0-rc.7** passed 144 deterministic tests and both complete
+actual-model suites (33/33 per host). Browser validation is EXCLUDED_BY_USER, not certified.
+Scoped readiness and exact runtime archives passed. Claude's original citation-only ERROR
+is retained; a fresh independent judge graded the unchanged actual response after provider
+outputs and package/suite identity checks. Historical behavior failures remain preserved.
+[Baseline report](../evals/reports/release-candidate-1.1.0-rc.7.json).
+
 Full V1 scope remains fixed. Preparation of later build/checklist tooling does not clear an earlier
 behavioral gate. Static evidence does not clear native installation or actual-model blockers.
+
+## Historical v1.0 gate evidence
 
 | Gate | Evidence / status |
 |---|---|
@@ -26,7 +35,7 @@ Historical reports: [ChatGPT rc.1](../evals/reports/chatgpt-1.0.0-rc.1.json),
 Fresh clone evidence: [rc.2 report](../evals/reports/clean-clone-1.0.0-rc.2.json).
 Native synthetic observations: [ChatGPT E2E](../evals/reports/chatgpt-native-e2e-1.0.0-rc.2.md).
 Native observations: [status](../evals/native-install.json), [checklist](native-install-test.md),
-[synthetic lifecycle inputs](../evals/native-fixture.md), [Korean user guide](native-acceptance-ko.md). Project connection remains unchanged; move
+[synthetic lifecycle inputs](native-fixture.md), [Korean user guide](native-acceptance-ko.md). Project connection remains unchanged; move
 this chat to “AI Career 전자책” manually if the ChatGPT project linkage is needed.
 
 rc.3 reports: [ChatGPT](../evals/reports/chatgpt-1.0.0-rc.3.json), [Claude](../evals/reports/claude-1.0.0-rc.3.json), [native regression](../evals/reports/chatgpt-native-regression-1.0.0-rc.3.md), [fresh clone 82 tests](../evals/reports/clean-clone-1.0.0-rc.3.json).
@@ -39,3 +48,23 @@ rc.6 native evidence: [ChatGPT restore and functional continuation](../evals/rep
 
 
 Current rc.7 evidence: [ChatGPT 20 scenarios](../evals/reports/chatgpt-1.0.0-rc.7.json), [Claude 20 scenarios](../evals/reports/claude-1.0.0-rc.7.json), [ChatGPT native lifecycle](../evals/reports/chatgpt-native-e2e-1.0.0-rc.7.md), [Claude native lifecycle and quality notes](../evals/reports/claude-native-e2e-1.0.0-rc.7.md), [clean clone 83 tests](../evals/reports/clean-clone-1.0.0-rc.7.json). Earlier failed/incomplete reports remain historical evidence; they do not certify this candidate.
+
+## Historical v1.2 development-start assessment — 2026-10-12
+
+The user excluded further browser verification from this assessment. Existing native observations
+remain partial evidence; no new native PASS is claimed. rc.5 static checks and 124 regression tests
+passed. Both current 33-case model suites are still incomplete and match the current package/suite
+fingerprints. This earlier assessment allowed isolated development while model verification
+finished; it is superseded by the later full specification requiring v1.1 completion first. The earlier advice did not certify v1.1 and is not the current start condition.
+The v1.1 changes are still uncommitted in the existing feature branch; preserve that baseline before
+mixing in v1.2 work. No v1.2 implementation or Git publication was performed for this assessment.
+
+rc.5 final model evidence: Claude 32/33 (synthetic submission boundary FAIL), ChatGPT 22 passing cases before account limit. rc.6 repairs the boundary and requires both complete fresh 33-case suites. The user-requested browser exclusion is version/fingerprint-bound in evals/browser-exclusion-1.1.0-rc.6.json.
+
+## Current continuation
+
+rc.7 fixes the rc.6 final-handoff omission and debrief outcome reassurance. Claude returned
+`You've hit your limit · resets 5:20am (Asia/Seoul)` during the first rc.7 subject call;
+no new Claude behavior was observed. Both repaired ChatGPT scenarios passed. Its full
+33-case suite is running on the same immutable rc.7 package. The explicit browser scope
+record is now evals/browser-exclusion-1.1.0-rc.7.json.

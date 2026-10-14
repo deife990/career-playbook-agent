@@ -1,5 +1,49 @@
 # Changelog
 
+## 1.1.0-rc.7 — Unreleased
+
+- Repair malformed judge citations by selecting actual assistant lines; preserve independent verdicts and original ERROR evidence. No runtime dependency or automatic passing result is added.
+
+- Keep the hiring outcome Unknown after repeated ownership or additional-example questions; do not infer rejection, non-rejection or interviewer intent.
+- Include an actual-submission reporting request in final pre-submission handoffs even when file QA remains NOT_CHECKED.
+- Preserve rc.6 actual reports: ChatGPT 32/33; Claude 29 passing cases, one behavior failure and a usage-limit error. Fresh rc.7 model signoff is required.
+
+## 1.1.0-rc.6 — Unreleased
+
+- Retain the SIMULATION ONLY boundary visibly when freezing synthetic submissions; isolate them from real submissions and account memory.
+- Preserve rc.5 evidence: Claude 32/33 (simulation-boundary failure), ChatGPT 22 passes before account limit. Neither certifies rc.6.
+- Browser checks are excluded by user request, recorded separately from actual-model and regression evidence.
+
+## 1.1.0-rc.5 — Unreleased
+
+- Preserve Unknown in risk headings and positioning; missing examples do not prove an experience gap.
+- Provide action-only partial resume copy and an actual file-export checklist before missing-fact intake when file tools are unavailable.
+- Stop the development model runner on service 429 errors as well as account limits; retain real logs and passing checkpoints.
+- Preserve rc.4 failed/incomplete model reports: two Claude behavior failures; both model runners later reached account limits. Current rc.5 requires fresh package-bound signoff.
+
+## 1.1.0-rc.4 — Unreleased
+
+- Preserve unknown past application history in discovery tables; an empty loaded context does not prove no prior applications.
+- Keep confirmed SQL-result review as Partial coverage in W05, with validation and authoring scope explicitly unresolved.
+- Add a native-discovered application-history regression and preserve the original rc.3 observations.
+- rc.3 ChatGPT CLI passed 32/32; Claude had 15 passing cases before the run was superseded by these native repairs. Neither certifies rc.4.
+
+## 1.1.0-rc.3 — Unreleased
+
+- Retry exact installed reference paths with an available file reader after a ChatGPT skill-resource read failure.
+- Keep requirement-match labels separate from Recruiter/Hiring Manager review grades.
+- Clarify that JD-first persona reasoning retains the documented fifteen-section output order.
+- Preserve rc.2 observations; this package requires fresh model and native signoff.
+
+## 1.1.0-rc.2 — Unreleased
+
+- Analyze supplied interview recall immediately when requested, preserving missing fields as Unknown.
+- Reinforce one requested fact per active mock question in both host entries.
+- Distinguish pending drafts from final handoffs; require submission confirmation before freezing.
+- Correct evaluation ambiguity between proposed next actions and invented past experience.
+- Add a two-turn final-handoff regression covering submission timing, exact version and simulation privacy.
+- Preserve rc.1 failed model/native observations; rc.2 requires fresh package-bound signoff.
+
 ## 1.1.0-rc.1 — Unreleased
 
 - Add a shared evidence-backed screening pipeline with four resume modes and three depths.

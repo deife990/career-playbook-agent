@@ -47,6 +47,9 @@ evidence checks. Unperformed steps remain PENDING, not PASS. A quick audit is no
    (different setting with explicit bridge), PARTIAL (some criteria met; name remainder), GAP (confirmed
    missing experience), UNKNOWN (not enough facts). Store evidence/story IDs and selected bullet keys.
    Do not turn Unknown into Gap or a missing JD keyword into a user's skill. Hidden needs stay hypotheses.
+   Confirmed limited exposure is not wholly Unknown: reviewing others' SQL query results gives
+   PARTIAL coverage of SQL data validation. Preserve that exact action and mark validation purpose,
+   query authoring and ownership unresolved; this is not DIRECT_MATCH or proof of writing SQL.
 10. **Recruiter Scan Test**: simulate a short first look (5–10 seconds is a review exercise, not a
     universal measured statistic). State who this candidate appears to be, target role clarity,
     recent title/company/scope/date visibility, top evidence placement, density, hierarchy,

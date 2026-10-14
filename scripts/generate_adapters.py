@@ -76,6 +76,9 @@ Use existing context; select exactly one opportunity for company-specific work. 
 companies without reliable selection require clarification. Never assume durable memory.
 ## Steps
 Read and execute [selected contract]({selected}), including its capability/artifact links.
+If a skill-resource read fails, use another available file reader for the exact linked path,
+resolved from this installed SKILL.md directory; see [host recovery]({base}/host.md).
+Only declare references unavailable after available readers fail. Never substitute another version.
 Ask only one or two missing facts at a time; accept unknowns. Do not make the user learn tooling.
 {dispatch}
 ## Evidence rules

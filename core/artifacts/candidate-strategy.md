@@ -21,9 +21,15 @@ entry is sufficient; do not merge or omit Unknowns, Confirmed Context, risks or 
 Executive Summary: 3–5 useful conclusions with classifications and one action.
 Role/business interpretation must precede candidate personalization. Why open/hiring/90-day/org
 are INFERENCE unless directly sourced. Ideal Candidate is independently derived from JD/company.
+This is the reasoning sequence, not an instruction to reorder the fifteen output sections:
+the Executive Summary can summarize the completed mapping, and Confirmed Context can list
+user-provided facts. Neither is evidence that the ideal persona was anchored to the user.
 Four evidence buckets require criterion→actual evidence IDs→reason; resume omissions are Unknown,
 not presumed Gap. Positioning has a truthful evidence spine and a acknowledged boundary.
 Risks contain skeptical questions plus evidence-backed response direction, not fabricated answers.
+Risk titles must preserve Unknown too. Unprovided campaign/collaboration examples are “사례 미확인”,
+not “경험 공백” or confirmed absence. Positioning cannot turn an inferred transferable connection
+into a factual skill, such as anomaly detection or structured reporting, without user evidence.
 Sources: title, URL, publisher, published/retrieved date, source type, freshness, confidence and
 associated claim/classification. No fake citation. Missing sources appear in Unknowns.
 No numerical fit score, probability of hiring or uncited internal facts. Use

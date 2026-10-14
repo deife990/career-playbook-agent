@@ -1,0 +1,146 @@
+[
+  {
+    "id": "resume-master-001",
+    "opportunity_id": null,
+    "kind": "MASTER",
+    "language": "en",
+    "bullets": [
+      {"text": "Personally executed 12 migration test cases and reported defects.", "evidence_ids": ["ev-002"], "action": "ADD_FROM_EVIDENCE", "bullet_key": "m-b1", "evidence_status": "CONFIRMED", "confidence": "MEDIUM", "responsibility": "UNKNOWN"},
+      {"text": "Reviewed results of SQL queries written by others.", "evidence_ids": ["ev-003"], "action": "ADD_FROM_EVIDENCE", "bullet_key": "m-b2", "evidence_status": "CONFIRMED", "confidence": "MEDIUM", "responsibility": "EXPOSURE"},
+      {"text": "Performed operations analysis work.", "evidence_ids": ["ev-001"], "action": "ADD_FROM_EVIDENCE", "bullet_key": "m-b3", "evidence_status": "CONFIRMED", "confidence": "MEDIUM", "responsibility": "UNKNOWN"}
+    ],
+    "experience_dates": ["2023-01 to 2025-12"],
+    "review_status": "FACT_CHECKED",
+    "revision": 1,
+    "derived_from_id": null,
+    "created_at": "2026-10-12",
+    "target_role": null,
+    "summary": "QA Analyst at Synthetic QA Lab from January 2023 to December 2025, with work in operations analysis, hands-on test case execution, defect reporting, and review of SQL query results written by others.",
+    "skills": ["Test case execution", "Defect reporting", "SQL query result review", "Operations analysis"],
+    "sections": null,
+    "employment": [
+      {"company": "Synthetic QA Lab", "title": "QA Analyst", "start": "2023-01", "end": "2025-12", "scope": null, "evidence_ids": ["ev-001", "ev-002", "ev-003"]}
+    ],
+    "assertions": [
+      {"field": "summary", "text": "QA Analyst at Synthetic QA Lab from January 2023 to December 2025", "evidence_ids": ["ev-001"], "user_confirmed": true, "confidence": "MEDIUM"},
+      {"field": "summary", "text": "work in operations analysis", "evidence_ids": ["ev-001"], "user_confirmed": true, "confidence": "MEDIUM"},
+      {"field": "summary", "text": "hands-on test case execution, defect reporting", "evidence_ids": ["ev-002"], "user_confirmed": true, "confidence": "MEDIUM"},
+      {"field": "summary", "text": "review of SQL query results written by others", "evidence_ids": ["ev-003"], "user_confirmed": true, "confidence": "MEDIUM"}
+    ],
+    "artifacts": null,
+    "screening": {"mode": "BUILD_MASTER", "depth": "STANDARD", "resume_version_id": "resume-master-001", "ready": false}
+  },
+  {
+    "id": "resume-alpha-001",
+    "opportunity_id": "opp-alpha",
+    "kind": "TAILORED",
+    "language": "en",
+    "bullets": [
+      {"text": "Personally executed 12 migration test cases and reported defects.", "evidence_ids": ["ev-002"], "action": "KEEP", "bullet_key": "a-b1", "evidence_status": "CONFIRMED", "confidence": "MEDIUM", "responsibility": "UNKNOWN", "role_relevance": "Matches required test case execution and defect reporting", "requirement_keys": ["alpha-req-test-execution", "alpha-req-defect-reporting"], "previous_text": null},
+      {"text": "Reviewed results of SQL queries written by others.", "evidence_ids": ["ev-003"], "action": "MOVE", "bullet_key": "a-b2", "evidence_status": "CONFIRMED", "confidence": "MEDIUM", "responsibility": "EXPOSURE", "role_relevance": "Partial exposure to required SQL data validation", "requirement_keys": ["alpha-req-sql-validation"], "previous_text": null},
+      {"text": "Performed operations analysis work.", "evidence_ids": ["ev-001"], "action": "MOVE", "bullet_key": "a-b3", "evidence_status": "CONFIRMED", "confidence": "MEDIUM", "responsibility": "UNKNOWN", "role_relevance": "Context only; no Alpha requirement maps to it", "requirement_keys": [], "previous_text": null}
+    ],
+    "experience_dates": ["2023-01 to 2025-12"],
+    "review_status": "FACT_CHECKED",
+    "revision": 1,
+    "derived_from_id": "resume-master-001",
+    "created_at": "2026-10-12",
+    "target_role": "QA Analyst",
+    "summary": "QA Analyst at Synthetic QA Lab from January 2023 to December 2025, with work in operations analysis, hands-on test case execution, defect reporting, and review of SQL query results written by others. Seeking a fully remote QA Analyst role in Korea.",
+    "skills": ["Test case execution", "Defect reporting", "SQL query result review", "Operations analysis"],
+    "sections": null,
+    "employment": [
+      {"company": "Synthetic QA Lab", "title": "QA Analyst", "start": "2023-01", "end": "2025-12", "scope": null, "evidence_ids": ["ev-001", "ev-002", "ev-003"]}
+    ],
+    "assertions": [
+      {"field": "summary", "text": "QA Analyst at Synthetic QA Lab from January 2023 to December 2025", "evidence_ids": ["ev-001"], "user_confirmed": true, "confidence": "MEDIUM"},
+      {"field": "summary", "text": "work in operations analysis", "evidence_ids": ["ev-001"], "user_confirmed": true, "confidence": "MEDIUM"},
+      {"field": "summary", "text": "hands-on test case execution, defect reporting", "evidence_ids": ["ev-002"], "user_confirmed": true, "confidence": "MEDIUM"},
+      {"field": "summary", "text": "review of SQL query results written by others", "evidence_ids": ["ev-003"], "user_confirmed": true, "confidence": "MEDIUM"},
+      {"field": "summary", "text": "Seeking a fully remote QA Analyst role in Korea", "evidence_ids": [], "profile_path": "career-profile.json#/goals (QA Analyst) and preferences.json#/must (fully remote, Korea-resident basis)", "user_confirmed": true, "confidence": "HIGH"},
+      {"field": "contact", "text": "Korea | Seeking fully remote work", "evidence_ids": [], "profile_path": "preferences.json#/must", "user_confirmed": true, "confidence": "HIGH"}
+    ],
+    "artifacts": [
+      {
+        "path": "Hayun_Kim_QA_Analyst_Alpha_Resume_v1.docx",
+        "format": "DOCX",
+        "sha256": "b7eefac986042f09889adf6c4b72104d2decc2be3ac634bf967f0c986582dbdf",
+        "qa_status": "ATS-Ready",
+        "page_count": 1,
+        "extracted_text": "Hayun Kim | QA Analyst | hayun@example.invalid | Korea | Seeking fully remote work | SUMMARY ... EXPERIENCE | QA Analyst, Synthetic QA Lab Jan 2023 - Dec 2025 | 3 bullets | AREAS OF EXPERIENCE ...",
+        "checked_at": "2026-10-12",
+        "method": "pandoc plain-text extraction of DOCX; LibreOffice render to PDF and page image inspection (A4)",
+        "checks": [
+          {"check": "Text extraction vs selected version (13 expected strings)", "result": "PASS", "observation": "All strings present in order"},
+          {"check": "Page count", "result": "PASS", "observation": "1 page, A4"},
+          {"check": "Visual render", "result": "PASS", "observation": "No clipping, overlap, missing glyphs or broken bullets in LibreOffice rendering; date right-aligned"},
+          {"check": "Structure", "result": "PASS", "observation": "Single column, no tables/text boxes/images, contact in body, no hyperlinks"},
+          {"check": "Rendering in Microsoft Word", "result": "UNKNOWN", "observation": "Not tested; LibreOffice only"},
+          {"check": "Real ATS portal parse", "result": "UNKNOWN", "observation": "Not tested"}
+        ]
+      },
+      {
+        "path": "Hayun_Kim_QA_Analyst_Alpha_Resume_v1.pdf",
+        "format": "PDF",
+        "sha256": "14eee7f72bd080efb52eaf575d15edb6696e551a6a54f7afa3affb30b181629f",
+        "qa_status": "ATS-Ready",
+        "page_count": 1,
+        "extracted_text": "Same text as DOCX; extracted with pdftotext -layout",
+        "checked_at": "2026-10-12",
+        "method": "pdftotext extraction, pdffonts, pdftoppm page image inspection; PDF converted from the DOCX",
+        "checks": [
+          {"check": "Text-based PDF", "result": "PASS", "observation": "Text extracted directly; two embedded TrueType fonts (Liberation Sans regular and bold)"},
+          {"check": "Text extraction vs selected version (13 expected strings)", "result": "PASS", "observation": "All strings present in order"},
+          {"check": "DOCX/PDF parity", "result": "PASS", "observation": "Text of a fresh DOCX render equals the delivered PDF text"},
+          {"check": "Page count", "result": "PASS", "observation": "1 page, A4"},
+          {"check": "Visual render", "result": "PASS", "observation": "No clipping, overlap, missing glyphs or broken bullets"},
+          {"check": "Real ATS portal parse", "result": "UNKNOWN", "observation": "Not tested"}
+        ]
+      }
+    ],
+    "screening": {
+      "mode": "TAILOR_TO_JOB",
+      "depth": "STANDARD",
+      "resume_version_id": "resume-alpha-001",
+      "coverage": [
+        {"requirement_key": "alpha-req-test-execution", "match": "DIRECT_MATCH", "evidence_ids": ["ev-002"], "story_ids": [], "rationale": "User personally executed 12 migration test cases", "missing": "Test environment, tooling and Alpha's test types are Unknown", "selected_bullet_keys": ["a-b1"]},
+        {"requirement_key": "alpha-req-defect-reporting", "match": "DIRECT_MATCH", "evidence_ids": ["ev-002"], "story_ids": [], "rationale": "User reported defects", "missing": "Reporting method, tool and format are Unknown", "selected_bullet_keys": ["a-b1"]},
+        {"requirement_key": "alpha-req-sql-validation", "match": "PARTIAL", "evidence_ids": ["ev-003"], "story_ids": [], "rationale": "Confirmed exposure: reviewed results of SQL queries written by others", "missing": "Query authoring, validation purpose and ownership unresolved", "selected_bullet_keys": ["a-b2"]},
+        {"requirement_key": "alpha-pref-selenium", "match": "UNKNOWN", "evidence_ids": [], "story_ids": [], "rationale": "No supplied fact either way", "missing": "Unknown; kept Unknown on user's instruction", "selected_bullet_keys": []}
+      ],
+      "selection_strategy": "Only three confirmed facts exist, so all are kept. Test execution plus defect reporting lead because they match the first two required items; SQL result review follows as partial exposure; operations analysis is last as context. Nothing added from the JD.",
+      "stages": [
+        {"name": "Evidence Assertion Audit", "status": "PASS", "findings": [], "reason": "Every sentence traces to ev-001..003 or a user-stated goal/requirement"},
+        {"name": "ATS Structural QA", "status": "PASS", "findings": [{"dimension": "Locally readable structure", "result": "PASS", "observation": "ATS-Ready (local extraction only); heading 'Areas of Experience' is non-standard and its recognition by a real ATS is untested", "classification": "INFERENCE"}], "reason": null},
+        {"name": "Recruiter Scan Test", "status": "PASS", "findings": [
+          {"dimension": "Target role clarity", "result": "Strong", "observation": "Headline 'QA Analyst' and the line 'QA Analyst, Synthetic QA Lab' both name the target role", "classification": "INFERENCE"},
+          {"dimension": "Recent title/company/dates", "result": "Strong", "observation": "'QA Analyst, Synthetic QA Lab  Jan 2023 - Dec 2025' is the first line under EXPERIENCE", "classification": "INFERENCE"},
+          {"dimension": "Top evidence placement", "result": "Adequate", "observation": "First bullet covers test execution and defect reporting, the first two required items", "classification": "INFERENCE"},
+          {"dimension": "Density and hierarchy", "result": "Adequate", "observation": "One short page, three bullets; easy to scan but little depth", "classification": "INFERENCE"},
+          {"dimension": "Scale/outcome visibility", "result": "Weak", "observation": "Only '12 migration test cases' states scale; no outcomes (Unknown, not invented)", "classification": "INFERENCE"},
+          {"dimension": "Recency of last role", "result": "Risk", "observation": "Experience ends 'Dec 2025'; the period since is not shown and its status is Unknown", "classification": "INFERENCE"},
+          {"dimension": "Preferred Selenium", "result": "Risk", "observation": "No Selenium line; the fact is Unknown, and the item is preferred rather than required", "classification": "INFERENCE"}
+        ], "reason": null},
+        {"name": "Hiring Manager Credibility", "status": "PASS", "findings": [
+          {"dimension": "Test execution and defect reporting", "result": "Adequate", "observation": "'Personally executed 12 migration test cases and reported defects.' supports a stated role requirement directly", "classification": "INFERENCE"},
+          {"dimension": "SQL data validation", "result": "Risk", "observation": "'Reviewed results of SQL queries written by others.' shows review exposure; whether the candidate can validate data by writing queries is Unknown", "classification": "INFERENCE"},
+          {"dimension": "Exposure vs ownership", "result": "Risk", "observation": "No bullet states ownership, systems or outcome; drill-down questions cannot be answered from the resume", "classification": "INFERENCE"},
+          {"dimension": "Defect reporting depth", "result": "Risk", "observation": "'reported defects' - method Unknown", "classification": "INFERENCE"}
+        ], "reason": null},
+        {"name": "Differentiation Audit", "status": "PASS", "findings": [{"dimension": "Evidence anchors", "result": "Weak", "observation": "Only three confirmed facts; no differentiator beyond QA Analyst title plus operations analysis plus migration test execution is claimed", "classification": "INFERENCE"}], "reason": null},
+        {"name": "Human Voice", "status": "PASS", "findings": [], "reason": "Wording is literal; no inflated verbs"},
+        {"name": "Cross-Surface Consistency", "status": "PENDING", "findings": [], "reason": "LinkedIn, portfolio and application answers not supplied; Unknown, not aligned"},
+        {"name": "Freeze Submitted Version", "status": "PENDING", "findings": [], "reason": "Not submitted"}
+      ],
+      "concerns": [
+        {"concern": "Period after Dec 2025 not shown", "evidence_ids": ["ev-001"], "surface": "RECRUITER_SCREEN", "explanation_confirmed": false, "response": "Ask the user for the factual status; do not invent a reason"},
+        {"concern": "SQL: review of others' queries vs writing queries", "evidence_ids": ["ev-003"], "surface": "INTERVIEW", "explanation_confirmed": false, "response": "Answer within confirmed scope; query authoring stays Unknown"},
+        {"concern": "Defect reporting method", "evidence_ids": ["ev-002"], "surface": "INTERVIEW", "explanation_confirmed": false, "response": "Method stays Unknown until the user confirms it"}
+      ],
+      "voice_edits": [
+        {"before": "Directly executed 12 migration test cases and reported defects.", "after": "Personally executed 12 migration test cases and reported defects.", "reason": "More idiomatic English for the user's own action", "meaning_preserved": true, "assertion_fields_unchanged": true}
+      ],
+      "ready": true
+    }
+  }
+]

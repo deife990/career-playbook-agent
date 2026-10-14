@@ -1,0 +1,49 @@
+{
+  "version": "1.1.0-rc.5",
+  "browser_verification": "USER_EXCLUDED_FROM_FURTHER_WORK",
+  "regression_tests": {
+    "passed": 124,
+    "status": "PASS"
+  },
+  "static_checks": "PASS",
+  "model_runs": {
+    "chatgpt": {
+      "status": "INCOMPLETE",
+      "observed_cases": 15,
+      "passed": 9,
+      "failed": [],
+      "errors": [
+        "english-mock",
+        "hero-independent-persona",
+        "interview-prep-evidence",
+        "market-freshness",
+        "multi-company-clarification",
+        "offer-original-requirements"
+      ]
+    },
+    "claude": {
+      "status": "INCOMPLETE",
+      "observed_cases": 14,
+      "passed": 14,
+      "failed": [],
+      "errors": []
+    }
+  },
+  "active_sessions": {
+    "chatgpt": 47200,
+    "claude": 97127
+  },
+  "chatgpt_native_chat": "https://chatgpt.com/c/6accab72-9b5c-83e8-9681-041ece5e154e",
+  "claude_installed_revision": "v6",
+  "claude_install_identity": "evals/reports/native-proof/rc5/claude-installed-identity.json",
+  "remaining": [
+    "native W02–W09 on ChatGPT; native W01–W09 on Claude",
+    "exact submitted-version freeze and later Master independence",
+    "two actual-recall debrief rounds and company ambiguity/isolation",
+    "complete pack export, independent validation, fresh-chat lossless restore and isolated continuation",
+    "complete current model suites",
+    "strict release readiness and final archive identity"
+  ],
+  "release_ready": false,
+  "scope_note": "2026-10-12: user requested v1.2 implementation readiness assessment without further browser verification. Preserve prior observations; do not infer native PASS."
+}

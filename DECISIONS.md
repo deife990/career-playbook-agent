@@ -140,3 +140,12 @@
 - D031: v1.1.0-rc.1 is a candidate until its own actual model and native acceptance evidence is
   current. No stale v1.0 signoff or CLI result counts as native installation. Actual web upload
   uses the existing account and the exact generated candidate archive.
+
+- D032 (2026-10-13): The user explicitly requested “브라우저 검증은 따로 하지말고”.
+  For this work only, native browser checks are EXCLUDED_BY_USER, with the exact version,
+  runtime fingerprints and user instruction recorded separately. The default release gate
+  still requires native evidence; explicit --native-exclusion certifies only the requested
+  scope. It never turns missing native checks into PASS or waives actual-model assertions,
+  complete suites, package identity or deterministic regressions. The later v1.2 specification
+  requires complete v1.1 model verification before v1.2 runtime implementation, superseding
+  the earlier advice that isolated development could begin while v1.1 model tests finished.

@@ -15,6 +15,9 @@ Use existing context; select exactly one opportunity for company-specific work. 
 companies without reliable selection require clarification. Never assume durable memory.
 ## Steps
 Read and execute [selected contract](../../references/core/workflows/w01-career-setup.md), including its capability/artifact links.
+If a skill-resource read fails, use another available file reader for the exact linked path,
+resolved from this installed SKILL.md directory; see [host recovery](../../references/host.md).
+Only declare references unavailable after available readers fail. Never substitute another version.
 Ask only one or two missing facts at a time; accept unknowns. Do not make the user learn tooling.
 
 ## Evidence rules
@@ -43,6 +46,12 @@ They supplement, rather than replace, the selected workflow and artifact contrac
   Gap needs BOTH a confirmed role requirement and confirmed absence/mismatch; no JD means
   unconfirmed requirements stay Unknown. Never put unknown tools/design/experience in a Gap
   cell or tell the user to claim “I have no experience” when they have not confirmed absence.
+  Apply this in risk headings and positioning too: use “협업 사례 미확인” rather than
+  “협업 경험 공백” or “확인된 협업 경험 없음” when experience may exist but has not been supplied.
+  Missing examples are a verification task, not a confirmed weakness or absence.
+- Unknown application history stays Unknown in every table and exported record. An empty local
+  application list means no records are loaded, not that the user has never applied. Do not write
+  “지원 이력 없음” or “not applied” unless the user confirms that absence.
 - Proposed career directions are RECOMMENDATION, not a stated CareerGoal. Record a goal only
   after the user states or confirms it. Skill/relevance interpretations are INFERENCE, not
   CareerEvidence. Reporting defects does not establish personally identifying/discovering them,
@@ -54,6 +63,12 @@ They supplement, rather than replace, the selected workflow and artifact contrac
 - During an ACTIVE mock, a procedural question counts as the one question. Never ask whether
   to continue/end and an interview question in the same turn. An interim coaching request may
   receive a brief deferral plus ONE interviewer question; no separate continuation question.
+  Each interviewer question asks for one thing (not background plus motivation together).
+- Debrief: collect recall first, but once the user supplies a record and asks for analysis,
+  analyze it now. Mark missing answers/reactions Unknown and ask at most one follow-up at the end.
+  Repeated ownership questions and requests for another example establish observed behavior only.
+  Hiring outcome stays Unknown; do not reassure “불합격 신호가 아니다” or assert “기회를 더 줬다”.
+  Interviewer intention needs multiple explicitly uncertain hypotheses, never a settled explanation.
 - For W06 include an explicit text-mock invitation when voice is unavailable. Do not start it
   until requested. Persist the prepared round's objectives and positioning as recommendations
   and its next actions before complete export; do not replace prepared content with null.
@@ -69,12 +84,29 @@ They supplement, rather than replace, the selected workflow and artifact contrac
   (Direct Match/Transferable/Partial/Gap/Unknown); Recruiter Scan and Hiring Manager credibility as
   Strong/Adequate/Weak/Risk citing the observed line; file QA as ATS-Ready/ATS-Risky/ATS-Broken/
   NOT_CHECKED with what text extraction and page count actually showed. No ATS score/pass odds.
+  In W05, confirmed review of others' SQL query results is Partial exposure for an SQL data
+  validation requirement. Name the unresolved validation/authoring scope; do not erase that
+  confirmed exposure as Unknown or upgrade it to Direct Match. Unconfirmed Selenium stays Unknown.
+  These are separate vocabularies: never use Partial, Unknown or Pending as a Recruiter/Hiring
+  Manager review grade. For missing proof use Risk with the fact explicitly Unknown; for an
+  uninspected document keep NOT_CHECKED in file QA, outside the reviewer grades.
 - State exposure boundaries positively in resume lines (“reviewed results of existing SQL
   queries”); keep what was not done in gap notes/interview prep unless needed to prevent misreading.
-  Ready is not submitted: ask the user to say when they actually submit so that exact version,
-  JD and answers are frozen; later interview prep starts from the submitted version.
+  Ready is not submitted. When delivering final files or a final-ready version, add one line asking
+  the user to tell you when they actually submit, so that exact version, JD and answers are frozen;
+  later interview prep starts from the submitted version. This handoff also applies when the user
+  requests a final pre-submission review but file QA is NOT_CHECKED: say “실제 제출 후 알려주시면
+  그 제출본·JD·답변을 고정하겠습니다.” Keep ready false until QA passes. A preliminary partial
+  draft outside a final pre-submission request needs no freeze prompt.
+- Without file tools or essential resume fields, deliver the supported action-only text and an
+  actual export/inspection checklist now, then ask at most two missing facts. Even one confirmed
+  action supports a partial draft; unknown name/company/dates stay unfilled. Keep file QA
+  NOT_CHECKED and ready false. Do not withhold all useful copy or merely promise a checklist later.
 - Host account memory is optional. Never save simulation/test/fictional data to it. Save real
   career details there only when the user asks or agrees; the portable pack stays canonical.
+  Retain the user's SIMULATION ONLY label on displayed submission records and handoffs, even
+  after they say to assume an actual submission. Keep the synthetic record in a separate test
+  context/pack; explicitly say it does not update real submissions or account memory.
 For W04 output ALL Candidate Strategy Brief sections in this order, even when concise:
 Executive Summary; What This Role Appears To Be; Why It May Be Open; Confirmed Context; Hiring Hypothesis; Ideal Candidate; Your Strong Evidence; Transferable Evidence; Gaps; Unknowns; Candidate Positioning; Likely Interview Risks; Questions To Verify; Recommended Next Action; Sources.
 Use a short Unknown entry where needed; never merge/omit a section.

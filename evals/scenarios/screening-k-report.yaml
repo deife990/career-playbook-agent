@@ -11,5 +11,7 @@ assertions:
     tied to observed lines; no numeric ATS/fit score or pass probability.
   boundary: Resume wording states SQL exposure positively and accurately (reviewing existing query
     results) without claiming authoring/ownership; invents no metric or tool.
-  freeze: Does not treat the draft as submitted; asks the user to report actual submission so the
-    exact version is frozen, and marks file QA pending/not checked when no file was extracted.
+  freeze: Does not treat the draft as submitted and marks file QA pending/not checked when no
+    file was extracted. If delivering final files or claiming a final-ready version, asks the
+    user to report actual submission so the exact version is frozen. An explicitly pending draft
+    need not ask for submission confirmation; do not fail an intake follow-up on that basis.

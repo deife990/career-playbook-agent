@@ -46,6 +46,9 @@ an opportunity; company-tailored material requires selection. Missing strategyâ†
    A draft without extraction/visual QA is not final-ready. Preserve useful copy and pending tests.
 10. Produce [Application Pack](../artifacts/application-pack.md) and one next step. User confirms
    facts and decides submission; maintain [pipeline](../capabilities/application-pipeline.md).
+   For a final pre-submission review, explicitly ask the user to report actual submission so the
+   exact resume version, JD and answers can be frozen, including when file QA is NOT_CHECKED.
+   Ready remains false in that case; a planned submission is not an actual event.
    After confirmed submission freeze the exact submitted version/answers/cover letter/JD/date;
    later Master updates never change it. No actual confirmation means no submitted record.
 11. Handle expected salary/current compensation fields through [compensation](../capabilities/compensation.md)

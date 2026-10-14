@@ -13,6 +13,32 @@ def test_judge_cannot_omit_or_fabricate_evidence():
     with pytest.raises(ValueError): grade({'scope':'clarify'},bad,transcript)
 def test_fenced_json(): assert extract_json('```json\n{"x":1}\n```')=={'x':1}
 
+@pytest.mark.parametrize('platform,returncode,stdout,stderr',[
+    ('chatgpt',1,'','ERROR: exceeded retry limit, last status: 429 Too Many Requests'),
+    ('claude',0,'{"is_error":true,"result":"429 Too Many Requests"}',''),
+    ('claude',1,'{"is_error":true,"result":"429 Too Many Requests"}',''),
+    ('claude',0,'{"is_error":true,"result":"You have hit your limit; resets tomorrow"}',''),
+])
+def test_service_limits_stop_and_preserve_actual_logs(monkeypatch,tmp_path,platform,returncode,stdout,stderr):
+    from subprocess import CompletedProcess
+    from scripts.run_model_evals import call_model,RateLimitError
+    calls=[]
+    def run(cmd,**kwargs):
+        calls.append(cmd)
+        return CompletedProcess(cmd,returncode,stdout,stderr)
+    monkeypatch.setattr('scripts.run_model_evals.subprocess.run',run)
+    with pytest.raises(RateLimitError): call_model(platform,'synthetic prompt',tmp_path,'turn-1')
+    assert len(calls)==1
+    assert (tmp_path/'turn-1.stdout.txt').read_text()==stdout
+    assert (tmp_path/'turn-1.stderr.txt').read_text()==stderr
+
+def test_successful_text_mentioning_429_is_not_a_service_failure(monkeypatch,tmp_path):
+    from subprocess import CompletedProcess
+    from scripts.run_model_evals import call_model
+    monkeypatch.setattr('scripts.run_model_evals.subprocess.run',lambda cmd,**kwargs:
+        CompletedProcess(cmd,0,'{"is_error":false,"result":"429 is only a fictional example.","modelUsage":{"test-model":{}}}',''))
+    assert call_model('claude','synthetic prompt',tmp_path,'turn-1')==('429 is only a fictional example.','test-model')
+
 def test_suite_digest_tracks_persona_and_seed_changes(tmp_path):
     from scripts.run_model_evals import suite_fingerprint
     cases=tmp_path/'evals/scenarios';cases.mkdir(parents=True)
@@ -50,3 +76,69 @@ def test_shim_resolves_host_temp_directory_aliases(tmp_path):
     case=yaml.safe_load((ROOT/'evals/scenarios/interview-prep-evidence.yaml').read_text())
     _,hashes=package_context(alias,'chatgpt',case)
     assert 'skills/interview-prep/SKILL.md' in hashes
+
+
+def test_line_selected_judge_uses_actual_markdown_without_paraphrase():
+    import json
+    from scripts.run_model_evals import assistant_lines,grade_lines
+    history=[{'role':'user','content':'fake proof'},
+             {'role':'assistant','content':'## Review\n\n| Net pay | **Unknown** |'}]
+    lines=assistant_lines(history)
+    raw=json.dumps({'assertions':[{'id':'finance','pass':True,'reason':'No estimate',
+                                  'evidence_line':1}]})
+    rows=grade_lines({'finance':'No estimates'},raw,history)
+    assert rows[0]['evidence_quote']=='| Net pay | **Unknown** |'
+    assert 'fake proof' not in lines
+
+
+@pytest.mark.parametrize('line_id',[99,-1,True,'1'])
+def test_line_selected_judge_rejects_invalid_or_invented_reference(line_id):
+    import json
+    from scripts.run_model_evals import grade_lines
+    raw=json.dumps({'assertions':[{'id':'truth','pass':True,'reason':'Test',
+                                  'evidence_line':line_id}]})
+    with pytest.raises(ValueError):
+        grade_lines({'truth':'No fabrication'},raw,[{'role':'assistant','content':'Unknown'}])
+
+
+def test_line_selected_judge_keeps_false_verdict_and_checks_assertion_ids():
+    import json
+    from scripts.run_model_evals import grade_lines
+    history=[{'role':'assistant','content':'Unsupported claim'}]
+    row={'id':'truth','pass':False,'reason':'Invented fact','evidence_line':0}
+    assert grade_lines({'truth':'No fabrication'},json.dumps({'assertions':[row]}),history)[0]['pass'] is False
+    row['id']='unrelated'
+    with pytest.raises(ValueError):grade_lines({'truth':'No fabrication'},json.dumps({'assertions':[row]}),history)
+
+
+def test_judge_keeps_valid_first_verdict_without_extra_request(monkeypatch,tmp_path):
+    import json
+    from scripts.run_model_evals import judge_transcript
+    calls=[]
+    def model(*args):
+        calls.append(args)
+        return json.dumps({'assertions':[{'id':'truth','pass':True,'reason':'Safe',
+                                         'evidence_quote':'Unknown'}]}),'actual-judge'
+    monkeypatch.setattr('scripts.run_model_evals.call_model',model)
+    rows,_=judge_transcript('claude',{'assertions':{'truth':'No invention'}},
+                          [{'role':'assistant','content':'Unknown'}],{},None,tmp_path)
+    assert len(calls)==1 and rows[0]['pass'] is True
+
+
+def test_bad_quote_repair_selects_original_line_and_never_changes_verdict(monkeypatch,tmp_path):
+    import json
+    from scripts.run_model_evals import judge_transcript,JUDGE_LINE_SCHEMA
+    calls=[]
+    def model(*args):
+        calls.append(args)
+        row={'id':'truth','pass':False,'reason':'Fabricated claim'}
+        if len(calls)==1: row['evidence_quote']='not in response'
+        else:
+            assert args[-1]==JUDGE_LINE_SCHEMA
+            row['evidence_line']=0
+        return json.dumps({'assertions':[row]}),'actual-judge'
+    monkeypatch.setattr('scripts.run_model_evals.call_model',model)
+    rows,_=judge_transcript('claude',{'assertions':{'truth':'No invention'}},
+                          [{'role':'assistant','content':'**Invented**'}],{},None,tmp_path)
+    assert len(calls)==2 and rows[0]['pass'] is False
+    assert rows[0]['evidence_quote']=='**Invented**'

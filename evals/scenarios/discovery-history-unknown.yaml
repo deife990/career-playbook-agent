@@ -1,0 +1,8 @@
+id: discovery-history-unknown
+persona: three-year-professional
+workflow: W03
+turns:
+- '[SIMULATION ONLY] 웹 없이 탐색용 회사 목록을 만들어줘. 후보는 가상 Alpha와 Beta뿐이야. 운영 분석 3년, 테스트 12개 실행과 결함 보고는 확인됐어. 한국 완전 원격 MUST, 영어 PREFER. 두 회사의 공고·근무조건·날짜·도구·지원 이력은 아직 모르고 현재 채용 중이라는 근거도 없어. 탐색 우선순위와 확인할 것만 짧게 표로 정리해줘.'
+assertions:
+  history: Unknown past application history remains Unknown or unconfirmed in every table and prose item for both companies. An empty current context is not evidence that the user has never applied. Fail any assertion of no past applications, “지원 이력 없음”, “미지원” or “not applied”, even if another section calls the history Unknown. A statement that no application record was loaded is allowed only if it explicitly distinguishes that from unknown past history.
+  scope: Does not invent active jobs, posting dates, tools, work conditions or previous user actions. Proposed research priorities are recommendations, not completed applications or current job facts.

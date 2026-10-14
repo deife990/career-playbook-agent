@@ -1,0 +1,16 @@
+{
+  "active_objective": "Complete v1.1 scoped readiness, then implement all v1.2 requirements from the user attachment",
+  "version": "1.1.0-rc.6",
+  "browser_validation": "EXCLUDED_BY_USER",
+  "unit_tests": 136,
+  "static_checks": "PASS",
+  "active_model_sessions": {
+    "chatgpt": 93101,
+    "claude": 56878
+  },
+  "v12_runtime_started": false,
+  "plan": "tasks/plan.md",
+  "state_design": "tasks/state-contract.md",
+  "user_spec": "/Users/jhwang/.codex/attachments/983c7512-da4a-4b22-83eb-bfe807c4a9d6/붙여넣은 텍스트.txt",
+  "next": "Wait for current model suites; preserve complete reports, scoped readiness and immutable baseline before any v1.2 Core/schema/scenario/version changes."
+}

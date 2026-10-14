@@ -22,10 +22,16 @@ round/prior hypothesis. If several companies/rounds are possible clarify before 
    topics → New company information → User uncertainty**. Capture verbatim where available and
    distinguish user recollection/paraphrase/unknown. Save partial collection checkpoints.
 3. Ask targeted missing fields without forcing perfect recall. “기억 안 나요/공유 안 할래요” remains
-   Unknown/declined; confirm available record before analysis. Do not fill answers from Story Bank.
+   Unknown/declined. When the user supplies a record and asks to analyze it, that request confirms
+   the available record for limited analysis: proceed now and mark missing fields Unknown.
+   Ask at most one targeted follow-up after the analysis, rather than repeating intake.
+   Do not fill answers from Story Bank.
 4. Compare previous hypotheses against actual evidence: supported / challenged / unresolved,
    with observed statements and alternative interpretations. Reaction is observed behavior,
-   not proof of interviewer belief or hiring outcome.
+   not proof of interviewer belief or hiring outcome. Repeated ownership questions or another
+   example request cannot establish rejection, non-rejection, interest or an extra opportunity.
+   Keep outcome Unknown; explicitly label multiple alternative intentions as uncertain hypotheses.
+   Never present “불합격 신호가 아닙니다” or “기회를 더 준 것입니다” as reassurance.
 5. Update company intelligence and hiring hypothesis as user-reported new information, unless
    current independent sources verify it. Append revisions; keep previous IDs and contradictions.
 6. Assess candidate risks actually exposed by follow-ups/repetition, not fabricated employer feedback.

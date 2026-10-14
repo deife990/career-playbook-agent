@@ -43,6 +43,11 @@ unavailable, supply complete supported copy and a layout/export checklist; say �
 DOCX/PDF 생성과 실제 파일 검증은 아직 완료하지 못했어요.” Keep ready false and affected stages
 PENDING. If only one format is available, deliver it honestly and mark the other pending rather
 than withholding supported work. Hash calculation unavailable→null. No fictitious download links.
+Sparse facts do not block partial delivery: provide the confirmed action-only bullet now, leaving
+unknown contact/company/title/dates unfilled, and include the actual checklist in this reply.
+The checklist covers editable export, text-based PDF, text/order/Unicode parity, page count and
+every-page visual inspection. Ask at most two essential missing facts after this supported work;
+do not merely promise the draft/checklist after intake. Such copy remains a partial draft.
 
 ## Experimental vendor observation
 

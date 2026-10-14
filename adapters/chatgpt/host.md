@@ -9,8 +9,12 @@ voice_mock maps to GPT-Live/voice when available to this account/surface. Before
 host's visible voice control; no API integration or invented UI labels. Preserve W07 contract.
 If the voice surface cannot access this skill/selected context, provide a compact session brief
 and explicitly state what must be supplied there. No transcript→limited user-recollection review.
-Use reference files through available host file reading, not executing scripts. If references
-cannot be read, explain that the installed material is unavailable; do not claim full execution.
+Use reference files through available host file reading, not executing scripts. A skills-resource
+reader failure does not prove the installed file is missing: when an installed SKILL.md path and
+another file reader are available, resolve its relative links against that skill's directory and
+read the exact linked files in the same installed plugin. Do not search other chats or account
+memory, execute scripts, or guess another installation/version. If no reader succeeds, explain
+which references remain inaccessible and do not claim full execution.
 For final resumes use actual available document/file tools to create DOCX and text-based PDF,
 extract both and inspect renders. Tool availability is not guaranteed by installation. No tools→
 supported text/layout checklist with NOT_CHECKED; no fictitious download links or QA success.

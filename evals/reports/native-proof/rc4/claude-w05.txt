@@ -1,0 +1,206 @@
+Career transition to QA Analyst
+
+
+3
+공유
+
+위아래 화살표 키를 사용하여 메시지 간에 이동하세요.
+
+이전 메시지 불러오기
+Claude 응답: Candidate Strategy Brief: 가상 Alpha / QA Analyst (opp-alpha)
+w04-job-intelligence.md 읽음
+
+w04-job-intelligence.md 읽음
+Candidate Strategy Brief: 가상 Alpha / QA Analyst (opp-alpha)
+
+웹 없이 사용자가 제공한 가상 JD(USER_SUPPLIED, 공고 날짜 Unknown)만 사용했습니다. 이 분석으로 지원 단계는 바뀌지 않습니다.
+
+Executive Summary
+
+Alpha의 필수 요건 3개 중 테스트케이스 실행과 결함 보고는 확인된 경험과 직접 맞닿고, SQL 데이터 검증은 검토 경험만 확인되어 작성 수준이 열려 있습니다. 우대인 Selenium과 조직, 채용 배경, 근무 조건은 Unknown입니다.
+
+What This Role Appears To Be
+
+INFERENCE: 필수 요건이 실행, 결함 보고, SQL 검증이라서 실행과 검증 중심의 QA 역할로 보입니다. 테스트 설계나 자동화 비중은 JD에 없어 Unknown입니다.
+
+Why It May Be Open
+
+INFERENCE (확신도 낮음): 증원, 결원 대체, 신규 이니셔티브 중 무엇인지 근거가 없습니다. 검증 질문은 "이 포지션이 열린 배경이 무엇인가요?"입니다.
+
+Confirmed Context
+
+USER FACT (USER_SUPPLIED): 필수는 테스트케이스 실행, 결함 보고, SQL 데이터 검증이고 우대는 Selenium입니다. 조직, 채용 이유, 도구, KPI, 근무 조건, 공고 날짜는 Unknown이며 완전 원격 MUST와의 충돌 여부도 확인되지 않았습니다.
+
+Hiring Hypothesis
+
+INFERENCE (확신도 낮음): 실행과 보고가 필수이고 자동화는 우대여서, 당장 수행할 QA 실무 인력이 필요할 수 있습니다. 대안은 자동화 확장을 위한 채용이며, JD만으로는 가릴 수 없습니다.
+
+Ideal Candidate
+
+INFERENCE: 지원자 정보를 보기 전에 JD만으로 정한 기준은 테스트케이스를 실행하고, 결함을 보고하고, SQL로 데이터를 검증하는 사람입니다. Selenium은 우대이며, 이해관계자와 협업 역량은 JD에 없어 Unknown입니다.
+
+Your Strong Evidence
+
+USER FACT: 마이그레이션 테스트케이스 12개를 직접 실행했고 결함을 보고했습니다. 보고 방식은 Unknown이므로 "결함을 보고함"으로만 씁니다.
+
+Transferable Evidence
+
+USER FACT + 한계: 다른 사람이 작성한 SQL 쿼리 결과를 검토한 경험이 SQL 데이터 검증 요건과 부분적으로 맞닿습니다. 쿼리 작성은 확인되지 않아 이 근거는 거기까지입니다.
+
+Gaps
+
+확정된 Gap은 없습니다. Gap은 요구사항 확인과 본인의 부재 확인이 모두 있어야 하는데, 부재를 확인해 주신 항목이 없습니다.
+
+Unknowns
+
+쿼리 작성, 테스트 설계, Selenium, 성과 수치, 리더십, 협업, 학력, 결함 보고 방식, 이 공고의 조직·도구·KPI·근무 조건·날짜, 과거 지원 이력입니다.
+
+Candidate Positioning
+
+RECOMMENDATION: 운영 분석 3년, 마이그레이션 테스트케이스 12개 직접 실행과 결함 보고, 기존 SQL 쿼리 결과 검토 경험을 세 근거로 삼고 범위를 그대로 씁니다. 확인되지 않은 항목은 있다고도 없다고도 말하지 않습니다.
+
+Likely Interview Risks
+
+INFERENCE: SQL 검증이 쿼리 작성을 뜻하는지, 결과 검토를 뜻하는지가 갈릴 수 있고, 결함 보고 방식을 물으면 지금은 답할 근거가 비어 있습니다. 이 질문들은 연습용이며 실제 출제 질문이 아닙니다.
+
+Questions To Verify
+채용 담당자에게: SQL 검증이 쿼리 작성을 포함하는지, Selenium 우대의 비중은 어떤지, 완전 원격과 한국 거주가 가능한지 확인합니다.
+본인에게: 쿼리 작성과 Selenium 경험 여부는 "모름"도 괜찮습니다.
+Recommended Next Action
+
+쿼리 작성과 Selenium 경험 여부를 알려 주시거나 “Unknown 유지”라고 답해 주세요. 그러면 Alpha용 이력서 준비(W05)로 넘어갑니다.
+
+Sources
+가상 Alpha QA Analyst JD (USER_SUPPLIED, 날짜 Unknown, 독립 검증 없음)
+외부 출처 없음 (웹 미사용)
+입력 내용: SIMULATION ONLY.
+
+SIMULATION ONLY. 쿼리 작성·Selenium과 기존 Unknown은 유지해. 추가 가상 USER FACT: 운영 분석 3년은 Synthetic QA Lab의 QA Analyst, 2023-01~2025-12 기간 업무였어. 이 기간에 앞서 말한 테스트케이스12개 실행·결함 보고와 다른 사람의 SQL 쿼리 결과 검토를 했어. 이름 Hayun Kim, 이메일 hayun@example.invalid. Alpha 맞춤 영문 이력서를 최종 전달용 DOCX와 텍스트 PDF로 만들어줘. Master도 보존해. Recruiter/HM 검토, JD coverage, 실제 파일 QA 및 LinkedIn·포트폴리오 필요 여부를 짧게 보고해줘. 파일은 내려받을 수 있는 ZIP으로도 묶어줘. 아직 실제 제출하지 않았어.
+
+Claude 응답: Alpha용 영문 이력서(DOCX, 텍스트 PDF)와 Master 보존본을 만들고, 실제 파일 검사 결과까지 확인해서 ZIP으로 묶겠습니다.
+파일 9개 읽음, 명령어 1개 실행함
+
+파일 9개 읽음, 명령어 1개 실행함
+
+Alpha용 영문 이력서(DOCX, 텍스트 PDF)와 Master 보존본을 만들고, 실제 파일 검사 결과까지 확인해서 ZIP으로 묶겠습니다.
+
+명령어 6개 실행함, 작업 업데이트함
+
+명령어 6개 실행함, 작업 업데이트함
+
+확정한 이력서 문구로 DOCX를 만들고 있습니다. 다음은 PDF 변환과 파일 검사입니다.
+
+파일 2개 생성함, 파일 2개 읽음, 외 11단계 더
+
+pdfpage-1.png 읽음
+docxpage-1.png 읽음
+파일 2개 생성함, 파일 2개 읽음, 외 11단계 더
+
+DOCX와 PDF 검사는 통과했고, 지금 Master 보존본과 버전 기록을 쓰고 있습니다. 이어서 검토 보고서를 쓰고 ZIP으로 묶겠습니다.
+
+파일 2개 생성함, 파일 3개 공유함, 외 3단계 더
+
+파일 2개 생성함, 파일 3개 공유함, 외 3단계 더
+
+Alpha용 영문 이력서를 DOCX와 텍스트 PDF로 만들고, Master와 함께 ZIP으로 묶었습니다. 두 파일 모두 1페이지(A4)이고, 이력서에 쓴 사실은 말씀하신 것만입니다. 새 성과, 도구, 교육, 리더십은 넣지 않았고, 결함 보고 방식과 쿼리 작성, Selenium은 Unknown으로 두었습니다.
+
+포함된 것: 이력서 DOCX와 PDF, Hayun_Kim_Master_Resume_v1.md(Master), 검토 보고서(application-pack_opp-alpha.md), 버전·근거 기록(resume-versions.json, evidence-ledger.json). ZIP 멤버와 파일 해시도 확인했습니다. Master는 원본으로 보존했고, Alpha 버전은 거기서 파생했습니다.
+
+JD coverage:
+
+요건	판정	비고
+테스트케이스 실행 (필수)	DIRECT_MATCH	12개 직접 실행
+결함 보고 (필수)	DIRECT_MATCH	보고 방식은 Unknown
+SQL 데이터 검증 (필수)	PARTIAL	타인 쿼리 결과 검토만 확인됨. 작성 여부는 Unknown
+Selenium (우대)	UNKNOWN	확인된 사실 없음
+
+Recruiter/HM 검토 (INFERENCE):
+
+Strong: 헤드라인과 직함이 모두 QA Analyst이고, 직함·회사·기간이 첫 줄에 보입니다.
+Weak/Risk:
+성과·규모가 거의 없습니다. 수치는 “12 test cases”뿐입니다.
+마지막 근무가 2025-12로 끝나고 이후는 표시되지 않습니다.
+SQL은 검토 경험 이상이 Unknown이고, 불릿에 범위나 성과가 없어 면접에서 깊이를 보여 줄 근거가 얇습니다.
+Selenium은 우대 항목인데 사실이 Unknown입니다.
+
+실제 파일 QA: 두 파일 모두 ATS-Ready(로컬 추출 기준)입니다.
+
+DOCX와 PDF에서 텍스트를 직접 추출해 기대 문구 13개가 모두 있는 것을 확인했습니다.
+페이지 이미지로 열어 보았고 잘림, 겹침, 깨진 글리프가 없었습니다.
+PDF는 이미지가 아닌 텍스트 PDF이고, DOCX와 PDF의 텍스트가 같습니다.
+Microsoft Word에서의 렌더링과 실제 ATS 포털 파싱은 테스트하지 않았습니다.
+
+LinkedIn: 프로필을 받지 못해 감사는 보류했습니다(PENDING). 공고가 요구하지는 않지만, 이력서의 직함과 기간이 프로필과 같은지 제출 전에 확인하시길 권합니다. 자가 점검 목록은 보고서에 있습니다.
+
+포트폴리오: SKIP입니다. JD에 요구가 없고, 보여 줄 사례의 범위와 방법이 Unknown이라서입니다. Alpha가 요구하면 다시 검토합니다.
+
+이력서 문구를 읽어 보고 승인하거나 고칠 곳을 알려 주세요. 2025-12 이후 상태를 알려 주시면 공백을 어떻게 다룰지 정하겠습니다. 이력서는 아직 제출하지 않은 상태이므로, 실제로 제출하시면 알려 주세요. 그 시점의 이력서, JD, 답변을 그대로 고정하고 면접 준비는 그 버전에서 시작하겠습니다.
+
+파일: Hayun_Kim_Alpha_Application_Pack_v1.zip, Hayun_Kim_QA_Analyst_Alpha_Resume_v1.docx, Hayun_Kim_QA_Analyst_Alpha_Resume_v1.pdf
+
+Sources: 외부 출처 없음 (웹 미사용, 사용자 제공 사실만 사용).
+
+
+Hayun kim alpha application pack v1
+ZIP 
+다운로드
+
+Hayun kim qa analyst alpha resume v1
+문서·DOCX 
+다운로드
+Hayun kim qa analyst alpha resume v1
+문서·PDF 
+다운로드
+
+모두 다운로드
+
+
+
+
+
+17시간 전
+
+답글
+
+
+
+
+
+
+
+
+Claude는 AI이므로 실수를 할 수 있습니다.
+Sonnet 5.5 중간
+수동
+진행 상황
+
+이전 단계 2개
+
+증거 원장과 Master·Alpha 이력서 내용 확정
+, 완료
+Alpha DOCX와 텍스트 PDF 생성
+, 완료
+실제 파일 QA (추출, 페이지, 시각 검사)
+, 완료
+
+검토 보고서 작성과 ZIP 패키징
+, 완료
+출력
+
+
+
+Hayun kim alpha application pack v1
+ZIP
+
+Hayun kim qa analyst alpha resume v1
+DOCX
+
+Hayun kim qa analyst alpha resume v1
+PDF
+이 세션에서 사용됨
+
+Skills: careerpilot
+
+Skills
+careerpilot
+Claude가 각 항목을 사용한 위치로 대화를 스크롤하는 버튼 — 포커스가 카드로 이동할 때까지 Tab을 누르고, 돌아가려면 Escape를 누르세요.
