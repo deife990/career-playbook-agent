@@ -10,5 +10,9 @@ from scripts.validate_manifest import main as manifest
 from scripts.build_all import main as builds
 def main():
     schemas(); workflows(); manifest(); frontmatter(); references(); builds()
+    from scripts.generate_adapters import generate
+    from scripts.package_budget import check_budget
+    for platform in ['chatgpt', 'claude']:
+        check_budget(generate(platform), platform)
     print('Static evals PASS (not a live model evaluation)')
 if __name__ == '__main__': main()
