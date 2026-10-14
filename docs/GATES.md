@@ -6,6 +6,16 @@ n=1 protocol; it does not certify protocol v2 or a future rc.8. New readiness re
 repetitions, wrong judge routing, changed prompts/configuration and failed assertions.
 [Preregistered criteria](review-improvement-protocol.md).
 
+## Strengthened baseline interruption
+
+C completed 17 passing ChatGPT runs plus one judge ERROR; Claude completed 17 PASS, three actual
+FAIL and one subject ERROR. Full planned denominator is 130 per host. Claude account reset message:
+`You've hit your limit · resets 4:50am (Asia/Seoul)`. Both subject and cross-judge routing are affected.
+Completed subjects/checkpoints, literal transcripts, failed verdicts and service logs are preserved.
+This is **INCOMPLETE_WITH_REAL_FAILURES**, never readiness PASS. Original rc.7 runtime bytes are
+unchanged. D's reachability tooling is prepared; runtime cleanup E/F remain unapplied until the
+baseline finishes. See [progress audit](../evals/reports/review-v2-baseline-progress.json).
+
 # Current v1.2 candidate — 2026-10-14
 
 **1.2.0-rc.7** implementation, guides and deterministic runtime archives are complete.

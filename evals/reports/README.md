@@ -4,7 +4,7 @@ Historical reports stay in Git. They are not consumer-package files. No evidence
 
 | Evidence | Applicable runtime / protocol | Status and limits |
 |---|---|---|
-| [Strengthened baseline start](review-v2-baseline-start.json) | unchanged v1.2 rc.7, protocol v2 | PENDING; 130 runs per host planned; no candidate certification |
+| [Strengthened baseline start](review-v2-baseline-start.json) | unchanged v1.2 rc.7, protocol v2 | INCOMPLETE; 130 runs per host planned; [progress](review-v2-baseline-progress.json); no candidate certification |
 | [v1.2 rc.7 readiness](release-candidate-1.2.0-rc.7.json) | v1.2 rc.7, original n=1 protocol | Scoped historical PASS; browser excluded; reference discovery unverified |
 | [ChatGPT v1.2](chatgpt-1.2.0-rc.7.json) / [Claude v1.2](claude-1.2.0-rc.7.json) | v1.2 rc.7, original preloaded n=1 | Actual responses, original configuration only |
 | [Judge error audit](semantic-review-1.2.0-rc.7.json) / [Timeout audit](claude-f-timeout-recovery-1.2.0-rc.7.json) | unchanged original subjects | Prior failure/error retained; independent reviews explicitly recorded |
@@ -16,3 +16,5 @@ For the chronology, original failed/incomplete records and observed native regre
 [review protocol](../../docs/review-improvement-protocol.md). Static/document lint and deterministic
 state/tool checks are separate from these actual-model responses. The new baseline is not complete
 until every planned run is present; failed/error/omitted runs cannot be relabeled PASS.
+
+[Partial ChatGPT](chatgpt-review-v2-baseline-partial.json) / [Partial Claude](claude-review-v2-baseline-partial.json) retain every completed/failed/error run when the Claude account limit stopped both routes. [Positioning failures](review-v2-baseline-quality-failures.json) and [debrief failure](review-v2-baseline-debrief-failure.json) retain manual observations. No candidate/runtime or acceptance criteria were changed.

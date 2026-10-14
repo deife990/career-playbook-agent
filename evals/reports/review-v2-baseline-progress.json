@@ -1,0 +1,41 @@
+{
+  "status": "INCOMPLETE_WITH_REAL_FAILURES",
+  "complete": false,
+  "blocking_condition": "Claude authenticated CLI account limit; cross-judge route also affected",
+  "provider_reset_message": "You've hit your limit · resets 4:50am (Asia/Seoul)",
+  "candidate_runtime_changed": false,
+  "planned_runs_per_host": 130,
+  "native_browser": "EXCLUDED_BY_USER",
+  "reference_discovery": "NOT_VERIFIED",
+  "platforms": {
+    "chatgpt": {
+      "counts": {
+        "PASS": 17,
+        "FAIL": 0,
+        "ERROR": 1
+      },
+      "completed_runs": 17,
+      "remaining_runs": 113,
+      "package_fingerprint": "93ebecbd059b848e5e7482a6b68e2d5a93c1cc9e811c1f4fc985e26cf0c40f9d",
+      "suite_fingerprint": "a24b18e47ed0ee3c0ba972cd08ab1265ce7a62d4a1d1b4617c49e2dda732ef3e",
+      "protocol_fingerprint": "4515ea6c278005b2221531e763dedefcd4512df25f19471a30c94982141453c9",
+      "report": "evals/reports/chatgpt-review-v2-baseline-partial.json",
+      "report_sha256": "c9449a0347e56cc508193806ba8a47741cbbe685b0d7577e964d1fd5eee17dbd"
+    },
+    "claude": {
+      "counts": {
+        "PASS": 17,
+        "FAIL": 3,
+        "ERROR": 1
+      },
+      "completed_runs": 20,
+      "remaining_runs": 110,
+      "package_fingerprint": "ac4ef67bab8b61f84671b4bf9c27147681aa3878ad763ff70d0024daf048a3ee",
+      "suite_fingerprint": "a24b18e47ed0ee3c0ba972cd08ab1265ce7a62d4a1d1b4617c49e2dda732ef3e",
+      "protocol_fingerprint": "4515ea6c278005b2221531e763dedefcd4512df25f19471a30c94982141453c9",
+      "report": "evals/reports/claude-review-v2-baseline-partial.json",
+      "report_sha256": "380980c585c2e3c2ba652edace3b3bfd407ecbe5839b7c1702f689e4323f2c1f"
+    }
+  },
+  "updated_at": "2026-10-14T15:58:45.659768+00:00"
+}
