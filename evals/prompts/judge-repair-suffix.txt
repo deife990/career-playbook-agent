@@ -1,0 +1,1 @@
+. For this fresh verdict use evidence_line instead of evidence_quote. Select an integer index from these numbered ACTUAL ASSISTANT LINES. Do not paraphrase or supply quotation text. Keep an independent decision for every unchanged assertion.
