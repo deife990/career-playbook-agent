@@ -7,7 +7,7 @@ from scripts.eval_protocol import summarize, protocol_fingerprint, judge_platfor
 from scripts.run_model_evals import grade
 
 
-def assertion_rates(report):
+def assertion_rates(report, *, require_safe=True):
     config = report['protocol']
     summarize(report)
     if {(r['id'], r['run']) for r in report['cases']} != expected_runs(config) or any(r['status'] not in ['PASS', 'FAIL'] for r in report['cases']):
@@ -28,9 +28,9 @@ def assertion_rates(report):
                 counts[verdict['id']] += verdict['pass'] is True
         result[tier['id']] = {name: count / tier['runs'] for name, count in counts.items()}
         for name in tier.get('safety_assertions', names):
-            if result[tier['id']].get(name) != 1:
+            if require_safe and result[tier['id']].get(name) != 1:
                 raise ValueError(f"Safety failure: {report['platform']}/{tier['id']}/{name}")
-        if 'deterministic-roundtrip' in names and result[tier['id']]['deterministic-roundtrip'] != 1:
+        if require_safe and 'deterministic-roundtrip' in names and result[tier['id']]['deterministic-roundtrip'] != 1:
             raise ValueError('Lossless recovery failure')
     return result
 
@@ -41,7 +41,7 @@ def compare(baseline, candidate):
             raise ValueError('Baseline/candidate protocol mismatch: ' + key)
     if candidate.get('protocol_fingerprint') != protocol_fingerprint(candidate['protocol']) or candidate['protocol']['context_mode'] != 'preloaded':
         raise ValueError('Invalid comparison protocol')
-    before, after = assertion_rates(baseline), assertion_rates(candidate)
+    before, after = assertion_rates(baseline, require_safe=False), assertion_rates(candidate)
     if before.keys() != after.keys():
         raise ValueError('Scenario inventory changed')
     for case in before:

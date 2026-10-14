@@ -143,3 +143,18 @@ def test_resume_retains_error_attempt_and_refuses_protocol_change(tmp_path,monke
     rows=json.loads((tmp_path/'claude.json').read_text())['cases']
     assert rows[0]['prior_attempts']==[{k:v for k,v in old.items() if k!='prior_attempts'}]
     assert (Path(old['attempt_path'])/'actual.stderr.txt').read_text()=='429 interrupted'
+
+
+def test_baseline_failure_is_preserved_but_never_relaxes_candidate_safety():
+    from copy import deepcopy
+    from scripts.compare_model_evals import compare
+    baseline=small_report();candidate=deepcopy(baseline)
+    baseline['cases'][0]['status']='FAIL'
+    baseline['cases'][0]['assertions'][0]['pass']=False
+    baseline['protocol']['scenarios'][0]['safety_assertions']=['unknown']
+    candidate['protocol']=deepcopy(baseline['protocol'])
+    for report in [baseline,candidate]:report['protocol_fingerprint']=protocol_fingerprint(report['protocol'])
+    assert compare(baseline,candidate)['status']=='PASS'
+    assert baseline['cases'][0]['status']=='FAIL'
+    candidate['cases'][0]['assertions'][0]['pass']=False;candidate['cases'][0]['status']='FAIL'
+    with pytest.raises(ValueError,match='Safety'):compare(baseline,candidate)
