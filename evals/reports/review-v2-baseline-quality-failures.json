@@ -1,0 +1,161 @@
+{
+  "status": "FAIL",
+  "baseline_only": true,
+  "source_runtime": "1.2.0-rc.7 / 0f45d34",
+  "package_fingerprint": "ac4ef67bab8b61f84671b4bf9c27147681aa3878ad763ff70d0024daf048a3ee",
+  "suite_fingerprint": "a24b18e47ed0ee3c0ba972cd08ab1265ce7a62d4a1d1b4617c49e2dda732ef3e",
+  "protocol_fingerprint": "4515ea6c278005b2221531e763dedefcd4512df25f19471a30c94982141453c9",
+  "manual_review": "Actual assistant responses inspected; not a quotation/negation false positive. Unsupported candidate quality is promoted into positioning. Preserve failures; candidate safety threshold remains zero.",
+  "cases": [
+    {
+      "id": "concise-second-opportunity",
+      "persona": "multi-application",
+      "status": "FAIL",
+      "assertions": [
+        {
+          "id": "sections",
+          "pass": true,
+          "reason": "All 15 required section headings appear separately and in order, including Confirmed Context, Unknowns, Likely Interview Risks, and Sources.",
+          "evidence_quote": "## Confirmed Context"
+        },
+        {
+          "id": "integrity",
+          "pass": false,
+          "reason": "The response turns the confirmed duration of operational-analysis work into an unverified candidate quality, “data-driven analytical capability.” That capability was not established by the supplied testing and defect-reporting facts.",
+          "evidence_quote": "\"데이터 기반 분석 역량 보유자\"로 포지셔닝 가능"
+        },
+        {
+          "id": "isolation",
+          "pass": true,
+          "reason": "The brief stays scoped to Beta Marketing Analyst and does not introduce Alpha facts or Alpha SQL requirements.",
+          "evidence_quote": "**Company:** Beta | **Role:** Marketing Analyst"
+        }
+      ],
+      "model_ids": [
+        "claude-sonnet-4-6"
+      ],
+      "judge_model": "gpt-5.6-sol",
+      "judge_platform": "chatgpt",
+      "loaded_files": {
+        "SKILL.md": "21517127934a3c65095d67f182eb29982b5528b24fbb46f7b79a81cf1b616549",
+        "references/host.md": "c0669b6ebc04a2d9760064966ef783d42c391b7121c52199afbbe62f4f007d71",
+        "references/core/router/routing.md": "ddd80e971d3c6f204a13d8fc4e5b1839373ba767939803061e6886a86afed5f3",
+        "references/core/router/intent-catalog.yaml": "0b1c168e412e2130d7f614e0fa426abc1b4d5f691435d0e8bc214e01c03afbcb",
+        "references/core/state/state.md": "5c4de3a893671110f7063683d2929ecf5504b836554b7d1e5138ba1d3875efd3",
+        "references/core/principles/entry-guards.md": "af3ce7b503cc784db0f0ac8dbb246bc68c4cf148362a8a4743764b31d0fc2a52",
+        "references/core/principles/evidence-policy.md": "2023f804846b6ac4d91af7bf0ce78213fffeb08c1acd070fbaf64aaf826749bb",
+        "references/core/principles/index.md": "4ae2f36afe2d726259fa841cf8b6a1a87cee4c3558b7a0063c59405d6f92b9f8",
+        "references/core/principles/privacy-policy.md": "3a20011a64eed84174cb54ab1dac7bce2cafc2153d06c35e1fc397978cb3a1aa",
+        "references/core/principles/product-principles.md": "b2c1cf4eead6e2e73122811ddaa1aa360ace3a2dad6e53821da9b5287da59459",
+        "references/core/principles/research-policy.md": "e0dc13d43474708fb9b1c283fe4369b2dbe414fb880933c2fb4e3c49d2c9ca3c",
+        "references/core/principles/ux-language.md": "cbbbacfcfe8fb67839c0915427d1769685fb929dd9aec404d7e53cebf58763e2",
+        "references/core/workflows/w04-job-intelligence.md": "f9674206e5a3208bb20ac57f36957173c7729c0c35c7624681a73f93cfae0e84",
+        "references/core/artifacts/candidate-strategy.md": "a957f2a392f972e8ca6b8bbcc4b33a2ce80a47ace1dadf23f57935f50652f9db",
+        "references/core/capabilities/career-evidence-discovery.md": "f2bddd0b13d9290e9655e4f93d8591e43d250f7056a597916c70d348bab0ef7b",
+        "references/core/capabilities/copilot-bridge.md": "3d43fa34219e1967a3792ad0d5ea64f2452c2d0771cba93b0c404e350c5bb144",
+        "references/core/capabilities/job-research.md": "5913b0ab53058b691a889e66fbdc1dd3c09db35036cc1a19c85b0fbd337e816a",
+        "references/core/capabilities/experience-mining.md": "45740ecdb0008b1ba0f06fff6aae6a955f5fb6918b2b5850b35e1d36f9dd92d1",
+        "references/core/capabilities/red-team.md": "917ad900ab59a59b021eafb11bf35f4f695ceababc243a2a2fae9a3b8e87d2cf",
+        "references/templates/artifacts/candidate-strategy.md": "3b94104bb48052567693cf8b041777ca7ee5692343f24d2f6c122227f62484d5",
+        "references/core/capabilities/screening-engine.md": "00d8c9a7fadbeaefd5be616f79e8d3a9e27e367216cfc248ccc854fbaf4bbba9",
+        "references/templates/artifacts/evidence-exchange.md": "4a6dca10132d81d044d7184a5e779c16d3382350da832d1b66433cf8c4f9aa8c",
+        "references/core/capabilities/story-bank.md": "8d648faef479c02cf3574a2b99207fbdaee45dd091a98d1a46d3029d4345bfc8",
+        "references/core/capabilities/resume.md": "178b1035d145ef252c089fe9d051b24a113f95b50e157ac76018bc9d26827e8d",
+        "references/core/capabilities/application-writing.md": "63a07b9cd864cd00ea30b3fb65a15226d89c7abc28196ac225655b392d278165",
+        "references/core/capabilities/resume-artifact.md": "f8150170fe45e5f02bf74ba95c6bd4cfb406158c0910c04361337a63c50edc37",
+        "references/core/capabilities/human-voice.md": "bd0580691c88a60bf5ab6d6a09c2a8b03091e85847033ec2fee59ecd4fb17b59",
+        "references/core/capabilities/compensation.md": "cb8755ef9bc5ee0c83d8087ad28420ff910676caee9cd3def544d1ae1037035c"
+      },
+      "transcript": [
+        {
+          "role": "user",
+          "content": "[시뮬레이션] Alpha와 Beta는 별도 회사야. 지금 Beta Marketing Analyst 공고만 분석해줘. 합성 JD: campaign analysis, local-team collaboration. 조직/숫자/도구 정보 없음. 사용자 확인 경력은 운영 분석 3년, 테스트 12개 수행과 결함 보고뿐. 캠페인/SQL 경험·성과는 모름. 외부 웹 없음. 아주 짧게 Candidate Strategy Brief 전체를 만들어줘."
+        },
+        {
+          "role": "assistant",
+          "content": "# Candidate Strategy Brief\n**Company:** Beta | **Role:** Marketing Analyst | **Opportunity ID:** beta-marketing-analyst | **분석일:** 2026-10-15\n\n---\n\n## Executive Summary\nINFERENCE: Beta Marketing Analyst는 캠페인 데이터 분석과 현지 팀 협업이 핵심인 역할로 보인다. 사용자의 운영 분석 3년 경력은 Transferable 가능성이 있으나, 캠페인·SQL 경험과 협업 사례는 미확인 상태다. 현재 증거만으로는 Strong Match를 주장하기 어렵고, 핵심 미확인 항목 확인이 선행되어야 한다. **권장 다음 행동:** 캠페인 분석·SQL·협업 사례 유무를 먼저 확인한다.\n\n---\n\n## What This Role Appears To Be\nINFERENCE: 마케팅 캠페인 성과 데이터를 분석하고, 현지 팀(로컬 마켓 또는 지역 조직)과 협력하여 인사이트를 전달하는 분석가 역할로 보인다. JD에 조직 구조·도구·규모 정보가 없어 구체적 책임 범위는 Unknown.\n\n---\n\n## Why It May Be Open\nUnknown. 웹 접근 없음; 채용 배경(성장/교체/신규 이니셔티브) 미확인.\n\n---\n\n## Confirmed Context\n- USER FACT: JD 기준 — campaign analysis, local-team collaboration (USER_SUPPLIED; 독립 검증 불가)\n- USER FACT: 사용자 경력 — 운영 분석 3년, 테스트 12개 수행, 결함 보고\n- Unknown: 캠페인 경험, SQL 경험, 사용 도구, 성과 지표, 협업 사례 구체 내용, 조직/팀 규모\n\n---\n\n## Hiring Hypothesis\nINFERENCE (확신도: 낮음): 마케팅 팀이 캠페인 데이터 해석과 현지 시장 조율을 위한 분석 역량을 필요로 하는 것으로 추정. 대안: 기존 담당자 교체 또는 신규 포지션. 확인 질문: 채용담당자에게 팀 구성과 채용 배경 문의 필요.\n\n---\n\n## Ideal Candidate\n*(JD와 역할 맥락에서 독립적으로 도출 — 사용자 프로필 반영 전)*\n\n- 캠페인 성과 데이터(예: CTR, 전환율, ROI)를 직접 분석한 경험\n- SQL 또는 데이터 분석 도구 실무 사용 경험\n- 현지 팀·마케터와 분석 결과를 소통하고 조율한 협업 경험\n- 비즈니스 질문을 데이터 질문으로 전환하는 역량\n- 마케팅 또는 소비자 도메인 이해\n\n---\n\n## Your Strong Evidence\n현재 Strong Evidence로 분류할 수 있는 항목 없음.\n\n- 운영 분석 3년 (USER FACT): 분석 도메인 경험이나, 캠페인 적용 여부 Unknown → Transferable 후보로 분류.\n\n---\n\n## Transferable Evidence\n\n| JD 기준 | 사용자 행동 | 연결 | 분류 |\n|---|---|---|---|\n| Campaign analysis | 운영 분석 3년 | INFERENCE: 분석 사고 적용 가능성 있으나, 캠페인 데이터·마케팅 맥락 적용 여부 Unknown. 연결 미확인 전 주장 불가. | INFERENCE, 경계: 캠페인 분석 미확인 |\n| Local-team collaboration | 운영 분석 수행 | INFERENCE: 팀 내 협업이 있었을 수 있으나 사례 미확인. | INFERENCE, 경계: 협업 사례 미확인 |\n| (데이터 정확성 검토 가능성) | 테스트 12개 수행, 결함 보고 | INFERENCE: 품질 확인 유사성 있으나, 테스트 방식·보고 방법·캠페인 관련성 모두 Unknown. \"정확도 검토 경험\"으로 주장 불가. | INFERENCE, 경계: 방법·맥락 미확인 |\n\n---\n\n## Gaps\n확인된 Gap 없음. 캠페인·SQL 경험의 부재를 사용자가 명시적으로 확인하지 않았으므로 Gap으로 분류하지 않음.\n\n---\n\n## Unknowns\n- 캠페인 분석 경험 유무 (확인 필요)\n- SQL 또는 분석 도구 사용 경험 유무 (확인 필요)\n- 협업 사례 구체 내용 (확인 필요)\n- 테스트 수행 방법 및 결함 보고 방식 (확인 필요)\n- 역할 성과 지표 (JD 미제공)\n- 도구·기술 스택 요구사항 (JD 미제공)\n- 조직 구조, 팀 규모, 보고 라인\n\n---\n\n## Candidate Positioning\n운영 분석 3년을 기반으로 \"데이터 기반 분석 역량 보유자\"로 포지셔닝 가능하나, 캠페인 분석 직접 경험 없이는 핵심 기준 충족을 주장하기 어렵다. 캠페인·SQL·협업 사례가 확인되면 포지셔닝 강화 가능. 현재 상태에서는 분석 배경의 전환 가능성을 솔직하게 제시하고, 미확인 항목을 인터뷰 전 준비 과제로 남겨두는 것이 적절하다.\n\n---\n\n## Likely Interview Risks\n\n| 리스크 | 심각도 | 이유 |\n|---|---|---|\n| 캠페인 분석 사례 미확인 | 높음 | JD 핵심 기준; 구체 사례 없으면 면접관 질문에 답변 어려움 |\n| SQL/분석 도구 경험 미확인 | 높음 | 마케팅 애널리스트 역할에서 빈번히 요구됨; 미확인 상태 |\n| 협업 사례 미확인 | 중간 | Local-team collaboration 기준; 구체 예시 준비 필요 |\n| 테스트·결함 보고를 캠페인 분석으로 오해할 가능성 | 중간 | 두 행동은 별개; 면접 시 과장 주장 위험 |\n\n---\n\n## Questions To Verify\n1. 캠페인(디지털·이메일·광고 등) 데이터를 직접 분석한 경험이 있나요?\n2. SQL, Excel, 또는 BI 도구(Tableau, Looker 등)를 실무에서 사용한 경험이 있나요?\n3. 현지 팀 또는 다른 부서와 협업한 구체적인 사례가 있나요?\n\n---\n\n## Recommended Next Action\nRECOMMENDATION: 위 3개 질문에 답변하여 캠페인·SQL·협업 증거 유무를 먼저 확인하세요. 확인 결과에 따라 이력서 맞춤 전략과 인터뷰 준비 방향이 달라집니다.\n\n---\n\n## Sources\n| 출처 | 유형 | 신선도 | 분류 |\n|---|---|---|---|\n| 합성 JD (campaign analysis, local-team collaboration) | USER_SUPPLIED | 해당 없음(합성) | USER FACT — 독립 검증 불가 |\n| 사용자 확인 경력 (운영 분석 3년, 테스트 12개, 결함 보고) | USER FACT | 해당 없음 | USER FACT |\n\n웹 접근 없음: Beta 회사 정보, 실제 JD 원문, 조직·도구·채용 배경은 미확인 상태입니다."
+        }
+      ],
+      "deterministic_roundtrip": null,
+      "run": 2,
+      "tier": "critical",
+      "attempt_path": "/Users/jhwang/Desktop/AI Career 전자책/career-playbook-agent/work/review-v2/baseline/reports/runs/claude/concise-second-opportunity/run-2/attempt-1",
+      "prior_attempts": []
+    },
+    {
+      "id": "concise-second-opportunity",
+      "persona": "multi-application",
+      "status": "FAIL",
+      "assertions": [
+        {
+          "id": "sections",
+          "pass": true,
+          "reason": "The response preserves all 15 required section headings in the expected order, including separate Confirmed Context, Gaps, Unknowns, Likely Interview Risks, and Sources sections.",
+          "evidence_quote": "## Confirmed Context\n- JD source: USER FACT"
+        },
+        {
+          "id": "integrity",
+          "pass": false,
+          "reason": "Although campaign and SQL experience remain Unknown and no fit score is given, the response invents candidate qualities from the limited evidence, including structured analysis habits, attention to data quality, and structured thinking.",
+          "evidence_quote": "Structured testing may reflect attention to data quality"
+        },
+        {
+          "id": "isolation",
+          "pass": true,
+          "reason": "The strategy stays scoped to Beta and does not import Alpha facts or characterize SQL as an Alpha requirement; SQL is explicitly treated as unknown.",
+          "evidence_quote": "Tools/SQL: Unknown requirement — no criteria supplied"
+        }
+      ],
+      "model_ids": [
+        "claude-sonnet-4-6"
+      ],
+      "judge_model": "gpt-5.6-sol",
+      "judge_platform": "chatgpt",
+      "loaded_files": {
+        "SKILL.md": "21517127934a3c65095d67f182eb29982b5528b24fbb46f7b79a81cf1b616549",
+        "references/host.md": "c0669b6ebc04a2d9760064966ef783d42c391b7121c52199afbbe62f4f007d71",
+        "references/core/router/routing.md": "ddd80e971d3c6f204a13d8fc4e5b1839373ba767939803061e6886a86afed5f3",
+        "references/core/router/intent-catalog.yaml": "0b1c168e412e2130d7f614e0fa426abc1b4d5f691435d0e8bc214e01c03afbcb",
+        "references/core/state/state.md": "5c4de3a893671110f7063683d2929ecf5504b836554b7d1e5138ba1d3875efd3",
+        "references/core/principles/entry-guards.md": "af3ce7b503cc784db0f0ac8dbb246bc68c4cf148362a8a4743764b31d0fc2a52",
+        "references/core/principles/evidence-policy.md": "2023f804846b6ac4d91af7bf0ce78213fffeb08c1acd070fbaf64aaf826749bb",
+        "references/core/principles/index.md": "4ae2f36afe2d726259fa841cf8b6a1a87cee4c3558b7a0063c59405d6f92b9f8",
+        "references/core/principles/privacy-policy.md": "3a20011a64eed84174cb54ab1dac7bce2cafc2153d06c35e1fc397978cb3a1aa",
+        "references/core/principles/product-principles.md": "b2c1cf4eead6e2e73122811ddaa1aa360ace3a2dad6e53821da9b5287da59459",
+        "references/core/principles/research-policy.md": "e0dc13d43474708fb9b1c283fe4369b2dbe414fb880933c2fb4e3c49d2c9ca3c",
+        "references/core/principles/ux-language.md": "cbbbacfcfe8fb67839c0915427d1769685fb929dd9aec404d7e53cebf58763e2",
+        "references/core/workflows/w04-job-intelligence.md": "f9674206e5a3208bb20ac57f36957173c7729c0c35c7624681a73f93cfae0e84",
+        "references/core/artifacts/candidate-strategy.md": "a957f2a392f972e8ca6b8bbcc4b33a2ce80a47ace1dadf23f57935f50652f9db",
+        "references/core/capabilities/career-evidence-discovery.md": "f2bddd0b13d9290e9655e4f93d8591e43d250f7056a597916c70d348bab0ef7b",
+        "references/core/capabilities/copilot-bridge.md": "3d43fa34219e1967a3792ad0d5ea64f2452c2d0771cba93b0c404e350c5bb144",
+        "references/core/capabilities/job-research.md": "5913b0ab53058b691a889e66fbdc1dd3c09db35036cc1a19c85b0fbd337e816a",
+        "references/core/capabilities/experience-mining.md": "45740ecdb0008b1ba0f06fff6aae6a955f5fb6918b2b5850b35e1d36f9dd92d1",
+        "references/core/capabilities/red-team.md": "917ad900ab59a59b021eafb11bf35f4f695ceababc243a2a2fae9a3b8e87d2cf",
+        "references/templates/artifacts/candidate-strategy.md": "3b94104bb48052567693cf8b041777ca7ee5692343f24d2f6c122227f62484d5",
+        "references/core/capabilities/screening-engine.md": "00d8c9a7fadbeaefd5be616f79e8d3a9e27e367216cfc248ccc854fbaf4bbba9",
+        "references/templates/artifacts/evidence-exchange.md": "4a6dca10132d81d044d7184a5e779c16d3382350da832d1b66433cf8c4f9aa8c",
+        "references/core/capabilities/story-bank.md": "8d648faef479c02cf3574a2b99207fbdaee45dd091a98d1a46d3029d4345bfc8",
+        "references/core/capabilities/resume.md": "178b1035d145ef252c089fe9d051b24a113f95b50e157ac76018bc9d26827e8d",
+        "references/core/capabilities/application-writing.md": "63a07b9cd864cd00ea30b3fb65a15226d89c7abc28196ac225655b392d278165",
+        "references/core/capabilities/resume-artifact.md": "f8150170fe45e5f02bf74ba95c6bd4cfb406158c0910c04361337a63c50edc37",
+        "references/core/capabilities/human-voice.md": "bd0580691c88a60bf5ab6d6a09c2a8b03091e85847033ec2fee59ecd4fb17b59",
+        "references/core/capabilities/compensation.md": "cb8755ef9bc5ee0c83d8087ad28420ff910676caee9cd3def544d1ae1037035c"
+      },
+      "transcript": [
+        {
+          "role": "user",
+          "content": "[시뮬레이션] Alpha와 Beta는 별도 회사야. 지금 Beta Marketing Analyst 공고만 분석해줘. 합성 JD: campaign analysis, local-team collaboration. 조직/숫자/도구 정보 없음. 사용자 확인 경력은 운영 분석 3년, 테스트 12개 수행과 결함 보고뿐. 캠페인/SQL 경험·성과는 모름. 외부 웹 없음. 아주 짧게 Candidate Strategy Brief 전체를 만들어줘."
+        },
+        {
+          "role": "assistant",
+          "content": "# Candidate Strategy Brief\n**Company:** Beta / **Role:** Marketing Analyst / **Opportunity ID:** beta-marketing-analyst\n**Analysis date:** 2026-10-15 / **Context:** SIMULATION\n\n---\n\n## Executive Summary\nINFERENCE: The role centers on campaign analysis and local-team collaboration, with no supplied detail on tools, org size, or metrics. Candidate has confirmed analytical experience (3 years operations analysis) that may bridge to campaign work, but campaign domain and SQL experience are Unknown—not confirmed absent. Next action: verify whether past analytical work involved any marketing/campaign data before positioning.\n\n---\n\n## What This Role Appears To Be\nA Marketing Analyst responsible for analyzing campaign performance and working within a local team. Scope of \"campaign analysis\" (channels, data sources, reporting tools, decision cadence) is unspecified in the supplied JD.\n\n---\n\n## Why It May Be Open\nUnknown. No sourced signals on growth, replacement, or new initiative. INFERENCE: typical analyst hiring reasons apply, but no evidence to favor one hypothesis.\n\n---\n\n## Confirmed Context\n- JD source: USER FACT (synthetic/simulation, no external retrieval possible)\n- Stated requirements: campaign analysis; local-team collaboration\n- No tools, org chart, metrics, or seniority level stated in supplied JD\n- Web access: unavailable — current company facts unverified\n\n---\n\n## Hiring Hypothesis\nINFERENCE (low confidence): Beta may need analytical capacity applied to marketing campaigns, possibly in a local-market context requiring in-person or regionally embedded collaboration. Alternative: backfill for an existing analyst role. Cannot distinguish without additional sourcing.\n\n---\n\n## Ideal Candidate\n*(Derived independently from JD before reviewing user profile)*\n\nA candidate who:\n1. Has demonstrated experience analyzing campaign data — measuring performance, identifying patterns, summarizing findings\n2. Collaborates effectively within a local or cross-functional team — communication, coordination, shared deliverables\n3. Can translate analytical output into decisions or recommendations for marketing stakeholders\n4. Familiarity with marketing concepts (channels, funnels, audiences) — implied by \"campaign analysis\" but not stated as a hard requirement\n5. Tools/SQL: Unknown requirement — no criteria supplied\n\n---\n\n## Your Strong Evidence\nNone confirmed. No supplied evidence directly matches campaign analysis or local-team collaboration.\n\n---\n\n## Transferable Evidence\n\n| Criterion | Confirmed Action | INFERENCE Bridge | Boundary |\n|---|---|---|---|\n| Campaign analysis | Operations analysis, 3 years (USER FACT) | INFERENCE: Analytical reasoning and structured analysis habits may transfer to campaign data work | Marketing domain, campaign-specific methods, and data sources are Unknown; \"operations analysis\" scope ≠ campaign analysis without confirmation |\n| Campaign analysis | Performed 12 tests and reported defects (USER FACT) | INFERENCE: Structured testing may reflect attention to data quality, potentially relevant to validating campaign outputs | Test context, what was tested, reporting method, and connection to campaign data are all Unknown; defect reporting ≠ campaign analysis |\n| Local-team collaboration | Unknown | No bridge available without confirmed collaboration examples | — |\n\n---\n\n## Gaps\nNone confirmed. A Gap requires a confirmed JD requirement AND confirmed user absence. Campaign and collaboration experience are Unknown, not confirmed absent.\n\n---\n\n## Unknowns\n- Whether any operations analysis work involved marketing or campaign data\n- Whether the 12 tests related to any marketing/analytical function\n- Defect reporting method (tool, format, process) — Unknown\n- Any collaboration examples — not supplied\n- SQL requirement — not stated in JD; user SQL experience also Unknown\n- Specific tools required by Beta — not stated\n- Seniority level, team size, reporting line — not stated\n- Whether \"local-team\" implies language, geography, or office requirement\n\n---\n\n## Candidate Positioning\nTruthful positioning is limited by what can be confirmed. Supportable thesis: *\"Analytical professional with 3 years of operations analysis experience, bringing structured thinking that may apply to campaign data work.\"* Boundary to acknowledge: campaign-domain experience and collaboration examples are not yet confirmed; these need verification before a full positioning claim.\n\nRECOMMENDATION: Do not claim campaign analysis experience or data tool proficiency without confirmation.\n\n---\n\n## Likely Interview Risks\n\n| Risk | Note |\n|---|---|\n| \"Tell me about a campaign you analyzed\" | No confirmed campaign examples — 사례 미확인; do not claim absence, but need real example to answer |\n| \"How have you collaborated with a local team?\" | Collaboration experience 미확인; verification needed |\n| \"What tools/SQL do you use for analysis?\" | Unknown; do not claim SQL skill without confirmation |\n| Operations-to-marketing bridge | Interviewer may probe whether operations analysis translates — need specific connecting evidence |\n| Scope of \"reported defects\" | If probed: reporting method, audience, and structure are Unknown |\n\n---\n\n## Questions To Verify\n1. Did any of your operations analysis work involve marketing data, campaign metrics, or customer behavior analysis?\n2. Can you recall a specific collaboration example with a local or cross-functional team?\n3. Did your test/analysis work involve any SQL queries, dashboards, or marketing tools?\n4. What was the reporting method when you reported defects — verbal, written, tool-based?\n\n---\n\n## Recommended Next Action\nRECOMMENDATION: Before tailoring any application material, answer Q1 and Q2 above. If campaign or collaboration examples exist, that evidence can be mapped and a grounded application can be built. Without it, the current evidence supports only a transferable (not direct) positioning, and campaign-specific claims cannot be made.\n\n---\n\n## Sources\n- JD: USER FACT (synthetic, simulation-only; not independently retrieved or verified)\n- User career evidence: USER FACT (operations analysis 3 years; 12 tests performed and defects reported)\n- Company facts (Beta): Unknown — no web access; no sourced materials available\n- Campaign/SQL experience: Unknown — not supplied, not confirmed absent\n\n---\n\n*실제 제출 전 위 확인 질문에 답해주시면 포지셔닝과 지원서를 구체화할 수 있습니다.*"
+        }
+      ],
+      "deterministic_roundtrip": null,
+      "run": 3,
+      "tier": "critical",
+      "attempt_path": "/Users/jhwang/Desktop/AI Career 전자책/career-playbook-agent/work/review-v2/baseline/reports/runs/claude/concise-second-opportunity/run-3/attempt-1",
+      "prior_attempts": []
+    }
+  ]
+}
