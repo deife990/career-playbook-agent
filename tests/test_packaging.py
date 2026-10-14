@@ -52,6 +52,13 @@ def test_failed_actual_assertion_cannot_hide_under_pass_header(tmp_path,monkeypa
     definition={'id':'case','assertions':{'scope':'Preserve company isolation'}}
     text=yaml.safe_dump(definition);(cases/'case.yaml').write_text(text)
     report={'platform':'chatgpt','status':'PASS','package_fingerprint':'current','suite_fingerprint':readiness.suite_fingerprint([cases/'case.yaml'],tmp_path),'cases':[{'id':'case','status':'PASS','model_ids':['actual-model'],'judge_model':'judge','assertions':[{'id':'scope','pass':False,'reason':'leaked company','evidence_quote':'Beta'}],'transcript':[{'role':'assistant','content':'Beta'}]}]}
+    from scripts.eval_protocol import protocol, protocol_fingerprint
+    policy={'scenarios':[{'id':'case','runs':1,'judge':'same','tier':'standard'}]}
+    (tmp_path/'evals/tier-policy.json').write_text(json.dumps(policy))
+    config=protocol(tmp_path)
+    report.update(protocol=config,protocol_fingerprint=protocol_fingerprint(config))
+    report['cases'][0].update(run=1,judge_platform='chatgpt',loaded_files={'SKILL.md':'hash'})
+    report['suite_fingerprint']=readiness.suite_fingerprint([cases/'case.yaml'],tmp_path)
     monkeypatch.setattr(readiness,'ROOT',tmp_path)
     monkeypatch.setattr(readiness,'generate',lambda platform:tmp_path)
     monkeypatch.setattr(readiness,'fingerprint',lambda root:'current')

@@ -1,3 +1,11 @@
+# Review improvement gate — 2026-10-15
+
+Protocol v2 tooling passes 201 structural/deterministic tests and static checks. C's strengthened
+baseline and D/E/F runtime changes are pending. The rc.7 evidence below describes its original
+n=1 protocol; it does not certify protocol v2 or a future rc.8. New readiness rejects missing
+repetitions, wrong judge routing, changed prompts/configuration and failed assertions.
+[Preregistered criteria](review-improvement-protocol.md).
+
 # Current v1.2 candidate — 2026-10-14
 
 **1.2.0-rc.7** implementation, guides and deterministic runtime archives are complete.

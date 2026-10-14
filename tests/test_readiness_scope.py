@@ -13,9 +13,13 @@ def scoped_reports(tmp_path,monkeypatch):
            'excluded_checks':['native_browser'],'evidence_path':'instruction.md',
            'package_fingerprints':{'chatgpt':'digest','claude':'digest'}}
     scope_path=tmp_path/'scope.json';scope_path.write_text(json.dumps(scope))
+    from scripts.eval_protocol import protocol, protocol_fingerprint
+    (tmp_path/'evals/tier-policy.json').write_text(json.dumps({'scenarios':[{'id':'case','runs':1,'tier':'standard','judge':'same'}]}))
+    config=protocol(tmp_path)
     reports={host:{'platform':host,'status':'PASS','package_fingerprint':'digest',
+        'protocol':config,'protocol_fingerprint':protocol_fingerprint(config),
         'suite_fingerprint':readiness.suite_fingerprint([cases/'case.yaml'],tmp_path),
-        'cases':[{'id':'case','status':'PASS','model_ids':['actual-model'],'judge_model':'judge',
+        'cases':[{'id':'case','run':1,'judge_platform':host,'loaded_files':{'SKILL.md':'hash'},'status':'PASS','model_ids':['actual-model'],'judge_model':'judge',
             'assertions':[{'id':'truth','pass':True,'reason':'No invention','evidence_quote':'Unknown'}],
             'transcript':[{'role':'assistant','content':'Unknown'}]}]} for host in ['chatgpt','claude']}
     original_load=readiness.load

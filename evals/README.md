@@ -28,3 +28,26 @@ that runner. PR code never runs on the authenticated runner. The release job req
 matching VERSION plus current model evidence and observed native signoffs; a disabled runner
 or missing evidence cannot publish a release. These are developer release tools, not runtime
 installation requirements for CareerPilot users.
+
+## Protocol v2 (review improvement)
+
+[Preregistered tiers and acceptance](../docs/review-improvement-protocol.md) were committed before
+baseline results. Defaults: 41 critical scenarios × 3 independent subject runs with cross-platform
+judges, 7 standard scenarios × 1 run. Every assertion failure still blocks release. Rates use planned
+run counts; omitted/errors do not disappear from denominators. Preloaded references do not test
+reference discovery. `--context entry-only` is diagnostic only; it cannot satisfy readiness.
+
+```bash
+python -m scripts.run_model_evals --platform chatgpt --report-dir work/review-baseline
+python -m scripts.run_model_evals --platform claude --report-dir work/review-baseline
+# Resume only the exact same package/suite/protocol; completed subjects survive judge interruption.
+python -m scripts.run_model_evals --platform chatgpt --report-dir work/review-baseline --resume
+```
+
+`--runs 1`, `--judge same|cross`, `--scenario ID` support isolated diagnostics; nondefault or incomplete
+protocols cannot satisfy the default release gate. `--package-root PATH` reads a frozen package.
+Choose a new output directory for a new experiment. A non-resume invocation refuses existing reports.
+Every run has an attempt directory; prior ERROR logs and completed transcripts survive resume.
+PASS/FAIL runs are not replaced. Fingerprints bind prompt assets, harness/protocol source, tiers,
+scenario/persona/seed data and effective configuration. Model IDs and judge platform are recorded.
+Historical rc.7 reports retain their old protocol and cannot certify changes under protocol v2.

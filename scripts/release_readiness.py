@@ -46,15 +46,9 @@ def check(*,native_exclusion=None):
         report=load(ROOT/f'dist/evals/{platform}.json')
         if report.get('platform')!=platform or report.get('status')!='PASS' or report.get('package_fingerprint')!=digest or report.get('suite_fingerprint')!=suite:
             raise ValueError(f'{platform}: missing/failed/stale model eval')
-        rows=report.get('cases',[])
-        if len(rows)!=len(expected) or {r['id'] for r in rows}!=expected or any(r['status']!='PASS' or not r.get('model_ids') or not r.get('judge_model') for r in rows):
-            raise ValueError(f'{platform}: incomplete actual model evidence')
+        from scripts.eval_protocol import validate_report, protocol
         definitions={yaml.safe_load(p.read_text())['id']:yaml.safe_load(p.read_text()) for p in cases}
-        for row in rows:
-            case=definitions[row['id']]
-            verdicts=grade(case['assertions'],json.dumps({'assertions':[r for r in row['assertions'] if r['id']!='deterministic-roundtrip']}),row['transcript'])
-            if any(r['pass'] is not True for r in verdicts): raise ValueError(f'{platform}: failed assertion under passing header')
-            if case.get('context_fixture') and row.get('deterministic_roundtrip') is not True: raise ValueError(f'{platform}: failed lossless roundtrip')
+        validate_report(report,platform,digest,suite,definitions,config=protocol(ROOT))
         if scope: continue
         observation=native['platforms'][platform]
         if observation.get('package_fingerprint')!=digest or not observation.get('observer') or not observation.get('surface'):

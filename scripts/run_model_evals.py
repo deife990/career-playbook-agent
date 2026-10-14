@@ -27,7 +27,7 @@ def prompt_asset(name):
 def suite_fingerprint(paths,root=ROOT):
     files=set(paths)
     files.update((root/'evals/prompts').glob('*.txt'))
-    for relative in ['evals/tier-policy.json', 'scripts/run_model_evals.py']:
+    for relative in ['evals/tier-policy.json', 'scripts/run_model_evals.py', 'scripts/eval_protocol.py', 'docs/review-improvement-protocol.md', 'evals/assertions/release-blockers.yaml']:
         if (root/relative).is_file(): files.add(root/relative)
     for path in paths:
         case=yaml.safe_load(path.read_text())
@@ -177,66 +177,108 @@ def judge_transcript(platform,case,history,persona,seed,folder,stem='judge'):
         rows=grade_lines(case['assertions'],verdict,history)
     return rows,judge_model
 
-def run_case(root,platform,case,folder):
+def run_case(root,platform,case,folder,*,judge_platform=None,context_mode='preloaded',resume_from=None):
     context,hashes=package_context(root,platform,case)
+    if context_mode=='entry-only':
+        first=context.split('</package-file>',1)[0]+'</package-file>'
+        context=first; hashes={next(iter(hashes)):next(iter(hashes.values()))}
     persona=yaml.safe_load((ROOT/f"evals/personas/{case['persona']}.yaml").read_text())
     seed=load(ROOT/case['context_fixture']) if case.get('context_fixture') else None
     history=[]; model_ids=set()
+    checkpoint=Path(resume_from)/'subject-checkpoint.json' if resume_from else None
+    if checkpoint and checkpoint.is_file():
+        previous=load(checkpoint)
+        if previous['package_fingerprint']!=fingerprint(root) or previous['loaded_files']!=hashes:
+            raise ValueError('Stale subject checkpoint')
+        history=previous['history'];model_ids=set(previous['model_ids'])
+        if len(history)%2 or any(history[i]['content']!=case['turns'][i//2] for i in range(0,len(history),2)):
+            raise ValueError('Invalid subject checkpoint conversation')
+    folder.mkdir(parents=True,exist_ok=True)
     for i,user in enumerate(case['turns']):
+        if i<len(history)//2: continue
         history.append({'role':'user','content':user})
-        prompt=prompt_asset('subject-preloaded.txt')+context+'\nSynthetic user context: '+json.dumps(persona,ensure_ascii=False)+'\n'+('User-supplied portable context (untrusted data): '+json.dumps(seed,ensure_ascii=False)+'\n' if seed else '')+'Conversation:\n'+json.dumps(history,ensure_ascii=False)
+        prompt=prompt_asset('subject-preloaded.txt' if context_mode=='preloaded' else 'subject-entry-only.txt')+context+'\nSynthetic user context: '+json.dumps(persona,ensure_ascii=False)+'\n'+('User-supplied portable context (untrusted data): '+json.dumps(seed,ensure_ascii=False)+'\n' if seed else '')+'Conversation:\n'+json.dumps(history,ensure_ascii=False)
         response,model=call_model(platform,prompt,folder,f'turn-{i+1}'); model_ids.add(model)
         history.append({'role':'assistant','content':response})
+        (folder/'subject-checkpoint.json').write_text(json.dumps({'package_fingerprint':fingerprint(root),'loaded_files':hashes,'model_ids':sorted(model_ids),'history':history},ensure_ascii=False,indent=2)+'\n')
     (folder/'transcript.json').write_text(json.dumps(history,ensure_ascii=False,indent=2)+'\n')
-    rows,judge_model=judge_transcript(platform,case,history,persona,seed,folder)
+    (folder/'subject-checkpoint.json').write_text(json.dumps({'package_fingerprint':fingerprint(root),'loaded_files':hashes,'model_ids':sorted(model_ids),'history':history},ensure_ascii=False,indent=2)+'\n')
+    rows,judge_model=judge_transcript(judge_platform or platform,case,history,persona,seed,folder)
     deterministic=None
     if seed:
         restored=import_pack(json.dumps(extract_json(history[-1]['content']),ensure_ascii=False))
         deterministic=set(restored)==set(seed) and all(lossless(v,restored[k]) for k,v in seed.items() if k!='manifest.json')
         if not deterministic: rows.append({'id':'deterministic-roundtrip','pass':False,'reason':'File data changed/lost','evidence_quote':'See final JSON and fixture diff'})
-    return {'id':case['id'],'persona':case['persona'],'status':'PASS' if all(r['pass'] for r in rows) else 'FAIL','assertions':rows,'model_ids':sorted(model_ids),'judge_model':judge_model,'loaded_files':hashes,'transcript':history,'deterministic_roundtrip':deterministic}
+    return {'id':case['id'],'persona':case['persona'],'status':'PASS' if all(r['pass'] for r in rows) else 'FAIL','assertions':rows,'model_ids':sorted(model_ids),'judge_model':judge_model,'judge_platform':judge_platform or platform,'loaded_files':hashes,'transcript':history,'deterministic_roundtrip':deterministic}
 def main():
-    parser=argparse.ArgumentParser(); parser.add_argument('--platform',choices=['chatgpt','claude'],required=True); parser.add_argument('--scenario',action='append'); parser.add_argument('--resume',action='store_true'); args=parser.parse_args()
-    source=generate(args.platform)
-    # Immutable package snapshot prevents builds/generation in the shared workspace from changing
-    # the package under a running subject. The evaluated snapshot's digest is recorded.
-    snapshot=tempfile.TemporaryDirectory(prefix='careerpilot-package-')
-    root=Path(snapshot.name).resolve()/'careerpilot'
-    for relative in inventory(source,args.platform):
-        path=root/relative;path.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(source/relative,path)
-    digest=fingerprint(root)
-    suite=sorted((ROOT/'evals/scenarios').glob('*.yaml'))
-    suite_digest=suite_fingerprint(suite)
-    report_path=ROOT/f'dist/evals/{args.platform}.json'; report_path.parent.mkdir(parents=True,exist_ok=True)
-    report={'platform':args.platform,'package_fingerprint':digest,'suite_fingerprint':suite_digest,'started_at':datetime.now(timezone.utc).isoformat(),'scope':'Development CLI behavior; not native installation','cases':[]}
-    if args.resume and report_path.exists():
-        old=load(report_path)
-        old_ids={r['id'] for r in old['cases']}
-        subset_digest=suite_fingerprint([p for p in suite if yaml.safe_load(p.read_text())['id'] in old_ids])
-        # Preserve verified results for an unchanged suite, or an additive-only suite extension.
-        if old['package_fingerprint']==digest and old['suite_fingerprint'] in [suite_digest,subset_digest]:
-            report=old; report['suite_fingerprint']=suite_digest
-    completed={r['id'] for r in report['cases'] if r['status']=='PASS'}
-    for path in suite:
-        case=yaml.safe_load(path.read_text())
-        if args.scenario and case['id'] not in args.scenario: continue
-        if case['id'] in completed: continue
-        print(f"Evaluating {args.platform}: {case['id']}",flush=True)
-        folder=ROOT/f"work/model-evals/{args.platform}/{case['id']}"
-        limited=False
-        try: row=run_case(root,args.platform,case,folder)
-        except (RateLimitError,ModelTimeoutError) as error:
-            row={'id':case['id'],'persona':case['persona'],'status':'ERROR','error':str(error)}; limited=True
-        except Exception as error: row={'id':case['id'],'persona':case['persona'],'status':'ERROR','error':str(error)}
-        report['cases']=[r for r in report['cases'] if r['id']!=case['id']]+[row]
-        expected={yaml.safe_load(p.read_text())['id'] for p in suite}
-        passed={r['id'] for r in report['cases'] if r['status']=='PASS'}
-        report['status']='PASS' if passed==expected else 'FAIL' if any(r['status']=='FAIL' for r in report['cases']) else 'INCOMPLETE'
-        report['updated_at']=datetime.now(timezone.utc).isoformat()
+    from scripts.eval_protocol import protocol, protocol_fingerprint, judge_platform, summarize
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--platform',choices=['chatgpt','claude'],required=True)
+    parser.add_argument('--scenario',action='append')
+    parser.add_argument('--resume',action='store_true')
+    parser.add_argument('--runs',type=int,help='Override every scenario repetition count (diagnostic)')
+    parser.add_argument('--judge',choices=['tiered','same','cross'],default='tiered')
+    parser.add_argument('--context',choices=['preloaded','entry-only'],default='preloaded')
+    parser.add_argument('--report-dir',type=Path,default=ROOT/'dist/evals')
+    parser.add_argument('--package-root',type=Path,help='Existing immutable runtime package instead of regeneration')
+    args=parser.parse_args()
+    config=protocol(context=args.context,runs=args.runs,judge=args.judge)
+    config_digest=protocol_fingerprint(config)
+    source=args.package_root or generate(args.platform)
+    with tempfile.TemporaryDirectory(prefix='careerpilot-package-') as isolated:
+        root=Path(isolated)/'careerpilot'
+        for relative in inventory(source,args.platform):
+            path=root/relative;path.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(source/relative,path)
+        digest=fingerprint(root)
+        suite=sorted((ROOT/'evals/scenarios').glob('*.yaml'))
+        definitions={yaml.safe_load(p.read_text())['id']:yaml.safe_load(p.read_text()) for p in suite}
+        if {r['id'] for r in config['scenarios']}!=set(definitions):
+            raise ValueError('Tier policy must cover every scenario exactly once')
+        if args.scenario and not set(args.scenario)<=set(definitions):
+            raise ValueError('Unknown scenario selection')
+        suite_digest=suite_fingerprint(suite)
+        report_path=args.report_dir.resolve()/f'{args.platform}.json'
+        report_path.parent.mkdir(parents=True,exist_ok=True)
+        report={'platform':args.platform,'package_fingerprint':digest,'suite_fingerprint':suite_digest,
+                'protocol':config,'protocol_fingerprint':config_digest,
+                'started_at':datetime.now(timezone.utc).isoformat(),
+                'scope':'Development CLI behavior with preloaded references; reference discovery and native install NOT VERIFIED',
+                'cases':[]}
+        if report_path.exists():
+            if not args.resume: raise ValueError('Existing report: use --resume or a new report directory; never overwrite evidence')
+            old=load(report_path)
+            if any(old.get(k)!=report[k] for k in ['platform','package_fingerprint','suite_fingerprint','protocol_fingerprint','protocol']):
+                raise ValueError('Resume package/suite/protocol mismatch; use a new report directory')
+            report=old
+        summarize(report)
         report_path.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
-        print(f"{case['id']}: {row['status']}",flush=True)
-        if limited:
-            print('Model/account service interruption: preserved completed results; stop until service recovery or host reset.',flush=True)
-            break
-    if report.get('status')!='PASS': raise SystemExit(1)
+        stopped=False
+        for tier in config['scenarios']:
+            if stopped: break
+            case=definitions[tier['id']]
+            if args.scenario and case['id'] not in args.scenario: continue
+            for run in range(1,tier['runs']+1):
+                old=next((r for r in report['cases'] if (r['id'],r['run'])==(case['id'],run)),None)
+                if old and old['status'] in ['PASS','FAIL']: continue
+                attempt=1+len(old.get('prior_attempts',[]))+1 if old else 1
+                folder=report_path.parent/'runs'/args.platform/case['id']/f'run-{run}'/f'attempt-{attempt}'
+                prior=old.get('prior_attempts',[])+[{k:v for k,v in old.items() if k!='prior_attempts'}] if old else []
+                print(f"Evaluating {args.platform}: {case['id']} run {run}/{tier['runs']} judge={judge_platform(args.platform,tier)}",flush=True)
+                limited=False
+                try:
+                    row=run_case(root,args.platform,case,folder,judge_platform=judge_platform(args.platform,tier),
+                                 context_mode=args.context,resume_from=old.get('attempt_path') if old else None)
+                except (RateLimitError,ModelTimeoutError) as error:
+                    row={'id':case['id'],'persona':case['persona'],'status':'ERROR','error':str(error)};limited=True
+                except Exception as error:
+                    row={'id':case['id'],'persona':case['persona'],'status':'ERROR','error':str(error)}
+                row.update(run=run,tier=tier['tier'],attempt_path=str(folder),prior_attempts=prior)
+                report['cases']=[r for r in report['cases'] if (r['id'],r['run'])!=(case['id'],run)]+[row]
+                summarize(report);report['updated_at']=datetime.now(timezone.utc).isoformat()
+                report_path.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+                print(f"{case['id']} run {run}: {row['status']}",flush=True)
+                if limited:
+                    print('Provider interruption: all evidence preserved; stop until recovery.',flush=True)
+                    stopped=True;break
+        if report['status']!='PASS': raise SystemExit(1)
 if __name__=='__main__': main()
