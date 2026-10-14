@@ -1,0 +1,347 @@
+{
+  "protocol_version": 2,
+  "context_mode": "preloaded",
+  "reference_discovery_verified": false,
+  "classification_basis": [
+    "evals/assertions/release-blockers.yaml",
+    "DECISIONS.md"
+  ],
+  "scenarios": [
+    {
+      "id": "application-optional-assets",
+      "tier": "critical",
+      "runs": 3,
+      "judge": "cross",
+      "rationale": "Direct fabrication, factual provenance, company isolation or immutable-history boundary; release-blockers, D021, D024, D028–D034."
+    },
+    {
+      "id": "bare-action-resume",
+      "tier": "critical",
+      "runs": 3,
+      "judge": "cross",
+      "rationale": "Direct fabrication, factual provenance, company isolation or immutable-history boundary; release-blockers, D021, D024, D028–D034."
+    },
+    {
+      "id": "concise-second-opportunity",
+      "tier": "critical",
+      "runs": 3,
+      "judge": "cross",
+      "rationale": "Direct fabrication, factual provenance, company isolation or immutable-history boundary; release-blockers, D021, D024, D028–D034."
+    },
+    {
+      "id": "context-model-roundtrip",
+      "tier": "critical",
+      "runs": 3,
+      "judge": "cross",
+      "rationale": "broken-context-roundtrip; D011, D025, D029, D034."
+    },
+    {
+      "id": "context-v12-model-roundtrip",
+      "tier": "critical",
+      "runs": 3,
+      "judge": "cross",
+      "rationale": "broken-context-roundtrip; D011, D025, D029, D034."
+    },
+    {
+      "id": "debrief-first",
+      "tier": "critical",
+      "runs": 3,
+      "judge": "cross",
+      "rationale": "debrief-data-loss and unconfirmed promotion; D034."
+    },
+    {
+      "id": "discovery-history-unknown",
+      "tier": "critical",
+      "runs": 3,
+      "judge": "cross",
+      "rationale": "unverified-fact / resume-evidence-inconsistency; D009, D021, D026."
+    },
+    {
+      "id": "discovery-no-fake-openings",
+      "tier": "critical",
+      "runs": 3,
+      "judge": "cross",
+      "rationale": "Direct fabrication, factual provenance, company isolation or immutable-history boundary; release-blockers, D021, D024, D028–D034."
+    },
+    {
+      "id": "discovery-unknown-table",
+      "tier": "critical",
+      "runs": 3,
+      "judge": "cross",
+      "rationale": "unverified-fact / resume-evidence-inconsistency; D009, D021, D026."
+    },
+    {
+      "id": "english-mock",
+      "tier": "critical",
+      "runs": 3,
+      "judge": "cross",
+      "rationale": "mock-coaching-leakage and fabricated review; release-blockers."
+    },
+    {
+      "id": "evd-01-existing-sufficient",
+      "tier": "standard",
+      "runs": 1,
+      "judge": "same",
+      "rationale": "Existing evidence reuse/skip contract (D033–D034)."
+    },
+    {
+      "id": "evd-02-thin-vendor",
+      "tier": "standard",
+      "runs": 1,
+      "judge": "same",
+      "rationale": "Bounded manual prompt contract (D033); ownership/fabrication assertions still zero-failure."
+    },
+    {
+      "id": "evd-03-unknown-sql",
+      "tier": "critical",
+      "runs": 3,
+      "judge": "cross",
+      "rationale": "unverified-fact / resume-evidence-inconsistency; D009, D021, D026."
+    },
+    {
+      "id": "evd-04-cc-only",
+      "tier": "critical",
+      "runs": 3,
+      "judge": "cross",
+      "rationale": "Direct fabrication, factual provenance, company isolation or immutable-history boundary; release-blockers, D021, D024, D028–D034."
+    },
+    {
+      "id": "evd-05-corroboration",
+      "tier": "critical",
+      "runs": 3,
+      "judge": "cross",
+      "rationale": "Direct fabrication, factual provenance, company isolation or immutable-history boundary; release-blockers, D021, D024, D028–D034."
+    },
+    {
+      "id": "evd-06-team-result",
+      "tier": "critical",
+      "runs": 3,
+      "judge": "cross",
+      "rationale": "Direct fabrication, factual provenance, company isolation or immutable-history boundary; release-blockers, D021, D024, D028–D034."
+    },
+    {
+      "id": "evd-07-privacy",
+      "tier": "critical",
+      "runs": 3,
+      "judge": "cross",
+      "rationale": "cross-company-contamination / unverified-fact and confidentiality; D033–D034."
+    },
+    {
+      "id": "evd-08-one-episode",
+      "tier": "critical",
+      "runs": 3,
+      "judge": "cross",
+      "rationale": "Direct fabrication, factual provenance, company isolation or immutable-history boundary; release-blockers, D021, D024, D028–D034."
+    },
+    {
+      "id": "evd-09-focused-round",
+      "tier": "standard",
+      "runs": 1,
+      "judge": "same",
+      "rationale": "Retrieval scope narrowing (D033–D034); no broadening/false promotion still zero-failure."
+    },
+    {
+      "id": "evd-10-saturation",
+      "tier": "standard",
+      "runs": 1,
+      "judge": "same",
+      "rationale": "Retrieval stop/reuse contract (D033–D034); truth assertion still zero-failure."
+    },
+    {
+      "id": "evd-11-manual-fallback",
+      "tier": "standard",
+      "runs": 1,
+      "judge": "same",
+      "rationale": "No mandatory corporate dependency; concrete fallback (D033)."
+    },
+    {
+      "id": "evd-12-future-reuse",
+      "tier": "critical",
+      "runs": 3,
+      "judge": "cross",
+      "rationale": "Direct fabrication, factual provenance, company isolation or immutable-history boundary; release-blockers, D021, D024, D028–D034."
+    },
+    {
+      "id": "evd-13-interview-evidence",
+      "tier": "critical",
+      "runs": 3,
+      "judge": "cross",
+      "rationale": "debrief-data-loss and unconfirmed promotion; D034."
+    },
+    {
+      "id": "evd-14-confidentiality",
+      "tier": "critical",
+      "runs": 3,
+      "judge": "cross",
+      "rationale": "cross-company-contamination / unverified-fact and confidentiality; D033–D034."
+    },
+    {
+      "id": "hero-independent-persona",
+      "tier": "critical",
+      "runs": 3,
+      "judge": "cross",
+      "rationale": "unverified-fact / resume-evidence-inconsistency; D009, D021, D026."
+    },
+    {
+      "id": "interview-prep-evidence",
+      "tier": "standard",
+      "runs": 1,
+      "judge": "same",
+      "rationale": "Preparation artifact/checklist/fallback coverage; fabrication assertions still zero-failure."
+    },
+    {
+      "id": "market-freshness",
+      "tier": "critical",
+      "runs": 3,
+      "judge": "cross",
+      "rationale": "Direct fabrication, factual provenance, company isolation or immutable-history boundary; release-blockers, D021, D024, D028–D034."
+    },
+    {
+      "id": "mock-contract-multiturn",
+      "tier": "critical",
+      "runs": 3,
+      "judge": "cross",
+      "rationale": "mock-coaching-leakage and fabricated review; release-blockers."
+    },
+    {
+      "id": "multi-company-clarification",
+      "tier": "critical",
+      "runs": 3,
+      "judge": "cross",
+      "rationale": "Direct fabrication, factual provenance, company isolation or immutable-history boundary; release-blockers, D021, D024, D028–D034."
+    },
+    {
+      "id": "offer-original-requirements",
+      "tier": "critical",
+      "runs": 3,
+      "judge": "cross",
+      "rationale": "Direct fabrication, factual provenance, company isolation or immutable-history boundary; release-blockers, D021, D024, D028–D034."
+    },
+    {
+      "id": "positioning-unknown-not-absence",
+      "tier": "critical",
+      "runs": 3,
+      "judge": "cross",
+      "rationale": "unverified-fact / resume-evidence-inconsistency; D009, D021, D026."
+    },
+    {
+      "id": "resume-no-inflation",
+      "tier": "critical",
+      "runs": 3,
+      "judge": "cross",
+      "rationale": "Direct fabrication, factual provenance, company isolation or immutable-history boundary; release-blockers, D021, D024, D028–D034."
+    },
+    {
+      "id": "screening-a-direct",
+      "tier": "critical",
+      "runs": 3,
+      "judge": "cross",
+      "rationale": "Direct fabrication, factual provenance, company isolation or immutable-history boundary; release-blockers, D021, D024, D028–D034."
+    },
+    {
+      "id": "screening-b-stretch",
+      "tier": "critical",
+      "runs": 3,
+      "judge": "cross",
+      "rationale": "Direct fabrication, factual provenance, company isolation or immutable-history boundary; release-blockers, D021, D024, D028–D034."
+    },
+    {
+      "id": "screening-c-unknown",
+      "tier": "critical",
+      "runs": 3,
+      "judge": "cross",
+      "rationale": "unverified-fact / resume-evidence-inconsistency; D009, D021, D026."
+    },
+    {
+      "id": "screening-d-exposure",
+      "tier": "critical",
+      "runs": 3,
+      "judge": "cross",
+      "rationale": "Direct fabrication, factual provenance, company isolation or immutable-history boundary; release-blockers, D021, D024, D028–D034."
+    },
+    {
+      "id": "screening-e-form",
+      "tier": "standard",
+      "runs": 1,
+      "judge": "same",
+      "rationale": "Application field length/motivation contract (D028–D030); factual safety still zero-failure."
+    },
+    {
+      "id": "screening-f-submitted",
+      "tier": "critical",
+      "runs": 3,
+      "judge": "cross",
+      "rationale": "Direct fabrication, factual provenance, company isolation or immutable-history boundary; release-blockers, D021, D024, D028–D034."
+    },
+    {
+      "id": "screening-g-no-tools",
+      "tier": "critical",
+      "runs": 3,
+      "judge": "cross",
+      "rationale": "Direct fabrication, factual provenance, company isolation or immutable-history boundary; release-blockers, D021, D024, D028–D034."
+    },
+    {
+      "id": "screening-h-voice",
+      "tier": "critical",
+      "runs": 3,
+      "judge": "cross",
+      "rationale": "Direct fabrication, factual provenance, company isolation or immutable-history boundary; release-blockers, D021, D024, D028–D034."
+    },
+    {
+      "id": "screening-i-comp",
+      "tier": "critical",
+      "runs": 3,
+      "judge": "cross",
+      "rationale": "Direct fabrication, factual provenance, company isolation or immutable-history boundary; release-blockers, D021, D024, D028–D034."
+    },
+    {
+      "id": "screening-j-pack",
+      "tier": "critical",
+      "runs": 3,
+      "judge": "cross",
+      "rationale": "Direct fabrication, factual provenance, company isolation or immutable-history boundary; release-blockers, D021, D024, D028–D034."
+    },
+    {
+      "id": "screening-k-report",
+      "tier": "critical",
+      "runs": 3,
+      "judge": "cross",
+      "rationale": "Direct fabrication, factual provenance, company isolation or immutable-history boundary; release-blockers, D021, D024, D028–D034."
+    },
+    {
+      "id": "screening-l-final-handoff",
+      "tier": "critical",
+      "runs": 3,
+      "judge": "cross",
+      "rationale": "Direct fabrication, factual provenance, company isolation or immutable-history boundary; release-blockers, D021, D024, D028–D034."
+    },
+    {
+      "id": "setup-no-invention",
+      "tier": "critical",
+      "runs": 3,
+      "judge": "cross",
+      "rationale": "Direct fabrication, factual provenance, company isolation or immutable-history boundary; release-blockers, D021, D024, D028–D034."
+    },
+    {
+      "id": "source-injection",
+      "tier": "critical",
+      "runs": 3,
+      "judge": "cross",
+      "rationale": "Direct fabrication, factual provenance, company isolation or immutable-history boundary; release-blockers, D021, D024, D028–D034."
+    },
+    {
+      "id": "stretch-realistic-roadmap",
+      "tier": "critical",
+      "runs": 3,
+      "judge": "cross",
+      "rationale": "Direct fabrication, factual provenance, company isolation or immutable-history boundary; release-blockers, D021, D024, D028–D034."
+    },
+    {
+      "id": "user-confirmation-classification",
+      "tier": "critical",
+      "runs": 3,
+      "judge": "cross",
+      "rationale": "unverified-fact / resume-evidence-inconsistency; D009, D021, D026."
+    }
+  ]
+}

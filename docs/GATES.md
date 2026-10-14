@@ -1,10 +1,14 @@
 # Current v1.2 candidate — 2026-10-14
 
 **1.2.0-rc.7** implementation, guides and deterministic runtime archives are complete.
-189 deterministic tests and all static checks pass. Both hosts passed all fourteen EVD cases
+189 structural/document-contract lint and deterministic developer-tool/state tests and all static checks pass. These checks do not measure model behavior. Both hosts passed all fourteen EVD cases
 and both legacy/v1.2 state roundtrips. Complete current actual-model evidence:
 
-| Host | Current result |
+The rc.7 CLI protocol runs each scenario once with preloaded references and a same-platform judge,
+except the explicitly audited cross-host timeout recovery below. Autonomous reference discovery is
+not verified; these results do not estimate a stable probabilistic pass rate.
+
+| Host | Current behavior result |
 |---|---|
 | ChatGPT | 48/48 PASS; one objective negation false-positive reviewed on the unchanged subject |
 | Claude | 48/48 PASS; ten cases run fresh after the provider reset |
@@ -121,3 +125,10 @@ rc.7 fixes the rc.6 final-handoff omission and debrief outcome reassurance. Clau
 no new Claude behavior was observed. Both repaired ChatGPT scenarios passed. Its full
 33-case suite is running on the same immutable rc.7 package. The explicit browser scope
 record is now evals/browser-exclusion-1.1.0-rc.7.json.
+
+## Approved follow-up protocol
+
+[Preregistered acceptance, tier inventory and limits](review-improvement-protocol.md) govern the
+review improvement work. New protocol evidence is required; existing reports remain historical
+and are not rewritten. Structural lint, deterministic developer checks, model behavior and native
+observations are distinct evidence categories.

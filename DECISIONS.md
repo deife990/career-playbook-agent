@@ -168,3 +168,9 @@
   readiness before uploading installation ZIPs/checksums. Browser remains EXCLUDED_BY_USER.
   No main merge, version promotion, tag, GitHub release or visibility/license change is
   included in this preparation request. Local distribution files record the source commit.
+
+- D036 (2026-10-15): User approved A–F review improvements excluding historical report relocation
+  and broad style cleanup. Freeze rc.7 initial-load byte/runtime-count caps first in B; preregister
+  E/F acceptance and 41 critical (3 cross-judged runs) / 7 standard (1 same-judged run) tiers before
+  baseline C. Preserve every release blocker and historical failure; no browser validation,
+  main merge, tags or release upload. See docs/review-improvement-protocol.md.
