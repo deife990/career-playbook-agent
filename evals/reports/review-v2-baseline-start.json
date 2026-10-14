@@ -1,0 +1,16 @@
+{
+  "status": "PENDING",
+  "preregistered_before_results": true,
+  "runtime_source_commit": "0f45d34",
+  "started_at": "2026-10-14T15:38:57.188935+00:00",
+  "suite_fingerprint": "a24b18e47ed0ee3c0ba972cd08ab1265ce7a62d4a1d1b4617c49e2dda732ef3e",
+  "protocol_fingerprint": "4515ea6c278005b2221531e763dedefcd4512df25f19471a30c94982141453c9",
+  "native_browser": "EXCLUDED_BY_USER",
+  "reference_discovery": "NOT_VERIFIED",
+  "package_fingerprints": {
+    "chatgpt": "93ebecbd059b848e5e7482a6b68e2d5a93c1cc9e811c1f4fc985e26cf0c40f9d",
+    "claude": "ac4ef67bab8b61f84671b4bf9c27147681aa3878ad763ff70d0024daf048a3ee"
+  },
+  "planned_runs_per_host": 130,
+  "evidence_location": "work/review-v2/baseline/reports (in progress; immutable runtime copies in sibling packages)"
+}

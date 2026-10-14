@@ -1,4 +1,5 @@
 import json
+from pathlib import Path
 import pytest
 from scripts.eval_protocol import protocol, protocol_fingerprint, summarize, validate_report
 from scripts.common import ROOT
@@ -97,3 +98,48 @@ def test_comparison_does_not_pool_regressions_or_allow_safety_failures():
     with pytest.raises(ValueError,match='regression'):compare(before,after)
     before=small_report();after=deepcopy(before);after['cases'].pop()
     with pytest.raises(ValueError,match='incomplete'):compare(before,after)
+
+
+def test_resume_never_replaces_a_real_failed_run(tmp_path,monkeypatch):
+    import sys
+    import scripts.run_model_evals as runner
+    calls=[]
+    def failed(root,platform,case,folder,**kwargs):
+        calls.append(folder)
+        return {'id':case['id'],'persona':case['persona'],'status':'FAIL'}
+    monkeypatch.setattr(runner,'run_case',failed)
+    args=['run_model_evals','--platform','chatgpt','--scenario','setup-no-invention','--report-dir',str(tmp_path)]
+    monkeypatch.setattr(sys,'argv',args)
+    with pytest.raises(SystemExit):runner.main()
+    assert len(calls)==3
+    original=json.loads((tmp_path/'chatgpt.json').read_text())
+    monkeypatch.setattr(sys,'argv',args+['--resume'])
+    with pytest.raises(SystemExit):runner.main()
+    assert len(calls)==3
+    assert json.loads((tmp_path/'chatgpt.json').read_text())['cases']==original['cases']
+    monkeypatch.setattr(sys,'argv',args)
+    with pytest.raises(ValueError,match='never overwrite'):runner.main()
+
+
+def test_resume_retains_error_attempt_and_refuses_protocol_change(tmp_path,monkeypatch):
+    import sys
+    import scripts.run_model_evals as runner
+    def interrupted(root,platform,case,folder,**kwargs):
+        folder.mkdir(parents=True,exist_ok=True)
+        (folder/'actual.stderr.txt').write_text('429 interrupted')
+        raise runner.RateLimitError('429 interrupted')
+    monkeypatch.setattr(runner,'run_case',interrupted)
+    args=['run_model_evals','--platform','claude','--scenario','setup-no-invention','--report-dir',str(tmp_path)]
+    monkeypatch.setattr(sys,'argv',args)
+    with pytest.raises(SystemExit):runner.main()
+    old=json.loads((tmp_path/'claude.json').read_text())['cases'][0]
+    monkeypatch.setattr(sys,'argv',args+['--resume','--judge','same'])
+    with pytest.raises(ValueError,match='mismatch'):runner.main()
+    def passed(root,platform,case,folder,**kwargs):
+        return {'id':case['id'],'persona':case['persona'],'status':'PASS'}
+    monkeypatch.setattr(runner,'run_case',passed)
+    monkeypatch.setattr(sys,'argv',args+['--resume'])
+    with pytest.raises(SystemExit):runner.main()
+    rows=json.loads((tmp_path/'claude.json').read_text())['cases']
+    assert rows[0]['prior_attempts']==[{k:v for k,v in old.items() if k!='prior_attempts'}]
+    assert (Path(old['attempt_path'])/'actual.stderr.txt').read_text()=='429 interrupted'
