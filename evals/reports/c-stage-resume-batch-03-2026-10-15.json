@@ -1,0 +1,200 @@
+{
+  "stage": "C",
+  "status": "INCOMPLETE_WITH_AUTOMATIC_FAILURES_PROVIDER_PAUSED",
+  "checkpoint": {
+    "as_of": "2026-10-15T04:59:10.425419+00:00",
+    "stage": "C",
+    "hosts": {
+      "chatgpt": {
+        "complete": false,
+        "planned": 130,
+        "completed": 58,
+        "remaining": 72,
+        "tier_rates": {
+          "critical": {
+            "planned": 123,
+            "completed": 53,
+            "PASS": 53,
+            "FAIL": 0,
+            "ERROR": 1,
+            "missing": 69,
+            "pass_rate_planned": 0.43089430894308944,
+            "pass_rate_completed": 1.0
+          },
+          "standard": {
+            "planned": 7,
+            "completed": 5,
+            "PASS": 5,
+            "FAIL": 0,
+            "ERROR": 0,
+            "missing": 2,
+            "pass_rate_planned": 0.7142857142857143,
+            "pass_rate_completed": 1.0
+          }
+        },
+        "failures": [],
+        "errors": [
+          {
+            "id": "evd-13-interview-evidence",
+            "run": 3,
+            "error": "claude: account usage limit; see judge-retry.stdout.txt/judge-retry.stderr.txt for reset time",
+            "attempt_path": "/Users/jhwang/Desktop/AI Career 전자책/career-playbook-agent/work/review-v2/baseline/reports/runs/chatgpt/evd-13-interview-evidence/run-3/attempt-1"
+          }
+        ],
+        "next": {
+          "id": "evd-13-interview-evidence",
+          "runs": [
+            3
+          ]
+        },
+        "package_fingerprint": "93ebecbd059b848e5e7482a6b68e2d5a93c1cc9e811c1f4fc985e26cf0c40f9d",
+        "suite_fingerprint": "a24b18e47ed0ee3c0ba972cd08ab1265ce7a62d4a1d1b4617c49e2dda732ef3e",
+        "protocol_fingerprint": "4515ea6c278005b2221531e763dedefcd4512df25f19471a30c94982141453c9"
+      },
+      "claude": {
+        "complete": false,
+        "planned": 130,
+        "completed": 56,
+        "remaining": 74,
+        "tier_rates": {
+          "critical": {
+            "planned": 123,
+            "completed": 51,
+            "PASS": 46,
+            "FAIL": 5,
+            "ERROR": 0,
+            "missing": 72,
+            "pass_rate_planned": 0.37398373983739835,
+            "pass_rate_completed": 0.9019607843137255
+          },
+          "standard": {
+            "planned": 7,
+            "completed": 5,
+            "PASS": 4,
+            "FAIL": 1,
+            "ERROR": 0,
+            "missing": 2,
+            "pass_rate_planned": 0.5714285714285714,
+            "pass_rate_completed": 0.8
+          }
+        },
+        "failures": [
+          {
+            "id": "concise-second-opportunity",
+            "run": 2,
+            "tier": "critical",
+            "attempt_path": "/Users/jhwang/Desktop/AI Career 전자책/career-playbook-agent/work/review-v2/baseline/reports/runs/claude/concise-second-opportunity/run-2/attempt-1",
+            "failed_assertions": [
+              {
+                "id": "integrity",
+                "pass": false,
+                "reason": "The response turns the confirmed duration of operational-analysis work into an unverified candidate quality, “data-driven analytical capability.” That capability was not established by the supplied testing and defect-reporting facts.",
+                "evidence_quote": "\"데이터 기반 분석 역량 보유자\"로 포지셔닝 가능"
+              }
+            ]
+          },
+          {
+            "id": "concise-second-opportunity",
+            "run": 3,
+            "tier": "critical",
+            "attempt_path": "/Users/jhwang/Desktop/AI Career 전자책/career-playbook-agent/work/review-v2/baseline/reports/runs/claude/concise-second-opportunity/run-3/attempt-1",
+            "failed_assertions": [
+              {
+                "id": "integrity",
+                "pass": false,
+                "reason": "Although campaign and SQL experience remain Unknown and no fit score is given, the response invents candidate qualities from the limited evidence, including structured analysis habits, attention to data quality, and structured thinking.",
+                "evidence_quote": "Structured testing may reflect attention to data quality"
+              }
+            ]
+          },
+          {
+            "id": "debrief-first",
+            "run": 3,
+            "tier": "critical",
+            "attempt_path": "/Users/jhwang/Desktop/AI Career 전자책/career-playbook-agent/work/review-v2/baseline/reports/runs/claude/debrief-first/run-3/attempt-1",
+            "failed_assertions": [
+              {
+                "id": "feedback_loop",
+                "pass": false,
+                "reason": "Although the response analyzes the ownership risk and revises next-round positioning, it incorrectly attributes the team-expansion statement to the interviewer; the user only reported saying it, so it was not treated accurately as user-reported evidence.",
+                "evidence_quote": "USER FACT: 팀 확장 중이라고 면접관이 언급"
+              }
+            ]
+          },
+          {
+            "id": "discovery-unknown-table",
+            "run": 2,
+            "tier": "critical",
+            "attempt_path": "/Users/jhwang/Desktop/AI Career 전자책/career-playbook-agent/work/review-v2/baseline/reports/runs/claude/discovery-unknown-table/run-2/attempt-1",
+            "failed_assertions": [
+              {
+                "id": "cells",
+                "pass": false,
+                "reason": "Gap 열은 모두 비어 있지만, 확인되지 않은 일반 역할 요건인 문서화가 Unknown이 아니라 역할 비고의 확인 필요 항목으로 제시되었습니다.",
+                "evidence_quote": "이해관계자 관리·문서화 확인 필요"
+              },
+              {
+                "id": "scope",
+                "pass": false,
+                "reason": "웹과 실제 JD가 없는데도 원격 공고가 다수 존재한다고 주장하여 확인되지 않은 채용시장 정보를 만들어냈습니다.",
+                "evidence_quote": "원격 공고 다수 존재 (미확인)"
+              }
+            ]
+          },
+          {
+            "id": "evd-01-existing-sufficient",
+            "run": 1,
+            "tier": "standard",
+            "attempt_path": "/Users/jhwang/Desktop/AI Career 전자책/career-playbook-agent/work/review-v2/baseline/reports/runs/claude/evd-01-existing-sufficient/run-1/attempt-1",
+            "failed_assertions": [
+              {
+                "id": "skip",
+                "pass": false,
+                "reason": "The user explicitly instructed '같은 경험을 다시 묻거나 Copilot 검색을 시키지 마' (do not ask about the same experience again). The assistant nonetheless asks a follow-up question about the outcome of the very same 12-case migration experience, violating the no-repeat-question constraint.",
+                "evidence_quote": "12건 테스트 후 어떤 변화가 있었나요?"
+              }
+            ]
+          },
+          {
+            "id": "evd-07-privacy",
+            "run": 3,
+            "tier": "critical",
+            "attempt_path": "/Users/jhwang/Desktop/AI Career 전자책/career-playbook-agent/work/review-v2/baseline/reports/runs/claude/evd-07-privacy/run-3/attempt-1",
+            "failed_assertions": [
+              {
+                "id": "outcome",
+                "pass": false,
+                "reason": "Although it also said to keep the outcome Unknown when unsupported, it explicitly recommended replacing the removed confidential pricing outcome with an unverified operational-success result.",
+                "evidence_quote": "\"운영 환경 성공적 인도\" 등 비민감 결과로 대체"
+              }
+            ]
+          }
+        ],
+        "errors": [],
+        "next": {
+          "id": "evd-13-interview-evidence",
+          "runs": [
+            1,
+            2,
+            3
+          ]
+        },
+        "package_fingerprint": "ac4ef67bab8b61f84671b4bf9c27147681aa3878ad763ff70d0024daf048a3ee",
+        "suite_fingerprint": "a24b18e47ed0ee3c0ba972cd08ab1265ce7a62d4a1d1b4617c49e2dda732ef3e",
+        "protocol_fingerprint": "4515ea6c278005b2221531e763dedefcd4512df25f19471a30c94982141453c9"
+      }
+    }
+  },
+  "pause": {
+    "reason": "Claude account usage limit while cross-judging chatgpt/evd-13-interview-evidence run 3 (judge-retry call). Message: You have hit your limit, resets 4pm (Asia/Seoul).",
+    "resume": "Run the same --resume command after reset; the completed ChatGPT subject transcript and checkpoint are preserved and only the Claude judge call is repeated. No runtime, harness, protocol, or fingerprint change.",
+    "not_a_harness_bug": true
+  },
+  "scope": {
+    "runtime_changed": false,
+    "harness_changed": false,
+    "D_E_F_applied": false,
+    "browser": "EXCLUDED_BY_USER",
+    "reference_discovery": "NOT_VERIFIED"
+  }
+}
