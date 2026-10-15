@@ -1,0 +1,121 @@
+{
+  "stage": "C",
+  "as_of": "2026-10-15 Asia/Seoul before resumed calls",
+  "remaining": {
+    "chatgpt": {
+      "runs": 113,
+      "subject_calls": 140,
+      "judge_calls": 113,
+      "tiers": {
+        "critical": 106,
+        "standard": 7
+      }
+    },
+    "claude": {
+      "runs": 110,
+      "subject_calls": 138,
+      "judge_calls": 110,
+      "tiers": {
+        "critical": 103,
+        "standard": 7
+      }
+    }
+  },
+  "pending_provider_calls": {
+    "chatgpt_subject": 140,
+    "claude_judge": 113,
+    "chatgpt_judge": 110,
+    "claude_subject": 138
+  },
+  "usage_sample": {
+    "claude_subject": {
+      "successful_sample_calls": 23,
+      "mean_tokens": 45004,
+      "median_tokens": 32463,
+      "p90_tokens": 83500,
+      "observed_calls_including_errors": 24
+    },
+    "claude_judge": {
+      "successful_sample_calls": 20,
+      "mean_tokens": 16973,
+      "median_tokens": 15991.0,
+      "p90_tokens": 19669,
+      "observed_calls_including_errors": 21
+    },
+    "chatgpt_judge": {
+      "successful_sample_calls": 20,
+      "mean_tokens": 12463,
+      "median_tokens": 18727.0,
+      "p90_tokens": 20044,
+      "observed_calls_including_errors": 20
+    },
+    "chatgpt_subject": {
+      "successful_sample_calls": 21,
+      "mean_tokens": 35459,
+      "median_tokens": 31011,
+      "p90_tokens": 50565,
+      "observed_calls_including_errors": 21
+    }
+  },
+  "estimated_remaining": {
+    "chatgpt": {
+      "remaining_calls": 250,
+      "median_based_tokens": 6401510,
+      "mean_based_tokens": 6335190,
+      "p90_based_tokens": 9283940,
+      "mean_plus_20pct_reserve_tokens": 7602228
+    },
+    "claude": {
+      "remaining_calls": 251,
+      "median_based_tokens": 6286877,
+      "mean_based_tokens": 8128501,
+      "p90_based_tokens": 13745597,
+      "mean_plus_20pct_reserve_tokens": 9754202
+    }
+  },
+  "claude_observed_cli_list_cost_usd_not_account_charge": 5.0475,
+  "errors": [
+    {
+      "subject_platform": "chatgpt",
+      "scenario": "debrief-first",
+      "run": 3,
+      "classification": "OTHER_PROVIDER_ACCOUNT_QUOTA",
+      "harness_bug": false,
+      "network_error_evidence": false,
+      "completed_subject_turns": 2,
+      "logs": [
+        {
+          "file": "work/review-v2/baseline/reports/runs/chatgpt/debrief-first/run-3/attempt-1/judge.stdout.txt",
+          "sha256": "259dc7441a390b178c93a81a694c275a5515c87d5b623c0a44a9b45393328c45",
+          "is_error": true,
+          "message": "You've hit your limit · resets 4:50am (Asia/Seoul)",
+          "partial_structured_output": true
+        }
+      ]
+    },
+    {
+      "subject_platform": "claude",
+      "scenario": "discovery-history-unknown",
+      "run": 3,
+      "classification": "OTHER_PROVIDER_ACCOUNT_QUOTA",
+      "harness_bug": false,
+      "network_error_evidence": false,
+      "completed_subject_turns": 0,
+      "logs": [
+        {
+          "file": "work/review-v2/baseline/reports/runs/claude/discovery-history-unknown/run-3/attempt-1/turn-1.stdout.txt",
+          "sha256": "600f194fe78581d8ace1479c86aeade9d2a5c23abfdf2a58b2f27407b5a777d5",
+          "is_error": true,
+          "message": "You've hit your limit · resets 4:50am (Asia/Seoul)",
+          "partial_structured_output": false
+        }
+      ]
+    }
+  ],
+  "caveats": [
+    "Token counters are CLI-reported, not quota units. Claude counts include cache creation/read; Codex exposes only total tokens. They are not directly comparable.",
+    "Estimates extrapolate observed calls; remaining scenarios/context lengths differ. Judge citation repairs/capacity retries are extra calls. 20% is planning reserve, not guaranteed upper bound.",
+    "Claude remaining account allowance is not available through these logs. No claim that a fixed batch fits an unknown account allowance.",
+    "Codex account usage snapshot: primary 2% used / secondary 57% used; shared with other tasks and not convertible into a guaranteed token budget."
+  ]
+}
