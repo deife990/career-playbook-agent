@@ -1,0 +1,80 @@
+{
+  "remaining": {
+    "chatgpt": {
+      "runs": 43,
+      "subject_calls": 50,
+      "judge_calls": 43,
+      "tiers": {
+        "critical": 42,
+        "standard": 1
+      }
+    },
+    "claude": {
+      "runs": 49,
+      "subject_calls": 56,
+      "judge_calls": 49,
+      "tiers": {
+        "critical": 48,
+        "standard": 1
+      }
+    }
+  },
+  "pending": {
+    "chatgpt_subject": 50,
+    "claude_judge": 43,
+    "chatgpt_judge": 49,
+    "claude_subject": 56
+  },
+  "units": {
+    "claude_subject": {
+      "successful_sample_calls": 104,
+      "mean_tokens": 34300,
+      "median_tokens": 31469.0,
+      "p90_tokens": 34183,
+      "observed_calls_including_errors": 106
+    },
+    "claude_judge": {
+      "successful_sample_calls": 100,
+      "mean_tokens": 14780,
+      "median_tokens": 14417.0,
+      "p90_tokens": 19433,
+      "observed_calls_including_errors": 102
+    },
+    "chatgpt_judge": {
+      "successful_sample_calls": 82,
+      "mean_tokens": 10327,
+      "median_tokens": 5544.0,
+      "p90_tokens": 19814,
+      "observed_calls_including_errors": 82
+    },
+    "chatgpt_subject": {
+      "successful_sample_calls": 111,
+      "mean_tokens": 28410,
+      "median_tokens": 28111,
+      "p90_tokens": 31329,
+      "observed_calls_including_errors": 111
+    }
+  },
+  "estimate": {
+    "chatgpt": {
+      "remaining_calls": 99,
+      "median_based_tokens": 1677206,
+      "mean_based_tokens": 1926523,
+      "p90_based_tokens": 2537336,
+      "mean_plus_20pct_reserve_tokens": 2311828
+    },
+    "claude": {
+      "remaining_calls": 99,
+      "median_based_tokens": 2382195,
+      "mean_based_tokens": 2556340,
+      "p90_based_tokens": 2749867,
+      "mean_plus_20pct_reserve_tokens": 3067608
+    }
+  },
+  "as_of": "2026-10-15T10:41:27.839583+00:00",
+  "caveats": [
+    "CLI token estimates are not quota units or account charges. Claude includes cache read/write; Codex exposes total tokens. These counters are not directly comparable.",
+    "Extrapolated from observed calls; remaining cases and citation repairs may differ. Twenty percent reserve is a planning margin, not an upper bound.",
+    "Claude remaining quota unavailable. No extra payment or reset-credit use."
+  ]
+}

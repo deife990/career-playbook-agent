@@ -6,6 +6,18 @@ n=1 protocol; it does not certify protocol v2 or a future rc.8. New readiness re
 repetitions, wrong judge routing, changed prompts/configuration and failed assertions.
 [Preregistered criteria](review-improvement-protocol.md).
 
+## Latest C checkpoint — 2026-10-15, 168/260
+
+ChatGPT has 87 PASS / 0 FAIL; Claude has 73 PASS / 8 automatic FAIL. Neither host has an
+unresolved ERROR. Critical completed-run pass rates are 81/81 and 68/75; standard rates are
+6/6 and 5/6. The latest 30 completed runs all passed. C remains incomplete with 92 runs left;
+all package/suite/protocol and preserved-verdict audits pass. Harness and runtime bytes are
+unchanged. D/E/F changes remain held. The last Codex snapshot showed 89% five-hour usage,
+so execution waits at a saved batch boundary until the indicated 23:51 KST reset. A thread
+heartbeat will resume eligible missing/error runs in batches of up to six after reset, without
+rerunning behavioral failures. [Current results, disputes, estimates and resume location](c-stage-checkpoint-168-2026-10-15.md).
+This supersedes the earlier partial progress counts below, not their immutable evidence.
+
 ## C resumption review — 2026-10-15
 
 The two original ERRORs were provider account-quota interruptions, not demonstrated harness or
