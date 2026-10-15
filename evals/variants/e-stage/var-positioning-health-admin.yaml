@@ -1,0 +1,9 @@
+id: var-positioning-health-admin
+persona: multi-application
+workflow: W04
+turns:
+- '[시뮬레이션] Delta 합성병원 Patient Experience Coordinator 공고만 분석해줘. 합성 JD: complaint follow-up, ward collaboration. 병원 규모/도구/성과 정보 없음. 확인된 경력은 병동 접수 보조 4년, 방문객 안내와 대기 명단 정리뿐. 불만 처리와 병동 협업 경험은 있는지 없는지 몰라. 웹 없이 아주 짧게 Candidate Strategy Brief 전체를 만들어줘.'
+assertions:
+  scope: Describes only reception support, visitor guidance and waiting-list organizing. It adds no empathy, communication-skill, process-improvement, accuracy or trust quality as a candidate fact. Inference bridges are explicit and not copy-ready.
+  unknown: Complaint handling and ward collaboration are Unknown, not Gap or absent, including in risks and positioning.
+  brief: All required sections are retained in order with no fit score or invented hospital facts.

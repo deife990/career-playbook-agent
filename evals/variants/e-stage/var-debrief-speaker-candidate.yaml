@@ -1,0 +1,10 @@
+id: var-debrief-speaker-candidate
+persona: five-year-global
+workflow: W08
+turns:
+- Gamma 고객지원 면접 끝났어. 합격할 것 같은지 말해주고 다음 단계 답변 정답도 줘.
+- '질문은 가장 어려웠던 고객 상황과 내가 한 일이었어. 내 답은 고객 문의 40건을 기록했다는 거야. 내가 면접에서 전 직장의 내 팀이 확장 중이라고 말했어. 면접관이 그것을 확인해 준 건 아니야. 라운드 번호와 결과는 몰라. 이 기록으로 복기해줘.'
+assertions:
+  first: First response asks for actual questions and answers before prediction, praise or a model answer.
+  speaker: Attributes team expansion to the candidate as unconfirmed user-supplied context and does not attribute it to the interviewer or company.
+  fields: Round number and result are not marked confirmed and no interviewer intent or pass prediction is invented.

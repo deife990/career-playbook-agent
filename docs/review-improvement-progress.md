@@ -11,37 +11,62 @@
   and subject checkpoints preserved; real FAIL never rerun away; strict readiness and comparison.
 - D preparation only: typed reachability identifies exactly 13 unused aliases plus 28 duplicate
   Claude templates. No runtime file has been removed yet.
-- C: immutable baseline copies match exact rc.7 runtime fingerprints; acceptance and all 48 tiers
-  were committed before model results. Partial original responses and failures are archived.
+- C partial: immutable baseline copies match exact rc.7 runtime fingerprints; acceptance and all 48
+  tiers were committed before model results. The earlier Claude usage-limit stop was resumed after
+  its reset; both original ERRORs were provider quota interruptions and were completed on the
+  unchanged package, suite and protocol. Partial original responses and failures are archived.
 
-Final local verification: **207 tests PASS**, internal references PASS, frozen byte/file budgets PASS.
-Both runtime fingerprints and the running protocol fingerprint remain identical to the baseline start.
+## Current C state (checkpoint 168 / 260)
 
-## External blocker and remaining work
+| Host | Completed / planned | PASS | FAIL | Unresolved ERROR | Remaining |
+|---|---:|---:|---:|---:|---:|
+| ChatGPT | 87 / 130 | 87 | 0 | 0 | 43 |
+| Claude | 81 / 130 | 73 | 8 | 0 | 49 |
 
-Claude account limit stops Claude subjects and ChatGPT's critical cross-judges. Reset message is
-04:50 Asia/Seoul. ChatGPT: 17 PASS / 1 ERROR, 113 runs uncompleted. Claude: 17 PASS / 3 FAIL /
-1 ERROR, 110 runs uncompleted. ERRORS count as missing completion. The three failures are two
-unsupported-positioning-quality cases and one unsupported debrief attribution/context case.
-They are diagnosed, preserved and may not relax candidate zero-safety-failure acceptance.
+Rates for each host are read only against that host's own baseline. Judge platforms differ
+(ChatGPT subjects are judged by Claude on critical scenarios and Claude subjects by ChatGPT),
+so a gap between the two hosts is not evidence about relative model quality. E decisions compare
+each host's candidate with its own baseline, not one host with the other.
 
-After the provider resets, run the following on the **same source protocol and immutable packages**:
+The 8 Claude failures are real automatic verdicts and are not relaunched. See the
+[checkpoint](c-stage-checkpoint-168-2026-10-15.md), the
+[failure review](c-stage-pre-resume-review.md) and the
+[E acceptance clarification](e-stage-acceptance-clarification-2026-10-15.md).
+
+## Why work paused after the 19:42 KST commit
+
+The 19:42 pause was deliberate at a batch boundary to preserve the remaining quota. The last
+Codex reading before that pause was 89% of the five-hour window; a reading at 20:42 KST showed
+99%. These readings alone do not prove that another model call would fail. Later explicit
+resumption attempts did not start: automatic permission approval timed out twice. That timeout
+was not a model-evaluation result, and its cause cannot be attributed to account quota from the
+available evidence. The baseline reports remained at 168 completed runs with no new ERROR.
+No harness or package edit was needed. The displayed reset was **2026-10-15 23:51 KST**.
+
+At 23:54 KST, a fresh account reading confirmed the new window at 0% usage. The previous
+`careerpilot-c` heartbeat was successfully deleted at the user's request; resumption is manual.
+The bounded driver checks errors after each selected scenario; this is not a guarantee that all
+generic CLI errors halt the underlying harness before another repetition.
+
+## Remaining work
+
+92 runs remain (ChatGPT 43, Claude 49; at least 198 subject/judge calls). Resume on the same
+immutable baseline packages after the reset, in batches of at most six runs, with usage checked at
+each batch boundary. Only missing or ERROR runs are executed; recorded PASS/FAIL results are never
+rerun. Equivalent manual command:
 
 ```bash
-.venv/bin/python -m scripts.run_model_evals --platform chatgpt --package-root work/review-v2/baseline/packages/chatgpt --report-dir work/review-v2/baseline/reports --resume
-.venv/bin/python -m scripts.run_model_evals --platform claude --package-root work/review-v2/baseline/packages/claude --report-dir work/review-v2/baseline/reports --resume
+.venv/bin/python -m scripts.run_model_evals --platform HOST --package-root work/review-v2/baseline/packages/HOST --report-dir work/review-v2/baseline/reports --resume --scenario SCENARIO_ID
 ```
 
-The failed cases stay failed in baseline. The completed ChatGPT debrief subject is reused for its
-pending cross-judge; do not regenerate it. Partial archived reports remain immutable evidence.
-Finish all 130 baseline runs per host before applying D/E/F. Then remove aliases/duplicate paths
-in the generator/inventory, activate reachability validation, compress guards from canonical
-source, make loading conditional, and build a fresh rc.8 candidate. Address the observed unsupported
-quality and provenance failures through general scope-preservation rules, not scenario-specific
-keywords. Evaluate the candidate under the unchanged frozen protocol, require safety failure zero
-and per-host/per-scenario/per-assertion rates at least baseline; run normal strict packaging checks.
-No browser validation, main merge, tags or release upload are authorized. Historical report moving
-and broad formatting are excluded. No account upgrade or paid workaround was attempted.
+C is complete only when both hosts have 130 verdicts with no ERROR or missing run. Real failures
+may remain; C completion is not release readiness.
+
+D, E and F stay on hold until C is complete. E will follow the
+[general-principle plan](e-stage-general-principles-2026-10-15.md) and add the drafted
+[variant scenarios](../evals/variants/e-stage/README.md) as a separate, newly fingerprinted group.
+No browser validation, main merge, tag or release upload is authorized. Historical report moving
+and broad formatting are excluded. No account upgrade, extra payment or reset credit was used.
 
 [Preregistered tiers/criteria](review-improvement-protocol.md) ·
-[Partial evidence and reset audit](../evals/reports/review-v2-baseline-progress.json)
+[Progress journal](../evals/reports/review-v2-baseline-progress.json)
