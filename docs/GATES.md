@@ -6,9 +6,26 @@ n=1 protocol; it does not certify protocol v2 or a future rc.8. New readiness re
 repetitions, wrong judge routing, changed prompts/configuration and failed assertions.
 [Preregistered criteria](review-improvement-protocol.md).
 
+## C resumption review — 2026-10-15
+
+The two original ERRORs were provider account-quota interruptions, not demonstrated harness or
+network defects. Both resumed successfully under the unchanged package/suite/protocol: ChatGPT's
+saved debrief subject was reused for its cross-judge; Claude's interrupted discovery subject was
+completed. Original ERROR attempts remain in the reports. C is still incomplete; D/E/F runtime
+changes remain held. No browser validation is performed.
+
+[Pre-resumption audit and complete failure transcripts](c-stage-pre-resume-review.md) qualify the
+earlier shorthand “three actual FAIL”: the two positioning responses contain unsupported quality
+claims; the debrief judge's speaker attribution is disputed, while manual review separately found
+an unsupported confirmed round number. Original automatic verdicts are retained, not rewritten.
+
+[E acceptance clarification](e-stage-acceptance-clarification-2026-10-15.md) preserves the original
+pre-C criteria and explicitly requires resolution of baseline failures plus zero new failures.
+This post-start clarification does not change the frozen C rubric or evaluation fingerprints.
+
 ## Strengthened baseline interruption
 
-C completed 17 passing ChatGPT runs plus one judge ERROR; Claude completed 17 PASS, three actual
+C's earlier checkpoint completed 17 passing ChatGPT runs plus one judge ERROR; Claude completed 17 PASS, three automatic
 FAIL and one subject ERROR. Full planned denominator is 130 per host. Claude account reset message:
 `You've hit your limit · resets 4:50am (Asia/Seoul)`. Both subject and cross-judge routing are affected.
 Completed subjects/checkpoints, literal transcripts, failed verdicts and service logs are preserved.

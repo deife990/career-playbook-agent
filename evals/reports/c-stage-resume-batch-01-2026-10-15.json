@@ -1,0 +1,276 @@
+{
+  "stage": "C",
+  "status": "INCOMPLETE_WITH_AUTOMATIC_FAILURES",
+  "checkpoint": {
+    "as_of": "2026-10-15T02:43:40.969487+00:00",
+    "stage": "C",
+    "hosts": {
+      "chatgpt": {
+        "complete": false,
+        "planned": 130,
+        "completed": 24,
+        "remaining": 106,
+        "tier_rates": {
+          "critical": {
+            "planned": 123,
+            "completed": 24,
+            "PASS": 24,
+            "FAIL": 0,
+            "ERROR": 0,
+            "missing": 99,
+            "pass_rate_planned": 0.1951219512195122,
+            "pass_rate_completed": 1.0
+          },
+          "standard": {
+            "planned": 7,
+            "completed": 0,
+            "PASS": 0,
+            "FAIL": 0,
+            "ERROR": 0,
+            "missing": 7,
+            "pass_rate_planned": 0.0,
+            "pass_rate_completed": null
+          }
+        },
+        "failures": [],
+        "errors": [],
+        "next": {
+          "id": "discovery-unknown-table",
+          "runs": [
+            1,
+            2,
+            3
+          ]
+        },
+        "package_fingerprint": "93ebecbd059b848e5e7482a6b68e2d5a93c1cc9e811c1f4fc985e26cf0c40f9d",
+        "suite_fingerprint": "a24b18e47ed0ee3c0ba972cd08ab1265ce7a62d4a1d1b4617c49e2dda732ef3e",
+        "protocol_fingerprint": "4515ea6c278005b2221531e763dedefcd4512df25f19471a30c94982141453c9"
+      },
+      "claude": {
+        "complete": false,
+        "planned": 130,
+        "completed": 27,
+        "remaining": 103,
+        "tier_rates": {
+          "critical": {
+            "planned": 123,
+            "completed": 27,
+            "PASS": 23,
+            "FAIL": 4,
+            "ERROR": 0,
+            "missing": 96,
+            "pass_rate_planned": 0.18699186991869918,
+            "pass_rate_completed": 0.8518518518518519
+          },
+          "standard": {
+            "planned": 7,
+            "completed": 0,
+            "PASS": 0,
+            "FAIL": 0,
+            "ERROR": 0,
+            "missing": 7,
+            "pass_rate_planned": 0.0,
+            "pass_rate_completed": null
+          }
+        },
+        "failures": [
+          {
+            "id": "concise-second-opportunity",
+            "run": 2,
+            "tier": "critical",
+            "attempt_path": "/Users/jhwang/Desktop/AI Career 전자책/career-playbook-agent/work/review-v2/baseline/reports/runs/claude/concise-second-opportunity/run-2/attempt-1",
+            "failed_assertions": [
+              {
+                "id": "integrity",
+                "pass": false,
+                "reason": "The response turns the confirmed duration of operational-analysis work into an unverified candidate quality, “data-driven analytical capability.” That capability was not established by the supplied testing and defect-reporting facts.",
+                "evidence_quote": "\"데이터 기반 분석 역량 보유자\"로 포지셔닝 가능"
+              }
+            ]
+          },
+          {
+            "id": "concise-second-opportunity",
+            "run": 3,
+            "tier": "critical",
+            "attempt_path": "/Users/jhwang/Desktop/AI Career 전자책/career-playbook-agent/work/review-v2/baseline/reports/runs/claude/concise-second-opportunity/run-3/attempt-1",
+            "failed_assertions": [
+              {
+                "id": "integrity",
+                "pass": false,
+                "reason": "Although campaign and SQL experience remain Unknown and no fit score is given, the response invents candidate qualities from the limited evidence, including structured analysis habits, attention to data quality, and structured thinking.",
+                "evidence_quote": "Structured testing may reflect attention to data quality"
+              }
+            ]
+          },
+          {
+            "id": "debrief-first",
+            "run": 3,
+            "tier": "critical",
+            "attempt_path": "/Users/jhwang/Desktop/AI Career 전자책/career-playbook-agent/work/review-v2/baseline/reports/runs/claude/debrief-first/run-3/attempt-1",
+            "failed_assertions": [
+              {
+                "id": "feedback_loop",
+                "pass": false,
+                "reason": "Although the response analyzes the ownership risk and revises next-round positioning, it incorrectly attributes the team-expansion statement to the interviewer; the user only reported saying it, so it was not treated accurately as user-reported evidence.",
+                "evidence_quote": "USER FACT: 팀 확장 중이라고 면접관이 언급"
+              }
+            ]
+          },
+          {
+            "id": "discovery-unknown-table",
+            "run": 2,
+            "tier": "critical",
+            "attempt_path": "/Users/jhwang/Desktop/AI Career 전자책/career-playbook-agent/work/review-v2/baseline/reports/runs/claude/discovery-unknown-table/run-2/attempt-1",
+            "failed_assertions": [
+              {
+                "id": "cells",
+                "pass": false,
+                "reason": "Gap 열은 모두 비어 있지만, 확인되지 않은 일반 역할 요건인 문서화가 Unknown이 아니라 역할 비고의 확인 필요 항목으로 제시되었습니다.",
+                "evidence_quote": "이해관계자 관리·문서화 확인 필요"
+              },
+              {
+                "id": "scope",
+                "pass": false,
+                "reason": "웹과 실제 JD가 없는데도 원격 공고가 다수 존재한다고 주장하여 확인되지 않은 채용시장 정보를 만들어냈습니다.",
+                "evidence_quote": "원격 공고 다수 존재 (미확인)"
+              }
+            ]
+          }
+        ],
+        "errors": [],
+        "next": {
+          "id": "english-mock",
+          "runs": [
+            1,
+            2,
+            3
+          ]
+        },
+        "package_fingerprint": "ac4ef67bab8b61f84671b4bf9c27147681aa3878ad763ff70d0024daf048a3ee",
+        "suite_fingerprint": "a24b18e47ed0ee3c0ba972cd08ab1265ce7a62d4a1d1b4617c49e2dda732ef3e",
+        "protocol_fingerprint": "4515ea6c278005b2221531e763dedefcd4512df25f19471a30c94982141453c9"
+      }
+    }
+  },
+  "new_terminal_runs": 14,
+  "recovered_original_errors": [
+    {
+      "platform": "chatgpt",
+      "id": "debrief-first",
+      "run": 3,
+      "status": "PASS",
+      "subject_reused": true
+    },
+    {
+      "platform": "claude",
+      "id": "discovery-history-unknown",
+      "run": 3,
+      "status": "PASS",
+      "subject_reused": false
+    }
+  ],
+  "new_failure_review": {
+    "scenario": "discovery-unknown-table",
+    "platform": "claude",
+    "run": 2,
+    "original_automatic_row": {
+      "id": "discovery-unknown-table",
+      "persona": "three-year-professional",
+      "status": "FAIL",
+      "assertions": [
+        {
+          "id": "cells",
+          "pass": false,
+          "reason": "Gap 열은 모두 비어 있지만, 확인되지 않은 일반 역할 요건인 문서화가 Unknown이 아니라 역할 비고의 확인 필요 항목으로 제시되었습니다.",
+          "evidence_quote": "이해관계자 관리·문서화 확인 필요"
+        },
+        {
+          "id": "scope",
+          "pass": false,
+          "reason": "웹과 실제 JD가 없는데도 원격 공고가 다수 존재한다고 주장하여 확인되지 않은 채용시장 정보를 만들어냈습니다.",
+          "evidence_quote": "원격 공고 다수 존재 (미확인)"
+        }
+      ],
+      "model_ids": [
+        "claude-sonnet-4-6"
+      ],
+      "judge_model": "gpt-5.6-sol",
+      "judge_platform": "chatgpt",
+      "loaded_files": {
+        "SKILL.md": "21517127934a3c65095d67f182eb29982b5528b24fbb46f7b79a81cf1b616549",
+        "references/host.md": "c0669b6ebc04a2d9760064966ef783d42c391b7121c52199afbbe62f4f007d71",
+        "references/core/router/routing.md": "ddd80e971d3c6f204a13d8fc4e5b1839373ba767939803061e6886a86afed5f3",
+        "references/core/router/intent-catalog.yaml": "0b1c168e412e2130d7f614e0fa426abc1b4d5f691435d0e8bc214e01c03afbcb",
+        "references/core/state/state.md": "5c4de3a893671110f7063683d2929ecf5504b836554b7d1e5138ba1d3875efd3",
+        "references/core/principles/entry-guards.md": "af3ce7b503cc784db0f0ac8dbb246bc68c4cf148362a8a4743764b31d0fc2a52",
+        "references/core/principles/evidence-policy.md": "2023f804846b6ac4d91af7bf0ce78213fffeb08c1acd070fbaf64aaf826749bb",
+        "references/core/principles/index.md": "4ae2f36afe2d726259fa841cf8b6a1a87cee4c3558b7a0063c59405d6f92b9f8",
+        "references/core/principles/privacy-policy.md": "3a20011a64eed84174cb54ab1dac7bce2cafc2153d06c35e1fc397978cb3a1aa",
+        "references/core/principles/product-principles.md": "b2c1cf4eead6e2e73122811ddaa1aa360ace3a2dad6e53821da9b5287da59459",
+        "references/core/principles/research-policy.md": "e0dc13d43474708fb9b1c283fe4369b2dbe414fb880933c2fb4e3c49d2c9ca3c",
+        "references/core/principles/ux-language.md": "cbbbacfcfe8fb67839c0915427d1769685fb929dd9aec404d7e53cebf58763e2",
+        "references/core/workflows/w03-opportunity-discovery.md": "bb39e3aef733bcaeef8a857a64a9bbdda64b2a389c5dca33ca2dd273c59d51e2",
+        "references/core/artifacts/opportunity-screen.md": "6d071af5caff998c31157b2ffc9b3b949ee605d2fd57a04486676667dceca6ba",
+        "references/core/capabilities/role-mapping.md": "6227da7532931dbeb7bac4e13c4323182496e5f6665d409ec4c2e16af0c88fe3",
+        "references/core/capabilities/application-pipeline.md": "9dc78300c585e04d5d9ddb67c991d67b3ecb5682a94e4b754f6b7fa8f892912f",
+        "references/core/capabilities/experience-mining.md": "45740ecdb0008b1ba0f06fff6aae6a955f5fb6918b2b5850b35e1d36f9dd92d1",
+        "references/core/capabilities/career-evidence-discovery.md": "f2bddd0b13d9290e9655e4f93d8591e43d250f7056a597916c70d348bab0ef7b",
+        "references/core/capabilities/copilot-bridge.md": "3d43fa34219e1967a3792ad0d5ea64f2452c2d0771cba93b0c404e350c5bb144",
+        "references/templates/artifacts/opportunity-screen.md": "134df927c9f230091ce089b9b472c9403831e817f0922ab20e2a78734c49f2d0",
+        "references/core/capabilities/story-bank.md": "8d648faef479c02cf3574a2b99207fbdaee45dd091a98d1a46d3029d4345bfc8",
+        "references/core/capabilities/resume.md": "178b1035d145ef252c089fe9d051b24a113f95b50e157ac76018bc9d26827e8d",
+        "references/core/capabilities/screening-engine.md": "00d8c9a7fadbeaefd5be616f79e8d3a9e27e367216cfc248ccc854fbaf4bbba9",
+        "references/templates/artifacts/evidence-exchange.md": "4a6dca10132d81d044d7184a5e779c16d3382350da832d1b66433cf8c4f9aa8c",
+        "references/core/capabilities/resume-artifact.md": "f8150170fe45e5f02bf74ba95c6bd4cfb406158c0910c04361337a63c50edc37",
+        "references/core/capabilities/human-voice.md": "bd0580691c88a60bf5ab6d6a09c2a8b03091e85847033ec2fee59ecd4fb17b59",
+        "references/core/capabilities/red-team.md": "917ad900ab59a59b021eafb11bf35f4f695ceababc243a2a2fae9a3b8e87d2cf",
+        "references/core/capabilities/application-writing.md": "63a07b9cd864cd00ea30b3fb65a15226d89c7abc28196ac225655b392d278165",
+        "references/core/capabilities/compensation.md": "cb8755ef9bc5ee0c83d8087ad28420ff910676caee9cd3def544d1ae1037035c"
+      },
+      "transcript": [
+        {
+          "role": "user",
+          "content": "[시뮬레이션] 운영 분석 3년이고 직접 확인한 행동은 테스트 12개 수행과 결함 보고뿐이야. 테스트 설계·도구·SQL·보고 방식 경험은 모름. 한국 완전 원격 MUST, 영어 PREFER야. 실제 JD도 웹도 없어. Core/Stretch/Strategic Entry 탐색 후보와 Strong/Transferable/Gap/Unknown 표를 아주 짧게 만들어줘."
+        },
+        {
+          "role": "assistant",
+          "content": "**[SIMULATION ONLY]** — 웹·JD 없음; 아래 목록은 검색 대상 후보이며 실제 공고 미확인입니다.\n\n---\n\n## Target Opportunity List (초안)\n\n**확인된 경력 기반**\n- USER FACT: 운영 분석 3년, 테스트 12개 수행, 결함 보고\n- Unknown: 테스트 설계·도구·SQL·보고 방식 (부재 미확인)\n- MUST: 한국 완전 원격 (고용주 준수 여부 → 공고 확인 전 Unknown)\n- PREFER: 영어\n\n---\n\n### Core\n| 역할군 | 비고 |\n|---|---|\n| Operations Analyst | 현 직무 연속; 원격 공고 다수 존재 (미확인) |\n| QA / Test Analyst | 테스트·결함 보고 직접 연결 |\n\n### Stretch\n| 역할군 | 비고 |\n|---|---|\n| Business Analyst | 운영 분석 인접; 이해관계자 관리·문서화 확인 필요 |\n| Data Analyst | 운영 맥락 전이 가능; SQL 미확인 |\n\n### Strategic Entry\n| 역할군 | 비고 |\n|---|---|\n| Customer/Product Operations | 운영·검증 경험 입문 활용; 도메인 전환 트레이드오프 있음 |\n\n---\n\n### Evidence Mapping\n\n| 역할군 | Strong | Transferable | Gap | Unknown |\n|---|---|---|---|---|\n| Operations Analyst | 운영 분석 3년, 테스트 12개, 결함 보고 | — | — | 보고 방식, 사용 도구 |\n| QA / Test Analyst | 테스트 12개 수행, 결함 보고 | 운영 분석 경험 | — | 테스트 설계, 도구, SQL |\n| Business Analyst | 운영 분석 3년 | 테스트·검증 인접 | — | SQL, 도구, 이해관계자 관리 |\n| Data Analyst | 운영 분석 3년 | 검증 경험 인접 | — | SQL, 분석 도구 |\n| Customer/Product Operations | 운영 분석 3년 | 테스트·결함 보고 | — | 도메인 지식, 도구 |\n\n> Gap 셀이 없는 이유: JD가 없어 확정된 필수 요건이 없고, SQL 등 미확인 항목은 부재가 확인되지 않았습니다. 공고 확인 후 재분류 필요.\n\n---\n\n### Unknowns\n- 각 역할군의 실제 원격 가능 여부 (공고 미확인)\n- 영어 요건 수준 (PREFER 이상 여부)\n- 테스트 설계·도구·SQL·보고 방식 본인 경험 유무\n\n### Sources\n없음 — 웹 접근 불가; 위 내용은 역할군 일반 패턴 기반 INFERENCE\n\n### Next Action\nOperations Analyst 또는 QA/Test Analyst 공고 1개를 찾아 붙여넣으면 → W04로 요건 정밀 분석 진행 가능합니다."
+        }
+      ],
+      "deterministic_roundtrip": null,
+      "run": 2,
+      "tier": "critical",
+      "attempt_path": "/Users/jhwang/Desktop/AI Career 전자책/career-playbook-agent/work/review-v2/baseline/reports/runs/claude/discovery-unknown-table/run-2/attempt-1",
+      "prior_attempts": []
+    },
+    "manual_review": {
+      "scope": "AGREE_ACTUAL_BEHAVIOR_FAILURE: 원격 공고 다수 존재 asserts unsupported current availability/scale without a posting or web source. 미확인 and a global INFERENCE caveat do not support that availability claim.",
+      "cells": "DISPUTED_JUDGE_RATIONALE: the response explicitly leaves every Gap cell empty, explains unknown is not absence, and describes documentation as 확인 필요. This is semantically unconfirmed; omission of documentation from the Unknown table may be a format/completeness issue, but is not clear Unknown-to-Gap promotion. Preserve automatic FAIL and complete response for human review.",
+      "canonical_sources": [
+        "core/workflows/w03-opportunity-discovery.md:18",
+        "core/workflows/w03-opportunity-discovery.md:23",
+        "core/workflows/w03-opportunity-discovery.md:33",
+        "core/principles/research-policy.md:8",
+        "core/principles/research-policy.md:29",
+        "core/principles/evidence-policy.md:41"
+      ],
+      "subject_rerun": false,
+      "automatic_verdict_changed": false
+    }
+  },
+  "usage_snapshot": {
+    "codex_5h_used_percent": 22,
+    "codex_weekly_used_percent": 60,
+    "ordinary_usage_allowed": true,
+    "claude_remaining_quota": "NOT_EXPOSED",
+    "claude_list_cost_increment_usd_not_account_charge": 1.1739012
+  },
+  "scope": {
+    "runtime_changed": false,
+    "harness_changed": false,
+    "D_E_F_applied": false,
+    "browser": "EXCLUDED_BY_USER",
+    "reference_discovery": "NOT_VERIFIED",
+    "dual_judge_agreement_rate": "NOT_MEASURED; manual disagreements are recorded, not a second model judge"
+  }
+}
