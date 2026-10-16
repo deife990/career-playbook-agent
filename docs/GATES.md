@@ -1,24 +1,31 @@
-# Review improvement gate — 2026-10-15
+# Review improvement gate — 2026-10-16
 
-Protocol v2 tooling passes 201 structural/deterministic tests and static checks. C's strengthened
-baseline and D/E/F runtime changes are pending. The rc.7 evidence below describes its original
-n=1 protocol; it does not certify protocol v2 or a future rc.8. New readiness rejects missing
-repetitions, wrong judge routing, changed prompts/configuration and failed assertions.
-[Preregistered criteria](review-improvement-protocol.md).
+**Strengthened C baseline COMPLETE_WITH_AUTOMATIC_FAILURES:** 260/260 verdicts, ERROR/missing 0.
+ChatGPT records 130 PASS; Claude records 119 PASS / 11 automatic FAIL. Actual behavior failures
+remain and block release acceptance. This is completion of baseline evidence, not readiness PASS.
+Runtime packages, harness and frozen scenario/prompt/protocol bytes were not changed during C.
 
-## Latest C checkpoint — 2026-10-15, 168/260
+## Completed C evidence
 
-ChatGPT has 87 PASS / 0 FAIL; Claude has 73 PASS / 8 automatic FAIL. Neither host has an
-unresolved ERROR. Critical completed-run pass rates are 81/81 and 68/75; standard rates are
-6/6 and 5/6. The latest 30 completed runs all passed. C remains incomplete with 92 runs left;
-all package/suite/protocol and preserved-verdict audits pass. Harness and runtime bytes are
-unchanged. D/E/F changes remain held. The last Codex snapshot showed 89% five-hour usage,
-so execution waits at a saved batch boundary until the indicated 23:51 KST reset. A thread
-heartbeat will resume eligible missing/error runs in batches of up to six after reset, without
-rerunning behavioral failures. [Current results, disputes, estimates and resume location](c-stage-checkpoint-168-2026-10-15.md).
-This supersedes the earlier partial progress counts below, not their immutable evidence.
+critical: ChatGPT 123/123 PASS; Claude 113/123 PASS (10 FAIL). standard: ChatGPT 7/7 PASS;
+Claude 6/7 PASS (1 FAIL). Critical uses three repetitions and cross-platform judges; standard
+uses one repetition and same-platform judges. These are separate host baselines, not a ranking.
+The context is preloaded; autonomous reference discovery is NOT VERIFIED. Browser testing is
+EXCLUDED_BY_USER. Structural/document and deterministic tooling tests are not behavior evidence.
 
-## C resumption review — 2026-10-15
+[Final results, complete transcripts, failure reviews and error history](c-stage-results-2026-10-16.md).
+[Current implementation progress](review-improvement-progress.md).
+[Preregistered criteria](review-improvement-protocol.md) and the
+[post-start E clarification](e-stage-acceptance-clarification-2026-10-15.md) require existing actual
+failures resolved plus zero new failures. D/E/F runtime changes remain unapplied in this C work.
+No main merge, tag, push or release upload was performed. The previous recurring resumption was
+deleted at the user's request; no new job was created.
+
+The records below are historical checkpoints under their own dates and protocols. Their counts
+do not supersede the completed C matrix, and original rc.7 n=1 readiness does not certify a
+changed package or the strengthened protocol. Original evidence remains preserved.
+
+## Historical C resumption review — 2026-10-15
 
 The two original ERRORs were provider account-quota interruptions, not demonstrated harness or
 network defects. Both resumed successfully under the unchanged package/suite/protocol: ChatGPT's
@@ -35,7 +42,7 @@ an unsupported confirmed round number. Original automatic verdicts are retained,
 pre-C criteria and explicitly requires resolution of baseline failures plus zero new failures.
 This post-start clarification does not change the frozen C rubric or evaluation fingerprints.
 
-## Strengthened baseline interruption
+## Historical strengthened baseline interruption
 
 C's earlier checkpoint completed 17 passing ChatGPT runs plus one judge ERROR; Claude completed 17 PASS, three automatic
 FAIL and one subject ERROR. Full planned denominator is 130 per host. Claude account reset message:
@@ -45,7 +52,7 @@ This is **INCOMPLETE_WITH_REAL_FAILURES**, never readiness PASS. Original rc.7 r
 unchanged. D's reachability tooling is prepared; runtime cleanup E/F remain unapplied until the
 baseline finishes. See [progress audit](../evals/reports/review-v2-baseline-progress.json).
 
-# Current v1.2 candidate — 2026-10-14
+# Historical v1.2 candidate — 2026-10-14
 
 **1.2.0-rc.7** implementation, guides and deterministic runtime archives are complete.
 189 structural/document-contract lint and deterministic developer-tool/state tests and all static checks pass. These checks do not measure model behavior. Both hosts passed all fourteen EVD cases

@@ -1,0 +1,120 @@
+{
+  "as_of": "2026-10-16T02:17:29.879985+00:00",
+  "model_calls": 0,
+  "status": "PASS",
+  "errors": [],
+  "historical_unique_terminal_rows_checked": 260,
+  "checkpoints": [
+    {
+      "path": "evals/reports/c-stage-resume-audit-04-2026-10-15.json",
+      "rows_checked": 138,
+      "sha256": "a9ffa3b7d31a3046cadabef449eb90fd41f9f31b92a6918bbaaebcd45723ee55"
+    },
+    {
+      "path": "evals/reports/c-stage-resume-audit-05-2026-10-15.json",
+      "rows_checked": 150,
+      "sha256": "c84c612be2aad6cf139d74463a39fc096a01e82b74f27131a5ed9a571136c25b"
+    },
+    {
+      "path": "evals/reports/c-stage-resume-audit-06-2026-10-15.json",
+      "rows_checked": 162,
+      "sha256": "a50d78b3c166a959ef6c61654da3fe8a71bcee844f6e040cbedac90f47e63046"
+    },
+    {
+      "path": "evals/reports/c-stage-resume-audit-07-2026-10-15.json",
+      "rows_checked": 168,
+      "sha256": "59a7566f3d2ab65f81545fb13cdeae572085e21db0bc82bc079f85f094b1ba2b"
+    },
+    {
+      "path": "evals/reports/c-stage-resume-audit-08-2026-10-16.json",
+      "rows_checked": 174,
+      "sha256": "c42bf2b5052011572f5221d91d54756644db483a723a88298212803b0b71fe79"
+    },
+    {
+      "path": "evals/reports/c-stage-resume-audit-09-2026-10-16.json",
+      "rows_checked": 180,
+      "sha256": "32dcea4ea095473f92f2dd8083ee769b164fb9063bed35fa1158e53336f104dc"
+    },
+    {
+      "path": "evals/reports/c-stage-resume-audit-10-2026-10-16.json",
+      "rows_checked": 186,
+      "sha256": "dad16d2d8e46400c0cdc08da48bd84c8666712c3dff62df1ef1d5f10b8156de6"
+    },
+    {
+      "path": "evals/reports/c-stage-resume-audit-11-2026-10-16.json",
+      "rows_checked": 190,
+      "sha256": "33dd326213bdebade0273fc221b7ea4af1107347e73b4cabf0af543e83723db0"
+    },
+    {
+      "path": "evals/reports/c-stage-resume-audit-12-2026-10-16.json",
+      "rows_checked": 196,
+      "sha256": "4fbcaee85a3f12b04b40064c5be10b0565b36da3aa7a6d5a2bc4d26a41448fc3"
+    },
+    {
+      "path": "evals/reports/c-stage-resume-audit-13-2026-10-16.json",
+      "rows_checked": 200,
+      "sha256": "9fd7f5518b32f544b87802806921424cae19bb20287199b26f9315b8d1e2334d"
+    },
+    {
+      "path": "evals/reports/c-stage-resume-audit-14-2026-10-16.json",
+      "rows_checked": 206,
+      "sha256": "2584b118271387697848f47b690793f71ec034a07bd2505d629098cdbf34afe6"
+    },
+    {
+      "path": "evals/reports/c-stage-resume-audit-15-2026-10-16.json",
+      "rows_checked": 212,
+      "sha256": "c94ace06bfeec5324ff13b7c8dd96548285e41ec7440e74b5bcaa575e4c863d8"
+    },
+    {
+      "path": "evals/reports/c-stage-resume-audit-16-2026-10-16.json",
+      "rows_checked": 218,
+      "sha256": "52fdc304bd99c7116cc97e9fe845bbbd42e6f7a87a04ade55f46502176299c85"
+    },
+    {
+      "path": "evals/reports/c-stage-resume-audit-17-2026-10-16.json",
+      "rows_checked": 224,
+      "sha256": "982599605ffa246119c1a60734dc0826d46ddc1756f0286ce638101feab486da"
+    },
+    {
+      "path": "evals/reports/c-stage-resume-audit-18-2026-10-16.json",
+      "rows_checked": 230,
+      "sha256": "1e748598e3bf2f410f466d832c4a7ff302152aa27bddb0f2735f85383fef8187"
+    },
+    {
+      "path": "evals/reports/c-stage-resume-audit-19-2026-10-16.json",
+      "rows_checked": 236,
+      "sha256": "27186018f9e7a2399d5e60fc90a479f23a1a0d2616f5219e204e20f4cf3ab8bd"
+    },
+    {
+      "path": "evals/reports/c-stage-resume-audit-20-2026-10-16.json",
+      "rows_checked": 242,
+      "sha256": "1c137512186e01efcae9780207113de555806a37130ef87e460f19932df1533b"
+    },
+    {
+      "path": "evals/reports/c-stage-resume-audit-21-2026-10-16.json",
+      "rows_checked": 248,
+      "sha256": "b820d84e6bf2b75c1e4a19aa3a3736248c8f1938e5222063f808785e483e7244"
+    },
+    {
+      "path": "evals/reports/c-stage-resume-audit-22-2026-10-16.json",
+      "rows_checked": 254,
+      "sha256": "49f68b4db2cb81dadaf70273994658c8ee7bc37c4ea03ba8af29b46666e79179"
+    },
+    {
+      "path": "evals/reports/c-stage-resume-audit-23-2026-10-16.json",
+      "rows_checked": 260,
+      "sha256": "3953cf68f0fcd116286a4659e24f0d66419a92e02e326bdd8ba3fb2b4e1c0e47"
+    },
+    {
+      "path": "evals/reports/chatgpt-review-v2-baseline-checkpoint-168-2026-10-15.json",
+      "rows_checked": 87,
+      "sha256": "e4d42b1cda0bb518b5c427876f9fdd033f01e47dd433d4e2f54fb614170ca60f"
+    },
+    {
+      "path": "evals/reports/claude-review-v2-baseline-checkpoint-168-2026-10-15.json",
+      "rows_checked": 81,
+      "sha256": "b610c7c403fad2be7dd0e1d41ea7d59cafa29411be7409cb311121d9e09a1e56"
+    }
+  ],
+  "scope": "Historical response hashes/verdicts and full preserved failures; no behavioral regrading."
+}

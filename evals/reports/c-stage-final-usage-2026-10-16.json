@@ -1,0 +1,15 @@
+{
+  "as_of": "2026-10-16T02:17:23.606Z",
+  "primary": {
+    "usedPercent": 59,
+    "windowDurationMins": 300,
+    "resetsAt": 1792132531
+  },
+  "secondary": {
+    "usedPercent": 40,
+    "windowDurationMins": 10080,
+    "resetsAt": 1792662671
+  },
+  "ordinaryUsageAllowed": true,
+  "scope": "Account-wide observed usage, not evaluation-specific consumption or billing. Claude remaining quota unavailable. No reset credits or purchases used."
+}
