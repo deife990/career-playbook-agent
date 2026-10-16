@@ -1,4 +1,4 @@
-# Review improvement progress — 2026-10-15
+# Review improvement progress — 2026-10-16
 
 ## Completed
 
@@ -16,20 +16,21 @@
   its reset; both original ERRORs were provider quota interruptions and were completed on the
   unchanged package, suite and protocol. Partial original responses and failures are archived.
 
-## Current C state (checkpoint 168 / 260)
+## Current C state (checkpoint 230 / 260)
 
 | Host | Completed / planned | PASS | FAIL | Unresolved ERROR | Remaining |
 |---|---:|---:|---:|---:|---:|
-| ChatGPT | 87 / 130 | 87 | 0 | 0 | 43 |
-| Claude | 81 / 130 | 73 | 8 | 0 | 49 |
+| ChatGPT | 118 / 130 | 118 | 0 | 0 | 12 |
+| Claude | 112 / 130 | 102 | 10 | 0 | 18 |
 
 Rates for each host are read only against that host's own baseline. Judge platforms differ
 (ChatGPT subjects are judged by Claude on critical scenarios and Claude subjects by ChatGPT),
 so a gap between the two hosts is not evidence about relative model quality. E decisions compare
 each host's candidate with its own baseline, not one host with the other.
 
-The 8 Claude failures are real automatic verdicts and are not relaunched. See the
-[checkpoint](c-stage-checkpoint-168-2026-10-15.md), the
+The 10 Claude automatic failures are retained and are not relaunched. The latest evidence is
+[checkpoint 230](../evals/reports/c-stage-resume-audit-18-2026-10-16.json). Earlier context is in the
+[checkpoint 168](c-stage-checkpoint-168-2026-10-15.md), the
 [failure review](c-stage-pre-resume-review.md) and the
 [E acceptance clarification](e-stage-acceptance-clarification-2026-10-15.md).
 
@@ -50,8 +51,8 @@ generic CLI errors halt the underlying harness before another repetition.
 
 ## Remaining work
 
-92 runs remain (ChatGPT 43, Claude 49; at least 198 subject/judge calls). Resume on the same
-immutable baseline packages after the reset, in batches of at most six runs, with usage checked at
+30 runs remain (ChatGPT 12, Claude 18). Execution has resumed on the same immutable baseline
+packages, in batches of at most six runs, with usage checked at
 each batch boundary. Only missing or ERROR runs are executed; recorded PASS/FAIL results are never
 rerun. Equivalent manual command:
 
