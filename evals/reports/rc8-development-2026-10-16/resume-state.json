@@ -1,0 +1,32 @@
+{
+  "timestamp": "2026-10-16T07:35:58.662520+00:00",
+  "scope": "same approved G2 diagnostic, no extra round",
+  "state": "QUOTA_HOLD_WITH_QUARANTINED_ERROR",
+  "usage_last_observed": {
+    "codex_five_hour": 88,
+    "codex_weekly": 59,
+    "reset_kst": "2026-10-16T20:55:20+09:00"
+  },
+  "require_fresh_usage_check": true,
+  "no_calls_if_used_percent_at_least": 85,
+  "platform": "claude",
+  "package_root": "work/review-v2/rc8-e-g2-restored/packages/claude",
+  "lock": "evals/reports/rc8-development-2026-10-16/selective-claude-execution-lock.json",
+  "approved_execution_fingerprint": "435e29bfcf8047ca2fa6e110e37827aed422bad9df1cf7a502b565dd3c217985",
+  "canonical_ledger": "work/review-v2/variant-ledger",
+  "unstarted_scenarios": [
+    "var-debrief-round-unprovided",
+    "var-debrief-speaker-candidate",
+    "var-debrief-speaker-interviewer",
+    "var-positioning-health-admin",
+    "var-positioning-support-role",
+    "var-resume-accounting-support"
+  ],
+  "max_new": 6,
+  "quarantined_error": "evd-07-privacy",
+  "subject_retry_authorized": false,
+  "remaining_minimum_calls": 15,
+  "holdout_calls": 0,
+  "no_automation": true,
+  "preserve_existing_verdicts": true
+}

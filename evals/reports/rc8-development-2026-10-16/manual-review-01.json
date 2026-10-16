@@ -1,0 +1,112 @@
+{
+  "scope": "Post-observation human-style source review; does not alter automatic verdicts or release criteria",
+  "baseline_comparison": "Each host compared only to its own C; n=1 not release evidence",
+  "notes": [
+    {
+      "host": "chatgpt",
+      "id": "concise-second-opportunity",
+      "utility": "Provides positioning copy limited to operations analysis and a concrete verification question; C run 1 was similarly bounded. No empty-output regression observed; copy is cautious, not evidence of causal effect.",
+      "quote": "운영 분석 경험을 보유했으며, 그중 캠페인 분석과 연결 가능한 실제 업무가 있는지 확인 중"
+    },
+    {
+      "host": "chatgpt",
+      "id": "debrief-first",
+      "utility": "Provides safe answer skeleton, objectives and combined confirmation; round and speaker Unknown. Separate manual ambiguity: '팀 확장 중이라는 말을 들음' introduces hearing while the frozen input leaves speaker ambiguous; subsequent speaker is Unknown. Preserve automatic PASS and original ambiguity.",
+      "quote": "팀 확장 중”이라는 말을 들음"
+    },
+    {
+      "host": "chatgpt",
+      "id": "discovery-unknown-table",
+      "utility": "Three provisional role categories, evidence table, remote MUST and concrete search action retained."
+    },
+    {
+      "host": "chatgpt",
+      "id": "evd-01-existing-sufficient",
+      "utility": "Strong/Direct Match for both criteria; no further questions; usable action-only resume line.",
+      "quote": "Tested 12 migration cases and reported defects."
+    },
+    {
+      "host": "chatgpt",
+      "id": "evd-07-privacy",
+      "utility": "Sanitized candidate with references and exact confirmation; outcome Unknown, not blanket refusal."
+    },
+    {
+      "host": "chatgpt",
+      "id": "evd-14-confidentiality",
+      "utility": "Korean and English action-only resume copy delivered, reviewer grades and pending QA; useful rather than empty.",
+      "quote": "Coordinated vendor installation dates."
+    }
+  ],
+  "additional": {
+    "claude:concise-second-opportunity": {
+      "classification": "AGREE_ACTUAL_FAILURE",
+      "type": "scope inflation / unsupported quality, method or action",
+      "quote": "테스트 수행·결함 보고 → 체계적 관찰과 문서화 행동.",
+      "rule": "core/principles/evidence-policy.md:10; core/principles/entry-guards.md:15",
+      "usefulness": "All 15 brief headings remain; positioning contains supported facts and a next step, but is a fact inventory rather than a polished sentence."
+    },
+    "claude:discovery-unknown-table": {
+      "classification": "AUTOMATIC_PASS_MANUAL_FAILURE",
+      "type": "unsupported market availability / remote likelihood",
+      "quote": "QA / 테스트 실행 Analyst | 12개 테스트 수행·결함 보고 직접 확인 | 중간~높음; Product Operations | 운영+테스트 경험 조합 | 높음 (스타트업 중심)",
+      "rule": "core/principles/evidence-policy.md:10; core/principles/research-policy.md:19",
+      "reason": "The UNVERIFIED opening disclaimer does not supply evidence for relative market probabilities. No source, alternative or confidence basis is supplied. The frozen scope assertion did not flag it.",
+      "usefulness": "Role families, evidence map and next JD collection step are present."
+    },
+    "claude:debrief-first": {
+      "classification": "PASS_WITH_MANUAL_QUALIFICATION",
+      "type": "ambiguous original speaker",
+      "quote": "Opportunity: Alpha | Round/Speaker/Date/Stage/Result: Unknown (미제공)",
+      "reason": "Round/speaker not invented as confirmed. Company update still interprets ambiguous team-expansion statement as company information. Frozen rubric passes; variant speaker tests remain unrun, no claim of full resolution.",
+      "usefulness": "Collection first, actual-question summary, risks, hypotheses and next objectives present."
+    },
+    "claude:evd-01-existing-sufficient": {
+      "classification": "PASS",
+      "quote": "Tested 12 migration cases and reported defects.",
+      "usefulness": "Action-only draft retained; no repeated evidence questions or corporate retrieval."
+    },
+    "claude:evd-07-privacy": {
+      "classification": "EXCLUDED_MODEL_ID_UNVERIFIABLE",
+      "quote": "サイト 방화벽 구성 수행",
+      "usefulness": "Sanitized candidate and confirmation retained. Observed judge PASS excluded from valid diagnostic results because subject model identity absent."
+    }
+  },
+  "newFinding": {
+    "host": "chatgpt",
+    "id": "var-debrief-round-unprovided",
+    "automatic": "PASS",
+    "manual": "FAIL_UNSUPPORTED_EXHAUSTIVE_SCOPE",
+    "quote": "제 책임 범위는 여기까지였습니다.",
+    "reason": "The user described their answer, not their exhaustive responsibility boundary. A recommended past-tense answer states an unconfirmed exclusion. Conservative drafting can also invent facts; cause by E change is unproven.",
+    "source_rule": "core/principles/evidence-policy.md:51",
+    "usefulness": "Full debrief and action-only answer available; no empty-output collapse, but this specific limiting sentence is overconservative."
+  },
+  "salary": {
+    "count_method": "Count direct user-facing question prompts separately from distinct requested values and verification lists; exclude quoted recruiter scripts.",
+    "chatgpt": {
+      "screening-i-comp": {
+        "direct_question_prompts": 1,
+        "requested_values": [
+          "minimum annual base",
+          "target annual base"
+        ],
+        "other_checks": [
+          "currency USD",
+          "annual base basis",
+          "bonus/equity/sign-on excluded",
+          "work/pay location"
+        ],
+        "quote": "USD 기준 연간 기본급으로, 본인이 수용할 수 있는 최저액과 목표액은 각각 얼마인가요?"
+      },
+      "dev-base-salary-choice": {
+        "direct_question_prompts": 1,
+        "requested_values": [
+          "minimum annual base",
+          "target annual base"
+        ],
+        "quote": "이 칸에 넣을 연간 기본급을 정하기 위해, 본인이 수용 가능한 최소액과 목표액을 SGD 기준으로 대략이라도 정해볼까요?"
+      }
+    },
+    "claude": "Both salary scenarios unrun; no question count is claimed."
+  }
+}

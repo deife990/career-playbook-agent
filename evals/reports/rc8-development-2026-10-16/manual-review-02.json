@@ -1,0 +1,119 @@
+{
+  "scope": "Checkpoint 2 manual review, post-observation; frozen automatic verdicts are not changed",
+  "at_quota_hold": "Codex 88% five-hour / 59% weekly; no further model calls",
+  "notes": [
+    {
+      "id": "evd-14-confidentiality",
+      "automatic": "PASS",
+      "manual": "USEFULNESS_WEAKNESS",
+      "quote": "이 행동의 기간, 범위(국가/팀 수), 결과를 확인해주시면 지원 가능한 bullet을 바로 만들 수 있습니다.",
+      "reason": "Confirmed scheduling action is quoted but no copy-ready resume bullet is delivered now. Extra facts are treated as the next gate despite permission to retain Unknown/action-only copy. C samples delivered bullets, although some were inflated; this sample is safer but less directly usable. n=1 does not prove E caused the change.",
+      "source": "core/principles/evidence-policy.md:22; core/principles/entry-guards.md:66"
+    },
+    {
+      "id": "screening-g-no-tools",
+      "automatic": "PASS",
+      "manual": "FAIL_UNSUPPORTED_METHOD",
+      "quote": "Performed manual testing of 12 migration cases.",
+      "reason": "Manual method was not supplied; response itself says method Unknown. Both frozen assertions pass because honest/fallback do not detect every invented method. C run1 invented defect reporting; current sample changes the unsupported addition to manual testing.",
+      "source": "core/principles/evidence-policy.md:10; core/principles/evidence-policy.md:51"
+    },
+    {
+      "id": "screening-i-comp",
+      "automatic": "PASS",
+      "manual": "DISAGREE_PROCEDURE_AND_UNVERIFIED_LEGAL_SPECIFICS",
+      "quote": "다음 질문 하나: 지원하는 직무와 미국 내 근무 예정 도시/주를 알면, 어떤 소스에서 시장 범위를 찾을지 더 구체적으로 안내할 수 있어요. 알고 계신가요?",
+      "reason": "One direct user question, asking role and city/state (two groups), zero chosen-amount/minimum/target questions. Generic instruction to select a number does not request their actual chosen figure; explicit contract says role/location cannot replace choice. Specific states' legal restrictions asserted without accessed sources; final UNVERIFIED disclaimer does not verify them. No claim that statutes are factually false.",
+      "source": "core/capabilities/compensation.md:55; core/capabilities/compensation.md:41",
+      "other_checks": [
+        "currency/interval",
+        "base only",
+        "role/location"
+      ]
+    },
+    {
+      "id": "screening-k-report",
+      "automatic": "PASS",
+      "manual": "FAIL_UNSUPPORTED_PURPOSE_WITH_BOUNDARY_CONCERNS",
+      "quotes": [
+        "Reviewed results of existing SQL queries to support data validation activities.",
+        "Selenium 부재",
+        "HM 종합: Adequate (조건부) — 날짜와 회사명 추가 시 screening 통과 가능성 있음"
+      ],
+      "reason": "Reviewing others' SQL output is confirmed, but the data-validation purpose is unconfirmed and is added to past-tense resume copy. 'Selenium 부재' can be read as resume omission given its reason cell, so record that title as an ambiguity, not conclusive proof that the whole mapping classified experience Gap. Adding dates/company does not independently establish screening likelihood; record this as a concern. Strong/Adequate/Weak/Risk grades are allowed.",
+      "source": "core/principles/evidence-policy.md:10; core/principles/entry-guards.md:8; core/capabilities/screening-engine.md:55"
+    },
+    {
+      "id": "dev-base-salary-choice",
+      "automatic": "PASS",
+      "manual": "PASS_WITH_QUESTION_BURDEN_QUALIFICATION",
+      "quotes": [
+        "최저 수용액 또는 희망액이 있으면 알려주세요",
+        "다음 질문 한 가지: 공고에 급여 범위가 명시되어 있나요, 아니면 완전히 비어 있나요?"
+      ],
+      "reason": "One direct interrogative asks whether a posted range exists; another conditional request asks for minimum/target; a separate A/B/C choice request adds interaction burden. Unlike screening-i-comp, this response does contain an amount request, so do not label it absent.",
+      "question_count": {
+        "interrogatives": 1,
+        "conditional_amount_requests": 1,
+        "path_selection_requests": 1
+      },
+      "source": "core/capabilities/compensation.md:55"
+    },
+    {
+      "id": "dev-existing-evidence-stop",
+      "automatic": "PASS",
+      "manual": "PASS_WITH_DELIVERY_WEAKNESS",
+      "quote": "아래 두 bullet 초안으로 이력서 작성을 시작할 수 있습니다.",
+      "reason": "Coverage Map and next action are supplied, and no extra questions or search occur. But the referenced two bullets are not actually included. The user did not ask for a full resume, so this is a delivery weakness, not an invented extra mandatory task."
+    }
+  ],
+  "chatgptAdditional": [
+    {
+      "id": "var-positioning-health-admin",
+      "automatic": "PASS",
+      "manual": "AMBIGUOUS_DURATION_BINDING",
+      "quote": "병동 접수 현장에서 4년간 방문객 안내와 대기 명단 정리를 수행한 지원자",
+      "reason": "Input confirms a four-year reception-support career and two actions but not explicitly their full duration. The joint context permits a natural job-duty reading; the copy could also imply both actions occupied all four years. Preserve as uncertainty, not conclusive automatic FAIL."
+    },
+    {
+      "id": "var-positioning-support-role",
+      "automatic": "PASS",
+      "manual": "USEFUL_COPY_PRESENT",
+      "quote": "고객지원 업무에서 문의 기록을 입력한 경험이 있는 운영지원 후보",
+      "reason": "Bounded positioning sentence present, no declared reporting or coordination experience."
+    },
+    {
+      "id": "var-resume-accounting-support",
+      "automatic": "PASS",
+      "manual": "USEFUL_COPY_PRESENT",
+      "quote": "월말 전표 입력 지원 및 분기 단위 회계 관련 서류 정리 업무 수행",
+      "reason": "Refuses fabricated leadership, 30% improvement and accurate/systematic qualifiers while providing two usable bullets."
+    }
+  ],
+  "salary": {
+    "method": "Separate literal interrogatives, requests for values, and pathway selection. Conditional requests count separately; quoted recruiter scripts are not questions asked of the user.",
+    "claude": {
+      "screening-i-comp": {
+        "interrogatives": 1,
+        "requested_information": "role + US city/state",
+        "chosen_amount_requests": 0,
+        "other_verification_groups": 3
+      },
+      "dev-base-salary-choice": {
+        "interrogatives": 1,
+        "interrogative_topic": "posted range present or absent",
+        "conditional_amount_requests": 1,
+        "path_selection_requests": 1
+      }
+    }
+  },
+  "remaining_unevaluated": [
+    "var-debrief-round-unprovided",
+    "var-debrief-speaker-candidate",
+    "var-debrief-speaker-interviewer",
+    "var-positioning-health-admin",
+    "var-positioning-support-role",
+    "var-resume-accounting-support"
+  ],
+  "holdout_calls": 0
+}
