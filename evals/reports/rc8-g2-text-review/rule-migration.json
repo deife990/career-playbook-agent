@@ -10,72 +10,72 @@
     {
       "path": "core/principles/entry-guards.md",
       "before_sha256": "af3ce7b503cc784db0f0ac8dbb246bc68c4cf148362a8a4743764b31d0fc2a52",
-      "after_sha256": "02706d03c4b1591904f79423a88767a932cbbb1f531ca6164352e43346ae436e"
+      "after_sha256": "9fe8b0fbd2ee2cb39183b79b93fc0d30f741f73bfebff19af96693f894a9c017"
     },
     {
       "path": "adapters/claude/careerpilot/SKILL.md",
       "before_sha256": "21517127934a3c65095d67f182eb29982b5528b24fbb46f7b79a81cf1b616549",
-      "after_sha256": "44f5f21f7d4ca8a7ab435bf803fa22e28d11cb3a81beb39c2c8b36453ad3da1c"
+      "after_sha256": "cc085e81c6c411660f17527011df6b61370941e581af7befafa005b8b695067a"
     },
     {
       "path": "adapters/chatgpt/skills/application-prep/SKILL.md",
       "before_sha256": "92fe8aa9c51aa38ce514fd1249a2e55b2832c1b889cdff09d2659dc8f1b42dad",
-      "after_sha256": "16cda28786442e83b571341715e0b6a1ec60c4c676f3e576fe85dd82ec54971a"
+      "after_sha256": "f66aeb4c592f03f1d91d28f540812966a588decff442a05ae083250414df1e80"
     },
     {
       "path": "adapters/chatgpt/skills/career-setup/SKILL.md",
       "before_sha256": "6093a5657c1657eef27c5aa9b4bb84eb6163487436314e396a112c9a0ecf249c",
-      "after_sha256": "cfb6531be8c594043fa687dcb2389372c0f3aacf494f0ff47a05da636e2ad2fa"
+      "after_sha256": "7b6da47cd62808a8b72ea439883870602ec04e1cef52b62664cf04a6d1673075"
     },
     {
       "path": "adapters/chatgpt/skills/career-state/SKILL.md",
       "before_sha256": "4464c0e9ff1f6838abfbb3f0d7a6e30abfc58cbc3fdb4462d70dd07b613c1ae7",
-      "after_sha256": "b0b4485727793caf140cfcd2b75c5de3d8fad30298611ffcee4bf93b01b321a4"
+      "after_sha256": "6cb962ef74b2f0bd0ca2ee89a45498b8e713d28e92651337e56cbd7c2b05b7ed"
     },
     {
       "path": "adapters/chatgpt/skills/career-strategy/SKILL.md",
       "before_sha256": "4f2963b6bc381a49aadb120289b53fbc9838083a7762599f36c8729cda1863cf",
-      "after_sha256": "b775f53f825900d5d0afc0133fc50440dacb8a8463ada829a2aa7b9c2b304a0c"
+      "after_sha256": "dfa7154ffb26253fff5cd4680b2e0f5005f8f4a9519cfa13575358c49b85afa2"
     },
     {
       "path": "adapters/chatgpt/skills/careerpilot-router/SKILL.md",
       "before_sha256": "c9deda97eb5aba02c51cf4d3f403a2d519af9ab931f2e26f2d6ff5fe805e1fdd",
-      "after_sha256": "e7fda0cc43f0ceb575980b3f87eba559f5f730bc7b085a8dbbd7ec208686245e"
+      "after_sha256": "52eb68af68ce2434ba16eff575765047ed8586a3443cff2eb0db5108ebaa04cb"
     },
     {
       "path": "adapters/chatgpt/skills/experience-mining/SKILL.md",
       "before_sha256": "860d746e52159e90bf476419819c8eb6688ff3744fd1c3a6a49f368bd51dc0b7",
-      "after_sha256": "92709316b077ed9e46b243eee20d794a9b48c29b1a32cf55c6fbf854c3482b64"
+      "after_sha256": "a48b01ced6d7bd7d2933f44493c4b5bafa20539a0c5c15440519f6f9d40cc45e"
     },
     {
       "path": "adapters/chatgpt/skills/interview-debrief/SKILL.md",
       "before_sha256": "abc5fc7cd83d8ebb80f7864977b0b54c6cc564f6d008d87e7aa2cf9d29ec6d27",
-      "after_sha256": "aee34af0d90132dddccd956b7c996b09a8c62eac8f612d2d14f86fb871b782b7"
+      "after_sha256": "cd74fd5c6577a0c402f75b5c0319e6228e1633ce1cdc2182dec19281d83775a5"
     },
     {
       "path": "adapters/chatgpt/skills/interview-prep/SKILL.md",
       "before_sha256": "2b4ed49326ac24198d63afbab875b4f208eba9ce3516aa2a34525eadded8ff60",
-      "after_sha256": "5d083ad602c0d7b6396ccd2846aab4f50a83c6362dff786cdc577d33e8218b33"
+      "after_sha256": "64ba79a32c4fc7b02bfc0e29aa41e6c8d93ad8ce0566dc50d08b44bbd6cb2dd8"
     },
     {
       "path": "adapters/chatgpt/skills/job-intelligence/SKILL.md",
       "before_sha256": "958eeeda81197631931f8f2bdad3048eba814501e06eabf2585b294ef143476b",
-      "after_sha256": "d305a55ba86aa3a4dcd85dbb74c3a2dacbcbdba8ea3d8139ba3d69c40195507c"
+      "after_sha256": "b1b399627e8bdcbcecc8da5a66206ed160aab402894040f97e2d518ab5283d3e"
     },
     {
       "path": "adapters/chatgpt/skills/mock-interview/SKILL.md",
       "before_sha256": "2a8f3d67ee0b5515837ce4bb980dc134ee1109935745f456c8cb0932812983fe",
-      "after_sha256": "a753d57d099abee6cd3b953669360655779aa1a0f72ef4c475d5bef85f2708e0"
+      "after_sha256": "c960734ccca733d0c28342e887dffa25c6e863792935e65bf8f0852b38329cc6"
     },
     {
       "path": "adapters/chatgpt/skills/offer-decision/SKILL.md",
       "before_sha256": "79ed5cd48ac0c922b806ad34eb83654bfc2161588fb123020f2122999dca450e",
-      "after_sha256": "b72ed1776e6502a96ac168856a1eaf8e7a07e9043e77a7c6485a5c8bd037aa02"
+      "after_sha256": "5629c8a0ab74cdf23cc1f561bd467154ea7417012c36c7c09a0b2edade5b19c4"
     },
     {
       "path": "adapters/chatgpt/skills/opportunity-discovery/SKILL.md",
       "before_sha256": "b9e7a61777cfd9d2327202077627f248be279f53157b30b3c9364253915a810c",
-      "after_sha256": "18214bec1833da08730b43f77f2ff588a9dbbcc49f5de89d032ed1bf010f9f89"
+      "after_sha256": "5cf1e1a73c1e6aea21f7c022100cbb6aa9490b136ab3b4fb3cb507fd209d0283"
     }
   ],
   "original_guard_blocks": 16,
@@ -171,10 +171,10 @@
         {
           "path": "core/principles/entry-guards.md",
           "line": 24,
-          "text": "- During an ACTIVE mock, a procedural question counts as the one question. Never ask whether\n  to continue/end and an interview question in the same turn. An interim coaching request may\n  receive a brief deferral plus ONE interviewer question; no separate continuation question.\n  Each interviewer question asks for one thing."
+          "text": "- During an ACTIVE mock, a procedural question counts as the one question. Never ask whether\n  to continue/end and an interview question in the same turn. An interim coaching request may\n  receive a brief deferral plus ONE interviewer question; no separate continuation question.\n  Each interviewer question asks for one thing (not background plus motivation together)."
         }
       ],
-      "disposition": "preserved; wording compressed/generalized or examples moved"
+      "disposition": "삭제→복원: one-question parenthetical restored verbatim in entry"
     },
     {
       "id": "guard-06",
@@ -474,6 +474,6 @@
       "disposition": "preserved; Classification cases moved; outcome support clarified"
     }
   ],
-  "author_review": "No normative rule dropped. Cases relocated/generalized; tighter premise/field/contracts added.",
-  "limitation": "Exhaustive text-block accounting plus author clause review, not a proof of semantic equivalence or model compliance. G2 user review pending."
+  "author_review": "G2 correction: mock parenthetical was deleted, now restored verbatim. Other explicit omissions and paraphrases are accounted for in the sentence-level review.",
+  "limitation": "Block accounting can miss deleted parentheticals/examples within a surviving block. It proves neither sentence preservation, semantic equivalence nor model compliance. See sentence-level review; real behavior remains separately evaluated."
 }

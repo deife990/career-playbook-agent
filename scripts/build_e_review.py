@@ -71,7 +71,8 @@ def build():
             destinations.append({'path': POLICY, **new_policy[-1]})
         rows.append({'id': f'guard-{index+1:02}', 'theme': theme,
                      'original': {'path': GUARDS, **old}, 'destinations': destinations,
-                     'disposition': 'preserved; wording compressed/generalized or examples moved'})
+                     'disposition': ('삭제→복원: one-question parenthetical restored verbatim in entry'
+                                     if index == 4 else 'preserved; wording compressed/generalized or examples moved')})
     for old in old_policy:
         new = next(b for b in new_policy if b['text'].splitlines()[0] == old['text'].splitlines()[0])
         destinations = [{'path': POLICY, **new}]
@@ -83,24 +84,26 @@ def build():
     ledger = {'baseline_commit': BASELINE, 'generated_entry_count': len(entries),
               'files': inventory, 'original_guard_blocks': len(old_guards),
               'original_policy_sections': len(old_policy), 'mapping': rows,
-              'author_review': 'No normative rule dropped. Cases relocated/generalized; tighter premise/field/contracts added.',
-              'limitation': 'Exhaustive text-block accounting plus author clause review, not a proof of semantic equivalence or model compliance. G2 user review pending.'}
+              'author_review': 'G2 correction: mock parenthetical was deleted, now restored verbatim. Other explicit omissions and paraphrases are accounted for in the sentence-level review.',
+              'limitation': 'Block accounting can miss deleted parentheticals/examples within a surviving block. It proves neither sentence preservation, semantic equivalence nor model compliance. See sentence-level review; real behavior remains separately evaluated.'}
     (TARGET/'rule-migration.json').write_text(json.dumps(ledger, ensure_ascii=False, indent=2)+'\n')
     markdown = ['# G2 규칙 이동 대응표', '', f'기준 `{BASELINE}` → E 원본. 진입 가드 16개 블록과 기존 정책 5개 절을 전수 대조했다.',
-                '규범 규칙 삭제는 없으며, 사례를 상세 예시 절로 옮기거나 일반화했다. 아래는 작성자의 원문 대조 결과다.',
-                '자동 검사는 블록 누락·파일 해시를 확인하며 의미 동등성이나 모델 준수를 증명하지 않는다. G2 사용자 검토는 별도다.', '',
+                'G2 정정: 모의면접 괄호 예시는 이동이 아닌 삭제였으며 진입부에 원문 그대로 복원했다.',
+                '블록 자동 대조는 살아 있는 블록 안의 괄호·예시 삭제를 놓칠 수 있다. 문장 보존·의미 동등성·모델 준수의 증거가 아니다.',
+                '[문장 단위 재대조와 다른 예시 생략 기록](../../../docs/rc8-g2-sentence-review-2026-10-16.md)을 함께 본다.', '',
                 '| 규칙 | 원래 위치 | 새 위치 | 처리 |', '|---|---|---|---|']
     for row in rows:
         old = row['original']
         dest = '; '.join(f"`{d['path']}:{d['line']}`" for d in row['destinations'])
-        markdown.append(f"| {row['theme']} | `{old['path']}:{old['line']}` | {dest} | 유지/압축, 구체 사례는 Examples |")
+        disposition = '삭제→복원: 괄호 원문 진입부 유지' if row['id'] == 'guard-05' else '유지/압축 또는 사례 이동; 문장별 예외는 재대조 기록 참조'
+        markdown.append(f"| {row['theme']} | `{old['path']}:{old['line']}` | {dest} | {disposition} |")
     markdown += ['', '## 계약 명확화와 유지 사항', '',
                  '- 종료: discovery Coverage + W05 단계 2. 기존 sufficient/user stop 규칙의 우선순위와 즉시 부분 산출 명시.',
                  '- 금액: compensation Numeric application-field decision contract. 기존 선택액 질문을 실행 순서로 명시.',
                  '- 등급: screening-engine HM + Application Pack 원본/템플릿. 기존 Recruiter 4등급을 양쪽 결과에 명시.',
                  '- 필드: W08 + Debrief 원본/템플릿. 미제공 값 확정 금지와 한 번의 통합 질문.',
                  '- D021/D023/D024/D026 가드, W04 전체 섹션 목록, 필수 참조 경로/조건 유지. generator는 수정하지 않았다.',
-                 '- 모의면접 한 질문의 괄호 예시는 한 질문 원칙으로 압축. fully remote 사례는 W05/Screening의 기존 원문에도 유지.',
+                 '- 모의면접 괄호는 삭제→복원(25ca957에서 추가된 원문). fully remote 사례는 W05/Screening의 기존 원문에도 유지.',
                  '- 과장/방법/연관관계, Unknown 용어, 노출 경계, 대체 성과 사례는 evidence-policy Examples로 이동.',
                  '', '## 전체 텍스트', '',
                  '[진입 13개 + 정책/가드 diff](entry-policy-guards.patch) · [계약 포함 전체 원본 diff](all-source-contracts.patch) · [원문 블록 대응 JSON](rule-migration.json)',

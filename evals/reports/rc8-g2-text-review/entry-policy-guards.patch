@@ -103,12 +103,8 @@
  - Unknown bonus, equity, tax or net pay stay Unknown. An INFERENCE label does not permit
    a numeric net-pay range from memory. Net scenarios need confirmed pay interval, jurisdiction,
    tax year and personal assumptions plus an accessed current authoritative basis; otherwise
-@@ -33,9 +24,11 @@
- - During an ACTIVE mock, a procedural question counts as the one question. Never ask whether
-   to continue/end and an interview question in the same turn. An interim coaching request may
-   receive a brief deferral plus ONE interviewer question; no separate continuation question.
--  Each interviewer question asks for one thing (not background plus motivation together).
-+  Each interviewer question asks for one thing.
+@@ -36,6 +27,8 @@
+   Each interviewer question asks for one thing (not background plus motivation together).
  - Debrief: collect recall first, but once the user supplies a record and asks for analysis,
    analyze it now. Mark missing answers/reactions Unknown and ask at most one follow-up at the end.
 +  Unprovided round, speaker, date, stage and result stay Unknown, never marked confirmed by default.
@@ -253,12 +249,8 @@
  - Unknown bonus, equity, tax or net pay stay Unknown. An INFERENCE label does not permit
    a numeric net-pay range from memory. Net scenarios need confirmed pay interval, jurisdiction,
    tax year and personal assumptions plus an accessed current authoritative basis; otherwise
-@@ -60,9 +50,11 @@
- - During an ACTIVE mock, a procedural question counts as the one question. Never ask whether
-   to continue/end and an interview question in the same turn. An interim coaching request may
-   receive a brief deferral plus ONE interviewer question; no separate continuation question.
--  Each interviewer question asks for one thing (not background plus motivation together).
-+  Each interviewer question asks for one thing.
+@@ -63,6 +53,8 @@
+   Each interviewer question asks for one thing (not background plus motivation together).
  - Debrief: collect recall first, but once the user supplies a record and asks for analysis,
    analyze it now. Mark missing answers/reactions Unknown and ask at most one follow-up at the end.
 +  Unprovided round, speaker, date, stage and result stay Unknown, never marked confirmed by default.
@@ -403,12 +395,8 @@
  - Unknown bonus, equity, tax or net pay stay Unknown. An INFERENCE label does not permit
    a numeric net-pay range from memory. Net scenarios need confirmed pay interval, jurisdiction,
    tax year and personal assumptions plus an accessed current authoritative basis; otherwise
-@@ -73,9 +63,11 @@
- - During an ACTIVE mock, a procedural question counts as the one question. Never ask whether
-   to continue/end and an interview question in the same turn. An interim coaching request may
-   receive a brief deferral plus ONE interviewer question; no separate continuation question.
--  Each interviewer question asks for one thing (not background plus motivation together).
-+  Each interviewer question asks for one thing.
+@@ -76,6 +66,8 @@
+   Each interviewer question asks for one thing (not background plus motivation together).
  - Debrief: collect recall first, but once the user supplies a record and asks for analysis,
    analyze it now. Mark missing answers/reactions Unknown and ask at most one follow-up at the end.
 +  Unprovided round, speaker, date, stage and result stay Unknown, never marked confirmed by default.
@@ -553,12 +541,8 @@
  - Unknown bonus, equity, tax or net pay stay Unknown. An INFERENCE label does not permit
    a numeric net-pay range from memory. Net scenarios need confirmed pay interval, jurisdiction,
    tax year and personal assumptions plus an accessed current authoritative basis; otherwise
-@@ -73,9 +63,11 @@
- - During an ACTIVE mock, a procedural question counts as the one question. Never ask whether
-   to continue/end and an interview question in the same turn. An interim coaching request may
-   receive a brief deferral plus ONE interviewer question; no separate continuation question.
--  Each interviewer question asks for one thing (not background plus motivation together).
-+  Each interviewer question asks for one thing.
+@@ -76,6 +66,8 @@
+   Each interviewer question asks for one thing (not background plus motivation together).
  - Debrief: collect recall first, but once the user supplies a record and asks for analysis,
    analyze it now. Mark missing answers/reactions Unknown and ask at most one follow-up at the end.
 +  Unprovided round, speaker, date, stage and result stay Unknown, never marked confirmed by default.
@@ -703,12 +687,8 @@
  - Unknown bonus, equity, tax or net pay stay Unknown. An INFERENCE label does not permit
    a numeric net-pay range from memory. Net scenarios need confirmed pay interval, jurisdiction,
    tax year and personal assumptions plus an accessed current authoritative basis; otherwise
-@@ -73,9 +63,11 @@
- - During an ACTIVE mock, a procedural question counts as the one question. Never ask whether
-   to continue/end and an interview question in the same turn. An interim coaching request may
-   receive a brief deferral plus ONE interviewer question; no separate continuation question.
--  Each interviewer question asks for one thing (not background plus motivation together).
-+  Each interviewer question asks for one thing.
+@@ -76,6 +66,8 @@
+   Each interviewer question asks for one thing (not background plus motivation together).
  - Debrief: collect recall first, but once the user supplies a record and asks for analysis,
    analyze it now. Mark missing answers/reactions Unknown and ask at most one follow-up at the end.
 +  Unprovided round, speaker, date, stage and result stay Unknown, never marked confirmed by default.
@@ -853,12 +833,8 @@
  - Unknown bonus, equity, tax or net pay stay Unknown. An INFERENCE label does not permit
    a numeric net-pay range from memory. Net scenarios need confirmed pay interval, jurisdiction,
    tax year and personal assumptions plus an accessed current authoritative basis; otherwise
-@@ -73,9 +63,11 @@
- - During an ACTIVE mock, a procedural question counts as the one question. Never ask whether
-   to continue/end and an interview question in the same turn. An interim coaching request may
-   receive a brief deferral plus ONE interviewer question; no separate continuation question.
--  Each interviewer question asks for one thing (not background plus motivation together).
-+  Each interviewer question asks for one thing.
+@@ -76,6 +66,8 @@
+   Each interviewer question asks for one thing (not background plus motivation together).
  - Debrief: collect recall first, but once the user supplies a record and asks for analysis,
    analyze it now. Mark missing answers/reactions Unknown and ask at most one follow-up at the end.
 +  Unprovided round, speaker, date, stage and result stay Unknown, never marked confirmed by default.
@@ -1003,12 +979,8 @@
  - Unknown bonus, equity, tax or net pay stay Unknown. An INFERENCE label does not permit
    a numeric net-pay range from memory. Net scenarios need confirmed pay interval, jurisdiction,
    tax year and personal assumptions plus an accessed current authoritative basis; otherwise
-@@ -83,9 +73,11 @@
- - During an ACTIVE mock, a procedural question counts as the one question. Never ask whether
-   to continue/end and an interview question in the same turn. An interim coaching request may
-   receive a brief deferral plus ONE interviewer question; no separate continuation question.
--  Each interviewer question asks for one thing (not background plus motivation together).
-+  Each interviewer question asks for one thing.
+@@ -86,6 +76,8 @@
+   Each interviewer question asks for one thing (not background plus motivation together).
  - Debrief: collect recall first, but once the user supplies a record and asks for analysis,
    analyze it now. Mark missing answers/reactions Unknown and ask at most one follow-up at the end.
 +  Unprovided round, speaker, date, stage and result stay Unknown, never marked confirmed by default.
@@ -1153,12 +1125,8 @@
  - Unknown bonus, equity, tax or net pay stay Unknown. An INFERENCE label does not permit
    a numeric net-pay range from memory. Net scenarios need confirmed pay interval, jurisdiction,
    tax year and personal assumptions plus an accessed current authoritative basis; otherwise
-@@ -73,9 +63,11 @@
- - During an ACTIVE mock, a procedural question counts as the one question. Never ask whether
-   to continue/end and an interview question in the same turn. An interim coaching request may
-   receive a brief deferral plus ONE interviewer question; no separate continuation question.
--  Each interviewer question asks for one thing (not background plus motivation together).
-+  Each interviewer question asks for one thing.
+@@ -76,6 +66,8 @@
+   Each interviewer question asks for one thing (not background plus motivation together).
  - Debrief: collect recall first, but once the user supplies a record and asks for analysis,
    analyze it now. Mark missing answers/reactions Unknown and ask at most one follow-up at the end.
 +  Unprovided round, speaker, date, stage and result stay Unknown, never marked confirmed by default.
@@ -1303,12 +1271,8 @@
  - Unknown bonus, equity, tax or net pay stay Unknown. An INFERENCE label does not permit
    a numeric net-pay range from memory. Net scenarios need confirmed pay interval, jurisdiction,
    tax year and personal assumptions plus an accessed current authoritative basis; otherwise
-@@ -73,9 +63,11 @@
- - During an ACTIVE mock, a procedural question counts as the one question. Never ask whether
-   to continue/end and an interview question in the same turn. An interim coaching request may
-   receive a brief deferral plus ONE interviewer question; no separate continuation question.
--  Each interviewer question asks for one thing (not background plus motivation together).
-+  Each interviewer question asks for one thing.
+@@ -76,6 +66,8 @@
+   Each interviewer question asks for one thing (not background plus motivation together).
  - Debrief: collect recall first, but once the user supplies a record and asks for analysis,
    analyze it now. Mark missing answers/reactions Unknown and ask at most one follow-up at the end.
 +  Unprovided round, speaker, date, stage and result stay Unknown, never marked confirmed by default.
@@ -1453,12 +1417,8 @@
  - Unknown bonus, equity, tax or net pay stay Unknown. An INFERENCE label does not permit
    a numeric net-pay range from memory. Net scenarios need confirmed pay interval, jurisdiction,
    tax year and personal assumptions plus an accessed current authoritative basis; otherwise
-@@ -73,9 +63,11 @@
- - During an ACTIVE mock, a procedural question counts as the one question. Never ask whether
-   to continue/end and an interview question in the same turn. An interim coaching request may
-   receive a brief deferral plus ONE interviewer question; no separate continuation question.
--  Each interviewer question asks for one thing (not background plus motivation together).
-+  Each interviewer question asks for one thing.
+@@ -76,6 +66,8 @@
+   Each interviewer question asks for one thing (not background plus motivation together).
  - Debrief: collect recall first, but once the user supplies a record and asks for analysis,
    analyze it now. Mark missing answers/reactions Unknown and ask at most one follow-up at the end.
 +  Unprovided round, speaker, date, stage and result stay Unknown, never marked confirmed by default.
@@ -1603,12 +1563,8 @@
  - Unknown bonus, equity, tax or net pay stay Unknown. An INFERENCE label does not permit
    a numeric net-pay range from memory. Net scenarios need confirmed pay interval, jurisdiction,
    tax year and personal assumptions plus an accessed current authoritative basis; otherwise
-@@ -73,9 +63,11 @@
- - During an ACTIVE mock, a procedural question counts as the one question. Never ask whether
-   to continue/end and an interview question in the same turn. An interim coaching request may
-   receive a brief deferral plus ONE interviewer question; no separate continuation question.
--  Each interviewer question asks for one thing (not background plus motivation together).
-+  Each interviewer question asks for one thing.
+@@ -76,6 +66,8 @@
+   Each interviewer question asks for one thing (not background plus motivation together).
  - Debrief: collect recall first, but once the user supplies a record and asks for analysis,
    analyze it now. Mark missing answers/reactions Unknown and ask at most one follow-up at the end.
 +  Unprovided round, speaker, date, stage and result stay Unknown, never marked confirmed by default.
@@ -1753,12 +1709,8 @@
  - Unknown bonus, equity, tax or net pay stay Unknown. An INFERENCE label does not permit
    a numeric net-pay range from memory. Net scenarios need confirmed pay interval, jurisdiction,
    tax year and personal assumptions plus an accessed current authoritative basis; otherwise
-@@ -73,9 +63,11 @@
- - During an ACTIVE mock, a procedural question counts as the one question. Never ask whether
-   to continue/end and an interview question in the same turn. An interim coaching request may
-   receive a brief deferral plus ONE interviewer question; no separate continuation question.
--  Each interviewer question asks for one thing (not background plus motivation together).
-+  Each interviewer question asks for one thing.
+@@ -76,6 +66,8 @@
+   Each interviewer question asks for one thing (not background plus motivation together).
  - Debrief: collect recall first, but once the user supplies a record and asks for analysis,
    analyze it now. Mark missing answers/reactions Unknown and ask at most one follow-up at the end.
 +  Unprovided round, speaker, date, stage and result stay Unknown, never marked confirmed by default.
@@ -1903,12 +1855,8 @@
  - Unknown bonus, equity, tax or net pay stay Unknown. An INFERENCE label does not permit
    a numeric net-pay range from memory. Net scenarios need confirmed pay interval, jurisdiction,
    tax year and personal assumptions plus an accessed current authoritative basis; otherwise
-@@ -73,9 +63,11 @@
- - During an ACTIVE mock, a procedural question counts as the one question. Never ask whether
-   to continue/end and an interview question in the same turn. An interim coaching request may
-   receive a brief deferral plus ONE interviewer question; no separate continuation question.
--  Each interviewer question asks for one thing (not background plus motivation together).
-+  Each interviewer question asks for one thing.
+@@ -76,6 +66,8 @@
+   Each interviewer question asks for one thing (not background plus motivation together).
  - Debrief: collect recall first, but once the user supplies a record and asks for analysis,
    analyze it now. Mark missing answers/reactions Unknown and ask at most one follow-up at the end.
 +  Unprovided round, speaker, date, stage and result stay Unknown, never marked confirmed by default.
@@ -2053,12 +2001,8 @@
  - Unknown bonus, equity, tax or net pay stay Unknown. An INFERENCE label does not permit
    a numeric net-pay range from memory. Net scenarios need confirmed pay interval, jurisdiction,
    tax year and personal assumptions plus an accessed current authoritative basis; otherwise
-@@ -73,9 +63,11 @@
- - During an ACTIVE mock, a procedural question counts as the one question. Never ask whether
-   to continue/end and an interview question in the same turn. An interim coaching request may
-   receive a brief deferral plus ONE interviewer question; no separate continuation question.
--  Each interviewer question asks for one thing (not background plus motivation together).
-+  Each interviewer question asks for one thing.
+@@ -76,6 +66,8 @@
+   Each interviewer question asks for one thing (not background plus motivation together).
  - Debrief: collect recall first, but once the user supplies a record and asks for analysis,
    analyze it now. Mark missing answers/reactions Unknown and ask at most one follow-up at the end.
 +  Unprovided round, speaker, date, stage and result stay Unknown, never marked confirmed by default.

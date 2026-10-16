@@ -1,0 +1,245 @@
+{
+  "baseline_commit": "e52b59d",
+  "status": "PASS",
+  "scope": "Added/replacement E lines in core/, templates/, scripts/generate_adapters.py",
+  "selector_sha256": "b17efb9a8344772aacf374b637c861104edaefb42a648ae990ab0e6a79559f67",
+  "lexicon": [
+    {
+      "scenario": "holdout-ambiguous-speaker",
+      "category": "institution",
+      "term": "Hearth",
+      "source_sha256": "8b51fb7a0c5707ba148c8910d93311ce1353c3e317fd86789decc947cf0df40e"
+    },
+    {
+      "scenario": "holdout-ambiguous-speaker",
+      "category": "occupation",
+      "term": "식품점 발주 보조",
+      "source_sha256": "8b51fb7a0c5707ba148c8910d93311ce1353c3e317fd86789decc947cf0df40e"
+    },
+    {
+      "scenario": "holdout-ambiguous-speaker",
+      "category": "institution",
+      "term": "식품점",
+      "source_sha256": "8b51fb7a0c5707ba148c8910d93311ce1353c3e317fd86789decc947cf0df40e"
+    },
+    {
+      "scenario": "holdout-base-entry-decision",
+      "category": "location",
+      "term": "아일랜드",
+      "source_sha256": "51d8b82b4953da139a9d38eab28cb7953a5431df012f07cb93fa81df675af990"
+    },
+    {
+      "scenario": "holdout-base-entry-decision",
+      "category": "currency",
+      "term": "EUR",
+      "source_sha256": "51d8b82b4953da139a9d38eab28cb7953a5431df012f07cb93fa81df675af990"
+    },
+    {
+      "scenario": "holdout-base-entry-decision",
+      "category": "occupation",
+      "term": "사무 보조",
+      "source_sha256": "51d8b82b4953da139a9d38eab28cb7953a5431df012f07cb93fa81df675af990"
+    },
+    {
+      "scenario": "holdout-candidate-speaker",
+      "category": "institution",
+      "term": "Vale",
+      "source_sha256": "455019801dfa4f6061c5d92958688e57342148078515eea474952fed62078b38"
+    },
+    {
+      "scenario": "holdout-candidate-speaker",
+      "category": "occupation",
+      "term": "지역서점 재고 보조",
+      "source_sha256": "455019801dfa4f6061c5d92958688e57342148078515eea474952fed62078b38"
+    },
+    {
+      "scenario": "holdout-candidate-speaker",
+      "category": "institution",
+      "term": "지역서점",
+      "source_sha256": "455019801dfa4f6061c5d92958688e57342148078515eea474952fed62078b38"
+    },
+    {
+      "scenario": "holdout-craft-market",
+      "category": "occupation",
+      "term": "공예 교육 보조",
+      "source_sha256": "99be74b7daab375e0818ca0d557434e21d233d44cc64c817677f20ebf0531f7a"
+    },
+    {
+      "scenario": "holdout-craft-market",
+      "category": "location",
+      "term": "부산",
+      "source_sha256": "99be74b7daab375e0818ca0d557434e21d233d44cc64c817677f20ebf0531f7a"
+    },
+    {
+      "scenario": "holdout-craft-market",
+      "category": "occupation",
+      "term": "공예",
+      "source_sha256": "99be74b7daab375e0818ca0d557434e21d233d44cc64c817677f20ebf0531f7a"
+    },
+    {
+      "scenario": "holdout-curatorial-scope",
+      "category": "institution",
+      "term": "Nacre",
+      "source_sha256": "161bb8a71f604d1c392bc4a74c63cef774dbc813c2ad67e0e5ed6caead0da3f6"
+    },
+    {
+      "scenario": "holdout-curatorial-scope",
+      "category": "institution",
+      "term": "문화재단",
+      "source_sha256": "161bb8a71f604d1c392bc4a74c63cef774dbc813c2ad67e0e5ed6caead0da3f6"
+    },
+    {
+      "scenario": "holdout-curatorial-scope",
+      "category": "occupation",
+      "term": "Collection Assistant",
+      "source_sha256": "161bb8a71f604d1c392bc4a74c63cef774dbc813c2ad67e0e5ed6caead0da3f6"
+    },
+    {
+      "scenario": "holdout-curatorial-scope",
+      "category": "criterion",
+      "term": "collection registration",
+      "source_sha256": "161bb8a71f604d1c392bc4a74c63cef774dbc813c2ad67e0e5ed6caead0da3f6"
+    },
+    {
+      "scenario": "holdout-curatorial-scope",
+      "category": "criterion",
+      "term": "loan correspondence",
+      "source_sha256": "161bb8a71f604d1c392bc4a74c63cef774dbc813c2ad67e0e5ed6caead0da3f6"
+    },
+    {
+      "scenario": "holdout-curatorial-scope",
+      "category": "occupation",
+      "term": "박물관 접수 보조",
+      "source_sha256": "161bb8a71f604d1c392bc4a74c63cef774dbc813c2ad67e0e5ed6caead0da3f6"
+    },
+    {
+      "scenario": "holdout-curatorial-scope",
+      "category": "object",
+      "term": "소장품",
+      "source_sha256": "161bb8a71f604d1c392bc4a74c63cef774dbc813c2ad67e0e5ed6caead0da3f6"
+    },
+    {
+      "scenario": "holdout-curatorial-scope",
+      "category": "quantity",
+      "term": "18개월",
+      "source_sha256": "161bb8a71f604d1c392bc4a74c63cef774dbc813c2ad67e0e5ed6caead0da3f6"
+    },
+    {
+      "scenario": "holdout-curatorial-scope",
+      "category": "quantity",
+      "term": "35건",
+      "source_sha256": "161bb8a71f604d1c392bc4a74c63cef774dbc813c2ad67e0e5ed6caead0da3f6"
+    },
+    {
+      "scenario": "holdout-existing-evidence-stop",
+      "category": "occupation",
+      "term": "도서관 보조",
+      "source_sha256": "afc03601467805178f0becdfaaa85f2fcd529a997f07c37de5727c7f97c9638b"
+    },
+    {
+      "scenario": "holdout-existing-evidence-stop",
+      "category": "identifier",
+      "term": "lib-known",
+      "source_sha256": "afc03601467805178f0becdfaaa85f2fcd529a997f07c37de5727c7f97c9638b"
+    },
+    {
+      "scenario": "holdout-existing-evidence-stop",
+      "category": "quantity",
+      "term": "17건",
+      "source_sha256": "afc03601467805178f0becdfaaa85f2fcd529a997f07c37de5727c7f97c9638b"
+    },
+    {
+      "scenario": "holdout-interviewer-speaker",
+      "category": "institution",
+      "term": "Lumen",
+      "source_sha256": "3800496bae35abbb83f27688662c493b84f82b3076ba9eeb2d971a4a6a9df29b"
+    },
+    {
+      "scenario": "holdout-interviewer-speaker",
+      "category": "occupation",
+      "term": "편집 보조",
+      "source_sha256": "3800496bae35abbb83f27688662c493b84f82b3076ba9eeb2d971a4a6a9df29b"
+    },
+    {
+      "scenario": "holdout-interviewer-speaker",
+      "category": "institution",
+      "term": "출판사",
+      "source_sha256": "3800496bae35abbb83f27688662c493b84f82b3076ba9eeb2d971a4a6a9df29b"
+    },
+    {
+      "scenario": "holdout-interviewer-speaker",
+      "category": "object",
+      "term": "원고",
+      "source_sha256": "3800496bae35abbb83f27688662c493b84f82b3076ba9eeb2d971a4a6a9df29b"
+    },
+    {
+      "scenario": "holdout-procurement-review-grades",
+      "category": "institution",
+      "term": "Quartz",
+      "source_sha256": "41cece608b4e3c05d208657ec11b390de4e3da4c586d371a05aad4fd8634a963"
+    },
+    {
+      "scenario": "holdout-procurement-review-grades",
+      "category": "occupation",
+      "term": "구매 보조",
+      "source_sha256": "41cece608b4e3c05d208657ec11b390de4e3da4c586d371a05aad4fd8634a963"
+    },
+    {
+      "scenario": "holdout-procurement-review-grades",
+      "category": "tool",
+      "term": "ERP",
+      "source_sha256": "41cece608b4e3c05d208657ec11b390de4e3da4c586d371a05aad4fd8634a963"
+    },
+    {
+      "scenario": "holdout-procurement-review-grades",
+      "category": "object",
+      "term": "발주서",
+      "source_sha256": "41cece608b4e3c05d208657ec11b390de4e3da4c586d371a05aad4fd8634a963"
+    },
+    {
+      "scenario": "holdout-procurement-review-grades",
+      "category": "quantity",
+      "term": "24건",
+      "source_sha256": "41cece608b4e3c05d208657ec11b390de4e3da4c586d371a05aad4fd8634a963"
+    },
+    {
+      "scenario": "holdout-sanitized-own-action",
+      "category": "institution",
+      "term": "Orchid",
+      "source_sha256": "f377917fc0a3cabf0234c79449fac7c8744fec3cfa06e5fbc832d9fe0a22867c"
+    },
+    {
+      "scenario": "holdout-sanitized-own-action",
+      "category": "institution",
+      "term": "복지관",
+      "source_sha256": "f377917fc0a3cabf0234c79449fac7c8744fec3cfa06e5fbc832d9fe0a22867c"
+    },
+    {
+      "scenario": "holdout-sanitized-own-action",
+      "category": "institution",
+      "term": "Cedar",
+      "source_sha256": "f377917fc0a3cabf0234c79449fac7c8744fec3cfa06e5fbc832d9fe0a22867c"
+    },
+    {
+      "scenario": "holdout-sanitized-own-action",
+      "category": "identifier",
+      "term": "PRIVATE-CEDAR-73",
+      "source_sha256": "f377917fc0a3cabf0234c79449fac7c8744fec3cfa06e5fbc832d9fe0a22867c"
+    },
+    {
+      "scenario": "holdout-sanitized-own-action",
+      "category": "occupation",
+      "term": "봉사자 일정 안내",
+      "source_sha256": "f377917fc0a3cabf0234c79449fac7c8744fec3cfa06e5fbc832d9fe0a22867c"
+    }
+  ],
+  "changed_lines_checked": 101,
+  "findings": [],
+  "entry_example": {
+    "role": "postal sorting aide",
+    "number": "67",
+    "scenario_files_checked": 66,
+    "collisions": []
+  },
+  "limitation": "Human-selected literal terms only; semantic leakage and blind independence NOT VERIFIED."
+}

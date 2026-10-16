@@ -78,7 +78,7 @@ index 9c79b16..d233dcf 100644
      exposure, environments, cross-functional patterns and career narrative. State evidence anchors.
      Remove interchangeable traits; do not invent a unique insight or require a provocative opinion.
 diff --git a/core/principles/entry-guards.md b/core/principles/entry-guards.md
-index 3550c65..0e17288 100644
+index 3550c65..fe48da1 100644
 --- a/core/principles/entry-guards.md
 +++ b/core/principles/entry-guards.md
 @@ -1,31 +1,22 @@
@@ -123,12 +123,8 @@ index 3550c65..0e17288 100644
  - Unknown bonus, equity, tax or net pay stay Unknown. An INFERENCE label does not permit
    a numeric net-pay range from memory. Net scenarios need confirmed pay interval, jurisdiction,
    tax year and personal assumptions plus an accessed current authoritative basis; otherwise
-@@ -33,9 +24,11 @@ They supplement, rather than replace, the selected workflow and artifact contrac
- - During an ACTIVE mock, a procedural question counts as the one question. Never ask whether
-   to continue/end and an interview question in the same turn. An interim coaching request may
-   receive a brief deferral plus ONE interviewer question; no separate continuation question.
--  Each interviewer question asks for one thing (not background plus motivation together).
-+  Each interviewer question asks for one thing.
+@@ -36,6 +27,8 @@ They supplement, rather than replace, the selected workflow and artifact contrac
+   Each interviewer question asks for one thing (not background plus motivation together).
  - Debrief: collect recall first, but once the user supplies a record and asks for analysis,
    analyze it now. Mark missing answers/reactions Unknown and ask at most one follow-up at the end.
 +  Unprovided round, speaker, date, stage and result stay Unknown, never marked confirmed by default.

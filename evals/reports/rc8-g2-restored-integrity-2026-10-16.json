@@ -1,0 +1,224 @@
+{
+  "timestamp": "2026-10-16T06:59:12.840172+00:00",
+  "tests_passed": 220,
+  "static_evals": "PASS",
+  "model_calls_before_diagnostic": 0,
+  "runtime_scope": "Only exact mock parenthetical restoration since 438b9cb; no other core/templates/generator change",
+  "holdout_fingerprint": "895695d7ab6b22e9fe9a01fbcab7643335478a650a7efb6fd0ef703eaae83ed7",
+  "development_fingerprint": "665bbe2d6a2fbbfc3c521e7bc1f387fc579dee28a05823acdcb7feb908d8fe10",
+  "hosts": {
+    "chatgpt": {
+      "package_fingerprint": "7b00aa935588449d2f5589278bed5a5fd03fddc265e36f1cbe1bb0ecfe380b2b",
+      "execution_fingerprint": "ce3b7e396798a13245578ea34524f243053d8c642256eb491d6ccda06d0a58c8",
+      "budget": {
+        "file_count": 111,
+        "entries": {
+          "skills/application-prep/SKILL.md": {
+            "bytes": 39777,
+            "files": [
+              "references/core/principles/evidence-policy.md",
+              "references/core/principles/index.md",
+              "references/core/principles/privacy-policy.md",
+              "references/core/principles/product-principles.md",
+              "references/core/principles/research-policy.md",
+              "references/core/principles/ux-language.md",
+              "references/core/router/routing.md",
+              "references/core/state/state.md",
+              "references/host.md",
+              "skills/application-prep/SKILL.md"
+            ]
+          },
+          "skills/career-setup/SKILL.md": {
+            "bytes": 39653,
+            "files": [
+              "references/core/principles/evidence-policy.md",
+              "references/core/principles/index.md",
+              "references/core/principles/privacy-policy.md",
+              "references/core/principles/product-principles.md",
+              "references/core/principles/research-policy.md",
+              "references/core/principles/ux-language.md",
+              "references/core/router/routing.md",
+              "references/core/state/state.md",
+              "references/host.md",
+              "skills/career-setup/SKILL.md"
+            ]
+          },
+          "skills/career-state/SKILL.md": {
+            "bytes": 39666,
+            "files": [
+              "references/core/principles/evidence-policy.md",
+              "references/core/principles/index.md",
+              "references/core/principles/privacy-policy.md",
+              "references/core/principles/product-principles.md",
+              "references/core/principles/research-policy.md",
+              "references/core/principles/ux-language.md",
+              "references/core/router/routing.md",
+              "references/core/state/state.md",
+              "references/host.md",
+              "skills/career-state/SKILL.md"
+            ]
+          },
+          "skills/career-strategy/SKILL.md": {
+            "bytes": 39604,
+            "files": [
+              "references/core/principles/evidence-policy.md",
+              "references/core/principles/index.md",
+              "references/core/principles/privacy-policy.md",
+              "references/core/principles/product-principles.md",
+              "references/core/principles/research-policy.md",
+              "references/core/principles/ux-language.md",
+              "references/core/router/routing.md",
+              "references/core/state/state.md",
+              "references/host.md",
+              "skills/career-strategy/SKILL.md"
+            ]
+          },
+          "skills/careerpilot-router/SKILL.md": {
+            "bytes": 40324,
+            "files": [
+              "references/core/principles/evidence-policy.md",
+              "references/core/principles/index.md",
+              "references/core/principles/privacy-policy.md",
+              "references/core/principles/product-principles.md",
+              "references/core/principles/research-policy.md",
+              "references/core/principles/ux-language.md",
+              "references/core/router/routing.md",
+              "references/core/state/state.md",
+              "references/host.md",
+              "skills/careerpilot-router/SKILL.md"
+            ]
+          },
+          "skills/experience-mining/SKILL.md": {
+            "bytes": 39931,
+            "files": [
+              "references/core/principles/evidence-policy.md",
+              "references/core/principles/index.md",
+              "references/core/principles/privacy-policy.md",
+              "references/core/principles/product-principles.md",
+              "references/core/principles/research-policy.md",
+              "references/core/principles/ux-language.md",
+              "references/core/router/routing.md",
+              "references/core/state/state.md",
+              "references/host.md",
+              "skills/experience-mining/SKILL.md"
+            ]
+          },
+          "skills/interview-debrief/SKILL.md": {
+            "bytes": 39692,
+            "files": [
+              "references/core/principles/evidence-policy.md",
+              "references/core/principles/index.md",
+              "references/core/principles/privacy-policy.md",
+              "references/core/principles/product-principles.md",
+              "references/core/principles/research-policy.md",
+              "references/core/principles/ux-language.md",
+              "references/core/router/routing.md",
+              "references/core/state/state.md",
+              "references/host.md",
+              "skills/interview-debrief/SKILL.md"
+            ]
+          },
+          "skills/interview-prep/SKILL.md": {
+            "bytes": 39639,
+            "files": [
+              "references/core/principles/evidence-policy.md",
+              "references/core/principles/index.md",
+              "references/core/principles/privacy-policy.md",
+              "references/core/principles/product-principles.md",
+              "references/core/principles/research-policy.md",
+              "references/core/principles/ux-language.md",
+              "references/core/router/routing.md",
+              "references/core/state/state.md",
+              "references/host.md",
+              "skills/interview-prep/SKILL.md"
+            ]
+          },
+          "skills/job-intelligence/SKILL.md": {
+            "bytes": 39701,
+            "files": [
+              "references/core/principles/evidence-policy.md",
+              "references/core/principles/index.md",
+              "references/core/principles/privacy-policy.md",
+              "references/core/principles/product-principles.md",
+              "references/core/principles/research-policy.md",
+              "references/core/principles/ux-language.md",
+              "references/core/router/routing.md",
+              "references/core/state/state.md",
+              "references/host.md",
+              "skills/job-intelligence/SKILL.md"
+            ]
+          },
+          "skills/mock-interview/SKILL.md": {
+            "bytes": 39705,
+            "files": [
+              "references/core/principles/evidence-policy.md",
+              "references/core/principles/index.md",
+              "references/core/principles/privacy-policy.md",
+              "references/core/principles/product-principles.md",
+              "references/core/principles/research-policy.md",
+              "references/core/principles/ux-language.md",
+              "references/core/router/routing.md",
+              "references/core/state/state.md",
+              "references/host.md",
+              "skills/mock-interview/SKILL.md"
+            ]
+          },
+          "skills/offer-decision/SKILL.md": {
+            "bytes": 39683,
+            "files": [
+              "references/core/principles/evidence-policy.md",
+              "references/core/principles/index.md",
+              "references/core/principles/privacy-policy.md",
+              "references/core/principles/product-principles.md",
+              "references/core/principles/research-policy.md",
+              "references/core/principles/ux-language.md",
+              "references/core/router/routing.md",
+              "references/core/state/state.md",
+              "references/host.md",
+              "skills/offer-decision/SKILL.md"
+            ]
+          },
+          "skills/opportunity-discovery/SKILL.md": {
+            "bytes": 39630,
+            "files": [
+              "references/core/principles/evidence-policy.md",
+              "references/core/principles/index.md",
+              "references/core/principles/privacy-policy.md",
+              "references/core/principles/product-principles.md",
+              "references/core/principles/research-policy.md",
+              "references/core/principles/ux-language.md",
+              "references/core/router/routing.md",
+              "references/core/state/state.md",
+              "references/host.md",
+              "skills/opportunity-discovery/SKILL.md"
+            ]
+          }
+        }
+      }
+    },
+    "claude": {
+      "package_fingerprint": "a6a99ebdc73db37a1fbb9772527780043c52b7f6f2209d395776342bfa05ea8b",
+      "execution_fingerprint": "3c104fb6772200cc4685cfa8bc2ae6420de8121777a28c1255aa263fd8160086",
+      "budget": {
+        "file_count": 139,
+        "entries": {
+          "SKILL.md": {
+            "bytes": 39327,
+            "files": [
+              "SKILL.md",
+              "references/core/principles/evidence-policy.md",
+              "references/core/principles/index.md",
+              "references/core/principles/privacy-policy.md",
+              "references/core/principles/product-principles.md",
+              "references/core/principles/research-policy.md",
+              "references/core/principles/ux-language.md",
+              "references/core/router/routing.md",
+              "references/core/state/state.md",
+              "references/host.md"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

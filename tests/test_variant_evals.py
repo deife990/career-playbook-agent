@@ -188,3 +188,12 @@ def test_review_artifacts_cover_every_original_rule_block_and_all_entries():
         assert locks.sha(ROOT/item['path']) == item['after_sha256']
         assert locks.sha(TARGET/'before'/(item['path']+'.txt')) == item['before_sha256']
         assert locks.sha(TARGET/'after'/(item['path']+'.txt')) == item['after_sha256']
+
+
+def test_mock_question_parenthetical_remains_verbatim_in_all_entries():
+    sentence = 'Each interviewer question asks for one thing (not background plus motivation together).'
+    assert sentence in (ROOT/'core/principles/entry-guards.md').read_text()
+    for platform in ['chatgpt', 'claude']:
+        package = generate(platform)
+        entries = [package/'SKILL.md'] if platform == 'claude' else package.glob('skills/*/SKILL.md')
+        assert all(sentence in entry.read_text() for entry in entries)

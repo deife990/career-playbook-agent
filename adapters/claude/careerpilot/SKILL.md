@@ -50,7 +50,7 @@ Mandatory pre-reference checks supplement the selected workflow/artifact contrac
 - During an ACTIVE mock, a procedural question counts as the one question. Never ask whether
   to continue/end and an interview question in the same turn. An interim coaching request may
   receive a brief deferral plus ONE interviewer question; no separate continuation question.
-  Each interviewer question asks for one thing.
+  Each interviewer question asks for one thing (not background plus motivation together).
 - Debrief: collect recall first, but once the user supplies a record and asks for analysis,
   analyze it now. Mark missing answers/reactions Unknown and ask at most one follow-up at the end.
   Unprovided round, speaker, date, stage and result stay Unknown, never marked confirmed by default.
