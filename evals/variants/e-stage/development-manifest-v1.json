@@ -1,0 +1,212 @@
+{
+  "hash_algorithm": "SHA256 canonical JSON payload sort_keys=True,separators=(comma,colon),ensure_ascii=False",
+  "payload": {
+    "version": 1,
+    "state": "CONTENT_FROZEN_EXECUTION_PENDING",
+    "scope": "DIAGNOSTIC_ONLY",
+    "release_evidence": false,
+    "context": "preloaded",
+    "reference_discovery_verified": false,
+    "packages_to_run": [
+      "candidate-only"
+    ],
+    "scenarios": [
+      {
+        "id": "concise-second-opportunity",
+        "path": "evals/scenarios/concise-second-opportunity.yaml",
+        "sha256": "511d0a7c4e75b3e3f8c6a405f9df173780009de96191e576d91aabfbcd422b86",
+        "group": "C-failure",
+        "tier": "critical",
+        "runs": 1,
+        "judge": "cross",
+        "turns": 1
+      },
+      {
+        "id": "debrief-first",
+        "path": "evals/scenarios/debrief-first.yaml",
+        "sha256": "b39ffe4b4b73d6e65c86eaa2fa3ec9212ddfca3b004ba5b9b9ac4e3fe55165c1",
+        "group": "C-failure",
+        "tier": "critical",
+        "runs": 1,
+        "judge": "cross",
+        "turns": 2
+      },
+      {
+        "id": "discovery-unknown-table",
+        "path": "evals/scenarios/discovery-unknown-table.yaml",
+        "sha256": "f4dea792b43c81148c3bf5df3c1e5210f11bd39f73bee1d2a53b9bf01ad4504a",
+        "group": "C-failure",
+        "tier": "critical",
+        "runs": 1,
+        "judge": "cross",
+        "turns": 1
+      },
+      {
+        "id": "evd-01-existing-sufficient",
+        "path": "evals/scenarios/evd-01-existing-sufficient.yaml",
+        "sha256": "d4b87e8bddd3e85a18063df1e8a864ed2f9ae5bc4c2b30e95a872eebbd437d8e",
+        "group": "C-failure",
+        "tier": "standard",
+        "runs": 1,
+        "judge": "same",
+        "turns": 1
+      },
+      {
+        "id": "evd-07-privacy",
+        "path": "evals/scenarios/evd-07-privacy.yaml",
+        "sha256": "1ae9741b9ea1689528b82b81e16886e97e5ad7b72c1a1adaf03e050fc20b0d2b",
+        "group": "C-failure",
+        "tier": "critical",
+        "runs": 1,
+        "judge": "cross",
+        "turns": 1
+      },
+      {
+        "id": "evd-14-confidentiality",
+        "path": "evals/scenarios/evd-14-confidentiality.yaml",
+        "sha256": "4c4a527f2dc9adf2c506d2f1008d3e8b62831d3fcfb61c2db2866fe417edbf03",
+        "group": "C-failure",
+        "tier": "critical",
+        "runs": 1,
+        "judge": "cross",
+        "turns": 1
+      },
+      {
+        "id": "screening-g-no-tools",
+        "path": "evals/scenarios/screening-g-no-tools.yaml",
+        "sha256": "6b9f22f7372452c1839d63e3465c754b992165242d562bea55a520325dbd9979",
+        "group": "C-failure",
+        "tier": "critical",
+        "runs": 1,
+        "judge": "cross",
+        "turns": 1
+      },
+      {
+        "id": "screening-i-comp",
+        "path": "evals/scenarios/screening-i-comp.yaml",
+        "sha256": "f4a88dbd5cacc210ab079e742f960b1498ff50e6064512dec4d922b4b8286ba0",
+        "group": "C-failure",
+        "tier": "critical",
+        "runs": 1,
+        "judge": "cross",
+        "turns": 1
+      },
+      {
+        "id": "screening-k-report",
+        "path": "evals/scenarios/screening-k-report.yaml",
+        "sha256": "d2ce9c1e55864ae834401f4da6dbd2caf0565abcda6138b1202c242b389ba848",
+        "group": "C-failure",
+        "tier": "critical",
+        "runs": 1,
+        "judge": "cross",
+        "turns": 1
+      },
+      {
+        "id": "dev-base-salary-choice",
+        "path": "evals/variants/e-stage/development/dev-base-salary-choice.yaml",
+        "sha256": "04e475f3aa59f5e8eb96b5f4fcac30425a1db6517bea878ca38857b89f9fcfa3",
+        "group": "development",
+        "tier": "critical",
+        "runs": 1,
+        "judge": "cross",
+        "turns": 1
+      },
+      {
+        "id": "dev-events-review-grades",
+        "path": "evals/variants/e-stage/development/dev-events-review-grades.yaml",
+        "sha256": "e29449f28428792eb73792878247312898e6fda8c405bacd2a41be1705ac85e2",
+        "group": "development",
+        "tier": "standard",
+        "runs": 1,
+        "judge": "same",
+        "turns": 1
+      },
+      {
+        "id": "dev-existing-evidence-stop",
+        "path": "evals/variants/e-stage/development/dev-existing-evidence-stop.yaml",
+        "sha256": "ea9f1d603cacb52958add501d7fff9b90187fcff7a2cf644319ab161a06313f6",
+        "group": "development",
+        "tier": "standard",
+        "runs": 1,
+        "judge": "same",
+        "turns": 1
+      },
+      {
+        "id": "var-debrief-round-unprovided",
+        "path": "evals/variants/e-stage/development/var-debrief-round-unprovided.yaml",
+        "sha256": "3216a85c4bc34a79afd037d32b7266b98699dc5d8f3d61770e6f77141a71c758",
+        "group": "development",
+        "tier": "critical",
+        "runs": 1,
+        "judge": "cross",
+        "turns": 2
+      },
+      {
+        "id": "var-debrief-speaker-candidate",
+        "path": "evals/variants/e-stage/development/var-debrief-speaker-candidate.yaml",
+        "sha256": "cc4da4a600c1009e283fc9b7a393b40772b3595e9a4947bd577f158473a36f27",
+        "group": "development",
+        "tier": "critical",
+        "runs": 1,
+        "judge": "cross",
+        "turns": 2
+      },
+      {
+        "id": "var-debrief-speaker-interviewer",
+        "path": "evals/variants/e-stage/development/var-debrief-speaker-interviewer.yaml",
+        "sha256": "b3cb2b266fa17c5d8268a0e0e8bcd1b36acff41a765b1467261aedafb8952e05",
+        "group": "development",
+        "tier": "critical",
+        "runs": 1,
+        "judge": "cross",
+        "turns": 2
+      },
+      {
+        "id": "var-positioning-health-admin",
+        "path": "evals/variants/e-stage/development/var-positioning-health-admin.yaml",
+        "sha256": "9b9717c4ced763df739ba72a1d58f7c00c2d55c1773784ef26fb69059b75cd11",
+        "group": "development",
+        "tier": "critical",
+        "runs": 1,
+        "judge": "cross",
+        "turns": 1
+      },
+      {
+        "id": "var-positioning-support-role",
+        "path": "evals/variants/e-stage/development/var-positioning-support-role.yaml",
+        "sha256": "5de5a03616c29f8ad269edf84032b6879bf34a16d4f15bf9ba075e558168d4d8",
+        "group": "development",
+        "tier": "critical",
+        "runs": 1,
+        "judge": "cross",
+        "turns": 1
+      },
+      {
+        "id": "var-resume-accounting-support",
+        "path": "evals/variants/e-stage/development/var-resume-accounting-support.yaml",
+        "sha256": "55537d2f48a554023b1f32960935c46712a4dff0a5dac2f1a9c48a6a7a840826",
+        "group": "development",
+        "tier": "critical",
+        "runs": 1,
+        "judge": "cross",
+        "turns": 1
+      }
+    ],
+    "bound_files": {
+      "adapters/skills.json": "4045028a188baa51fa7b5a33a1bf24b0fc30e72952e34e8135fbe122e871f97d",
+      "evals/personas/e-stage-synthetic-neutral.yaml": "61fe4751e70f7c3e2867a87c7f974b03cd2249c826f89d531ea26ab75c27e63d",
+      "evals/personas/five-year-global.yaml": "fd70aff32f3f5f054ba17651fc2c53c5c6523814070927e5bc719cfe817b2d01",
+      "evals/personas/incomplete-resume.yaml": "6e63cfc6a8b0092bb6e9b10d06b84dbf04894c8a4140545d73c223645f23882f",
+      "evals/personas/multi-application.yaml": "eab413202abcd7956a7d1ab82c4d9bcc83b9323cf8c34c31d1a000d98cefe488",
+      "evals/personas/three-year-professional.yaml": "cdd2046891a4c7654708a97dafc0f86f954b904b9d4a4185b2fb0d8e671755c4",
+      "evals/prompts/judge-repair-prefix.txt": "3c025f72bfe0465afee465cc2e2e5bb4d48021c1b25606f2e38924e7d334254b",
+      "evals/prompts/judge-repair-suffix.txt": "524d4ad8377020592fb9ce951e962a87bbe6cd3ffd1ec928f306028985458901",
+      "evals/prompts/judge.txt": "681b61cd3bb69f50b2c7d5c8b8d5f1b8bca3234a9afff2d6a63c53da56f84c7e",
+      "evals/prompts/subject-entry-only.txt": "a687a40b56a90d16cd70153f7e97b2a5cd4851ea58411003824b9f71397bb6e0",
+      "evals/prompts/subject-preloaded.txt": "f1bd23549cbeb31ff98bec14c0dcc51243746fa07384a0deef52cd8e410cce4b",
+      "scripts/eval_protocol.py": "b335bc9d29c2f2f12b4af471beb5bd7391848ebe2fb0523cc2b56f747ad524a9",
+      "scripts/run_model_evals.py": "c2056f98d4896a6325350672dc34b5bde9c6c589f63e0519aa4b4ee599246807"
+    }
+  },
+  "content_fingerprint": "665bbe2d6a2fbbfc3c521e7bc1f387fc579dee28a05823acdcb7feb908d8fe10"
+}

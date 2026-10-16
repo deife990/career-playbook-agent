@@ -1,5 +1,14 @@
 # Review improvement progress — 2026-10-16
 
+## Next candidate — G1 approval pending
+
+rc.8 scope is E + D; F conditional loading is deferred until reference discovery can be tested.
+Final-only holdout content was frozen first in `47c520c`. The
+[plan, contract diagnosis, split and cost](rc8-e-d-plan-2026-10-16.md) and
+[post-C failure policy](rc8-evaluation-policy-2026-10-16.md) are prepared for review.
+No E/D runtime changes or development/holdout model calls have started. G1 approval is required;
+later development calls, D cleanup and final evaluation each have separate approval gates.
+
 ## Completed
 
 - A: distinguish structural/document lint, deterministic tooling/state validation, actual model

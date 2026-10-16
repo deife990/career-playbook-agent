@@ -1,19 +1,26 @@
-# E-stage variant scenarios (draft, not part of C)
+# E-stage evaluation groups — content locks before E implementation
 
-These files are **not** in `evals/scenarios/`, so they do not enter the frozen C suite
-fingerprint and cannot invalidate the C resume record. They stay drafts until E starts; before
-any E model call they are frozen with their own variant-suite fingerprint, tiers and repeat
-counts, then run on both the unchanged rc.7 baseline packages and the E candidate. The frozen C
-scenarios are never edited.
+Original C scenarios, personas, prompts, assertions and package snapshots stay unchanged.
+Neither group enters the original C scenario inventory or suite fingerprint.
 
-Each variant changes the occupation, wording, numbers and (for debrief) which fields are given,
-so a fix that merely memorizes the C wording cannot pass. They test two general principles:
+- `holdout/`: nine final-only scenarios, seven critical x 3 cross-judge and two standard x 1
+  same-judge; 23 verdicts per host per package. Inputs and dependencies were frozen first in
+  [holdout-manifest-v1.json](holdout-manifest-v1.json), commit `47c520c`.
+- `development/`: six previously unexecuted drafts moved here plus three procedure variants.
+  All use a neutral synthetic persona so unrelated default QA/operations biography is not supplied.
+- [development-manifest-v1.json](development-manifest-v1.json): nine original C failure scenarios
+  plus nine development variants, once on both hosts. DIAGNOSTIC_ONLY, never release evidence.
 
-1. **Scope preservation** - quality or method qualifiers (structured, data-driven, accuracy,
-   careful, collaborative) and added actions or outcomes are not attached to what the user said
-   they did, in positioning or resume wording.
-2. **Provided fields only** - fields the user did not give (round number, speaker, date, result)
-   are Unknown or asked once, never marked confirmed.
+No model call has used either variant group. Developer checks may use only the development
+manifest. A separate orchestrator is planned; the frozen C runner/CLI stays unchanged.
+Content locks do not include a future runner/candidate: separate execution locks precede calls.
 
-Variants `var-debrief-speaker-*` state the speaker explicitly, separating the disputed judge
-attribution from the unsupported round-number finding recorded for `debrief-first` run 3.
+Holdout text is visible to its author and reviewer; this is an operational holdout, not a blind
+external benchmark. Do not use it in development prompts or use its outputs for candidate selection.
+At the final gate the same holdout runs on rc.7 and the frozen candidate. Neither result is used
+for tuning before both final schedules finish.
+
+The earlier draft plan to run all variants on baseline and candidate is superseded by the
+[post-C policy](../../../docs/rc8-evaluation-policy-2026-10-16.md): development is candidate-only
+diagnosis to save calls; holdout baseline/candidate comparison happens only at the final gate.
+See the [implementation/approval plan](../../../docs/rc8-e-d-plan-2026-10-16.md).

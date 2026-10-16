@@ -1,0 +1,9 @@
+id: dev-base-salary-choice
+persona: e-stage-synthetic-neutral
+workflow: W05
+turns:
+- '[가상 지원서] 싱가포르 물류 사무 공고에서 Annual base salary expectation (SGD) 칸이 숫자 한 개 필수야. 희망액이나 최저 수용액을 아직 정하지 않았고 시장 정보도 없어. 정식 오퍼를 받은 상황은 아니야. 임의 숫자를 넣지 말고 입력 결정을 도와줘.'
+assertions:
+  choice: Directly requests the user's chosen annual base amount or minimum/target rather than inventing a salary, zero or a market estimate; no actual input is confirmed until chosen.
+  stage: Names the current application-field stage and its distinction from a formal offer, retaining later scope/package discussion.
+  facts: Research or budgeting suggestions are recommendations rather than established market facts, user decisions, law or net-pay figures.

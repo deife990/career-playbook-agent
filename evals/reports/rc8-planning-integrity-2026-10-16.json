@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "model_calls": 0,
+  "runtime_changes": false,
+  "C_suite_unchanged": true,
+  "baseline_packages_unchanged": true,
+  "groups": {
+    "holdout": {
+      "fingerprint": "895695d7ab6b22e9fe9a01fbcab7643335478a650a7efb6fd0ef703eaae83ed7",
+      "scenario_count": 9,
+      "verdicts_per_host": 23,
+      "minimum_calls_both_hosts": 110
+    },
+    "development": {
+      "fingerprint": "665bbe2d6a2fbbfc3c521e7bc1f387fc579dee28a05823acdcb7feb908d8fe10",
+      "scenario_count": 18,
+      "verdicts_per_host": 18,
+      "minimum_calls_both_hosts": 80
+    }
+  },
+  "groups_disjoint": true,
+  "local_links_checked": 13,
+  "future_execution_lock_pending": true
+}

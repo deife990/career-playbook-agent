@@ -1,0 +1,9 @@
+id: dev-existing-evidence-stop
+persona: e-stage-synthetic-neutral
+workflow: W05
+turns:
+- '[가상 지원] 공연장 기록 보조 JD는 입장권 스캔과 집계표 입력뿐이야. 기존 evidence show-checked의 확인된 행동은 입장권 28건 스캔과 집계표 입력이고 사용자 확인을 마쳤어. 기간과 성과는 Unknown이야. 이미 준 사실을 다시 묻지 말고 추가 검색이나 질문 없이 Coverage Map과 다음 행동만 제시해줘.'
+assertions:
+  coverage: Treats the supplied confirmed actions as sufficient Strong or Usable coverage for the two requirements without requiring measured impact.
+  stop: Does not request another example, outcome, dates or reconfirmation and does not initiate retrieval after the explicit stop request.
+  scope: Does not add quality, efficiency, leadership, duration or outcomes; Unknown is preserved.

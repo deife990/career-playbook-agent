@@ -1,5 +1,9 @@
 # Review improvement gate — 2026-10-16
 
+rc.8 **planning/content freeze only**, awaiting G1 approval: E + D, with F deferred.
+[Plan and cost](rc8-e-d-plan-2026-10-16.md) · [Post-C acceptance/failure handling](rc8-evaluation-policy-2026-10-16.md).
+The final-only holdout is frozen; no candidate implementation or new model evaluation has run.
+
 **Strengthened C baseline COMPLETE_WITH_AUTOMATIC_FAILURES:** 260/260 verdicts, ERROR/missing 0.
 ChatGPT records 130 PASS; Claude records 119 PASS / 11 automatic FAIL. Actual behavior failures
 remain and block release acceptance. This is completion of baseline evidence, not readiness PASS.

@@ -1,0 +1,76 @@
+{
+  "post_C": true,
+  "model_calls_for_this_estimate": 0,
+  "source": "C successful CLI logs for nine original failure scenarios; judge citation repairs included in samples; absent telemetry excluded, not treated as zero",
+  "development_manifest_fingerprint": "665bbe2d6a2fbbfc3c521e7bc1f387fc579dee28a05823acdcb7feb908d8fe10",
+  "development_verdicts": 36,
+  "minimum_calls": 80,
+  "planning_calls_with_20pct_reserve": 96,
+  "sample_units": {
+    "claude_subject": {
+      "samples": 27,
+      "mean_tokens": 31735,
+      "median_tokens": 31963,
+      "p90_tokens": 33450
+    },
+    "claude_judge": {
+      "samples": 30,
+      "mean_tokens": 14571,
+      "median_tokens": 13513.5,
+      "p90_tokens": 18973
+    },
+    "chatgpt_judge": {
+      "samples": 25,
+      "mean_tokens": 8529,
+      "median_tokens": 3495,
+      "p90_tokens": 18916
+    },
+    "chatgpt_subject": {
+      "samples": 28,
+      "mean_tokens": 29017,
+      "median_tokens": 30308.0,
+      "p90_tokens": 32245
+    }
+  },
+  "estimate": {
+    "chatgpt": {
+      "subject_calls": 22,
+      "judge_calls": 18,
+      "calls": 40,
+      "mean_based_tokens": 791896,
+      "median_based_tokens": 729686,
+      "mean_plus_20pct_reserve_tokens": 950276
+    },
+    "claude": {
+      "subject_calls": 22,
+      "judge_calls": 18,
+      "calls": 40,
+      "mean_based_tokens": 960448,
+      "median_based_tokens": 946429,
+      "mean_plus_20pct_reserve_tokens": 1152538
+    }
+  },
+  "final_planned_verdicts": 352,
+  "final_minimum_calls": 802,
+  "final_components": {
+    "candidate_original_C": {
+      "verdicts": 260,
+      "calls": 582
+    },
+    "candidate_holdout": {
+      "verdicts": 46,
+      "calls": 110
+    },
+    "baseline_holdout_final_stage_only": {
+      "verdicts": 46,
+      "calls": 110
+    }
+  },
+  "caveats": [
+    "These are planning estimates, not fixed quota usage, charges, or guaranteed upper bounds. Output length and candidate context changes can alter usage.",
+    "Claude includes cache reads/creation; Codex exposes a different total. Do not sum or compare these counters as equal billing units.",
+    "No currency charge or usage-percent forecast can be inferred from these logs. Claude account remaining allowance unavailable.",
+    "One development pass only. Stop and request approval for further diagnostic revisions/calls; no automatic iteration.",
+    "Final validation has a separate approval and execution lock after D. No model call is authorized by writing this estimate."
+  ]
+}

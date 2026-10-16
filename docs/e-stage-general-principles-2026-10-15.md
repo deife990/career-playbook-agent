@@ -1,5 +1,10 @@
 # E-stage direction: two general principles — 2026-10-15
 
+Historical draft. For rc.8, the user's 2026-10-16 direction is recorded in the
+[E + D plan](rc8-e-d-plan-2026-10-16.md) and [post-C policy](rc8-evaluation-policy-2026-10-16.md).
+F is deferred, variants are split into development/final-only holdout, and development checks are
+candidate-only diagnostics. The earlier unsplit baseline/candidate proposal below is superseded.
+
 This is a plan only. No package, entry-file, core, schema or template change is made before C
 completes. The frozen C scenarios, assertions, tiers and prompts stay unchanged.
 

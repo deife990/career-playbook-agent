@@ -1,0 +1,9 @@
+id: dev-events-review-grades
+persona: e-stage-synthetic-neutral
+workflow: W05
+turns:
+- '[가상 공고] Moss 행사 지원 JD: Required는 참가 신청 접수와 명단 입력이고 Preferred는 CRM 사용이야. 내 확인 행동은 신청서 19건 접수와 명단 입력뿐이야. CRM은 해본 적이 있는지 말하지 않았고 이름·회사명·기간도 미제공이야. 파일 도구 없이 이력서 초안을 보여주고 Recruiter와 Hiring Manager 검토를 해줘.'
+assertions:
+  grades: Uses only Strong/Adequate/Weak/Risk for every recruiter and hiring-manager grade, cites observed content, and keeps uncertainty in explanatory facts rather than using Unknown or Partial as a grade.
+  uncertainty: CRM remains Unknown throughout rather than Gap, absent experience or a stated skill; no unsupported quality, tool, scope or outcome.
+  draft: Delivers supported partial copy without filling identity/dates or claiming file creation/QA; QA NOT_CHECKED and Ready false.
