@@ -1,0 +1,176 @@
+{
+  "holdout_fingerprint": "895695d7ab6b22e9fe9a01fbcab7643335478a650a7efb6fd0ef703eaae83ed7",
+  "method": "Human-annotated distinctive phrases, extracted with exact provenance verification from frozen manifest scenario turns. Generic instruction/contract vocabulary excluded. Not NLP completeness or semantic independence.",
+  "terms": {
+    "holdout-ambiguous-speaker": [
+      [
+        "institution",
+        "Hearth"
+      ],
+      [
+        "occupation",
+        "식품점 발주 보조"
+      ],
+      [
+        "institution",
+        "식품점"
+      ]
+    ],
+    "holdout-base-entry-decision": [
+      [
+        "location",
+        "아일랜드"
+      ],
+      [
+        "currency",
+        "EUR"
+      ],
+      [
+        "occupation",
+        "사무 보조"
+      ]
+    ],
+    "holdout-candidate-speaker": [
+      [
+        "institution",
+        "Vale"
+      ],
+      [
+        "occupation",
+        "지역서점 재고 보조"
+      ],
+      [
+        "institution",
+        "지역서점"
+      ]
+    ],
+    "holdout-craft-market": [
+      [
+        "occupation",
+        "공예 교육 보조"
+      ],
+      [
+        "location",
+        "부산"
+      ],
+      [
+        "occupation",
+        "공예"
+      ]
+    ],
+    "holdout-curatorial-scope": [
+      [
+        "institution",
+        "Nacre"
+      ],
+      [
+        "institution",
+        "문화재단"
+      ],
+      [
+        "occupation",
+        "Collection Assistant"
+      ],
+      [
+        "criterion",
+        "collection registration"
+      ],
+      [
+        "criterion",
+        "loan correspondence"
+      ],
+      [
+        "occupation",
+        "박물관 접수 보조"
+      ],
+      [
+        "object",
+        "소장품"
+      ],
+      [
+        "quantity",
+        "18개월"
+      ],
+      [
+        "quantity",
+        "35건"
+      ]
+    ],
+    "holdout-existing-evidence-stop": [
+      [
+        "occupation",
+        "도서관 보조"
+      ],
+      [
+        "identifier",
+        "lib-known"
+      ],
+      [
+        "quantity",
+        "17건"
+      ]
+    ],
+    "holdout-interviewer-speaker": [
+      [
+        "institution",
+        "Lumen"
+      ],
+      [
+        "occupation",
+        "편집 보조"
+      ],
+      [
+        "institution",
+        "출판사"
+      ],
+      [
+        "object",
+        "원고"
+      ]
+    ],
+    "holdout-procurement-review-grades": [
+      [
+        "institution",
+        "Quartz"
+      ],
+      [
+        "occupation",
+        "구매 보조"
+      ],
+      [
+        "tool",
+        "ERP"
+      ],
+      [
+        "object",
+        "발주서"
+      ],
+      [
+        "quantity",
+        "24건"
+      ]
+    ],
+    "holdout-sanitized-own-action": [
+      [
+        "institution",
+        "Orchid"
+      ],
+      [
+        "institution",
+        "복지관"
+      ],
+      [
+        "institution",
+        "Cedar"
+      ],
+      [
+        "identifier",
+        "PRIVATE-CEDAR-73"
+      ],
+      [
+        "occupation",
+        "봉사자 일정 안내"
+      ]
+    ]
+  }
+}

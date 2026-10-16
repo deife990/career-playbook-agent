@@ -11,8 +11,9 @@ Neither group enters the original C scenario inventory or suite fingerprint.
 - [development-manifest-v1.json](development-manifest-v1.json): nine original C failure scenarios
   plus nine development variants, once on both hosts. DIAGNOSTIC_ONLY, never release evidence.
 
-No model call has used either variant group. Developer checks may use only the development
-manifest. A separate orchestrator is planned; the frozen C runner/CLI stays unchanged.
+No real model call has used either variant group. Developer checks may use only the development
+manifest. The separate `scripts.run_variant_evals` wrapper is implemented and tested with fake
+providers only; the frozen C runner/CLI stays unchanged. See [runner scope](../../../docs/rc8-variant-runner.md).
 Content locks do not include a future runner/candidate: separate execution locks precede calls.
 
 Holdout text is visible to its author and reviewer; this is an operational holdout, not a blind

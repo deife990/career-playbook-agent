@@ -1,0 +1,327 @@
+diff --git a/core/artifacts/application-pack.md b/core/artifacts/application-pack.md
+index 5982f71..7dba124 100644
+--- a/core/artifacts/application-pack.md
++++ b/core/artifacts/application-pack.md
+@@ -27,6 +27,10 @@ Include requested mode/depth, selection strategy and JD category/Direct Match/Tr
+ Gap/Unknown coverage table with evidence and missing criteria. Separate ATS structural result,
+ Recruiter Scan and HM Credibility judgments, differentiation anchors, concern-to-surface plan,
+ meaning-preserving edits and cross-surface findings. Each judgment cites a line/section/fact.
++Recruiter Scan and HM Credibility grades are exactly Strong/Adequate/Weak/Risk with a rationale.
++Missing proof may receive Risk while the underlying fact stays Unknown. Match classifications
++Direct Match/Transferable/Partial/Gap/Unknown and file QA ATS-Ready/ATS-Risky/ATS-Broken/NOT_CHECKED
++are separate fields, never substitutes for either reviewer grade.
+ Include actual DOCX/PDF links only when created, observed extraction/page/visual checks and pending
+ checks separately. Final-ready requires complete relevant checks, not a percentage score.
+ Show submitted version/date/JD/answer identity after confirmed submission and the interview handoff.
+diff --git a/core/artifacts/interview-debrief.md b/core/artifacts/interview-debrief.md
+index 9b71992..53e3717 100644
+--- a/core/artifacts/interview-debrief.md
++++ b/core/artifacts/interview-debrief.md
+@@ -18,3 +18,9 @@ Next Round Strategy grounded in actual interview recollection. Collect the first
+ - Next Action
+ 
+ Use [template](../../templates/artifacts/interview-debrief.md). Classify important findings; no invented facts.
++
++## Field provenance contract
++For round, speaker, date, stage and result, retain the supplied source or Unknown independently.
++No inferred/default value may be marked confirmed. Speaker attribution requires supplied recall;
++an ambiguous statement cannot become employer intelligence. Analyze the available record first,
++then ask at most one combined clarification if needed. Preserve original recalled answers.
+diff --git a/core/capabilities/career-evidence-discovery.md b/core/capabilities/career-evidence-discovery.md
+index a22c6c1..9279e98 100644
+--- a/core/capabilities/career-evidence-discovery.md
++++ b/core/capabilities/career-evidence-discovery.md
+@@ -21,6 +21,11 @@ Read [evidence policy](../principles/evidence-policy.md), [privacy](../principle
+    scan; guided questions come last when records/bridge are unavailable. Never repeat generic intake.
+ 
+ ## Coverage and priority
++Termination takes precedence over further intake: a confirmed action may be sufficient for a
++criterion even with Unknown outcome, period or metric. Strong/Usable normally ends discovery.
++On a user stop request, ask no further result/example/period/reconfirmation questions and do not
++retrieve more records. Provide the requested supported mapping/partial output, retain Unknowns
++and record the stop reason. Do not withhold that output pending a more complete story.
+ For each criterion show criterion → existing evidence IDs/action → coverage → reason → next action.
+ These five labels are separate from v1.1 JD-match labels and Recruiter/HM grades:
+ - **Strong**: sufficient directly relevant, confirmed own-action proof. Skip further discovery.
+diff --git a/core/capabilities/compensation.md b/core/capabilities/compensation.md
+index 6809af5..2f7fc4e 100644
+--- a/core/capabilities/compensation.md
++++ b/core/capabilities/compensation.md
+@@ -50,3 +50,14 @@ benchmark, invented percentile, guessed number or default percentage uplift.
+ Give primary/backup scripts for the actual stage and one verification question. Unknown ranges
+ use no-number copy. Urgent calls can use short scripts with research pending. No salary-history
+ law, tax/option valuation or negotiation-success claim from external skills is accepted unchecked.
++
++## Numeric application-field decision contract
++Use this sequence for a numeric-only expectation field:
++1. Name the actual application stage and distinguish it from a formal offer; later scope/package
++   discussion remains possible. Confirm the required currency, base versus total and pay interval.
++2. Directly ask which amount the user chooses to enter, or their acceptable minimum/target on that
++   same basis. Role/location/seniority questions and research do not replace this choice question.
++3. If undecided, leave actual input pending. Offer research/budgeting as proposed decision steps;
++   do not pressure a choice or insert a default, zero, uplift or remembered benchmark.
++4. Use only the user's chosen, approved figure with its basis and interval. Record a conversation
++   or disclosure only if it actually happened; a proposed script is not past negotiation history.
+diff --git a/core/capabilities/screening-engine.md b/core/capabilities/screening-engine.md
+index 9c79b16..d233dcf 100644
+--- a/core/capabilities/screening-engine.md
++++ b/core/capabilities/screening-engine.md
+@@ -68,6 +68,10 @@ evidence checks. Unperformed steps remain PENDING, not PASS. A quick audit is no
+ 11. **Hiring Manager Credibility**: could the candidate perform the work? Probe exposure vs ownership,
+     seniority boundary, team vs personal outcome, causal evidence, technical/business specificity,
+     defensible interview drill-down and why to interview. Label reviewer judgments INFERENCE.
++    Both Recruiter Scan and Hiring Manager findings use only Strong/Adequate/Weak/Risk, each with
++    an observed line/section/fact and rationale. Missing proof can be Risk while the underlying
++    fact remains Unknown. Partial/Unknown/Pending are not reviewer grades; NOT_CHECKED belongs
++    to file QA. JD match, reviewer grade and file QA remain separate axes.
+ 12. **Differentiation Audit**: find repeated demonstrated strengths, unusual combinations, business
+     exposure, environments, cross-functional patterns and career narrative. State evidence anchors.
+     Remove interchangeable traits; do not invent a unique insight or require a provocative opinion.
+diff --git a/core/principles/entry-guards.md b/core/principles/entry-guards.md
+index 3550c65..0e17288 100644
+--- a/core/principles/entry-guards.md
++++ b/core/principles/entry-guards.md
+@@ -1,31 +1,22 @@
+ # Entry safeguards
+-Small mandatory checks remain visible when the host has not yet loaded detailed references.
+-They supplement, rather than replace, the selected workflow and artifact contract.
++Mandatory pre-reference checks supplement the selected workflow/artifact contract.
+ 
+ - Unknown experience stays Unknown in tables, positioning, interview risks and mock premises.
+   Gap needs BOTH a confirmed role requirement and confirmed absence/mismatch; no JD means
+   unconfirmed requirements stay Unknown. Never put unknown tools/design/experience in a Gap
+   cell or tell the user to claim “I have no experience” when they have not confirmed absence.
+-  Apply this in risk headings and positioning too: use “협업 사례 미확인” rather than
+-  “협업 경험 공백” or “확인된 협업 경험 없음” when experience may exist but has not been supplied.
+-  Missing examples are a verification task, not a confirmed weakness or absence.
+-  Before returning W05, recheck EVERY section for that same uncertainty, especially Red Team
+-  Findings, risk titles and the Ready:false reason. Unknown SQL cannot become "SQL 없음",
+-  "필수 요건 미충족" or "SQL Gap" in those sections just because the JD requires it.
+-  Use "SQL 경험 미확인; 확인 필요" and retain a verification task. Do not recommend keeping
+-  a Gap until absence is actually confirmed. File/field readiness and unknown qualifications
+-  are separate reasons; missing information does not prove failed screening or rejection.
+-- Unknown application history stays Unknown in every table and exported record. An empty local
+-  application list means no records are loaded, not that the user has never applied. Do not write
+-  “지원 이력 없음” or “not applied” unless the user confirms that absence.
++  Missing examples require verification, not a weakness/absence claim or pending Gap.
++  Recheck EVERY W05 section, including positioning, Red Team, risk titles and Ready:false:
++  required-but-unknown qualifications stay unconfirmed. File/field readiness is separate;
++  missing proof does not establish unmet qualifications, failed screening or rejection.
++- Unknown application history stays Unknown in tables/exports. Empty loaded records do not prove
++  “지원 이력 없음”/“not applied”; those need user-confirmed absence.
+ - Proposed career directions are RECOMMENDATION, not a stated CareerGoal. Record a goal only
+   after the user states or confirms it. Skill/relevance interpretations are INFERENCE, not
+-  CareerEvidence. Reporting defects does not establish personally identifying/discovering them,
+-  a written report, a structured process, or that the defects arose in the stated tests.
++  CareerEvidence. Interpretation cannot add an action, quality, method, causal relationship or result
++  absent from the underlying facts, even with tentative wording.
+   In W04 Transferable Evidence, label each proposed role connection INFERENCE with a boundary.
+-  Testing/reporting alone never becomes accuracy/quality review experience or analytical skill,
+-  even phrased "may be adjacent experience". Keep the actual action and missing context Unknown;
+-  a section heading or tentative phrasing does not authorize an extra career action/method.
++  A heading/tentative phrasing authorizes no extra career action/method; missing context stays Unknown.
+ - Unknown bonus, equity, tax or net pay stay Unknown. An INFERENCE label does not permit
+   a numeric net-pay range from memory. Net scenarios need confirmed pay interval, jurisdiction,
+   tax year and personal assumptions plus an accessed current authoritative basis; otherwise
+@@ -33,9 +24,11 @@ They supplement, rather than replace, the selected workflow and artifact contrac
+ - During an ACTIVE mock, a procedural question counts as the one question. Never ask whether
+   to continue/end and an interview question in the same turn. An interim coaching request may
+   receive a brief deferral plus ONE interviewer question; no separate continuation question.
+-  Each interviewer question asks for one thing (not background plus motivation together).
++  Each interviewer question asks for one thing.
+ - Debrief: collect recall first, but once the user supplies a record and asks for analysis,
+   analyze it now. Mark missing answers/reactions Unknown and ask at most one follow-up at the end.
++  Unprovided round, speaker, date, stage and result stay Unknown, never marked confirmed by default.
++  Keep recall USER FACT with its supplied speaker; unspecified speaker stays Unknown.
+   Repeated ownership questions and requests for another example establish observed behavior only.
+   Hiring outcome stays Unknown; do not reassure “불합격 신호가 아니다” or assert “기회를 더 줬다”.
+   Interviewer intention needs multiple explicitly uncertain hypotheses, never a settled explanation.
+@@ -43,43 +36,38 @@ They supplement, rather than replace, the selected workflow and artifact contrac
+   until requested. Persist the prepared round's objectives and positioning as recommendations
+   and its next actions before complete export; do not replace prepared content with null.
+   Invitation format/duration can be retained in source notes if the schema has no such fields.
+-- For pure import/re-export, preserve every existing key/value/ID/null and array order exactly.
+-  Do not turn an omitted field into an empty list/object; keep it omitted or add only optional
+-  null fields. A derived wording correction never overwrites actual recalled answers/debriefs.
++- Pure import/re-export preserves every key/value/ID/null and array order. Omitted fields stay
++  omitted or gain only optional nulls, never empty collections. Wording edits never overwrite recall.
+ - Export applications/<id>.json with the stem equal to opportunity_id and opportunity.id.
+   Check declared paths against final ZIP members and retain all prior rounds and requirements.
+-- An incomplete host/file read is not a completed workflow. Read the selected detailed contract
+-  and disclose inaccessible references; never silently substitute a generic short response.
++- Read the selected detailed contract; disclose inaccessible references. An incomplete read is
++  not workflow completion and permits no silent generic fallback.
+ - W05 JD mapping includes ONLY supplied/sourced employer criteria. Candidate experience is a separate inventory;
+-  it never creates a requirement. A SQL-only JD gets one SQL requirement row, not operations
+-  analysis/testing/defect-reporting rows from the candidate. Retain original MUST conditions
+-  (e.g. fully remote) in a separate audit; employer compliance remains Unknown until sourced.
+-  Adjacent facts do not establish a relationship: "operations analysis 3 years" plus "performed
+-  12 tests" does not support "12 operations analysis tests". Keep each action's known scope exact.
++  it never creates a requirement. Retain original MUST conditions in a separate audit; employer
++  compliance remains Unknown until sourced. Adjacent facts do not establish a relationship;
++  keep each action's known scope exact.
+ - For W05 resume/application output report the checks, not only files: JD requirement mapping
+   (Direct Match/Transferable/Partial/Gap/Unknown); Recruiter Scan and Hiring Manager credibility as
+   Strong/Adequate/Weak/Risk citing the observed line; file QA as ATS-Ready/ATS-Risky/ATS-Broken/
+   NOT_CHECKED with what text extraction and page count actually showed. No ATS score/pass odds.
+-  In W05, confirmed review of others' SQL query results is Partial exposure for an SQL data
+-  validation requirement. Name the unresolved validation/authoring scope; do not erase that
+-  confirmed exposure as Unknown or upgrade it to Direct Match. Unconfirmed Selenium stays Unknown.
++  Preserve confirmed limited exposure as Partial with unresolved scope explicit; do not erase
++  it as Unknown or upgrade it to Direct Match. Unconfirmed skills stay Unknown.
+   These are separate vocabularies: never use Partial, Unknown or Pending as a Recruiter/Hiring
+   Manager review grade. For missing proof use Risk with the fact explicitly Unknown; for an
+   uninspected document keep NOT_CHECKED in file QA, outside the reviewer grades.
+-- State exposure boundaries positively in resume lines (“reviewed results of existing SQL
+-  queries”); keep what was not done in gap notes/interview prep unless needed to prevent misreading.
++- State exposure boundaries positively in resume lines; keep what was not done in gap notes/
++  interview prep unless needed to prevent misreading.
+   Ready is not submitted. When delivering final files or a final-ready version, add one line asking
+   the user to tell you when they actually submit, so that exact version, JD and answers are frozen;
+   later interview prep starts from the submitted version. This handoff also applies when the user
+   requests a final pre-submission review but file QA is NOT_CHECKED: say “실제 제출 후 알려주시면
+   그 제출본·JD·답변을 고정하겠습니다.” Keep ready false until QA passes. A preliminary partial
+   draft outside a final pre-submission request needs no freeze prompt.
+-- Without file tools or essential resume fields, deliver the supported action-only text and an
+-  actual export/inspection checklist now, then ask at most two missing facts. Even one confirmed
+-  action supports a partial draft; unknown name/company/dates stay unfilled. Keep file QA
+-  NOT_CHECKED and ready false. Do not withhold all useful copy or merely promise a checklist later.
+-- Host account memory is optional. Never save simulation/test/fictional data to it. Save real
+-  career details there only when the user asks or agrees; the portable pack stays canonical.
++- Without file tools/essential fields, deliver supported action-only copy and an export/inspection
++  checklist now, then ask at most two facts. One confirmed action suffices for a partial draft;
++  unknown name/company/dates stay unfilled, QA NOT_CHECKED, ready false. No merely promised checklist.
++- Account memory is optional: no simulation/test/fictional data; real details require user consent.
++  The portable pack stays canonical.
+   Retain the user's SIMULATION ONLY label on displayed submission records and handoffs, even
+   after they say to assume an actual submission. Keep the synthetic record in a separate test
+   context/pack; explicitly say it does not update real submissions or account memory.
+@@ -98,7 +86,7 @@ They supplement, rather than replace, the selected workflow and artifact contrac
+   A privacy audit repeats categories only, never the original customer/employee name, hostname,
+   address, credential or internal link—even in an audit table, heading or redaction example.
+   Do not claim “not echoed” after showing identifiers. Redacted result support stays Unknown;
+-  never suggest an unsupported replacement outcome such as “operational readiness”.
++  never suggest an unsupported replacement outcome.
+   For a new concrete own action recalled in W08, show that action with missing date/result as
+   Unknown and ask ONE combined exact-fact/safe-global-reuse confirmation after analysis.
+   Do not postpone that confirmation solely to collect more detail when an action-only partial
+diff --git a/core/principles/evidence-policy.md b/core/principles/evidence-policy.md
+index 8aabcec..51c7c2c 100644
+--- a/core/principles/evidence-policy.md
++++ b/core/principles/evidence-policy.md
+@@ -2,25 +2,25 @@
+ ## Classification
+ USER FACT: supplied/confirmed by the user; not independently verified unless sources establish it.
+ Self-confirmation stays USER FACT with user_confirmed=true. Never label it VERIFIED BY USER,
+-Verified Experience, or VERIFIED FACT. Example: “I personally tested 12 cases” → USER FACT,
+-even after the user repeats or confirms it. Strong Evidence describes relevance, not verification.
++Verified Experience, or VERIFIED FACT. Strong Evidence describes relevance, not verification.
+ VERIFIED FACT: accessible sources directly support this exact claim, subject, date and scope.
+ INFERENCE: a reasoned hypothesis with evidence, alternatives and confidence; never a fact.
+ RECOMMENDATION: an action proposal with rationale and constraints; never a forecast or guarantee.
+ Unknown is a lack of information, not an assertion; preserve null, ask targeted verification.
+-Preserve the exact factual scope even in summaries and positioning. “Performed 12 tests and
+-reported defects” does not establish clear/structured reporting, analytical skill, learning,
+-collaboration or improvement. Omit unsupported quality/skill/impact claims or explicitly label
+-role interpretations INFERENCE; never persist them as CareerEvidence or factual resume/story text.
+-Do not add a new action when paraphrasing: “reported defects” does not establish documentation,
+-a written defect report, a reporting tool or a process. Preserve “reported defects” until the user
+-confirms the method. Repetition of an assistant draft is not a user confirmation.
++Facts, summaries and positioning must preserve supported actor/action/period/scope/quality/method/
++result. Add none, including market facts, beyond user/accessed evidence. INFERENCE interprets a
++supported premise; it cannot invent one. Tentative labels permit no unsupported CareerEvidence
++or factual resume/story claims. Repeating an assistant draft is not user confirmation.
++Example: “As a postal sorting aide I sorted 67 envelopes” stays that action and count (USER FACT
++even after reconfirmation); it does not establish routing improvements or a meticulous method.
++An unprovided field stays Unknown/null or is asked once, never marked confirmed by default.
+ 
+ ## Career evidence
+ Capture own role, generalized context, actions, outcome, scale, skills, source IDs, user confirmation.
+ Extracting a resume does not verify its claims. Ask the user to confirm responsibility and numbers.
+ No evidence→do not add a claim to a resume/story. No known metric→use a truthful qualitative result
+-or mark a metric to verify in a draft; never present a placeholder as a real accomplishment.
++only when that result itself is supported; otherwise retain action-only copy. A metric to verify
++may be marked in a draft, never presented as a real accomplishment.
+ “Make me project lead” with only support work: decline the false title and rewrite support work
+ as support work with specific action/value. Separate individual actions from team results.
+ Each final resume bullet and story binds evidence_ids. Preserve dates, scope, qualifications,
+@@ -52,3 +52,22 @@ Factual draft sentences must be supported too. Do not infer exhaustive scope, pr
+ handover efficiency, independent decisions or causal impact from merely checking/documenting.
+ When outcome unknown, retain the observed action only. “Confirm this draft” is not permission to
+ add plausible experience. Illustrative future actions stay explicitly conditional recommendations.
++
++## Examples and boundary checks
++Applications of the scope rule, not exceptions:
++- Personal testing of 12 cases stays USER FACT after reconfirmation, not VERIFIED FACT.
++- Testing/reporting defects proves no clear/structured reporting, analytical skill, learning,
++  collaboration, improvement or accuracy/quality review. “Adjacent” phrasing adds no premise.
++  Reporting proves no personal discovery, documentation/written report, tool, structured process
++  or relation to those tests. Keep only the supplied action.
++- Three years of operations analysis plus twelve tests does not establish operations-analysis tests.
++- SQL-only JD: one requirement row; testing/reporting/operations go in candidate inventory.
++  Original MUST conditions retain their audit; unknown employer compliance stays Unknown.
++- Missing collaboration examples: “협업 사례 미확인”, not confirmed absence. Unknown required SQL:
++  “SQL 경험 미확인; 확인 필요”, never “SQL 없음”/“필수 요건 미충족”/“SQL Gap”, even in Red Team or
++  Ready:false. No Gap pending proof of absence.
++- Reviewing others' SQL results: Partial exposure to SQL validation; purpose/authoring/ownership
++  unresolved, not Direct Match. Unconfirmed Selenium: Unknown. Match/reviewer/QA labels differ.
++- Resume: “reviewed results of existing SQL queries”; unperformed work belongs in gap notes/
++  interview prep unless needed to prevent misreading.
++- Redacted support: Unknown result, no replacement “operational readiness” or identifier echo.
+diff --git a/core/workflows/w05-application-prep.md b/core/workflows/w05-application-prep.md
+index 499b220..eb83856 100644
+--- a/core/workflows/w05-application-prep.md
++++ b/core/workflows/w05-application-prep.md
+@@ -42,7 +42,10 @@ an opportunity; company-tailored material requires selection. Missing strategy
+    skips by default. No JD means
+    provisional criteria; do not invent requirements. Discovery declined/unavailable: deliver
+    supported partial copy with precise Unknowns, then continue the existing engine.
+-   Mine missing relevant facts with [experience mining](../capabilities/experience-mining.md),
++   A user stop request overrides further intake/mining/retrieval: deliver the requested supported
++   output with Unknown fields and a stop reason. A confirmed action can suffice without a result
++   metric or period. Do not ask for those, another example or reconfirmation after a stop request.
++   Only when needed and not declined, mine facts with [experience mining](../capabilities/experience-mining.md),
+    then create/update [STAR stories](../capabilities/story-bank.md) only from confirmed evidence.
+ 3. Select mode/depth and execute the complete [screening pipeline](../capabilities/screening-engine.md):
+    Evidence→Positioning→Master→Target JD→Selection→Tailoring→Assertion Audit→ATS Structural QA→
+diff --git a/core/workflows/w08-interview-debrief.md b/core/workflows/w08-interview-debrief.md
+index 93151b8..9abf9df 100644
+--- a/core/workflows/w08-interview-debrief.md
++++ b/core/workflows/w08-interview-debrief.md
+@@ -28,6 +28,11 @@ round/prior hypothesis. If several companies/rounds are possible clarify before
+    the available record for limited analysis: proceed now and mark missing fields Unknown.
+    Ask at most one targeted follow-up after the analysis, rather than repeating intake.
+    Do not fill answers from Story Bank.
++   Round number, speaker, date, stage and result each need their own supplied source. Missing
++   values stay Unknown; never label a default as confirmed. Attribute a statement only to its
++   supplied speaker and preserve it as user-reported recall, not independent verification.
++   An unspecified speaker is not employer intelligence. Combine any necessary clarification
++   with the single follow-up after analysis; do not restart collection for missing metadata.
+ 4. Compare previous hypotheses against actual evidence: supported / challenged / unresolved,
+    with observed statements and alternative interpretations. Reaction is observed behavior,
+    not proof of interviewer belief or hiring outcome. Repeated ownership questions or another
+diff --git a/templates/artifacts/application-pack.md b/templates/artifacts/application-pack.md
+index 36c87c7..a25fe4d 100644
+--- a/templates/artifacts/application-pack.md
++++ b/templates/artifacts/application-pack.md
+@@ -48,6 +48,8 @@ JD requirement / category / match / evidence / missing: {{coverage}}
+ ATS structure: {{ats_status_and_observations}}
+ Recruiter scan: {{recruiter_findings}}
+ HM credibility: {{hm_findings}}
++Each reviewer finding: Strong / Adequate / Weak / Risk + observed line/fact + rationale.
++Underlying fact may be Unknown; match class and file QA are separate from reviewer grades.
+ Differentiation: {{evidence_anchors}}
+ Concerns and handling surface: {{concerns}}
+ Meaning-preserving edits: {{before_after_assertion_checks}}
+diff --git a/templates/artifacts/interview-debrief.md b/templates/artifacts/interview-debrief.md
+index cc113e7..57cfa8e 100644
+--- a/templates/artifacts/interview-debrief.md
++++ b/templates/artifacts/interview-debrief.md
+@@ -1,5 +1,7 @@
+ # interview-debrief
+ Opportunity / Round: {{selected_scope}}
++Field provenance: {{supplied_source_or_Unknown_for_round_speaker_date_stage_result}}
++Unprovided values remain Unknown; no confirmed defaults. Any clarification follows analysis.
+ 
+ ## Actual Questions
+ {{actual_questions}}
