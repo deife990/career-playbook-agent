@@ -1,10 +1,23 @@
-# Review improvement gate — 2026-10-16
+# Review improvement gate — 2026-10-17
 
-rc.8 **E implementation/no-call tools complete**, awaiting G2 approval: E + D, with F deferred.
-[Plan and cost](rc8-e-d-plan-2026-10-16.md) · [Post-C acceptance/failure handling](rc8-evaluation-policy-2026-10-16.md).
-The final-only holdout is frozen; E is implemented but no real development/holdout evaluation has run.
-[G2 full text diffs, rule mapping, no-call audit and cost](rc8-g2-review-2026-10-16.md).
-Current E files are a development candidate, not rc.8 release acceptance. D/F are unapplied.
+**G2 DIAGNOSTIC_ONLY: approved unstarted cases exhausted; NOT_RELEASE_READY.**
+Valid verdicts 35/36, missing 0: ChatGPT 18 PASS; Claude 11 PASS / 6 FAIL / 1 quarantined ERROR.
+The ERROR lacks model identity, and its subject retry was excluded from approval. No further
+model calls were made to replace it. Manual review also found behavior/procedure failures in
+automatic PASS responses. Two automatic FAILs have assertion/runtime-contract qualifications;
+no automatic verdict was rewritten or rerun away.
+
+[Current scenario/assertion results, C comparisons, raw review, usefulness and salary question counts](rc8-development-results-2026-10-17.md) ·
+[No-call preservation audit](../evals/reports/rc8-development-2026-10-16/completion-audit-2026-10-17.json).
+The exact mock-question parenthetical is restored; sentence-level deletion limits are recorded.
+Tests after the approved selective runner fix: 226 PASS, static PASS, leakage 0. These are
+structural/deterministic checks, not behavior acceptance. Candidate package identities stayed fixed.
+
+rc.8 scope remains E + D, with F excluded. E development source exists; actual failures remain.
+D/F and holdout/final model evaluation remain held. The final-only holdout is frozen and uncalled.
+[Plan/cost](rc8-e-d-plan-2026-10-16.md) · [Post-C acceptance/failure handling](rc8-evaluation-policy-2026-10-16.md).
+No new candidate edit/diagnostic round, main merge, push, tag or release upload was performed.
+README/VERSION retain rc.7; this diagnostic does not recertify the changed candidate.
 
 **Strengthened C baseline COMPLETE_WITH_AUTOMATIC_FAILURES:** 260/260 verdicts, ERROR/missing 0.
 ChatGPT records 130 PASS; Claude records 119 PASS / 11 automatic FAIL. Actual behavior failures

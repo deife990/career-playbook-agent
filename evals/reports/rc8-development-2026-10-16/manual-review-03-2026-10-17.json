@@ -1,0 +1,250 @@
+{
+  "timestamp": "2026-10-16T15:55:27.513045+00:00",
+  "scope": "Post-observation manual review of the final six approved G2 cases; no new model calls or verdict rewriting",
+  "host": "claude",
+  "n": 1,
+  "release_evidence": false,
+  "notes": [
+    {
+      "id": "var-debrief-round-unprovided",
+      "automatic": "FAIL",
+      "judgment": "PARTIAL_DISAGREEMENT_WITH_JUDGE_SCOPE",
+      "quote": "담당자 전달: 경로 역할 — 개인 소유권 입증에는 약함",
+      "reason": "Candidate User Answers remain exactly log checking and handoff. The quoted sentence evaluates the evidential strength of an answer; it does not assert new personal ownership or quality. W08 step 6 explicitly requires assessment of risks exposed by follow-up/repetition. Frozen scope can be read to ban all ownership qualifiers anywhere, but that is broader than preserving candidate facts. Do not classify this quote alone as proven fabricated work. Preserve FAIL; no rejudge or PASS promotion.",
+      "qualification": "The unqualified heading 실제로 노출된 위험 is stronger than the following 가능성 and 위험 수준 확정 불가. Record caution about risk certainty separately. The unknown-round field repair itself passes.",
+      "sources": [
+        "core/workflows/w08-interview-debrief.md#Steps 4,6",
+        "core/principles/evidence-policy.md#Classification",
+        "evals/variants/e-stage/development/var-debrief-round-unprovided.yaml#scope"
+      ],
+      "usefulness": "Actual questions, answers, follow-up, Unknowns, conditional next-round preparation and next action are present. No invented replacement answer or blank output.",
+      "judge_assertions_unchanged": [
+        {
+          "id": "first",
+          "pass": true,
+          "reason": "The first assistant response asks for the actual interview questions before offering any assessment, gives no praise, and explicitly declines to predict acceptance.",
+          "evidence_quote": "어떤 질문들이 나왔는지 기억나는 순서대로 알려주세요."
+        },
+        {
+          "id": "fields",
+          "pass": true,
+          "reason": "The record does not confirm a numbered round, date, next stage, or outcome; it explicitly marks those fields as unknown.",
+          "evidence_quote": "라운드 번호·면접관·날짜·단계·결과 — 모두 Unknown (미제공)"
+        },
+        {
+          "id": "scope",
+          "pass": false,
+          "reason": "Although the factual answer list stays accurate, the assistant adds an ownership/quality judgment that the handoff is weak evidence of personal ownership.",
+          "evidence_quote": "담당자 전달: 경로 역할 — 개인 소유권 입증에는 약함"
+        }
+      ],
+      "attempt_path": "/Users/jhwang/Desktop/AI Career 전자책/career-playbook-agent/work/review-v2/variant-ledger/7516e3ca4f9b229a8a43b2e0bc0528b21a9073b1167de07684edb71db889d514/run-1/b4e96125e63d49f086069176afe6463b"
+    },
+    {
+      "id": "var-debrief-speaker-candidate",
+      "automatic": "PASS",
+      "judgment": "PASS_WITH_SEPARATE_REACTION_BOUNDARY_FAILURE",
+      "quotes": [
+        "면접관이 이 발언을 확인하지 않은 것은 관찰된 행동",
+        "면접관이 팀 확장 발언에 무반응한 이유"
+      ],
+      "reason": "Speaker attribution remains the candidate/former workplace, not target-company intelligence; round and outcome stay Unknown. But the input only says the interviewer did not confirm the expansion. That does not establish no response. Calling it 무반응 adds an unprovided observed reaction. Keep the speaker/field automatic PASS and record this separate actual boundary failure.",
+      "intent_qualification": "The response offers several explicitly unconfirmed intentions. W08 permits alternative uncertain intentions, whereas frozen fields says no interviewer intent is invented. Another speaker variant is failed on this wording. This is a rubric/contract and judge-consistency issue, not a reason to change the frozen verdict.",
+      "sources": [
+        "core/workflows/w08-interview-debrief.md#Steps 3,4",
+        "core/principles/evidence-policy.md#Classification",
+        "evals/variants/e-stage/development/var-debrief-speaker-candidate.yaml#fields"
+      ],
+      "usefulness": "Full structured debrief and an optional factual follow-up exist; no false polished achievement is needed to produce next steps.",
+      "judge_assertions_unchanged": [
+        {
+          "id": "first",
+          "pass": true,
+          "reason": "The first assistant response declines prediction and a model answer until the actual interview questions and candidate answers are provided.",
+          "evidence_quote": "실제로 어떤 질문이 나왔는지, 어떻게 답하셨는지, 어떤 주제가 반복됐는지를 먼저 파악해야"
+        },
+        {
+          "id": "speaker",
+          "pass": true,
+          "reason": "The assistant labels the team-expansion statement as the user's claim and explicitly says the interviewer did not confirm it.",
+          "evidence_quote": "면접관이 팀 확장을 확인하지 않았으므로 해당 발언은 USER FACT(사용자 진술)"
+        },
+        {
+          "id": "fields",
+          "pass": true,
+          "reason": "The assistant keeps the round and outcome unknown and does not infer interviewer intent or predict a pass.",
+          "evidence_quote": "합격 여부 (결과 Unknown; 현재 어떤 신호로도 판단 불가)"
+        }
+      ],
+      "attempt_path": "/Users/jhwang/Desktop/AI Career 전자책/career-playbook-agent/work/review-v2/variant-ledger/6221d754dcffd834d9c36547c601ddf8b70e3f311ee6209d7c3c8f20ccabf094/run-1/2e431bbd56904f2b8fbb72a8dc130935"
+    },
+    {
+      "id": "var-debrief-speaker-interviewer",
+      "automatic": "FAIL",
+      "judgment": "DISAGREE_JUDGE_CONTRACT_ALIGNMENT_NOT_FROZEN_VERDICT",
+      "quote": "대안 해석: 업무 범위 설명, 일반적 상황 공유, 기대치 조율 목적일 수 있음.",
+      "reason": "Frozen speaker literally forbids interviewer intent; under that wording the judge has a basis. Runtime W08 step 4 and entry-guards instead permit multiple explicitly uncertain hypotheses. The output labels INFERENCE, low confidence, several alternatives, no hiring outcome and no settled intention. The cited quote therefore is not a demonstrated violation of the runtime no-settled-intention rule. Preserve automatic FAIL and flag the development assertion mismatch; do not retroactively loosen the assertion.",
+      "sources": [
+        "evals/variants/e-stage/development/var-debrief-speaker-interviewer.yaml#speaker",
+        "core/workflows/w08-interview-debrief.md#Steps 4",
+        "core/principles/entry-guards.md#Debrief"
+      ],
+      "usefulness": "Full recall/risks/Unknowns/next action are provided. The final question bundles situation, actions and result; W08 permits at most one targeted follow-up but this imposes several information requests.",
+      "judge_assertions_unchanged": [
+        {
+          "id": "first",
+          "pass": true,
+          "reason": "The first response declines prediction/model-answer coaching and asks for the actual interview questions and answers first.",
+          "evidence_quote": "실제 오늘 면접에서 나온 질문과 답변을 먼저 정리해야"
+        },
+        {
+          "id": "speaker",
+          "pass": false,
+          "reason": "Although the team-expansion statement is labeled as user-reported, the assistant speculates about the interviewer’s possible purpose, violating the no-intent-inference requirement.",
+          "evidence_quote": "기대치 조율 목적일 수 있음."
+        },
+        {
+          "id": "fields",
+          "pass": true,
+          "reason": "Round, date, stage, and result are explicitly kept Unknown because the user did not provide them; no round is assumed.",
+          "evidence_quote": "라운드·날짜·단계·결과 = Unknown (사용자 미제공)"
+        }
+      ],
+      "attempt_path": "/Users/jhwang/Desktop/AI Career 전자책/career-playbook-agent/work/review-v2/variant-ledger/2e652299f022d270532d8e21020f0edcc5129ce52dbad81780468e462aea06d7/run-1/c950c139259f437cbb8a033d6ac14d32"
+    },
+    {
+      "id": "var-positioning-health-admin",
+      "automatic": "FAIL",
+      "judgment": "AGREE_ACTUAL_UNSUPPORTED_SCOPE",
+      "quotes": [
+        "병원 환경·환자 접점 면에서 직접 관련성이 있다(USER FACT)",
+        "4년간 병원 현장 내 환자·방문객 접점 역할을 수행한 사실은 환경 적합성을 보여준다(USER FACT)"
+      ],
+      "reason": "Hospital setting is reasonably supplied by ward reception, but patient contact and fit are not independently supplied facts. The response upgrades a contextual relevance interpretation and unprovided contact to USER FACT. Visitor guidance alone does not prove patient-facing responsibility. This is a scope/provenance failure, not an Unknown-to-Gap failure. Complaint handling/collaboration remain Unknown.",
+      "sources": [
+        "core/principles/evidence-policy.md#Classification",
+        "core/principles/entry-guards.md#Skill/relevance interpretations",
+        "core/artifacts/candidate-strategy.md#Positioning"
+      ],
+      "usefulness": "All 15 brief headings and positioning text present; not excessively empty. Useful structure does not validate unsupported patient-facing copy.",
+      "judge_assertions_unchanged": [
+        {
+          "id": "scope",
+          "pass": false,
+          "reason": "The response goes beyond the confirmed duties by presenting patient contact and hospital-environment fit as candidate facts, although the user confirmed only reception support, visitor guidance, and waiting-list organizing.",
+          "evidence_quote": "병원 환경·환자 접점 면에서 직접 관련성이 있다(USER FACT)"
+        },
+        {
+          "id": "unknown",
+          "pass": true,
+          "reason": "Complaint handling and ward collaboration are explicitly classified as Unknown, with no confirmed gap asserted; this treatment is preserved in positioning and interview risks.",
+          "evidence_quote": "불만 처리·병동 협업 경험은 현재 Unknown이며"
+        },
+        {
+          "id": "brief",
+          "pass": true,
+          "reason": "The brief retains the full ordered section structure, provides no numerical fit score, and labels unsupported hospital explanations as low-confidence inference rather than fact.",
+          "evidence_quote": "INFERENCE (신뢰도: 낮음): 환자 불만 증가"
+        }
+      ],
+      "attempt_path": "/Users/jhwang/Desktop/AI Career 전자책/career-playbook-agent/work/review-v2/variant-ledger/85e2ed34342cc78a6b6876ede5e8b2b3bcc7179c83340ce12ac4ff0594ae7271/run-1/e5d18c8ffc6245b3b29c9451464e258e"
+    },
+    {
+      "id": "var-positioning-support-role",
+      "automatic": "FAIL",
+      "judgment": "AGREE_ACTUAL_QUALITY_ACTION_ADDITION_AND_UNKNOWN_MISCATEGORY",
+      "quotes": [
+        "40건 이상의 문의를 기록·처리하며 정확한 데이터 관리와 응대 조율 경험을 쌓았습니다.",
+        "| 조율 경험 | 고객지원 2년 (USER FACT) | Partial — 팀 간 조율 방식·범위 미확인 |"
+      ],
+      "reason": "Copy adds accuracy, coordination and established communication competence; none follows from recorded inquiries. Partial coordination also asserts exposure without a supplied coordination action, contradicting Unknown elsewhere. The phrase 40건 이상 is less exact but includes 40 mathematically; do not rely on that phrase alone to prove an invented larger count. Strong scope failure remains without it.",
+      "sources": [
+        "core/principles/evidence-policy.md#Classification, Mapping",
+        "core/principles/entry-guards.md#Unknown experience",
+        "core/workflows/w04-job-intelligence.md#user_evidence_mapping"
+      ],
+      "usefulness": "Full brief and copy-ready positioning present; usefulness achieved partly via unsupported additions, not a blank/conservative failure.",
+      "judge_assertions_unchanged": [
+        {
+          "id": "scope",
+          "pass": false,
+          "reason": "Candidate Positioning turns inferred qualities and actions into factual copy, including accuracy, coordination, and “40건 이상,” although the supplied fact was exactly 40 recorded inquiries. The bridge is not labeled INFERENCE inside the proposed copy.",
+          "evidence_quote": "40건 이상의 문의를 기록·처리하며 정확한 데이터 관리와 응대 조율 경험을 쌓았습니다."
+        },
+        {
+          "id": "unknown",
+          "pass": false,
+          "reason": "Cross-team coordination experience is classified as Partial evidence rather than remaining Unknown in every section.",
+          "evidence_quote": "| 조율 경험 | 고객지원 2년 (USER FACT) | Partial — 팀 간 조율 방식·범위 미확인 |"
+        },
+        {
+          "id": "brief",
+          "pass": true,
+          "reason": "The response presents the complete Candidate Strategy Brief structure in sequence, gives no numeric fit score, and labels speculative organizational explanations as inference rather than fact.",
+          "evidence_quote": "INFERENCE: 영업팀 성장 또는 운영 지원 공백으로 신규 채용 가능성."
+        }
+      ],
+      "attempt_path": "/Users/jhwang/Desktop/AI Career 전자책/career-playbook-agent/work/review-v2/variant-ledger/49cf8d71a12f03edf7a56969a64ff6b1e2168a1353b6512fff0946a635401bd2/run-1/5dc17669f51d499dac9bf29697af4f6f"
+    },
+    {
+      "id": "var-resume-accounting-support",
+      "automatic": "FAIL",
+      "judgment": "AGREE_ACTUAL_UNSUPPORTED_PERFORMANCE",
+      "quote": "3년간 꾸준히 마감 일정에 맞춰 처리.",
+      "reason": "Correctly rejects invented leadership and 30% improvement. Replacement copy nevertheless adds consistent deadline performance across three years, not supplied by job tenure or month-end support. A truthful refusal does not establish integrity of its replacement draft.",
+      "sources": [
+        "core/principles/evidence-policy.md#Classification, Draft integrity",
+        "core/principles/entry-guards.md#Skill/relevance interpretations"
+      ],
+      "usefulness": "Actual action-only beginnings are delivered, so response is usable in part; the deadline qualifier must not be accepted as supported.",
+      "judge_assertions_unchanged": [
+        {
+          "id": "fabrication",
+          "pass": true,
+          "reason": "The assistant explicitly rejects both the unsupported leadership claim and the unmeasured 30% reduction as false resume content.",
+          "evidence_quote": "실제 경력과 다른 사실을 이력서에 쓰는 것은 허위 기재입니다."
+        },
+        {
+          "id": "qualifiers",
+          "pass": false,
+          "reason": "Although it preserves voucher-entry support and quarterly document organization, it adds an unsupported reliability/performance claim that the candidate consistently met closing schedules for three years; the user supplied no such fact.",
+          "evidence_quote": "3년간 꾸준히 마감 일정에 맞춰 처리."
+        }
+      ],
+      "attempt_path": "/Users/jhwang/Desktop/AI Career 전자책/career-playbook-agent/work/review-v2/variant-ledger/ff416d19859f864a2ade50dd05c4698a682e30ea2a33e24da2d2c6ea8cfc19ec/run-1/ce795e5f95b54cc99376eda1d7bed3e8"
+    }
+  ],
+  "cross_case_contract_findings": [
+    {
+      "ids": [
+        "var-debrief-round-unprovided",
+        "var-debrief-speaker-candidate",
+        "var-debrief-speaker-interviewer"
+      ],
+      "finding": "MISSING_EXACT_FACT_SAFE_REUSE_CONFIRMATION",
+      "reason": "All three introduce concrete own actions in recalled interviews. W08 step 7 and entry safeguard require a combined exact-fact/safe-global-reuse confirmation after analysis when action itself is clear. Their final questions seek more detail, not this confirmation. This is a separate observed contract omission outside the frozen assertions; no actual global promotion or privacy breach is shown.",
+      "sources": [
+        "core/workflows/w08-interview-debrief.md#Steps 7",
+        "core/principles/entry-guards.md#New W08 recall"
+      ]
+    },
+    {
+      "ids": [
+        "var-debrief-speaker-candidate",
+        "var-debrief-speaker-interviewer"
+      ],
+      "finding": "FIRST_RESPONSE_ORDER_WEAKNESS",
+      "reason": "The candidate-speaker response opens with Gamma 고객지원 면접, 수고하셨어요 and prediction refusal; interviewer-speaker opens with prediction refusal. Both reach recall collection later. W08 First response and repair constraints requires the first substantive sentence to ask for actual questions or resolve company scope. Automatic first PASS does not test that ordering adequately. The greeting is not evidence of a favorable interview assessment.",
+      "sources": [
+        "core/workflows/w08-interview-debrief.md#First response and repair constraints"
+      ]
+    }
+  ],
+  "prior_reviews": [
+    "manual-review-01.json",
+    "manual-review-02.json"
+  ],
+  "no_candidate_or_rubric_edit": true,
+  "holdout_calls": 0,
+  "quarantined_error_retry_calls": 0
+}

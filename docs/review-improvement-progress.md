@@ -1,18 +1,34 @@
-# Review improvement progress — 2026-10-16
+# Review improvement progress — 2026-10-17
 
-## Next candidate — G1 implemented; G2 approval pending
+## Current — G2 approved development diagnostic: no unstarted case remains
 
-rc.8 scope is E + D; F conditional loading is deferred until reference discovery can be tested.
-Final-only holdout content was frozen first in `47c520c`. The
-[plan, contract diagnosis, split and cost](rc8-e-d-plan-2026-10-16.md) and
-[post-C failure policy](rc8-evaluation-policy-2026-10-16.md) are prepared for review.
-G1 is approved and implemented: E source/general rules, field and procedure contracts, generated
-entries, isolated no-call evaluation tooling and leakage/rule-migration checks. Real development/
-holdout model calls remain zero. D cleanup and F are unapplied; F is excluded from rc.8.
-[G2 full diffs, rule mapping, integrity locks and cost](rc8-g2-review-2026-10-16.md) await approval.
-The [revision cap supplement](rc8-candidate-revision-limit-2026-10-16.md) was committed before
-E edits/results. Original frozen policy and content manifests remain unchanged. Development
-calls, D cleanup and final evaluation retain separate approval gates. No main merge/push/tag/release.
+The approved n=1 development diagnostic has 35/36 valid verdicts: ChatGPT 18 PASS;
+Claude 11 PASS / 6 FAIL / 1 quarantined model-metadata ERROR. Missing = 0.
+The final six Claude cases finished on the unchanged candidate/selection lock (1 PASS / 5 FAIL).
+This is DIAGNOSTIC_ONLY, not G2 acceptance or release evidence. Automatic PASS also has manual
+boundary/procedure findings. Two new automatic FAIL reasons need rubric/runtime-contract
+qualification; all original verdicts remain unchanged.
+
+[Current results, every scenario/assertion vs own C, raw failure review, usefulness and salary questions](rc8-development-results-2026-10-17.md).
+[Preservation audit](../evals/reports/rc8-development-2026-10-16/completion-audit-2026-10-17.json) verifies
+30 prior records and 339 raw files unchanged, C/package/content/lock identities preserved,
+no completed PASS/FAIL rerun, no held-out model call. The current
+[state](../evals/reports/rc8-development-2026-10-16/resume-state-2026-10-17.json) supersedes the old
+quota-hold state for navigation only; old evidence was not overwritten.
+
+G2 restoration is complete: the exact mock-question parenthetical was restored, RULE-MAP corrected
+to deletion→restoration, and the sentence-level audit records other omitted examples and limits.
+[Sentence audit](rc8-g2-sentence-review-2026-10-16.md). Tests after the separately approved selective
+wrapper fix: 226 PASS; static checks PASS; holdout leakage 0. Runtime source was not changed again.
+Claude evd-07's missing model ID remains ERROR; its subject regeneration was explicitly excluded
+from the 13-case resumption approval and has not run. No additional diagnostic round is authorized.
+
+rc.8 scope remains E + D; F is excluded until reference discovery can be tested. E is implemented
+but unresolved actual failures block acceptance. D cleanup, F, holdout/final evaluations and new
+candidate edits remain held. README/VERSION retain rc.7. No main merge/push/tag/release,
+automation, extra payment or reset-credit use.
+[Original plan](rc8-e-d-plan-2026-10-16.md) · [Frozen acceptance/failure policy](rc8-evaluation-policy-2026-10-16.md) ·
+[Pre-result candidate revision cap](rc8-candidate-revision-limit-2026-10-16.md).
 
 ## Completed
 

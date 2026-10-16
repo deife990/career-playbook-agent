@@ -1,0 +1,330 @@
+{
+  "timestamp": "2026-10-16T15:55:54.345858+00:00",
+  "scope": "No-call post-diagnostic preservation audit",
+  "package_fingerprints": {
+    "chatgpt": "7b00aa935588449d2f5589278bed5a5fd03fddc265e36f1cbe1bb0ecfe380b2b",
+    "claude": "a6a99ebdc73db37a1fbb9772527780043c52b7f6f2209d395776342bfa05ea8b"
+  },
+  "current_claude_execution_lock": "435e29bfcf8047ca2fa6e110e37827aed422bad9df1cf7a502b565dd3c217985",
+  "c_baseline_integrity": {
+    "chatgpt": {
+      "package_fingerprint": "93ebecbd059b848e5e7482a6b68e2d5a93c1cc9e811c1f4fc985e26cf0c40f9d",
+      "suite_fingerprint": "a24b18e47ed0ee3c0ba972cd08ab1265ce7a62d4a1d1b4617c49e2dda732ef3e",
+      "protocol_fingerprint": "4515ea6c278005b2221531e763dedefcd4512df25f19471a30c94982141453c9",
+      "all_equal": true
+    },
+    "claude": {
+      "package_fingerprint": "ac4ef67bab8b61f84671b4bf9c27147681aa3878ad763ff70d0024daf048a3ee",
+      "suite_fingerprint": "a24b18e47ed0ee3c0ba972cd08ab1265ce7a62d4a1d1b4617c49e2dda732ef3e",
+      "protocol_fingerprint": "4515ea6c278005b2221531e763dedefcd4512df25f19471a30c94982141453c9",
+      "all_equal": true
+    }
+  },
+  "preserved_previous_rows": [
+    {
+      "host": "chatgpt",
+      "id": "concise-second-opportunity",
+      "status": "PASS"
+    },
+    {
+      "host": "chatgpt",
+      "id": "debrief-first",
+      "status": "PASS"
+    },
+    {
+      "host": "chatgpt",
+      "id": "discovery-unknown-table",
+      "status": "PASS"
+    },
+    {
+      "host": "chatgpt",
+      "id": "evd-01-existing-sufficient",
+      "status": "PASS"
+    },
+    {
+      "host": "chatgpt",
+      "id": "evd-07-privacy",
+      "status": "PASS"
+    },
+    {
+      "host": "chatgpt",
+      "id": "evd-14-confidentiality",
+      "status": "PASS"
+    },
+    {
+      "host": "chatgpt",
+      "id": "screening-g-no-tools",
+      "status": "PASS"
+    },
+    {
+      "host": "chatgpt",
+      "id": "screening-i-comp",
+      "status": "PASS"
+    },
+    {
+      "host": "chatgpt",
+      "id": "screening-k-report",
+      "status": "PASS"
+    },
+    {
+      "host": "chatgpt",
+      "id": "dev-base-salary-choice",
+      "status": "PASS"
+    },
+    {
+      "host": "chatgpt",
+      "id": "dev-events-review-grades",
+      "status": "PASS"
+    },
+    {
+      "host": "chatgpt",
+      "id": "dev-existing-evidence-stop",
+      "status": "PASS"
+    },
+    {
+      "host": "chatgpt",
+      "id": "var-debrief-round-unprovided",
+      "status": "PASS"
+    },
+    {
+      "host": "chatgpt",
+      "id": "var-debrief-speaker-candidate",
+      "status": "PASS"
+    },
+    {
+      "host": "chatgpt",
+      "id": "var-debrief-speaker-interviewer",
+      "status": "PASS"
+    },
+    {
+      "host": "chatgpt",
+      "id": "var-positioning-health-admin",
+      "status": "PASS"
+    },
+    {
+      "host": "chatgpt",
+      "id": "var-positioning-support-role",
+      "status": "PASS"
+    },
+    {
+      "host": "chatgpt",
+      "id": "var-resume-accounting-support",
+      "status": "PASS"
+    },
+    {
+      "host": "claude",
+      "id": "concise-second-opportunity",
+      "status": "FAIL"
+    },
+    {
+      "host": "claude",
+      "id": "debrief-first",
+      "status": "PASS"
+    },
+    {
+      "host": "claude",
+      "id": "discovery-unknown-table",
+      "status": "PASS"
+    },
+    {
+      "host": "claude",
+      "id": "evd-01-existing-sufficient",
+      "status": "PASS"
+    },
+    {
+      "host": "claude",
+      "id": "evd-07-privacy",
+      "status": "ERROR"
+    },
+    {
+      "host": "claude",
+      "id": "evd-14-confidentiality",
+      "status": "PASS"
+    },
+    {
+      "host": "claude",
+      "id": "screening-g-no-tools",
+      "status": "PASS"
+    },
+    {
+      "host": "claude",
+      "id": "screening-i-comp",
+      "status": "PASS"
+    },
+    {
+      "host": "claude",
+      "id": "screening-k-report",
+      "status": "PASS"
+    },
+    {
+      "host": "claude",
+      "id": "dev-base-salary-choice",
+      "status": "PASS"
+    },
+    {
+      "host": "claude",
+      "id": "dev-events-review-grades",
+      "status": "PASS"
+    },
+    {
+      "host": "claude",
+      "id": "dev-existing-evidence-stop",
+      "status": "PASS"
+    }
+  ],
+  "preserved_previous_raw_files": 339,
+  "no_completed_pass_fail_rerun": true,
+  "no_quarantined_error_retry": true,
+  "holdout_calls": 0,
+  "development_content_fingerprint": "665bbe2d6a2fbbfc3c521e7bc1f387fc579dee28a05823acdcb7feb908d8fe10",
+  "holdout_content_fingerprint": "895695d7ab6b22e9fe9a01fbcab7643335478a650a7efb6fd0ef703eaae83ed7",
+  "by_host_and_tier": {
+    "chatgpt": {
+      "critical": {
+        "planned": 15,
+        "PASS": 15
+      },
+      "standard": {
+        "planned": 3,
+        "PASS": 3
+      }
+    },
+    "claude": {
+      "critical": {
+        "planned": 15,
+        "FAIL": 6,
+        "PASS": 8,
+        "ERROR": 1
+      },
+      "standard": {
+        "planned": 3,
+        "PASS": 3
+      }
+    }
+  },
+  "new_cli_logs": [
+    {
+      "host": "claude",
+      "scenario": "var-debrief-speaker-interviewer",
+      "stem": "judge",
+      "platform": "chatgpt",
+      "path": "work/review-v2/variant-ledger/2e652299f022d270532d8e21020f0edcc5129ce52dbad81780468e462aea06d7/run-1/c950c139259f437cbb8a033d6ac14d32/judge.stdout.txt"
+    },
+    {
+      "host": "claude",
+      "scenario": "var-debrief-speaker-interviewer",
+      "stem": "turn-1",
+      "platform": "claude",
+      "path": "work/review-v2/variant-ledger/2e652299f022d270532d8e21020f0edcc5129ce52dbad81780468e462aea06d7/run-1/c950c139259f437cbb8a033d6ac14d32/turn-1.stdout.txt"
+    },
+    {
+      "host": "claude",
+      "scenario": "var-debrief-speaker-interviewer",
+      "stem": "turn-2",
+      "platform": "claude",
+      "path": "work/review-v2/variant-ledger/2e652299f022d270532d8e21020f0edcc5129ce52dbad81780468e462aea06d7/run-1/c950c139259f437cbb8a033d6ac14d32/turn-2.stdout.txt"
+    },
+    {
+      "host": "claude",
+      "scenario": "var-positioning-support-role",
+      "stem": "judge",
+      "platform": "chatgpt",
+      "path": "work/review-v2/variant-ledger/49cf8d71a12f03edf7a56969a64ff6b1e2168a1353b6512fff0946a635401bd2/run-1/5dc17669f51d499dac9bf29697af4f6f/judge.stdout.txt"
+    },
+    {
+      "host": "claude",
+      "scenario": "var-positioning-support-role",
+      "stem": "turn-1",
+      "platform": "claude",
+      "path": "work/review-v2/variant-ledger/49cf8d71a12f03edf7a56969a64ff6b1e2168a1353b6512fff0946a635401bd2/run-1/5dc17669f51d499dac9bf29697af4f6f/turn-1.stdout.txt"
+    },
+    {
+      "host": "claude",
+      "scenario": "var-debrief-speaker-candidate",
+      "stem": "judge",
+      "platform": "chatgpt",
+      "path": "work/review-v2/variant-ledger/6221d754dcffd834d9c36547c601ddf8b70e3f311ee6209d7c3c8f20ccabf094/run-1/2e431bbd56904f2b8fbb72a8dc130935/judge.stdout.txt"
+    },
+    {
+      "host": "claude",
+      "scenario": "var-debrief-speaker-candidate",
+      "stem": "turn-1",
+      "platform": "claude",
+      "path": "work/review-v2/variant-ledger/6221d754dcffd834d9c36547c601ddf8b70e3f311ee6209d7c3c8f20ccabf094/run-1/2e431bbd56904f2b8fbb72a8dc130935/turn-1.stdout.txt"
+    },
+    {
+      "host": "claude",
+      "scenario": "var-debrief-speaker-candidate",
+      "stem": "turn-2",
+      "platform": "claude",
+      "path": "work/review-v2/variant-ledger/6221d754dcffd834d9c36547c601ddf8b70e3f311ee6209d7c3c8f20ccabf094/run-1/2e431bbd56904f2b8fbb72a8dc130935/turn-2.stdout.txt"
+    },
+    {
+      "host": "claude",
+      "scenario": "var-debrief-round-unprovided",
+      "stem": "judge",
+      "platform": "chatgpt",
+      "path": "work/review-v2/variant-ledger/7516e3ca4f9b229a8a43b2e0bc0528b21a9073b1167de07684edb71db889d514/run-1/b4e96125e63d49f086069176afe6463b/judge.stdout.txt"
+    },
+    {
+      "host": "claude",
+      "scenario": "var-debrief-round-unprovided",
+      "stem": "turn-1",
+      "platform": "claude",
+      "path": "work/review-v2/variant-ledger/7516e3ca4f9b229a8a43b2e0bc0528b21a9073b1167de07684edb71db889d514/run-1/b4e96125e63d49f086069176afe6463b/turn-1.stdout.txt"
+    },
+    {
+      "host": "claude",
+      "scenario": "var-debrief-round-unprovided",
+      "stem": "turn-2",
+      "platform": "claude",
+      "path": "work/review-v2/variant-ledger/7516e3ca4f9b229a8a43b2e0bc0528b21a9073b1167de07684edb71db889d514/run-1/b4e96125e63d49f086069176afe6463b/turn-2.stdout.txt"
+    },
+    {
+      "host": "claude",
+      "scenario": "var-positioning-health-admin",
+      "stem": "judge",
+      "platform": "chatgpt",
+      "path": "work/review-v2/variant-ledger/85e2ed34342cc78a6b6876ede5e8b2b3bcc7179c83340ce12ac4ff0594ae7271/run-1/e5d18c8ffc6245b3b29c9451464e258e/judge.stdout.txt"
+    },
+    {
+      "host": "claude",
+      "scenario": "var-positioning-health-admin",
+      "stem": "turn-1",
+      "platform": "claude",
+      "path": "work/review-v2/variant-ledger/85e2ed34342cc78a6b6876ede5e8b2b3bcc7179c83340ce12ac4ff0594ae7271/run-1/e5d18c8ffc6245b3b29c9451464e258e/turn-1.stdout.txt"
+    },
+    {
+      "host": "claude",
+      "scenario": "var-resume-accounting-support",
+      "stem": "judge",
+      "platform": "chatgpt",
+      "path": "work/review-v2/variant-ledger/ff416d19859f864a2ade50dd05c4698a682e30ea2a33e24da2d2c6ea8cfc19ec/run-1/ce795e5f95b54cc99376eda1d7bed3e8/judge.stdout.txt"
+    },
+    {
+      "host": "claude",
+      "scenario": "var-resume-accounting-support",
+      "stem": "turn-1",
+      "platform": "claude",
+      "path": "work/review-v2/variant-ledger/ff416d19859f864a2ade50dd05c4698a682e30ea2a33e24da2d2c6ea8cfc19ec/run-1/ce795e5f95b54cc99376eda1d7bed3e8/turn-1.stdout.txt"
+    }
+  ],
+  "usage_observed": {
+    "pre_batch_utc": "2026-10-16T15:47:29Z",
+    "pre_batch_codex_five_hour_percent": 0,
+    "pre_batch_codex_weekly_percent": 60,
+    "post_batch_codex_five_hour_percent": 11,
+    "post_batch_codex_weekly_percent": 62,
+    "shared_account_not_exclusive_cost_attribution": true,
+    "reset_credits_used": false
+  },
+  "new_subject_attempts": 6,
+  "remaining_unstarted": 0,
+  "quarantined_error": {
+    "host": "claude",
+    "id": "evd-07-privacy",
+    "subject_retry_authorized": false
+  },
+  "release_ready": false,
+  "no_model_calls_in_this_audit": true
+}

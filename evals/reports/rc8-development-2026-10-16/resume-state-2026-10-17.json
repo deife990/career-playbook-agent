@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-10-16T15:57:30.983068+00:00",
+  "supersedes_navigation_only": "resume-state.json",
+  "scope": "same approved G2 diagnostic; final six finished",
+  "state": "NO_UNSTARTED_CASES_WITH_BEHAVIOR_FAILURES_AND_QUARANTINED_ERROR",
+  "summary": {
+    "chatgpt": {
+      "planned": 18,
+      "pass": 18,
+      "fail": 0,
+      "error": 0,
+      "missing": 0
+    },
+    "claude": {
+      "planned": 18,
+      "pass": 11,
+      "fail": 6,
+      "error": 1,
+      "missing": 0
+    }
+  },
+  "unstarted_scenarios": [],
+  "quarantined_error": "claude/evd-07-privacy",
+  "subject_retry_authorized": false,
+  "additional_diagnostic_round_authorized": false,
+  "no_further_model_calls": true,
+  "holdout_calls": 0,
+  "d_and_f": "HELD",
+  "no_automation": true,
+  "report": "docs/rc8-development-results-2026-10-17.md"
+}
