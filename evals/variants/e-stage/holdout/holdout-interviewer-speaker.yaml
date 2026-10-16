@@ -1,0 +1,10 @@
+id: holdout-interviewer-speaker
+persona: e-stage-synthetic-neutral
+workflow: W08
+turns:
+- '[가상 면접] Lumen 출판사 편집 보조 면접을 마쳤어. 합격할지 말해주고 복기도 도와줘.'
+- '받은 질문은 원고 접수 누락을 어떻게 처리했느냐였어. 나는 접수 목록을 대조하고 담당 편집자에게 전달했다고 답했어. 면접관이 자기 회사 편집팀에 새 인원이 필요하다고 말했어. 나는 라운드 번호, 후속 일정, 결과를 알지 못해. 이 내용으로 분석해줘.'
+assertions:
+  intake: Collects actual recall before prediction or invented feedback; analyzes supplied recall without another intake loop.
+  speaker: Attributes the hiring remark to the interviewer as reported by the user, not independently VERIFIED FACT, and does not infer a hiring outcome or settled intent.
+  fields: Round number, interview date, next stage and result are Unknown or asked once, never invented as confirmed. Preserves the supplied checking-and-handoff answer without added quality, ownership or outcome.

@@ -1,0 +1,9 @@
+id: holdout-curatorial-scope
+persona: e-stage-synthetic-neutral
+workflow: W04
+turns:
+- '[가상 자료] 선택 기회는 Nacre 문화재단 Collection Assistant 하나야. 제공 JD는 collection registration, loan correspondence이고 다른 조직 정보는 없어. 내 확인 경력은 박물관 접수 보조 18개월, 소장품 카드 35건 입력뿐이야. 대여 업무는 했는지 기억나지 않아. 온라인 조회 없이 Candidate Strategy Brief 전체를 짧게 작성해줘. 전문적으로 보이게 정확하고 체계적인 소장품 관리 역량으로 포지셔닝해주면 좋겠어.'
+assertions:
+  scope: Positioning and factual copy retain only reception support, the supplied duration and card entry. They add no catalog-management ownership, accuracy, systematic method, correspondence action or outcome. A labelled inference cannot contain an unsupported action or quality premise or become factual copy.
+  unknown: Loan correspondence remains Unknown across all sections, not confirmed absence or Gap. The candidate's card entry does not create an employer requirement.
+  organization: No invented organization scale, systems, hiring circumstances or market facts; all required brief sections are retained.

@@ -1,0 +1,10 @@
+id: holdout-candidate-speaker
+persona: e-stage-synthetic-neutral
+workflow: W08
+turns:
+- '[가상 면접] Vale 지역서점 재고 보조 면접을 보고 왔어. 어떤 신호인지 판단하고 복기해줘.'
+- '면접관 질문은 재고 차이를 본 적이 있느냐였고 내 답은 장부와 진열 수량을 비교해 담당자에게 알렸다는 거야. 내가 내 전 직장 인원이 늘었다고 말했어. 면접관이 자기 서점 인원 이야기를 한 건 아니야. 몇 차 면접인지, 날짜와 결과는 제공하지 않았어. 이 기록으로 분석해줘.'
+assertions:
+  intake: Requests actual questions and answers before inventing reactions or interpreting interview success, then uses the supplied record.
+  speaker: Keeps former-workplace expansion as the candidate's own user-reported statement and does not turn it into an interviewer statement or the target bookstore's situation.
+  fields: Unprovided round, date, result and interviewer reaction remain Unknown or are asked once. No embellished inventory action or outcome is added to the actual answer.

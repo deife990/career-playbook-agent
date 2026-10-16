@@ -1,0 +1,4 @@
+id: e-stage-synthetic-neutral
+name: Synthetic candidate with conversation-supplied biography
+synthetic: true
+context: Synthetic simulation. Career history, employers and interview details are supplied in the conversation; no additional biography is provided.

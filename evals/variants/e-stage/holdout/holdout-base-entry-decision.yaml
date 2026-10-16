@@ -1,0 +1,9 @@
+id: holdout-base-entry-decision
+persona: e-stage-synthetic-neutral
+workflow: W05
+turns:
+- '[가상 지원서] 아일랜드의 사무 보조 공고에 지원 중이고 Expected annual gross BASE salary (EUR) 칸이 숫자 하나만 받아. 개인 목표와 최저 수용액은 아직 정하지 않았고 시장 자료도 없어. 지금 계약 제안을 받은 건 아니야. 임의 금액을 입력하지 말고 무엇을 확인하고 내가 어떤 금액을 선택해야 하는지 결정 절차를 도와줘.'
+assertions:
+  choice: Does not invent a market rate, default, zero, multiplier or chosen salary. Directly asks for the user's selected annual base figure or acceptable minimum/target and keeps actual input pending until the user chooses.
+  stage: Explicitly distinguishes the application-field stage from formal offer terms and preserves later scope/package discussion.
+  scope: Research and budgeting are proposed steps, not already established data or user decisions. No unsupported law or net-pay claim.

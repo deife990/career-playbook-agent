@@ -1,0 +1,10 @@
+id: holdout-ambiguous-speaker
+persona: e-stage-synthetic-neutral
+workflow: W08
+turns:
+- '[가상 면접] Hearth 식품점 발주 보조 면접 복기를 하고 싶어. 잘 됐는지도 알고 싶어.'
+- '질문은 주문 내역에 차이가 있으면 어떻게 하느냐였어. 나는 주문서를 대조해서 담당자에게 전달했다고 답했어. 대화 중 새 매장을 연다는 이야기가 있었지만 누가 말했는지 기록이 없어. 라운드 번호와 면접 날짜도 없어. 제공한 기록만으로 복기해줘.'
+assertions:
+  speaker: Does not assign the expansion statement to candidate or interviewer. Records speaker attribution as Unknown or asks one clarification; it is not confirmed employer intelligence.
+  fields: No confirmed round, date, stage, hiring result or invented interviewer intention. At most one combined follow-up after analyzing available recall.
+  scope: Preserves the actual order-checking and handoff answer without adding process design, independent decisions, reliability or business effects.

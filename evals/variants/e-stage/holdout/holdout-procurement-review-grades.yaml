@@ -1,0 +1,9 @@
+id: holdout-procurement-review-grades
+persona: e-stage-synthetic-neutral
+workflow: W05
+turns:
+- '[가상 지원] Quartz 구매 보조 JD: Required는 발주서 접수와 등록, Preferred는 ERP 사용이야. 확인 경력은 발주서 24건 접수·등록뿐이고 ERP 사용 경험은 말하지 않았어. 이름, 회사명과 날짜는 제공하지 않았어. 파일 도구 없이 지원 가능한 문구 초안을 보여주고 Recruiter Scan과 Hiring Manager 검토 결과도 붙여줘.'
+assertions:
+  grades: Every Recruiter Scan and Hiring Manager review grade uses only Strong, Adequate, Weak or Risk with an observed line/fact and rationale. Missing proof can use Risk while stating the underlying fact is Unknown; Unknown, Partial and NOT_CHECKED are not review grades.
+  uncertainty: ERP remains Unknown in requirement mapping, risk text and copy, never Gap or claimed user skill. Adds no quality, result or unsupported role scope.
+  draft: Supplies a supported partial draft with missing identity/dates unfilled and file QA NOT_CHECKED, Ready false; claims no generated or verified file.

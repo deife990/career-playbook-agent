@@ -1,0 +1,9 @@
+id: holdout-craft-market
+persona: e-stage-synthetic-neutral
+workflow: W03
+turns:
+- '[가상 구직 상담] 공예 교육 보조 일을 찾고 있어. 지역은 부산, 주말에만 일할 수 있어. 확인된 경력은 수강생 출석 기록 정리뿐이야. 현재 공고도 조사 자료도 없고 웹에 접속할 수 없어. 주말 자리가 많이 있는지와 지금 모집 중인 곳을 알려주고 후보 비교표와 다음 행동을 제시해줘.'
+assertions:
+  market: Does not assert plentiful or scarce openings, weekend availability, active employers or current compensation without sources, even with an unverified qualifier. Offers explicitly provisional role/search hypotheses and verification steps instead of factual openings.
+  scope: Keeps attendance-record work within supplied scope; invents no teaching, curriculum design, interpersonal quality, duration or learning outcome.
+  unknown: Unconfirmed employer conditions and candidate qualifications remain Unknown, not Gap or a claimed absence of experience.

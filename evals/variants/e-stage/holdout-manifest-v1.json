@@ -1,0 +1,175 @@
+{
+  "hash_algorithm": "SHA256 of UTF-8 canonical JSON payload (sort_keys=True,separators=(comma,colon),ensure_ascii=False)",
+  "payload": {
+    "version": 1,
+    "state": "CONTENT_FROZEN_EXECUTION_PENDING",
+    "phase": "final-only",
+    "post_C": true,
+    "source_commit": "f195b2e",
+    "context": "preloaded",
+    "reference_discovery_verified": false,
+    "policy": "No development calls or candidate selection using holdout outputs. Final stage runs frozen rc.7 baseline and candidate; content lock stays immutable, future execution lock binds runner and package.",
+    "scenarios": [
+      {
+        "id": "holdout-ambiguous-speaker",
+        "path": "evals/variants/e-stage/holdout/holdout-ambiguous-speaker.yaml",
+        "sha256": "8b51fb7a0c5707ba148c8910d93311ce1353c3e317fd86789decc947cf0df40e",
+        "family": "B",
+        "tier": "critical",
+        "runs": 3,
+        "judge": "cross",
+        "turns": 2,
+        "safety_assertions": [
+          "speaker",
+          "fields",
+          "scope"
+        ],
+        "basis": "release-blockers: debrief-data-loss/unconfirmed promotion; D021/D034"
+      },
+      {
+        "id": "holdout-base-entry-decision",
+        "path": "evals/variants/e-stage/holdout/holdout-base-entry-decision.yaml",
+        "sha256": "51d8b82b4953da139a9d38eab28cb7953a5431df012f07cb93fa81df675af990",
+        "family": "C",
+        "tier": "critical",
+        "runs": 3,
+        "judge": "cross",
+        "turns": 1,
+        "safety_assertions": [
+          "choice",
+          "scope"
+        ],
+        "basis": "D028-D030 compensation conversation; no invented numeric input"
+      },
+      {
+        "id": "holdout-candidate-speaker",
+        "path": "evals/variants/e-stage/holdout/holdout-candidate-speaker.yaml",
+        "sha256": "455019801dfa4f6061c5d92958688e57342148078515eea474952fed62078b38",
+        "family": "B",
+        "tier": "critical",
+        "runs": 3,
+        "judge": "cross",
+        "turns": 2,
+        "safety_assertions": [
+          "speaker",
+          "fields"
+        ],
+        "basis": "release-blockers: debrief-data-loss/unconfirmed promotion; D021/D034"
+      },
+      {
+        "id": "holdout-craft-market",
+        "path": "evals/variants/e-stage/holdout/holdout-craft-market.yaml",
+        "sha256": "99be74b7daab375e0818ca0d557434e21d233d44cc64c817677f20ebf0531f7a",
+        "family": "A",
+        "tier": "critical",
+        "runs": 3,
+        "judge": "cross",
+        "turns": 1,
+        "safety_assertions": [
+          "market",
+          "scope",
+          "unknown"
+        ],
+        "basis": "release-blockers: fabrication/unverified-fact/company isolation; D021/D033/D034"
+      },
+      {
+        "id": "holdout-curatorial-scope",
+        "path": "evals/variants/e-stage/holdout/holdout-curatorial-scope.yaml",
+        "sha256": "161bb8a71f604d1c392bc4a74c63cef774dbc813c2ad67e0e5ed6caead0da3f6",
+        "family": "A",
+        "tier": "critical",
+        "runs": 3,
+        "judge": "cross",
+        "turns": 1,
+        "safety_assertions": [
+          "scope",
+          "unknown",
+          "organization"
+        ],
+        "basis": "release-blockers: fabrication/unverified-fact/company isolation; D021/D033/D034"
+      },
+      {
+        "id": "holdout-existing-evidence-stop",
+        "path": "evals/variants/e-stage/holdout/holdout-existing-evidence-stop.yaml",
+        "sha256": "afc03601467805178f0becdfaaa85f2fcd529a997f07c37de5727c7f97c9638b",
+        "family": "C",
+        "tier": "standard",
+        "runs": 1,
+        "judge": "same",
+        "turns": 1,
+        "safety_assertions": [
+          "scope"
+        ],
+        "basis": "D033/D034 sufficient evidence and user stop; workflow contract"
+      },
+      {
+        "id": "holdout-interviewer-speaker",
+        "path": "evals/variants/e-stage/holdout/holdout-interviewer-speaker.yaml",
+        "sha256": "3800496bae35abbb83f27688662c493b84f82b3076ba9eeb2d971a4a6a9df29b",
+        "family": "B",
+        "tier": "critical",
+        "runs": 3,
+        "judge": "cross",
+        "turns": 2,
+        "safety_assertions": [
+          "speaker",
+          "fields"
+        ],
+        "basis": "release-blockers: debrief-data-loss/unconfirmed promotion; D021/D034"
+      },
+      {
+        "id": "holdout-procurement-review-grades",
+        "path": "evals/variants/e-stage/holdout/holdout-procurement-review-grades.yaml",
+        "sha256": "41cece608b4e3c05d208657ec11b390de4e3da4c586d371a05aad4fd8634a963",
+        "family": "C",
+        "tier": "standard",
+        "runs": 1,
+        "judge": "same",
+        "turns": 1,
+        "safety_assertions": [
+          "uncertainty",
+          "draft"
+        ],
+        "basis": "D028-D030 review vocabulary/output contract; safety assertions remain zero-failure"
+      },
+      {
+        "id": "holdout-sanitized-own-action",
+        "path": "evals/variants/e-stage/holdout/holdout-sanitized-own-action.yaml",
+        "sha256": "f377917fc0a3cabf0234c79449fac7c8744fec3cfa06e5fbc832d9fe0a22867c",
+        "family": "A",
+        "tier": "critical",
+        "runs": 3,
+        "judge": "cross",
+        "turns": 1,
+        "safety_assertions": [
+          "scope",
+          "isolation",
+          "uncertainty"
+        ],
+        "basis": "release-blockers: fabrication/unverified-fact/company isolation; D021/D033/D034"
+      }
+    ],
+    "bound_files": {
+      "adapters/skills.json": "4045028a188baa51fa7b5a33a1bf24b0fc30e72952e34e8135fbe122e871f97d",
+      "docs/rc8-evaluation-policy-2026-10-16.md": "83d8412f5c92ea0fb40610a39e8173de2a5656680fa356b392fd654244279176",
+      "docs/review-improvement-protocol.md": "b946ae7f215a06097a0a29cd50f033c25c266500a2d607b8260055499682be70",
+      "evals/assertions/release-blockers.yaml": "eb55c2664bfd7e237abb7f6040655dcbcb9dfe3de6b2b90e836f93eadde6e9be",
+      "evals/personas/e-stage-synthetic-neutral.yaml": "61fe4751e70f7c3e2867a87c7f974b03cd2249c826f89d531ea26ab75c27e63d",
+      "evals/prompts/judge-repair-prefix.txt": "3c025f72bfe0465afee465cc2e2e5bb4d48021c1b25606f2e38924e7d334254b",
+      "evals/prompts/judge-repair-suffix.txt": "524d4ad8377020592fb9ce951e962a87bbe6cd3ffd1ec928f306028985458901",
+      "evals/prompts/judge.txt": "681b61cd3bb69f50b2c7d5c8b8d5f1b8bca3234a9afff2d6a63c53da56f84c7e",
+      "evals/prompts/subject-entry-only.txt": "a687a40b56a90d16cd70153f7e97b2a5cd4851ea58411003824b9f71397bb6e0",
+      "evals/prompts/subject-preloaded.txt": "f1bd23549cbeb31ff98bec14c0dcc51243746fa07384a0deef52cd8e410cce4b",
+      "evals/tier-policy.json": "01b0ced26f85aca434c2f64e1095bcdaee874e794dbc9570a193fbc6531e23ec",
+      "scripts/eval_protocol.py": "b335bc9d29c2f2f12b4af471beb5bd7391848ebe2fb0523cc2b56f747ad524a9",
+      "scripts/run_model_evals.py": "c2056f98d4896a6325350672dc34b5bde9c6c589f63e0519aa4b4ee599246807"
+    },
+    "C_suite_fingerprint": "a24b18e47ed0ee3c0ba972cd08ab1265ce7a62d4a1d1b4617c49e2dda732ef3e",
+    "C_protocol_fingerprint": "4515ea6c278005b2221531e763dedefcd4512df25f19471a30c94982141453c9",
+    "baseline_packages": {
+      "chatgpt": "93ebecbd059b848e5e7482a6b68e2d5a93c1cc9e811c1f4fc985e26cf0c40f9d",
+      "claude": "ac4ef67bab8b61f84671b4bf9c27147681aa3878ad763ff70d0024daf048a3ee"
+    }
+  },
+  "content_fingerprint": "895695d7ab6b22e9fe9a01fbcab7643335478a650a7efb6fd0ef703eaae83ed7"
+}

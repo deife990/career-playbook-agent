@@ -1,0 +1,9 @@
+id: holdout-existing-evidence-stop
+persona: e-stage-synthetic-neutral
+workflow: W05
+turns:
+- '[가상 지원] 이 도서관 보조 JD의 요구사항은 자료 스캔과 등록뿐이야. 기존 전역 CareerEvidence lib-known은 사용자 확인 완료이고 행동은 자료 17건을 스캔하고 등록한 거야. 결과와 기간은 Unknown이고 민감정보 없어. 이 사실은 다시 확인하지 말고 검색도 추가 질문도 하지 마. Coverage Map과 지금 할 다음 행동만 보여줘.'
+assertions:
+  coverage: Maps both supplied requirements to Strong or Usable sufficient confirmed action evidence without requiring a result metric or period.
+  stop: Stops evidence intake and retrieval as explicitly requested; does not ask for an outcome, another example or reconfirmation before providing the requested mapping and next action.
+  scope: Does not invent efficiency, accuracy, ownership, duration or a result to fill Unknown fields.
