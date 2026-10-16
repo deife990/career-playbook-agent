@@ -1,0 +1,64 @@
+{
+  "previous_execution_fingerprint": "3c104fb6772200cc4685cfa8bc2ae6420de8121777a28c1255aa263fd8160086",
+  "new_execution_fingerprint": "435e29bfcf8047ca2fa6e110e37827aed422bad9df1cf7a502b565dd3c217985",
+  "user_approval": "실행기 수정과 남은 13건 재개 승인; no retry of missing-ID ERROR",
+  "package_fingerprint_unchanged": true,
+  "canonical_case_keys_unchanged": true,
+  "changed_dependencies": [
+    "scripts/run_variant_evals.py"
+  ],
+  "preserved_records": [
+    {
+      "path": "work/review-v2/variant-ledger/57b3beedea40ad769eb70db7e3140aa06f5f7cb4dfe96f444d721ca532079366/run-1.json",
+      "sha256": "37977bb383a9dfabe92347806c4032c382c9f51ef00dbef1f363c44c7c5f35d5",
+      "status": "FAIL"
+    },
+    {
+      "path": "work/review-v2/variant-ledger/db9ae8bcd3b13e91a74a017cd3f57dc1481c5ac373cbb9993d29df2e8c0c7289/run-1.json",
+      "sha256": "90301c9a559889194178bd5ee7011fa544b629135b1537cc431e5280bc9f21f4",
+      "status": "PASS"
+    },
+    {
+      "path": "work/review-v2/variant-ledger/edad575d3d61e4471219d0a6a00ce9bd16b2599c857fb0c747005a443a2b73ea/run-1.json",
+      "sha256": "3f9bc20e5614dbfa4090f9ad825dded1036fb7d4502f3d647256d26cde6e7b5a",
+      "status": "PASS"
+    },
+    {
+      "path": "work/review-v2/variant-ledger/e3d7b47716b789d7f9eb62d3745f4dd29bb13eeb7ff4492e1022494223e5f701/run-1.json",
+      "sha256": "27a5234ebf317b3af279d9191e6f566f538e2cb86c6ca72e31ce1e9a2cbb3546",
+      "status": "PASS"
+    },
+    {
+      "path": "work/review-v2/variant-ledger/b7df73c35db613ba65b7db8f1675cb746557bd4dc832894e47efd89eee9fcbf1/run-1.json",
+      "sha256": "8ac2b39d70fe86df3a93f7b1c7bf1949bf7fa739614bf7306dc780ae5d0f60c5",
+      "status": "ERROR"
+    }
+  ],
+  "unstarted_selection": [
+    "evd-14-confidentiality",
+    "screening-g-no-tools",
+    "screening-i-comp",
+    "screening-k-report",
+    "dev-base-salary-choice",
+    "dev-events-review-grades",
+    "dev-existing-evidence-stop",
+    "var-debrief-round-unprovided",
+    "var-debrief-speaker-candidate",
+    "var-debrief-speaker-interviewer",
+    "var-positioning-health-admin",
+    "var-positioning-support-role",
+    "var-resume-accounting-support"
+  ],
+  "c_baseline": {
+    "chatgpt": {
+      "package_matches": true,
+      "suite_matches": true,
+      "protocol_matches": true
+    },
+    "claude": {
+      "package_matches": true,
+      "suite_matches": true,
+      "protocol_matches": true
+    }
+  }
+}

@@ -154,6 +154,72 @@ def test_model_mismatch_preserves_observed_verdict_and_stops(tmp_path, monkeypat
     assert json.loads((Path(row['attempt_path'])/'observed-result.json').read_text())['status'] == 'FAIL'
 
 
+def test_unstarted_selection_preserves_unknown_model_error_without_rejudging(tmp_path, monkeypatch):
+    package, lock = setup_run(tmp_path)
+    seen = []
+    def fake(root, host, case, folder, **kwargs):
+        seen.append(case['id'])
+        return {'id': case['id'], 'status': 'PASS', 'assertions': [],
+                'model_ids': ['CLI default; model ID not exposed'] if len(seen) == 1 else [locks.MODELS[host]],
+                'judge_model': locks.MODELS[kwargs['judge_platform']]}
+    monkeypatch.setattr(runner.engine, 'run_case', fake)
+    ledger = tmp_path/'ledger'
+    first = runner.execute(lock, package, approved_fingerprint=lock['execution_fingerprint'], ledger=ledger)
+    error = first['cases'][0]
+    assert error['status'] == 'ERROR' and 'identity unavailable' in error['error']
+    record = next(ledger.glob('*/run-1.json'))
+    original = record.read_bytes()
+    observed = Path(error['attempt_path'])/'observed-result.json'
+    original_observed = observed.read_bytes()
+    definitions = locks.content_manifest('development')[0]['payload']['scenarios']
+    second_id = definitions[1]['id']
+    second = runner.execute(lock, package, approved_fingerprint=lock['execution_fingerprint'],
+                            unstarted_scenarios=[second_id], ledger=ledger)
+    assert seen == [error['id'], second_id]
+    assert record.read_bytes() == original and observed.read_bytes() == original_observed
+    assert [r['status'] for r in second['cases']] == ['ERROR', 'PASS']
+    assert second['status'] == 'INCOMPLETE' and second['completed'] == 1
+    assert second['planned'] == 18 and second['unstarted_selection'] == [second_id]
+    with pytest.raises(ValueError, match='already attempted'):
+        runner.execute(lock, package, approved_fingerprint=lock['execution_fingerprint'],
+                       unstarted_scenarios=[error['id'], definitions[2]['id']], ledger=ledger)
+    assert seen == [error['id'], second_id]  # Entire selection checked before any call.
+
+
+@pytest.mark.parametrize('selected', [[], ['unknown'], ['debrief-first', 'debrief-first']])
+def test_invalid_unstarted_selection_rejected_before_calls(tmp_path, monkeypatch, selected):
+    package, lock = setup_run(tmp_path)
+    monkeypatch.setattr(runner.engine, 'run_case', lambda *a, **k: pytest.fail('Unexpected call'))
+    with pytest.raises(ValueError, match='unique development'):
+        runner.execute(lock, package, approved_fingerprint=lock['execution_fingerprint'],
+                       unstarted_scenarios=selected, ledger=tmp_path/'ledger')
+
+
+@pytest.mark.parametrize('status', ['PASS', 'FAIL'])
+def test_wrapper_dependency_change_keeps_completed_case_identity(tmp_path, monkeypatch, status):
+    package, lock = setup_run(tmp_path)
+    seen = []
+    def fake(root, host, case, folder, **kwargs):
+        seen.append(case['id'])
+        return {'id': case['id'], 'status': status, 'assertions': [],
+                'model_ids': [locks.MODELS[host]], 'judge_model': locks.MODELS[kwargs['judge_platform']]}
+    monkeypatch.setattr(runner.engine, 'run_case', fake)
+    ledger = tmp_path/'ledger'
+    runner.execute(lock, package, approved_fingerprint=lock['execution_fingerprint'], max_new=1, ledger=ledger)
+    record = next(ledger.glob('*/run-1.json'))
+    original = record.read_bytes()
+    payload = deepcopy(lock['payload'])
+    payload['dependencies']['scripts/run_variant_evals.py'] = 'new-wrapper-hash'
+    revised = {'payload': payload, 'execution_fingerprint': locks.digest(payload)}
+    monkeypatch.setattr(runner, 'execution_payload', lambda *a: payload)
+    definitions = locks.content_manifest('development')[0]['payload']['scenarios']
+    assert runner.case_key(lock, definitions[0]) == runner.case_key(revised, definitions[0])
+    result = runner.execute(revised, package, approved_fingerprint=revised['execution_fingerprint'],
+                            unstarted_scenarios=[d['id'] for d in definitions[:2]], max_new=1, ledger=ledger)
+    assert len(seen) == 2 and seen[0] != seen[1] and record.read_bytes() == original
+    assert result['cases'][0]['execution_fingerprint'] == lock['execution_fingerprint']
+
+
 def test_all_extracted_holdout_terms_trigger_added_line_scan():
     terms = lexicon()
     for row in terms:

@@ -38,7 +38,8 @@ def case_key(lock, definition):
                    'context': p['context'], 'models': p['expected_models'], 'prompts': prompts})
 
 
-def execute(lock, package, *, approved_fingerprint, resume=False, max_new=6, ledger=LEDGER):
+def execute(lock, package, *, approved_fingerprint, resume=False, max_new=6,
+            unstarted_scenarios=None, ledger=LEDGER):
     p = lock['payload']
     if approved_fingerprint != lock['execution_fingerprint']:
         raise ValueError('Explicit approval must bind this execution fingerprint')
@@ -48,13 +49,29 @@ def execute(lock, package, *, approved_fingerprint, resume=False, max_new=6, led
     if digest(p) != lock['execution_fingerprint'] or p != execution_payload(p['mode'], p['platform'], package):
         raise ValueError('Stale execution lock')
     manifest, cases = content_manifest(p['mode'])
+    selected = None if unstarted_scenarios is None else set(unstarted_scenarios)
+    if selected is not None:
+        if (p['mode'] != 'development' or not selected or
+                len(selected) != len(unstarted_scenarios) or not selected <= set(cases)):
+            raise ValueError('Unstarted selection requires unique development scenario IDs')
     ledger.mkdir(parents=True, exist_ok=True)
     with (ledger / '.execution.lock').open('a') as guard:
         fcntl.flock(guard, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        # Validate the entire selection before any call. A new selection cannot silently retry
+        # an ERROR or discard its subject checkpoint/model-provenance failure.
+        if selected is not None:
+            for definition in manifest['payload']['scenarios']:
+                record = ledger / case_key(lock, definition) / 'run-1.json'
+                if definition['id'] in selected and record.exists():
+                    old = json.loads(record.read_text())
+                    if old['status'] not in ['PASS', 'FAIL']:
+                        raise ValueError('Selected scenario already attempted; quarantine ERROR: ' + definition['id'])
         report = {'execution_fingerprint': lock['execution_fingerprint'], 'mode': p['mode'],
                   'platform': p['platform'], 'release_evidence': False,
                   'scope': 'DIAGNOSTIC_ONLY' if p['mode'] == 'development' else 'FINAL_COMPONENT_ONLY',
                   'reference_discovery_verified': False, 'cases': []}
+        if selected is not None:
+            report['unstarted_selection'] = sorted(selected)
         calls = 0
         stopped = False
         for definition in manifest['payload']['scenarios']:
@@ -64,6 +81,10 @@ def execute(lock, package, *, approved_fingerprint, resume=False, max_new=6, led
                 old = json.loads(record.read_text()) if record.exists() else None
                 if old and old['status'] in ['PASS', 'FAIL']:
                     report['cases'].append(old)
+                    continue
+                if selected is not None and definition['id'] not in selected:
+                    if old:
+                        report['cases'].append(old)
                     continue
                 if old and not resume:
                     raise ValueError('Existing incomplete attempt requires --resume')
@@ -90,6 +111,10 @@ def execute(lock, package, *, approved_fingerprint, resume=False, max_new=6, led
                                           judge_platform=judge_platform(p['platform'], definition),
                                           context_mode='preloaded', resume_from=attempt)
                     atomic_json(attempt/'observed-result.json', row)
+                    unknown = 'CLI default; model ID not exposed'
+                    if (not row.get('model_ids') or unknown in row['model_ids'] or
+                            not row.get('judge_model') or row['judge_model'] == unknown):
+                        raise ValueError('Observed subject/judge model identity unavailable; preserve and quarantine ERROR')
                     if (set(row['model_ids']) != {MODELS[p['platform']]} or
                             row['judge_model'] != MODELS[judge_platform(p['platform'], definition)]):
                         raise ValueError('Observed subject/judge model differs from approved lock')
@@ -127,6 +152,8 @@ def main():
     parser.add_argument('--approved-fingerprint')
     parser.add_argument('--resume', action='store_true')
     parser.add_argument('--max-new', type=int, default=6)
+    parser.add_argument('--unstarted-scenario', action='append',
+                        help='Development only: run selected unstarted cases; preserve unselected ERRORs')
     args = parser.parse_args()
     if args.freeze_lock and args.execute:
         parser.error('Freeze and execute must be separate approval steps')
@@ -136,7 +163,8 @@ def main():
         value = validate_lock(args.lock, args.mode, args.platform, args.package_root)
     if args.execute:
         print(json.dumps(execute(value, args.package_root, approved_fingerprint=args.approved_fingerprint,
-                                 resume=args.resume, max_new=args.max_new), ensure_ascii=False, indent=2))
+                                 resume=args.resume, max_new=args.max_new,
+                                 unstarted_scenarios=args.unstarted_scenario), ensure_ascii=False, indent=2))
     else:
         manifest, _ = content_manifest(args.mode)
         print(json.dumps({'no_model_calls': True, 'execution_fingerprint': value['execution_fingerprint'],
