@@ -50,3 +50,14 @@ benchmark, invented percentile, guessed number or default percentage uplift.
 Give primary/backup scripts for the actual stage and one verification question. Unknown ranges
 use no-number copy. Urgent calls can use short scripts with research pending. No salary-history
 law, tax/option valuation or negotiation-success claim from external skills is accepted unchecked.
+
+## Numeric application-field decision contract
+Use this sequence for a numeric-only expectation field:
+1. Name the actual application stage and distinguish it from a formal offer; later scope/package
+   discussion remains possible. Confirm the required currency, base versus total and pay interval.
+2. Directly ask which amount the user chooses to enter, or their acceptable minimum/target on that
+   same basis. Role/location/seniority questions and research do not replace this choice question.
+3. If undecided, leave actual input pending. Offer research/budgeting as proposed decision steps;
+   do not pressure a choice or insert a default, zero, uplift or remembered benchmark.
+4. Use only the user's chosen, approved figure with its basis and interval. Record a conversation
+   or disclosure only if it actually happened; a proposed script is not past negotiation history.

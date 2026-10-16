@@ -18,3 +18,9 @@ Next Round Strategy grounded in actual interview recollection. Collect the first
 - Next Action
 
 Use [template](../../templates/artifacts/interview-debrief.md). Classify important findings; no invented facts.
+
+## Field provenance contract
+For round, speaker, date, stage and result, retain the supplied source or Unknown independently.
+No inferred/default value may be marked confirmed. Speaker attribution requires supplied recall;
+an ambiguous statement cannot become employer intelligence. Analyze the available record first,
+then ask at most one combined clarification if needed. Preserve original recalled answers.

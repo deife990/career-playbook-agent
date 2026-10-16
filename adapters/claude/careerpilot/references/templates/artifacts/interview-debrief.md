@@ -1,5 +1,7 @@
 # interview-debrief
 Opportunity / Round: {{selected_scope}}
+Field provenance: {{supplied_source_or_Unknown_for_round_speaker_date_stage_result}}
+Unprovided values remain Unknown; no confirmed defaults. Any clarification follows analysis.
 
 ## Actual Questions
 {{actual_questions}}

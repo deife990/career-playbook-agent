@@ -27,6 +27,10 @@ Include requested mode/depth, selection strategy and JD category/Direct Match/Tr
 Gap/Unknown coverage table with evidence and missing criteria. Separate ATS structural result,
 Recruiter Scan and HM Credibility judgments, differentiation anchors, concern-to-surface plan,
 meaning-preserving edits and cross-surface findings. Each judgment cites a line/section/fact.
+Recruiter Scan and HM Credibility grades are exactly Strong/Adequate/Weak/Risk with a rationale.
+Missing proof may receive Risk while the underlying fact stays Unknown. Match classifications
+Direct Match/Transferable/Partial/Gap/Unknown and file QA ATS-Ready/ATS-Risky/ATS-Broken/NOT_CHECKED
+are separate fields, never substitutes for either reviewer grade.
 Include actual DOCX/PDF links only when created, observed extraction/page/visual checks and pending
 checks separately. Final-ready requires complete relevant checks, not a percentage score.
 Show submitted version/date/JD/answer identity after confirmed submission and the interview handoff.

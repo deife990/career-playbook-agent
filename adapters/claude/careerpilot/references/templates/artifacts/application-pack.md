@@ -48,6 +48,8 @@ JD requirement / category / match / evidence / missing: {{coverage}}
 ATS structure: {{ats_status_and_observations}}
 Recruiter scan: {{recruiter_findings}}
 HM credibility: {{hm_findings}}
+Each reviewer finding: Strong / Adequate / Weak / Risk + observed line/fact + rationale.
+Underlying fact may be Unknown; match class and file QA are separate from reviewer grades.
 Differentiation: {{evidence_anchors}}
 Concerns and handling surface: {{concerns}}
 Meaning-preserving edits: {{before_after_assertion_checks}}

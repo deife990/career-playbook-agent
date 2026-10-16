@@ -68,6 +68,10 @@ evidence checks. Unperformed steps remain PENDING, not PASS. A quick audit is no
 11. **Hiring Manager Credibility**: could the candidate perform the work? Probe exposure vs ownership,
     seniority boundary, team vs personal outcome, causal evidence, technical/business specificity,
     defensible interview drill-down and why to interview. Label reviewer judgments INFERENCE.
+    Both Recruiter Scan and Hiring Manager findings use only Strong/Adequate/Weak/Risk, each with
+    an observed line/section/fact and rationale. Missing proof can be Risk while the underlying
+    fact remains Unknown. Partial/Unknown/Pending are not reviewer grades; NOT_CHECKED belongs
+    to file QA. JD match, reviewer grade and file QA remain separate axes.
 12. **Differentiation Audit**: find repeated demonstrated strengths, unusual combinations, business
     exposure, environments, cross-functional patterns and career narrative. State evidence anchors.
     Remove interchangeable traits; do not invent a unique insight or require a provocative opinion.

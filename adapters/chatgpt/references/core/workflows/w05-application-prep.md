@@ -42,7 +42,10 @@ an opportunity; company-tailored material requires selection. Missing strategy�
    skips by default. No JD means
    provisional criteria; do not invent requirements. Discovery declined/unavailable: deliver
    supported partial copy with precise Unknowns, then continue the existing engine.
-   Mine missing relevant facts with [experience mining](../capabilities/experience-mining.md),
+   A user stop request overrides further intake/mining/retrieval: deliver the requested supported
+   output with Unknown fields and a stop reason. A confirmed action can suffice without a result
+   metric or period. Do not ask for those, another example or reconfirmation after a stop request.
+   Only when needed and not declined, mine facts with [experience mining](../capabilities/experience-mining.md),
    then create/update [STAR stories](../capabilities/story-bank.md) only from confirmed evidence.
 3. Select mode/depth and execute the complete [screening pipeline](../capabilities/screening-engine.md):
    Evidence→Positioning→Master→Target JD→Selection→Tailoring→Assertion Audit→ATS Structural QA→

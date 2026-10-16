@@ -28,6 +28,11 @@ round/prior hypothesis. If several companies/rounds are possible clarify before 
    the available record for limited analysis: proceed now and mark missing fields Unknown.
    Ask at most one targeted follow-up after the analysis, rather than repeating intake.
    Do not fill answers from Story Bank.
+   Round number, speaker, date, stage and result each need their own supplied source. Missing
+   values stay Unknown; never label a default as confirmed. Attribute a statement only to its
+   supplied speaker and preserve it as user-reported recall, not independent verification.
+   An unspecified speaker is not employer intelligence. Combine any necessary clarification
+   with the single follow-up after analysis; do not restart collection for missing metadata.
 4. Compare previous hypotheses against actual evidence: supported / challenged / unresolved,
    with observed statements and alternative interpretations. Reaction is observed behavior,
    not proof of interviewer belief or hiring outcome. Repeated ownership questions or another

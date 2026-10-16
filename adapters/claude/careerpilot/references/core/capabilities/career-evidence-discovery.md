@@ -21,6 +21,11 @@ Read [evidence policy](../principles/evidence-policy.md), [privacy](../principle
    scan; guided questions come last when records/bridge are unavailable. Never repeat generic intake.
 
 ## Coverage and priority
+Termination takes precedence over further intake: a confirmed action may be sufficient for a
+criterion even with Unknown outcome, period or metric. Strong/Usable normally ends discovery.
+On a user stop request, ask no further result/example/period/reconfirmation questions and do not
+retrieve more records. Provide the requested supported mapping/partial output, retain Unknowns
+and record the stop reason. Do not withhold that output pending a more complete story.
 For each criterion show criterion → existing evidence IDs/action → coverage → reason → next action.
 These five labels are separate from v1.1 JD-match labels and Recruiter/HM grades:
 - **Strong**: sufficient directly relevant, confirmed own-action proof. Skip further discovery.

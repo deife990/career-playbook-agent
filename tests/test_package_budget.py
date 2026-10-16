@@ -2,7 +2,7 @@ import shutil
 import pytest
 from scripts.common import ROOT, load
 from scripts.generate_adapters import generate
-from scripts.package_budget import check_budget
+from scripts.package_budget import check_budget, measure
 
 
 @pytest.mark.parametrize('platform', ['chatgpt', 'claude'])
@@ -15,7 +15,9 @@ def test_real_required_policy_growth_trips_frozen_cap(tmp_path):
     root = tmp_path / 'careerpilot'
     shutil.copytree(source, root)
     policy = root / 'references/core/principles/evidence-policy.md'
-    policy.write_text(policy.read_text() + '\nNew mandatory text.\n')
+    # E may reduce the load; exceed the frozen cap, not merely the current smaller size.
+    margin = load(ROOT/'evals/package-budgets.json')['platforms']['claude']['entries']['SKILL.md']['bytes'] - measure(root, 'claude')['entries']['SKILL.md']['bytes']
+    policy.write_text(policy.read_text() + 'x' * (margin + 1))
     with pytest.raises(ValueError, match='initial bytes'):
         check_budget(root, 'claude')
 

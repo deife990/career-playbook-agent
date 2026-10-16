@@ -4,7 +4,10 @@ from scripts.run_model_evals import grade, extract_json
 def test_ten_personas_and_every_scenario_binding():
     personas={yaml.safe_load(p.read_text())['id'] for p in (ROOT/'evals/personas').glob('*.yaml')}
     cases=[yaml.safe_load(p.read_text()) for p in (ROOT/'evals/scenarios').glob('*.yaml')]
-    assert len(personas)>=10; assert {c['persona'] for c in cases}==personas
+    variant_cases=[yaml.safe_load(p.read_text()) for p in (ROOT/'evals/variants/e-stage').rglob('*.yaml')]
+    assert len(personas)>=10
+    assert {c['persona'] for c in cases}|{c['persona'] for c in variant_cases}==personas
+    assert 'e-stage-synthetic-neutral' not in {c['persona'] for c in cases}
     assert len(cases)>=15 and len({c['id'] for c in cases})==len(cases)
 def test_judge_cannot_omit_or_fabricate_evidence():
     transcript=[{'role':'assistant','content':'어느 회사인가요?'}]
