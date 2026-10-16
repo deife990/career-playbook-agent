@@ -1,13 +1,18 @@
 # Review improvement progress — 2026-10-16
 
-## Next candidate — G1 approval pending
+## Next candidate — G1 implemented; G2 approval pending
 
 rc.8 scope is E + D; F conditional loading is deferred until reference discovery can be tested.
 Final-only holdout content was frozen first in `47c520c`. The
 [plan, contract diagnosis, split and cost](rc8-e-d-plan-2026-10-16.md) and
 [post-C failure policy](rc8-evaluation-policy-2026-10-16.md) are prepared for review.
-No E/D runtime changes or development/holdout model calls have started. G1 approval is required;
-later development calls, D cleanup and final evaluation each have separate approval gates.
+G1 is approved and implemented: E source/general rules, field and procedure contracts, generated
+entries, isolated no-call evaluation tooling and leakage/rule-migration checks. Real development/
+holdout model calls remain zero. D cleanup and F are unapplied; F is excluded from rc.8.
+[G2 full diffs, rule mapping, integrity locks and cost](rc8-g2-review-2026-10-16.md) await approval.
+The [revision cap supplement](rc8-candidate-revision-limit-2026-10-16.md) was committed before
+E edits/results. Original frozen policy and content manifests remain unchanged. Development
+calls, D cleanup and final evaluation retain separate approval gates. No main merge/push/tag/release.
 
 ## Completed
 

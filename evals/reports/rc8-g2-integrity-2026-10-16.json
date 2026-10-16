@@ -1,0 +1,699 @@
+{
+  "timestamp": "2026-10-16T03:46:24.600312+00:00",
+  "status": "PASS",
+  "actual_model_calls": 0,
+  "scope": "G1 no-call structural/tool validation, NOT behavior evidence",
+  "tests": "219 passed; pytest with fake providers for new execution tests",
+  "static_evals": "PASS",
+  "C_suite_fingerprint": "a24b18e47ed0ee3c0ba972cd08ab1265ce7a62d4a1d1b4617c49e2dda732ef3e",
+  "C_protocol_fingerprint": "4515ea6c278005b2221531e763dedefcd4512df25f19471a30c94982141453c9",
+  "holdout_fingerprint": "895695d7ab6b22e9fe9a01fbcab7643335478a650a7efb6fd0ef703eaae83ed7",
+  "development_fingerprint": "665bbe2d6a2fbbfc3c521e7bc1f387fc579dee28a05823acdcb7feb908d8fe10",
+  "hosts": {
+    "chatgpt": {
+      "budget": {
+        "file_count": 111,
+        "entries": {
+          "skills/application-prep/SKILL.md": {
+            "bytes": 39735,
+            "files": [
+              "references/core/principles/evidence-policy.md",
+              "references/core/principles/index.md",
+              "references/core/principles/privacy-policy.md",
+              "references/core/principles/product-principles.md",
+              "references/core/principles/research-policy.md",
+              "references/core/principles/ux-language.md",
+              "references/core/router/routing.md",
+              "references/core/state/state.md",
+              "references/host.md",
+              "skills/application-prep/SKILL.md"
+            ]
+          },
+          "skills/career-setup/SKILL.md": {
+            "bytes": 39611,
+            "files": [
+              "references/core/principles/evidence-policy.md",
+              "references/core/principles/index.md",
+              "references/core/principles/privacy-policy.md",
+              "references/core/principles/product-principles.md",
+              "references/core/principles/research-policy.md",
+              "references/core/principles/ux-language.md",
+              "references/core/router/routing.md",
+              "references/core/state/state.md",
+              "references/host.md",
+              "skills/career-setup/SKILL.md"
+            ]
+          },
+          "skills/career-state/SKILL.md": {
+            "bytes": 39624,
+            "files": [
+              "references/core/principles/evidence-policy.md",
+              "references/core/principles/index.md",
+              "references/core/principles/privacy-policy.md",
+              "references/core/principles/product-principles.md",
+              "references/core/principles/research-policy.md",
+              "references/core/principles/ux-language.md",
+              "references/core/router/routing.md",
+              "references/core/state/state.md",
+              "references/host.md",
+              "skills/career-state/SKILL.md"
+            ]
+          },
+          "skills/career-strategy/SKILL.md": {
+            "bytes": 39562,
+            "files": [
+              "references/core/principles/evidence-policy.md",
+              "references/core/principles/index.md",
+              "references/core/principles/privacy-policy.md",
+              "references/core/principles/product-principles.md",
+              "references/core/principles/research-policy.md",
+              "references/core/principles/ux-language.md",
+              "references/core/router/routing.md",
+              "references/core/state/state.md",
+              "references/host.md",
+              "skills/career-strategy/SKILL.md"
+            ]
+          },
+          "skills/careerpilot-router/SKILL.md": {
+            "bytes": 40282,
+            "files": [
+              "references/core/principles/evidence-policy.md",
+              "references/core/principles/index.md",
+              "references/core/principles/privacy-policy.md",
+              "references/core/principles/product-principles.md",
+              "references/core/principles/research-policy.md",
+              "references/core/principles/ux-language.md",
+              "references/core/router/routing.md",
+              "references/core/state/state.md",
+              "references/host.md",
+              "skills/careerpilot-router/SKILL.md"
+            ]
+          },
+          "skills/experience-mining/SKILL.md": {
+            "bytes": 39889,
+            "files": [
+              "references/core/principles/evidence-policy.md",
+              "references/core/principles/index.md",
+              "references/core/principles/privacy-policy.md",
+              "references/core/principles/product-principles.md",
+              "references/core/principles/research-policy.md",
+              "references/core/principles/ux-language.md",
+              "references/core/router/routing.md",
+              "references/core/state/state.md",
+              "references/host.md",
+              "skills/experience-mining/SKILL.md"
+            ]
+          },
+          "skills/interview-debrief/SKILL.md": {
+            "bytes": 39650,
+            "files": [
+              "references/core/principles/evidence-policy.md",
+              "references/core/principles/index.md",
+              "references/core/principles/privacy-policy.md",
+              "references/core/principles/product-principles.md",
+              "references/core/principles/research-policy.md",
+              "references/core/principles/ux-language.md",
+              "references/core/router/routing.md",
+              "references/core/state/state.md",
+              "references/host.md",
+              "skills/interview-debrief/SKILL.md"
+            ]
+          },
+          "skills/interview-prep/SKILL.md": {
+            "bytes": 39597,
+            "files": [
+              "references/core/principles/evidence-policy.md",
+              "references/core/principles/index.md",
+              "references/core/principles/privacy-policy.md",
+              "references/core/principles/product-principles.md",
+              "references/core/principles/research-policy.md",
+              "references/core/principles/ux-language.md",
+              "references/core/router/routing.md",
+              "references/core/state/state.md",
+              "references/host.md",
+              "skills/interview-prep/SKILL.md"
+            ]
+          },
+          "skills/job-intelligence/SKILL.md": {
+            "bytes": 39659,
+            "files": [
+              "references/core/principles/evidence-policy.md",
+              "references/core/principles/index.md",
+              "references/core/principles/privacy-policy.md",
+              "references/core/principles/product-principles.md",
+              "references/core/principles/research-policy.md",
+              "references/core/principles/ux-language.md",
+              "references/core/router/routing.md",
+              "references/core/state/state.md",
+              "references/host.md",
+              "skills/job-intelligence/SKILL.md"
+            ]
+          },
+          "skills/mock-interview/SKILL.md": {
+            "bytes": 39663,
+            "files": [
+              "references/core/principles/evidence-policy.md",
+              "references/core/principles/index.md",
+              "references/core/principles/privacy-policy.md",
+              "references/core/principles/product-principles.md",
+              "references/core/principles/research-policy.md",
+              "references/core/principles/ux-language.md",
+              "references/core/router/routing.md",
+              "references/core/state/state.md",
+              "references/host.md",
+              "skills/mock-interview/SKILL.md"
+            ]
+          },
+          "skills/offer-decision/SKILL.md": {
+            "bytes": 39641,
+            "files": [
+              "references/core/principles/evidence-policy.md",
+              "references/core/principles/index.md",
+              "references/core/principles/privacy-policy.md",
+              "references/core/principles/product-principles.md",
+              "references/core/principles/research-policy.md",
+              "references/core/principles/ux-language.md",
+              "references/core/router/routing.md",
+              "references/core/state/state.md",
+              "references/host.md",
+              "skills/offer-decision/SKILL.md"
+            ]
+          },
+          "skills/opportunity-discovery/SKILL.md": {
+            "bytes": 39588,
+            "files": [
+              "references/core/principles/evidence-policy.md",
+              "references/core/principles/index.md",
+              "references/core/principles/privacy-policy.md",
+              "references/core/principles/product-principles.md",
+              "references/core/principles/research-policy.md",
+              "references/core/principles/ux-language.md",
+              "references/core/router/routing.md",
+              "references/core/state/state.md",
+              "references/host.md",
+              "skills/opportunity-discovery/SKILL.md"
+            ]
+          }
+        }
+      },
+      "baseline_package_fingerprint": "93ebecbd059b848e5e7482a6b68e2d5a93c1cc9e811c1f4fc985e26cf0c40f9d",
+      "candidate_package_fingerprint": "62742b6271de0e306f7db6510cfad761d1439072bc2b73757bc9d145fe9bde92",
+      "execution_fingerprint": "43b46c113190062d9400834cc489cd085dd1fe1f0ba17133ccee86259d9de8fc",
+      "C_complete_report_sha256": "786e678e467137758eca87182394dbcdb962982ee33ae3c713996f555f5c2237",
+      "unchanged_preloaded_reference_sets": true,
+      "context_bytes_not_tokens": [
+        {
+          "id": "concise-second-opportunity",
+          "turns": 1,
+          "baseline_context_bytes": 113217,
+          "candidate_context_bytes": 113434
+        },
+        {
+          "id": "debrief-first",
+          "turns": 2,
+          "baseline_context_bytes": 109472,
+          "candidate_context_bytes": 110742
+        },
+        {
+          "id": "discovery-unknown-table",
+          "turns": 1,
+          "baseline_context_bytes": 104254,
+          "candidate_context_bytes": 104471
+        },
+        {
+          "id": "evd-01-existing-sufficient",
+          "turns": 1,
+          "baseline_context_bytes": 116635,
+          "candidate_context_bytes": 117702
+        },
+        {
+          "id": "evd-07-privacy",
+          "turns": 1,
+          "baseline_context_bytes": 116635,
+          "candidate_context_bytes": 117702
+        },
+        {
+          "id": "evd-14-confidentiality",
+          "turns": 1,
+          "baseline_context_bytes": 116635,
+          "candidate_context_bytes": 117702
+        },
+        {
+          "id": "screening-g-no-tools",
+          "turns": 1,
+          "baseline_context_bytes": 116635,
+          "candidate_context_bytes": 117702
+        },
+        {
+          "id": "screening-i-comp",
+          "turns": 1,
+          "baseline_context_bytes": 116635,
+          "candidate_context_bytes": 117702
+        },
+        {
+          "id": "screening-k-report",
+          "turns": 1,
+          "baseline_context_bytes": 116635,
+          "candidate_context_bytes": 117702
+        },
+        {
+          "id": "dev-base-salary-choice",
+          "turns": 1,
+          "baseline_context_bytes": 116635,
+          "candidate_context_bytes": 117702
+        },
+        {
+          "id": "dev-events-review-grades",
+          "turns": 1,
+          "baseline_context_bytes": 116635,
+          "candidate_context_bytes": 117702
+        },
+        {
+          "id": "dev-existing-evidence-stop",
+          "turns": 1,
+          "baseline_context_bytes": 116635,
+          "candidate_context_bytes": 117702
+        },
+        {
+          "id": "var-debrief-round-unprovided",
+          "turns": 2,
+          "baseline_context_bytes": 109472,
+          "candidate_context_bytes": 110742
+        },
+        {
+          "id": "var-debrief-speaker-candidate",
+          "turns": 2,
+          "baseline_context_bytes": 109472,
+          "candidate_context_bytes": 110742
+        },
+        {
+          "id": "var-debrief-speaker-interviewer",
+          "turns": 2,
+          "baseline_context_bytes": 109472,
+          "candidate_context_bytes": 110742
+        },
+        {
+          "id": "var-positioning-health-admin",
+          "turns": 1,
+          "baseline_context_bytes": 113217,
+          "candidate_context_bytes": 113434
+        },
+        {
+          "id": "var-positioning-support-role",
+          "turns": 1,
+          "baseline_context_bytes": 113217,
+          "candidate_context_bytes": 113434
+        },
+        {
+          "id": "var-resume-accounting-support",
+          "turns": 1,
+          "baseline_context_bytes": 116635,
+          "candidate_context_bytes": 117702
+        }
+      ]
+    },
+    "claude": {
+      "budget": {
+        "file_count": 139,
+        "entries": {
+          "SKILL.md": {
+            "bytes": 39285,
+            "files": [
+              "SKILL.md",
+              "references/core/principles/evidence-policy.md",
+              "references/core/principles/index.md",
+              "references/core/principles/privacy-policy.md",
+              "references/core/principles/product-principles.md",
+              "references/core/principles/research-policy.md",
+              "references/core/principles/ux-language.md",
+              "references/core/router/routing.md",
+              "references/core/state/state.md",
+              "references/host.md"
+            ]
+          }
+        }
+      },
+      "baseline_package_fingerprint": "ac4ef67bab8b61f84671b4bf9c27147681aa3878ad763ff70d0024daf048a3ee",
+      "candidate_package_fingerprint": "a56557ed3b2479acc68f2157ca684e4b61fa4362668e2c34d07d471b8ff8eeba",
+      "execution_fingerprint": "9979843338ffcfe11c30eb95d19dbd1e65ec673ad201b1d769215c1f655a2f8d",
+      "C_complete_report_sha256": "3e19fea3ab433744791770fada25833cde2e0de0e56164a5240f68fe4673bbcf",
+      "unchanged_preloaded_reference_sets": true,
+      "context_bytes_not_tokens": [
+        {
+          "id": "concise-second-opportunity",
+          "turns": 1,
+          "baseline_context_bytes": 112819,
+          "candidate_context_bytes": 113036
+        },
+        {
+          "id": "debrief-first",
+          "turns": 2,
+          "baseline_context_bytes": 111188,
+          "candidate_context_bytes": 112458
+        },
+        {
+          "id": "discovery-unknown-table",
+          "turns": 1,
+          "baseline_context_bytes": 107672,
+          "candidate_context_bytes": 107889
+        },
+        {
+          "id": "evd-01-existing-sufficient",
+          "turns": 1,
+          "baseline_context_bytes": 116161,
+          "candidate_context_bytes": 117228
+        },
+        {
+          "id": "evd-07-privacy",
+          "turns": 1,
+          "baseline_context_bytes": 116161,
+          "candidate_context_bytes": 117228
+        },
+        {
+          "id": "evd-14-confidentiality",
+          "turns": 1,
+          "baseline_context_bytes": 116161,
+          "candidate_context_bytes": 117228
+        },
+        {
+          "id": "screening-g-no-tools",
+          "turns": 1,
+          "baseline_context_bytes": 116161,
+          "candidate_context_bytes": 117228
+        },
+        {
+          "id": "screening-i-comp",
+          "turns": 1,
+          "baseline_context_bytes": 116161,
+          "candidate_context_bytes": 117228
+        },
+        {
+          "id": "screening-k-report",
+          "turns": 1,
+          "baseline_context_bytes": 116161,
+          "candidate_context_bytes": 117228
+        },
+        {
+          "id": "dev-base-salary-choice",
+          "turns": 1,
+          "baseline_context_bytes": 116161,
+          "candidate_context_bytes": 117228
+        },
+        {
+          "id": "dev-events-review-grades",
+          "turns": 1,
+          "baseline_context_bytes": 116161,
+          "candidate_context_bytes": 117228
+        },
+        {
+          "id": "dev-existing-evidence-stop",
+          "turns": 1,
+          "baseline_context_bytes": 116161,
+          "candidate_context_bytes": 117228
+        },
+        {
+          "id": "var-debrief-round-unprovided",
+          "turns": 2,
+          "baseline_context_bytes": 111188,
+          "candidate_context_bytes": 112458
+        },
+        {
+          "id": "var-debrief-speaker-candidate",
+          "turns": 2,
+          "baseline_context_bytes": 111188,
+          "candidate_context_bytes": 112458
+        },
+        {
+          "id": "var-debrief-speaker-interviewer",
+          "turns": 2,
+          "baseline_context_bytes": 111188,
+          "candidate_context_bytes": 112458
+        },
+        {
+          "id": "var-positioning-health-admin",
+          "turns": 1,
+          "baseline_context_bytes": 112819,
+          "candidate_context_bytes": 113036
+        },
+        {
+          "id": "var-positioning-support-role",
+          "turns": 1,
+          "baseline_context_bytes": 112819,
+          "candidate_context_bytes": 113036
+        },
+        {
+          "id": "var-resume-accounting-support",
+          "turns": 1,
+          "baseline_context_bytes": 116161,
+          "candidate_context_bytes": 117228
+        }
+      ]
+    }
+  },
+  "leakage": {
+    "baseline_commit": "e52b59d",
+    "status": "PASS",
+    "scope": "Added/replacement E lines in core/, templates/, scripts/generate_adapters.py",
+    "selector_sha256": "b17efb9a8344772aacf374b637c861104edaefb42a648ae990ab0e6a79559f67",
+    "lexicon": [
+      {
+        "scenario": "holdout-ambiguous-speaker",
+        "category": "institution",
+        "term": "Hearth",
+        "source_sha256": "8b51fb7a0c5707ba148c8910d93311ce1353c3e317fd86789decc947cf0df40e"
+      },
+      {
+        "scenario": "holdout-ambiguous-speaker",
+        "category": "occupation",
+        "term": "식품점 발주 보조",
+        "source_sha256": "8b51fb7a0c5707ba148c8910d93311ce1353c3e317fd86789decc947cf0df40e"
+      },
+      {
+        "scenario": "holdout-ambiguous-speaker",
+        "category": "institution",
+        "term": "식품점",
+        "source_sha256": "8b51fb7a0c5707ba148c8910d93311ce1353c3e317fd86789decc947cf0df40e"
+      },
+      {
+        "scenario": "holdout-base-entry-decision",
+        "category": "location",
+        "term": "아일랜드",
+        "source_sha256": "51d8b82b4953da139a9d38eab28cb7953a5431df012f07cb93fa81df675af990"
+      },
+      {
+        "scenario": "holdout-base-entry-decision",
+        "category": "currency",
+        "term": "EUR",
+        "source_sha256": "51d8b82b4953da139a9d38eab28cb7953a5431df012f07cb93fa81df675af990"
+      },
+      {
+        "scenario": "holdout-base-entry-decision",
+        "category": "occupation",
+        "term": "사무 보조",
+        "source_sha256": "51d8b82b4953da139a9d38eab28cb7953a5431df012f07cb93fa81df675af990"
+      },
+      {
+        "scenario": "holdout-candidate-speaker",
+        "category": "institution",
+        "term": "Vale",
+        "source_sha256": "455019801dfa4f6061c5d92958688e57342148078515eea474952fed62078b38"
+      },
+      {
+        "scenario": "holdout-candidate-speaker",
+        "category": "occupation",
+        "term": "지역서점 재고 보조",
+        "source_sha256": "455019801dfa4f6061c5d92958688e57342148078515eea474952fed62078b38"
+      },
+      {
+        "scenario": "holdout-candidate-speaker",
+        "category": "institution",
+        "term": "지역서점",
+        "source_sha256": "455019801dfa4f6061c5d92958688e57342148078515eea474952fed62078b38"
+      },
+      {
+        "scenario": "holdout-craft-market",
+        "category": "occupation",
+        "term": "공예 교육 보조",
+        "source_sha256": "99be74b7daab375e0818ca0d557434e21d233d44cc64c817677f20ebf0531f7a"
+      },
+      {
+        "scenario": "holdout-craft-market",
+        "category": "location",
+        "term": "부산",
+        "source_sha256": "99be74b7daab375e0818ca0d557434e21d233d44cc64c817677f20ebf0531f7a"
+      },
+      {
+        "scenario": "holdout-craft-market",
+        "category": "occupation",
+        "term": "공예",
+        "source_sha256": "99be74b7daab375e0818ca0d557434e21d233d44cc64c817677f20ebf0531f7a"
+      },
+      {
+        "scenario": "holdout-curatorial-scope",
+        "category": "institution",
+        "term": "Nacre",
+        "source_sha256": "161bb8a71f604d1c392bc4a74c63cef774dbc813c2ad67e0e5ed6caead0da3f6"
+      },
+      {
+        "scenario": "holdout-curatorial-scope",
+        "category": "institution",
+        "term": "문화재단",
+        "source_sha256": "161bb8a71f604d1c392bc4a74c63cef774dbc813c2ad67e0e5ed6caead0da3f6"
+      },
+      {
+        "scenario": "holdout-curatorial-scope",
+        "category": "occupation",
+        "term": "Collection Assistant",
+        "source_sha256": "161bb8a71f604d1c392bc4a74c63cef774dbc813c2ad67e0e5ed6caead0da3f6"
+      },
+      {
+        "scenario": "holdout-curatorial-scope",
+        "category": "criterion",
+        "term": "collection registration",
+        "source_sha256": "161bb8a71f604d1c392bc4a74c63cef774dbc813c2ad67e0e5ed6caead0da3f6"
+      },
+      {
+        "scenario": "holdout-curatorial-scope",
+        "category": "criterion",
+        "term": "loan correspondence",
+        "source_sha256": "161bb8a71f604d1c392bc4a74c63cef774dbc813c2ad67e0e5ed6caead0da3f6"
+      },
+      {
+        "scenario": "holdout-curatorial-scope",
+        "category": "occupation",
+        "term": "박물관 접수 보조",
+        "source_sha256": "161bb8a71f604d1c392bc4a74c63cef774dbc813c2ad67e0e5ed6caead0da3f6"
+      },
+      {
+        "scenario": "holdout-curatorial-scope",
+        "category": "object",
+        "term": "소장품",
+        "source_sha256": "161bb8a71f604d1c392bc4a74c63cef774dbc813c2ad67e0e5ed6caead0da3f6"
+      },
+      {
+        "scenario": "holdout-curatorial-scope",
+        "category": "quantity",
+        "term": "18개월",
+        "source_sha256": "161bb8a71f604d1c392bc4a74c63cef774dbc813c2ad67e0e5ed6caead0da3f6"
+      },
+      {
+        "scenario": "holdout-curatorial-scope",
+        "category": "quantity",
+        "term": "35건",
+        "source_sha256": "161bb8a71f604d1c392bc4a74c63cef774dbc813c2ad67e0e5ed6caead0da3f6"
+      },
+      {
+        "scenario": "holdout-existing-evidence-stop",
+        "category": "occupation",
+        "term": "도서관 보조",
+        "source_sha256": "afc03601467805178f0becdfaaa85f2fcd529a997f07c37de5727c7f97c9638b"
+      },
+      {
+        "scenario": "holdout-existing-evidence-stop",
+        "category": "identifier",
+        "term": "lib-known",
+        "source_sha256": "afc03601467805178f0becdfaaa85f2fcd529a997f07c37de5727c7f97c9638b"
+      },
+      {
+        "scenario": "holdout-existing-evidence-stop",
+        "category": "quantity",
+        "term": "17건",
+        "source_sha256": "afc03601467805178f0becdfaaa85f2fcd529a997f07c37de5727c7f97c9638b"
+      },
+      {
+        "scenario": "holdout-interviewer-speaker",
+        "category": "institution",
+        "term": "Lumen",
+        "source_sha256": "3800496bae35abbb83f27688662c493b84f82b3076ba9eeb2d971a4a6a9df29b"
+      },
+      {
+        "scenario": "holdout-interviewer-speaker",
+        "category": "occupation",
+        "term": "편집 보조",
+        "source_sha256": "3800496bae35abbb83f27688662c493b84f82b3076ba9eeb2d971a4a6a9df29b"
+      },
+      {
+        "scenario": "holdout-interviewer-speaker",
+        "category": "institution",
+        "term": "출판사",
+        "source_sha256": "3800496bae35abbb83f27688662c493b84f82b3076ba9eeb2d971a4a6a9df29b"
+      },
+      {
+        "scenario": "holdout-interviewer-speaker",
+        "category": "object",
+        "term": "원고",
+        "source_sha256": "3800496bae35abbb83f27688662c493b84f82b3076ba9eeb2d971a4a6a9df29b"
+      },
+      {
+        "scenario": "holdout-procurement-review-grades",
+        "category": "institution",
+        "term": "Quartz",
+        "source_sha256": "41cece608b4e3c05d208657ec11b390de4e3da4c586d371a05aad4fd8634a963"
+      },
+      {
+        "scenario": "holdout-procurement-review-grades",
+        "category": "occupation",
+        "term": "구매 보조",
+        "source_sha256": "41cece608b4e3c05d208657ec11b390de4e3da4c586d371a05aad4fd8634a963"
+      },
+      {
+        "scenario": "holdout-procurement-review-grades",
+        "category": "tool",
+        "term": "ERP",
+        "source_sha256": "41cece608b4e3c05d208657ec11b390de4e3da4c586d371a05aad4fd8634a963"
+      },
+      {
+        "scenario": "holdout-procurement-review-grades",
+        "category": "object",
+        "term": "발주서",
+        "source_sha256": "41cece608b4e3c05d208657ec11b390de4e3da4c586d371a05aad4fd8634a963"
+      },
+      {
+        "scenario": "holdout-procurement-review-grades",
+        "category": "quantity",
+        "term": "24건",
+        "source_sha256": "41cece608b4e3c05d208657ec11b390de4e3da4c586d371a05aad4fd8634a963"
+      },
+      {
+        "scenario": "holdout-sanitized-own-action",
+        "category": "institution",
+        "term": "Orchid",
+        "source_sha256": "f377917fc0a3cabf0234c79449fac7c8744fec3cfa06e5fbc832d9fe0a22867c"
+      },
+      {
+        "scenario": "holdout-sanitized-own-action",
+        "category": "institution",
+        "term": "복지관",
+        "source_sha256": "f377917fc0a3cabf0234c79449fac7c8744fec3cfa06e5fbc832d9fe0a22867c"
+      },
+      {
+        "scenario": "holdout-sanitized-own-action",
+        "category": "institution",
+        "term": "Cedar",
+        "source_sha256": "f377917fc0a3cabf0234c79449fac7c8744fec3cfa06e5fbc832d9fe0a22867c"
+      },
+      {
+        "scenario": "holdout-sanitized-own-action",
+        "category": "identifier",
+        "term": "PRIVATE-CEDAR-73",
+        "source_sha256": "f377917fc0a3cabf0234c79449fac7c8744fec3cfa06e5fbc832d9fe0a22867c"
+      },
+      {
+        "scenario": "holdout-sanitized-own-action",
+        "category": "occupation",
+        "term": "봉사자 일정 안내",
+        "source_sha256": "f377917fc0a3cabf0234c79449fac7c8744fec3cfa06e5fbc832d9fe0a22867c"
+      }
+    ],
+    "changed_lines_checked": 102,
+    "findings": [],
+    "entry_example": {
+      "role": "postal sorting aide",
+      "number": "67",
+      "scenario_files_checked": 66,
+      "collisions": []
+    },
+    "limitation": "Human-selected literal terms only; semantic leakage and blind independence NOT VERIFIED."
+  },
+  "protected_evidence_changes": []
+}

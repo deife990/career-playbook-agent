@@ -1,8 +1,10 @@
 # Review improvement gate — 2026-10-16
 
-rc.8 **planning/content freeze only**, awaiting G1 approval: E + D, with F deferred.
+rc.8 **E implementation/no-call tools complete**, awaiting G2 approval: E + D, with F deferred.
 [Plan and cost](rc8-e-d-plan-2026-10-16.md) · [Post-C acceptance/failure handling](rc8-evaluation-policy-2026-10-16.md).
-The final-only holdout is frozen; no candidate implementation or new model evaluation has run.
+The final-only holdout is frozen; E is implemented but no real development/holdout evaluation has run.
+[G2 full text diffs, rule mapping, no-call audit and cost](rc8-g2-review-2026-10-16.md).
+Current E files are a development candidate, not rc.8 release acceptance. D/F are unapplied.
 
 **Strengthened C baseline COMPLETE_WITH_AUTOMATIC_FAILURES:** 260/260 verdicts, ERROR/missing 0.
 ChatGPT records 130 PASS; Claude records 119 PASS / 11 automatic FAIL. Actual behavior failures
