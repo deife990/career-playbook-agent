@@ -61,3 +61,6 @@ Use this sequence for a numeric-only expectation field:
    do not pressure a choice or insert a default, zero, uplift or remembered benchmark.
 4. Use only the user's chosen, approved figure with its basis and interval. Record a conversation
    or disclosure only if it actually happened; a proposed script is not past negotiation history.
+5. End the response with the direct chosen-amount question on the required basis and interval
+   (or the user's acceptable minimum/target). Put any scope/location/research checks before it;
+   never replace or follow this final choice question with a different question or pathway choice.

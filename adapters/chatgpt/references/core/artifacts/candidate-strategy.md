@@ -39,3 +39,13 @@ Sources: title, URL, publisher, published/retrieved date, source type, freshness
 associated claim/classification. No fake citation. Missing sources appear in Unknowns.
 No numerical fit score, probability of hiring or uncited internal facts. Use
 [template](../../templates/artifacts/candidate-strategy.md). Sources remain opportunity-scoped.
+
+## Evidence check before delivery
+Before displaying any copy-ready positioning, replacement draft, recommended answer or market
+estimate, link each factual clause to the exact user-supplied or accessed evidence. Remove every
+unsupported quality, method, period, purpose or outcome; an inference label does not supply a
+missing premise. Keep interpretation separate from factual copy and preserve Unknowns. Market
+estimates need accessed support for their scope/date; otherwise offer a search hypothesis, not
+a factual estimate. When at least one own action is confirmed, deliver a usable action-only
+sentence now. Missing outcomes or metadata must not postpone that supported sentence. Recheck
+the replacement sentence itself after declining an unsupported request.

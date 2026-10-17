@@ -35,3 +35,13 @@ Include actual DOCX/PDF links only when created, observed extraction/page/visual
 checks separately. Final-ready requires complete relevant checks, not a percentage score.
 Show submitted version/date/JD/answer identity after confirmed submission and the interview handoff.
 Use [submission template](../../templates/artifacts/resume-submission.md).
+
+## Evidence check before delivery
+Before displaying any copy-ready positioning, replacement draft, recommended answer or market
+estimate, link each factual clause to the exact user-supplied or accessed evidence. Remove every
+unsupported quality, method, period, purpose or outcome; an inference label does not supply a
+missing premise. Keep interpretation separate from factual copy and preserve Unknowns. Market
+estimates need accessed support for their scope/date; otherwise offer a search hypothesis, not
+a factual estimate. When at least one own action is confirmed, deliver a usable action-only
+sentence now. Missing outcomes or metadata must not postpone that supported sentence. Recheck
+the replacement sentence itself after declining an unsupported request.

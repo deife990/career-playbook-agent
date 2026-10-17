@@ -1,0 +1,62 @@
+{
+  "timestamp": "2026-10-17T07:30:12.278021+00:00",
+  "user_approval": "2026-10-17 all-stage rc.8 release direction; no per-stage approval required",
+  "revision": 1,
+  "packages": {
+    "chatgpt": {
+      "package_fingerprint": "ff1fca874ba35211687794eb0fbe97e173b6310de155ad1b88136503107ba571",
+      "root": "/Users/jhwang/Desktop/AI Career 전자책/career-playbook-agent/work/review-v2/rc8-release-2026-10-17/packages/chatgpt",
+      "file_count": 111,
+      "initial_bytes": {
+        "skills/application-prep/SKILL.md": 39777,
+        "skills/career-setup/SKILL.md": 39653,
+        "skills/career-state/SKILL.md": 39666,
+        "skills/career-strategy/SKILL.md": 39604,
+        "skills/careerpilot-router/SKILL.md": 40324,
+        "skills/experience-mining/SKILL.md": 39931,
+        "skills/interview-debrief/SKILL.md": 39692,
+        "skills/interview-prep/SKILL.md": 39639,
+        "skills/job-intelligence/SKILL.md": 39701,
+        "skills/mock-interview/SKILL.md": 39705,
+        "skills/offer-decision/SKILL.md": 39683,
+        "skills/opportunity-discovery/SKILL.md": 39630
+      }
+    },
+    "claude": {
+      "package_fingerprint": "d36f87dfa7ce4882cedb915d967f1923664b065cfdee4203b704bc7fcc7cb249",
+      "root": "/Users/jhwang/Desktop/AI Career 전자책/career-playbook-agent/work/review-v2/rc8-release-2026-10-17/packages/claude",
+      "file_count": 139,
+      "initial_bytes": {
+        "SKILL.md": 39327
+      }
+    }
+  },
+  "c_suite_fingerprint": "a24b18e47ed0ee3c0ba972cd08ab1265ce7a62d4a1d1b4617c49e2dda732ef3e",
+  "c_protocol_fingerprint": "4515ea6c278005b2221531e763dedefcd4512df25f19471a30c94982141453c9",
+  "baseline_fail_case_limits": {
+    "chatgpt": 0,
+    "claude": 11
+  },
+  "quick_scenarios": [
+    "concise-second-opportunity",
+    "debrief-first",
+    "discovery-unknown-table",
+    "evd-01-existing-sufficient",
+    "evd-07-privacy",
+    "evd-14-confidentiality",
+    "screening-g-no-tools",
+    "screening-i-comp",
+    "screening-k-report"
+  ],
+  "quick_runs": 1,
+  "quick_release_evidence": false,
+  "holdout_content_fingerprint": "895695d7ab6b22e9fe9a01fbcab7643335478a650a7efb6fd0ef703eaae83ed7",
+  "holdout_scenarios": 9,
+  "holdout_runs_per_host": 1,
+  "holdout_releases_gate": false,
+  "policy_sha256": "e7e6e7ad9fc5c29614aa01a8e9fb8865c1a4aa3f8f876c1ee2929a7589ba4947",
+  "frozen_engine_sha256": "c2056f98d4896a6325350672dc34b5bde9c6c589f63e0519aa4b4ee599246807",
+  "c_minimum_calls": 582,
+  "no_d_or_f": true,
+  "no_retry_of_development_evd07": true
+}
