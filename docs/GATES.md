@@ -1,4 +1,18 @@
-# Review improvement gate — 2026-10-17
+# rc.8 release evaluation — 2026-10-18
+
+The user approved one further source revision and final evaluation under the
+[dated release-policy override](rc8-release-policy-2026-10-17.md). Claude's nine-case quick
+check is complete (7 PASS / 2 existing-type FAIL). Final C evaluation stopped on missing subject
+model metadata: ChatGPT 15 valid PASS; Claude 7 valid PASS / 1 FAIL / 1 quarantined metadata ERROR.
+[Current release progress](rc8-release-progress-2026-10-17.md) records the candidate and results.
+Acceptance requires each host's failures not to exceed its own rc.7 C baseline (ChatGPT 0,
+Claude 11), with no new failure type and no ERROR/missing verdict. No readiness claim is made
+while evaluation is incomplete (236 unstarted; the quarantined automatic PASS is not a valid verdict).
+No further model call or rc.8 packaging followed the error. D/F, browser validation, main merge, push, tag and upload remain
+excluded. VERSION/README remain rc.7 until acceptance. The records below retain their original
+scope and are superseded for this release decision only by the dated override.
+
+# Historical review improvement gate — 2026-10-17
 
 **G2 DIAGNOSTIC_ONLY: approved unstarted cases exhausted; NOT_RELEASE_READY.**
 Valid verdicts 35/36, missing 0: ChatGPT 18 PASS; Claude 11 PASS / 6 FAIL / 1 quarantined ERROR.

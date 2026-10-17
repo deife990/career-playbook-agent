@@ -1,6 +1,17 @@
-# Review improvement progress — 2026-10-17
+# Review improvement progress — 2026-10-18
 
-## Current — G2 approved development diagnostic: no unstarted case remains
+## Current — approved rc.8 release evaluation
+
+The [2026-10-17 release override](rc8-release-policy-2026-10-17.md) supersedes the earlier held
+scope and zero-failure release gate. One approved source revision is complete; Claude's nine-case
+quick check yielded 7 PASS / 2 existing-type FAIL. Final C evaluation stopped on unavailable
+Claude subject model metadata under the approved unresolved-error condition. ChatGPT has 15 valid
+PASS; Claude has 7 valid PASS / 1 FAIL / 1 quarantined automatic PASS; 236 verdicts are unstarted.
+Frozen packages and the 260-verdict C protocol remain unchanged. See [current release progress](rc8-release-progress-2026-10-17.md).
+Incomplete evidence is not release acceptance. D/F, browser, main merge, push, tag and release
+upload remain excluded; old diagnostic ERRORs and automatic FAILs remain preserved.
+
+## Historical — G2 approved development diagnostic: no unstarted case remains
 
 The approved n=1 development diagnostic has 35/36 valid verdicts: ChatGPT 18 PASS;
 Claude 11 PASS / 6 FAIL / 1 quarantined model-metadata ERROR. Missing = 0.
