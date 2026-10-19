@@ -1,6 +1,9 @@
 # Changelog
 
-## 1.2.0-rc.7 — Unreleased
+## 1.2.0-rc.7 — 2026-10-19
+
+- Public release candidate. Repeated cross-judged evaluation (48 scenarios, 130 verdicts per platform; 2026-10-16): ChatGPT 130/130, Claude 119/130. Known Claude issues are listed in the README. Installed runtime is byte-identical to the evaluated packages (ChatGPT `93ebecbd…`, Claude `ac4ef67b…`).
+- A later rc.8 attempt was not released: compressing the entry guards regressed Claude. See the `rc8-attempt` branch.
 
 - Retain each distinct safe date/title/source-scope reference in sanitized candidates and merged-episode proposals; counts alone cannot replace provenance. Deduplicate true repeats without multiplying achievements.
 - Preserve rc.6 actual failures and provider-limit checkpoints before repairs; new package-bound complete verification remains required.

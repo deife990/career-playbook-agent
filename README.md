@@ -4,14 +4,13 @@
 
 전자책 **AI-Powered Job Search Playbook**을 실제 대화로 실행하는 도구입니다. ChatGPT 또는 Claude에 설치한 뒤 원하는 일을 한국어로 말하면 됩니다. 전자책을 읽지 않았거나 이력서가 없어도 시작할 수 있습니다. 모든 직종을 대상으로 하며, 외국계·글로벌 기업 지원과 영어 면접도 준비합니다.
 
-> 개발 버전: **1.2.0-rc.7 — Career Evidence Discovery & Copilot Bridge**
+> 현재 버전: **1.2.0-rc.7 — Career Evidence Discovery & Copilot Bridge** · 출시: **2026-10-19**
 >
 > 기존 경력 자료를 먼저 확인하고, 공고에 필요한 경험이 부족한 부분만 회사 Copilot 또는
 > 안전한 메모·질문으로 더 찾습니다. 직접 수행한 일을 확인한 뒤 이력서·스토리에 재사용합니다.
-> v1.1 기준본은 자동 테스트 144개와 모델 검증 각 33개를 통과했습니다. v1.2는 자동 테스트
-> 189개 통과, ChatGPT 48/48·Claude 48/48 통과했고, 브라우저 검증을 제외한 범위의
-> 배포 준비 검사도 통과했습니다(2026-10-14 기준). 브라우저 검증은 사용자 요청으로 제외했습니다.
-> 아래 공개 다운로드는 이전 v1.0 검증 버전이며, v1.2는 로컬/CI 빌드 후보입니다.
+> 시나리오 48개를 반복·교차 채점한 평가(플랫폼당 130회)에서 ChatGPT 130/130, Claude 119/130을
+> 기록했습니다. Claude에서 남은 문제는 [알려진 문제](#알려진-문제)에 공개했습니다.
+> 이번 버전은 실제 웹 설치 환경의 전체 과정 시험을 하지 않았습니다.
 
 [v1.2 설치 파일·배포 준비 안내](docs/v1-2-release-preparation.md)
 
@@ -35,10 +34,10 @@
 
 | 사용할 서비스 | 다운로드 | 설치 위치 |
 |---|---|---|
-| ChatGPT | [ChatGPT 설치 ZIP](https://github.com/deife990/career-playbook-agent/releases/download/v1.0.0-rc.7/careerpilot-chatgpt-v1.0.0-rc.7.zip) | 플러그인 → 개인용 → 추가 → 플러그인 압축 파일 업로드 |
-| Claude | [Claude 설치 ZIP](https://github.com/deife990/career-playbook-agent/releases/download/v1.0.0-rc.7/careerpilot-claude-v1.0.0-rc.7.zip) | 사용자 지정(Customize) → 스킬(Skills) → 스킬 업로드 |
+| ChatGPT | [ChatGPT 설치 ZIP](https://github.com/deife990/career-playbook-agent/releases/download/v1.2.0-rc.7/careerpilot-chatgpt-v1.2.0-rc.7.zip) | 플러그인 → 개인용 → 추가 → 플러그인 압축 파일 업로드 |
+| Claude | [Claude 설치 ZIP](https://github.com/deife990/career-playbook-agent/releases/download/v1.2.0-rc.7/careerpilot-claude-v1.2.0-rc.7.zip) | 사용자 지정(Customize) → 스킬(Skills) → 스킬 업로드 |
 
-[rc.7 다운로드 페이지](https://github.com/deife990/career-playbook-agent/releases/tag/v1.0.0-rc.7)에서 **Assets**를 펼쳐도 같은 파일을 받을 수 있습니다. `Source code (zip)`·`Source code (tar.gz)`는 개발용 소스이며 설치 파일이 아닙니다. 받은 설치 ZIP은 압축을 풀지 말고 그대로 업로드하세요.
+[rc.7 다운로드 페이지](https://github.com/deife990/career-playbook-agent/releases/tag/v1.2.0-rc.7)에서 **Assets**를 펼쳐도 같은 파일을 받을 수 있습니다. `Source code (zip)`·`Source code (tar.gz)`는 개발용 소스이며 설치 파일이 아닙니다. 받은 설치 ZIP은 압축을 풀지 말고 그대로 업로드하세요.
 
 CareerPilot 전용 계정, API key, 서버, Python 설치는 필요하지 않습니다. ChatGPT 또는 Claude의 기존 계정과 해당 기능을 사용할 수 있는 환경이 필요하며, 서비스 자체의 요금·사용량 제한은 적용됩니다. 설치 메뉴와 표시 이름은 계정·언어·조직 설정에 따라 다를 수 있습니다.
 
@@ -47,7 +46,7 @@ CareerPilot 전용 계정, API key, 서버, Python 설치는 필요하지 않습
 1. [ChatGPT](https://chatgpt.com)에 로그인합니다. 처음 설치할 때는 웹에서 진행하는 것을 권장합니다.
 2. 왼쪽의 **플러그인(Plugins)**을 열고 **개인용(Personal)**을 선택합니다.
 3. **추가(Add) → 플러그인 압축 파일 업로드**를 선택합니다.
-4. 다운로드한 **`careerpilot-chatgpt-v1.0.0-rc.7.zip`**을 업로드합니다.
+4. 다운로드한 **`careerpilot-chatgpt-v1.2.0-rc.7.zip`**을 업로드합니다.
 5. CareerPilot 상세 화면이 열리면 설치·활성화를 완료합니다. 이 버전에는 **12개 Skill**이 포함됩니다. 각각 따로 설치할 필요는 없습니다.
 6. **채팅에서 사용해 보기**를 누르거나 새 채팅을 엽니다. 입력창에서 `@`를 입력해 CareerPilot 또는 해당 Skill을 선택합니다.
 7. 아래 문장을 보냅니다.
@@ -60,7 +59,7 @@ CareerPilot으로 이직 준비 시작하고 싶어. 한국어로 진행해줘.
 
 기존 CareerPilot이 있다면 해당 플러그인의 **추가 작업 → 새 버전 업로드**에서 rc.7 ZIP을 올리고 새 채팅을 시작하세요. 이미 설치된 항목에 업데이트를 적용하면 됩니다.
 
-**메뉴가 없거나 “플러그인을 추가하지 못했습니다”가 나오면:** 파일명이 `careerpilot-chatgpt-v1.0.0-rc.7.zip`인지, GitHub 소스 ZIP이나 Claude ZIP을 선택하지 않았는지 먼저 확인하세요. 다시 받은 원본 ZIP을 사용하고 [설치 문제 해결](docs/troubleshooting.md)을 확인하세요. 회사 계정은 개인용 플러그인 사용이 제한될 수 있습니다.
+**메뉴가 없거나 “플러그인을 추가하지 못했습니다”가 나오면:** 파일명이 `careerpilot-chatgpt-v1.2.0-rc.7.zip`인지, GitHub 소스 ZIP이나 Claude ZIP을 선택하지 않았는지 먼저 확인하세요. 다시 받은 원본 ZIP을 사용하고 [설치 문제 해결](docs/troubleshooting.md)을 확인하세요. 회사 계정은 개인용 플러그인 사용이 제한될 수 있습니다.
 
 [ChatGPT 상세 설치 안내](docs/install-chatgpt.md) · [공식 플러그인 안내](https://learn.chatgpt.com/docs/plugins)
 
@@ -71,7 +70,7 @@ CareerPilot으로 이직 준비 시작하고 싶어. 한국어로 진행해줘.
 1. [Claude](https://claude.ai)에 로그인합니다.
 2. **사용자 지정(Customize) → 스킬(Skills)**로 이동합니다.
 3. **스킬 추가 → 스킬 업로드**를 선택합니다. 화면에 따라 **`+` → Create skill → Upload a skill**로 표시됩니다.
-4. **`careerpilot-claude-v1.0.0-rc.7.zip`**을 업로드하고 CareerPilot의 스위치를 켭니다. **하나의 Skill**로 전체 기능을 사용합니다.
+4. **`careerpilot-claude-v1.2.0-rc.7.zip`**을 업로드하고 CareerPilot의 스위치를 켭니다. **하나의 Skill**로 전체 기능을 사용합니다.
 5. 새 대화에서 아래 문장을 보냅니다.
 
 ```text
@@ -158,6 +157,32 @@ Mail·Drive 같은 외부 자료 연결은 필수가 아닙니다. 사용 환경
 **새 버전을 설치하면 내 경력도 자동으로 옮겨지나요?** 설치 파일은 도구이고, 경력 정보는 별도입니다. 업데이트 전에 정보를 내보내고 새 채팅에서 복원하는 것을 권장합니다.
 
 [문제 해결 전체 안내](docs/troubleshooting.md) · [한 페이지 빠른 시작](docs/quick-start.md)
+
+## 현재 버전의 검증 범위 (1.2.0-rc.7)
+
+| 검사 | 결과 |
+|---|---|
+| 개발 테스트 | 189개 통과 |
+| 실제 모델 평가 — ChatGPT | 130/130 통과 |
+| 실제 모델 평가 — Claude | 119/130 통과 (실패 11) |
+
+- 시나리오 48개를 썼습니다. 안전 핵심 41개는 3회씩 돌리고 다른 플랫폼 모델이 채점했으며(ChatGPT 응답은 Claude가, Claude 응답은 ChatGPT가), 일반 7개는 1회씩 같은 플랫폼이 채점했습니다. 평가 모델은 gpt-5.6-sol과 claude-sonnet-4-6입니다(2026-10-16).
+- 채점 모델이 서로 달라 두 플랫폼의 통과율을 서로 비교하지 않습니다.
+- 평가에서는 참조 파일을 미리 넣어 주었습니다. 실제 설치 환경에서 모델이 필요한 파일을 스스로 찾아 읽는지는 확인하지 않았습니다.
+- 실제 웹 설치와 전체 이직 과정 시험은 1.0 버전에서 했고, 이번 버전에서는 하지 않았습니다.
+- 이전에 안내한 "48/48 통과"는 시나리오당 1회, 같은 플랫폼 채점 기준이었습니다. 위 결과가 더 엄격한 기준입니다.
+
+[평가 상세](docs/v1-2-rc7-verification.md)
+
+## 알려진 문제
+
+반복 평가에서 Claude에 다음 문제가 나타났습니다. 같은 평가에서 ChatGPT의 실패는 없었습니다.
+
+- **근거 없는 표현 추가 (6건)**: 확인된 행동에 "체계적", "데이터 기반" 같은 질·방법 수식어나 확인되지 않은 행위·성과를 붙였습니다. 주로 포지셔닝과 이력서 문구에서 나타났습니다.
+- **말하지 않은 값의 확정 (2건)**: 사용자가 알려 주지 않은 면접 라운드를 "확인됨"으로 표시하거나, 조사하지 않은 채용 시장 정보를 사실처럼 썼습니다.
+- **절차 누락 (3건)**: 질문을 그만해 달라는 요청 뒤에 다시 질문하거나, 연봉 입력칸에서 넣을 금액을 직접 묻지 않거나, 검토 등급에 허용된 값 대신 Unknown을 썼습니다.
+
+Claude로 이력서·지원서·포지셔닝 문구를 만들 때는 각 문장이 실제로 한 일과 맞는지 직접 확인한 뒤 사용하세요. 확인되지 않은 표현은 빼거나, CareerPilot이 남긴 확인 질문에 답해 주세요.
 
 ## 이전 V1 버전의 검증 범위 (rc.7)
 
