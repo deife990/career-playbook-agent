@@ -75,6 +75,12 @@ def diff_lines(root=ROOT):
 
 
 def example_check(root=ROOT):
+    classification = (root/'core/principles/evidence-policy.md').read_text().split('## Classification\n')[1].split('\n## ')[0]
+    if EXAMPLE_ROLE not in classification:
+        # rc8-rev1 (2026-10-19) restored the rc.7 entry wording verbatim after the E compression
+        # regressed Claude; the isolated E representative example is therefore no longer used.
+        # The holdout-term scan of every added line (audit) remains in force.
+        return {'retired': 'rc8-rev1 restored rc.7 entry wording; isolated E example not used'}
     paths = list((root/'evals/scenarios').glob('*.yaml')) + list((root/'evals/variants/e-stage').rglob('*.yaml'))
     collisions = [p.relative_to(root).as_posix() for p in paths
                   if contains(p.read_text(), EXAMPLE_ROLE) or

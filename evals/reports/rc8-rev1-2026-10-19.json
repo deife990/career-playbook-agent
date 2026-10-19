@@ -1,0 +1,36 @@
+{
+ "candidate": "rc8-rev1",
+ "created": "2026-10-19",
+ "author": "Claude Opus 5.5 (work agent), approved by user 2026-10-19",
+ "why": {
+  "finding": "Claude bare-action-resume: rc.7 package 2/2 PASS vs rc.8 candidate 0/3 FAIL under identical pinned CLI setting (claude-sonnet-4-6, thinkingTokens 0; judge gpt-5.6-sol, effort none). Failures reproduce exactly the rc.7 entry guards that E-stage compression moved to Examples (\"12 operational tests\", \"defects identified during testing\").",
+  "evidence": [
+   "work/review-v2/rc8-release-2026-10-17/diag-rc7-bare-action/claude.json",
+   "work/review-v2/rc8-release-2026-10-17/final-valid/claude.json"
+  ],
+  "confound_note": "Forced \"deliver a usable action-only sentence now\" clause (a289342) may also contribute; removed as well. Cause attribution between the two is not separated."
+ },
+ "changes": {
+  "restored": "core/principles/entry-guards.md and evidence-policy.md = rc.7 (0f45d34) verbatim plus additive sentences: interpretation-cannot-add principle; debrief unprovided-field/speaker lines; INFERENCE/field Unknown sentence; one tightened qualitative-result sentence.",
+  "removed": "\"When at least one own action is confirmed, deliver a usable action-only sentence now. Missing outcomes or metadata must not postpone that supported sentence.\" from four artifact copy-check contracts.",
+  "kept": "All C-type contract additions (stop-request termination, reviewer grade enum, numeric salary field decision incl. final choice question, debrief field provenance) and the rest of the copy-check contract.",
+  "tests": "Budget caps raised by 1,020 bytes per entry with recorded reason; E-only representative-example check retired; E rule-migration ledger test replaced by an rc.7-line-preservation test. 226 tests PASS, static evals PASS, holdout-term added-line scan PASS (0 findings) — run in a VM temp copy because the connected folder disallows deletes."
+ },
+ "scenario_overlap_caveat": "Restored rc.7 guards name facts that also appear in C scenarios (12 tests, operations analysis). C-suite passes on those scenarios are weak evidence of generalisation; the different-occupation holdout carries that weight.",
+ "packages": {
+  "chatgpt": "d82f19f001c0147cbb387ee726f606adc7896da0edfd07ba8653a6abdeb20db0",
+  "claude": "ba1cea7288943f9d441700551bb2f06ac84ece3b7b70def86f01a6cc9ec86c10"
+ },
+ "source_sha256": {
+  "core/principles/entry-guards.md": "a861377a62091a5d650e62499b93686b455205a3f7e0433ef7ed5cea65e5f839",
+  "core/principles/evidence-policy.md": "2c08cc8f26d2a5517a3897bf8302dd42399d8286978d0698f61cdac736801ba6",
+  "core/artifacts/application-pack.md": "d088605f3ed682facdfd0643bf0aebae72deccf9fb24b9708444e4357ea21772",
+  "core/artifacts/candidate-strategy.md": "1faeea57c4e4d074a9cdcfeac9e4a6b9efbcd346e89838119c83b80ac4942577",
+  "core/artifacts/interview-debrief.md": "0236601829b798372362c0dc305f0c982c88b95e0cc889383df8e7f72dc29ede",
+  "core/artifacts/opportunity-screen.md": "69397f882302d55d53e5cf34d227b7a875f2ba5a4f2ee679a56385798af4014e",
+  "evals/package-budgets.json": "f752874b2bfc3d8daa88b44f6a5007364084aef19c497ba224a4f5a328515203",
+  "scripts/check_e_leakage.py": "e373db1dd27fe6b5f5e8974cc57628b87444bbc4cd5cee88ae3c2da250e906de",
+  "tests/test_variant_evals.py": "9a6642ba8f63cee8516ae828c483592b7339409790445b16d97a37e547fca200"
+ },
+ "stray_moved": "adapters/chatgpt/skills/career-strategy 2 (generator \"stale generated duplicate\" marker) moved to work/_to_delete/."
+}

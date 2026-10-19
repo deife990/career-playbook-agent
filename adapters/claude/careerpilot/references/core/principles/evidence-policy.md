@@ -2,18 +2,23 @@
 ## Classification
 USER FACT: supplied/confirmed by the user; not independently verified unless sources establish it.
 Self-confirmation stays USER FACT with user_confirmed=true. Never label it VERIFIED BY USER,
-Verified Experience, or VERIFIED FACT. Strong Evidence describes relevance, not verification.
+Verified Experience, or VERIFIED FACT. Example: “I personally tested 12 cases” → USER FACT,
+even after the user repeats or confirms it. Strong Evidence describes relevance, not verification.
 VERIFIED FACT: accessible sources directly support this exact claim, subject, date and scope.
 INFERENCE: a reasoned hypothesis with evidence, alternatives and confidence; never a fact.
 RECOMMENDATION: an action proposal with rationale and constraints; never a forecast or guarantee.
 Unknown is a lack of information, not an assertion; preserve null, ask targeted verification.
-Facts, summaries and positioning must preserve supported actor/action/period/scope/quality/method/
-result. Add none, including market facts, beyond user/accessed evidence. INFERENCE interprets a
-supported premise; it cannot invent one. Tentative labels permit no unsupported CareerEvidence
-or factual resume/story claims. Repeating an assistant draft is not user confirmation.
-Example: “As a postal sorting aide I sorted 67 envelopes” stays that action and count (USER FACT
-even after reconfirmation); it does not establish routing improvements or a meticulous method.
-An unprovided field stays Unknown/null or is asked once, never marked confirmed by default.
+Preserve the exact factual scope even in summaries and positioning. “Performed 12 tests and
+reported defects” does not establish clear/structured reporting, analytical skill, learning,
+collaboration or improvement. Omit unsupported quality/skill/impact claims or explicitly label
+role interpretations INFERENCE; never persist them as CareerEvidence or factual resume/story text.
+Do not add a new action when paraphrasing: “reported defects” does not establish documentation,
+a written defect report, a reporting tool or a process. Preserve “reported defects” until the user
+confirms the method. Repetition of an assistant draft is not a user confirmation.
+INFERENCE interprets a supported premise; it cannot invent one. Facts, summaries and positioning
+add no actor, action, period, scope, quality, method, purpose, result or market fact beyond
+user/accessed evidence. An unprovided field stays Unknown/null or is asked once, never marked
+confirmed by default.
 
 ## Career evidence
 Capture own role, generalized context, actions, outcome, scale, skills, source IDs, user confirmation.
@@ -52,22 +57,3 @@ Factual draft sentences must be supported too. Do not infer exhaustive scope, pr
 handover efficiency, independent decisions or causal impact from merely checking/documenting.
 When outcome unknown, retain the observed action only. “Confirm this draft” is not permission to
 add plausible experience. Illustrative future actions stay explicitly conditional recommendations.
-
-## Examples and boundary checks
-Applications of the scope rule, not exceptions:
-- Personal testing of 12 cases stays USER FACT after reconfirmation, not VERIFIED FACT.
-- Testing/reporting defects proves no clear/structured reporting, analytical skill, learning,
-  collaboration, improvement or accuracy/quality review. “Adjacent” phrasing adds no premise.
-  Reporting proves no personal discovery, documentation/written report, tool, structured process
-  or relation to those tests. Keep only the supplied action.
-- Three years of operations analysis plus twelve tests does not establish operations-analysis tests.
-- SQL-only JD: one requirement row; testing/reporting/operations go in candidate inventory.
-  Original MUST conditions retain their audit; unknown employer compliance stays Unknown.
-- Missing collaboration examples: “협업 사례 미확인”, not confirmed absence. Unknown required SQL:
-  “SQL 경험 미확인; 확인 필요”, never “SQL 없음”/“필수 요건 미충족”/“SQL Gap”, even in Red Team or
-  Ready:false. No Gap pending proof of absence.
-- Reviewing others' SQL results: Partial exposure to SQL validation; purpose/authoring/ownership
-  unresolved, not Direct Match. Unconfirmed Selenium: Unknown. Match/reviewer/QA labels differ.
-- Resume: “reviewed results of existing SQL queries”; unperformed work belongs in gap notes/
-  interview prep unless needed to prevent misreading.
-- Redacted support: Unknown result, no replacement “operational readiness” or identifier echo.

@@ -1,0 +1,9 @@
+#!/bin/bash
+# rc.8 final C: reproduce the rc.7-baseline Claude setting on the newer CLI.
+# New CLI defaults to claude-sonnet-5, adds a claude-haiku-4-5 auxiliary call and enables
+# extended thinking; the rc.7 baseline used claude-sonnet-4-6 only, with no thinking tokens.
+SELF_DIR="$(cd "$(dirname "$0")" && pwd)"
+REAL="$(PATH="$(printf '%s' "$PATH" | tr ':' '\n' | grep -vxF "$SELF_DIR" | paste -sd: -)" command -v claude)"
+[ -n "$REAL" ] || { echo "pin-bin: real claude not found" >&2; exit 127; }
+export ANTHROPIC_DEFAULT_HAIKU_MODEL=claude-sonnet-4-6 ANTHROPIC_SMALL_FAST_MODEL=claude-sonnet-4-6 MAX_THINKING_TOKENS=0
+exec "$REAL" --model claude-sonnet-4-6 --settings '{"alwaysThinkingEnabled":false}' "$@"

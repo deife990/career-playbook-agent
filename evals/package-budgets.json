@@ -7,7 +7,7 @@
       "file_count": 111,
       "entries": {
         "skills/application-prep/SKILL.md": {
-          "bytes": 39783,
+          "bytes": 40803,
           "files": [
             "references/core/principles/evidence-policy.md",
             "references/core/principles/index.md",
@@ -22,7 +22,7 @@
           ]
         },
         "skills/career-setup/SKILL.md": {
-          "bytes": 39659,
+          "bytes": 40679,
           "files": [
             "references/core/principles/evidence-policy.md",
             "references/core/principles/index.md",
@@ -37,7 +37,7 @@
           ]
         },
         "skills/career-state/SKILL.md": {
-          "bytes": 39672,
+          "bytes": 40692,
           "files": [
             "references/core/principles/evidence-policy.md",
             "references/core/principles/index.md",
@@ -52,7 +52,7 @@
           ]
         },
         "skills/career-strategy/SKILL.md": {
-          "bytes": 39610,
+          "bytes": 40630,
           "files": [
             "references/core/principles/evidence-policy.md",
             "references/core/principles/index.md",
@@ -67,7 +67,7 @@
           ]
         },
         "skills/careerpilot-router/SKILL.md": {
-          "bytes": 40330,
+          "bytes": 41350,
           "files": [
             "references/core/principles/evidence-policy.md",
             "references/core/principles/index.md",
@@ -82,7 +82,7 @@
           ]
         },
         "skills/experience-mining/SKILL.md": {
-          "bytes": 39937,
+          "bytes": 40957,
           "files": [
             "references/core/principles/evidence-policy.md",
             "references/core/principles/index.md",
@@ -97,7 +97,7 @@
           ]
         },
         "skills/interview-debrief/SKILL.md": {
-          "bytes": 39698,
+          "bytes": 40718,
           "files": [
             "references/core/principles/evidence-policy.md",
             "references/core/principles/index.md",
@@ -112,7 +112,7 @@
           ]
         },
         "skills/interview-prep/SKILL.md": {
-          "bytes": 39645,
+          "bytes": 40665,
           "files": [
             "references/core/principles/evidence-policy.md",
             "references/core/principles/index.md",
@@ -127,7 +127,7 @@
           ]
         },
         "skills/job-intelligence/SKILL.md": {
-          "bytes": 39707,
+          "bytes": 40727,
           "files": [
             "references/core/principles/evidence-policy.md",
             "references/core/principles/index.md",
@@ -142,7 +142,7 @@
           ]
         },
         "skills/mock-interview/SKILL.md": {
-          "bytes": 39711,
+          "bytes": 40731,
           "files": [
             "references/core/principles/evidence-policy.md",
             "references/core/principles/index.md",
@@ -157,7 +157,7 @@
           ]
         },
         "skills/offer-decision/SKILL.md": {
-          "bytes": 39689,
+          "bytes": 40709,
           "files": [
             "references/core/principles/evidence-policy.md",
             "references/core/principles/index.md",
@@ -172,7 +172,7 @@
           ]
         },
         "skills/opportunity-discovery/SKILL.md": {
-          "bytes": 39636,
+          "bytes": 40656,
           "files": [
             "references/core/principles/evidence-policy.md",
             "references/core/principles/index.md",
@@ -192,7 +192,7 @@
       "file_count": 139,
       "entries": {
         "SKILL.md": {
-          "bytes": 39333,
+          "bytes": 40353,
           "files": [
             "SKILL.md",
             "references/core/principles/evidence-policy.md",
@@ -208,5 +208,66 @@
         }
       }
     }
-  }
+  },
+  "revisions": [
+    {
+      "date": "2026-10-19",
+      "candidate": "rc8-rev1",
+      "reason": "Reviewed increase. rc.8 E-stage compression removed specific rc.7 entry guards and the Claude subject regressed on bare-action-resume (rc.7 2/2 PASS vs rc.8 0/3 under the same pinned CLI setting). rc8-rev1 restores the rc.7 entry wording verbatim and keeps only additive sentences. File counts and initial-read paths are unchanged.",
+      "bytes_before_after": {
+        "chatgpt/skills/application-prep/SKILL.md": [
+          39783,
+          40803
+        ],
+        "chatgpt/skills/career-setup/SKILL.md": [
+          39659,
+          40679
+        ],
+        "chatgpt/skills/career-state/SKILL.md": [
+          39672,
+          40692
+        ],
+        "chatgpt/skills/career-strategy/SKILL.md": [
+          39610,
+          40630
+        ],
+        "chatgpt/skills/careerpilot-router/SKILL.md": [
+          40330,
+          41350
+        ],
+        "chatgpt/skills/experience-mining/SKILL.md": [
+          39937,
+          40957
+        ],
+        "chatgpt/skills/interview-debrief/SKILL.md": [
+          39698,
+          40718
+        ],
+        "chatgpt/skills/interview-prep/SKILL.md": [
+          39645,
+          40665
+        ],
+        "chatgpt/skills/job-intelligence/SKILL.md": [
+          39707,
+          40727
+        ],
+        "chatgpt/skills/mock-interview/SKILL.md": [
+          39711,
+          40731
+        ],
+        "chatgpt/skills/offer-decision/SKILL.md": [
+          39689,
+          40709
+        ],
+        "chatgpt/skills/opportunity-discovery/SKILL.md": [
+          39636,
+          40656
+        ],
+        "claude/SKILL.md": [
+          39333,
+          40353
+        ]
+      }
+    }
+  ]
 }

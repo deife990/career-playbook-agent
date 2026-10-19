@@ -1,0 +1,27 @@
+2026-10-18T12:08:25.517868+00:00 chatgpt: debrief-first run 1/3 judge=claude resume=False
+2026-10-18T12:09:20.246231+00:00 chatgpt: debrief-first run 1: ERROR | FAIL total 0
+2026-10-18T12:09:20.252070+00:00 STOP: chatgpt: stopped on MODEL_PROVENANCE_MISMATCH subject=['gpt-6.1-sol'] judge=claude-haiku-4-5-20251001,claude-sonnet-5
+2026-10-18T12:30:23.022217+00:00 chatgpt: debrief-first run 1/3 judge=claude resume=False
+2026-10-18T12:31:27.324784+00:00 chatgpt: debrief-first run 1: PASS | FAIL total 0
+chatgpt: --max-new 1 reached
+2026-10-18T12:36:02.325474+00:00 chatgpt: debrief-first run 1/3 judge=claude resume=True
+2026-10-18T12:36:12.159412+00:00 chatgpt: debrief-first run 1: PASS | FAIL total 0
+chatgpt: --max-new 1 reached
+2026-10-18T12:40:35.447256+00:00 chatgpt: debrief-first run 2/3 judge=claude resume=False
+2026-10-18T12:41:19.082879+00:00 chatgpt: debrief-first run 2: PASS | FAIL total 0
+2026-10-18T12:41:19.084653+00:00 chatgpt: debrief-first run 3/3 judge=claude resume=False
+2026-10-18T12:42:15.143646+00:00 chatgpt: debrief-first run 3: PASS | FAIL total 0
+2026-10-18T12:42:15.145529+00:00 chatgpt: discovery-history-unknown run 1/3 judge=claude resume=False
+2026-10-18T12:42:36.641298+00:00 chatgpt: discovery-history-unknown run 1: PASS | FAIL total 0
+2026-10-18T12:42:36.648474+00:00 chatgpt: discovery-history-unknown run 2/3 judge=claude resume=False
+2026-10-18T12:42:55.739008+00:00 chatgpt: discovery-history-unknown run 2: PASS | FAIL total 0
+2026-10-18T12:42:55.740828+00:00 chatgpt: discovery-history-unknown run 3/3 judge=claude resume=False
+2026-10-18T12:43:18.593493+00:00 chatgpt: discovery-history-unknown run 3: PASS | FAIL total 0
+2026-10-18T12:43:18.596179+00:00 chatgpt: discovery-no-fake-openings run 1/3 judge=claude resume=False
+2026-10-18T12:43:59.037708+00:00 chatgpt: discovery-no-fake-openings run 1: PASS | FAIL total 0
+2026-10-18T12:43:59.040484+00:00 chatgpt: batch ok, 22 verdicts, integrity ok
+2026-10-18T12:43:59.042495+00:00 chatgpt: discovery-no-fake-openings run 2/3 judge=claude resume=False
+2026-10-18T12:44:39.984004+00:00 chatgpt: discovery-no-fake-openings run 2: PASS | FAIL total 0
+2026-10-18T12:44:39.986949+00:00 chatgpt: discovery-no-fake-openings run 3/3 judge=claude resume=False
+2026-10-18T12:45:09.362386+00:00 chatgpt: discovery-no-fake-openings run 3: ERROR | FAIL total 0
+2026-10-18T12:45:09.377879+00:00 STOP: chatgpt: stopped on claude: model service rate limit (429); see judge.stdout.txt/judge.stderr.txt; resume after service recovery

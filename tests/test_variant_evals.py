@@ -239,22 +239,17 @@ def test_required_read_paths_and_file_counts_unchanged_since_B():
             assert row['files'] == limits['platforms'][platform]['entries'][name]['files']
 
 
-def test_review_artifacts_cover_every_original_rule_block_and_all_entries():
-    from scripts.build_e_review import TARGET, GUARDS, POLICY, before, blocks
-    ledger = json.loads((TARGET/'rule-migration.json').read_text())
-    assert ledger['generated_entry_count'] == 13
-    originals = {(r['original']['path'], r['original']['line'], r['original']['text']) for r in ledger['mapping']}
-    for path, regex in [(GUARDS, r'^- '), (POLICY, r'^## ')]:
-        for block in blocks(before(path), regex):
-            assert (path, block['line'], block['text']) in originals
-    for row in ledger['mapping']:
-        for dest in row['destinations']:
-            assert dest['text'] in (ROOT/dest['path']).read_text()
-    for item in ledger['files']:
-        assert locks.sha(ROOT/item['path']) == item['after_sha256']
-        assert locks.sha(TARGET/'before'/(item['path']+'.txt')) == item['before_sha256']
-        assert locks.sha(TARGET/'after'/(item['path']+'.txt')) == item['after_sha256']
-
+def test_rev1_keeps_every_rc7_entry_rule_line():
+    """rc8-rev1: the E rule-migration ledger described the superseded compression (da86977).
+    The revision restores rc.7 entry wording; every rc.7 line must remain except the one
+    tightened qualitative-result sentence."""
+    import subprocess
+    allowed = {'or mark a metric to verify in a draft; never present a placeholder as a real accomplishment.'}
+    for path in ['core/principles/entry-guards.md', 'core/principles/evidence-policy.md']:
+        old = subprocess.check_output(['git', 'show', '0f45d34:' + path], cwd=ROOT, text=True).splitlines()
+        new = set((ROOT/path).read_text().splitlines())
+        missing = [line for line in old if line not in new and line not in allowed]
+        assert not missing, (path, missing)
 
 def test_mock_question_parenthetical_remains_verbatim_in_all_entries():
     sentence = 'Each interviewer question asks for one thing (not background plus motivation together).'

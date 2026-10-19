@@ -1,0 +1,313 @@
+{
+ "stage": "rc8-final-resume-audit",
+ "auditor": "Claude Opus 5.5 (work agent; not an evaluation subject or judge)",
+ "created_at": "2026-10-18T12:03:03.241048+00:00",
+ "model_calls": 0,
+ "recomputed_package_fingerprints": {
+  "chatgpt": "ff1fca874ba35211687794eb0fbe97e173b6310de155ad1b88136503107ba571",
+  "claude": "d36f87dfa7ce4882cedb915d967f1923664b065cfdee4203b704bc7fcc7cb249"
+ },
+ "expected_match": true,
+ "frozen_engine_sha256": "c2056f98d4896a6325350672dc34b5bde9c6c589f63e0519aa4b4ee599246807",
+ "no_files_newer_than_handoff_plan": true,
+ "execution_lock": "empty file dated 2026-10-17T07:31Z; no newer run artifacts",
+ "hosts": {
+  "chatgpt": {
+   "report_sha256": "82edfdfae2f94062f564f10864d052451c2f03b43c14e1c61c9d47012805bb74",
+   "package_fingerprint": "ff1fca874ba35211687794eb0fbe97e173b6310de155ad1b88136503107ba571",
+   "suite_fingerprint": "a24b18e47ed0ee3c0ba972cd08ab1265ce7a62d4a1d1b4617c49e2dda732ef3e",
+   "protocol_fingerprint": "4515ea6c278005b2221531e763dedefcd4512df25f19471a30c94982141453c9",
+   "raw_rows": 15,
+   "valid": [
+    {
+     "id": "application-optional-assets",
+     "run": 1,
+     "status": "PASS",
+     "model_ids": [
+      "gpt-5.6-sol"
+     ],
+     "judge_model": "claude-sonnet-4-6"
+    },
+    {
+     "id": "application-optional-assets",
+     "run": 2,
+     "status": "PASS",
+     "model_ids": [
+      "gpt-5.6-sol"
+     ],
+     "judge_model": "claude-sonnet-4-6"
+    },
+    {
+     "id": "application-optional-assets",
+     "run": 3,
+     "status": "PASS",
+     "model_ids": [
+      "gpt-5.6-sol"
+     ],
+     "judge_model": "claude-sonnet-4-6"
+    },
+    {
+     "id": "bare-action-resume",
+     "run": 1,
+     "status": "PASS",
+     "model_ids": [
+      "gpt-5.6-sol"
+     ],
+     "judge_model": "claude-sonnet-4-6"
+    },
+    {
+     "id": "bare-action-resume",
+     "run": 2,
+     "status": "PASS",
+     "model_ids": [
+      "gpt-5.6-sol"
+     ],
+     "judge_model": "claude-sonnet-4-6"
+    },
+    {
+     "id": "bare-action-resume",
+     "run": 3,
+     "status": "PASS",
+     "model_ids": [
+      "gpt-5.6-sol"
+     ],
+     "judge_model": "claude-sonnet-4-6"
+    },
+    {
+     "id": "concise-second-opportunity",
+     "run": 1,
+     "status": "PASS",
+     "model_ids": [
+      "gpt-5.6-sol"
+     ],
+     "judge_model": "claude-sonnet-4-6"
+    },
+    {
+     "id": "concise-second-opportunity",
+     "run": 2,
+     "status": "PASS",
+     "model_ids": [
+      "gpt-5.6-sol"
+     ],
+     "judge_model": "claude-sonnet-4-6"
+    },
+    {
+     "id": "concise-second-opportunity",
+     "run": 3,
+     "status": "PASS",
+     "model_ids": [
+      "gpt-5.6-sol"
+     ],
+     "judge_model": "claude-sonnet-4-6"
+    },
+    {
+     "id": "context-model-roundtrip",
+     "run": 1,
+     "status": "PASS",
+     "model_ids": [
+      "gpt-5.6-sol"
+     ],
+     "judge_model": "claude-sonnet-4-6"
+    },
+    {
+     "id": "context-model-roundtrip",
+     "run": 2,
+     "status": "PASS",
+     "model_ids": [
+      "gpt-5.6-sol"
+     ],
+     "judge_model": "claude-sonnet-4-6"
+    },
+    {
+     "id": "context-model-roundtrip",
+     "run": 3,
+     "status": "PASS",
+     "model_ids": [
+      "gpt-5.6-sol"
+     ],
+     "judge_model": "claude-sonnet-4-6"
+    },
+    {
+     "id": "context-v12-model-roundtrip",
+     "run": 1,
+     "status": "PASS",
+     "model_ids": [
+      "gpt-5.6-sol"
+     ],
+     "judge_model": "claude-sonnet-4-6"
+    },
+    {
+     "id": "context-v12-model-roundtrip",
+     "run": 2,
+     "status": "PASS",
+     "model_ids": [
+      "gpt-5.6-sol"
+     ],
+     "judge_model": "claude-sonnet-4-6"
+    },
+    {
+     "id": "context-v12-model-roundtrip",
+     "run": 3,
+     "status": "PASS",
+     "model_ids": [
+      "gpt-5.6-sol"
+     ],
+     "judge_model": "claude-sonnet-4-6"
+    }
+   ],
+   "quarantined": [],
+   "valid_counts": {
+    "PASS": 15,
+    "FAIL": 0,
+    "ERROR": 0
+   }
+  },
+  "claude": {
+   "report_sha256": "36e0ec2814ad56fc3a2a32ea2fa98386eb2dcce3e496406b24aeb4f37c86dfa0",
+   "package_fingerprint": "d36f87dfa7ce4882cedb915d967f1923664b065cfdee4203b704bc7fcc7cb249",
+   "suite_fingerprint": "a24b18e47ed0ee3c0ba972cd08ab1265ce7a62d4a1d1b4617c49e2dda732ef3e",
+   "protocol_fingerprint": "4515ea6c278005b2221531e763dedefcd4512df25f19471a30c94982141453c9",
+   "raw_rows": 9,
+   "valid": [
+    {
+     "id": "application-optional-assets",
+     "run": 1,
+     "status": "PASS",
+     "model_ids": [
+      "claude-sonnet-4-6"
+     ],
+     "judge_model": "gpt-5.6-sol"
+    },
+    {
+     "id": "application-optional-assets",
+     "run": 2,
+     "status": "PASS",
+     "model_ids": [
+      "claude-sonnet-4-6"
+     ],
+     "judge_model": "gpt-5.6-sol"
+    },
+    {
+     "id": "application-optional-assets",
+     "run": 3,
+     "status": "PASS",
+     "model_ids": [
+      "claude-sonnet-4-6"
+     ],
+     "judge_model": "gpt-5.6-sol"
+    },
+    {
+     "id": "concise-second-opportunity",
+     "run": 1,
+     "status": "PASS",
+     "model_ids": [
+      "claude-sonnet-4-6"
+     ],
+     "judge_model": "gpt-5.6-sol"
+    },
+    {
+     "id": "concise-second-opportunity",
+     "run": 2,
+     "status": "FAIL",
+     "model_ids": [
+      "claude-sonnet-4-6"
+     ],
+     "judge_model": "gpt-5.6-sol"
+    },
+    {
+     "id": "concise-second-opportunity",
+     "run": 3,
+     "status": "PASS",
+     "model_ids": [
+      "claude-sonnet-4-6"
+     ],
+     "judge_model": "gpt-5.6-sol"
+    },
+    {
+     "id": "context-model-roundtrip",
+     "run": 2,
+     "status": "PASS",
+     "model_ids": [
+      "claude-sonnet-4-6"
+     ],
+     "judge_model": "gpt-5.6-sol"
+    },
+    {
+     "id": "context-model-roundtrip",
+     "run": 3,
+     "status": "PASS",
+     "model_ids": [
+      "claude-sonnet-4-6"
+     ],
+     "judge_model": "gpt-5.6-sol"
+    }
+   ],
+   "quarantined": [
+    {
+     "id": "context-model-roundtrip",
+     "run": 1,
+     "raw_status": "PASS",
+     "model_ids": [
+      "CLI default; model ID not exposed"
+     ]
+    }
+   ],
+   "valid_counts": {
+    "PASS": 7,
+    "FAIL": 1,
+    "ERROR": 0
+   }
+  }
+ },
+ "quarantined_slot_evidence": {
+  "path": "work/review-v2/rc8-release-2026-10-17/final/runs/claude/context-model-roundtrip/run-1/attempt-1",
+  "turn1_modelUsage": {},
+  "turn1_tokens_all_zero": true,
+  "duration_api_ms": 537532,
+  "stderr_bytes": 0,
+  "identifier_found": false,
+  "note": "No independent model identifier in any linked log; not inferred from neighbours."
+ },
+ "environment_limit": "Work agent shell is a Linux VM sharing the folder; no codex CLI, macOS .venv not executable, local claude binary is not the evaluation CLI. Model calls must run on the user Mac.",
+ "approvals": {
+  "quarantine_regeneration": "User approved 2026-10-18: one fresh subject + one judge for claude context-model-roundtrip run 1 only.",
+  "execution": "User approved running the remaining final C on their Mac with the runner below."
+ },
+ "runner": {
+  "path": "work/review-v2/rc8-release-2026-10-17/tools/rc8_final_runner.py",
+  "sha256": "434f0795e3082f477159112334850d6ba0eb4934d974288768057022e68e0669",
+  "calls_frozen_engine": "scripts.run_model_evals.run_case (unchanged, sha c2056f98…)",
+  "adds": [
+   "separate final-valid report; original final/ never written",
+   "approved quarantine of one provenance-less raw PASS",
+   "per-verdict observed subject/judge model check, stop on mismatch",
+   "stop on any error/quota/timeout",
+   "stop when ChatGPT FAIL>0 or Claude FAIL>11",
+   "integrity check of pre-existing verdicts every 6 new verdicts",
+   "provenance-mismatch retry requires explicit flag",
+   "--stop-at deadline: no new slot after it; rerun resumes",
+   "interrupted attempt folders without a verdict are kept and skipped (next attempt number), listed on the row"
+  ],
+  "self_test": "VM, fake run_case on a temp copy: quarantine->attempt-2 with original in prior_attempts; original report byte-identical; mismatch stop; guarded retry; fail-limit stop at 12; cross-host stop; full completion 130 rows; rerun after completion makes 0 calls; 122 Claude calls = 121 missing + 1 quarantine. Deadline past/naive rejected; orphan attempt-1 kept, slot ran as attempt-2; both hosts complete with 237 calls total; rerun 0 calls."
+ },
+ "cli_environment_change": {
+  "observed_2026-10-18": "Codex CLI 0.146.0 -> 0.160.1 default model gpt-5.6-sol -> gpt-6.1-sol; Claude CLI default claude-sonnet-4-6 -> claude-sonnet-5 plus claude-haiku-4-5 auxiliary call and extended thinking.",
+  "first_attempts": "chatgpt debrief-first run1 attempt-1 and claude bare-action-resume run1 attempt-1 stopped as MODEL_PROVENANCE_MISMATCH (preserved).",
+  "pinning": {
+   "pin-bin/codex": {
+    "sha256": "8829812770beeb68bcae72dc2e00d40534a9774191d013bfc830f8d450adb311",
+    "adds": "exec -m gpt-5.6-sol"
+   },
+   "pin-bin/claude": {
+    "sha256": "eed663a4c3c5305eb42f3ccf2f53662874d73e1edcab47db06ef8917f06cd1e9",
+    "adds": "--model claude-sonnet-4-6; auxiliary model -> claude-sonnet-4-6; thinking disabled (MAX_THINKING_TOKENS=0, alwaysThinkingEnabled=false)"
+   }
+  },
+  "thinking_evidence": "Same scenario bare-action-resume: rc.7 baseline outputTokens 1474-1853 for 1133-1375 chars with no thinking field; pinned-model attempt-2 had 4093 output tokens incl. 3201 thinking for 1394 chars. Baseline treated as no-thinking.",
+  "reclassified": "Two raw PASS verdicts from attempt-2 (thinking on) reclassified CONFIG_MISMATCH, preserved in prior_attempts, rerun under pinned setting.",
+  "runner_setting_check": "Every verdict now also requires no Claude thinkingTokens and Codex reasoning effort none in its own logs; otherwise CONFIG_MISMATCH stop.",
+  "residual_difference": "CLI versions are newer than the rc.7 baseline run; model and observed setting are pinned. Disclosed as a limitation.",
+  "resume_bug_found": "Second verification resumed claude bare-action-resume run1 from the attempt-2 subject checkpoint (thinking on) and only re-judged (attempt-3). Attempt-3 reclassified CONFIG_MISMATCH; resume now requires turn logs in the source folder with no setting problems; reclassified rows always regenerate. chatgpt debrief-first run1 attempt-3 kept: subject from attempt-2 was gpt-5.6-sol/effort none, judge attempt-3 claude-sonnet-4-6 thinkingTokens 0.",
+  "thinking_disabled_verified": "chatgpt debrief-first attempt-3 judge: claude-sonnet-4-6 outputTokens 448, thinkingTokens 0."
+ }
+}

@@ -31,6 +31,5 @@ estimate, link each factual clause to the exact user-supplied or accessed eviden
 unsupported quality, method, period, purpose or outcome; an inference label does not supply a
 missing premise. Keep interpretation separate from factual copy and preserve Unknowns. Market
 estimates need accessed support for their scope/date; otherwise offer a search hypothesis, not
-a factual estimate. When at least one own action is confirmed, deliver a usable action-only
-sentence now. Missing outcomes or metadata must not postpone that supported sentence. Recheck
-the replacement sentence itself after declining an unsupported request.
+a factual estimate. Recheck the replacement sentence itself after declining an unsupported
+request.
