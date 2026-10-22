@@ -1,0 +1,55 @@
+{
+  "mode": "built-in image_gen",
+  "date": "2026-10-22",
+  "revision": "0.9.2",
+  "purpose": "펍 실내 니트 차림과 어깨 긴장 완화, 한 팔을 몸 옆으로 내리는 기본 자세",
+  "assets": [
+    {
+      "file": "seoan-pub-seated-v092.png",
+      "source": "exec-5bd1c9f2-a357-4fec-a82b-1e52568e58cb.png (original file not included)",
+      "prompt": "Use case: identity-preserve, substantial POSE CORRECTION. Edit image1, the ivory-knit seated pub scene. Image2 is face identity reference ONLY. The adult Korean woman Seoan is31. Her previous pose STILL LOOKS TENSE because BOTH elbows are braced wide on the table and shoulders are shrugged toward her neck. FIX THE UNDERLYING POSTURE, not just clothing or shoulder size. Change her to sitting comfortably BACK against the booth, upright but softly relaxed, chest not leaning forward. The shoulder girdle is dropped and relaxed; trapezius is soft, no raised shoulder mounds beside neck. Upper arms fall nearly vertically DOWN beside the torso, elbows CLOSE to waist and BELOW tabletop height, NOT spread sideways. ONE hand rests loosely near the glass with fingers lightly touching it, wrist free and forearm at a gentle diagonal; the other hand is resting out of sight on her lap. DO NOT put both forearms/elbows across the tabletop. There must be visible relaxed descending lines from neck to shoulder, shoulders well below jaw, comfortable natural neck length (not giraffe neck), no shrugging, no hunch, no slouch. Graceful slender adult proportions and slim arms, no exaggerated chest or anatomy. Preserve the same lightweight ivory fine-rib long-sleeve round-neck knit WITHOUT jacket, exact recognizable face, hair, earrings, soft warm expression looking at viewer, delicate painterly K-webtoon/anime style, warm amber lighting, pub background and wide16:9 framing. Preserve table/glass/phone/coaster location, but allow natural torso and arm repositioning to accomplish visibly different relaxed posture. Natural hand anatomy. No extra people, text or watermark.",
+      "refs": [
+        "exec-02b1f3cc-61bd-43ac-aa8a-2c2c154722eb.png (original file not included)",
+        "seoan-front.png"
+      ]
+    },
+    {
+      "key": "pub-knit-chin",
+      "file": "seoan-pub-chin-v091.png",
+      "refs": [
+        "exec-02b1f3cc-61bd-43ac-aa8a-2c2c154722eb.png (original file not included)"
+      ],
+      "prompt": "Use case: identity-preserve. Edit this exact image of adult Seoan, 31, seated in the pub. Preserve the SAME face identity, hair, silver earrings, ONLY lightweight ivory fine-rib long-sleeve round-neck knit, slender natural build, lower relaxed shoulder line, pub background, all warm lighting, camera and 16:9 crop. Change her pose to a quiet thoughtful moment: one elbow rests comfortably on the tabletop, that hand very lightly cups the underside/side of her chin, fingers slender and naturally arranged, NOT covering mouth or cheek. The other forearm lies loosely on the table near the phone. Tumbler remains on its coaster but is not being held. Head tilts slightly toward the supporting hand, eyes drift a little downward to the side, brows gently thoughtful, lips closed softly. Shoulders stay low and relaxed, no shrugging, no arm bracing that pushes her shoulder to her ear. A delicate, approachable adult feeling rather than exaggerated sadness. Do not add an outer jacket or change neckline. Retain style, face, proportions, framing, table objects and coherent background. Clean five-finger anatomy, no text, no watermark. Single full-bleed wide scene.",
+      "source": "exec-e77f173b-d9bd-460a-a9d0-f7b461c8e909.png (original file not included)"
+    },
+    {
+      "key": "pub-knit-badge",
+      "file": "seoan-badge-off-v091.png",
+      "refs": [
+        "seoan-badge-off-v09.png (original file not included)",
+        "exec-02b1f3cc-61bd-43ac-aa8a-2c2c154722eb.png (original file not included)"
+      ],
+      "prompt": "Use case: identity-preserve / precise-object-edit. Image1 is the EDIT TARGET: Seoan removing her employee lanyard in the pub. Image2 is the updated approved identity, physique and indoor outfit reference. Keep image1's exact lanyard-removing gesture, loose loop above her hair, blank badge beside her head, anonymous protagonist shoulder silhouette in foreground, warm pub background, perspective and wide 16:9 framing. Remove her teal outer jacket completely. Match image2's lightweight ivory fine-rib long-sleeve round-neck knit, narrower natural shoulders and slender graceful arms. Arms are lifted ONLY for the lanyard gesture; shoulders anatomically relaxed, not exaggerated shrugging, no puffy sleeves or bulky traps. Preserve the same adult31 face, silver hoops and brown hair, delicate softly painted K-webtoon/anime style. Five fingers on each hand, no readable badge text, no watermark. Do not change the protagonist or introduce additional people. Single clean wide illustration.",
+      "source": "exec-5fda2160-d92e-42bd-b875-c479349c84cb.png (original file not included)"
+    },
+    {
+      "key": "pub-knit-close",
+      "file": "seoan-close-seat-v091.png",
+      "refs": [
+        "seoan-close-seat-v4.png (original file not included)",
+        "exec-02b1f3cc-61bd-43ac-aa8a-2c2c154722eb.png (original file not included)"
+      ],
+      "prompt": "Use case: identity-preserve / precise-object-edit. Image1 is the EDIT TARGET: Seoan leaning beside anonymous protagonist, sharing her phone in a pub. Image2 is the approved updated indoor outfit and proportions reference. Preserve image1's composition, close emotional distance, anonymous protagonist shoulder at left, SAME adult31 face identity, hairstyle and silver hoops. Preserve phone with BACK facing the observer and screen facing the two characters; preserve hands, softly painted K-webtoon/anime texture, warm amber lighting, red booth and lake/ferris-wheel background. Remove ALL teal outerwear from Seoan and replace with ONLY image2's lightweight ivory fine-rib long-sleeve knit with modest comfortable round neckline, slim sleeves and narrow natural relaxed shoulders. She leans slightly to share the phone without shrugging or hunching; keep neck comfortably visible and shoulders low. Slender graceful adult silhouette, no oversized clothing, no exaggerated anatomy. No text, no watermark. Single full-bleed16:9 scene.",
+      "source": "exec-1af312f3-5245-4438-ad65-0a4f1b1e4246.png (original file not included)"
+    },
+    {
+      "file": "seoan-pub-laugh-v092.png",
+      "source": "exec-e76da6ca-7b8d-46a8-95f1-212e1d8b7c76.png (original file not included)",
+      "prompt": "Edit this single image with identity and pose lock. Change ONLY Seoan's facial expression to a spontaneous warm laugh, eyes softly narrowing with happy curved lids, mouth slightly open showing a hint of upper teeth, subtle cheek warmth. Adult Korean woman age31, same recognizable face. Preserve the newly relaxed posture EXACTLY: one hand lightly around glass, other arm hanging down and hand on lap out of sight, shoulders lowered and soft, arms close to torso, no elbows braced sideways, no shrugging or hunched shoulders. Same delicate ivory ribbed knit without jacket, hair, earrings, camera framing, warm pub light, background, table, phone and glass. Keep face proportions, natural anatomy and painterly K-webtoon/anime visual-novel art style. No text or watermarks.",
+      "refs": [
+        "exec-5bd1c9f2-a357-4fec-a82b-1e52568e58cb.png (original file not included)"
+      ]
+    }
+  ],
+  "revisionNote": "외투만 제거한 v091 기본 컷은 어깨가 경직되어 보인다는 사용자 피드백으로 교체. 기본/웃음은 양팔을 테이블에 짚는 자세를 수정한 v092 사용."
+}

@@ -1,0 +1,78 @@
+{
+  "date": "2026-10-20",
+  "newImages": 7,
+  "assets": [
+    {
+      "id": "nari-smile",
+      "file": "assets/nari-smile.png",
+      "prompt": "Create a NEW original adult Korean woman character named Nari, age 32, as a visual novel waist-up sprite. Reference image is STYLE ONLY, not her identity: match soft delicate modern Korean romance webtoon painting blended with anime eyes, subtle shading and refined attractive adult face. Nari must look distinct from reference: long warm auburn wavy hair falling below shoulders, small straight bangs, bright smiling crescent eyes, cheerful closed mouth smile, tiny stud earrings, soft coral cardigan over ivory crewneck. Confident efficient coworker leaving work for swimming, lively relaxed posture, one hand loosely holding a folded navy jacket at waist. Wholesome fully clothed attractive adult woman, not pinup. Front three-quarter view, head centered, head to hips, complete crown with breathing room. Solid consistent character design, no words, no logos, no ID lanyard. Truly transparent background. One woman only.",
+      "reference": "../episode01-v01/assets/seoan-soft-smile.png",
+      "generation": "built-in image_gen",
+      "original": "exec-47ccb269-fa01-40c9-832e-fdebb3bb7cad.png (original file not included)"
+    },
+    {
+      "id": "yoon-neutral",
+      "file": "assets/yoon-neutral.png",
+      "prompt": "Create a NEW original adult Korean woman character: Yoon, a 44-year-old female office team lead who is a youthful-looking elegant beauty. Reference image is STYLE ONLY, not identity: soft delicate modern Korean romance webtoon + anime eyes, refined luminous painterly skin. Distinct mature composure, sleek dark hair in low bun with face framing strands, pearl stud earrings, slate blue tailored jacket over champagne blouse, small folded shift schedule in hand with no legible text. Calm attentive direct gaze and slight reassuring closed mouth smile. Attractive adult, youthful smooth face without exaggerated wrinkles, leadership conveyed by poise. Waist-up to hips, complete crown and breathing room, front 3/4 view, no cropped head, one character, no text, no logos, no ID lanyard. Truly transparent background. Fully clothed, professional.",
+      "reference": "../episode01-v01/assets/seoan-soft-smile.png",
+      "generation": "built-in image_gen",
+      "original": "exec-e9bd3829-bc39-4c3c-b4b5-25f7dc26fd42.png (original file not included)"
+    },
+    {
+      "id": "iseo-smile",
+      "file": "assets/iseo-smile.png",
+      "prompt": "Create a NEW original adult Korean woman character: Iseo age 34, a stylish lively former coworker working in operations planning. Reference image STYLE ONLY: delicate soft modern Korean romance webtoon illustration mixed with anime eyes, refined beautiful adult features and painted hair. Distinct identity: long straight black hair with side part tucked behind one ear, slim silver glasses, lilac blouse under charcoal cardigan, small silver earrings. Friendly slightly mischievous knowing smile, head slightly tilted, holding her smartphone loosely at waist. Waist-up to hips, full crown with space, front 3/4 view. Wholesome fully clothed attractive adult, no pinup. One character only, no words, no logos, no lanyard. Truly transparent background.",
+      "reference": "../episode01-v01/assets/seoan-soft-smile.png",
+      "generation": "built-in image_gen",
+      "original": "exec-3286825d-17a9-48d4-9a00-1441bfbf22e2.png (original file not included)"
+    },
+    {
+      "id": "lake-pub-night",
+      "file": "assets/lake-pub-night.png",
+      "prompt": "Visual novel background illustration, wide 16:9. A small intimate quiet lakeside Korean neighborhood pub after work at night, called no visible name. NO PEOPLE. Elegant modern Korean romance webtoon/anime background painted style. Warm honey amber pendant light, subtle burgundy leather booth for two near large windows, dark wooden tabletop in foreground with two small clear glasses containing sparkling water and a small bowl of nuts, subtle candle in glass. Outside window the dark lake and distant blurred amusement park ferris wheel lights. Cozy slightly romantic, restrained mature intimacy and quiet secret conversation, not nightclub, no neon overload. Composition makes room for waist-up characters at center/right and dialogue box at bottom, low contrast behind faces. Soft detailed illustrative lighting, no text, no logos, no photorealism.",
+      "reference": null,
+      "generation": "built-in image_gen",
+      "original": "exec-3242aefa-6c58-4446-87cc-07ef5eab05b9.png (original file not included)"
+    },
+    {
+      "id": "nari-thoughtful",
+      "file": "assets/nari-thoughtful.png",
+      "prompt": "Edit ONLY the facial expression of this original adult Nari sprite. Preserve exact identity, adult age 32, crown, long auburn wavy hair, coral cardigan, ivory shirt, hands, navy jacket, waist-up pose, framing, size and soft delicate Korean webtoon painting. Change cheerful smile to thoughtful listening: eyes more open, brows gently raised at inner corners, lips relaxed almost closed, slight curious concern. Not sad, not angry. No body or clothing or position changes. Preserve genuine transparent background, no extra people, no text.",
+      "reference": "assets/nari-smile.png",
+      "generation": "built-in image_gen",
+      "original": "exec-d8d38e5e-1cc7-4972-9f2a-db03467ee340.png (original file not included)"
+    },
+    {
+      "id": "yoon-serious",
+      "file": "assets/yoon-serious.png",
+      "prompt": "Edit ONLY the facial expression of the same original adult female team lead Yoon, 44 youthful elegant beauty. Preserve exact face identity, low bun hairstyle, pearl earrings, slate blazer, champagne blouse, paper schedule, hands, pose and crop. Change slight smile to focused serious neutral: mouth gently closed without upturn, eyebrows very subtly drawn in, attentive straight gaze. Respectful calm competence, no anger and no extra wrinkles. Same soft detailed K-webtoon/anime style, same proportions, truly transparent background, no text.",
+      "reference": "assets/yoon-neutral.png",
+      "generation": "built-in image_gen",
+      "original": "exec-4e20e3b0-57e1-482b-9a73-83efa3917cf1.png (original file not included)"
+    },
+    {
+      "id": "iseo-concerned",
+      "file": "assets/iseo-concerned.png",
+      "prompt": "Edit ONLY facial expression of this original adult Iseo age 34 sprite. Preserve exact identity, long straight black hair, silver glasses, lilac blouse, charcoal cardigan, earrings, smartphone, hands, pose, framing, delicate webtoon painting. Replace playful smile with warm concerned listening: softened gaze, eyebrows slightly lifted inward, gently closed lips with minimal smile, thoughtful and empathetic. No tears, no age changes, no pose or clothing changes. Preserve true transparent background. One woman, no text.",
+      "reference": "assets/iseo-smile.png",
+      "generation": "built-in image_gen",
+      "original": "exec-75e294e6-2945-4eed-aebc-c0282990cde0.png (original file not included)"
+    }
+  ],
+  "tutorial": {
+    "method": "HTML/CSS with fictional data, captured in isolated browser context",
+    "source": "tutorial/illustrations.html",
+    "images": [
+      "guide-chatgpt.webp",
+      "guide-claude.webp",
+      "guide-request.webp",
+      "guide-conditions.webp"
+    ],
+    "officialSources": [
+      "https://help.openai.com/en/articles/20001256-plugins-in-chatgpt",
+      "https://support.claude.com/en/articles/12512180-use-skills-in-claude"
+    ],
+    "actualAccountCapture": false,
+    "actualInstallationVerified": false
+  }
+}

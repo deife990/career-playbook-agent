@@ -1,0 +1,7 @@
+{
+  "tool": "built-in image_gen",
+  "prompt": "Edit this visual-novel event illustration to make the physical staging unambiguously SIDE-BY-SIDE on the SAME burgundy booth seat, NOT facing across a table. Keep Seoan's exact beautiful adult face, chestnut bob, teal jacket and ivory knit, the delicate webtoon style, amber pub lighting and lake window. Camera is just behind and slightly above the anonymous protagonist's shoulder, both people sitting in a row, facing the SAME direction toward the table. Protagonist is ONLY a cropped unidentifiable dark shoulder on the lower LEFT, no face/head/hair or fixed gender. Seoan sits immediately to the RIGHT of that shoulder, her left upper sleeve almost touching it, viewed in three-quarter SIDE profile as she glances toward the protagonist with a small shy smile. Table is in FRONT of BOTH, running diagonally across LOWER RIGHT, never between them. Seoan holds the phone low between their adjacent arms with screen aimed upward toward both of their eyes, screen blank pale cream (NOT presented frontally to camera). Their touching/nearly touching shoulders and shared phone viewing angle are the primary story. Waist-up medium shot, place Seoan face around center-right within central50% so mobile crop works. Fully clothed, intimate but restrained, accurate hands, no extra people, no text. Widescreen16:9.",
+  "source": "exec-f3712b36-3b3a-4ebc-a4b2-6fdfd403172f.png (original file not included)",
+  "used": "seoan-close-seat-v2.png",
+  "supersedes": "seoan-close-seat.png"
+}

@@ -1,9 +1,0 @@
-{
-  "version": "1.1.0-rc.4",
-  "cloud_revision": "v5",
-  "observed_at": "2026-10-12",
-  "runtime_file_count": 126,
-  "runtime_files_and_bytes_equal": true,
-  "local_archive_sha256": "cd9cf6865193f6404e4ea4d17cfc2f0e5341ca6dc81ba6235b1215efd0f1a60d",
-  "download_sha256": "3aa321d4cde7860c68abcb2c7632ff8c3189776a138aef1a2a28fe10a0ee1404"
-}

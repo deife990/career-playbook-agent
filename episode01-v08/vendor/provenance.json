@@ -1,0 +1,11 @@
+{
+  "release": "v2.8.0",
+  "source": "https://github.com/Monogatari/Monogatari/releases/tag/v2.8.0",
+  "archive_sha256": "16d221485888b0193312e9989ecafa57cb1913978bf2f09ba554552ba3885806",
+  "files": {
+    "monogatari.js": "cae028d02a43589bd7252c1a5288d17db9997d669ece64ff5ce8457c50f18676",
+    "monogatari.css": "3309dcadb1e5a96721bfe54ee375f88e73b5e32e0572c82c90d9ca5838012235",
+    "monogatari.js.map": "f76ee1921a283b440c7c1ed3bea36045899c85d1979a5879d5e73eaa92125199",
+    "LICENSE": "dccbb73aec3904be126b80ad7d7ab05470651cdc1238642acf0e256feb8c69fa"
+  }
+}

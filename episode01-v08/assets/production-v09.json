@@ -1,0 +1,66 @@
+{
+  "version": "0.9.0",
+  "date": "2026-10-22",
+  "mode": "built-in image_gen",
+  "assets": [
+    {
+      "file": "gate-together-v09.png",
+      "prompt": "Use case: illustration-story. Production art for Korean adult office-romance visual novel. Match the provided visual references: delicate softly painted K-webtoon/anime hybrid, restrained realistic proportions, subtle brush texture, warm amber against dusk blue, no chibi, no text, no watermark. Seoan is the same adult Korean woman age31, shoulder-length side-part dark brown hair, brown eyes, small silver hoops, teal windbreaker over ivory knit. Preserve her identity exactly. Anonymous protagonist has ordinary beige work jacket, black trousers; face fully obscured in shadow or seen from behind, no identifying facial details. Landscape 16:9, full bleed, high detail. Image1 character identity reference, image2 environment reference. New shot seen from far away across the lakeside walkway, at dusk just outside the employee gate. Exactly two people in the middle right of a wide landscape, each about one third of frame height: Seoan and anonymous protagonist, both just passed out through gate, stopped side by side but slightly turned toward each other, hesitant to part. Seoan lightly holds her bag strap and looks up to invite them for a drink. A quiet intimate possibility rather than overt romance, discreet comfortable space between them. Gate behind them on right, lake/ferris-wheel glow left, cinematic wide establishing composition; retain blue evening and amber lamps.",
+      "references": [
+        "seoan-front.png",
+        "gate-night.png"
+      ],
+      "outputSource": "exec-0d558539-b609-48c6-b6a1-8e58a60cee9e.png (original file not included)"
+    },
+    {
+      "file": "seoan-pub-seated-v09.png",
+      "prompt": "Use case: illustration-story. Production art for Korean adult office-romance visual novel. Match the provided visual references: delicate softly painted K-webtoon/anime hybrid, restrained realistic proportions, subtle brush texture, warm amber against dusk blue, no chibi, no text, no watermark. Seoan is the same adult Korean woman age31, shoulder-length side-part dark brown hair, brown eyes, small silver hoops, teal windbreaker over ivory knit. Preserve her identity exactly. Anonymous protagonist has ordinary beige work jacket, black trousers; face fully obscured in shadow or seen from behind, no identifying facial details. Landscape 16:9, full bleed, high detail. Image1 identity reference, image2 exact pub environment reference. New medium wide shot of Seoan SITTING on the red booth across the dark wooden pub table from viewer. Her elbows and forearms naturally resting on table, right hand gently around a tumbler of sparkling water, other hand near her dark phone face-down. Clear seated posture, shoulders relaxed, attentive slight shy smile toward viewer. Warm overhead lamp and window/lake ferris-wheel behind. Subject centered slightly right, show head through elbows and substantial tabletop, nothing covering face, no protagonist visible. Soft amber light gentle and consistent, not photoreal.",
+      "references": [
+        "seoan-front.png",
+        "lake-pub-night.png"
+      ],
+      "outputSource": "exec-f127d896-e34a-4a73-ae4e-3a2be04a6af3.png (original file not included)"
+    },
+    {
+      "file": "seoan-badge-off-v09.png",
+      "prompt": "Use case: illustration-story. Production art for Korean adult office-romance visual novel. Match the provided visual references: delicate softly painted K-webtoon/anime hybrid, restrained realistic proportions, subtle brush texture, warm amber against dusk blue, no chibi, no text, no watermark. Seoan is the same adult Korean woman age31, shoulder-length side-part dark brown hair, brown eyes, small silver hoops, teal windbreaker over ivory knit. Preserve her identity exactly. Anonymous protagonist has ordinary beige work jacket, black trousers; face fully obscured in shadow or seen from behind, no identifying facial details. Landscape 16:9, full bleed, high detail. Image1 identity reference, image2 pub setting reference. Narrative medium close shot: Seoan seated at pub, just lifting her work lanyard up over her head with both hands; loose lanyard loop CLEARLY above her hair, small blank employee badge hanging from it near shoulder. Hands anatomically natural with five fingers; not choking, not undressing, only removing an employee lanyard worn over her fully clothed teal jacket and ivory sweater. A relieved small exhale, hair slightly caught then freed. Emphasize gesture and transition from employee to person after work. Warm pub window and red booth backdrop, wooden tabletop bottom. No readable text on badge.",
+      "references": [
+        "seoan-front.png",
+        "lake-pub-night.png"
+      ],
+      "outputSource": "exec-a0b6ad66-65b1-4e5f-a7ff-aa08c89a2b03.png (original file not included)"
+    },
+    {
+      "file": "recall-service-v09.png",
+      "prompt": "Use case: illustration-story. Landscape 16:9 Korean webtoon/anime delicately painted story panel, same restrained blue and amber palette as reference. DAYTIME at a modest Korean theme-park operations service counter. Anonymous adult staff protagonist in beige work jacket sits in foreground three-quarter back, face completely hidden by head angle/shadow. Holding telephone handset near ear with one hand, pointing to a familiar laminated FAQ sheet with other. Blank/simple monitor shows repeated rows of customer tickets without readable text, visitor area through window. Another anonymous staff member in normal uniform shadowed face in distant background. Visual action must unmistakably show answering yet another routine visitor phone inquiry. No logos, text, watermark. Gentle tired ordinary mood, no dramatic crisis.",
+      "references": [
+        "gate-night.png"
+      ],
+      "outputSource": "exec-0ff22c50-50a4-42f9-8fe4-f36becd4f072.png (original file not included)"
+    },
+    {
+      "file": "recall-closing-v09.png",
+      "prompt": "Use case: illustration-story. Landscape 16:9 Korean webtoon/anime delicately painted story panel, restrained warm late-afternoon office light. Close over-shoulder view of anonymous adult staff in ordinary beige work jacket seated at operational office desk, head/face out of frame; hand on mouse and other on a printed DAILY closing checklist with orderly checkmarks. Monitor prominently showing a spreadsheet with many identical daily rows and columns, tiny illegible cells with colored headers, no readable words. Simple calculator, stack of matching yesterday/yesterday-before forms beside keyboard, office window theme-park ferris wheel in distance. Clearly DAILY REPORT closing routine repeated from yesterday, not creative planning. Crisp linework, subtle painterly texture, no text, logo, watermark.",
+      "references": [
+        "gate-night.png"
+      ],
+      "outputSource": "exec-e2703126-0fcc-4e8e-b12a-81c44eda81db.png (original file not included)"
+    },
+    {
+      "file": "seoan-pub-thoughtful-v09.png",
+      "prompt": "Use case: identity-preserve. Edit the supplied seated pub illustration. Preserve EXACT same woman's face identity, hairstyle, clothes, camera framing, hands, glass, phone, table, background, warm lighting and delicate K-webtoon rendering. Change ONLY expression: brows slightly drawn together, small closed mouth, gaze lowered toward glass as she reflects on her stalled career. Thoughtful and a little vulnerable, subtle not exaggerated. No text, no watermark.",
+      "references": [
+        "seoan-pub-seated-v09.png"
+      ],
+      "outputSource": "exec-f50ea521-550c-4b3f-883e-6a1844f582d3.png (original file not included)"
+    },
+    {
+      "file": "seoan-pub-laugh-v09.png",
+      "prompt": "Use case: identity-preserve. Edit the supplied seated pub illustration. Preserve EXACT same woman's face identity, hairstyle, clothes, camera framing, hands, glass, phone, table, background, warm lighting and delicate K-webtoon rendering. Change ONLY expression: eyes happily narrowed, open laughing smile showing a little teeth, rosy cheeks, warm spontaneous laugh at a friend's joke. Beautiful adult, natural not chibi. No text, no watermark.",
+      "references": [
+        "seoan-pub-seated-v09.png"
+      ],
+      "outputSource": "exec-0520b546-58cd-478e-a8b4-ea6ac0c27c34.png (original file not included)"
+    }
+  ]
+}

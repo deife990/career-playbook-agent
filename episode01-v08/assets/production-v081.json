@@ -1,0 +1,38 @@
+{
+  "version": "0.8.1",
+  "date": "2026-10-22",
+  "tool": "built-in image_gen",
+  "assets": [
+    {
+      "key": "office81prompt",
+      "file": "office-evening-v81.png",
+      "source": "exec-c67e8643-fa81-4473-a1c8-d065146abcf6.png",
+      "references": [
+        "office-evening-v8.png (original file not included)"
+      ],
+      "note": "Two visible coworkers, not the protagonist; head-only anonymity. Initial prompt called the beige figure protagonist, but implementation treats both greeting speakers as coworkers so it does not assign this figure’s gender/appearance to the player.",
+      "prompt": "Use case: compositing. Asset type: full-screen 16:9 visual novel opening illustration.\nInput image 1 is the edit target: retain this exact operations office, lake, amusement park, dusk lighting, painted K-webtoon/anime background style, lens perspective, desks and door. Add TWO clearly readable adult office workers exchanging goodbye, with normal detailed clothing, hands and ordinary human bodies. Face anonymity only: each head/face is a simple smooth deep navy-charcoal silhouette without eyes, mouth or facial features, with a subtle rim light. It is a neutral comic anonymity convention, not a masked person, horror or criminal. Do NOT darken clothing or entire bodies.\nComposition: Both people in the central area. The departing protagonist stands in the aisle at 55% horizontal, head at 40% vertical, feet near 94%, body turned toward the colleague, wearing a stone-beige casual jacket, light top, muted charcoal trousers, holding a plain work bag, one hand raised lightly in farewell. The colleague is at 38% horizontal, head at 43% vertical, standing behind/beside the left desk, visible normal pale blue shirt sleeves, navy trousers, friendly responding hand gesture. Move a chair a little if needed to make anatomy and floor contact natural. Ensure they are two separate people and neither head overlaps the other. Warm ordinary end-of-day life, professional and unremarkable. Their clothes and hand gestures have crisp readable colors/details. Preserve the office environment substantially. Leave top 25% free of people for HTML speech bubbles. No text, no speech bubbles, no captions, no collage, no extra panels.",
+      "generatedOriginal": "exec-c67e8643-fa81-4473-a1c8-d065146abcf6.png (original file not included)"
+    },
+    {
+      "key": "officeMobile81prompt",
+      "file": "office-evening-mobile-v81.png",
+      "source": "exec-b58a2011-3f99-4a5a-ae74-9f19f2d49bef.png",
+      "references": [
+        "office-evening-v81.png"
+      ],
+      "prompt": "Use case: precise-object-edit. Asset type: portrait mobile adaptation of visual novel office CG.\nInput image is the accepted wide office farewell illustration, edit target. Make a 3:4 portrait composition for a mobile screen. Preserve exactly these two adult coworkers, their clothing (pale blue shirt / beige jacket and work bag), anonymous dark unfeatured head-only silhouettes, their raised goodbye gestures, same ordinary friendly mood, painted K-webtoon/anime style, same sunset office and lake amusement park window. Both are COWORKERS seen by the leaving first-person viewer, not the player protagonist. Place them side by side closer together with shoulders comfortably separated: blue shirt head around x28% y40%, beige jacket head x70% y43%, bodies visible to at least below knee. Keep the top 27% as empty office/window space for HTML speech balloons. They exchange a casual goodbye and have normally lit colored clothes and hands, only heads/faces have dark flat shadow anonymity. Do not add readable face details, eyes, mouths or frightening expressions. No text, no speech bubbles, no inset photos, no panels. Reframe the room naturally without stretching the people. This is the SAME moment and office for mobile, not a new scene.",
+      "generatedOriginal": "exec-b58a2011-3f99-4a5a-ae74-9f19f2d49bef.png (original file not included)"
+    },
+    {
+      "key": "walker81prompt",
+      "file": "protagonist-back-v81.png",
+      "source": "exec-b6468c23-3ded-4fac-9f85-989fc4c8572c.png",
+      "references": [
+        "protagonist-back-v8.png (original file not included)"
+      ],
+      "prompt": "Use case: precise-object-edit. Asset type: transparent full-body visual novel protagonist walking sprite.\nEdit the supplied back-walking sprite. Keep the exact back-facing walking pose, adult neutral build, proportions, clean painted K-webtoon/anime illustration style and full body entirely visible. Change the jacket from near-black to clearly readable stone beige, visible fabric folds and stitching, muted charcoal trousers, ordinary sneakers. ONLY the head is anonymous: a simple dark navy charcoal unfeatured head silhouette, no face, no recognizable hair or gender details. Not a hoodie: collar open and clear separate anonymous head above it. Keep natural warm amber right rim light and cool blue left fill, but clothes normally illuminated and recognizably colored, not an entire dark silhouette. No face details, no glowing eyes, no sinister imagery. Remove the smoky glow around the figure: a precise clean sprite edge, no ground, no shadow cloud, no background, no text. Real alpha transparency.",
+      "generatedOriginal": "exec-b6468c23-3ded-4fac-9f85-989fc4c8572c.png (original file not included)"
+    }
+  ]
+}

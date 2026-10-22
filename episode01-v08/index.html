@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ko"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>퇴사할 건데, 좋아해도 될까요? · 프롤로그와 1화</title>
+<link rel="icon" href="data:,"><link rel="stylesheet" href="vendor/monogatari.css"><link rel="stylesheet" href="style.css?v=0.10.3"><link rel="stylesheet" href="opening.css?v=0.10.3"><link rel="stylesheet" href="lesson-ui.css?v=0.10.3">
+<script defer src="vendor/monogatari.js"></script><script defer src="save-compat.js?v=0.10.3"></script><script defer src="story.js?v=0.10.3"></script><script defer src="cards.js?v=0.10.3"></script><script defer src="tutorial.js?v=0.10.3"></script><script defer src="capture-assets.js?v=0.10.3"></script><script defer src="lesson-ui.js?v=0.10.3"></script><script defer src="install-preview.js?v=0.10.3"></script><script defer src="linear-tutorial.js?v=0.10.3"></script><script defer src="game.js?v=0.10.3"></script>
+<link rel="stylesheet" href="revision-v09.css?v=0.10.3">
+<link rel="stylesheet" href="title-screen.css?v=0.10.3">
+<script defer src="title-screen.js?v=0.10.3"></script>
+<link rel="stylesheet" href="visual-update.css?v=0.10.3">
+</head><body>
+<div id="monogatari"><visual-novel><loading-screen></loading-screen><main-screen><main-menu></main-menu></main-screen><game-screen><text-box></text-box></game-screen><settings-screen></settings-screen></visual-novel></div>
+<header class="toolbar"><span class="brand">퇴사할 건데, 좋아해도 될까요?<small id="chapter">프롤로그 + 1화</small></span><nav aria-label="게임 메뉴"><button id="sound-toggle" aria-label="효과음 끄기" aria-pressed="true">소리 켜짐</button><button id="history">기록</button><button id="settings">설정</button><button id="get-plugin">플러그인 받기</button><button id="prep">내 준비</button></nav></header>
+<div id="notice" role="status" aria-live="polite">이야기를 불러오는 중…</div>
+<section id="welcome" class="welcome" hidden aria-label="게임 타이틀">
+<div class="title-atmosphere" aria-hidden="true"></div>
+<span class="title-episode">퇴근 후, 우리들의 다음 이야기</span>
+<figure class="title-cast"><img src="assets/title-cast-v010.png" width="1448" height="1086" fetchpriority="high" alt="호숫가 저녁에 함께 선 이서, 서안, 윤 팀장, 나리. 서안이 한 걸음 앞에서 부드럽게 웃고 있다."></figure>
+<div class="title-copy">
+<p class="eyebrow">퇴근 후 비밀동맹 로맨스</p>
+<h1><span>퇴사할 건데,</span><span class="title-romance">좋아해도 될까요<span class="title-question">?</span></span></h1>
+<p class="title-tagline">회사는 나갈 건데,<br class="title-small-break"> 너까지 멀어지긴 싫어서.</p>
+<nav class="title-actions" aria-label="타이틀 메뉴">
+<button id="resume" hidden><span>이어서 하기</span><span aria-hidden="true">↗</span></button>
+<button id="start"><span>처음부터 시작</span><span aria-hidden="true">▷</span></button>
+<button id="title-download"><span>CareerPilot 받기</span><span aria-hidden="true">↓</span></button>
+<button id="title-tutorial"><span>첫 사용 미리 보기</span><span aria-hidden="true">↗</span></button>
+<button id="title-settings"><span>환경설정</span><span aria-hidden="true">⚙</span></button>
+</nav>
+<p class="title-chapter">프롤로그 + 1화 <span>·</span> 온호시의 어느 퇴근길</p>
+<p id="recovery" role="alert" hidden>이전 기록을 읽을 수 없어요. 처음부터 시작을 누르면 이 게임의 기록을 새로 저장합니다.</p>
+</div>
+<footer class="title-footer"><span>CareerPilot과 함께하는 이직 준비 이야기<br>회사·인물·사건은 허구예요.</span></footer>
+</section>
+<p id="story-hint" hidden></p>
+<picture id="office-scene" hidden>
+<source media="(max-width:600px)" srcset="assets/office-evening-mobile-v81.png">
+<img id="office-scene-image" src="assets/office-evening-v81.png" alt="퇴근 무렵 사무실에서 두 동료가 손을 들어 인사를 나눈다. 셔츠와 재킷, 손짓은 보이고 얼굴만 짙은 그림자로 처리되어 있다.">
+</picture>
+<section id="workday-stage" hidden aria-label="퇴근길에 떠올리는 오늘의 회사 생활">
+<p id="workday-location">온호시 · 레이크포트 파크 운영 사무실</p>
+<div id="office-bubbles" hidden aria-hidden="true"><p id="office-greeting" class="office-bubble first">오늘도 수고하셨습니다!!</p><p id="office-reply" class="office-bubble second" hidden>네, 내일 봐요!</p></div>
+<figure id="workday-walker" hidden><img src="assets/protagonist-back-v0102.png" alt="베이지색 재킷과 짙은 바지를 입은 주인공이 출입게이트를 향해 혼자 걷는다. 짧은 짙은 갈색 머리와 목덜미만 보이고 얼굴은 드러나지 않는다."></figure>
+<figure id="workday-memory" hidden><img id="memory-image" src="assets/recall-service-v0102.png" alt=""><figcaption id="memory-time">몇 시간 전</figcaption><article id="memory-notice" hidden aria-label="Outlook 형식으로 재구성한 가상 업무 메일"><div class="outlook-bar">O &nbsp; Outlook <span>메일 검색</span></div><div class="outlook-content"><small>받은 편지함 · 오늘 오후 2:16</small><h3>RE: 다음 시즌 신규 프로그램 시범 운영</h3><p class="mail-from"><b>윤 팀장</b> &lt;operations@lakeport.example&gt;<br><small>받는 사람: 운영팀</small></p><p>새 프로그램 제안은 확인했습니다.</p><p>이번 시즌에는 신규 예산을 배정하기 어려워<br>시범 운영은 <strong>보류</strong>하기로 했습니다.</p><p>당분간은 기존 운영안으로 진행해주세요.</p><blockquote>지난주 보낸 메일<br>새 프로그램, 다음 시즌에는 한번 시작해볼 수 있을까요?</blockquote></div></article></figure>
+</section>
+<button id="opening-skip" hidden>알림부터 보기 ▸</button>
+<aside id="service-picker-note" hidden><small>서안과 같이 · 준비 시작</small><h2>평소 쓰는 쪽으로 골라봐.</h2><p>한 서비스만 설치하면 돼요.<br>선택하면 해당 서비스의 안내가 열려요.</p></aside>
+<figure id="object-insert" hidden><img id="object-image" alt=""><figcaption id="object-caption"></figcaption></figure>
+<div id="scene-transition" aria-hidden="true"><span id="scene-transition-title"></span></div><p id="tap-cue" hidden aria-hidden="true">똑 · 똑 · 똑</p>
+<aside id="message-arrival" hidden aria-label="서안의 휴대폰에 도착한 메시지"><small>메시지 · 방금 · 띵동</small><strong>이서 언니</strong><p>서안아, 아까 이력서 막혔다고 했지?</p></aside>
+<aside id="duo-stage" hidden aria-label="나리와 서안"><figure><img id="duo-nari" alt="나리"></figure><figure><img id="duo-seoan" alt="서안"></figure></aside>
+<figure id="remote-person" hidden><img id="remote-image" alt=""><figcaption id="remote-caption"></figcaption></figure>
+<figure id="narrative-art" hidden><img id="narrative-image" alt=""></figure>
+<figure id="scene-cg" hidden><img src="assets/seoan-close-rear-v093.png" alt="두 사람 뒤에서 보는 구도. 서안과 얼굴이 보이지 않는 주인공이 의자를 가까이 붙이고 어깨를 살짝 맞댄 채 휴대폰을 함께 본다."></figure>
+<aside id="story-phone" hidden aria-label="손에 들고 보는 이야기 속 휴대폰"><img class="phone-art" src="assets/handheld-phone.png" alt="휴대폰을 잡고 있는 손"><div class="phone-screen"><small>온호시 · 이야기 속 휴대폰</small><div id="phone-person"><img id="phone-avatar" alt="" hidden><span id="phone-app"></span></div><div id="phone-org-mark" hidden><img src="assets/northwind-mark.svg" alt="노스윈드 레저 그룹 로고"><span>NORTHWIND<small>LEISURE GROUP</small></span></div><div id="phone-body"></div><small class="phone-full-text">전체 내용은 아래 대사에서</small></div></aside>
+<aside id="story-install" hidden aria-label="이야기 속 설치 순서"><div id="linear-story" hidden></div><div class="legacy-install"><small id="story-install-kicker">서안과 같이 설치하기</small><h2 id="story-install-title"></h2><p id="story-install-detail"></p><p id="story-install-check"></p><a id="story-install-download" download>ZIP 받기</a><button id="story-install-open">단계별 큰 안내 열기</button><button id="story-install-zoom" aria-label="설치 자료 큰 화면으로 보기"><img id="story-install-image" src="assets/guide-claude.webp" alt="개인정보 없이 재구성한 Claude 설치 경로"></button><small id="story-install-source">설명용 자료 화면 · 실제 설치 결과 아님</small></div></aside>
+<aside id="story-use" hidden aria-label="실제 화면으로 보는 첫 사용" >
+<div class="lesson-topline"><span id="story-use-progress"></span><span class="lesson-companion"><img src="assets/seoan-front.png" alt=""> 서안과 같이</span></div>
+<h2 id="story-use-title"></h2><p id="story-use-prompt"></p>
+<p class="shot-mobile-hint">사진을 좌우로 움직여 읽을 수 있어요 ↔</p>
+<div id="story-use-viewport" class="shot-viewport" tabindex="0" role="region" aria-label="실제 사용 화면 확대, 좌우로 스크롤 가능"><div id="story-use-shot" class="capture-crop"><img id="story-use-image" alt=""></div></div>
+<small id="story-use-source"></small><p id="story-use-caption" class="use-caption"></p>
+<details id="story-use-reading-details"><summary>사진 내용 읽기</summary><p id="story-use-reading"></p></details>
+<button id="story-use-open">이 화면 크게 · 단계별로 보기</button>
+</aside>
+<nav id="play-controls" hidden aria-label="이야기 진행"><button id="tutorial-watch" hidden>사용 화면 크게 보기</button><button id="next">대사 계속 ▸</button></nav>
+<section id="end-actions" hidden aria-label="1화 이후"><button id="preview">다음 화 예고</button><button id="today">오늘 배운 요청 다시 보기</button><button id="title">타이틀로</button></section>
+<dialog id="preparation" aria-labelledby="prep-title">
+<div class="panel-head"><span>CAREERPILOT · 내 준비</span><button id="close-prep" aria-label="패널 닫기">닫기</button></div>
+<nav class="panel-nav" aria-label="준비 메뉴"><button data-view="cards">사용 카드</button><button data-view="request">첫 요청</button><button data-view="install">설치 안내</button></nav>
+<h2 id="prep-title">내 준비</h2>
+<section data-panel="cards"><p>지금 필요한 것부터 골라요. 이야기 진행과 관계없이 모두 열려 있어요.</p><div id="card-list"></div></section>
+<section data-panel="request" hidden>
+<div id="first-lesson"><p><strong>오늘 배운 요청은 이렇게 써요.</strong></p><ol><li>아래 요청을 복사해요.</li><li>CareerPilot을 활성화한 ChatGPT·Claude 대화에 붙여 보내요.</li><li>질문을 받으면 내 업무·급여·생활 조건 중 아는 것부터 짧게 답해요.</li></ol><button data-view="guide">서안과 같이 한 사용법 다시 보기</button></div>
+<p id="card-input"></p><label for="request-choice">해볼 요청</label><select id="request-choice"></select>
+<textarea id="request" readonly rows="5" aria-label="복사할 요청"></textarea>
+<details id="card-detail"><summary>가상 예시·직접 확인·다음 행동</summary><div id="card-fields"></div></details>
+<p class="small">내 상황은 CareerPilot 대화에서 직접 이야기해요. 게임에 경력 자료를 올리지 않아요.</p>
+<label for="service">사용할 서비스</label><select id="service"><option>ChatGPT</option><option>Claude</option></select>
+<button id="copy">요청 복사</button><button id="save-external">이 위치 저장하고 서비스 열기</button>
+<a id="external" target="_blank" rel="noopener noreferrer" hidden>서비스 새 탭 열기 ↗</a>
+<button data-view="install">설치가 필요해요</button>
+<details id="return-report"><summary>돌아왔어요</summary><p>진행 상태는 직접 알려주세요. 대화 내용을 게임이 읽지는 않아요.</p>
+<button data-report="내 상황을 조금 이야기했어요.">내 상황을 조금 이야기했어요</button><button data-report="아직 질문만 받았어요.">아직 질문만 받았어요</button><button data-report="설치나 실행에서 막혔어요.">설치나 실행에서 막혔어요</button><button data-report="지금은 그만할게요.">지금은 그만할게요</button></details>
+</section>
+<section data-panel="install" hidden><div id="linear-panel"></div><div class="legacy-install">
+<p>평소 쓰는 서비스 하나만 골라주세요. 설치 ZIP은 압축을 풀지 않아요.</p>
+<label for="install-service">서비스 선택</label><select id="install-service"><option>ChatGPT</option><option>Claude</option></select>
+<nav id="install-step-nav" aria-label="설치 단계"></nav><p id="install-progress"></p><h3 id="install-step-title"></h3><p id="install-action"></p><p id="install-expected"></p>
+<button id="install-zoom">사진 원본 크기로 확대</button><p class="small">글자가 작으면 확대하고 사진 안에서 좌우로 이동하세요. 사진을 누르면 원본을 새 탭으로 열어요.</p><figure class="guide-figure"><a id="install-image-link" target="_blank" rel="noopener noreferrer"><img id="install-image" alt="설치 메뉴와 ZIP 업로드 경로를 설명한 예시 화면"></a><figcaption id="install-caption"></figcaption></figure>
+<div class="guide-controls"><button id="install-prev">이전 단계</button><button id="install-next">다음 단계</button></div>
+<a id="download" class="primary" download>설치 ZIP 받기</a><p class="small">출시 후보 1.2.0-rc.7 · 사용하는 서비스용 파일 하나만 받으세요.</p>
+<details id="real-screens"><summary>공개된 실제 서비스 화면 보기</summary><figure class="guide-figure"><a id="install-real-link" target="_blank" rel="noopener noreferrer"><img id="install-real" alt="공개 자료의 실제 설치 화면"></a><figcaption id="install-real-caption"></figcaption></figure><a id="install-real-source" target="_blank" rel="noopener noreferrer">이미지 출처 ↗</a></details><ol id="install-steps"></ol><p id="install-note"></p>
+<a id="official-help" target="_blank" rel="noopener noreferrer">서비스 공식 안내 ↗</a>
+<details><summary>설치 메뉴가 없거나, 설치 후 작동하지 않나요?</summary><p>사용하는 계정에 플러그인·사용자 스킬 업로드 기능이 제공되는지 확인해요. 조직 계정은 관리자 설정이 적용될 수 있어요. 일반 채팅 첨부는 설치를 대신하지 않아요.</p><p>CareerPilot 설치·활성화를 확인하고 새 대화에서 시작해보세요. 이미 설치했다면 다시 받을 필요는 없어요. 새 대화가 예전 경력을 기억하지 못하면 ‘대화창을 닫기 전에’ 카드에서 경력 정보 보관·복원을 확인해요.</p><p>지금 설치할 수 없어도 이야기는 그대로 이어갈 수 있어요.</p></details>
+<button data-view="request">첫 요청 보기</button></div>
+</section>
+<section data-panel="guide" hidden>
+<p class="guide-badge">실제 캡처 기반 · 서안의 가상 예시를 읽기 쉽게 재구성</p>
+<div class="guide-service-row"><label for="guide-service">다시 볼 서비스</label><select id="guide-service"><option>ChatGPT</option><option>Claude</option></select></div>
+<nav id="guide-step-nav" aria-label="첫 사용 단계"></nav>
+<p id="guide-progress"></p><h3 id="guide-heading"></h3><p id="guide-explanation"></p>
+<p class="shot-mobile-hint">사진을 좌우로 움직이거나 아래 읽기용 설명을 열어보세요 ↔</p>
+<div id="guide-viewport" class="shot-viewport" tabindex="0" role="region" aria-label="실제 사용 화면 확대, 좌우로 스크롤 가능"><div id="guide-shot" class="capture-crop"><img id="guide-image" alt=""></div></div>
+<p id="guide-caption"></p><a id="guide-image-link" target="_blank" rel="noopener noreferrer">원본 화면 새 탭으로 보기 ↗</a>
+<details id="guide-reading-details"><summary>사진 내용 · 읽기용 설명</summary><p id="guide-reading"></p></details>
+<div class="guide-controls"><button id="guide-prev">이전 단계</button><button id="guide-next">다음 단계</button></div>
+<button id="guide-own">내 CareerPilot에 보낼 요청 보기</button><button data-view="install">서비스별 설치 안내·ZIP 받기</button>
+</section>
+<section data-panel="history" hidden><p class="small">이 회차에서 읽은 대화예요. 실제 CareerPilot 대화 기록은 포함하지 않아요.</p><div id="history-list"></div></section>
+<section data-panel="settings" hidden><label for="font-size">대사 글자 크기</label><input id="font-size" type="range" min="16" max="24" step="2" value="18"><output id="font-value">18px</output><label class="sound-option"><input id="tap-sound" type="checkbox"> 알림·두드림 효과음 켜기</label><button id="sound-preview">효과음 미리 듣기</button><p>효과음은 소리 버튼으로 언제든 끌 수 있어요. 대사는 한 번에 표시되며, 키보드와 버튼으로 넘길 수 있어요. 화면 전환은 움직임 줄이기 설정을 따라요.</p><p class="small">이야기 위치는 이 브라우저·주소에 보관돼요. 브라우저 기록을 지우면 게임 저장도 없어질 수 있어요. 실제 경력 정보는 CareerPilot에서 별도로 보관해주세요.</p></section>
+<section data-panel="preview" hidden><p class="eyebrow">다음 화 준비 중</p><h3>매일 하는 일도 경력이 될까</h3><p>“고객 응대, 일일 마감. 정작 내가 해결한 일이 하나도 안 보이네.”</p><p>반복 업무만 적힌 서안의 이력서. 다음에는 단체 손님이 몰렸던 하루를 되짚으며, 서안이 직접 판단하고 해결했던 일을 꺼내봅니다.</p><button data-card="S02">지금은 내 경험부터 정리해보기</button></section>
+<p id="panel-status" role="status" aria-live="polite"></p><button id="skip">원래 화면으로</button>
+</dialog><noscript>이야기를 플레이하려면 JavaScript를 켜주세요.</noscript>
+</body></html>

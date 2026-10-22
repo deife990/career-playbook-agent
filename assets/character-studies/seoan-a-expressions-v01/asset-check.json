@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-20",
+  "purpose": "technical file inspection only, not production clearance",
+  "files": [
+    {
+      "file": "01-neutral.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "fully_transparent_percent": 32.1,
+      "bytes": 2119535
+    },
+    {
+      "file": "02-soft-smile.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "fully_transparent_percent": 31.2,
+      "bytes": 2076319
+    },
+    {
+      "file": "03-averted-gaze.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "fully_transparent_percent": 32.3,
+      "bytes": 2014642
+    },
+    {
+      "file": "04-serious.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA",
+      "alpha_range": [
+        0,
+        254
+      ],
+      "fully_transparent_percent": 30.9,
+      "bytes": 2093677
+    }
+  ]
+}

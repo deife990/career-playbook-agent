@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-21",
+  "tool": "image_gen.imagegen",
+  "assets": [
+    {
+      "asset": "seoan-thoughtful-v6.png",
+      "source": "exec-5543ec89-6240-4808-8351-5972fc1c93b7.png (original file not included)",
+      "references": [
+        "seoan-front.png"
+      ],
+      "prompt": "Use case: identity-preserve. Edit the provided Seoan character sprite, an adult Korean woman aged 31. Change ONLY facial expression into thoughtful uncertainty while recalling her repetitive work: eyes look slightly down and to the side, brows gently knit, closed lips softly pressed, no smile, no blush. Preserve EXACT face identity, head outline and upright angle, body posture and position, chestnut shoulder-length bob, small hoop earrings, teal zip jacket over ivory knit, arms down, scale, shoulder width, waist crop, 1024x1536 canvas. Preserve original delicate soft K-webtoon/anime hybrid brush texture, line weight, skin shading and neutral warm illumination. No new light direction, gloss, halo, color grading, bold outlines or increased contrast. Same animation cel as reference, transparent background, no exterior shadow, text or border.",
+      "transparent": true,
+      "visuallyReviewed": true
+    },
+    {
+      "asset": "badge-insert-v6.png",
+      "source": "exec-f977fac6-ba60-43cb-8446-e61b82ff0f55.png (original file not included)",
+      "references": [
+        "lake-pub-night.png"
+      ],
+      "prompt": "Create one cinematic 16:9 close-up insert illustration for this SAME Korean office romance visual novel, matching the provided lakeside pub reference's delicate K-webtoon/anime hybrid brush texture, dark wooden table, burgundy leather booth, warm amber pendant/candle light and soft lake reflections. Close shot of a woman aged 31 placing her staff access badge on the table, hand in teal jacket cuff only. Navy lanyard curling on table. Ivory rectangular badge, tasteful small abstract north-star icon, word NORTHWIND only, minimal generic bar design, NO portrait, personal name, ID number or real company logo. Focus badge and relaxed fingers foreground, shallow depth of field background. No face or full person, no readable extra text. Calm moment of shedding the workday, not advertising. Landscape 16:9 edge-to-edge.",
+      "transparent": false,
+      "visuallyReviewed": true
+    },
+    {
+      "asset": "cup-insert-v6.png",
+      "source": "exec-aeec1e0b-e1cc-4451-bd50-20abb140518d.png (original file not included)",
+      "references": [
+        "lake-pub-night.png"
+      ],
+      "prompt": "Create one cinematic 16:9 close-up insert illustration for this SAME Korean office romance visual novel. Match provided pub reference's delicate soft K-webtoon/anime brush texture, dark polished wooden table, amber candle/pedant light, burgundy booth and soft distant lake lights. A clear short tumbler of sparkling water, tiny bubbles and droplets/condensation, woman's slender fingers lightly rolling the glass on its coaster, just a teal jacket cuff at frame edge. Second out-of-focus clear water glass further away suggests someone listening. Intimate quiet pause, not alcohol, no beer, no labels, no faces, no text. Focus fingers and glass foreground, landscape edge-to-edge 16:9.",
+      "transparent": false,
+      "visuallyReviewed": true
+    }
+  ]
+}

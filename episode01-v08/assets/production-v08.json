@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-22",
+  "tool": "built-in image_gen",
+  "assets": [
+    {
+      "file": "office-evening-v8.png",
+      "source": "exec-9e1ddcdb-94fa-4a0e-9832-0475d8138c59.png (original file not included)",
+      "prompt": "Use case: illustration-story. Asset: wide background painting for a Korean office romance web visual novel. Input image is STYLE AND WORLD reference only: match the delicate clean lines, softly painted textures and believable warm practical lighting of the lakeside fictional theme park in reference gate-night.png, but show a different location INSIDE its small staff operations office at evening quitting time. Landscape 16:9, high quality 2048x1152 or larger. Cozy modest functional office, two simple desk monitors, wheeled empty chairs, paper trays, plain mug, filing shelves and a noticeboard, glass door at far right with warm corridor beyond, large back window showing last dusk glow and a very subtle distant ferris wheel. Medium-wide eye-level composition with useful desk details on the left/center and door visible on right. Central 65% must read well in portrait crop. Interior is professional and slightly tired, ordinary, not miserable, not luxury corporate. No identifiable people; a faint non-descriptive shoulder shadow beyond the doorway is enough. No faces, no legible writing, no captions, no speech balloons, no graphic panels, no watermarks, no real brands, no LEGO. Do not reproduce the exterior gate. This is a single contiguous office background that will receive text and cropped comic insets in HTML.",
+      "references": [
+        "gate-night.png"
+      ],
+      "transparent_background": false
+    },
+    {
+      "file": "office-memory-v8.png",
+      "source": "exec-e3e262cd-8bf4-4b94-9819-d1ad7dbe7278.png (original file not included)",
+      "prompt": "Use case: illustration-story. Create the daytime memory illustration for the same Korean romance visual novel. Reference image 1 is the SAME OFFICE set and painted visual style. Keep the exact large window with blinds, two simple desks, monitors, filing cabinet, noticeboard, door on right and lake/theme park outside. Show late morning/afternoon light instead of twilight. Composition: eye level behind the seated protagonist, framing ONLY an indistinct dark backlit shoulder/upper back at far left bottom (head mostly outside frame), no identifiable gender, face, hairstyle, skin, age or body type. The protagonist is at a computer, the back of a monitor and paper tray visible, mundane office work. In the middle-distance right behind another desk is an anonymous backlit adult coworker, out of focus and small, no legible facial features. Both figures are subtle shadows integrated into soft warm daylight, not solid black cutout blobs. Leave center monitor area suitable for an HTML overlay crop of a presentation; no legible text drawn. Keep the same gentle fine-line semi-realistic Korean webtoon plus anime-adjacent background rendering of reference, convincing small theme park operations office, muted teal and amber neutrals. Wide 16:9, single painting, no comic panel borders, no captions or bubbles, no names, no real brands. Do not turn this into a large corporate meeting room. This single image will be cropped for two brief memories.",
+      "references": [
+        "office-evening-v8.png"
+      ],
+      "transparent_background": false
+    },
+    {
+      "file": "protagonist-back-v8.png",
+      "source": "exec-8f41288b-283d-4dc5-9e33-349215cce38a.png (original file not included)",
+      "prompt": "Use case: illustration-story. Transparent-background isolated small protagonist sprite for a visual novel, using reference image 1 ONLY as lighting/painterly style and perspective reference. One anonymous adult seen from behind at a distance walking slowly away from camera, full body visible with feet. Neutral loose simple charcoal jacket and straight dark trousers, ordinary flat shoes. Head/neck largely lost in backlit dark shadow; do not identify a hairstyle, face, gender, age, muscularity or body type. No suit/tie, skirt, long hair, bag, logos, extra people, hand gestures. Subtle amber rim light on right edge and cool navy ambient shading on left, to blend naturally on the reference night lakeside walkway. Soft delicate linework with semi-realistic Korean webtoon painting texture, same refined quality as the background. Back view modest posture, one quiet small step, slight tired shoulders, no dramatic slouch, no running. Subject centered with empty transparent margins. Genuine transparent alpha background, no floor, no landscape, no shadow blob; asset will be shown small, only about 15% of screen height.",
+      "references": [
+        "gate-night.png"
+      ],
+      "transparent_background": true
+    }
+  ]
+}

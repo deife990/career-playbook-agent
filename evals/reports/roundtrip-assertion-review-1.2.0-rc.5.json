@@ -1,7 +1,0 @@
-{
-  "original_status": "FAIL",
-  "deterministic_roundtrip": true,
-  "finding": "Judge rejected five added schema-supported null fields as new facts, although the preexisting lossless contract and test_roundtrip_allows_only_added_unknown_nulls explicitly allow optional null additions. Clarify that unchanged existing data and added optional nulls are accepted, while arrays, omitted original keys, changed values or invented non-null facts remain failures. Preserve the original report; fresh current-suite model evidence is required.",
-  "original_report": "evals/reports/claude-1.2.0-rc.5-incomplete.json",
-  "original_case": "context-v12-model-roundtrip"
-}

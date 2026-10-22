@@ -1,10 +1,10 @@
-dist/
-.venv/
-__pycache__/
-.pytest_cache/
-*.pyc
 .DS_Store
-work/
-career-context/
+Thumbs.db
+desktop.ini
+*.log
 .env
 .env.*
+!.env.example
+node_modules/
+playwright-report/
+test-results/
