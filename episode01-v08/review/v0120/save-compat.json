@@ -1,0 +1,32 @@
+{
+  "report": [
+    {
+      "source": "v0.11.9 phase-1 fixture",
+      "fixture": "install",
+      "target": "v0.12.0 phase 2",
+      "passed": true
+    },
+    {
+      "source": "v0.11.9 phase-1 fixture",
+      "fixture": "before-e03",
+      "target": "v0.12.0 phase 2",
+      "passed": true
+    },
+    {
+      "source": "derived legacy E03Actual index-0 save",
+      "practiceDefault": "ready",
+      "passed": true
+    },
+    {
+      "interruptedCompletionReload": "self_reported_done",
+      "continuesTo": "E04",
+      "passed": true
+    },
+    {
+      "interruptedCompletionReload": "skipped",
+      "continuesTo": "E04",
+      "passed": true
+    }
+  ],
+  "passed": true
+}

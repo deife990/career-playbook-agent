@@ -23,14 +23,14 @@ body[data-workday^="Recall"] #workday-walker{opacity:.25}
 #memory-notice small{display:block;font-size:12px;letter-spacing:.1em;color:#726e65}
 #memory-notice strong{display:block;font-size:clamp(24px,3vw,37px);font-weight:600;margin:10px 0 16px}
 #memory-notice span{display:inline-block;font-size:15px;border:1px solid #ac8172;background:#eee1d8;color:#815d4e;padding:6px 22px;letter-spacing:.3em}
-#opening-skip{position:fixed;left:24px;bottom:18px;z-index:16;font-size:12px;padding:10px 14px;min-height:44px;background:#1c2d3ae8;color:#f6e8d5;border-color:#a99175}
-#opening-skip:hover{background:#344755}
+
+
 /* Keep the accessible scene text/log, while the opening greetings live in balloons. */
 body[data-workday="Opening"] text-box{background:transparent!important;border:0!important;box-shadow:none!important}
 body[data-workday="Opening"] text-box [data-content]{opacity:0}
 body[data-workday="Opening"] #workday-stage{bottom:80px}
 body[data-workday="Opening"] #next{background:#fff9eef2}
-body[data-transitioning="true"] #opening-skip{visibility:hidden}
+
 @keyframes workday-pop{from{opacity:0;translate:0 10px}to{opacity:1;translate:0 0}}
 @keyframes workday-step{0%,100%{translate:0 0}30%{translate:0 2px}65%{translate:1px 0}}
 @media(max-width:600px){
@@ -44,7 +44,7 @@ body[data-transitioning="true"] #opening-skip{visibility:hidden}
  #workday-memory[data-beat="RecallPeople"] #memory-image{object-position:78% 50%;transform:scale(1.08)}
  #memory-time{top:9px;left:9px;font-size:10px;padding:5px 8px}
  #memory-notice{width:82%;padding:18px 22px}#memory-notice strong{font-size:25px;margin:10px 0 14px}#memory-notice small{font-size:10px}#memory-notice span{font-size:12px;padding:5px 17px}
- #opening-skip{left:14px;bottom:15px;max-width:44%;font-size:11px;padding:9px 11px}
+
 }
 @media(prefers-reduced-motion:reduce){
  #workday-stage{transition:none}.office-bubble,#workday-walker img{animation:none!important}

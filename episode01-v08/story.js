@@ -3,7 +3,8 @@ const choose = (key, dialog, options) => ({Choice: Object.fromEntries([
   ['Dialog', dialog], ...options.map((text, index) => {
     const value = 'ABC'[index];
     return [value, {Text: text, Do: `jump ${key.toUpperCase()}_${value}`, onChosen: function () {
-      this.storage({[key]:value,log:[...this.storage('log'),{label:`${key.toUpperCase()}_${value}`,step:-1,text:'나\n'+text}]});
+      this.storage({[key]:value});
+      if(key==='c2')this.storage({selfReason:{A:'나도 오늘 한 일 적으려니까 같은 안내만 떠올라. 이러다 다른 데선 뭘 할 수 있을지 모르겠어.',B:'나도 바꾸고는 싶은데, 월급 끊길까 봐 선뜻 못 움직이겠어.',C:'나도 회사는 바꾸고 싶은데, 이 동네는 못 떠나겠어.'}[value]});
     }}];
   })
 ])});
@@ -31,17 +32,18 @@ const CP_STORY = {script: {
     {Function:{Apply:async function(){await pauseBeforeNotice();}}},
     '손안에서 휴대폰이 울린다. 띵동. 걷던 속도를 늦추고, 화면을 얼굴 가까이 들어 알림을 연다.',
     'phone 급여가 입금되었습니다.',
-    '그 아래에는 오후에 읽었던 사내 공지가 남아 있다.',
+    '알림을 넘기자 오후에 본 사내 공지가 다시 뜬다.',
     'notice 노스윈드 레저 그룹 운영 안내 — 전사 연봉 동결을 유지합니다. 일부 사업장 매각 및 조직 축소에 따라 다음 시즌 신규 투자 계획을 조정합니다. 파크별 세부 운영안은 추후 안내합니다.',
     '입금 알림을 지워도 공지는 남아 있다. 팀 단체 채팅방에 메시지가 하나 더 와 있다.',
     'y 공지 관련해서 제가 확인한 것도 여기까지입니다. 내일 근무는 올려둔 표대로예요. 변경 생기면 제가 다시 올리겠습니다.',
     'y 오늘 마감 끝난 분들은 퇴근하세요. 나머지 질문은 내일 받을게요.',
-    '휴대폰을 내리고 다시 걸음을 옮긴다. 그때, 누군가 등 뒤에서 재킷을 가볍게 건드린다. 똑, 똑, 똑.',
-    '걸음을 멈춘다. …어? 휴대폰에서 시선을 떼고, 천천히 뒤를 돌아본다.',
+    '휴대폰을 주머니에 넣고 다시 걷는다.',
+    '똑, 똑, 똑.',
+    'thought …어?',
     {Function:{Apply:async function(){await transitionOut('고개를 돌리면');}}},
     'show character s shy at center',
     {Function:{Apply:async function(){await transitionIn();}}},
-    '휴대폰을 내리고 돌아본다. 서안이 손끝을 거두며 한 걸음 물러선다.',
+    '뒤를 돌아보자 서안이 손끝을 거두며 한 걸음 물러선다.',
     's 저기… 같이 가도 돼? 아까부터 뒤에 있었는데, 너무 열심히 보고 있길래.',
     'me 아, 미안. 공지 다시 보느라.',
     'show character s neutral at center',
@@ -71,30 +73,30 @@ const CP_STORY = {script: {
   C1_C: ['s 응. 일단 게이트 밖으로. 그 뒤는 같이 알아보고.', 'me 계획은 있어?', 's 호숫가 펍이 아직 문을 안 닫았다는 데까진 확인했어.', 'jump P02'],
   P02: ['서안이 출입증을 찍는다. 게이트 옆에서 내가 나오는 걸 기다린다.', 's 조용한 데 앉아 있을 시간 있어? 오늘은 게이트 앞에서 바로 헤어지기 싫어서.', 'me 이 시간에?', 's 한 잔만. 오늘은 다른 얘기도 좀 하고 싶어.', '휴대폰을 잠그고 게이트 밖으로 걸음을 옮긴다. 평소에는 여기서 각자 집으로 향했다.', 'jump E01'],
   E01: [
-    {Function:{Apply:async function(){await transitionOut('잠시 후 · 호숫가 펍');}}},
+    {Function:{Apply:async function(){await transitionOut('1화 · 떠날 이유, 남을 이유');}}},
     'show scene cafe',
     {Function:{Apply:async function(){await transitionIn();}}},
-    '호숫가 펍. 문이 닫히자 바깥의 찬바람과 멀리서 들리던 마감 방송이 끊긴다.',
-    '잠시 말없이 외투를 정리한다. 창밖으로 호수의 불빛이 흔들린다. 탄산수 두 잔이 테이블에 놓이고 나서야 서안이 입을 연다.',
+    '호숫가 펍. 찬바람을 뒤로하고 문을 닫는다. 재킷을 벗어 의자에 걸자 서안도 맞은편에 앉는다.',
+    '창밖으로 호수의 불빛이 흔들린다. 탄산수 두 잔이 놓이자 서안이 내 쪽으로 잔 하나를 밀어준다.',
     'show character s smile at center',
-    '서안이 문에서 먼 쪽 의자를 빼놓고 맞은편에 앉는다.', 's 여기. 네 자리.',
-    '가방을 의자 밑으로 밀어 넣으며 한마디를 덧붙인다.', 's 오늘은.',
-    '서안이 니트 소매를 손목 위로 살짝 걷는다. 팔을 테이블에 편하게 올리고, 짧게 숨을 내쉰다.', callback('c1')
+    's 여기. 문에서 먼 쪽. 네 자리야.',
+    '서안이 니트 소매를 살짝 걷고, 가방을 의자 밑으로 밀어 넣는다.', callback('c1')
   ],
   C1_CALL_A: ['s 게이트 탈출 성공. 다음은 여기서 나가기. 그건 좀 천천히 해도 되고.', 'jump E01Talk'],
   C1_CALL_B: ['s 나도 그 생각 했다는 말. 그거 듣고 한잔하자고 하길 잘했다 싶었어.', 'jump E01Talk'],
   C1_CALL_C: ['s 나랑 같이 알아보자는 얘기야. 아직 계획은 없고. 지금부터 같이 짜면 안 돼?' , 'me 한 잔이 참가비야?', '서안이 참다가 결국 소리 내 웃는다. 잔을 내려놓고, 웃음이 멎기를 기다린다.', 's 응. 환불은 안 돼. 이미 한 모금 마셔서.', 'jump E01Talk'],
   E01Talk: [
-    's 그룹 공지 봤어? 다른 지역에 있던 체험 시설도 판대. 지난번에도 몇 군데 정리했잖아.', 'me 그럼 우리도 뭐 달라지나?',
+    's 공지에 매각 얘기 있었잖아. 다른 지역 체험 시설이래. 지난번에도 몇 군데 정리했고.', 'me 그럼 우리도 뭐 달라지나?',
     's 우리 쪽 얘기는 아직 없더라. 새로 해보자던 일은 또 미뤄졌고. 그건 내가 직접 들었어.',
     '서안이 잔에 맺힌 물방울을 손끝으로 한 번 밀어낸다.',
-    's 지난달 직원 설명회에서도 그랬잖아. 우리 파크에서 버는 돈만으로는 운영비랑 직원 월급을 다 감당하기 어렵다고.',
-    's 그래서 본사에 자금을 빌려서 운영하고 있다고 했고. 월급날엔 평소랑 똑같으니까 가끔 그 얘길 잊어버려.',
-    'me 그래도 월급은 계속 주잖아. 본사에서 자금을 보태주는 동안은 괜찮지 않을까?',
-    's 그랬으면 좋겠는데. 우리 자회사에 돈을 빌려주는 본사도 지금 사업장을 팔고 사람을 줄이고 있잖아.',
+    's 설명회 때 들었잖아. 우리 파크, 본사 돈 빌려서 버티는 거.',
+    's 근데 월급날엔 그걸 자꾸 잊어버려.',
+    'me 그래도 본사가 메워주는 동안은 괜찮겠지.',
+    's 그 본사가 지금 사업장 팔고 사람 줄이는 중이잖아.',
     'me 오늘 월급은 들어왔는데, 앞으로도 괜찮을지는 모르겠네.', 's 응. 새 시즌이어도 내가 맡을 일은 거의 그대로고.',
     '옆 테이블의 웃음소리가 낮아진다.',
     's 아침에 같은 시설 확인하고, 비슷한 민원 받고, 저녁엔 같은 순서로 마감하고. 요즘은 어제 일인지 지난주 일인지도 헷갈려.',
+    'me 나는 오늘 이용권 날짜 바꿔달라는 전화만 세 번 받았어. 셋 다 같은 안내로 끝났고.',
     '서안이 컵을 내려놓는다.', 's 그러다 이력서를 열면 고객 응대, 운영 관리… 뻔한 말만 쓰게 돼. 분명 바쁘게 일했는데, 언제 뭘 해결했는지 잘 기억도 안 나고.',
     'me 그래서 나가고 싶은 거야?', 's 응. 다른 일은 해보고 싶어. 근데 이사까지 생각하면 좀 막막해서.', '잠깐 말을 멈추고 창밖을 본다.',
     's 근데 내 고향 온호시는 좋아해. 퇴근하면 엄마 가게 들러서 반찬 하나 집어오고. 회사 바꾸려다 그런 일상까지 다 바뀔까 봐 망설여져.',
@@ -125,10 +127,10 @@ const CP_STORY = {script: {
     'me 여는 데까지는 갔네.',
     's 응. 설치는 내가 알려줄게. 대신 내 얘기할 때 좀 들어줘. 혼자 쓰면 또 괜히 멋있는 말 고르고 있을 것 같아.',
     '휴대폰 화면 옆에 손가락을 두고, 서안이 나를 본다.',
-    's 아까 새 일을 해보고 싶다고 했잖아. 난 같은 마감만 반복하는 것부터 바꾸고 싶어.',
+    's 나 아까 새 일 해보고 싶다고 했잖아. 같은 마감만 반복하는 것부터 바꾸고 싶어.',
     's 누구는 연봉을 더 받고 싶을 수도 있고, 팀장 같은 역할을 맡아보고 싶을 수도 있겠지. 야근을 줄이는 게 먼저일 수도 있고.',
     's 대신 지금 사는 온호시를 떠나고 싶은 건 아니야. 엄마 가게도 가깝고, 퇴근하고 걸어서 집에 가는 것도 좋거든.',
-    'me 회사에서 바꾸고 싶은 거랑, 지금 생활에서 지키고 싶은 걸 나눠보자는 거네.',
+    'me {{selfReason}}',
     's 응. 지금은 그중에 하나만 얘기해보자. 지원할 회사는 우리 조건 좀 정리하고, 다음에 같이 찾아볼까?',
     'jump TutorialStart'
   ],
@@ -146,8 +148,8 @@ const CP_STORY = {script: {
     's 평소 쓰는 쪽으로 골라봐. ChatGPT용이랑 Claude용 파일이 달라. 두 개 다 설치할 필요는 없어.',
     's 고른 다음에 그 서비스용 ZIP 받는 데부터 보자. 지금 설치하지 않고 사용법만 봐도 괜찮아.',
     {Choice:{Dialog:'어느 쪽을 평소에 쓰나요?',
-      ChatGPT:{Text:'ChatGPT로 시작',Do:'jump TutorLinear',onChosen:function(){bridge.service='ChatGPT';bridge.wizardStep=0;}},
-      Claude:{Text:'Claude로 시작',Do:'jump TutorLinear',onChosen:function(){bridge.service='Claude';bridge.wizardStep=0;}}
+      ChatGPT:{Text:'ChatGPT로 시작',Do:'jump TutorLinear',onChosen:function(){bridge.service=bridge.guideService='ChatGPT';localStorage.setItem('CPPreferredService','ChatGPT');bridge.wizardStep=0;}},
+      Claude:{Text:'Claude로 시작',Do:'jump TutorLinear',onChosen:function(){bridge.service=bridge.guideService='Claude';localStorage.setItem('CPPreferredService','Claude');bridge.wizardStep=0;}}
     }}
   ],
   TutorLinear: ['s 하나씩 같이 해보자. 파일 받는 것부터.', 'jump TutorRequest'],
@@ -199,7 +201,7 @@ const CP_STORY = {script: {
   TutorRequest: [
     'show character s listening at center',
     's 지원할 회사부터 정할 필요는 없대. 난 지금 일에서 뭘 바꾸고 싶은지, 그거부터 정리해보려고.',
-    '서안이 새 대화에 요청을 적는다. 무엇을 바꾸고 싶은지, 무엇은 지키고 싶은지. 질문은 한 번에 하나씩 해달라는 말도 덧붙인다.',
+    '서안의 손가락이 입력창 위에서 잠깐 멈췄다가, 다시 움직인다.',
     's 처음부터 내 얘기를 잘 써야 할 줄 알았거든. 근데 질문부터 해달라고 해도 되네.',
     'me 그럼 뭘 얘기하면 돼?',
     's 지금 하는 일부터. 우리한텐 너무 익숙해서 설명 안 해도 알 것 같은 것들 있잖아.',
@@ -207,7 +209,7 @@ const CP_STORY = {script: {
   ],
   TutorContext: [{Conditional:{Condition:function(){return bridge.service;},ChatGPT:'jump TutorChatGPTContext',Claude:'jump TutorClaudeContext'}}],
   TutorChatGPTContext: [
-    'CareerPilot과의 대화에서 서안이 자신의 상황을 설명한 부분을 함께 읽는다.',
+    '서안이 자기가 쓴 문장을 소리 없이 한 번 읽는다.',
     's 난 운영 업무 7년째라고 적었어. 시설 확인하고, 민원 받고, 마감하고. 마감 때 문제 나면 내가 처리하는 것도.',
     'me 매일 하는 일부터 얘기했네.',
     's 응. 그리고 새로운 운영안을 직접 만들어보고 싶다고. 대신 온호시에 계속 살고 싶고, 준비하는 동안 월급은 끊기면 안 된다고.',
@@ -224,7 +226,7 @@ const CP_STORY = {script: {
     'jump TutorConditions'
   ],
   TutorConditions: [
-    '지금까지 이야기한 내용이 짧게 정리된다. 서안은 바꾸고 싶은 일에 적힌 문장을 천천히 읽는다.',
+    '서안이 화면의 한 줄을 손끝으로 짚는다.',
     's 맞아. 난 새 운영안을 기획하고 시험하는 경험을 늘리고 싶은 거였어. 회사 이름부터 바꾸고 싶었던 게 아니라.',
     'me 평소엔 그냥 다른 일 하고 싶다고만 했잖아.',
     'show character s smile at center',
@@ -232,7 +234,7 @@ const CP_STORY = {script: {
     'jump TutorKeep'
   ],
   TutorKeep: [
-    '그 아래에는 지키고 싶은 생활과 아직 정하지 않은 조건이 따로 남아 있다.',
+    '서안이 화면을 조금 내려 읽다가 고개를 끄덕인다.',
     'me 그럼 이사부터 정하는 게 아니라, 맡을 일부터 바꿔보고 싶은 거네.',
     's 응. 엄마 가게 가까이 살고 싶은 것도, 준비하는 동안 월급 받고 싶은 것도 같이 적혀 있네.',
     'show character s thoughtful at center',
@@ -262,7 +264,7 @@ const CP_STORY = {script: {
     example: {Text:'서안의 예시 보기', Do:'jump E03Example'},
     skip: {Text:'지금은 이야기 계속', Do:'jump E04'}
   }}],
-  E03Actual: ['내 준비에서 서비스와 요청을 골라보세요. 돌아왔을 때의 상태는 직접 표시할 수 있어요. 지금은 이야기를 계속해도 됩니다.', 'jump E04'],
+  E03Actual: ['s 이번엔 네 이야기로 해보자. 네가 쓰는 {{bridge.service}}에서 바로 시작해 볼까?', 'jump E04'],
   E03Example: [
     's 이직 준비를 시작하고 싶어. 어디서부터 말해야 할지 모르겠어.',
     'ai 현재 어떤 일을 하고 있는지 짧게 알려주시겠어요?',
@@ -275,7 +277,7 @@ const CP_STORY = {script: {
   E04: [
     '휴대폰을 내려놓는다. 서안은 컵을 손바닥으로 굴리다가 내가 고개를 들자 손을 멈춘다.',
     's 이거 생각보다 오래 걸리겠는데.', 'me 이직 준비?', 's 뭘 바꾸고 싶은지 말하는 거. 회사 이름만 바꾸면 끝인 줄 알았더니.',
-    '서안이 냅킨 모서리를 접다가 내 쪽을 본다. 근무 중에는 바쁘게 지나치던 얼굴이, 오늘은 고개만 돌리면 바로 옆에 있다.', callback('c2')
+    '서안이 냅킨 모서리를 접다가 내 쪽을 본다. 근무 중엔 무전기 너머로만 듣던 목소리가, 오늘은 이렇게 가깝다.', callback('c2')
   ],
   C2_CALL_A: ['s 시간만 갈까 봐 무섭다고 했잖아. 내 것도 한 줄이야. 서로 뭐 했는지 물어봐주자. 웃지는 말고.', 'jump Promise'],
   C2_CALL_B: ['s 월급은 계속 받자. 둘 다. 사직서 쓰고 여기서 한 잔 값으로 눈치 보지 말고.', 'me 동맹 규칙 1번?', 's 응. 일단 사직서는 아직 보내지 마. 면접 얘기할 때까진.', 'jump Promise'],
@@ -286,7 +288,7 @@ const CP_STORY = {script: {
   C3_B: ['서안이 내 쪽을 본다. 대답이 조금 늦는다.', 's 그럼 회사 얘기 없을 때도 연락해도 되는 거네.', '서안이 컵을 들었다가 다시 내려놓는다.', 's 알았어. 그럼 내가 먼저 할게. 회사 얘기 없는 날에도.', 'jump E05'],
   C3_C: ['서안이 내 얼굴을 본다. 이번에는 농담을 고르는 표정이 아니다.', 's 사실 그 말, 누가 해줬으면 했어.', 'me 일단 그렇게 생각해보자.', 's 응. 나중에 내가 또 한꺼번에 생각하면 지금 말 다시 해줘. 네가 말하면 좀 믿어져.', 'jump E05'],
   E05: [
-    '서안이 휴대폰을 집는다. 화면이 켜지면서 달력이 잠깐 보인다.', 'phone 면접 — 내일 / 수도권 사무실',
+    '서안이 휴대폰을 집는다. 화면이 켜지면서 내일 일정 알림이 잠깐 보인다.', 'phone 면접 — 내일 / 수도권 사무실',
     '서안은 화면을 뒤집으려다 멈춘다.', 'me 내일?', 's 응.', 'me 벌써 지원했어?',
     's 응. 공고 닫히기 전에. 보내고 나서야 실감 났어.', '잠깐 정적이 흐른다. 서안이 시선을 내렸다가 다시 올린다.',
     's 이거 말하려고 오늘 보자고 했어. 잔에 얼음 녹을 때까지 딴 얘기만 했네.',
@@ -303,7 +305,7 @@ const CP_STORY = {script: {
     'hide character s', 'show scene home',
     {Function:{Apply:async function(){await transitionIn();}}},
     '집. 외투를 걸고 작은 스탠드만 켠다. 펍의 말소리 대신 냉장고 돌아가는 소리가 들린다.',
-    '가방을 내려놓고 앉자, 서안에게 새 메시지가 왔다.',
+    '가방을 내려놓고 앉자, 서안에게서 새 메시지가 왔다.',
     'msg 집에 잘 들어갔어? 나도 도착.', 'msg 아까 네 자리, 문 안쪽으로 잡길 잘했네. 집에 와서야 손이 따뜻해졌어.', 'msg 오늘 그 얘기 들어줘서 고마워.', callback('c3')],
   C3_CALL_A: ['msg 막히면 말하라며. 벌써 쓰게 됐네. 내 이력서 한 줄만 봐줄래?', 'jump E05Last'],
   C3_CALL_B: ['msg 회사 얘기 없어도 연락해도 된다고 해놓고 첫 연락이 이력서네. 한 줄만 봐줘.', 'jump E05Last'],
@@ -322,12 +324,17 @@ const CP_STORY = {script: {
     'msg 너도 오늘 얘기한 거 잊기 전에 한 줄만 남겨놔.',
     'msg 그리고…',
     'msg 집에 도착했다는 답장도 좀 줘.',
-    '1화에서 함께 한 것: CareerPilot을 설치한 서비스에서 첫 요청을 보내고, 질문에 내 업무와 생활을 짧게 이야기하기. 오늘 배운 요청 다시 보기에서 그 문장을 복사할 수 있어요.',
-    '내 준비의 사용 카드는 필요할 때 꺼내는 요청 모음이에요. 예를 들어 이력서를 쓸 땐 경험 정리, 면접이 잡히면 면접 준비를 열어요. 복사한 요청을 내 CareerPilot 대화에 보내고, 질문에 내 경험으로 답하면 됩니다.',
-    '카드를 모두 끝내야 하는 숙제는 아니에요. 지금 필요한 카드 하나만 고르고, 언제든 같은 이야기 장면으로 돌아올 수 있어요.',
-    'jump Finish'
+    {Choice:{Dialog:'답장을 보낸다.',
+      A:{Text:'도착했어. 내일 면접 잘 봐.',Do:'jump ReplyA'},
+      B:{Text:'응. 끝나면 연락해. 기다릴게.',Do:'jump ReplyB'},
+      C:{Text:'도착했어. …돌아오는 버스 몇 시 거야?',Do:'jump ReplyC'}
+    }}
   ],
-  Finish: ['1화 끝 — 오늘 해볼 수 있는 것: 내 CareerPilot에 첫 요청을 보내고, 바꿀 업무 조건 또는 지킬 생활 조건 하나를 이야기하기. 다음 화에서는 매일 한 일을 경력으로 꺼내봅니다.']
+  ReplyA:['replymsg 도착했어. 내일 면접 잘 봐.','msg 응. 네가 들어줬으니까 내 얘기 좀 해볼게. 잘 자.','jump EndQuiet'],
+  ReplyB:['replymsg 응. 끝나면 연락해. 기다릴게.','msg 기다린다고 하니까… 끝나자마자 연락해야겠다. 잘 자.','jump EndQuiet'],
+  ReplyC:['replymsg 도착했어. …돌아오는 버스 몇 시 거야?','msg 여덟 시 반. 왜, 마중 나오게? …내일 연락할게.','jump EndQuiet'],
+  EndQuiet:[{Function:{Apply:async function(){await transitionOut('내일도, 연락하기로 했다.');}}},{Function:{Apply:async function(){await transitionIn();}}},'jump Finish'],
+  Finish:['1화 끝']
 }};
 
 // Author-directed expression beats. A pose stays in place between beats;
@@ -337,7 +344,7 @@ const CP_EXPRESSION_BEATS={
   E01:[['여기.','smile'],['오늘은.','shy']],
   C1_CALL_C:[['응. 환불은','burst']],
   C3_B:[['그럼 회사','shy'],['알았어.','shy']],
-  E01Talk:[['그룹 공지','serious'],['아침에 같은','neutral'],['그러다 이력서','thoughtful'],['근데 내 고향','thoughtful']],
+  E01Talk:[['공지에 매각','serious'],['설명회 때','serious'],['근데 월급날엔','avert'],['아침에 같은','neutral'],['그러다 이력서','thoughtful'],['근데 내 고향','thoughtful']],
   E02:[['이서 언니.','smile'],['예전에 언니가','thoughtful'],['응. 설치는 내가','avert'],['아까 새 일을','neutral']],
   TutorialStart:[['거기선 화면','smile'],['…이 정도면','avert']],
   TutorRequest:[['난 처음부터','listening'],['매일 마감','serious']],
@@ -349,7 +356,8 @@ const CP_EXPRESSION_BEATS={
 for(const [label,lines] of Object.entries(CP_STORY.script)){
   let expression=null;
   CP_STORY.script[label]=lines.flatMap((line,index)=>{
-    if(typeof line!=='string')return [line];
+    // E03Actual keeps its v0.11.9 statement offsets for existing saves.
+    if(typeof line!=='string'||label==='E03Actual')return [line];
     if(line.startsWith('show character s ')){expression=line.split(' ')[3];return [line];}
     if(!line.startsWith('s '))return [line];
     const beat=CP_EXPRESSION_BEATS[label]?.find(([prefix])=>line.slice(2).startsWith(prefix));
@@ -359,4 +367,9 @@ for(const [label,lines] of Object.entries(CP_STORY.script)){
     const duo=label==='Start'&&index>lines.indexOf('show character n front at left')&&index<lines.indexOf('hide character n');
     return ['show character s '+mood+' at '+(duo?'right':'center'),line];
   });
+}
+
+for(const [origin,key] of [['Start','C1'],['E01Talk','C2'],['Promise','C3']]){
+ const choice=CP_STORY.script[origin].find(line=>line?.Choice).Choice;
+ for(const option of ['A','B','C'])CP_STORY.script[key+'_'+option].unshift('me '+choice[option].Text);
 }

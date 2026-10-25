@@ -56,4 +56,4 @@
 
 [Emily Short의 Mask of the Rose 작법 글](https://emshort.blog/2023/11/22/dialogue-expressiveness-in-mask-of-the-rose/)은 대사에서 플레이어의 표현 폭을 늘리는 설계와 상황별 선택의 다양성을 설명한다. 우리는 복잡한 성격·의상 시스템을 도입하지 않고, 같은 두 버튼 구조에서도 회차마다 ‘듣는 방식/함께 보내는 시간/결정 앞에서 할 말’이 달라지게 편집한다.
 
-미연시 전용의 검증된 공식이 있다고 주장하지 않는다. 사례와 이 원칙을 우리 예산·고정 사건에 맞춰 정리한 실무 작법은 [DIALOGUE_STYLE.md](DIALOGUE_STYLE.md), 외형·화면 적용은 [VISUAL_DIRECTION.md](VISUAL_DIRECTION.md), 개발 전 남은 일은 [BETA_CONTEXT.md](BETA_CONTEXT.md)다.
+미연시 전용의 검증된 공식이 있다고 주장하지 않는다. 사례와 이 원칙을 우리 예산·고정 사건에 맞춰 정리한 실무 작법은 [DIALOGUE_STYLE.md](DIALOGUE_STYLE.md), 외형·화면 적용은 [VISUAL_DIRECTION.md](VISUAL_DIRECTION.md), 개발 전 남은 일은 [BETA_RUNBOOK.md](BETA_RUNBOOK.md)다.
