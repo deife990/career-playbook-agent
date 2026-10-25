@@ -1,0 +1,112 @@
+{
+  "name": "프롤로그·1화 이어서",
+  "date": "2026-10-24T01:15:30.898+09:00",
+  "image": "office",
+  "game": {
+    "history": {
+      "label": [
+        {
+          "label": "TutorNext",
+          "step": 0
+        }
+      ],
+      "music": [],
+      "sound": [],
+      "voice": [],
+      "scene": [
+        "show scene office"
+      ],
+      "background": [
+        "show background office"
+      ],
+      "sceneElements": [
+        []
+      ],
+      "sceneState": [
+        {
+          "characters": [],
+          "images": [],
+          "textBoxMode": "adv"
+        }
+      ],
+      "character": [
+        {
+          "statement": "show character s neutral at center",
+          "previous": null
+        }
+      ],
+      "characterLayer": [],
+      "image": [],
+      "particle": [],
+      "video": [],
+      "canvas": [],
+      "nvl": [],
+      "clear": [],
+      "choice": [],
+      "jump": [
+        {
+          "source": {
+            "label": "Opening",
+            "step": 1
+          },
+          "destination": {
+            "label": "TutorNext",
+            "step": 0
+          }
+        }
+      ],
+      "conditional": []
+    },
+    "state": {
+      "step": 1,
+      "label": "TutorNext",
+      "music": [],
+      "sound": [],
+      "voice": [],
+      "scene": "show scene office",
+      "background": "show background office",
+      "characters": [
+        "show character s neutral at center"
+      ],
+      "characterLayers": [],
+      "images": [],
+      "particles": "",
+      "videos": [],
+      "canvas": [],
+      "textboxHidden": false
+    },
+    "storage": {
+      "c1": null,
+      "c2": null,
+      "c3": null,
+      "bridge": {
+        "schema": "ep01-script-v10",
+        "panel": false,
+        "view": "cards",
+        "card": "first",
+        "requestIndex": 0,
+        "service": "ChatGPT",
+        "detail": false,
+        "report": null,
+        "guideStep": 0,
+        "guideService": "ChatGPT",
+        "installStep": 0,
+        "wizardStep": 4,
+        "deferredTutorial": null
+      },
+      "selfReason": "나도 회사는 바꾸고 싶은데, 지금 생활까지 전부 바뀔까 봐 망설여져.",
+      "log": [
+        {
+          "label": "Opening",
+          "step": 1,
+          "text": "동료\n오늘도 수고하셨습니다!!"
+        },
+        {
+          "label": "TutorNext",
+          "step": 1,
+          "text": "서안\n오늘은 여기까지 적어둘래. 새 운영 경험은 늘리고, 이 동네에서 사는 건 지키기."
+        }
+      ]
+    }
+  }
+}

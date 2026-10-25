@@ -3,7 +3,9 @@ const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),asse
 const root=path.resolve(__dirname,'..'),sourceRoot=path.resolve(root,'..');
 const read=name=>fs.readFileSync(path.join(root,name),'utf8');
 const story=vm.runInNewContext(read('story.js')+';CP_STORY').script;
-const cards=vm.runInNewContext(read('cards.js')+';CP_CARDS');
+const requestData=read('request-data.js');
+const firstRequest=vm.runInNewContext(requestData+';FIRST_REQUEST');
+const cards=vm.runInNewContext(requestData+read('cards.js')+';CP_CARDS');
 const pilot=fs.readFileSync(path.join(sourceRoot,'PILOT_SCRIPT.md'),'utf8');
 const side=fs.readFileSync(path.join(sourceRoot,'SIDE_STORIES.md'),'utf8');
 const originalLines=[...pilot.matchAll(/\*\*나:\*\* “([^”]+)”/g)].map(m=>m[1]);
@@ -12,7 +14,9 @@ const actualLines=Object.values(story).flat().filter(s=>typeof s==='string'&&s.s
 const actualChoices=['Start','E01Talk','Promise'].flatMap(label=>Object.values(story[label].find(s=>s.Choice).Choice).filter(s=>s&&typeof s==='object').map(s=>s.Text));
 // User-approved V04: explain fictional parent funding before this response.
 const approvedPubTerms=text=>text.replaceAll('커피가 참가비야?','한 잔이 참가비야?').replaceAll('그래도 월급은 계속 주잖아. 본사에서 자금 보태준다는 얘기도 있던데.','그래도 월급은 계속 주잖아. 본사에서 자금을 보태주는 동안은 괜찮지 않을까?').replaceAll('우리가 확실히 아는 건 입금된 것뿐이네.','오늘 월급은 들어왔는데, 앞으로도 괜찮을지는 모르겠네.');
-for(const line of originalLines)assert.ok(actualLines.includes(approvedPubTerms(line)),'Original protagonist line lost: '+line);
+const reviewAliases=JSON.parse(read('review/v011/dialogue-aliases.json'));
+const reviewLine=text=>(reviewAliases['me '+text]||'me '+text).slice(3);
+for(const line of originalLines)assert.ok(actualLines.includes(reviewLine(approvedPubTerms(line))),'Original protagonist line lost: '+line);
 assert.ok(actualLines.length>=originalLines.length);
 assert.deepEqual([...actualChoices].sort(),originalChoices.sort());
 assert.equal(originalLines.length+originalChoices.length,34);
@@ -21,7 +25,15 @@ for(const list of Object.values(story))for(const statement of list){
   for(const command of commands)if(command.startsWith('jump '))assert.ok(story[command.slice(5)],'Missing label: '+command);
 }
 const firstRequests=[...pilot.matchAll(/^> (CareerPilot[^\n]+)/gm)].map(m=>m[1]);
-assert.deepEqual([...cards[0].requests],firstRequests);
+assert.equal(cards[0].requests[0],firstRequest);
+assert.equal(cards[0].requests[1],firstRequests[1]);
+// FIRST_REQUEST is the single editorial authority for the first request.
+const tutorial=vm.runInNewContext(requestData+read('tutorial.js')+';CP_TUTORIAL');
+assert.equal(tutorial.services.ChatGPT[0].reading,firstRequest);
+assert.equal(tutorial.services.Claude[0].reading,'/careerpilot '+firstRequest);
+for(const name of ['cards.js','tutorial.js','lesson-ui.js','linear-tutorial.js']){assert.ok(read(name).includes('FIRST_REQUEST'),name+' must consume FIRST_REQUEST');assert.ok(!read(name).includes('CareerPilot으로 이직을 준비하고 싶어.'),name+' duplicates first request');}
+assert.equal(cards[0].requests.length,5);
+for(const fragment of ['이직할지부터','면접이 잡혔어','경력 기술 한 줄'])assert.ok(cards[0].requests.some(r=>r.includes(fragment)));
 const sideRequests=cards.slice(1).flatMap(c=>[...c.requests]);
 for(const request of sideRequests)assert.ok(side.includes('“'+request+'”'),'Request differs from source: '+request);
 assert.equal(cards.slice(1).map(c=>c.id).join(','),Array.from({length:12},(_,i)=>'S'+String(i+1).padStart(2,'0')).join(','));

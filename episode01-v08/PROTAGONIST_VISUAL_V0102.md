@@ -22,4 +22,4 @@
 첫 사무실 인사 장면의 두 사람은 동료 NPC다. 주인공이 등장하는 컷으로 오인해 바꾸지 않는다. 손만 보이는 휴대폰 컷에는 새로운 얼굴·머리 단서가 없다. 예전 버전의 원화와 캡처는 이력으로 보관하며 실제 게임의 참조만 교체한다.
 
 생성 방식은 내장 image_gen 편집. 편집 대상과 기준 원화를 각 요청에 함께 제공했다. 전체 요청·출력·참조는 assets/production-v0102.json에 보관한다.
-[실행 빌드](README.md) / 검증: review/v0102-protagonist-results.json.
+[장면별 원화 비교](README.md) / 검증: review/v0102-protagonist-results.json.

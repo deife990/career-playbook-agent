@@ -42,7 +42,7 @@ const CP_INSTALL_UI=(()=>{
     main.append(e('div','gpt-chat-heading','ChatGPT  ⌄'));
     const welcome=e('div','gpt-new-chat','어디서부터 시작할까요?');main.append(welcome);
     const input=e('div','gpt-install-composer');
-    const chip=e('span','gpt-composer-chip','C  CareerPilot');focus(chip,1);input.append(chip,e('p','',index===5?'CareerPilot으로 이직을 준비하고 싶어. 먼저 내 현재 상황부터 질문 하나씩 해줘.':'메시지를 입력하세요'));
+    const chip=e('span','gpt-composer-chip','C  CareerPilot');focus(chip,1);input.append(chip,e('p','',index===5?'이직을 준비하고 싶어. 먼저 내 현재 상황부터 질문 하나씩 해줘.':'메시지를 입력하세요'));
     const controls=e('div','gpt-composer-controls');controls.append(e('span','','＋'),e('span','','↑'));input.append(controls);main.append(input);
     if(index===4){const mention=e('div','gpt-mention-result');mention.append(e('small','','@careerpilot'),e('strong','','C  CareerPilot'),e('span','','선택하면 입력창에 이름이 붙어요'));main.insertBefore(mention,input);}
     caption.textContent=index===4?'새 대화에서 @careerpilot을 찾아 선택해요. 입력창에 CareerPilot 이름이 붙으면 준비됐어요.':'CareerPilot을 선택한 입력창에 요청을 적고 전송해요.';

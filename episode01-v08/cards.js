@@ -4,8 +4,11 @@ const CP_CARDS = [
     "id": "first",
     "title": "바꾸고 싶은 것, 지키고 싶은 것",
     "requests": [
-      "CareerPilot으로 이직을 준비하고 싶어. 바꾸고 싶은 점과 지키고 싶은 조건을 정리하고 싶어. 먼저 내 현재 상황부터 질문 하나씩 해줘.",
-      "CareerPilot으로 준비하던 내용을 이어가자. 지금까지 확인한 내용을 바탕으로, 바꾸고 싶은 점과 지키고 싶은 조건 중 아직 불분명한 것 하나를 같이 정리해줘."
+      FIRST_REQUEST,
+      "CareerPilot으로 준비하던 내용을 이어가자. 지금까지 확인한 내용을 바탕으로, 바꾸고 싶은 점과 지키고 싶은 조건 중 아직 불분명한 것 하나를 같이 정리해줘.",
+      "CareerPilot으로 이직할지부터 고민해보고 싶어. 지금 회사에서 바꾸고 싶은 점과 지키고 싶은 생활 조건을 질문 하나씩 하며 정리해줘.",
+      "CareerPilot으로 면접을 준비하고 싶어. 이미 지원했고 면접이 잡혔어. 지원한 직무와 내 경험부터 질문 하나씩 해줘.",
+      "CareerPilot으로 경력 기술 한 줄을 써보고 싶어. 어떤 일을 했는지부터 질문 하나씩 해서 구체적인 경험을 꺼내줘."
     ],
     "fields": {
       "필요한 입력": "현재 상황과 바꾸고 싶은 것 또는 지키고 싶은 조건 하나. 이력서가 없어도 됩니다. 이미 준비 중이면 그 대화에서 이어가세요.",
@@ -197,3 +200,7 @@ const CP_CARDS = [
     ]
   }
 ];
+
+// Register the existing preparation cards without duplicating or changing their text.
+for(const card of CP_CARDS)card.requests.forEach((text,index)=>{REQUESTS[`CARD_${card.id}_${index}`]=text;});
+Object.freeze(REQUESTS);

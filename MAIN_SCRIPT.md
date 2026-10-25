@@ -14,7 +14,7 @@
 | 6화 | [EP06_SCRIPT.md](EP06_SCRIPT.md) | C12~C13, 마지막 퇴근과 두 관계 후일담 |
 | 언제든 | [SIDE_SCENES_PLAY.md](SIDE_SCENES_PLAY.md) | S01~S12, 상황별 메시지·선택·가상 결과·복귀 |
 
-현재 제목·캐스트·대사는 [미연시 조사·적용](ROMANCE_RESEARCH.md)과 [대사 기준](DIALOGUE_STYLE.md)을 반영했다. NPC는 미형인 성인 여성 네 명, 핵심 상대는 서안 한 명이다. 시각 제작은 [비주얼 방향](VISUAL_DIRECTION.md), 착수 순서는 [개발 준비](BETA_CONTEXT.md)를 따른다.
+현재 제목·캐스트·대사는 [미연시 조사·적용](ROMANCE_RESEARCH.md)과 [대사 기준](DIALOGUE_STYLE.md)을 반영했다. NPC는 미형인 성인 여성 네 명, 핵심 상대는 서안 한 명이다. 시각 제작은 [비주얼 방향](VISUAL_DIRECTION.md), 착수 순서는 [개발 준비](BETA_RUNBOOK.md)를 따른다.
 
 ## 읽기와 조립 규칙
 
@@ -48,4 +48,4 @@ C1~C3은 기존 1화 선택을 보존한다. C4~C12는 직후 반응과 회차 �
 
 ## 제작자에게 넘길 자료
 
-[화면과 흐름](EP01_OPENING_STORYBOARD.md), [베타 진행 묶음](BETA_RUNBOOK.md), [개정 검수 기록](ROMANCE_RESEARCH.md)을 함께 사용한다. 현재 분량·재미·학습 효과의 실측값은 없다. 전체 원고를 썼다는 이유로 전편을 조립하지 않는다. 1화 문서 편집 뒤 얼굴·화면·한 장면 기술 확인을 거친다. 동료 읽기 검증은 이번 일정에서 제외했으며 [현재 제작 계획](BETA_CONTEXT.md)을 우선한다.
+[화면과 흐름](episode01-v08/README.md), [베타 진행 묶음](BETA_RUNBOOK.md), [개정 검수 기록](ROMANCE_RESEARCH.md)을 함께 사용한다. 현재 분량·재미·학습 효과의 실측값은 없다. 전체 원고를 썼다는 이유로 전편을 조립하지 않는다. 1화 문서 편집 뒤 얼굴·화면·한 장면 기술 확인을 거친다. 동료 읽기 검증은 이번 일정에서 제외했으며 [현재 제작 계획](BETA_RUNBOOK.md)을 우선한다.

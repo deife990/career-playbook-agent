@@ -32,4 +32,4 @@
 
 - [기본](assets/character-studies/seoan-a-expressions-v01/01-neutral.png) · [옅은 웃음](assets/character-studies/seoan-a-expressions-v01/02-soft-smile.png) · [시선 회피](assets/character-studies/seoan-a-expressions-v01/03-averted-gaze.png) · [진지함](assets/character-studies/seoan-a-expressions-v01/04-serious.png)
 - [실제 생성 프롬프트 4개](assets/character-studies/seoan-a-expressions-v01/prompts.json) · [파일 확인 기록](assets/character-studies/seoan-a-expressions-v01/asset-check.json)
-- [이전 A/B 비교](SEOAN_VISUAL_REVIEW.md) · [비주얼 기준](VISUAL_DIRECTION.md) · [제작 일정](BETA_CONTEXT.md) · [1화 조립표](EP01_OPENING_STORYBOARD.md)
+- [이전 A/B 비교](SEOAN_VISUAL_REVIEW.md) · [비주얼 기준](VISUAL_DIRECTION.md) · [제작 일정](BETA_RUNBOOK.md) · [1화 조립표](EP01_OPENING_STORYBOARD.md)
