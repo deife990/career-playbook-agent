@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-21",
+  "tool": "image_gen.imagegen",
+  "assets": [
+    {
+      "asset": "seoan-shy-v5.png",
+      "source": "/Users/jhwang/.codex/generated_images/01a153be-2bff-7660-8445-937f58c5f2ca/exec-94bd238c-60ae-4e9f-9fc8-41f0bc51f935.png",
+      "reference": "seoan-front.png",
+      "prompt": "Use case: identity-preserve. Edit target: the provided transparent visual-novel sprite of Seoan, adult Korean woman age31. Change ONLY facial expression as described. Critical consistency: copy the original exact head outline, upright head angle, face identity, eye shape, chestnut bob, earrings, teal zip jacket over ivory knit, arms down, identical body pose, body scale, shoulder width, waist crop, original canvas1024x1536 and subject pixel placement. Do not redraw clothing or introduce hand gestures. Preserve the original delicate soft K-webtoon/anime hybrid brush texture, line weight, skin rendering and soft neutral warm illumination. NO new directional light, glossy skin, halo, color grading, stronger outlines, extra contrast. The face should feel like one animation cel changed on the same illustration. Actual transparent background, isolated single character, no text, no shadow outside character. Expression: A distinctly shy, affectionate smile after accidental eye contact: warm natural pink blush across cheeks, eyes lowered slightly, eyebrows relaxed, lips gently pressed into an unmistakably happy closed-mouth smile. More bashful and sweeter than the neutral reference. Head stays upright and frontal. Lock every non-face pixel as closely as possible.",
+      "transparent": true,
+      "visuallyReviewed": true
+    },
+    {
+      "asset": "seoan-burst-v5.png",
+      "source": "/Users/jhwang/.codex/generated_images/01a153be-2bff-7660-8445-937f58c5f2ca/exec-79616be4-f66a-4a72-b79f-26a753cca474.png",
+      "reference": "seoan-front.png",
+      "prompt": "Use case: identity-preserve. Edit target: the provided transparent visual-novel sprite of Seoan, adult Korean woman age31. Change ONLY facial expression as described. Critical consistency: copy the original exact head outline, upright head angle, face identity, eye shape, chestnut bob, earrings, teal zip jacket over ivory knit, arms down, identical body pose, body scale, shoulder width, waist crop, original canvas1024x1536 and subject pixel placement. Do not redraw clothing or introduce hand gestures. Preserve the original delicate soft K-webtoon/anime hybrid brush texture, line weight, skin rendering and soft neutral warm illumination. NO new directional light, glossy skin, halo, color grading, stronger outlines, extra contrast. The face should feel like one animation cel changed on the same illustration. Actual transparent background, isolated single character, no text, no shadow outside character. Expression: She has just burst into a joyful spontaneous laugh: eyes shut in soft upward crescents, brows relaxed, mouth open in a clearly visible hearty laugh showing upper teeth and a natural dark mouth interior. Expressive adult laughter, attractive and warm, not a caricature, not screaming. Keep head upright, shoulders and arms exactly unchanged. This must be much stronger than a small smiling expression.",
+      "transparent": true,
+      "visuallyReviewed": true
+    },
+    {
+      "asset": "home-night-v5.png",
+      "source": "/Users/jhwang/.codex/generated_images/01a153be-2bff-7660-8445-937f58c5f2ca/exec-ed7a9438-cb23-4965-a7f5-93aa37a207bc.png",
+      "reference": "lake-pub-night.png",
+      "prompt": "Create a NEW 16:9 wide visual novel BACKGROUND, borrowing the delicate cinematic K-webtoon/anime hybrid painted finish and refined texture of the provided reference, but a COMPLETELY DIFFERENT LOCATION: the protagonist's modest apartment living room at night in a small Korean city, after returning home from a lakeside pub. No people. Soft warm desk lamp on a small wooden desk at left, unmarked closed notebook, blank dark laptop screen, simple couch and a folded throw, doorway and shoes near entrance at right. Cool navy city-night window in middle distance, curtains. Cozy lived-in inexpensive apartment, quiet intimate reflective atmosphere. Eye-level composition with unobstructed center for a handheld phone UI foreground later; room visibly unlike a restaurant. No bar, beer, pub booth, wineglass, ferris wheel, real logos, readable text, portraits, fixed protagonist identity. No phone in the image. Landscape full bleed, no borders.",
+      "transparent": false,
+      "visuallyReviewed": true
+    }
+  ]
+}

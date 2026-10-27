@@ -1,0 +1,774 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "service": "ChatGPT",
+      "width": 1280,
+      "height": 720,
+      "step": "I01",
+      "images": [
+        {
+          "src": "assets/service-logos/openai.svg",
+          "loaded": true
+        },
+        {
+          "src": "assets/service-logos/claude.svg",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "service": "ChatGPT",
+      "width": 1280,
+      "height": 720,
+      "step": "I02",
+      "images": [
+        {
+          "src": "assets/service-logos/openai.svg",
+          "loaded": true
+        },
+        {
+          "src": "assets/service-logos/claude.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:8921/assets/guide-chatgpt.webp",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:8921/assets/guide-chatgpt.webp",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "service": "ChatGPT",
+      "width": 1280,
+      "height": 720,
+      "step": "I03",
+      "images": [
+        {
+          "src": "assets/service-logos/openai.svg",
+          "loaded": true
+        },
+        {
+          "src": "assets/service-logos/claude.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:8921/assets/reference-ui/careerpilot-chatgpt-installed-20261005.jpg",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "service": "ChatGPT",
+      "width": 1280,
+      "height": 720,
+      "step": "I04",
+      "images": [
+        {
+          "src": "assets/service-logos/openai.svg",
+          "loaded": true
+        },
+        {
+          "src": "assets/service-logos/claude.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:8921/assets/reference-ui/careerpilot-chatgpt-mobile.png",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "service": "ChatGPT",
+      "width": 1280,
+      "height": 720,
+      "step": "I05",
+      "images": [
+        {
+          "src": "assets/service-logos/openai.svg",
+          "loaded": true
+        },
+        {
+          "src": "assets/service-logos/claude.svg",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "service": "ChatGPT",
+      "width": 800,
+      "height": 450,
+      "step": "I01",
+      "images": [
+        {
+          "src": "assets/service-logos/openai.svg",
+          "loaded": true
+        },
+        {
+          "src": "assets/service-logos/claude.svg",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "service": "ChatGPT",
+      "width": 800,
+      "height": 450,
+      "step": "I02",
+      "images": [
+        {
+          "src": "assets/service-logos/openai.svg",
+          "loaded": true
+        },
+        {
+          "src": "assets/service-logos/claude.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:8921/assets/guide-chatgpt.webp",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:8921/assets/guide-chatgpt.webp",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "service": "ChatGPT",
+      "width": 800,
+      "height": 450,
+      "step": "I03",
+      "images": [
+        {
+          "src": "assets/service-logos/openai.svg",
+          "loaded": true
+        },
+        {
+          "src": "assets/service-logos/claude.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:8921/assets/reference-ui/careerpilot-chatgpt-installed-20261005.jpg",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "service": "ChatGPT",
+      "width": 800,
+      "height": 450,
+      "step": "I04",
+      "images": [
+        {
+          "src": "assets/service-logos/openai.svg",
+          "loaded": true
+        },
+        {
+          "src": "assets/service-logos/claude.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:8921/assets/reference-ui/careerpilot-chatgpt-mobile.png",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "service": "ChatGPT",
+      "width": 800,
+      "height": 450,
+      "step": "I05",
+      "images": [
+        {
+          "src": "assets/service-logos/openai.svg",
+          "loaded": true
+        },
+        {
+          "src": "assets/service-logos/claude.svg",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "service": "ChatGPT",
+      "width": 600,
+      "height": 800,
+      "step": "I01",
+      "images": [
+        {
+          "src": "assets/service-logos/openai.svg",
+          "loaded": true
+        },
+        {
+          "src": "assets/service-logos/claude.svg",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "service": "ChatGPT",
+      "width": 600,
+      "height": 800,
+      "step": "I02",
+      "images": [
+        {
+          "src": "assets/service-logos/openai.svg",
+          "loaded": true
+        },
+        {
+          "src": "assets/service-logos/claude.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:8921/assets/guide-chatgpt.webp",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:8921/assets/guide-chatgpt.webp",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "service": "ChatGPT",
+      "width": 600,
+      "height": 800,
+      "step": "I03",
+      "images": [
+        {
+          "src": "assets/service-logos/openai.svg",
+          "loaded": true
+        },
+        {
+          "src": "assets/service-logos/claude.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:8921/assets/reference-ui/careerpilot-chatgpt-installed-20261005.jpg",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "service": "ChatGPT",
+      "width": 600,
+      "height": 800,
+      "step": "I04",
+      "images": [
+        {
+          "src": "assets/service-logos/openai.svg",
+          "loaded": true
+        },
+        {
+          "src": "assets/service-logos/claude.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:8921/assets/reference-ui/careerpilot-chatgpt-mobile.png",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "service": "ChatGPT",
+      "width": 600,
+      "height": 800,
+      "step": "I05",
+      "images": [
+        {
+          "src": "assets/service-logos/openai.svg",
+          "loaded": true
+        },
+        {
+          "src": "assets/service-logos/claude.svg",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "service": "ChatGPT",
+      "width": 375,
+      "height": 667,
+      "step": "I01",
+      "images": [
+        {
+          "src": "assets/service-logos/openai.svg",
+          "loaded": true
+        },
+        {
+          "src": "assets/service-logos/claude.svg",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "service": "ChatGPT",
+      "width": 375,
+      "height": 667,
+      "step": "I02",
+      "images": [
+        {
+          "src": "assets/service-logos/openai.svg",
+          "loaded": true
+        },
+        {
+          "src": "assets/service-logos/claude.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:8921/assets/guide-chatgpt.webp",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:8921/assets/guide-chatgpt.webp",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "service": "ChatGPT",
+      "width": 375,
+      "height": 667,
+      "step": "I03",
+      "images": [
+        {
+          "src": "assets/service-logos/openai.svg",
+          "loaded": true
+        },
+        {
+          "src": "assets/service-logos/claude.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:8921/assets/reference-ui/careerpilot-chatgpt-installed-20261005.jpg",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "service": "ChatGPT",
+      "width": 375,
+      "height": 667,
+      "step": "I04",
+      "images": [
+        {
+          "src": "assets/service-logos/openai.svg",
+          "loaded": true
+        },
+        {
+          "src": "assets/service-logos/claude.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:8921/assets/reference-ui/careerpilot-chatgpt-mobile.png",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "service": "ChatGPT",
+      "width": 375,
+      "height": 667,
+      "step": "I05",
+      "images": [
+        {
+          "src": "assets/service-logos/openai.svg",
+          "loaded": true
+        },
+        {
+          "src": "assets/service-logos/claude.svg",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "service": "Claude",
+      "width": 1280,
+      "height": 720,
+      "step": "I01",
+      "images": [
+        {
+          "src": "assets/service-logos/openai.svg",
+          "loaded": true
+        },
+        {
+          "src": "assets/service-logos/claude.svg",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "service": "Claude",
+      "width": 1280,
+      "height": 720,
+      "step": "I02",
+      "images": [
+        {
+          "src": "assets/service-logos/openai.svg",
+          "loaded": true
+        },
+        {
+          "src": "assets/service-logos/claude.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:8921/assets/reference-ui/claude-upload.webp",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:8921/assets/reference-ui/claude-upload.webp",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "service": "Claude",
+      "width": 1280,
+      "height": 720,
+      "step": "I03",
+      "images": [
+        {
+          "src": "assets/service-logos/openai.svg",
+          "loaded": true
+        },
+        {
+          "src": "assets/service-logos/claude.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:8921/assets/reference-ui/careerpilot-claude-enabled-20261005.jpg",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "service": "Claude",
+      "width": 1280,
+      "height": 720,
+      "step": "I04",
+      "images": [
+        {
+          "src": "assets/service-logos/openai.svg",
+          "loaded": true
+        },
+        {
+          "src": "assets/service-logos/claude.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:8921/assets/guide-activate.webp",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "service": "Claude",
+      "width": 1280,
+      "height": 720,
+      "step": "I05",
+      "images": [
+        {
+          "src": "assets/service-logos/openai.svg",
+          "loaded": true
+        },
+        {
+          "src": "assets/service-logos/claude.svg",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "service": "Claude",
+      "width": 800,
+      "height": 450,
+      "step": "I01",
+      "images": [
+        {
+          "src": "assets/service-logos/openai.svg",
+          "loaded": true
+        },
+        {
+          "src": "assets/service-logos/claude.svg",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "service": "Claude",
+      "width": 800,
+      "height": 450,
+      "step": "I02",
+      "images": [
+        {
+          "src": "assets/service-logos/openai.svg",
+          "loaded": true
+        },
+        {
+          "src": "assets/service-logos/claude.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:8921/assets/reference-ui/claude-upload.webp",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:8921/assets/reference-ui/claude-upload.webp",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "service": "Claude",
+      "width": 800,
+      "height": 450,
+      "step": "I03",
+      "images": [
+        {
+          "src": "assets/service-logos/openai.svg",
+          "loaded": true
+        },
+        {
+          "src": "assets/service-logos/claude.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:8921/assets/reference-ui/careerpilot-claude-enabled-20261005.jpg",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "service": "Claude",
+      "width": 800,
+      "height": 450,
+      "step": "I04",
+      "images": [
+        {
+          "src": "assets/service-logos/openai.svg",
+          "loaded": true
+        },
+        {
+          "src": "assets/service-logos/claude.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:8921/assets/guide-activate.webp",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "service": "Claude",
+      "width": 800,
+      "height": 450,
+      "step": "I05",
+      "images": [
+        {
+          "src": "assets/service-logos/openai.svg",
+          "loaded": true
+        },
+        {
+          "src": "assets/service-logos/claude.svg",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "service": "Claude",
+      "width": 600,
+      "height": 800,
+      "step": "I01",
+      "images": [
+        {
+          "src": "assets/service-logos/openai.svg",
+          "loaded": true
+        },
+        {
+          "src": "assets/service-logos/claude.svg",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "service": "Claude",
+      "width": 600,
+      "height": 800,
+      "step": "I02",
+      "images": [
+        {
+          "src": "assets/service-logos/openai.svg",
+          "loaded": true
+        },
+        {
+          "src": "assets/service-logos/claude.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:8921/assets/reference-ui/claude-upload.webp",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:8921/assets/reference-ui/claude-upload.webp",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "service": "Claude",
+      "width": 600,
+      "height": 800,
+      "step": "I03",
+      "images": [
+        {
+          "src": "assets/service-logos/openai.svg",
+          "loaded": true
+        },
+        {
+          "src": "assets/service-logos/claude.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:8921/assets/reference-ui/careerpilot-claude-enabled-20261005.jpg",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "service": "Claude",
+      "width": 600,
+      "height": 800,
+      "step": "I04",
+      "images": [
+        {
+          "src": "assets/service-logos/openai.svg",
+          "loaded": true
+        },
+        {
+          "src": "assets/service-logos/claude.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:8921/assets/guide-activate.webp",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "service": "Claude",
+      "width": 600,
+      "height": 800,
+      "step": "I05",
+      "images": [
+        {
+          "src": "assets/service-logos/openai.svg",
+          "loaded": true
+        },
+        {
+          "src": "assets/service-logos/claude.svg",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "service": "Claude",
+      "width": 375,
+      "height": 667,
+      "step": "I01",
+      "images": [
+        {
+          "src": "assets/service-logos/openai.svg",
+          "loaded": true
+        },
+        {
+          "src": "assets/service-logos/claude.svg",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "service": "Claude",
+      "width": 375,
+      "height": 667,
+      "step": "I02",
+      "images": [
+        {
+          "src": "assets/service-logos/openai.svg",
+          "loaded": true
+        },
+        {
+          "src": "assets/service-logos/claude.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:8921/assets/reference-ui/claude-upload.webp",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:8921/assets/reference-ui/claude-upload.webp",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "service": "Claude",
+      "width": 375,
+      "height": 667,
+      "step": "I03",
+      "images": [
+        {
+          "src": "assets/service-logos/openai.svg",
+          "loaded": true
+        },
+        {
+          "src": "assets/service-logos/claude.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:8921/assets/reference-ui/careerpilot-claude-enabled-20261005.jpg",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "service": "Claude",
+      "width": 375,
+      "height": 667,
+      "step": "I04",
+      "images": [
+        {
+          "src": "assets/service-logos/openai.svg",
+          "loaded": true
+        },
+        {
+          "src": "assets/service-logos/claude.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:8921/assets/guide-activate.webp",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "service": "Claude",
+      "width": 375,
+      "height": 667,
+      "step": "I05",
+      "images": [
+        {
+          "src": "assets/service-logos/openai.svg",
+          "loaded": true
+        },
+        {
+          "src": "assets/service-logos/claude.svg",
+          "loaded": true
+        }
+      ]
+    }
+  ],
+  "actualAccountInstall": "NOT VERIFIED"
+}

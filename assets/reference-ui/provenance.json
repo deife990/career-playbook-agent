@@ -1,0 +1,88 @@
+{
+  "checked": "2026-10-21",
+  "no_local_account_capture": false,
+  "images": [
+    {
+      "file": "chatgpt-official-install.webp",
+      "source": "https://help.openai.com/en/articles/20001256-plugins-in-chatgpt",
+      "image": "https://images.ctfassets.net/j22is2dtoxu1/plugins_img_099048c330d44aa985aa1ac0c02df953/3bfa18e686e72533f19d8102af325e36/plugin-installation-card.png?fm=webp&q=80&w=1344",
+      "scope": "Official example installation card for a different plugin. NOT CareerPilot upload UI."
+    },
+    {
+      "file": "claude-upload.webp",
+      "source": "https://bytemint.ai/bytemint-claude-humanizer",
+      "image": "https://bytemint.ai/Humanizer/step-3.webp",
+      "scope": "Public desktop screenshot of Upload skill. Other skill shown in background. No local/private user data. Menu behavior verified separately against official Claude help."
+    },
+    {
+      "file": "careerpilot-chatgpt-mobile.png",
+      "source": "User supplied screenshot 2026-10-21 13:51",
+      "scope": "Real ChatGPT mobile composer with CareerPilot selected; no sent prompt or response. Original unchanged; CSS view crop only."
+    },
+    {
+      "file": "careerpilot-chatgpt-installed-20261005.jpg",
+      "source": "career-playbook-agent/evals/reports/native-proof/rc7-installed.jpg",
+      "scope": "Existing real app screenshot of CareerPilot detail; older 1.0.0-rc.7, not current release installation proof."
+    },
+    {
+      "file": "careerpilot-claude-enabled-20261005.jpg",
+      "source": "career-playbook-agent/evals/reports/native-proof/claude-rc7-installed.jpg",
+      "scope": "Existing real app screenshot of careerpilot skill with enabled toggle; older 1.0.0-rc.7."
+    },
+    {
+      "file": "careerpilot-chatgpt-conversation-20261005.png",
+      "source": "career-playbook-agent/evals/reports/native-proof/chatgpt-rc7-continuation.png",
+      "scope": "Actual request and response from explicitly synthetic-only historical export/update test, 1.0.0-rc.7. Not Seoan initial setup or current release verification."
+    },
+    {
+      "file": "careerpilot-claude-conversation-20261005.png",
+      "source": "career-playbook-agent/evals/reports/native-proof/claude-rc7-continuation.png",
+      "scope": "Actual response from explicitly synthetic-only historical export/update test, 1.0.0-rc.7. Not Seoan initial setup or current release verification."
+    },
+    {
+      "file": "chatgpt-01-first-prompt.png",
+      "source": "User supplied 2026-10-21, /Users/jhwang/Desktop/chatgpt-01-first-prompt.png",
+      "scope": "Actual chatgpt app screenshot with fictional Seoan data. Original unchanged; browser CSS viewport crop and zoom only. ",
+      "sha256": "3bb30804f4078cd143755649b18c227d5b08f5c4667009f786c87af69d41b240"
+    },
+    {
+      "file": "chatgpt-02-first-question.png",
+      "source": "User supplied 2026-10-21, /Users/jhwang/Desktop/chatgpt-02-first-question.png",
+      "scope": "Actual chatgpt app screenshot with fictional Seoan data. Original unchanged; browser CSS viewport crop and zoom only. Replacement capture contains context answer, brief and NEXT question; not first question.",
+      "sha256": "7c5e75c68f8ba73a9fd8a333b6bfe60268900757d07f206ce629f335f6227189"
+    },
+    {
+      "file": "chatgpt-03-conditions.png",
+      "source": "User supplied 2026-10-21, /Users/jhwang/Desktop/chatgpt-03-conditions.png",
+      "scope": "Actual chatgpt app screenshot with fictional Seoan data. Original unchanged; browser CSS viewport crop and zoom only. ",
+      "sha256": "b6ce0f2574bf761ca50c7006ff878a3da960b521509ac3fa15389e23281c5f2c"
+    },
+    {
+      "file": "claude-01-first-prompt.png",
+      "source": "User supplied 2026-10-21, /Users/jhwang/Desktop/claude-01-first-prompt.png",
+      "scope": "Actual claude app screenshot with fictional Seoan data. Original unchanged; browser CSS viewport crop and zoom only. ",
+      "sha256": "ae8fbd9aa42ceec1382c7669e52b9780e5d79fb3eccb130b902ed58b75db4579"
+    },
+    {
+      "file": "claude-02-first-question.png",
+      "source": "User supplied 2026-10-21, /Users/jhwang/Desktop/claude-02-first-question.png",
+      "scope": "Actual claude app screenshot with fictional Seoan data. Original unchanged; browser CSS viewport crop and zoom only. ",
+      "sha256": "e1956f120c23950417df0b1e2ca35be87d548674ae2c92bbb9399bd0961e8498"
+    },
+    {
+      "file": "claude-03-conditions.png",
+      "source": "User supplied 2026-10-21, /Users/jhwang/Desktop/claude-03-conditions.png",
+      "scope": "Actual claude app screenshot with fictional Seoan data. Original unchanged; browser CSS viewport crop and zoom only. ",
+      "sha256": "e3ba3f38643921a6434a0bc40f53aa132a4d3607b65f5dc7064df3d23ce39e93"
+    }
+  ],
+  "privacy_review": "v07 main tutorial crops exclude account avatar/sidebar, Claude usage notice and masked previous-context sentence. Original supplied images preserved verbatim in assets and linked as originals. No new account capture; no real career facts sent or modified.",
+  "v06UsageNote": "첫 사용 장면에서 과거 conversation-20261005 내보내기 테스트 캡처 사용을 중단함. 현재 사용자 제공 모바일 캡처는 선택 상태 증거로만 사용. 실제 첫 요청/질문/조건 정리는 새 촬영 대기. FIRST_USE_CAPTURE_SHOTLIST.md 참조.",
+  "v07UsageNote": "Received all 6 original screenshots. First-use story and replay guide now use these captures, split into request/context/change/keep/follow-up; no fabricated AI screenshot or response. ChatGPT context capture is not presented as first question. Claude usage notice and masked previous-context line excluded by CSS crop. Raw original available in guide.",
+  "v071UpscaleNote": {
+    "scope": "10 first-use display regions derived from all six supplied PNGs; originals and original links retained.",
+    "method": "1x crops plus deterministic Lanczos3 2x/4x resampling with mild edge sharpening and lossless WebP. Responsive width descriptors and ResizeObserver slot sizes select assets by placement and device pixel ratio.",
+    "manifest": "upscaled/manifest.json",
+    "trial": "One built-in image_gen comparison candidate was visually reviewed and rejected because shading and icon rendering differed from the documentary screenshot; it is not referenced by the game. No generative candidate shipped."
+  }
+}

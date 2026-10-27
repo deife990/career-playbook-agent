@@ -1,0 +1,23 @@
+{
+  "protectedLines": 26,
+  "protagonistLines": 38,
+  "protectedChoices": 9,
+  "firstRequests": 2,
+  "sideRequests": 21,
+  "labels": 46,
+  "downloads": [
+    {
+      "name": "careerpilot-chatgpt-v1.2.0-rc.7.zip",
+      "bytes": 191543,
+      "sha256": "6cd90aa020d64e7e37cb3ee0b71f112ca939de6291cbad00b2d3a4fc0941c5fd",
+      "passed": true
+    },
+    {
+      "name": "careerpilot-claude-v1.2.0-rc.7.zip",
+      "bytes": 133696,
+      "sha256": "98530e295349ee4dbd9ea392ee2bd03277f1068ab9955afc4700d0836f8a27e8",
+      "passed": true
+    }
+  ],
+  "passed": true
+}

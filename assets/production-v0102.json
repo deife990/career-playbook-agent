@@ -1,0 +1,129 @@
+{
+  "date": "2026-10-22",
+  "version": "0.10.2",
+  "mode": "built-in image_gen; identity-preserve edits and compositing",
+  "canonicalProtagonist": "assets/seoan-close-rear-v093.png LEFT adult",
+  "jobs": [
+    {
+      "key": "service-v0102",
+      "file": "recall-service-v0102.png",
+      "refs": [
+        "/Users/jhwang/Desktop/AI Career 전자책/planning/careerpilot-game-2026-10-19/office-romance-v0.1/episode01-v08/assets/recall-service-v09.png",
+        "/Users/jhwang/Desktop/AI Career 전자책/planning/careerpilot-game-2026-10-19/office-romance-v0.1/episode01-v08/assets/seoan-close-rear-v093.png"
+      ],
+      "transparent": false,
+      "prompt": "Use case: precise-object-edit. Input image 1 is the edit target. Input image 2 is the CANONICAL protagonist appearance reference: the adult on the LEFT in the pub, not the woman on the right. Match that adult's natural short layered dark brown hair, back-of-head shape, nape, ordinary skin and relaxed body proportions. Do NOT use a featureless black head, mannequin head, bald dome, hood or mask. Preserve anonymity through a rear camera angle and cropping: no visible eyes, nose, mouth, face portrait or recognizable facial profile. Continuity wardrobe: a dark charcoal collared shirt like the pub under the existing stone-beige outdoor jacket, charcoal straight trousers and simple plain black shoes where visible. Preserve the edit target's camera, pose, environment, objects, illustration style, lighting and colors except the protagonist appearance needed for continuity. No text, watermark or new people. Asset: wide 16:9 morning ticket-inquiry memory. Replace the foreground protagonist's tied-up female hair and visible side-face with the canonical short dark brown layered hair seen strictly from behind, same head scale, phone receiver remaining in place against the hidden ear. Show natural nape skin but keep all facial features hidden by rear angle/head/receiver. Keep the pointing hand and paperwork exactly legible as answering a routine admission-date change inquiry. Preserve beige jacket with small dark shirt collar if visible, all hands, telephone cord, monitor, left background coworker and sunny park window composition unchanged.",
+      "generated": "/Users/jhwang/.codex/generated_images/01a153be-2bff-7660-8445-937f58c5f2ca/exec-17fb16e9-d1be-4859-bcbc-452e7fd969f4.png",
+      "path": "assets/recall-service-v0102.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "sha256": "9b1ebb545fa64ba94a45226bc126fb3ee86b5be59f98879358cc2fa0e6c55d92",
+      "bytes": 2085066
+    },
+    {
+      "key": "closing-v0102",
+      "file": "recall-closing-v0102.png",
+      "refs": [
+        "/Users/jhwang/Desktop/AI Career 전자책/planning/careerpilot-game-2026-10-19/office-romance-v0.1/episode01-v08/assets/recall-closing-v09.png",
+        "/Users/jhwang/Desktop/AI Career 전자책/planning/careerpilot-game-2026-10-19/office-romance-v0.1/episode01-v08/assets/seoan-close-rear-v093.png"
+      ],
+      "transparent": false,
+      "prompt": "Use case: precise-object-edit. Input image 1 is the edit target. Input image 2 is the CANONICAL protagonist appearance reference: the adult on the LEFT in the pub, not the woman on the right. Match that adult's natural short layered dark brown hair, back-of-head shape, nape, ordinary skin and relaxed body proportions. Do NOT use a featureless black head, mannequin head, bald dome, hood or mask. Preserve anonymity through a rear camera angle and cropping: no visible eyes, nose, mouth, face portrait or recognizable facial profile. Continuity wardrobe: a dark charcoal collared shirt like the pub under the existing stone-beige outdoor jacket, charcoal straight trousers and simple plain black shoes where visible. Preserve the edit target's camera, pose, environment, objects, illustration style, lighting and colors except the protagonist appearance needed for continuity. No text, watermark or new people. Asset: wide 16:9 closing-figures memory. Keep the over-shoulder framing and the protagonist mostly cropped at left: replace ONLY the small visible head/neck fragment with the canonical natural short dark brown hair/back of head and nape, with no visible face, jawline or features. Preserve the beige jacket over dark charcoal shirt, ordinary hands on mouse/form, closing spreadsheet with checkmarks, keyboard, calculator, forms, evening window and every desk detail. Do not introduce a whole new visible head or change the close framing.",
+      "generated": "/Users/jhwang/.codex/generated_images/01a153be-2bff-7660-8445-937f58c5f2ca/exec-b5fed157-9b5c-4cab-a6a5-0e707e3d9d04.png",
+      "path": "assets/recall-closing-v0102.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "sha256": "b4540f516b01fc73eade939ab6318f30e3ad316440444f3819542bb227f5d76b",
+      "bytes": 2104139
+    },
+    {
+      "key": "gate-v0102",
+      "file": "gate-together-v0102.png",
+      "refs": [
+        "/Users/jhwang/Desktop/AI Career 전자책/planning/careerpilot-game-2026-10-19/office-romance-v0.1/episode01-v08/assets/gate-together-v09.png",
+        "/Users/jhwang/Desktop/AI Career 전자책/planning/careerpilot-game-2026-10-19/office-romance-v0.1/episode01-v08/assets/seoan-close-rear-v093.png"
+      ],
+      "transparent": false,
+      "prompt": "Use case: precise-object-edit. Input image 1 is the edit target. Input image 2 is the CANONICAL protagonist appearance reference: the adult on the LEFT in the pub, not the woman on the right. Match that adult's natural short layered dark brown hair, back-of-head shape, nape, ordinary skin and relaxed body proportions. Do NOT use a featureless black head, mannequin head, bald dome, hood or mask. Preserve anonymity through a rear camera angle and cropping: no visible eyes, nose, mouth, face portrait or recognizable facial profile. Continuity wardrobe: a dark charcoal collared shirt like the pub under the existing stone-beige outdoor jacket, charcoal straight trousers and simple plain black shoes where visible. Preserve the edit target's camera, pose, environment, objects, illustration style, lighting and colors except the protagonist appearance needed for continuity. No text, watermark or new people. Asset: wide 16:9 two-person shot after the staff exit gate. ONLY standardize the protagonist standing on the RIGHT with his back to camera: same short layered dark brown hair and natural nape as the adult on the left in reference2; same beige jacket worn over a dark collared shirt, charcoal trousers, plain black shoes. Retain his current standing posture and height and keep his face completely turned away. Keep Seoan on the LEFT totally unchanged, her exact hair, face, teal jacket, ivory top, trousers and gesture. Preserve their spacing and the wide landscape, staff gate, blue twilight lake, park lights and warm lamps. Do not swap the characters or copy the pub setting.",
+      "generated": "/Users/jhwang/.codex/generated_images/01a153be-2bff-7660-8445-937f58c5f2ca/exec-b1483182-3988-43ba-b3cc-8d312b8fe5b3.png",
+      "path": "assets/gate-together-v0102.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "sha256": "330a0b3a97226acae9b4bd64ca249d0bca4d793e71511b942c8e4d1bedfecc45",
+      "bytes": 2276393
+    },
+    {
+      "key": "selfie-v0102",
+      "file": "seoan-profile-selfie-v0102.png",
+      "refs": [
+        "/Users/jhwang/Desktop/AI Career 전자책/planning/careerpilot-game-2026-10-19/office-romance-v0.1/episode01-v08/assets/seoan-front.png",
+        "/Users/jhwang/Desktop/AI Career 전자책/planning/careerpilot-game-2026-10-19/office-romance-v0.1/episode01-v08/assets/seoan-pub-seated-v092.png"
+      ],
+      "transparent": false,
+      "prompt": "Use case: identity-preserve. Create a new square messaging profile illustration of the SAME adult Korean woman Seoan, age31, as the reference images. Image1 identity and delicate K-webtoon/anime hybrid illustration, image2 softer indoor styling. Natural casual day-off phone selfie, her face fills central 55% of square, slight spontaneous warm shy smile, shoulders relaxed and dropped, soft shoulder-length side parted dark brown hair, brown eyes, small silver hoop earrings; pale ivory casual knit. Subtle lake park background softly out of focus in late afternoon. Smartphone selfie perspective slightly above eye level, not an ID photo, no phone obscuring face, no hands or fingers needed in frame. Preserve precise established facial identity, eyes/hair shape and mature adult proportions. Illustrated NOT photorealistic. Soft refined linework and natural skin lighting matching game, no heavy makeup, no large anime eyes, no text, no logo, no border, no watermark. Readable at40px circular crop with forehead/chin inside central safe area. Single image.",
+      "generated": "/Users/jhwang/.codex/generated_images/01a153be-2bff-7660-8445-937f58c5f2ca/exec-aecf38ef-2885-4dbc-9bab-f202956a6d43.png",
+      "path": "assets/seoan-profile-selfie-v0102.png",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGB",
+      "sha256": "ae6abdcaa9cfab6234e9edb484fdfea31904b993c21a20c3f4d01d64f00463bc",
+      "bytes": 2360805
+    },
+    {
+      "key": "home-v0102",
+      "file": "home-protagonist-v0102.png",
+      "refs": [
+        "/Users/jhwang/Desktop/AI Career 전자책/planning/careerpilot-game-2026-10-19/office-romance-v0.1/episode01-v08/assets/home-night-v5.png",
+        "/Users/jhwang/Desktop/AI Career 전자책/planning/careerpilot-game-2026-10-19/office-romance-v0.1/episode01-v08/assets/seoan-close-rear-v093.png"
+      ],
+      "transparent": false,
+      "prompt": "Use case: compositing. Edit Image1 existing night apartment game background. Add ONLY one protagonist sitting at desk at lower LEFT, viewed naturally from BEHIND, using the LEFT adult of Image2 as exact canonical protagonist rear-head reference. Short layered dark brown hair with natural nape and small partial ear, dark charcoal collared shirt (outer beige jacket removed at home), relaxed shoulders, seated comfortably turned to laptop screen at the existing desk. Protagonist feels same person as pub LEFT adult; no facial features, eyes/nose/mouth/profile visible. Body is integrated at correct perspective and adult scale, occupies leftmost third, not oversized, believable chair/laptop access. One hand relaxed near laptop and other loosely holding phone down near desk. Keep image1 room composition, sofa, balcony night city view, door, plants, warm lighting, shelves, dark night mood; change laptop to a soft low screen glow without readable text. Preserve wide16:9 frame and delicate Korean webtoon/Japanese-anime hybrid background quality. Do not show Seoan, no extra people, no floating body, no black featureless dome head. No new text/watermark. Bottom quarter will have game dialogue; keep protagonist head clearly above that.",
+      "generated": "/Users/jhwang/.codex/generated_images/01a153be-2bff-7660-8445-937f58c5f2ca/exec-18ac69af-4596-4ea1-a7f9-dedffb6ac840.png",
+      "path": "assets/home-protagonist-v0102.png",
+      "width": 1672,
+      "height": 941,
+      "mode": "RGB",
+      "sha256": "0fa1a4c77b3ed973b25ab66911817951f34ad767afe41c6e54e6e837cc9a8ebc",
+      "bytes": 1949616
+    },
+    {
+      "key": "walker-clean-v0102",
+      "file": "protagonist-back-v0102.png",
+      "refs": [
+        "/Users/jhwang/.codex/generated_images/01a153be-2bff-7660-8445-937f58c5f2ca/exec-5d1c1b6a-63aa-41cf-9e4c-ef4cca6c6044.png"
+      ],
+      "transparent": true,
+      "prompt": "Use case: background-extraction. Edit this existing protagonist full-body rear walking sprite. Preserve the character exactly, all hair/ears/beige jacket/dark trousers/black shoes/walking step and rim light on silhouette. REMOVE ALL background and atmospheric glow: pure transparent alpha outside the figure, including gaps between legs and arms. No colored halo/haze/cloud, no gradient, no dark backdrop, no floor/shadow. Every exterior background pixel should be fully transparent. Clean detailed natural edge, full figure and feet visible with margin. This is an RGBA game sprite for compositing directly over a detailed lakeside scene; the character's illuminated edge must remain but NO light emitted into background.",
+      "generated": "/Users/jhwang/.codex/generated_images/01a153be-2bff-7660-8445-937f58c5f2ca/exec-20b4a828-78c2-4e7a-bbf3-deb1a51184c0.png",
+      "path": "assets/protagonist-back-v0102.png",
+      "width": 1024,
+      "height": 1536,
+      "mode": "RGBA",
+      "sha256": "5223374c8b50aefa536b094042934378dd4e54cf089a7a7575ed1141b264c047",
+      "bytes": 1397203,
+      "alphaExtrema": [
+        0,
+        254
+      ]
+    }
+  ],
+  "preliminaryWalker": {
+    "key": "walker-v0102",
+    "file": "protagonist-back-v0102.png",
+    "refs": [
+      "/Users/jhwang/Desktop/AI Career 전자책/planning/careerpilot-game-2026-10-19/office-romance-v0.1/episode01-v08/assets/protagonist-back-v81.png",
+      "/Users/jhwang/Desktop/AI Career 전자책/planning/careerpilot-game-2026-10-19/office-romance-v0.1/episode01-v08/assets/seoan-close-rear-v093.png"
+    ],
+    "transparent": true,
+    "prompt": "Use case: precise-object-edit. Input image 1 is the edit target. Input image 2 is the CANONICAL protagonist appearance reference: the adult on the LEFT in the pub, not the woman on the right. Match that adult's natural short layered dark brown hair, back-of-head shape, nape, ordinary skin and relaxed body proportions. Do NOT use a featureless black head, mannequin head, bald dome, hood or mask. Preserve anonymity through a rear camera angle and cropping: no visible eyes, nose, mouth, face portrait or recognizable facial profile. Continuity wardrobe: a dark charcoal collared shirt like the pub under the existing stone-beige outdoor jacket, charcoal straight trousers and simple plain black shoes where visible. Preserve the edit target's camera, pose, environment, objects, illustration style, lighting and colors except the protagonist appearance needed for continuity. No text, watermark or new people. Asset: full-body transparent walking sprite. Keep the same rear walking step, slightly tired relaxed shoulders, hands in jacket pockets, same beige jacket and straight charcoal trousers. Replace the dark featureless head with the canonical naturally textured short dark brown hair and a small normal visible nape, viewed directly from behind. Match black plain shoes. Keep amber rim lighting from the right and cool blue ambient on the left, restrained soft linework for an outdoor dusk scene. All body parts including feet fully visible, centered with transparent breathing room; real alpha background, NO ground, NO opaque background, NO lighting halo cloud, NO extra character or objects. Do not copy the pub scenery or Seoan."
+  },
+  "sources": {
+    "installation": "https://help.openai.com/en/articles/20001256-plugins-in-chatgpt",
+    "directory": "https://learn.chatgpt.com/docs/plugins",
+    "existingCapture": "assets/reference-ui/careerpilot-chatgpt-installed-20261005.jpg"
+  },
+  "installNote": "Illustrated reconstruction, not a captured current installation session. Personal ZIP path is conditional on UI availability; official documented workspace-admin web upload route remains in help. No installation, file upload, or account mutation is performed by the preview."
+}

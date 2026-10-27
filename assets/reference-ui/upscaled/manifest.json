@@ -1,0 +1,389 @@
+{
+  "generatedAt": "2026-10-21T09:49:45.507Z",
+  "method": "Deterministic Lanczos3 2x/4x resampling, mild edge sharpening (sigma .45, m1 0, m2 .6), lossless WebP; 1x crop has no resizing or sharpening. No generative reconstruction.",
+  "sources": {
+    "chatgpt-01-first-prompt.png": {
+      "width": 792,
+      "height": 712,
+      "sha256": "3bb30804f4078cd143755649b18c227d5b08f5c4667009f786c87af69d41b240"
+    },
+    "chatgpt-02-first-question.png": {
+      "width": 957,
+      "height": 1376,
+      "sha256": "7c5e75c68f8ba73a9fd8a333b6bfe60268900757d07f206ce629f335f6227189"
+    },
+    "chatgpt-03-conditions.png": {
+      "width": 792,
+      "height": 1030,
+      "sha256": "b6ce0f2574bf761ca50c7006ff878a3da960b521509ac3fa15389e23281c5f2c"
+    },
+    "claude-01-first-prompt.png": {
+      "width": 792,
+      "height": 711,
+      "sha256": "ae8fbd9aa42ceec1382c7669e52b9780e5d79fb3eccb130b902ed58b75db4579"
+    },
+    "claude-02-first-question.png": {
+      "width": 748,
+      "height": 667,
+      "sha256": "e1956f120c23950417df0b1e2ca35be87d548674ae2c92bbb9399bd0961e8498"
+    },
+    "claude-03-conditions.png": {
+      "width": 792,
+      "height": 711,
+      "sha256": "e3ba3f38643921a6434a0bc40f53aa132a4d3607b65f5dc7064df3d23ce39e93"
+    }
+  },
+  "frames": {
+    "chatgpt-01-first-prompt.png@134,337,585,99": {
+      "source": "chatgpt-01-first-prompt.png",
+      "crop": [
+        134,
+        337,
+        585,
+        99
+      ],
+      "candidates": [
+        {
+          "url": "reference-ui/upscaled/chatgpt-01@1x.webp",
+          "scale": 1,
+          "width": 585,
+          "height": 99,
+          "bytes": 6570,
+          "sha256": "e4a300184204a6258acfe26a5c0e78cd66772374d8a7835fe3a214a39d537ee9"
+        },
+        {
+          "url": "reference-ui/upscaled/chatgpt-01@2x.webp",
+          "scale": 2,
+          "width": 1170,
+          "height": 198,
+          "bytes": 35966,
+          "sha256": "eb507a28f074fabb2b5932a997aac3b8a9d09b4b6335b8219a766580f5fd0a6f"
+        },
+        {
+          "url": "reference-ui/upscaled/chatgpt-01@4x.webp",
+          "scale": 4,
+          "width": 2340,
+          "height": 396,
+          "bytes": 93678,
+          "sha256": "2e342b9243da234c4528dc79caf64cab1ed250fa486f289618b6e95f443cb417"
+        }
+      ]
+    },
+    "chatgpt-02-first-question.png@354,96,520,230": {
+      "source": "chatgpt-02-first-question.png",
+      "crop": [
+        354,
+        96,
+        520,
+        230
+      ],
+      "candidates": [
+        {
+          "url": "reference-ui/upscaled/chatgpt-02@1x.webp",
+          "scale": 1,
+          "width": 520,
+          "height": 230,
+          "bytes": 16896,
+          "sha256": "dcee62969b5d1918ce1cf8d1b4c5f40ccf81dbd18df49720d531eb7b35aecfbd"
+        },
+        {
+          "url": "reference-ui/upscaled/chatgpt-02@2x.webp",
+          "scale": 2,
+          "width": 1040,
+          "height": 460,
+          "bytes": 143336,
+          "sha256": "841f4ca01724e81a68217bce7afd953948a2d0a06289d941ab4373b100452df0"
+        },
+        {
+          "url": "reference-ui/upscaled/chatgpt-02@4x.webp",
+          "scale": 4,
+          "width": 2080,
+          "height": 920,
+          "bytes": 389960,
+          "sha256": "a65d0a3098c0771ca9b86243f4ad8e3cd93acc9059d419fee2ccf6e9b8a819cc"
+        }
+      ]
+    },
+    "chatgpt-03-conditions.png@129,91,580,225": {
+      "source": "chatgpt-03-conditions.png",
+      "crop": [
+        129,
+        91,
+        580,
+        225
+      ],
+      "candidates": [
+        {
+          "url": "reference-ui/upscaled/chatgpt-03@1x.webp",
+          "scale": 1,
+          "width": 580,
+          "height": 225,
+          "bytes": 8518,
+          "sha256": "edbc3fdcb80b727ac4f0da50f858e7042b531d5dccbfe7f8565bfd2a1ceed08e"
+        },
+        {
+          "url": "reference-ui/upscaled/chatgpt-03@2x.webp",
+          "scale": 2,
+          "width": 1160,
+          "height": 450,
+          "bytes": 46440,
+          "sha256": "7fe415a7c1def15c544a4926a2c2bd07e5b3850a4744b3e7a689c593de71e0a0"
+        },
+        {
+          "url": "reference-ui/upscaled/chatgpt-03@4x.webp",
+          "scale": 4,
+          "width": 2320,
+          "height": 900,
+          "bytes": 107596,
+          "sha256": "d30a6d4d75885a4364190a1b63f1bd6d85544f73b0bb3ac59b039cba6d0d1298"
+        }
+      ]
+    },
+    "chatgpt-03-conditions.png@129,338,580,231": {
+      "source": "chatgpt-03-conditions.png",
+      "crop": [
+        129,
+        338,
+        580,
+        231
+      ],
+      "candidates": [
+        {
+          "url": "reference-ui/upscaled/chatgpt-04@1x.webp",
+          "scale": 1,
+          "width": 580,
+          "height": 231,
+          "bytes": 7074,
+          "sha256": "198779620bac359e59143ad0f1ea3f42aa4d6ea7fab1728ae6ef4a207bf6ed1a"
+        },
+        {
+          "url": "reference-ui/upscaled/chatgpt-04@2x.webp",
+          "scale": 2,
+          "width": 1160,
+          "height": 462,
+          "bytes": 38980,
+          "sha256": "041096043c50d841fa18ec6ab7f14319795c58297ccba517aba8251a064e4667"
+        },
+        {
+          "url": "reference-ui/upscaled/chatgpt-04@4x.webp",
+          "scale": 4,
+          "width": 2320,
+          "height": 924,
+          "bytes": 105502,
+          "sha256": "e5c6c367c7eff4a926f5d67a962efdff3a08b9eec0acc221601a7ec1a397ba6d"
+        }
+      ]
+    },
+    "chatgpt-02-first-question.png@131,981,747,145": {
+      "source": "chatgpt-02-first-question.png",
+      "crop": [
+        131,
+        981,
+        747,
+        145
+      ],
+      "candidates": [
+        {
+          "url": "reference-ui/upscaled/chatgpt-05@1x.webp",
+          "scale": 1,
+          "width": 747,
+          "height": 145,
+          "bytes": 9324,
+          "sha256": "1d0b21a326fdb58f50c969f81df1b2b33242c81fab54bff2432eb71708506b75"
+        },
+        {
+          "url": "reference-ui/upscaled/chatgpt-05@2x.webp",
+          "scale": 2,
+          "width": 1494,
+          "height": 290,
+          "bytes": 50340,
+          "sha256": "260c457fda9d1c6094677b7e9f4702489fe2ed5b8684a956b3050ba412960aa9"
+        },
+        {
+          "url": "reference-ui/upscaled/chatgpt-05@4x.webp",
+          "scale": 4,
+          "width": 2988,
+          "height": 580,
+          "bytes": 128708,
+          "sha256": "7f706240c37cc4c0f0b629ea80bdb00d3d20477e3814435fc116eedcbcbf148c"
+        }
+      ]
+    },
+    "claude-01-first-prompt.png@95,281,601,103": {
+      "source": "claude-01-first-prompt.png",
+      "crop": [
+        95,
+        281,
+        601,
+        103
+      ],
+      "candidates": [
+        {
+          "url": "reference-ui/upscaled/claude-01@1x.webp",
+          "scale": 1,
+          "width": 601,
+          "height": 103,
+          "bytes": 7190,
+          "sha256": "6d3881d33a981f6f25509da9e6ae6333b87483723b2fbc7fa4e879ed37f4e15e"
+        },
+        {
+          "url": "reference-ui/upscaled/claude-01@2x.webp",
+          "scale": 2,
+          "width": 1202,
+          "height": 206,
+          "bytes": 43242,
+          "sha256": "43431a3eea3dc1237cc8e2da97051d0630ea2a4b59258ec62c42f4cda3049113"
+        },
+        {
+          "url": "reference-ui/upscaled/claude-01@4x.webp",
+          "scale": 4,
+          "width": 2404,
+          "height": 412,
+          "bytes": 126358,
+          "sha256": "4c4e21667f77e87e6276d7c9568bbe5a381fac336293ea893a7c1d1a77014b86"
+        }
+      ]
+    },
+    "claude-02-first-question.png@63,447,626,39": {
+      "source": "claude-02-first-question.png",
+      "crop": [
+        63,
+        447,
+        626,
+        39
+      ],
+      "candidates": [
+        {
+          "url": "reference-ui/upscaled/claude-02@1x.webp",
+          "scale": 1,
+          "width": 626,
+          "height": 39,
+          "bytes": 6068,
+          "sha256": "8d484b612edd1fc2e6ca8af91de0b39c364b15b751866e0c42e9d11fbf06dcce"
+        },
+        {
+          "url": "reference-ui/upscaled/claude-02@2x.webp",
+          "scale": 2,
+          "width": 1252,
+          "height": 78,
+          "bytes": 39374,
+          "sha256": "8f5827334d5a11fc64dd8c5f7fb77f12d96d47c9e4c81a85d02eb117476ec03a"
+        },
+        {
+          "url": "reference-ui/upscaled/claude-02@4x.webp",
+          "scale": 4,
+          "width": 2504,
+          "height": 156,
+          "bytes": 115716,
+          "sha256": "7a31606053e6f526796f665870a63ab8feddac543827613b980560746d51d3d6"
+        }
+      ]
+    },
+    "claude-03-conditions.png@88,100,611,88": {
+      "source": "claude-03-conditions.png",
+      "crop": [
+        88,
+        100,
+        611,
+        88
+      ],
+      "candidates": [
+        {
+          "url": "reference-ui/upscaled/claude-03@1x.webp",
+          "scale": 1,
+          "width": 611,
+          "height": 88,
+          "bytes": 9212,
+          "sha256": "dcba518d0e6d9eab3f45eaddcccad935aa6661e10ff1b85684d6caf256839223"
+        },
+        {
+          "url": "reference-ui/upscaled/claude-03@2x.webp",
+          "scale": 2,
+          "width": 1222,
+          "height": 176,
+          "bytes": 57136,
+          "sha256": "d7f26839be36926ce37422035f5f2dd470499e63e54fda703c86ce0f429fa2e8"
+        },
+        {
+          "url": "reference-ui/upscaled/claude-03@4x.webp",
+          "scale": 4,
+          "width": 2444,
+          "height": 352,
+          "bytes": 167546,
+          "sha256": "6e666483285a5f515f68c4fcba661f964e3bdf05654194df05f089027387c18b"
+        }
+      ]
+    },
+    "claude-03-conditions.png@88,195,611,79": {
+      "source": "claude-03-conditions.png",
+      "crop": [
+        88,
+        195,
+        611,
+        79
+      ],
+      "candidates": [
+        {
+          "url": "reference-ui/upscaled/claude-04@1x.webp",
+          "scale": 1,
+          "width": 611,
+          "height": 79,
+          "bytes": 8360,
+          "sha256": "280ce72ac9ea91879048d02f0e1be7c33f135a8f1c32ebdb7b9f9fdc53b51a0d"
+        },
+        {
+          "url": "reference-ui/upscaled/claude-04@2x.webp",
+          "scale": 2,
+          "width": 1222,
+          "height": 158,
+          "bytes": 55676,
+          "sha256": "4fe112c1efe2dca46fb33468e0ca5b5e9fe108c1ffb0cf4a9dc13f78a34c1c87"
+        },
+        {
+          "url": "reference-ui/upscaled/claude-04@4x.webp",
+          "scale": 4,
+          "width": 2444,
+          "height": 316,
+          "bytes": 165552,
+          "sha256": "a7578d41b2a7abb18967412dbd241ec679b913248178fe308ef45f4352abef0d"
+        }
+      ]
+    },
+    "claude-03-conditions.png@87,289,612,98": {
+      "source": "claude-03-conditions.png",
+      "crop": [
+        87,
+        289,
+        612,
+        98
+      ],
+      "candidates": [
+        {
+          "url": "reference-ui/upscaled/claude-05@1x.webp",
+          "scale": 1,
+          "width": 612,
+          "height": 98,
+          "bytes": 10492,
+          "sha256": "f206b6b8ff1708666ed86f11468517a724df9b3ed82466003fda2711eb69bd76"
+        },
+        {
+          "url": "reference-ui/upscaled/claude-05@2x.webp",
+          "scale": 2,
+          "width": 1224,
+          "height": 196,
+          "bytes": 74754,
+          "sha256": "2f11378b0780a654f59bc56a17f1a331a9c89b8ea536939a074020cd46cc138b"
+        },
+        {
+          "url": "reference-ui/upscaled/claude-05@4x.webp",
+          "scale": 4,
+          "width": 2448,
+          "height": 392,
+          "bytes": 219688,
+          "sha256": "b7f992ab45b4c309d45d3d2ca173f2584b19ebc74018571178893216e65cc67c"
+        }
+      ]
+    }
+  },
+  "totalBytes": 2295252
+}

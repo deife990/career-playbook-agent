@@ -1,0 +1,2101 @@
+{
+  "passed": true,
+  "rows": [
+    {
+      "width": 920,
+      "height": 852,
+      "stepId": "S01",
+      "scrollWidth": 918,
+      "clientWidth": 918,
+      "bodyH": 550,
+      "bodyOverflow": "auto",
+      "dialogOverflow": "hidden",
+      "minFont": 18,
+      "buttons": [
+        {
+          "label": "닫고 선택 화면으로",
+          "height": 56,
+          "right": 1155
+        },
+        {
+          "label": "요청 복사",
+          "height": 56,
+          "right": 480.84375
+        },
+        {
+          "label": "이전",
+          "height": 56,
+          "right": 1006.453125
+        },
+        {
+          "label": "서안의 답 보기",
+          "height": 56,
+          "right": 1155
+        }
+      ],
+      "name": "tutorial-heading",
+      "focus": "tutorial-heading",
+      "request": {
+        "h": 100,
+        "content": 100
+      }
+    },
+    {
+      "width": 920,
+      "height": 852,
+      "stepId": "S04",
+      "scrollWidth": 918,
+      "clientWidth": 918,
+      "bodyH": 550,
+      "bodyOverflow": "auto",
+      "dialogOverflow": "hidden",
+      "minFont": 18,
+      "buttons": [
+        {
+          "label": "닫고 선택 화면으로",
+          "height": 56,
+          "right": 1155
+        },
+        {
+          "label": "예시 처음부터",
+          "height": 56,
+          "right": 511.984375
+        },
+        {
+          "label": "수정 전 다시 보기",
+          "height": 56,
+          "right": 536.6875
+        },
+        {
+          "label": "이전",
+          "height": 56,
+          "right": 955.171875
+        },
+        {
+          "label": "오늘 정리한 내용 보기",
+          "height": 56,
+          "right": 1155
+        }
+      ],
+      "name": "tutorial-heading",
+      "focus": "tutorial-heading",
+      "request": null
+    },
+    {
+      "width": 920,
+      "height": 852,
+      "stepId": "S05",
+      "scrollWidth": 918,
+      "clientWidth": 918,
+      "bodyH": 550,
+      "bodyOverflow": "auto",
+      "dialogOverflow": "hidden",
+      "minFont": 18,
+      "buttons": [
+        {
+          "label": "닫고 선택 화면으로",
+          "height": 56,
+          "right": 1155
+        },
+        {
+          "label": "예시 처음부터",
+          "height": 56,
+          "right": 511.984375
+        },
+        {
+          "label": "전체 예시 보기",
+          "height": 56,
+          "right": 516.546875
+        },
+        {
+          "label": "이전",
+          "height": 56,
+          "right": 944.171875
+        },
+        {
+          "label": "선택 화면으로 돌아가기",
+          "height": 56,
+          "right": 1155
+        }
+      ],
+      "name": "tutorial-heading",
+      "focus": "tutorial-heading",
+      "request": null
+    },
+    {
+      "width": 920,
+      "height": 852,
+      "stepId": "I04",
+      "scrollWidth": 918,
+      "clientWidth": 918,
+      "bodyH": 550,
+      "bodyOverflow": "auto",
+      "dialogOverflow": "hidden",
+      "minFont": 18,
+      "buttons": [
+        {
+          "label": "닫기",
+          "height": 56,
+          "right": 1155
+        },
+        {
+          "label": "ChatGPT",
+          "height": 56,
+          "right": 520.875
+        },
+        {
+          "label": "Claude",
+          "height": 56,
+          "right": 655.1875
+        },
+        {
+          "label": "조작 이전",
+          "height": 56,
+          "right": 480.84375
+        },
+        {
+          "label": "조작 다음",
+          "height": 56,
+          "right": 581.6875
+        },
+        {
+          "label": "다른 서비스 고르기",
+          "height": 56,
+          "right": 564.6875
+        },
+        {
+          "label": "설치 없이 일반 대화로 맛보기",
+          "height": 56,
+          "right": 803.78125
+        },
+        {
+          "label": "이전",
+          "height": 56,
+          "right": 949.4375
+        },
+        {
+          "label": "나중에 하기",
+          "height": 56,
+          "right": 1077.859375
+        },
+        {
+          "label": "다음",
+          "height": 56,
+          "right": 1155
+        }
+      ],
+      "name": "tutorial-heading",
+      "focus": "tutorial-heading",
+      "request": null
+    },
+    {
+      "width": 920,
+      "height": 852,
+      "stepId": "P02",
+      "scrollWidth": 918,
+      "clientWidth": 918,
+      "bodyH": 550,
+      "bodyOverflow": "auto",
+      "dialogOverflow": "hidden",
+      "minFont": 18,
+      "buttons": [
+        {
+          "label": "닫기",
+          "height": 56,
+          "right": 1155
+        },
+        {
+          "label": "ChatGPT",
+          "height": 56,
+          "right": 488.875
+        },
+        {
+          "label": "Claude",
+          "height": 56,
+          "right": 591.1875
+        },
+        {
+          "label": "요청 복사",
+          "height": 56,
+          "right": 480.84375
+        },
+        {
+          "label": "이 문구 복사",
+          "height": 56,
+          "right": 513.984375
+        },
+        {
+          "label": "이 문구 복사",
+          "height": 56,
+          "right": 513.984375
+        },
+        {
+          "label": "이 문구 복사",
+          "height": 56,
+          "right": 513.984375
+        },
+        {
+          "label": "이 문구 복사",
+          "height": 56,
+          "right": 513.984375
+        },
+        {
+          "label": "설치·선택 안내",
+          "height": 56,
+          "right": 516.828125
+        },
+        {
+          "label": "지금은 넘어갈게요",
+          "height": 56,
+          "right": 897.890625
+        },
+        {
+          "label": "요청 복사하고 ChatGPT 열기",
+          "height": 56,
+          "right": 1155
+        }
+      ],
+      "name": "tutorial-heading",
+      "focus": "tutorial-heading",
+      "request": {
+        "h": 100,
+        "content": 100
+      }
+    },
+    {
+      "width": 920,
+      "height": 672,
+      "stepId": "S01",
+      "scrollWidth": 918,
+      "clientWidth": 918,
+      "bodyH": 370,
+      "bodyOverflow": "auto",
+      "dialogOverflow": "hidden",
+      "minFont": 18,
+      "buttons": [
+        {
+          "label": "닫고 선택 화면으로",
+          "height": 56,
+          "right": 1075
+        },
+        {
+          "label": "요청 복사",
+          "height": 56,
+          "right": 400.84375
+        },
+        {
+          "label": "이전",
+          "height": 56,
+          "right": 926.453125
+        },
+        {
+          "label": "서안의 답 보기",
+          "height": 56,
+          "right": 1075
+        }
+      ],
+      "name": "tutorial-heading",
+      "focus": "tutorial-heading",
+      "request": {
+        "h": 100,
+        "content": 100
+      }
+    },
+    {
+      "width": 920,
+      "height": 672,
+      "stepId": "S04",
+      "scrollWidth": 918,
+      "clientWidth": 918,
+      "bodyH": 370,
+      "bodyOverflow": "auto",
+      "dialogOverflow": "hidden",
+      "minFont": 18,
+      "buttons": [
+        {
+          "label": "닫고 선택 화면으로",
+          "height": 56,
+          "right": 1075
+        },
+        {
+          "label": "예시 처음부터",
+          "height": 56,
+          "right": 431.984375
+        },
+        {
+          "label": "수정 전 다시 보기",
+          "height": 56,
+          "right": 456.6875
+        },
+        {
+          "label": "이전",
+          "height": 56,
+          "right": 875.171875
+        },
+        {
+          "label": "오늘 정리한 내용 보기",
+          "height": 56,
+          "right": 1075
+        }
+      ],
+      "name": "tutorial-heading",
+      "focus": "tutorial-heading",
+      "request": null
+    },
+    {
+      "width": 920,
+      "height": 672,
+      "stepId": "S05",
+      "scrollWidth": 918,
+      "clientWidth": 918,
+      "bodyH": 370,
+      "bodyOverflow": "auto",
+      "dialogOverflow": "hidden",
+      "minFont": 18,
+      "buttons": [
+        {
+          "label": "닫고 선택 화면으로",
+          "height": 56,
+          "right": 1075
+        },
+        {
+          "label": "예시 처음부터",
+          "height": 56,
+          "right": 431.984375
+        },
+        {
+          "label": "전체 예시 보기",
+          "height": 56,
+          "right": 436.546875
+        },
+        {
+          "label": "이전",
+          "height": 56,
+          "right": 864.171875
+        },
+        {
+          "label": "선택 화면으로 돌아가기",
+          "height": 56,
+          "right": 1075
+        }
+      ],
+      "name": "tutorial-heading",
+      "focus": "tutorial-heading",
+      "request": null
+    },
+    {
+      "width": 920,
+      "height": 672,
+      "stepId": "I04",
+      "scrollWidth": 918,
+      "clientWidth": 918,
+      "bodyH": 370,
+      "bodyOverflow": "auto",
+      "dialogOverflow": "hidden",
+      "minFont": 18,
+      "buttons": [
+        {
+          "label": "닫기",
+          "height": 56,
+          "right": 1075
+        },
+        {
+          "label": "ChatGPT",
+          "height": 56,
+          "right": 440.875
+        },
+        {
+          "label": "Claude",
+          "height": 56,
+          "right": 575.1875
+        },
+        {
+          "label": "조작 이전",
+          "height": 56,
+          "right": 400.84375
+        },
+        {
+          "label": "조작 다음",
+          "height": 56,
+          "right": 501.6875
+        },
+        {
+          "label": "다른 서비스 고르기",
+          "height": 56,
+          "right": 484.6875
+        },
+        {
+          "label": "설치 없이 일반 대화로 맛보기",
+          "height": 56,
+          "right": 723.78125
+        },
+        {
+          "label": "이전",
+          "height": 56,
+          "right": 869.4375
+        },
+        {
+          "label": "나중에 하기",
+          "height": 56,
+          "right": 997.859375
+        },
+        {
+          "label": "다음",
+          "height": 56,
+          "right": 1075
+        }
+      ],
+      "name": "tutorial-heading",
+      "focus": "tutorial-heading",
+      "request": null
+    },
+    {
+      "width": 920,
+      "height": 672,
+      "stepId": "P02",
+      "scrollWidth": 918,
+      "clientWidth": 918,
+      "bodyH": 370,
+      "bodyOverflow": "auto",
+      "dialogOverflow": "hidden",
+      "minFont": 18,
+      "buttons": [
+        {
+          "label": "닫기",
+          "height": 56,
+          "right": 1075
+        },
+        {
+          "label": "ChatGPT",
+          "height": 56,
+          "right": 408.875
+        },
+        {
+          "label": "Claude",
+          "height": 56,
+          "right": 511.1875
+        },
+        {
+          "label": "요청 복사",
+          "height": 56,
+          "right": 400.84375
+        },
+        {
+          "label": "이 문구 복사",
+          "height": 56,
+          "right": 433.984375
+        },
+        {
+          "label": "이 문구 복사",
+          "height": 56,
+          "right": 433.984375
+        },
+        {
+          "label": "이 문구 복사",
+          "height": 56,
+          "right": 433.984375
+        },
+        {
+          "label": "이 문구 복사",
+          "height": 56,
+          "right": 433.984375
+        },
+        {
+          "label": "설치·선택 안내",
+          "height": 56,
+          "right": 436.828125
+        },
+        {
+          "label": "지금은 넘어갈게요",
+          "height": 56,
+          "right": 817.890625
+        },
+        {
+          "label": "요청 복사하고 ChatGPT 열기",
+          "height": 56,
+          "right": 1075
+        }
+      ],
+      "name": "tutorial-heading",
+      "focus": "tutorial-heading",
+      "request": {
+        "h": 100,
+        "content": 100
+      }
+    },
+    {
+      "width": 1024,
+      "height": 600,
+      "stepId": "S01",
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "bodyH": 560,
+      "bodyOverflow": "visible",
+      "dialogOverflow": "auto",
+      "minFont": 18,
+      "buttons": [
+        {
+          "label": "닫고 선택 화면으로",
+          "height": 56,
+          "right": 1008
+        },
+        {
+          "label": "요청 복사",
+          "height": 56,
+          "right": 272.84375
+        },
+        {
+          "label": "이전",
+          "height": 56,
+          "right": 859.453125
+        },
+        {
+          "label": "서안의 답 보기",
+          "height": 56,
+          "right": 1008
+        }
+      ],
+      "name": "tutorial-heading",
+      "focus": "tutorial-heading",
+      "request": {
+        "h": 100,
+        "content": 100
+      }
+    },
+    {
+      "width": 1024,
+      "height": 600,
+      "stepId": "S04",
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "bodyH": 620,
+      "bodyOverflow": "visible",
+      "dialogOverflow": "auto",
+      "minFont": 18,
+      "buttons": [
+        {
+          "label": "닫고 선택 화면으로",
+          "height": 56,
+          "right": 1008
+        },
+        {
+          "label": "예시 처음부터",
+          "height": 56,
+          "right": 303.984375
+        },
+        {
+          "label": "수정 전 다시 보기",
+          "height": 56,
+          "right": 328.6875
+        },
+        {
+          "label": "이전",
+          "height": 56,
+          "right": 808.171875
+        },
+        {
+          "label": "오늘 정리한 내용 보기",
+          "height": 56,
+          "right": 1008
+        }
+      ],
+      "name": "tutorial-heading",
+      "focus": "tutorial-heading",
+      "request": null
+    },
+    {
+      "width": 1024,
+      "height": 600,
+      "stepId": "S05",
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "bodyH": 462,
+      "bodyOverflow": "visible",
+      "dialogOverflow": "auto",
+      "minFont": 18,
+      "buttons": [
+        {
+          "label": "닫고 선택 화면으로",
+          "height": 56,
+          "right": 1008
+        },
+        {
+          "label": "예시 처음부터",
+          "height": 56,
+          "right": 303.984375
+        },
+        {
+          "label": "전체 예시 보기",
+          "height": 56,
+          "right": 308.546875
+        },
+        {
+          "label": "이전",
+          "height": 56,
+          "right": 797.171875
+        },
+        {
+          "label": "선택 화면으로 돌아가기",
+          "height": 56,
+          "right": 1008
+        }
+      ],
+      "name": "tutorial-heading",
+      "focus": "tutorial-heading",
+      "request": null
+    },
+    {
+      "width": 1024,
+      "height": 600,
+      "stepId": "I04",
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "bodyH": 1945,
+      "bodyOverflow": "visible",
+      "dialogOverflow": "auto",
+      "minFont": 18,
+      "buttons": [
+        {
+          "label": "닫기",
+          "height": 56,
+          "right": 1008
+        },
+        {
+          "label": "ChatGPT",
+          "height": 56,
+          "right": 312.875
+        },
+        {
+          "label": "Claude",
+          "height": 56,
+          "right": 447.1875
+        },
+        {
+          "label": "조작 이전",
+          "height": 56,
+          "right": 272.84375
+        },
+        {
+          "label": "조작 다음",
+          "height": 56,
+          "right": 373.6875
+        },
+        {
+          "label": "다른 서비스 고르기",
+          "height": 56,
+          "right": 356.6875
+        },
+        {
+          "label": "설치 없이 일반 대화로 맛보기",
+          "height": 56,
+          "right": 595.78125
+        },
+        {
+          "label": "이전",
+          "height": 56,
+          "right": 802.4375
+        },
+        {
+          "label": "나중에 하기",
+          "height": 56,
+          "right": 930.859375
+        },
+        {
+          "label": "다음",
+          "height": 56,
+          "right": 1008
+        }
+      ],
+      "name": "tutorial-heading",
+      "focus": "tutorial-heading",
+      "request": null
+    },
+    {
+      "width": 1024,
+      "height": 600,
+      "stepId": "P02",
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "bodyH": 816,
+      "bodyOverflow": "visible",
+      "dialogOverflow": "auto",
+      "minFont": 18,
+      "buttons": [
+        {
+          "label": "닫기",
+          "height": 56,
+          "right": 1008
+        },
+        {
+          "label": "ChatGPT",
+          "height": 56,
+          "right": 280.875
+        },
+        {
+          "label": "Claude",
+          "height": 56,
+          "right": 383.1875
+        },
+        {
+          "label": "요청 복사",
+          "height": 56,
+          "right": 272.84375
+        },
+        {
+          "label": "이 문구 복사",
+          "height": 56,
+          "right": 305.984375
+        },
+        {
+          "label": "이 문구 복사",
+          "height": 56,
+          "right": 305.984375
+        },
+        {
+          "label": "이 문구 복사",
+          "height": 56,
+          "right": 305.984375
+        },
+        {
+          "label": "이 문구 복사",
+          "height": 56,
+          "right": 305.984375
+        },
+        {
+          "label": "설치·선택 안내",
+          "height": 56,
+          "right": 308.828125
+        },
+        {
+          "label": "지금은 넘어갈게요",
+          "height": 56,
+          "right": 750.890625
+        },
+        {
+          "label": "요청 복사하고 ChatGPT 열기",
+          "height": 56,
+          "right": 1008
+        }
+      ],
+      "name": "tutorial-heading",
+      "focus": "tutorial-heading",
+      "request": {
+        "h": 100,
+        "content": 100
+      }
+    },
+    {
+      "width": 800,
+      "height": 450,
+      "stepId": "S01",
+      "scrollWidth": 800,
+      "clientWidth": 800,
+      "bodyH": 560,
+      "bodyOverflow": "visible",
+      "dialogOverflow": "auto",
+      "minFont": 18,
+      "buttons": [
+        {
+          "label": "닫고 선택 화면으로",
+          "height": 56,
+          "right": 784
+        },
+        {
+          "label": "요청 복사",
+          "height": 56,
+          "right": 160.84375
+        },
+        {
+          "label": "이전",
+          "height": 56,
+          "right": 635.453125
+        },
+        {
+          "label": "서안의 답 보기",
+          "height": 56,
+          "right": 784
+        }
+      ],
+      "name": "tutorial-heading",
+      "focus": "tutorial-heading",
+      "request": {
+        "h": 100,
+        "content": 100
+      }
+    },
+    {
+      "width": 800,
+      "height": 450,
+      "stepId": "S04",
+      "scrollWidth": 800,
+      "clientWidth": 800,
+      "bodyH": 620,
+      "bodyOverflow": "visible",
+      "dialogOverflow": "auto",
+      "minFont": 18,
+      "buttons": [
+        {
+          "label": "닫고 선택 화면으로",
+          "height": 56,
+          "right": 784
+        },
+        {
+          "label": "예시 처음부터",
+          "height": 56,
+          "right": 191.984375
+        },
+        {
+          "label": "수정 전 다시 보기",
+          "height": 56,
+          "right": 216.6875
+        },
+        {
+          "label": "이전",
+          "height": 56,
+          "right": 584.171875
+        },
+        {
+          "label": "오늘 정리한 내용 보기",
+          "height": 56,
+          "right": 784
+        }
+      ],
+      "name": "tutorial-heading",
+      "focus": "tutorial-heading",
+      "request": null
+    },
+    {
+      "width": 800,
+      "height": 450,
+      "stepId": "S05",
+      "scrollWidth": 800,
+      "clientWidth": 800,
+      "bodyH": 462,
+      "bodyOverflow": "visible",
+      "dialogOverflow": "auto",
+      "minFont": 18,
+      "buttons": [
+        {
+          "label": "닫고 선택 화면으로",
+          "height": 56,
+          "right": 784
+        },
+        {
+          "label": "예시 처음부터",
+          "height": 56,
+          "right": 191.984375
+        },
+        {
+          "label": "전체 예시 보기",
+          "height": 56,
+          "right": 196.546875
+        },
+        {
+          "label": "이전",
+          "height": 56,
+          "right": 573.171875
+        },
+        {
+          "label": "선택 화면으로 돌아가기",
+          "height": 56,
+          "right": 784
+        }
+      ],
+      "name": "tutorial-heading",
+      "focus": "tutorial-heading",
+      "request": null
+    },
+    {
+      "width": 800,
+      "height": 450,
+      "stepId": "I04",
+      "scrollWidth": 800,
+      "clientWidth": 800,
+      "bodyH": 1945,
+      "bodyOverflow": "visible",
+      "dialogOverflow": "auto",
+      "minFont": 18,
+      "buttons": [
+        {
+          "label": "닫기",
+          "height": 56,
+          "right": 784
+        },
+        {
+          "label": "ChatGPT",
+          "height": 56,
+          "right": 200.875
+        },
+        {
+          "label": "Claude",
+          "height": 56,
+          "right": 335.1875
+        },
+        {
+          "label": "조작 이전",
+          "height": 56,
+          "right": 160.84375
+        },
+        {
+          "label": "조작 다음",
+          "height": 56,
+          "right": 261.6875
+        },
+        {
+          "label": "다른 서비스 고르기",
+          "height": 56,
+          "right": 244.6875
+        },
+        {
+          "label": "설치 없이 일반 대화로 맛보기",
+          "height": 56,
+          "right": 483.78125
+        },
+        {
+          "label": "이전",
+          "height": 56,
+          "right": 578.4375
+        },
+        {
+          "label": "나중에 하기",
+          "height": 56,
+          "right": 706.859375
+        },
+        {
+          "label": "다음",
+          "height": 56,
+          "right": 784
+        }
+      ],
+      "name": "tutorial-heading",
+      "focus": "tutorial-heading",
+      "request": null
+    },
+    {
+      "width": 800,
+      "height": 450,
+      "stepId": "P02",
+      "scrollWidth": 800,
+      "clientWidth": 800,
+      "bodyH": 816,
+      "bodyOverflow": "visible",
+      "dialogOverflow": "auto",
+      "minFont": 18,
+      "buttons": [
+        {
+          "label": "닫기",
+          "height": 56,
+          "right": 784
+        },
+        {
+          "label": "ChatGPT",
+          "height": 56,
+          "right": 168.875
+        },
+        {
+          "label": "Claude",
+          "height": 56,
+          "right": 271.1875
+        },
+        {
+          "label": "요청 복사",
+          "height": 56,
+          "right": 160.84375
+        },
+        {
+          "label": "이 문구 복사",
+          "height": 56,
+          "right": 193.984375
+        },
+        {
+          "label": "이 문구 복사",
+          "height": 56,
+          "right": 193.984375
+        },
+        {
+          "label": "이 문구 복사",
+          "height": 56,
+          "right": 193.984375
+        },
+        {
+          "label": "이 문구 복사",
+          "height": 56,
+          "right": 193.984375
+        },
+        {
+          "label": "설치·선택 안내",
+          "height": 56,
+          "right": 196.828125
+        },
+        {
+          "label": "지금은 넘어갈게요",
+          "height": 56,
+          "right": 526.890625
+        },
+        {
+          "label": "요청 복사하고 ChatGPT 열기",
+          "height": 56,
+          "right": 784
+        }
+      ],
+      "name": "tutorial-heading",
+      "focus": "tutorial-heading",
+      "request": {
+        "h": 100,
+        "content": 100
+      }
+    },
+    {
+      "width": 600,
+      "height": 800,
+      "stepId": "S01",
+      "scrollWidth": 600,
+      "clientWidth": 600,
+      "bodyH": 608,
+      "bodyOverflow": "visible",
+      "dialogOverflow": "auto",
+      "minFont": 18,
+      "buttons": [
+        {
+          "label": "닫고 선택 화면으로",
+          "height": 48,
+          "right": 584
+        },
+        {
+          "label": "요청 복사",
+          "height": 48,
+          "right": 116.84375
+        },
+        {
+          "label": "이전",
+          "height": 48,
+          "right": 584
+        },
+        {
+          "label": "서안의 답 보기",
+          "height": 48,
+          "right": 584
+        }
+      ],
+      "name": "tutorial-heading",
+      "focus": "tutorial-heading",
+      "request": {
+        "h": 126,
+        "content": 126
+      }
+    },
+    {
+      "width": 600,
+      "height": 800,
+      "stepId": "S04",
+      "scrollWidth": 600,
+      "clientWidth": 600,
+      "bodyH": 701,
+      "bodyOverflow": "visible",
+      "dialogOverflow": "auto",
+      "minFont": 18,
+      "buttons": [
+        {
+          "label": "닫고 선택 화면으로",
+          "height": 48,
+          "right": 584
+        },
+        {
+          "label": "예시 처음부터",
+          "height": 48,
+          "right": 147.984375
+        },
+        {
+          "label": "수정 전 다시 보기",
+          "height": 48,
+          "right": 172.6875
+        },
+        {
+          "label": "이전",
+          "height": 48,
+          "right": 584
+        },
+        {
+          "label": "오늘 정리한 내용 보기",
+          "height": 48,
+          "right": 584
+        }
+      ],
+      "name": "tutorial-heading",
+      "focus": "tutorial-heading",
+      "request": null
+    },
+    {
+      "width": 600,
+      "height": 800,
+      "stepId": "S05",
+      "scrollWidth": 600,
+      "clientWidth": 600,
+      "bodyH": 628,
+      "bodyOverflow": "visible",
+      "dialogOverflow": "auto",
+      "minFont": 18,
+      "buttons": [
+        {
+          "label": "닫고 선택 화면으로",
+          "height": 48,
+          "right": 584
+        },
+        {
+          "label": "예시 처음부터",
+          "height": 48,
+          "right": 147.984375
+        },
+        {
+          "label": "전체 예시 보기",
+          "height": 48,
+          "right": 152.546875
+        },
+        {
+          "label": "이전",
+          "height": 48,
+          "right": 584
+        },
+        {
+          "label": "선택 화면으로 돌아가기",
+          "height": 48,
+          "right": 584
+        }
+      ],
+      "name": "tutorial-heading",
+      "focus": "tutorial-heading",
+      "request": null
+    },
+    {
+      "width": 600,
+      "height": 800,
+      "stepId": "I04",
+      "scrollWidth": 600,
+      "clientWidth": 600,
+      "bodyH": 1686,
+      "bodyOverflow": "visible",
+      "dialogOverflow": "auto",
+      "minFont": 18,
+      "buttons": [
+        {
+          "label": "닫기",
+          "height": 48,
+          "right": 584
+        },
+        {
+          "label": "ChatGPT",
+          "height": 48,
+          "right": 295
+        },
+        {
+          "label": "Claude",
+          "height": 48,
+          "right": 584
+        },
+        {
+          "label": "조작 이전",
+          "height": 48,
+          "right": 116.84375
+        },
+        {
+          "label": "조작 다음",
+          "height": 48,
+          "right": 217.6875
+        },
+        {
+          "label": "다른 서비스 고르기",
+          "height": 48,
+          "right": 200.6875
+        },
+        {
+          "label": "설치 없이 일반 대화로 맛보기",
+          "height": 48,
+          "right": 439.78125
+        },
+        {
+          "label": "이전",
+          "height": 48,
+          "right": 455.578125
+        },
+        {
+          "label": "나중에 하기",
+          "height": 48,
+          "right": 584
+        },
+        {
+          "label": "다음",
+          "height": 48,
+          "right": 584
+        }
+      ],
+      "name": "tutorial-heading",
+      "focus": "tutorial-heading",
+      "request": null
+    },
+    {
+      "width": 600,
+      "height": 800,
+      "stepId": "P02",
+      "scrollWidth": 600,
+      "clientWidth": 600,
+      "bodyH": 909,
+      "bodyOverflow": "visible",
+      "dialogOverflow": "auto",
+      "minFont": 18,
+      "buttons": [
+        {
+          "label": "닫기",
+          "height": 48,
+          "right": 584
+        },
+        {
+          "label": "ChatGPT",
+          "height": 48,
+          "right": 295
+        },
+        {
+          "label": "Claude",
+          "height": 48,
+          "right": 584
+        },
+        {
+          "label": "요청 복사",
+          "height": 48,
+          "right": 116.84375
+        },
+        {
+          "label": "이 문구 복사",
+          "height": 48,
+          "right": 149.984375
+        },
+        {
+          "label": "이 문구 복사",
+          "height": 48,
+          "right": 149.984375
+        },
+        {
+          "label": "이 문구 복사",
+          "height": 48,
+          "right": 149.984375
+        },
+        {
+          "label": "이 문구 복사",
+          "height": 48,
+          "right": 149.984375
+        },
+        {
+          "label": "설치·선택 안내",
+          "height": 48,
+          "right": 152.828125
+        },
+        {
+          "label": "지금은 넘어갈게요",
+          "height": 48,
+          "right": 584
+        },
+        {
+          "label": "요청 복사하고 ChatGPT 열기",
+          "height": 48,
+          "right": 584
+        }
+      ],
+      "name": "tutorial-heading",
+      "focus": "tutorial-heading",
+      "request": {
+        "h": 126,
+        "content": 126
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "stepId": "S01",
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "bodyH": 699,
+      "bodyOverflow": "visible",
+      "dialogOverflow": "auto",
+      "minFont": 18,
+      "buttons": [
+        {
+          "label": "닫고 선택 화면으로",
+          "height": 48,
+          "right": 374
+        },
+        {
+          "label": "요청 복사",
+          "height": 48,
+          "right": 116.84375
+        },
+        {
+          "label": "이전",
+          "height": 48,
+          "right": 374
+        },
+        {
+          "label": "서안의 답 보기",
+          "height": 48,
+          "right": 374
+        }
+      ],
+      "name": "tutorial-heading",
+      "focus": "tutorial-heading",
+      "request": {
+        "h": 156,
+        "content": 156
+      }
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "stepId": "S04",
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "bodyH": 823,
+      "bodyOverflow": "visible",
+      "dialogOverflow": "auto",
+      "minFont": 18,
+      "buttons": [
+        {
+          "label": "닫고 선택 화면으로",
+          "height": 48,
+          "right": 374
+        },
+        {
+          "label": "예시 처음부터",
+          "height": 48,
+          "right": 147.984375
+        },
+        {
+          "label": "수정 전 다시 보기",
+          "height": 48,
+          "right": 172.6875
+        },
+        {
+          "label": "이전",
+          "height": 48,
+          "right": 374
+        },
+        {
+          "label": "오늘 정리한 내용 보기",
+          "height": 48,
+          "right": 374
+        }
+      ],
+      "name": "tutorial-heading",
+      "focus": "tutorial-heading",
+      "request": null
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "stepId": "S05",
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "bodyH": 659,
+      "bodyOverflow": "visible",
+      "dialogOverflow": "auto",
+      "minFont": 18,
+      "buttons": [
+        {
+          "label": "닫고 선택 화면으로",
+          "height": 48,
+          "right": 374
+        },
+        {
+          "label": "예시 처음부터",
+          "height": 48,
+          "right": 147.984375
+        },
+        {
+          "label": "전체 예시 보기",
+          "height": 48,
+          "right": 152.546875
+        },
+        {
+          "label": "이전",
+          "height": 48,
+          "right": 374
+        },
+        {
+          "label": "선택 화면으로 돌아가기",
+          "height": 48,
+          "right": 374
+        }
+      ],
+      "name": "tutorial-heading",
+      "focus": "tutorial-heading",
+      "request": null
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "stepId": "I04",
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "bodyH": 1291,
+      "bodyOverflow": "visible",
+      "dialogOverflow": "auto",
+      "minFont": 18,
+      "buttons": [
+        {
+          "label": "닫기",
+          "height": 48,
+          "right": 374
+        },
+        {
+          "label": "ChatGPT",
+          "height": 48,
+          "right": 190
+        },
+        {
+          "label": "Claude",
+          "height": 48,
+          "right": 374
+        },
+        {
+          "label": "조작 이전",
+          "height": 48,
+          "right": 116.84375
+        },
+        {
+          "label": "조작 다음",
+          "height": 48,
+          "right": 217.6875
+        },
+        {
+          "label": "다른 서비스 고르기",
+          "height": 48,
+          "right": 200.6875
+        },
+        {
+          "label": "설치 없이 일반 대화로 맛보기",
+          "height": 48,
+          "right": 272.09375
+        },
+        {
+          "label": "이전",
+          "height": 48,
+          "right": 245.578125
+        },
+        {
+          "label": "나중에 하기",
+          "height": 48,
+          "right": 374
+        },
+        {
+          "label": "다음",
+          "height": 48,
+          "right": 374
+        }
+      ],
+      "name": "tutorial-heading",
+      "focus": "tutorial-heading",
+      "request": null
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "stepId": "P02",
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "bodyH": 1034,
+      "bodyOverflow": "visible",
+      "dialogOverflow": "auto",
+      "minFont": 18,
+      "buttons": [
+        {
+          "label": "닫기",
+          "height": 48,
+          "right": 374
+        },
+        {
+          "label": "ChatGPT",
+          "height": 48,
+          "right": 190
+        },
+        {
+          "label": "Claude",
+          "height": 48,
+          "right": 374
+        },
+        {
+          "label": "요청 복사",
+          "height": 48,
+          "right": 116.84375
+        },
+        {
+          "label": "이 문구 복사",
+          "height": 48,
+          "right": 149.984375
+        },
+        {
+          "label": "이 문구 복사",
+          "height": 48,
+          "right": 149.984375
+        },
+        {
+          "label": "이 문구 복사",
+          "height": 48,
+          "right": 149.984375
+        },
+        {
+          "label": "이 문구 복사",
+          "height": 48,
+          "right": 149.984375
+        },
+        {
+          "label": "설치·선택 안내",
+          "height": 48,
+          "right": 152.828125
+        },
+        {
+          "label": "지금은 넘어갈게요",
+          "height": 48,
+          "right": 374
+        },
+        {
+          "label": "요청 복사하고 ChatGPT 열기",
+          "height": 48,
+          "right": 374
+        }
+      ],
+      "name": "tutorial-heading",
+      "focus": "tutorial-heading",
+      "request": {
+        "h": 156,
+        "content": 156
+      }
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "stepId": "S01",
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "bodyH": 699,
+      "bodyOverflow": "visible",
+      "dialogOverflow": "auto",
+      "minFont": 18,
+      "buttons": [
+        {
+          "label": "닫고 선택 화면으로",
+          "height": 48,
+          "right": 359
+        },
+        {
+          "label": "요청 복사",
+          "height": 48,
+          "right": 116.84375
+        },
+        {
+          "label": "이전",
+          "height": 48,
+          "right": 359
+        },
+        {
+          "label": "서안의 답 보기",
+          "height": 48,
+          "right": 359
+        }
+      ],
+      "name": "tutorial-heading",
+      "focus": "tutorial-heading",
+      "request": {
+        "h": 156,
+        "content": 156
+      }
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "stepId": "S04",
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "bodyH": 823,
+      "bodyOverflow": "visible",
+      "dialogOverflow": "auto",
+      "minFont": 18,
+      "buttons": [
+        {
+          "label": "닫고 선택 화면으로",
+          "height": 48,
+          "right": 359
+        },
+        {
+          "label": "예시 처음부터",
+          "height": 48,
+          "right": 147.984375
+        },
+        {
+          "label": "수정 전 다시 보기",
+          "height": 48,
+          "right": 172.6875
+        },
+        {
+          "label": "이전",
+          "height": 48,
+          "right": 359
+        },
+        {
+          "label": "오늘 정리한 내용 보기",
+          "height": 48,
+          "right": 359
+        }
+      ],
+      "name": "tutorial-heading",
+      "focus": "tutorial-heading",
+      "request": null
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "stepId": "S05",
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "bodyH": 659,
+      "bodyOverflow": "visible",
+      "dialogOverflow": "auto",
+      "minFont": 18,
+      "buttons": [
+        {
+          "label": "닫고 선택 화면으로",
+          "height": 48,
+          "right": 359
+        },
+        {
+          "label": "예시 처음부터",
+          "height": 48,
+          "right": 147.984375
+        },
+        {
+          "label": "전체 예시 보기",
+          "height": 48,
+          "right": 152.546875
+        },
+        {
+          "label": "이전",
+          "height": 48,
+          "right": 359
+        },
+        {
+          "label": "선택 화면으로 돌아가기",
+          "height": 48,
+          "right": 359
+        }
+      ],
+      "name": "tutorial-heading",
+      "focus": "tutorial-heading",
+      "request": null
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "stepId": "I04",
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "bodyH": 1258,
+      "bodyOverflow": "visible",
+      "dialogOverflow": "auto",
+      "minFont": 18,
+      "buttons": [
+        {
+          "label": "닫기",
+          "height": 48,
+          "right": 359
+        },
+        {
+          "label": "ChatGPT",
+          "height": 48,
+          "right": 182.5
+        },
+        {
+          "label": "Claude",
+          "height": 48,
+          "right": 359
+        },
+        {
+          "label": "조작 이전",
+          "height": 48,
+          "right": 116.84375
+        },
+        {
+          "label": "조작 다음",
+          "height": 48,
+          "right": 217.6875
+        },
+        {
+          "label": "다른 서비스 고르기",
+          "height": 48,
+          "right": 200.6875
+        },
+        {
+          "label": "설치 없이 일반 대화로 맛보기",
+          "height": 48,
+          "right": 272.09375
+        },
+        {
+          "label": "이전",
+          "height": 48,
+          "right": 230.578125
+        },
+        {
+          "label": "나중에 하기",
+          "height": 48,
+          "right": 359
+        },
+        {
+          "label": "다음",
+          "height": 48,
+          "right": 359
+        }
+      ],
+      "name": "tutorial-heading",
+      "focus": "tutorial-heading",
+      "request": null
+    },
+    {
+      "width": 375,
+      "height": 667,
+      "stepId": "P02",
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "bodyH": 1034,
+      "bodyOverflow": "visible",
+      "dialogOverflow": "auto",
+      "minFont": 18,
+      "buttons": [
+        {
+          "label": "닫기",
+          "height": 48,
+          "right": 359
+        },
+        {
+          "label": "ChatGPT",
+          "height": 48,
+          "right": 182.5
+        },
+        {
+          "label": "Claude",
+          "height": 48,
+          "right": 359
+        },
+        {
+          "label": "요청 복사",
+          "height": 48,
+          "right": 116.84375
+        },
+        {
+          "label": "이 문구 복사",
+          "height": 48,
+          "right": 149.984375
+        },
+        {
+          "label": "이 문구 복사",
+          "height": 48,
+          "right": 149.984375
+        },
+        {
+          "label": "이 문구 복사",
+          "height": 48,
+          "right": 149.984375
+        },
+        {
+          "label": "이 문구 복사",
+          "height": 48,
+          "right": 149.984375
+        },
+        {
+          "label": "설치·선택 안내",
+          "height": 48,
+          "right": 152.828125
+        },
+        {
+          "label": "지금은 넘어갈게요",
+          "height": 48,
+          "right": 359
+        },
+        {
+          "label": "요청 복사하고 ChatGPT 열기",
+          "height": 48,
+          "right": 359
+        }
+      ],
+      "name": "tutorial-heading",
+      "focus": "tutorial-heading",
+      "request": {
+        "h": 156,
+        "content": 156
+      }
+    },
+    {
+      "width": 320,
+      "height": 667,
+      "stepId": "S01",
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "bodyH": 792,
+      "bodyOverflow": "visible",
+      "dialogOverflow": "auto",
+      "minFont": 18,
+      "buttons": [
+        {
+          "label": "닫고 선택 화면으로",
+          "height": 48,
+          "right": 304
+        },
+        {
+          "label": "요청 복사",
+          "height": 48,
+          "right": 116.84375
+        },
+        {
+          "label": "이전",
+          "height": 48,
+          "right": 304
+        },
+        {
+          "label": "서안의 답 보기",
+          "height": 48,
+          "right": 304
+        }
+      ],
+      "name": "tutorial-heading",
+      "focus": "tutorial-heading",
+      "request": {
+        "h": 187,
+        "content": 187
+      }
+    },
+    {
+      "width": 320,
+      "height": 667,
+      "stepId": "S04",
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "bodyH": 915,
+      "bodyOverflow": "visible",
+      "dialogOverflow": "auto",
+      "minFont": 18,
+      "buttons": [
+        {
+          "label": "닫고 선택 화면으로",
+          "height": 48,
+          "right": 304
+        },
+        {
+          "label": "예시 처음부터",
+          "height": 48,
+          "right": 147.984375
+        },
+        {
+          "label": "수정 전 다시 보기",
+          "height": 48,
+          "right": 172.6875
+        },
+        {
+          "label": "이전",
+          "height": 48,
+          "right": 304
+        },
+        {
+          "label": "오늘 정리한 내용 보기",
+          "height": 48,
+          "right": 304
+        }
+      ],
+      "name": "tutorial-heading",
+      "focus": "tutorial-heading",
+      "request": null
+    },
+    {
+      "width": 320,
+      "height": 667,
+      "stepId": "S05",
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "bodyH": 750,
+      "bodyOverflow": "visible",
+      "dialogOverflow": "auto",
+      "minFont": 18,
+      "buttons": [
+        {
+          "label": "닫고 선택 화면으로",
+          "height": 48,
+          "right": 304
+        },
+        {
+          "label": "예시 처음부터",
+          "height": 48,
+          "right": 147.984375
+        },
+        {
+          "label": "전체 예시 보기",
+          "height": 48,
+          "right": 152.546875
+        },
+        {
+          "label": "이전",
+          "height": 48,
+          "right": 304
+        },
+        {
+          "label": "선택 화면으로 돌아가기",
+          "height": 48,
+          "right": 304
+        }
+      ],
+      "name": "tutorial-heading",
+      "focus": "tutorial-heading",
+      "request": null
+    },
+    {
+      "width": 320,
+      "height": 667,
+      "stepId": "I04",
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "bodyH": 1169,
+      "bodyOverflow": "visible",
+      "dialogOverflow": "auto",
+      "minFont": 18,
+      "buttons": [
+        {
+          "label": "닫기",
+          "height": 48,
+          "right": 304
+        },
+        {
+          "label": "ChatGPT",
+          "height": 48,
+          "right": 155
+        },
+        {
+          "label": "Claude",
+          "height": 48,
+          "right": 304
+        },
+        {
+          "label": "조작 이전",
+          "height": 48,
+          "right": 116.84375
+        },
+        {
+          "label": "조작 다음",
+          "height": 48,
+          "right": 217.6875
+        },
+        {
+          "label": "다른 서비스 고르기",
+          "height": 48,
+          "right": 200.6875
+        },
+        {
+          "label": "설치 없이 일반 대화로 맛보기",
+          "height": 48,
+          "right": 272.09375
+        },
+        {
+          "label": "이전",
+          "height": 48,
+          "right": 175.578125
+        },
+        {
+          "label": "나중에 하기",
+          "height": 48,
+          "right": 304
+        },
+        {
+          "label": "다음",
+          "height": 48,
+          "right": 304
+        }
+      ],
+      "name": "tutorial-heading",
+      "focus": "tutorial-heading",
+      "request": null
+    },
+    {
+      "width": 320,
+      "height": 667,
+      "stepId": "P02",
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "bodyH": 1096,
+      "bodyOverflow": "visible",
+      "dialogOverflow": "auto",
+      "minFont": 18,
+      "buttons": [
+        {
+          "label": "닫기",
+          "height": 48,
+          "right": 304
+        },
+        {
+          "label": "ChatGPT",
+          "height": 48,
+          "right": 155
+        },
+        {
+          "label": "Claude",
+          "height": 48,
+          "right": 304
+        },
+        {
+          "label": "요청 복사",
+          "height": 48,
+          "right": 116.84375
+        },
+        {
+          "label": "이 문구 복사",
+          "height": 48,
+          "right": 149.984375
+        },
+        {
+          "label": "이 문구 복사",
+          "height": 48,
+          "right": 149.984375
+        },
+        {
+          "label": "이 문구 복사",
+          "height": 48,
+          "right": 149.984375
+        },
+        {
+          "label": "이 문구 복사",
+          "height": 48,
+          "right": 149.984375
+        },
+        {
+          "label": "설치·선택 안내",
+          "height": 48,
+          "right": 152.828125
+        },
+        {
+          "label": "지금은 넘어갈게요",
+          "height": 48,
+          "right": 304
+        },
+        {
+          "label": "요청 복사하고 ChatGPT 열기",
+          "height": 48,
+          "right": 304
+        }
+      ],
+      "name": "tutorial-heading",
+      "focus": "tutorial-heading",
+      "request": {
+        "h": 187,
+        "content": 187
+      }
+    }
+  ],
+  "ratios": {
+    "text": 11.534619761246121,
+    "muted": 7.318935696230829,
+    "primary": 8.026741213036978
+  },
+  "actualBrowserZoom": "NOT VERIFIED",
+  "screenReader": "NOT VERIFIED",
+  "devices": "NOT VERIFIED"
+}

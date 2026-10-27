@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "copied": true,
+      "opened": true,
+      "passed": true
+    },
+    {
+      "copied": true,
+      "opened": false,
+      "passed": true
+    },
+    {
+      "copied": false,
+      "opened": true,
+      "passed": true
+    },
+    {
+      "copied": false,
+      "opened": false,
+      "passed": true
+    }
+  ],
+  "timeout": true,
+  "lateResultIgnored": true,
+  "helpPreservesReturned": true,
+  "endingOwnerPreserved": true,
+  "storageFailure": true,
+  "actualAI": "NOT VERIFIED"
+}

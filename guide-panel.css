@@ -1,0 +1,45 @@
+/* v0.13: a content-first modal. No split-screen or dialogue-size coupling. */
+:root{--gp-bg:#fffaf1;--gp-text:#293847;--gp-primary:#35574b;--gp-muted:#4a5560;--gp-border:#c9c6ba}
+#tutorial-dialog{position:fixed;inset:0;margin:auto;padding:0;border:1px solid var(--gp-border);border-radius:20px;background:var(--gp-bg);color:var(--gp-text);width:min(920px,calc(100vw - 48px));max-width:none;height:auto;max-height:calc(100dvh - 48px);font-family:var(--ui-font);font-size:max(16px,var(--read-size,16px));line-height:1.7;box-shadow:0 24px 80px #111b2b55;overflow:hidden}
+#tutorial-dialog[open]{display:flex;flex-direction:column}#tutorial-dialog::backdrop{background:#152029b3}
+#tutorial-dialog *{box-sizing:border-box;min-width:0;overflow-wrap:anywhere}
+#tutorial-dialog .guide-header,#tutorial-dialog .guide-footer{flex:none;padding:20px 24px}
+#tutorial-dialog .guide-header{border-bottom:1px solid var(--gp-border)}
+.tutorial-top{display:flex;align-items:center;justify-content:space-between;gap:16px}.guide-tag,.tutorial-progress{color:var(--gp-muted);margin:0;font-size:1em}
+#tutorial-dialog h2{font:650 1.5em/1.4 var(--ui-font);margin:12px 0 8px;color:var(--gp-text)}#tutorial-dialog h3{font-size:1.1em;line-height:1.5}
+#tutorial-dialog .guide-body{flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:24px max(24px,calc((100% - 680px)/2));scrollbar-gutter:stable}
+#tutorial-dialog p{margin:0 0 16px}#tutorial-dialog .guide-footer{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:flex-end;border-top:1px solid var(--gp-border)}
+#tutorial-dialog button,#tutorial-dialog a.guide-outline,#tutorial-dialog a.guide-primary{min-height:48px;padding:10px 16px;border-radius:10px;font:inherit;line-height:1.5;white-space:normal;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:8px;text-decoration:none;max-width:100%}
+#tutorial-dialog button:disabled{opacity:.55;cursor:default}#tutorial-dialog .guide-primary{background:var(--gp-primary);border:1px solid var(--gp-primary);color:#fff}
+#tutorial-dialog .guide-outline{background:#fffaf1;color:var(--gp-text);border:1px solid #67786d}#tutorial-dialog .guide-text{color:var(--gp-primary);background:transparent;border:1px solid transparent;text-decoration:underline;text-underline-offset:4px}
+#tutorial-dialog :focus-visible{outline:3px solid #315c99;outline-offset:3px}#tutorial-heading:focus{outline:none}
+.guide-logo{height:24px;width:24px;object-fit:contain}.tutorial-services{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px}#tutorial-dialog [aria-pressed=true]{border:2px solid var(--gp-primary);background:#e3eee8}
+.tutorial-aside{display:flex;align-items:flex-start;gap:12px;margin-bottom:24px}.tutorial-aside img{height:40px;width:40px;border-radius:50%;object-fit:cover;flex:none}.tutorial-aside p{margin:0}
+.tutorial-message{padding:18px;border:1px solid var(--gp-border);border-radius:12px;background:#fff;margin-bottom:16px}.tutorial-message strong{color:var(--gp-primary)}.tutorial-message p{margin:8px 0 0!important}
+.tutorial-explanation{color:var(--gp-muted)}.tutorial-correction{border-left:4px solid var(--gp-primary);padding:16px;background:#e3eee8;margin:16px 0}.tutorial-comparison{display:grid;grid-template-columns:1fr 1fr;gap:16px}.tutorial-comparison section{padding:12px;background:#fffaf1;border:1px solid var(--gp-border);border-radius:8px}.tutorial-comparison h3{margin:0 0 8px}
+.tutorial-summary{display:grid;grid-template-columns:1fr 2fr;gap:12px;margin:20px 0}.tutorial-summary dt{font-weight:700}.tutorial-summary dd{margin:0}.tutorial-transcript-step{padding-bottom:24px;margin-bottom:24px;border-bottom:1px solid var(--gp-border)}
+#tutorial-dialog .guide-request{margin:16px 0 24px}#tutorial-dialog textarea{display:block;width:100%;font:inherit;line-height:1.7;padding:16px;border:1px solid #78877d;border-radius:8px;background:#fff;color:var(--gp-text);white-space:pre-wrap;overflow-wrap:anywhere;resize:none;overflow:hidden;min-height:100px;margin:8px 0 12px}#tutorial-dialog .guide-copy-status:empty{display:none}
+.tutorial-capture{margin:16px 0 24px}.tutorial-capture img{display:block;width:100%;height:auto;border-radius:8px}.tutorial-capture figcaption{margin:10px 0;color:var(--gp-muted);font-size:1em}.tutorial-help{margin:20px 0;padding:16px;border:1px solid var(--gp-border);border-radius:10px}.tutorial-help summary{min-height:44px;cursor:pointer}.tutorial-help a{display:block;color:var(--gp-primary);padding:12px 0}
+#tutorial-dialog .practice-results{display:grid;gap:12px}.practice-status,.practice-save-warning{padding:16px;background:#eee7d8;border-radius:8px}.practice-help-words{margin:24px 0}.practice-help-words summary{min-height:44px}.practice-help-words section{margin:16px 0}.tutorial-invocation{padding:20px;background:#e3eee8;border-radius:10px}
+body[data-tutorial-open=true] :is(#story-use,#story-install,#tutorial-later,#tutorial-watch,#service-picker-note){visibility:hidden!important;pointer-events:none!important}
+text-box [data-content=text]{white-space:normal!important;overflow-wrap:anywhere;overflow-x:hidden!important}text-box [data-content=text] p{white-space:normal!important}
+@media(max-width:999px),(max-height:639px){#tutorial-dialog{width:100dvw;height:100dvh;max-height:100dvh;border:0;border-radius:0}#tutorial-dialog .guide-header,#tutorial-dialog .guide-footer{padding:16px max(16px,env(safe-area-inset-right)) 16px max(16px,env(safe-area-inset-left))}#tutorial-dialog .guide-body{padding:20px max(16px,calc((100% - 680px)/2))}#tutorial-dialog .guide-header{padding-top:max(16px,env(safe-area-inset-top))}#tutorial-dialog .guide-footer{padding-bottom:max(16px,env(safe-area-inset-bottom))}}
+@media(max-width:600px){.tutorial-top{align-items:flex-start}.tutorial-top .guide-tag{flex:1}#tutorial-dialog h2{font-size:1.35em}#tutorial-dialog .guide-footer>.guide-primary{width:100%;order:2}.tutorial-comparison,.tutorial-summary{grid-template-columns:1fr}.tutorial-summary dt{margin-top:8px}.tutorial-services>*{flex:1}}
+@media(max-height:600px){#tutorial-dialog[open]{display:block;overflow-y:auto;overscroll-behavior:contain}#tutorial-dialog .guide-body{overflow:visible;min-height:auto}#tutorial-dialog .guide-header,#tutorial-dialog .guide-footer{position:static}#tutorial-dialog .guide-footer{display:flex}}
+@media(prefers-reduced-motion:reduce){#tutorial-dialog *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+/* Isolate the new surface from legacy preparation-dialog typography and widths. */
+#tutorial-dialog :is(p,button,textarea,label,li,summary,figcaption,dt,dd){font-size:inherit!important}
+#tutorial-dialog button{width:auto;margin:0}
+#tutorial-dialog .tutorial-top>.guide-tag{flex:1}
+#tutorial-dialog label{margin:0;font-size:inherit}
+@media(max-width:600px){#tutorial-dialog .guide-footer>.guide-primary{width:100%}}
+.tutorial-topics{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}.tutorial-topics button{flex:1 1 140px}
+#tutorial-dialog :is(details,section,figure,div,footer,header,ol,ul){font-size:inherit}
+/* Narrow screens must also reflow when reading text is enlarged. */
+@media(max-width:600px){
+ #tutorial-dialog[open]{display:block;overflow-y:auto;overscroll-behavior:contain}
+ #tutorial-dialog .guide-body{overflow:visible;min-height:auto}
+ #tutorial-dialog .tutorial-top{flex-direction:column;align-items:stretch;gap:8px}
+ #tutorial-dialog .tutorial-top>.guide-text{align-self:flex-end}
+ #tutorial-dialog .guide-header,#tutorial-dialog .guide-footer{position:static}
+}

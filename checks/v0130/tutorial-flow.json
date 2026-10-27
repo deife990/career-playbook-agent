@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "titleSeparate": true,
+  "steps": 5,
+  "correction": true,
+  "transcript": true,
+  "storyAndPreparationReturn": true,
+  "installCaller": true
+}
