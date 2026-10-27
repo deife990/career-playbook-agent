@@ -1,0 +1,18 @@
+{
+  "browser": "ordinary running Google Chrome, native UI clicks",
+  "method": "No isolated profile, CDP or Playwright for these two clicks",
+  "success": {
+    "origin": "http://127.0.0.1:8774/",
+    "button": "요청 복사하고 ChatGPT 열기",
+    "observed": "ChatGPT tab opened, game displayed copy-success status",
+    "screenshot": "chrome-copy-success.png"
+  },
+  "failure": {
+    "origin": "http://0.0.0.0:8774/",
+    "cause": "Clipboard API unavailable on this insecure HTTP origin",
+    "observed": "ChatGPT tab kept open, game showed manual-copy status and entire request selected",
+    "screenshot": "chrome-copy-failure.png"
+  },
+  "limit": "Exact asynchronous Document is not focused rejection was tested in supplemental regression, not reproduced as that specific error in ordinary Chrome.",
+  "settings": "localhost clipboard permission restored to original 요청(기본값)"
+}

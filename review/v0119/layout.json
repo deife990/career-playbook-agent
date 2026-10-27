@@ -1,0 +1,2171 @@
+{
+  "results": [
+    {
+      "width": 2560,
+      "height": 1080,
+      "step": 2,
+      "banner": {
+        "left": 1100,
+        "top": 703.609375,
+        "bottom": 801,
+        "width": 360,
+        "height": 97.390625,
+        "toolbar": 76,
+        "dialog": 855,
+        "animations": 0
+      },
+      "mode": "portraits",
+      "phone": {
+        "x": 1085,
+        "y": 108,
+        "right": 1475,
+        "bottom": 1008,
+        "width": 390,
+        "height": 900
+      },
+      "left": {
+        "x": 76.796875,
+        "y": 227,
+        "right": 496.796875,
+        "bottom": 889,
+        "width": 420,
+        "height": 662
+      },
+      "right": {
+        "x": 2063.203125,
+        "y": 227,
+        "right": 2483.203125,
+        "bottom": 889,
+        "width": 420,
+        "height": 662
+      },
+      "frame": {
+        "x": 76.796875,
+        "y": 227,
+        "right": 496.796875,
+        "bottom": 857,
+        "width": 420,
+        "height": 630
+      },
+      "image": {
+        "x": 77.796875,
+        "y": 228,
+        "right": 495.796875,
+        "bottom": 856,
+        "width": 418,
+        "height": 628
+      },
+      "caption": {
+        "x": 76.796875,
+        "y": 863,
+        "right": 496.796875,
+        "bottom": 889,
+        "width": 420,
+        "height": 26
+      },
+      "overflow": false
+    },
+    {
+      "width": 2560,
+      "height": 1080,
+      "step": 4,
+      "banner": {
+        "left": 1100,
+        "top": 703.609375,
+        "bottom": 801,
+        "width": 360,
+        "height": 97.390625,
+        "toolbar": 76,
+        "dialog": 855,
+        "animations": 0
+      },
+      "mode": "portraits",
+      "phone": {
+        "x": 1085,
+        "y": 108,
+        "right": 1475,
+        "bottom": 1008,
+        "width": 390,
+        "height": 900
+      },
+      "left": {
+        "x": 76.796875,
+        "y": 227,
+        "right": 496.796875,
+        "bottom": 889,
+        "width": 420,
+        "height": 662
+      },
+      "right": {
+        "x": 2063.203125,
+        "y": 227,
+        "right": 2483.203125,
+        "bottom": 889,
+        "width": 420,
+        "height": 662
+      },
+      "frame": {
+        "x": 76.796875,
+        "y": 227,
+        "right": 496.796875,
+        "bottom": 857,
+        "width": 420,
+        "height": 630
+      },
+      "image": {
+        "x": 77.796875,
+        "y": 228,
+        "right": 495.796875,
+        "bottom": 856,
+        "width": 418,
+        "height": 628
+      },
+      "caption": {
+        "x": 76.796875,
+        "y": 863,
+        "right": 496.796875,
+        "bottom": 889,
+        "width": 420,
+        "height": 26
+      },
+      "overflow": false
+    },
+    {
+      "width": 2560,
+      "height": 1080,
+      "step": 6,
+      "banner": {
+        "left": 1100,
+        "top": 703.609375,
+        "bottom": 801,
+        "width": 360,
+        "height": 97.390625,
+        "toolbar": 76,
+        "dialog": 855,
+        "animations": 0
+      },
+      "mode": "portraits",
+      "phone": {
+        "x": 1085,
+        "y": 108,
+        "right": 1475,
+        "bottom": 1008,
+        "width": 390,
+        "height": 900
+      },
+      "left": {
+        "x": 76.796875,
+        "y": 227,
+        "right": 496.796875,
+        "bottom": 889,
+        "width": 420,
+        "height": 662
+      },
+      "right": {
+        "x": 2063.203125,
+        "y": 227,
+        "right": 2483.203125,
+        "bottom": 889,
+        "width": 420,
+        "height": 662
+      },
+      "frame": {
+        "x": 76.796875,
+        "y": 227,
+        "right": 496.796875,
+        "bottom": 857,
+        "width": 420,
+        "height": 630
+      },
+      "image": {
+        "x": 77.796875,
+        "y": 228,
+        "right": 495.796875,
+        "bottom": 856,
+        "width": 418,
+        "height": 628
+      },
+      "caption": {
+        "x": 76.796875,
+        "y": 863,
+        "right": 496.796875,
+        "bottom": 889,
+        "width": 420,
+        "height": 26
+      },
+      "overflow": false
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "step": 2,
+      "banner": {
+        "left": 780,
+        "top": 703.609375,
+        "bottom": 801,
+        "width": 360,
+        "height": 97.390625,
+        "toolbar": 76,
+        "dialog": 855,
+        "animations": 0
+      },
+      "mode": "portraits",
+      "phone": {
+        "x": 765,
+        "y": 108,
+        "right": 1155,
+        "bottom": 1008,
+        "width": 390,
+        "height": 900
+      },
+      "left": {
+        "x": 57.59375,
+        "y": 227,
+        "right": 477.59375,
+        "bottom": 889,
+        "width": 420,
+        "height": 662
+      },
+      "right": {
+        "x": 1442.40625,
+        "y": 227,
+        "right": 1862.40625,
+        "bottom": 889,
+        "width": 420,
+        "height": 662
+      },
+      "frame": {
+        "x": 57.59375,
+        "y": 227,
+        "right": 477.59375,
+        "bottom": 857,
+        "width": 420,
+        "height": 630
+      },
+      "image": {
+        "x": 58.59375,
+        "y": 228,
+        "right": 476.59375,
+        "bottom": 856,
+        "width": 418,
+        "height": 628
+      },
+      "caption": {
+        "x": 57.59375,
+        "y": 863,
+        "right": 477.59375,
+        "bottom": 889,
+        "width": 420,
+        "height": 26
+      },
+      "overflow": false
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "step": 4,
+      "banner": {
+        "left": 780,
+        "top": 703.609375,
+        "bottom": 801,
+        "width": 360,
+        "height": 97.390625,
+        "toolbar": 76,
+        "dialog": 855,
+        "animations": 0
+      },
+      "mode": "portraits",
+      "phone": {
+        "x": 765,
+        "y": 108,
+        "right": 1155,
+        "bottom": 1008,
+        "width": 390,
+        "height": 900
+      },
+      "left": {
+        "x": 57.59375,
+        "y": 227,
+        "right": 477.59375,
+        "bottom": 889,
+        "width": 420,
+        "height": 662
+      },
+      "right": {
+        "x": 1442.40625,
+        "y": 227,
+        "right": 1862.40625,
+        "bottom": 889,
+        "width": 420,
+        "height": 662
+      },
+      "frame": {
+        "x": 57.59375,
+        "y": 227,
+        "right": 477.59375,
+        "bottom": 857,
+        "width": 420,
+        "height": 630
+      },
+      "image": {
+        "x": 58.59375,
+        "y": 228,
+        "right": 476.59375,
+        "bottom": 856,
+        "width": 418,
+        "height": 628
+      },
+      "caption": {
+        "x": 57.59375,
+        "y": 863,
+        "right": 477.59375,
+        "bottom": 889,
+        "width": 420,
+        "height": 26
+      },
+      "overflow": false
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "step": 6,
+      "banner": {
+        "left": 780,
+        "top": 703.609375,
+        "bottom": 801,
+        "width": 360,
+        "height": 97.390625,
+        "toolbar": 76,
+        "dialog": 855,
+        "animations": 0
+      },
+      "mode": "portraits",
+      "phone": {
+        "x": 765,
+        "y": 108,
+        "right": 1155,
+        "bottom": 1008,
+        "width": 390,
+        "height": 900
+      },
+      "left": {
+        "x": 57.59375,
+        "y": 227,
+        "right": 477.59375,
+        "bottom": 889,
+        "width": 420,
+        "height": 662
+      },
+      "right": {
+        "x": 1442.40625,
+        "y": 227,
+        "right": 1862.40625,
+        "bottom": 889,
+        "width": 420,
+        "height": 662
+      },
+      "frame": {
+        "x": 57.59375,
+        "y": 227,
+        "right": 477.59375,
+        "bottom": 857,
+        "width": 420,
+        "height": 630
+      },
+      "image": {
+        "x": 58.59375,
+        "y": 228,
+        "right": 476.59375,
+        "bottom": 856,
+        "width": 418,
+        "height": 628
+      },
+      "caption": {
+        "x": 57.59375,
+        "y": 863,
+        "right": 477.59375,
+        "bottom": 889,
+        "width": 420,
+        "height": 26
+      },
+      "overflow": false
+    },
+    {
+      "width": 1748,
+      "height": 1300,
+      "step": 2,
+      "banner": {
+        "left": 694,
+        "top": 913.609375,
+        "bottom": 1011,
+        "width": 360,
+        "height": 97.390625,
+        "toolbar": 76,
+        "dialog": 1075,
+        "animations": 0
+      },
+      "mode": "portraits",
+      "phone": {
+        "x": 679,
+        "y": 218,
+        "right": 1069,
+        "bottom": 1118,
+        "width": 390,
+        "height": 900
+      },
+      "left": {
+        "x": 52.4375,
+        "y": 337,
+        "right": 472.4375,
+        "bottom": 999,
+        "width": 420,
+        "height": 662
+      },
+      "right": {
+        "x": 1275.5625,
+        "y": 337,
+        "right": 1695.5625,
+        "bottom": 999,
+        "width": 420,
+        "height": 662
+      },
+      "frame": {
+        "x": 52.4375,
+        "y": 337,
+        "right": 472.4375,
+        "bottom": 967,
+        "width": 420,
+        "height": 630
+      },
+      "image": {
+        "x": 53.4375,
+        "y": 338,
+        "right": 471.4375,
+        "bottom": 966,
+        "width": 418,
+        "height": 628
+      },
+      "caption": {
+        "x": 52.4375,
+        "y": 973,
+        "right": 472.4375,
+        "bottom": 999,
+        "width": 420,
+        "height": 26
+      },
+      "overflow": false
+    },
+    {
+      "width": 1748,
+      "height": 1300,
+      "step": 4,
+      "banner": {
+        "left": 694,
+        "top": 913.609375,
+        "bottom": 1011,
+        "width": 360,
+        "height": 97.390625,
+        "toolbar": 76,
+        "dialog": 1075,
+        "animations": 0
+      },
+      "mode": "portraits",
+      "phone": {
+        "x": 679,
+        "y": 218,
+        "right": 1069,
+        "bottom": 1118,
+        "width": 390,
+        "height": 900
+      },
+      "left": {
+        "x": 52.4375,
+        "y": 337,
+        "right": 472.4375,
+        "bottom": 999,
+        "width": 420,
+        "height": 662
+      },
+      "right": {
+        "x": 1275.5625,
+        "y": 337,
+        "right": 1695.5625,
+        "bottom": 999,
+        "width": 420,
+        "height": 662
+      },
+      "frame": {
+        "x": 52.4375,
+        "y": 337,
+        "right": 472.4375,
+        "bottom": 967,
+        "width": 420,
+        "height": 630
+      },
+      "image": {
+        "x": 53.4375,
+        "y": 338,
+        "right": 471.4375,
+        "bottom": 966,
+        "width": 418,
+        "height": 628
+      },
+      "caption": {
+        "x": 52.4375,
+        "y": 973,
+        "right": 472.4375,
+        "bottom": 999,
+        "width": 420,
+        "height": 26
+      },
+      "overflow": false
+    },
+    {
+      "width": 1748,
+      "height": 1300,
+      "step": 6,
+      "banner": {
+        "left": 694,
+        "top": 913.609375,
+        "bottom": 1011,
+        "width": 360,
+        "height": 97.390625,
+        "toolbar": 76,
+        "dialog": 1075,
+        "animations": 0
+      },
+      "mode": "portraits",
+      "phone": {
+        "x": 679,
+        "y": 218,
+        "right": 1069,
+        "bottom": 1118,
+        "width": 390,
+        "height": 900
+      },
+      "left": {
+        "x": 52.4375,
+        "y": 337,
+        "right": 472.4375,
+        "bottom": 999,
+        "width": 420,
+        "height": 662
+      },
+      "right": {
+        "x": 1275.5625,
+        "y": 337,
+        "right": 1695.5625,
+        "bottom": 999,
+        "width": 420,
+        "height": 662
+      },
+      "frame": {
+        "x": 52.4375,
+        "y": 337,
+        "right": 472.4375,
+        "bottom": 967,
+        "width": 420,
+        "height": 630
+      },
+      "image": {
+        "x": 53.4375,
+        "y": 338,
+        "right": 471.4375,
+        "bottom": 966,
+        "width": 418,
+        "height": 628
+      },
+      "caption": {
+        "x": 52.4375,
+        "y": 973,
+        "right": 472.4375,
+        "bottom": 999,
+        "width": 420,
+        "height": 26
+      },
+      "overflow": false
+    },
+    {
+      "width": 1320,
+      "height": 1255,
+      "step": 2,
+      "banner": {
+        "left": 480,
+        "top": 869.859375,
+        "bottom": 967.25,
+        "width": 360,
+        "height": 97.390625,
+        "toolbar": 76,
+        "dialog": 1030,
+        "animations": 0
+      },
+      "mode": "portraits",
+      "phone": {
+        "x": 465,
+        "y": 195.5,
+        "right": 855,
+        "bottom": 1095.5,
+        "width": 390,
+        "height": 900
+      },
+      "left": {
+        "x": 39.59375,
+        "y": 362.6875,
+        "right": 395.984375,
+        "bottom": 929.28125,
+        "width": 356.390625,
+        "height": 566.59375
+      },
+      "right": {
+        "x": 924.015625,
+        "y": 362.6875,
+        "right": 1280.40625,
+        "bottom": 929.28125,
+        "width": 356.390625,
+        "height": 566.59375
+      },
+      "frame": {
+        "x": 39.59375,
+        "y": 362.6875,
+        "right": 395.984375,
+        "bottom": 897.28125,
+        "width": 356.390625,
+        "height": 534.59375
+      },
+      "image": {
+        "x": 40.59375,
+        "y": 363.6875,
+        "right": 394.984375,
+        "bottom": 896.28125,
+        "width": 354.390625,
+        "height": 532.59375
+      },
+      "caption": {
+        "x": 39.59375,
+        "y": 903.28125,
+        "right": 395.984375,
+        "bottom": 929.28125,
+        "width": 356.390625,
+        "height": 26
+      },
+      "overflow": false
+    },
+    {
+      "width": 1320,
+      "height": 1255,
+      "step": 4,
+      "banner": {
+        "left": 480,
+        "top": 869.859375,
+        "bottom": 967.25,
+        "width": 360,
+        "height": 97.390625,
+        "toolbar": 76,
+        "dialog": 1030,
+        "animations": 0
+      },
+      "mode": "portraits",
+      "phone": {
+        "x": 465,
+        "y": 195.5,
+        "right": 855,
+        "bottom": 1095.5,
+        "width": 390,
+        "height": 900
+      },
+      "left": {
+        "x": 39.59375,
+        "y": 362.6875,
+        "right": 395.984375,
+        "bottom": 929.28125,
+        "width": 356.390625,
+        "height": 566.59375
+      },
+      "right": {
+        "x": 924.015625,
+        "y": 362.6875,
+        "right": 1280.40625,
+        "bottom": 929.28125,
+        "width": 356.390625,
+        "height": 566.59375
+      },
+      "frame": {
+        "x": 39.59375,
+        "y": 362.6875,
+        "right": 395.984375,
+        "bottom": 897.28125,
+        "width": 356.390625,
+        "height": 534.59375
+      },
+      "image": {
+        "x": 40.59375,
+        "y": 363.6875,
+        "right": 394.984375,
+        "bottom": 896.28125,
+        "width": 354.390625,
+        "height": 532.59375
+      },
+      "caption": {
+        "x": 39.59375,
+        "y": 903.28125,
+        "right": 395.984375,
+        "bottom": 929.28125,
+        "width": 356.390625,
+        "height": 26
+      },
+      "overflow": false
+    },
+    {
+      "width": 1320,
+      "height": 1255,
+      "step": 6,
+      "banner": {
+        "left": 480,
+        "top": 869.859375,
+        "bottom": 967.25,
+        "width": 360,
+        "height": 97.390625,
+        "toolbar": 76,
+        "dialog": 1030,
+        "animations": 0
+      },
+      "mode": "portraits",
+      "phone": {
+        "x": 465,
+        "y": 195.5,
+        "right": 855,
+        "bottom": 1095.5,
+        "width": 390,
+        "height": 900
+      },
+      "left": {
+        "x": 39.59375,
+        "y": 362.6875,
+        "right": 395.984375,
+        "bottom": 929.28125,
+        "width": 356.390625,
+        "height": 566.59375
+      },
+      "right": {
+        "x": 924.015625,
+        "y": 362.6875,
+        "right": 1280.40625,
+        "bottom": 929.28125,
+        "width": 356.390625,
+        "height": 566.59375
+      },
+      "frame": {
+        "x": 39.59375,
+        "y": 362.6875,
+        "right": 395.984375,
+        "bottom": 897.28125,
+        "width": 356.390625,
+        "height": 534.59375
+      },
+      "image": {
+        "x": 40.59375,
+        "y": 363.6875,
+        "right": 394.984375,
+        "bottom": 896.28125,
+        "width": 354.390625,
+        "height": 532.59375
+      },
+      "caption": {
+        "x": 39.59375,
+        "y": 903.28125,
+        "right": 395.984375,
+        "bottom": 929.28125,
+        "width": 356.390625,
+        "height": 26
+      },
+      "overflow": false
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "step": 2,
+      "banner": {
+        "left": 460,
+        "top": 361.609375,
+        "bottom": 459,
+        "width": 360,
+        "height": 97.390625,
+        "toolbar": 76,
+        "dialog": 495,
+        "animations": 0
+      },
+      "mode": "portraits",
+      "phone": {
+        "x": 458.2421875,
+        "y": 94,
+        "right": 821.7578125,
+        "bottom": 662,
+        "width": 363.515625,
+        "height": 568
+      },
+      "left": {
+        "x": 38.390625,
+        "y": 139.4375,
+        "right": 335.125,
+        "bottom": 616.546875,
+        "width": 296.734375,
+        "height": 477.109375
+      },
+      "right": {
+        "x": 944.875,
+        "y": 139.4375,
+        "right": 1241.609375,
+        "bottom": 616.546875,
+        "width": 296.734375,
+        "height": 477.109375
+      },
+      "frame": {
+        "x": 38.390625,
+        "y": 139.4375,
+        "right": 335.125,
+        "bottom": 584.546875,
+        "width": 296.734375,
+        "height": 445.109375
+      },
+      "image": {
+        "x": 39.390625,
+        "y": 140.4375,
+        "right": 334.125,
+        "bottom": 583.546875,
+        "width": 294.734375,
+        "height": 443.109375
+      },
+      "caption": {
+        "x": 38.390625,
+        "y": 590.546875,
+        "right": 335.125,
+        "bottom": 616.546875,
+        "width": 296.734375,
+        "height": 26
+      },
+      "overflow": false
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "step": 4,
+      "banner": {
+        "left": 460,
+        "top": 361.609375,
+        "bottom": 459,
+        "width": 360,
+        "height": 97.390625,
+        "toolbar": 76,
+        "dialog": 495,
+        "animations": 0
+      },
+      "mode": "portraits",
+      "phone": {
+        "x": 458.2421875,
+        "y": 94,
+        "right": 821.7578125,
+        "bottom": 662,
+        "width": 363.515625,
+        "height": 568
+      },
+      "left": {
+        "x": 38.390625,
+        "y": 139.4375,
+        "right": 335.125,
+        "bottom": 616.546875,
+        "width": 296.734375,
+        "height": 477.109375
+      },
+      "right": {
+        "x": 944.875,
+        "y": 139.4375,
+        "right": 1241.609375,
+        "bottom": 616.546875,
+        "width": 296.734375,
+        "height": 477.109375
+      },
+      "frame": {
+        "x": 38.390625,
+        "y": 139.4375,
+        "right": 335.125,
+        "bottom": 584.546875,
+        "width": 296.734375,
+        "height": 445.109375
+      },
+      "image": {
+        "x": 39.390625,
+        "y": 140.4375,
+        "right": 334.125,
+        "bottom": 583.546875,
+        "width": 294.734375,
+        "height": 443.109375
+      },
+      "caption": {
+        "x": 38.390625,
+        "y": 590.546875,
+        "right": 335.125,
+        "bottom": 616.546875,
+        "width": 296.734375,
+        "height": 26
+      },
+      "overflow": false
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "step": 6,
+      "banner": {
+        "left": 460,
+        "top": 361.609375,
+        "bottom": 459,
+        "width": 360,
+        "height": 97.390625,
+        "toolbar": 76,
+        "dialog": 495,
+        "animations": 0
+      },
+      "mode": "portraits",
+      "phone": {
+        "x": 458.2421875,
+        "y": 94,
+        "right": 821.7578125,
+        "bottom": 662,
+        "width": 363.515625,
+        "height": 568
+      },
+      "left": {
+        "x": 38.390625,
+        "y": 139.4375,
+        "right": 335.125,
+        "bottom": 616.546875,
+        "width": 296.734375,
+        "height": 477.109375
+      },
+      "right": {
+        "x": 944.875,
+        "y": 139.4375,
+        "right": 1241.609375,
+        "bottom": 616.546875,
+        "width": 296.734375,
+        "height": 477.109375
+      },
+      "frame": {
+        "x": 38.390625,
+        "y": 139.4375,
+        "right": 335.125,
+        "bottom": 584.546875,
+        "width": 296.734375,
+        "height": 445.109375
+      },
+      "image": {
+        "x": 39.390625,
+        "y": 140.4375,
+        "right": 334.125,
+        "bottom": 583.546875,
+        "width": 294.734375,
+        "height": 443.109375
+      },
+      "caption": {
+        "x": 38.390625,
+        "y": 590.546875,
+        "right": 335.125,
+        "bottom": 616.546875,
+        "width": 296.734375,
+        "height": 26
+      },
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "step": 2,
+      "banner": {
+        "left": 332,
+        "top": 407.21875,
+        "bottom": 504.609375,
+        "width": 360,
+        "height": 97.390625,
+        "toolbar": 76,
+        "dialog": 543,
+        "animations": 0
+      },
+      "mode": "portraits",
+      "phone": {
+        "x": 317,
+        "y": 95.1875,
+        "right": 707,
+        "bottom": 708.78125,
+        "width": 390,
+        "height": 613.59375
+      },
+      "left": {
+        "x": 30.71875,
+        "y": 182.796875,
+        "right": 301.625,
+        "bottom": 621.171875,
+        "width": 270.90625,
+        "height": 438.375
+      },
+      "right": {
+        "x": 722.375,
+        "y": 182.796875,
+        "right": 993.28125,
+        "bottom": 621.171875,
+        "width": 270.90625,
+        "height": 438.375
+      },
+      "frame": {
+        "x": 30.71875,
+        "y": 182.796875,
+        "right": 301.625,
+        "bottom": 589.171875,
+        "width": 270.90625,
+        "height": 406.375
+      },
+      "image": {
+        "x": 31.71875,
+        "y": 183.796875,
+        "right": 300.625,
+        "bottom": 588.171875,
+        "width": 268.90625,
+        "height": 404.375
+      },
+      "caption": {
+        "x": 30.71875,
+        "y": 595.171875,
+        "right": 301.625,
+        "bottom": 621.171875,
+        "width": 270.90625,
+        "height": 26
+      },
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "step": 4,
+      "banner": {
+        "left": 332,
+        "top": 407.21875,
+        "bottom": 504.609375,
+        "width": 360,
+        "height": 97.390625,
+        "toolbar": 76,
+        "dialog": 543,
+        "animations": 0
+      },
+      "mode": "portraits",
+      "phone": {
+        "x": 317,
+        "y": 95.1875,
+        "right": 707,
+        "bottom": 708.78125,
+        "width": 390,
+        "height": 613.59375
+      },
+      "left": {
+        "x": 30.71875,
+        "y": 182.796875,
+        "right": 301.625,
+        "bottom": 621.171875,
+        "width": 270.90625,
+        "height": 438.375
+      },
+      "right": {
+        "x": 722.375,
+        "y": 182.796875,
+        "right": 993.28125,
+        "bottom": 621.171875,
+        "width": 270.90625,
+        "height": 438.375
+      },
+      "frame": {
+        "x": 30.71875,
+        "y": 182.796875,
+        "right": 301.625,
+        "bottom": 589.171875,
+        "width": 270.90625,
+        "height": 406.375
+      },
+      "image": {
+        "x": 31.71875,
+        "y": 183.796875,
+        "right": 300.625,
+        "bottom": 588.171875,
+        "width": 268.90625,
+        "height": 404.375
+      },
+      "caption": {
+        "x": 30.71875,
+        "y": 595.171875,
+        "right": 301.625,
+        "bottom": 621.171875,
+        "width": 270.90625,
+        "height": 26
+      },
+      "overflow": false
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "step": 6,
+      "banner": {
+        "left": 332,
+        "top": 407.21875,
+        "bottom": 504.609375,
+        "width": 360,
+        "height": 97.390625,
+        "toolbar": 76,
+        "dialog": 543,
+        "animations": 0
+      },
+      "mode": "portraits",
+      "phone": {
+        "x": 317,
+        "y": 95.1875,
+        "right": 707,
+        "bottom": 708.78125,
+        "width": 390,
+        "height": 613.59375
+      },
+      "left": {
+        "x": 30.71875,
+        "y": 182.796875,
+        "right": 301.625,
+        "bottom": 621.171875,
+        "width": 270.90625,
+        "height": 438.375
+      },
+      "right": {
+        "x": 722.375,
+        "y": 182.796875,
+        "right": 993.28125,
+        "bottom": 621.171875,
+        "width": 270.90625,
+        "height": 438.375
+      },
+      "frame": {
+        "x": 30.71875,
+        "y": 182.796875,
+        "right": 301.625,
+        "bottom": 589.171875,
+        "width": 270.90625,
+        "height": 406.375
+      },
+      "image": {
+        "x": 31.71875,
+        "y": 183.796875,
+        "right": 300.625,
+        "bottom": 588.171875,
+        "width": 268.90625,
+        "height": 404.375
+      },
+      "caption": {
+        "x": 30.71875,
+        "y": 595.171875,
+        "right": 301.625,
+        "bottom": 621.171875,
+        "width": 270.90625,
+        "height": 26
+      },
+      "overflow": false
+    },
+    {
+      "width": 800,
+      "height": 450,
+      "step": 2,
+      "banner": {
+        "left": 220,
+        "top": 180.109375,
+        "bottom": 277.5,
+        "width": 360,
+        "height": 97.390625,
+        "toolbar": 68,
+        "dialog": 300,
+        "animations": 0
+      },
+      "mode": "portraits",
+      "phone": {
+        "x": 271.234375,
+        "y": 76,
+        "right": 528.765625,
+        "bottom": 402,
+        "width": 257.53125,
+        "height": 326
+      },
+      "left": {
+        "x": 24,
+        "y": 102.078125,
+        "right": 185.21875,
+        "bottom": 375.90625,
+        "width": 161.21875,
+        "height": 273.828125
+      },
+      "right": {
+        "x": 614.78125,
+        "y": 102.078125,
+        "right": 776,
+        "bottom": 375.90625,
+        "width": 161.21875,
+        "height": 273.828125
+      },
+      "frame": {
+        "x": 24,
+        "y": 102.078125,
+        "right": 185.21875,
+        "bottom": 343.90625,
+        "width": 161.21875,
+        "height": 241.828125
+      },
+      "image": {
+        "x": 25,
+        "y": 103.078125,
+        "right": 184.21875,
+        "bottom": 342.90625,
+        "width": 159.21875,
+        "height": 239.828125
+      },
+      "caption": {
+        "x": 24,
+        "y": 349.90625,
+        "right": 185.21875,
+        "bottom": 375.90625,
+        "width": 161.21875,
+        "height": 26
+      },
+      "overflow": false
+    },
+    {
+      "width": 800,
+      "height": 450,
+      "step": 4,
+      "banner": {
+        "left": 220,
+        "top": 180.109375,
+        "bottom": 277.5,
+        "width": 360,
+        "height": 97.390625,
+        "toolbar": 68,
+        "dialog": 300,
+        "animations": 0
+      },
+      "mode": "portraits",
+      "phone": {
+        "x": 271.234375,
+        "y": 76,
+        "right": 528.765625,
+        "bottom": 402,
+        "width": 257.53125,
+        "height": 326
+      },
+      "left": {
+        "x": 24,
+        "y": 102.078125,
+        "right": 185.21875,
+        "bottom": 375.90625,
+        "width": 161.21875,
+        "height": 273.828125
+      },
+      "right": {
+        "x": 614.78125,
+        "y": 102.078125,
+        "right": 776,
+        "bottom": 375.90625,
+        "width": 161.21875,
+        "height": 273.828125
+      },
+      "frame": {
+        "x": 24,
+        "y": 102.078125,
+        "right": 185.21875,
+        "bottom": 343.90625,
+        "width": 161.21875,
+        "height": 241.828125
+      },
+      "image": {
+        "x": 25,
+        "y": 103.078125,
+        "right": 184.21875,
+        "bottom": 342.90625,
+        "width": 159.21875,
+        "height": 239.828125
+      },
+      "caption": {
+        "x": 24,
+        "y": 349.90625,
+        "right": 185.21875,
+        "bottom": 375.90625,
+        "width": 161.21875,
+        "height": 26
+      },
+      "overflow": false
+    },
+    {
+      "width": 800,
+      "height": 450,
+      "step": 6,
+      "banner": {
+        "left": 220,
+        "top": 180.109375,
+        "bottom": 277.5,
+        "width": 360,
+        "height": 97.390625,
+        "toolbar": 68,
+        "dialog": 300,
+        "animations": 0
+      },
+      "mode": "portraits",
+      "phone": {
+        "x": 271.234375,
+        "y": 76,
+        "right": 528.765625,
+        "bottom": 402,
+        "width": 257.53125,
+        "height": 326
+      },
+      "left": {
+        "x": 24,
+        "y": 102.078125,
+        "right": 185.21875,
+        "bottom": 375.90625,
+        "width": 161.21875,
+        "height": 273.828125
+      },
+      "right": {
+        "x": 614.78125,
+        "y": 102.078125,
+        "right": 776,
+        "bottom": 375.90625,
+        "width": 161.21875,
+        "height": 273.828125
+      },
+      "frame": {
+        "x": 24,
+        "y": 102.078125,
+        "right": 185.21875,
+        "bottom": 343.90625,
+        "width": 161.21875,
+        "height": 241.828125
+      },
+      "image": {
+        "x": 25,
+        "y": 103.078125,
+        "right": 184.21875,
+        "bottom": 342.90625,
+        "width": 159.21875,
+        "height": 239.828125
+      },
+      "caption": {
+        "x": 24,
+        "y": 349.90625,
+        "right": 185.21875,
+        "bottom": 375.90625,
+        "width": 161.21875,
+        "height": 26
+      },
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "step": 2,
+      "banner": {
+        "left": 204,
+        "top": 650.421875,
+        "bottom": 747.8125,
+        "width": 360,
+        "height": 97.390625,
+        "toolbar": 76,
+        "dialog": 799,
+        "animations": 0
+      },
+      "mode": "compact",
+      "phone": {
+        "x": 189,
+        "y": 151.59375,
+        "right": 579,
+        "bottom": 958.390625,
+        "width": 390,
+        "height": 806.796875
+      },
+      "left": {
+        "x": 16,
+        "y": 81,
+        "right": 156,
+        "bottom": 121,
+        "width": 140,
+        "height": 40
+      },
+      "right": {
+        "x": 612,
+        "y": 81,
+        "right": 752,
+        "bottom": 121,
+        "width": 140,
+        "height": 40
+      },
+      "frame": {
+        "x": 16,
+        "y": 81,
+        "right": 56,
+        "bottom": 121,
+        "width": 40,
+        "height": 40
+      },
+      "image": {
+        "x": 18,
+        "y": 83,
+        "right": 54,
+        "bottom": 123,
+        "width": 36,
+        "height": 40
+      },
+      "caption": {
+        "x": 64,
+        "y": 96,
+        "right": 108.6875,
+        "bottom": 111,
+        "width": 44.6875,
+        "height": 15
+      },
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "step": 4,
+      "banner": {
+        "left": 204,
+        "top": 650.421875,
+        "bottom": 747.8125,
+        "width": 360,
+        "height": 97.390625,
+        "toolbar": 76,
+        "dialog": 799,
+        "animations": 0
+      },
+      "mode": "compact",
+      "phone": {
+        "x": 189,
+        "y": 151.59375,
+        "right": 579,
+        "bottom": 958.390625,
+        "width": 390,
+        "height": 806.796875
+      },
+      "left": {
+        "x": 16,
+        "y": 81,
+        "right": 156,
+        "bottom": 121,
+        "width": 140,
+        "height": 40
+      },
+      "right": {
+        "x": 612,
+        "y": 81,
+        "right": 752,
+        "bottom": 121,
+        "width": 140,
+        "height": 40
+      },
+      "frame": {
+        "x": 16,
+        "y": 81,
+        "right": 56,
+        "bottom": 121,
+        "width": 40,
+        "height": 40
+      },
+      "image": {
+        "x": 18,
+        "y": 83,
+        "right": 54,
+        "bottom": 123,
+        "width": 36,
+        "height": 40
+      },
+      "caption": {
+        "x": 64,
+        "y": 96,
+        "right": 108.6875,
+        "bottom": 111,
+        "width": 44.6875,
+        "height": 15
+      },
+      "overflow": false
+    },
+    {
+      "width": 768,
+      "height": 1024,
+      "step": 6,
+      "banner": {
+        "left": 204,
+        "top": 650.421875,
+        "bottom": 747.8125,
+        "width": 360,
+        "height": 97.390625,
+        "toolbar": 76,
+        "dialog": 799,
+        "animations": 0
+      },
+      "mode": "compact",
+      "phone": {
+        "x": 189,
+        "y": 151.59375,
+        "right": 579,
+        "bottom": 958.390625,
+        "width": 390,
+        "height": 806.796875
+      },
+      "left": {
+        "x": 16,
+        "y": 81,
+        "right": 156,
+        "bottom": 121,
+        "width": 140,
+        "height": 40
+      },
+      "right": {
+        "x": 612,
+        "y": 81,
+        "right": 752,
+        "bottom": 121,
+        "width": 140,
+        "height": 40
+      },
+      "frame": {
+        "x": 16,
+        "y": 81,
+        "right": 56,
+        "bottom": 121,
+        "width": 40,
+        "height": 40
+      },
+      "image": {
+        "x": 18,
+        "y": 83,
+        "right": 54,
+        "bottom": 123,
+        "width": 36,
+        "height": 40
+      },
+      "caption": {
+        "x": 64,
+        "y": 96,
+        "right": 108.6875,
+        "bottom": 111,
+        "width": 44.6875,
+        "height": 15
+      },
+      "overflow": false
+    },
+    {
+      "width": 600,
+      "height": 900,
+      "step": 2,
+      "banner": {
+        "left": 120,
+        "top": 517.609375,
+        "bottom": 615,
+        "width": 360,
+        "height": 97.390625,
+        "toolbar": 89,
+        "dialog": 660,
+        "animations": 0
+      },
+      "mode": "compact",
+      "phone": {
+        "x": 105,
+        "y": 149,
+        "right": 495,
+        "bottom": 850,
+        "width": 390,
+        "height": 701
+      },
+      "left": {
+        "x": 16,
+        "y": 94,
+        "right": 156,
+        "bottom": 134,
+        "width": 140,
+        "height": 40
+      },
+      "right": {
+        "x": 444,
+        "y": 94,
+        "right": 584,
+        "bottom": 134,
+        "width": 140,
+        "height": 40
+      },
+      "frame": {
+        "x": 16,
+        "y": 94,
+        "right": 56,
+        "bottom": 134,
+        "width": 40,
+        "height": 40
+      },
+      "image": {
+        "x": 18,
+        "y": 96,
+        "right": 54,
+        "bottom": 136,
+        "width": 36,
+        "height": 40
+      },
+      "caption": {
+        "x": 64,
+        "y": 109,
+        "right": 108.6875,
+        "bottom": 124,
+        "width": 44.6875,
+        "height": 15
+      },
+      "overflow": false
+    },
+    {
+      "width": 600,
+      "height": 900,
+      "step": 4,
+      "banner": {
+        "left": 120,
+        "top": 517.609375,
+        "bottom": 615,
+        "width": 360,
+        "height": 97.390625,
+        "toolbar": 89,
+        "dialog": 660,
+        "animations": 0
+      },
+      "mode": "compact",
+      "phone": {
+        "x": 105,
+        "y": 149,
+        "right": 495,
+        "bottom": 850,
+        "width": 390,
+        "height": 701
+      },
+      "left": {
+        "x": 16,
+        "y": 94,
+        "right": 156,
+        "bottom": 134,
+        "width": 140,
+        "height": 40
+      },
+      "right": {
+        "x": 444,
+        "y": 94,
+        "right": 584,
+        "bottom": 134,
+        "width": 140,
+        "height": 40
+      },
+      "frame": {
+        "x": 16,
+        "y": 94,
+        "right": 56,
+        "bottom": 134,
+        "width": 40,
+        "height": 40
+      },
+      "image": {
+        "x": 18,
+        "y": 96,
+        "right": 54,
+        "bottom": 136,
+        "width": 36,
+        "height": 40
+      },
+      "caption": {
+        "x": 64,
+        "y": 109,
+        "right": 108.6875,
+        "bottom": 124,
+        "width": 44.6875,
+        "height": 15
+      },
+      "overflow": false
+    },
+    {
+      "width": 600,
+      "height": 900,
+      "step": 6,
+      "banner": {
+        "left": 120,
+        "top": 517.609375,
+        "bottom": 615,
+        "width": 360,
+        "height": 97.390625,
+        "toolbar": 89,
+        "dialog": 660,
+        "animations": 0
+      },
+      "mode": "compact",
+      "phone": {
+        "x": 105,
+        "y": 149,
+        "right": 495,
+        "bottom": 850,
+        "width": 390,
+        "height": 701
+      },
+      "left": {
+        "x": 16,
+        "y": 94,
+        "right": 156,
+        "bottom": 134,
+        "width": 140,
+        "height": 40
+      },
+      "right": {
+        "x": 444,
+        "y": 94,
+        "right": 584,
+        "bottom": 134,
+        "width": 140,
+        "height": 40
+      },
+      "frame": {
+        "x": 16,
+        "y": 94,
+        "right": 56,
+        "bottom": 134,
+        "width": 40,
+        "height": 40
+      },
+      "image": {
+        "x": 18,
+        "y": 96,
+        "right": 54,
+        "bottom": 136,
+        "width": 36,
+        "height": 40
+      },
+      "caption": {
+        "x": 64,
+        "y": 109,
+        "right": 108.6875,
+        "bottom": 124,
+        "width": 44.6875,
+        "height": 15
+      },
+      "overflow": false
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "step": 2,
+      "banner": {
+        "left": 14,
+        "top": 434.015625,
+        "bottom": 531.40625,
+        "width": 347,
+        "height": 97.390625,
+        "toolbar": 89,
+        "dialog": 572,
+        "animations": 0
+      },
+      "mode": "compact",
+      "phone": {
+        "x": 12,
+        "y": 149,
+        "right": 363,
+        "bottom": 762,
+        "width": 351,
+        "height": 613
+      },
+      "left": {
+        "x": 16,
+        "y": 94,
+        "right": 156,
+        "bottom": 134,
+        "width": 140,
+        "height": 40
+      },
+      "right": {
+        "x": 219,
+        "y": 94,
+        "right": 359,
+        "bottom": 134,
+        "width": 140,
+        "height": 40
+      },
+      "frame": {
+        "x": 16,
+        "y": 94,
+        "right": 56,
+        "bottom": 134,
+        "width": 40,
+        "height": 40
+      },
+      "image": {
+        "x": 18,
+        "y": 96,
+        "right": 54,
+        "bottom": 136,
+        "width": 36,
+        "height": 40
+      },
+      "caption": {
+        "x": 64,
+        "y": 109,
+        "right": 108.6875,
+        "bottom": 124,
+        "width": 44.6875,
+        "height": 15
+      },
+      "overflow": false
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "step": 4,
+      "banner": {
+        "left": 14,
+        "top": 434.015625,
+        "bottom": 531.40625,
+        "width": 347,
+        "height": 97.390625,
+        "toolbar": 89,
+        "dialog": 572,
+        "animations": 0
+      },
+      "mode": "compact",
+      "phone": {
+        "x": 12,
+        "y": 149,
+        "right": 363,
+        "bottom": 762,
+        "width": 351,
+        "height": 613
+      },
+      "left": {
+        "x": 16,
+        "y": 94,
+        "right": 156,
+        "bottom": 134,
+        "width": 140,
+        "height": 40
+      },
+      "right": {
+        "x": 219,
+        "y": 94,
+        "right": 359,
+        "bottom": 134,
+        "width": 140,
+        "height": 40
+      },
+      "frame": {
+        "x": 16,
+        "y": 94,
+        "right": 56,
+        "bottom": 134,
+        "width": 40,
+        "height": 40
+      },
+      "image": {
+        "x": 18,
+        "y": 96,
+        "right": 54,
+        "bottom": 136,
+        "width": 36,
+        "height": 40
+      },
+      "caption": {
+        "x": 64,
+        "y": 109,
+        "right": 108.6875,
+        "bottom": 124,
+        "width": 44.6875,
+        "height": 15
+      },
+      "overflow": false
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "step": 6,
+      "banner": {
+        "left": 14,
+        "top": 434.015625,
+        "bottom": 531.40625,
+        "width": 347,
+        "height": 97.390625,
+        "toolbar": 89,
+        "dialog": 572,
+        "animations": 0
+      },
+      "mode": "compact",
+      "phone": {
+        "x": 12,
+        "y": 149,
+        "right": 363,
+        "bottom": 762,
+        "width": 351,
+        "height": 613
+      },
+      "left": {
+        "x": 16,
+        "y": 94,
+        "right": 156,
+        "bottom": 134,
+        "width": 140,
+        "height": 40
+      },
+      "right": {
+        "x": 219,
+        "y": 94,
+        "right": 359,
+        "bottom": 134,
+        "width": 140,
+        "height": 40
+      },
+      "frame": {
+        "x": 16,
+        "y": 94,
+        "right": 56,
+        "bottom": 134,
+        "width": 40,
+        "height": 40
+      },
+      "image": {
+        "x": 18,
+        "y": 96,
+        "right": 54,
+        "bottom": 136,
+        "width": 36,
+        "height": 40
+      },
+      "caption": {
+        "x": 64,
+        "y": 109,
+        "right": 108.6875,
+        "bottom": 124,
+        "width": 44.6875,
+        "height": 15
+      },
+      "overflow": false
+    },
+    {
+      "width": 812,
+      "height": 375,
+      "step": 2,
+      "banner": {
+        "left": 226,
+        "top": 107.609375,
+        "bottom": 205,
+        "width": 360,
+        "height": 97.390625,
+        "toolbar": 52,
+        "dialog": 225,
+        "animations": 0
+      },
+      "mode": "portraits",
+      "phone": {
+        "x": 300.5390625,
+        "y": 60,
+        "right": 511.4609375,
+        "bottom": 327,
+        "width": 210.921875,
+        "height": 267
+      },
+      "left": {
+        "x": 24.359375,
+        "y": 81.359375,
+        "right": 152.53125,
+        "bottom": 305.625,
+        "width": 128.171875,
+        "height": 224.265625
+      },
+      "right": {
+        "x": 659.46875,
+        "y": 81.359375,
+        "right": 787.640625,
+        "bottom": 305.625,
+        "width": 128.171875,
+        "height": 224.265625
+      },
+      "frame": {
+        "x": 24.359375,
+        "y": 81.359375,
+        "right": 152.53125,
+        "bottom": 273.625,
+        "width": 128.171875,
+        "height": 192.265625
+      },
+      "image": {
+        "x": 25.359375,
+        "y": 82.359375,
+        "right": 151.53125,
+        "bottom": 272.625,
+        "width": 126.171875,
+        "height": 190.265625
+      },
+      "caption": {
+        "x": 24.359375,
+        "y": 279.625,
+        "right": 152.53125,
+        "bottom": 305.625,
+        "width": 128.171875,
+        "height": 26
+      },
+      "overflow": false
+    },
+    {
+      "width": 812,
+      "height": 375,
+      "step": 4,
+      "banner": {
+        "left": 226,
+        "top": 107.609375,
+        "bottom": 205,
+        "width": 360,
+        "height": 97.390625,
+        "toolbar": 52,
+        "dialog": 225,
+        "animations": 0
+      },
+      "mode": "portraits",
+      "phone": {
+        "x": 300.5390625,
+        "y": 60,
+        "right": 511.4609375,
+        "bottom": 327,
+        "width": 210.921875,
+        "height": 267
+      },
+      "left": {
+        "x": 24.359375,
+        "y": 81.359375,
+        "right": 152.53125,
+        "bottom": 305.625,
+        "width": 128.171875,
+        "height": 224.265625
+      },
+      "right": {
+        "x": 659.46875,
+        "y": 81.359375,
+        "right": 787.640625,
+        "bottom": 305.625,
+        "width": 128.171875,
+        "height": 224.265625
+      },
+      "frame": {
+        "x": 24.359375,
+        "y": 81.359375,
+        "right": 152.53125,
+        "bottom": 273.625,
+        "width": 128.171875,
+        "height": 192.265625
+      },
+      "image": {
+        "x": 25.359375,
+        "y": 82.359375,
+        "right": 151.53125,
+        "bottom": 272.625,
+        "width": 126.171875,
+        "height": 190.265625
+      },
+      "caption": {
+        "x": 24.359375,
+        "y": 279.625,
+        "right": 152.53125,
+        "bottom": 305.625,
+        "width": 128.171875,
+        "height": 26
+      },
+      "overflow": false
+    },
+    {
+      "width": 812,
+      "height": 375,
+      "step": 6,
+      "banner": {
+        "left": 226,
+        "top": 107.609375,
+        "bottom": 205,
+        "width": 360,
+        "height": 97.390625,
+        "toolbar": 52,
+        "dialog": 225,
+        "animations": 0
+      },
+      "mode": "portraits",
+      "phone": {
+        "x": 300.5390625,
+        "y": 60,
+        "right": 511.4609375,
+        "bottom": 327,
+        "width": 210.921875,
+        "height": 267
+      },
+      "left": {
+        "x": 24.359375,
+        "y": 81.359375,
+        "right": 152.53125,
+        "bottom": 305.625,
+        "width": 128.171875,
+        "height": 224.265625
+      },
+      "right": {
+        "x": 659.46875,
+        "y": 81.359375,
+        "right": 787.640625,
+        "bottom": 305.625,
+        "width": 128.171875,
+        "height": 224.265625
+      },
+      "frame": {
+        "x": 24.359375,
+        "y": 81.359375,
+        "right": 152.53125,
+        "bottom": 273.625,
+        "width": 128.171875,
+        "height": 192.265625
+      },
+      "image": {
+        "x": 25.359375,
+        "y": 82.359375,
+        "right": 151.53125,
+        "bottom": 272.625,
+        "width": 126.171875,
+        "height": 190.265625
+      },
+      "caption": {
+        "x": 24.359375,
+        "y": 279.625,
+        "right": 152.53125,
+        "bottom": 305.625,
+        "width": 128.171875,
+        "height": 26
+      },
+      "overflow": false
+    }
+  ],
+  "animation": {
+    "frames": [
+      {
+        "opacity": "0",
+        "transform": "translateY(26px)"
+      },
+      {
+        "opacity": "1",
+        "transform": "translateY(0px)"
+      }
+    ],
+    "duration": 420
+  },
+  "castAnimations": [
+    [
+      360
+    ],
+    [
+      360
+    ]
+  ],
+  "errors": []
+}

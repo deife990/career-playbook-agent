@@ -1,6 +1,6 @@
 // Checks the executable episode against its editorial source, without browser data.
 const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),assert=require('node:assert/strict'),crypto=require('node:crypto');
-const root=path.resolve(__dirname,'..'),sourceRoot=path.resolve(root,'..');
+const root=path.resolve(__dirname,'..'),sourceRoot=path.resolve(root,'docs/story');
 const read=name=>fs.readFileSync(path.join(root,name),'utf8');
 const story=vm.runInNewContext(read('story.js')+';CP_STORY').script;
 const requestData=read('request-data.js');

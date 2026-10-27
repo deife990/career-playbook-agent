@@ -1,0 +1,66 @@
+{
+  "results": [
+    {
+      "width": 1280,
+      "height": 720,
+      "passed": true,
+      "request": {
+        "order": [
+          "copy",
+          "open"
+        ],
+        "result": {
+          "copied": false,
+          "saved": false,
+          "opened": true
+        },
+        "selection": 91,
+        "length": 91,
+        "url": "https://claude.ai/",
+        "message": "요청을 직접 복사해주세요. 서비스는 새 탭으로 열었어요. 선택된 문장을 복사해 붙여넣으세요."
+      }
+    },
+    {
+      "width": 800,
+      "height": 450,
+      "passed": true,
+      "request": {
+        "order": [
+          "copy",
+          "open"
+        ],
+        "result": {
+          "copied": false,
+          "saved": false,
+          "opened": true
+        },
+        "selection": 91,
+        "length": 91,
+        "url": "https://claude.ai/",
+        "message": "요청을 직접 복사해주세요. 서비스는 새 탭으로 열었어요. 선택된 문장을 복사해 붙여넣으세요."
+      }
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "passed": true,
+      "request": {
+        "order": [
+          "copy",
+          "open"
+        ],
+        "result": {
+          "copied": false,
+          "saved": false,
+          "opened": true
+        },
+        "selection": 91,
+        "length": 91,
+        "url": "https://claude.ai/",
+        "message": "요청을 직접 복사해주세요. 서비스는 새 탭으로 열었어요. 선택된 문장을 복사해 붙여넣으세요."
+      }
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

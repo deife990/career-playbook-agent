@@ -1,0 +1,83 @@
+{
+  "version": "0.10.1",
+  "results": [
+    {
+      "width": 1440,
+      "label": "RecallDesk",
+      "step": 0,
+      "asset": "assets/recall-service-v0101.png",
+      "alt": "오늘 오전. 얼굴과 머리 모양이 드러나지 않는 짙은 실루엣의 주인공이 베이지색 재킷을 입고 이용권 변경 문의 전화를 받으며 안내 자료를 짚는다.",
+      "text": "나 · 속마음\n오전엔 이용권 날짜 바꿀 수 있냐는 전화. 어제도 같은 안내 했는데.",
+      "overflow": false,
+      "skip": true,
+      "schema": "ep01-script-v9"
+    },
+    {
+      "width": 1440,
+      "resume": "same recall and new asset",
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "label": "RecallPeople",
+      "step": 0,
+      "asset": "assets/recall-closing-v0101.png",
+      "alt": "오늘 오후. 얼굴이 짙은 실루엣으로 처리된 같은 주인공이 마감표의 숫자를 확인하며 종이 서류와 컴퓨터 화면을 대조한다.",
+      "text": "나 · 속마음\n오후엔 마감표 채우고, 빠진 숫자 확인하고. 어제 파일이랑 날짜만 다르네.",
+      "overflow": false,
+      "skip": true,
+      "schema": "ep01-script-v9"
+    },
+    {
+      "width": 1440,
+      "label": "RecallHold",
+      "step": 0,
+      "asset": "assets/recall-service-v0101.png",
+      "alt": "새로운 계획을 보류한다는 업무 메일이 떠오른다.",
+      "text": "나 · 속마음\n새로운 일 좀 해보나 했는데. 이번에도 보류네.",
+      "overflow": false,
+      "skip": true,
+      "schema": "ep01-script-v9"
+    },
+    {
+      "width": 390,
+      "label": "RecallDesk",
+      "step": 0,
+      "asset": "assets/recall-service-v0101.png",
+      "alt": "오늘 오전. 얼굴과 머리 모양이 드러나지 않는 짙은 실루엣의 주인공이 베이지색 재킷을 입고 이용권 변경 문의 전화를 받으며 안내 자료를 짚는다.",
+      "text": "나 · 속마음\n오전엔 이용권 날짜 바꿀 수 있냐는 전화. 어제도 같은 안내 했는데.",
+      "overflow": false,
+      "skip": true,
+      "schema": "ep01-script-v9"
+    },
+    {
+      "width": 390,
+      "resume": "same recall and new asset",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "label": "RecallPeople",
+      "step": 0,
+      "asset": "assets/recall-closing-v0101.png",
+      "alt": "오늘 오후. 얼굴이 짙은 실루엣으로 처리된 같은 주인공이 마감표의 숫자를 확인하며 종이 서류와 컴퓨터 화면을 대조한다.",
+      "text": "나 · 속마음\n오후엔 마감표 채우고, 빠진 숫자 확인하고. 어제 파일이랑 날짜만 다르네.",
+      "overflow": false,
+      "skip": true,
+      "schema": "ep01-script-v9"
+    },
+    {
+      "width": 390,
+      "label": "RecallHold",
+      "step": 0,
+      "asset": "assets/recall-service-v0101.png",
+      "alt": "새로운 계획을 보류한다는 업무 메일이 떠오른다.",
+      "text": "나 · 속마음\n새로운 일 좀 해보나 했는데. 이번에도 보류네.",
+      "overflow": false,
+      "skip": true,
+      "schema": "ep01-script-v9"
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

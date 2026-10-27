@@ -10,7 +10,7 @@ const finished = () => monogatari.state('label')==='Finish';
 const playing = () => !!monogatari.global('playing') && $('welcome').hidden;
 const card = () => CP_CARDS.find(item=>item.id===bridge.card) || CP_CARDS[0];
 const views=['cards','request','install','history','settings','preview','guide'];
-monogatari.settings({Name:'CareerPilot Office Romance Beta',Version:'0.13.0',Label:'Opening',SaveLabel:'CPEpisode',AutoSave:0,Screenshots:false,ServiceWorkers:false,Orientation:'any',Preload:true,TypeAnimation:false,AllowRollback:false,ShowMainScreen:true,Storage:{Adapter:'LocalStorage',Store:'Story',Endpoint:''},AssetsPath:{root:'assets',scenes:'',characters:''}});
+monogatari.settings({Name:'CareerPilot Office Romance Beta',Version:'0.14.0-dev',Label:'Opening',SaveLabel:'CPEpisode',AutoSave:0,Screenshots:false,ServiceWorkers:false,Orientation:'any',Preload:true,TypeAnimation:false,AllowRollback:false,ShowMainScreen:true,Storage:{Adapter:'LocalStorage',Store:'Story',Endpoint:''},AssetsPath:{root:'assets',scenes:'',characters:''}});
 monogatari.preferences({Language:'한국어',TextSpeed:0});
 monogatari.storage({c1:null,c2:null,c3:null,bridge,selfReason:'나도 회사는 바꾸고 싶은데, 지금 생활까지 전부 바뀔까 봐 망설여져.',log:[]});
 monogatari.assets('scenes',{office:'office-evening-v81.png',gate:'gate-night.png',cafe:'lake-pub-night.png',home:'home-protagonist-v0102.png'});

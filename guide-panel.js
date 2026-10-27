@@ -18,7 +18,18 @@ window.CP_GUIDE=(()=>{
   box.append(label,field,copy,status);body.append(box);requestAnimationFrame(()=>{if(field.isConnected){field.style.height='auto';field.style.height=field.scrollHeight+4+'px'}});return field;
  }
  function paragraph(body,text,cls=''){body.append(el('p',cls,text))}
- function showMessages(body,item,corrected=false){if(item.requestId)requestBox(body,item.requestId);if(item.aside){const aside=el('div','tutorial-aside'),img=el('img');img.src='assets/seoan-profile-selfie-v0102.png';img.alt='';aside.append(img,el('p','','서안: '+item.aside));body.append(aside)}for(const m of item.messages||[]){const row=el('section','tutorial-message');row.append(el('strong','',m.speaker),el('p','',m.text));body.append(row)}if(item.summary){const dl=el('dl','tutorial-summary');for(const [name,text]of item.summary)dl.append(el('dt','',name),el('dd','',text));body.append(dl)}paragraph(body,item.explanation,'tutorial-explanation');if(item.correction&&corrected){const result=el('section','tutorial-correction');result.setAttribute('role','status');result.append(el('strong','','서안'),el('p','',item.correction.text));const compare=el('div','tutorial-comparison');for(const [title,text]of[['확인 전',item.before],['확인 후',item.after]]){const cell=el('section');cell.append(el('h3','',title),el('p','',text));compare.append(cell)}result.append(compare);body.append(result)}}
+ function showMessages(body,item,corrected=false){
+  const spread=el('div','tutorial-spread'),conversation=el('section','tutorial-conversation'),observation=el('section','tutorial-observation');
+  conversation.setAttribute('aria-label','서안의 가상 대화');observation.setAttribute('aria-label','오늘 정리한 것');
+  if(item.requestId)requestBox(conversation,item.requestId);
+  if(item.aside){const aside=el('div','tutorial-aside');aside.append(CP_CHARACTERS.portrait('seoan'),el('p','','서안: '+item.aside));conversation.append(aside)}
+  for(const m of item.messages||[]){const row=el('section','tutorial-message');row.append(el('strong','',m.speaker),el('p','',m.text));conversation.append(row)}
+  observation.append(el('p','tutorial-note-label','오늘 정리한 것'));
+  if(item.summary){const dl=el('dl','tutorial-summary');for(const [name,text]of item.summary)dl.append(el('dt','',name),el('dd','',text));observation.append(dl)}
+  paragraph(observation,item.explanation,'tutorial-explanation');
+  if(item.correction&&corrected){const result=el('section','tutorial-correction');result.setAttribute('role','status');result.append(el('strong','','서안'),el('p','',item.correction.text));const compare=el('div','tutorial-comparison');for(const [title,text]of[['확인 전',item.before],['확인 후',item.after]]){const cell=el('section');cell.append(el('h3','',title),el('p','',text));compare.append(cell)}result.append(compare);observation.append(result)}
+  spread.append(conversation,observation);body.append(spread);
+ }
  function servicePicker(body){const group=el('div','tutorial-services');group.setAttribute('role','group');group.setAttribute('aria-label','사용할 서비스');for(const service of ['ChatGPT','Claude']){const b=button(service,'guide-outline',()=>dispatch({type:'SET_SERVICE',service}));b.setAttribute('aria-pressed',String(bridge.service===service));b.prepend(logo(service));group.append(b)}body.append(group)}
  function example(body,footer,s){
   if(transcript){paragraph(body,'실제 질문과 답변 순서는 달라질 수 있어요.');for(const id of CP_TUTORIAL_STATE.steps.example){const section=el('section','tutorial-transcript-step');section.append(el('h3','',id+' · '+CP_TUTORIAL_CONTENT[id].title));showMessages(section,CP_TUTORIAL_CONTENT[id],true);body.append(section)}footer.append(button('단계로 돌아가기','guide-primary',()=>dispatch({type:'CLOSE_TRANSCRIPT'})));return}
@@ -47,6 +58,12 @@ window.CP_GUIDE=(()=>{
   const heading=el('h2','',transcript?'전체 예시':CP_TUTORIAL_CONTENT[s.stepId].title);heading.id='tutorial-heading';heading.tabIndex=-1;const description=el('p','tutorial-progress',s.flow==='example'?'예시 '+(CP_TUTORIAL_STATE.steps.example.indexOf(s.stepId)+1)+' / 5':s.flow==='install'?'설치 안내 '+(Number(s.stepId.slice(1)))+' / 5':'원할 때 중단하고 돌아올 수 있어요.');description.id='tutorial-description';header.append(top,heading,description);
   const body=el('div','guide-body'),footer=el('footer','guide-footer');
   if(s.flow==='example')example(body,footer,s);else if(s.flow==='install')installation(body,footer,s);else if(s.flow==='practice')CP_PRACTICE.render(body,footer,s);else if(s.flow==='continue')continuation(body,footer,s);else taste(body,footer,s);
+  if(s.flow==='example'&&!transcript){
+   const tabs=el('nav','tutorial-page-tabs');tabs.setAttribute('aria-label','노트 페이지');
+   const pageKey=s.stepId+':'+s.correctionRevealed;if(dialog.dataset.pageKey!==pageKey){dialog.dataset.page=s.correctionRevealed?'notes':'conversation';dialog.dataset.pageKey=pageKey}
+   for(const [id,label] of [['conversation','서안의 대화'],['notes','오늘 정리한 것']]){const tab=button(label,'guide-text',()=>{dialog.dataset.page=id;for(const b of tabs.children)b.setAttribute('aria-pressed',String(b===tab));dialog.scrollTop=0});tab.setAttribute('aria-pressed',String(dialog.dataset.page===id));tabs.append(tab)}
+   header.append(tabs);
+  }
   dialog.append(header,body,footer);if(moveFocus){dialog.scrollTop=0;heading.focus({preventScroll:true});body.scrollTop=0}else{body.scrollTop=scroll;if(hadFocus){const replacement=[...dialog.querySelectorAll('button')].find(n=>n.textContent===oldText&&!n.disabled);(replacement||[...dialog.querySelectorAll('button')][oldIndex]||heading)?.focus({preventScroll:true})}}
  }
  function open(options={}){const base=CP_TUTORIAL_STATE.normalize(bridge.tutorial);if(!CP_TUTORIAL_STATE.validContext(options)||options.owner==='title'&&!['example','install','taste'].includes(options.flow))return false;

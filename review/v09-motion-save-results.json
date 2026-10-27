@@ -1,0 +1,33 @@
+{
+  "results": [
+    "black-fade-interrupt",
+    "audio-unlocked-toggle-persist",
+    {
+      "message": {
+        "same": 3,
+        "finished": true,
+        "phone": "true"
+      }
+    },
+    "typing-interrupt",
+    {
+      "migration": "dialog+choices+history",
+      "pass": true
+    },
+    "legacy-install-migration",
+    "download-before-next",
+    {
+      "candidates": 1440,
+      "pass": true
+    },
+    {
+      "candidates": 390,
+      "pass": true
+    },
+    {
+      "candidates": 320,
+      "pass": true
+    }
+  ],
+  "errors": []
+}

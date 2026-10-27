@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-27",
+  "build": "v0.14.0-dev",
+  "branch": "implementation/v014-ui-v1",
+  "ui_ux_baseline": "v1",
+  "source_release": "v0.13.0",
+  "save_schema": "ep01-script-v11",
+  "story_scope": "프롤로그 + 1화; 2~6화는 원고 참조이며 플레이 구현 대상에 추가하지 않음",
+  "story": {
+    "source": "episode01-v08/story.js",
+    "sha256": "7a5803685c7f8c03082b275f0bb49f8806797fcdb1ef981bf92b62ccbc14cac2",
+    "unchanged_from_latest_execution_source": true
+  },
+  "protected_files": {
+    "story.js": {
+      "sha256": "7a5803685c7f8c03082b275f0bb49f8806797fcdb1ef981bf92b62ccbc14cac2",
+      "unchanged_from_v013": true
+    },
+    "request-data.js": {
+      "sha256": "fac1f95cf9614c0593a901f06b426867076e84c362e1c0f9b9fa984024afc9b3",
+      "unchanged_from_v013": true
+    },
+    "cards.js": {
+      "sha256": "c7a247af1c52d1374b46a84ba8be73d429e749952195027e9b2721f6c1757e2f",
+      "unchanged_from_v013": true
+    },
+    "save-v9-anchors.js": {
+      "sha256": "08d1be0f4a811b4ca289f59ce0b693d7569d46b340cb9c81da88d0ae8933f10d",
+      "unchanged_from_v013": true
+    },
+    "save-v10-anchors.js": {
+      "sha256": "ef018ceee8c2daec94e6884c2709be1790124eba841962eba8b05787fd41375c",
+      "unchanged_from_v013": true
+    },
+    "tutorial-content.js": {
+      "sha256": "d96e0c9129fc43fdfb07264c892473a71f9cb7a172a1a351f0574d47071e0150",
+      "unchanged_from_v013": true
+    },
+    "ai-handoff.js": {
+      "sha256": "e6e8451aa47be24e679863519fffc0cdcaa0037d80f2a00f1b3993c72e6f8031",
+      "unchanged_from_v013": true
+    },
+    "practice-ui.js": {
+      "sha256": "076f5620de0c58db983937ba3db05f093faaa7b3f525e8dae9e0679f72978e04",
+      "unchanged_from_v013": true
+    }
+  },
+  "design_manifest_sha256": "e40ff04549e26895fa66a3d6d487bf88967cda13f53626483e858140f3e7ffad",
+  "characters": {
+    "version": "0.2",
+    "application": "v0.14.0-dev",
+    "method": "CSS viewports over unchanged sheets; original scene illustrations preserved",
+    "files": {
+      "seoan": "8314b2ba2d3984cc713826b48176d9c29c56a59fcbce48841eb11efe112e2132",
+      "iseo": "7113621cb36b01b97d4fa04fc7331895edc6552d5ebc462732f955a5b6ee25bb",
+      "nari": "e564cc926995246a3fa61258c6dc05031c41f4961106fc903bd0514aedcee768",
+      "yoon": "8dce770a1d9a64753da6c962f9fab5b6bf91078cab6e81e2f2c8ad056cb65454",
+      "player": "5819021ea750002af9efc9c5b054672f7d5c7eeca626329fca60962a9b348edd"
+    }
+  },
+  "release_status": "local worktree integration; not published"
+}

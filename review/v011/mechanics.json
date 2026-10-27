@@ -1,0 +1,53 @@
+{
+  "results": [
+    {
+      "width": 1280,
+      "height": 720,
+      "download": true,
+      "wizard8": true,
+      "preference": true,
+      "cancelSaveIntact": true,
+      "overlayClosed": true,
+      "soundSync": true,
+      "keyboardClick": true,
+      "slots": true,
+      "v9StableAnchors": true,
+      "independentHistory": true,
+      "uiHide": true,
+      "auto": true
+    },
+    {
+      "width": 800,
+      "height": 450,
+      "download": true,
+      "wizard8": true,
+      "preference": true,
+      "cancelSaveIntact": true,
+      "overlayClosed": true,
+      "soundSync": true,
+      "keyboardClick": true,
+      "slots": true,
+      "v9StableAnchors": true,
+      "independentHistory": true,
+      "uiHide": true,
+      "auto": true
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "download": true,
+      "wizard8": true,
+      "preference": true,
+      "cancelSaveIntact": true,
+      "overlayClosed": true,
+      "soundSync": true,
+      "keyboardClick": true,
+      "slots": true,
+      "v9StableAnchors": true,
+      "independentHistory": true,
+      "uiHide": true,
+      "auto": true
+    }
+  ],
+  "errors": []
+}

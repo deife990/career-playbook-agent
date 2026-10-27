@@ -1,0 +1,32 @@
+{
+  "results": [
+    {
+      "width": 1280,
+      "height": 720,
+      "saveResume": true,
+      "motion": true,
+      "horizontalOverflow": false,
+      "stickers": 2,
+      "passed": true
+    },
+    {
+      "width": 800,
+      "height": 450,
+      "saveResume": true,
+      "motion": true,
+      "horizontalOverflow": false,
+      "stickers": 2,
+      "passed": true
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "saveResume": true,
+      "motion": true,
+      "horizontalOverflow": false,
+      "stickers": 2,
+      "passed": true
+    }
+  ],
+  "errors": []
+}

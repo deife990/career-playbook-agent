@@ -1,0 +1,230 @@
+[
+  {
+    "width": 1280,
+    "height": 720,
+    "service": "chatgpt",
+    "alignment": [
+      {
+        "logo": {
+          "x": 572.625,
+          "y": 408,
+          "width": 25,
+          "height": 25
+        },
+        "label": {
+          "x": 609.625,
+          "y": 409.25,
+          "width": 97.75,
+          "height": 22.5
+        },
+        "text": "ChatGPT로 시작"
+      },
+      {
+        "logo": {
+          "x": 572.625,
+          "y": 467,
+          "width": 25,
+          "height": 25
+        },
+        "label": {
+          "x": 609.625,
+          "y": 468.25,
+          "width": 97.75,
+          "height": 22.5
+        },
+        "text": "Claude로 시작"
+      }
+    ],
+    "passed": true
+  },
+  {
+    "width": 1280,
+    "height": 720,
+    "service": "claude",
+    "alignment": [
+      {
+        "logo": {
+          "x": 572.625,
+          "y": 408,
+          "width": 25,
+          "height": 25
+        },
+        "label": {
+          "x": 609.625,
+          "y": 409.25,
+          "width": 97.75,
+          "height": 22.5
+        },
+        "text": "ChatGPT로 시작"
+      },
+      {
+        "logo": {
+          "x": 572.625,
+          "y": 467,
+          "width": 25,
+          "height": 25
+        },
+        "label": {
+          "x": 609.625,
+          "y": 468.25,
+          "width": 97.75,
+          "height": 22.5
+        },
+        "text": "Claude로 시작"
+      }
+    ],
+    "passed": true
+  },
+  {
+    "width": 800,
+    "height": 450,
+    "service": "chatgpt",
+    "alignment": [
+      {
+        "logo": {
+          "x": 332.625,
+          "y": 213,
+          "width": 25,
+          "height": 25
+        },
+        "label": {
+          "x": 369.625,
+          "y": 214.25,
+          "width": 97.75,
+          "height": 22.5
+        },
+        "text": "ChatGPT로 시작"
+      },
+      {
+        "logo": {
+          "x": 332.625,
+          "y": 272,
+          "width": 25,
+          "height": 25
+        },
+        "label": {
+          "x": 369.625,
+          "y": 273.25,
+          "width": 97.75,
+          "height": 22.5
+        },
+        "text": "Claude로 시작"
+      }
+    ],
+    "passed": true
+  },
+  {
+    "width": 800,
+    "height": 450,
+    "service": "claude",
+    "alignment": [
+      {
+        "logo": {
+          "x": 332.625,
+          "y": 213,
+          "width": 25,
+          "height": 25
+        },
+        "label": {
+          "x": 369.625,
+          "y": 214.25,
+          "width": 97.75,
+          "height": 22.5
+        },
+        "text": "ChatGPT로 시작"
+      },
+      {
+        "logo": {
+          "x": 332.625,
+          "y": 272,
+          "width": 25,
+          "height": 25
+        },
+        "label": {
+          "x": 369.625,
+          "y": 273.25,
+          "width": 97.75,
+          "height": 22.5
+        },
+        "text": "Claude로 시작"
+      }
+    ],
+    "passed": true
+  },
+  {
+    "width": 375,
+    "height": 812,
+    "service": "chatgpt",
+    "alignment": [
+      {
+        "logo": {
+          "x": 123.375,
+          "y": 451,
+          "width": 25,
+          "height": 25
+        },
+        "label": {
+          "x": 160.375,
+          "y": 453,
+          "width": 91.234375,
+          "height": 21
+        },
+        "text": "ChatGPT로 시작"
+      },
+      {
+        "logo": {
+          "x": 123.375,
+          "y": 506,
+          "width": 25,
+          "height": 25
+        },
+        "label": {
+          "x": 160.375,
+          "y": 508,
+          "width": 91.234375,
+          "height": 21
+        },
+        "text": "Claude로 시작"
+      }
+    ],
+    "passed": true
+  },
+  {
+    "width": 375,
+    "height": 812,
+    "service": "claude",
+    "alignment": [
+      {
+        "logo": {
+          "x": 123.375,
+          "y": 451,
+          "width": 25,
+          "height": 25
+        },
+        "label": {
+          "x": 160.375,
+          "y": 453,
+          "width": 91.234375,
+          "height": 21
+        },
+        "text": "ChatGPT로 시작"
+      },
+      {
+        "logo": {
+          "x": 123.375,
+          "y": 506,
+          "width": 25,
+          "height": 25
+        },
+        "label": {
+          "x": 160.375,
+          "y": 508,
+          "width": 91.234375,
+          "height": 21
+        },
+        "text": "Claude로 시작"
+      }
+    ],
+    "passed": true
+  }
+]

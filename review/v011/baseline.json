@@ -1,0 +1,32 @@
+[
+  {
+    "width": 1280,
+    "height": 720,
+    "T01NextHidden": false,
+    "T05DownloadText": "Claude용 파일 다운로드 ↓",
+    "T06": {
+      "button": "true",
+      "checkbox": true
+    }
+  },
+  {
+    "width": 800,
+    "height": 450,
+    "T01NextHidden": false,
+    "T05DownloadText": "Claude용 파일 다운로드 ↓",
+    "T06": {
+      "button": "true",
+      "checkbox": true
+    }
+  },
+  {
+    "width": 375,
+    "height": 812,
+    "T01NextHidden": false,
+    "T05DownloadText": "Claude용 파일 다운로드 ↓",
+    "T06": {
+      "button": "true",
+      "checkbox": true
+    }
+  }
+]

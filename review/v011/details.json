@@ -1,0 +1,92 @@
+{
+  "results": [
+    {
+      "width": 1280,
+      "height": 720,
+      "branchReactions": {
+        "c1": [
+          "서안\n좋아. 그건 내가 열어줄 수 있지.",
+          "서안\n그럼 나 혼자 타이밍 재던 건 아니네. 며칠째 눈치 봤는데.",
+          "서안\n응. 일단 게이트 밖으로. 그 뒤는 같이 알아보고."
+        ],
+        "c2": [
+          "서안\n여기선 다들 내가 뭘 하는지 아는데, 밖에선 처음부터 설명해야 하니까?",
+          "서안\n알지. 통장도 정확하고, 내일 누가 무슨 말 할지도 대충 알고.",
+          "서안\n그건 나도. 이 동네 슈퍼 주인까지 나를 아는데, 처음부터 다시 하기 좀 아깝지."
+        ],
+        "c3": [
+          "서안\n그럼 나 오늘 아주 성실했네.",
+          "서안\n그럼 회사 얘기 없을 때도 연락해도 되는 거네.",
+          "서안\n사실 그 말, 누가 해줬으면 했어."
+        ]
+      },
+      "choiceInputBlocked": true,
+      "readSkip": true,
+      "autoStopsAtCard": true,
+      "requestCopyOpen": true,
+      "historyHotkeys": true,
+      "quickKeys": true,
+      "oldSaveResume": true,
+      "restartConfirmed": true
+    },
+    {
+      "width": 800,
+      "height": 450,
+      "branchReactions": {
+        "c1": [
+          "서안\n좋아. 그건 내가 열어줄 수 있지.",
+          "서안\n그럼 나 혼자 타이밍 재던 건 아니네. 며칠째 눈치 봤는데.",
+          "서안\n응. 일단 게이트 밖으로. 그 뒤는 같이 알아보고."
+        ],
+        "c2": [
+          "서안\n여기선 다들 내가 뭘 하는지 아는데, 밖에선 처음부터 설명해야 하니까?",
+          "서안\n알지. 통장도 정확하고, 내일 누가 무슨 말 할지도 대충 알고.",
+          "서안\n그건 나도. 이 동네 슈퍼 주인까지 나를 아는데, 처음부터 다시 하기 좀 아깝지."
+        ],
+        "c3": [
+          "서안\n그럼 나 오늘 아주 성실했네.",
+          "서안\n그럼 회사 얘기 없을 때도 연락해도 되는 거네.",
+          "서안\n사실 그 말, 누가 해줬으면 했어."
+        ]
+      },
+      "choiceInputBlocked": true,
+      "readSkip": true,
+      "autoStopsAtCard": true,
+      "requestCopyOpen": true,
+      "historyHotkeys": true,
+      "quickKeys": true,
+      "oldSaveResume": true,
+      "restartConfirmed": true
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "branchReactions": {
+        "c1": [
+          "서안\n좋아. 그건 내가 열어줄 수 있지.",
+          "서안\n그럼 나 혼자 타이밍 재던 건 아니네. 며칠째 눈치 봤는데.",
+          "서안\n응. 일단 게이트 밖으로. 그 뒤는 같이 알아보고."
+        ],
+        "c2": [
+          "서안\n여기선 다들 내가 뭘 하는지 아는데, 밖에선 처음부터 설명해야 하니까?",
+          "서안\n알지. 통장도 정확하고, 내일 누가 무슨 말 할지도 대충 알고.",
+          "서안\n그건 나도. 이 동네 슈퍼 주인까지 나를 아는데, 처음부터 다시 하기 좀 아깝지."
+        ],
+        "c3": [
+          "서안\n그럼 나 오늘 아주 성실했네.",
+          "서안\n그럼 회사 얘기 없을 때도 연락해도 되는 거네.",
+          "서안\n사실 그 말, 누가 해줬으면 했어."
+        ]
+      },
+      "choiceInputBlocked": true,
+      "readSkip": true,
+      "autoStopsAtCard": true,
+      "requestCopyOpen": true,
+      "historyHotkeys": true,
+      "quickKeys": true,
+      "oldSaveResume": true,
+      "restartConfirmed": true
+    }
+  ],
+  "errors": []
+}

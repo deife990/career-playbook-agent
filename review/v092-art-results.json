@@ -1,0 +1,19 @@
+{
+  "results": [
+    {
+      "width": 1440,
+      "poses": 5,
+      "tutorialIndoor": true,
+      "gallery": true,
+      "passed": true
+    },
+    {
+      "width": 390,
+      "poses": 5,
+      "tutorialIndoor": true,
+      "gallery": true,
+      "passed": true
+    }
+  ],
+  "errors": []
+}

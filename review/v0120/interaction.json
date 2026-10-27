@@ -1,0 +1,64 @@
+{
+  "copies": [
+    {
+      "kind": "clipboard",
+      "passed": true
+    },
+    {
+      "kind": "denied",
+      "selected": true,
+      "passed": true
+    }
+  ],
+  "saves": [
+    {
+      "fixture": "TutorLinear",
+      "valid": true,
+      "reloaded": true
+    },
+    {
+      "fixture": "TutorRequest",
+      "valid": true,
+      "reloaded": true
+    },
+    {
+      "fixture": "before E03",
+      "valid": true,
+      "reloaded": true
+    }
+  ],
+  "motion": {
+    "invoke": [
+      {
+        "count": 1,
+        "duration": 2500
+      },
+      {
+        "count": 1,
+        "duration": 2500
+      },
+      {
+        "count": 1,
+        "duration": 2500
+      }
+    ],
+    "chat": {
+      "typingMilliseconds": 1200,
+      "appendOnce": true
+    },
+    "reduced": true
+  },
+  "keyboard": {
+    "installHold": true
+  },
+  "errors": [],
+  "download": {
+    "name": "careerpilot-chatgpt-v1.2.0-rc.7.zip",
+    "feedback": true
+  },
+  "defer": {
+    "footer": true,
+    "restored": true
+  },
+  "passed": true
+}

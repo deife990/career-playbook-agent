@@ -1,0 +1,27 @@
+{
+  "version": "0.10.3",
+  "results": [
+    {
+      "width": 1440,
+      "teamsThenTap": true,
+      "noPhoneOrPortraitOnTap": true,
+      "separateReaction": true,
+      "seoanEntrance": true,
+      "resumeAtTap": true,
+      "pubContinuity": true,
+      "noOverflow": true
+    },
+    {
+      "width": 390,
+      "teamsThenTap": true,
+      "noPhoneOrPortraitOnTap": true,
+      "separateReaction": true,
+      "seoanEntrance": true,
+      "resumeAtTap": true,
+      "pubContinuity": true,
+      "noOverflow": true
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

@@ -1,0 +1,21 @@
+{
+  "results": [
+    {
+      "width": 1440,
+      "sceneImage": true,
+      "savedSceneRestored": true,
+      "tutorialExit": true,
+      "gallery": true,
+      "pass": true
+    },
+    {
+      "width": 390,
+      "sceneImage": true,
+      "savedSceneRestored": true,
+      "tutorialExit": true,
+      "gallery": true,
+      "pass": true
+    }
+  ],
+  "errors": []
+}

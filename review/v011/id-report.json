@@ -1,0 +1,533 @@
+[
+  {
+    "id": "T-01",
+    "priority": "P0",
+    "status": "완료",
+    "files": "linear-tutorial.js, review-update.css",
+    "change": "첫 단계에도 고정된 다음 버튼. 다운로드 없이 2단계 이동. 설치 완료 건너뛰기 라벨 명시.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "없음"
+  },
+  {
+    "id": "T-02",
+    "priority": "P0",
+    "status": "완료",
+    "files": "game.js, review-ui.js",
+    "change": "기존 자동 저장이 있을 때 위치를 보여주는 취소 기본 확인창. 승인 시에만 새 게임. 수동 슬롯 유지.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "없음"
+  },
+  {
+    "id": "T-03",
+    "priority": "P1",
+    "status": "완료",
+    "files": "linear-tutorial.js",
+    "change": "스토리·타이틀·내 준비가 같은 설치 데이터 사용. 설치 1~5 / 첫 요청 1~3을 구분. 이야기 속 사용 예시는 별도 6장으로 유지.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "없음"
+  },
+  {
+    "id": "T-04",
+    "priority": "P1",
+    "status": "완료",
+    "files": "game.js, story.js, review-update.css",
+    "change": "첫 사무실 이미지 준비 후 시작. 빈 대사창 숨김. 짧은 페이드와 장소 문구. 제목이 있는 전환은 빈 화면으로 세지 않음.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "없음"
+  },
+  {
+    "id": "T-05",
+    "priority": "P1",
+    "status": "완료",
+    "files": "linear-tutorial.js, review-update.css",
+    "change": "다운로드 요청 확인 문구와 다음 버튼 강조. 실제 다운로드 파일을 임시 폴더에서 확인.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "없음"
+  },
+  {
+    "id": "T-06",
+    "priority": "P1",
+    "status": "완료·원현상 재현 안 됨",
+    "files": "game.js, index.html",
+    "change": "기존 세 크기에서 버튼과 체크 상태 모두 켜짐으로 일치. 공통 상태 동기화 보강, 효과음·환경음 범위를 설정에 표시.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "없음"
+  },
+  {
+    "id": "T-07",
+    "priority": "P2",
+    "status": "완료",
+    "files": "game.js, story.js, linear-tutorial.js",
+    "change": "마지막 서비스 선택을 즉시 저장. 새로고침 후 미리 보기·설치·요청의 기본 서비스에 반영.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "없음"
+  },
+  {
+    "id": "T-08",
+    "priority": "P2",
+    "status": "완료",
+    "files": "game.js",
+    "change": "패널을 연 채 저장·새로고침한 상태를 검증. 이어하기는 장면만 복원하고 패널을 닫음.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "없음"
+  },
+  {
+    "id": "T-09",
+    "priority": "P2",
+    "status": "완료",
+    "files": "game.js, review-ui.js",
+    "change": "무대 클릭·Space·Enter 진행, 선택지·모달에서 진행 차단 확인.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "없음"
+  },
+  {
+    "id": "S-01",
+    "priority": "P1",
+    "status": "완료",
+    "files": "story.js",
+    "change": "“공지에 매각 얘기 있었잖아…”로 중복 질문과 문맥 충돌 제거. 지난번 표기 확인.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "없음"
+  },
+  {
+    "id": "S-02",
+    "priority": "P1",
+    "status": "완료",
+    "files": "story.js",
+    "change": "재무 설명을 짧은 반응 네 줄로 압축. 본사에 대한 주인공의 기대와 서안의 불안을 유지.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "없음"
+  },
+  {
+    "id": "S-03",
+    "priority": "P1",
+    "status": "완료",
+    "files": "story.js, game.js",
+    "change": "이용권 문의 세 번 경험 추가. 두 번째 선택에 따라 주인공의 생활·소득·경험에 관한 자기 이야기로 연결.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "없음"
+  },
+  {
+    "id": "S-04",
+    "priority": "P1",
+    "status": "완료",
+    "files": "story.js, review-ui.js",
+    "change": "세 선택 지점의 아홉 답을 고른 직후 “나” 대사로 표시하고 기록에 남김.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "없음"
+  },
+  {
+    "id": "S-05",
+    "priority": "P1",
+    "status": "완료",
+    "files": "story.js, game.js, lesson-ui.js, review-ui.js",
+    "change": "마지막 메시지 뒤 휴대폰 안 답장 세 가지, 각각 다른 서안의 반응·읽음 표시. 대화 뒤 어둡게 전환하고 별도 정리 카드.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "없음"
+  },
+  {
+    "id": "S-06",
+    "priority": "P1",
+    "status": "완료",
+    "files": "story.js",
+    "change": "펍 입장을 짧은 두 서술과 자리 권유·소매 동작으로 정리. 미완성 “오늘은.” 삭제.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "없음"
+  },
+  {
+    "id": "S-07",
+    "priority": "P2",
+    "status": "완료",
+    "files": "story.js",
+    "change": "“알림을 넘기자 오후에 본 사내 공지가 다시 뜬다.”로 실제 별도 공지 화면과 맞춤.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "없음"
+  },
+  {
+    "id": "S-08",
+    "priority": "P2",
+    "status": "완료",
+    "files": "story.js",
+    "change": "“나 아까 새 일 해보고 싶다고 했잖아.”로 주어를 명확히 함.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "없음"
+  },
+  {
+    "id": "S-09",
+    "priority": "P2",
+    "status": "완료",
+    "files": "story.js",
+    "change": "“서안에게서 새 메시지가 왔다.”로 수정.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "없음"
+  },
+  {
+    "id": "S-10",
+    "priority": "P2",
+    "status": "완료",
+    "files": "story.js",
+    "change": "두 번째 가까움 묘사를 무전기 너머 목소리의 거리감으로 교체.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "없음"
+  },
+  {
+    "id": "U-01",
+    "priority": "P1",
+    "status": "완료",
+    "files": "review-ui.js, review-update.css",
+    "change": "카드를 내용 중심으로 축소. 800×450에서 무대 높이 59% 이하. 1/6·6/6 요청 복사와 카드 내부 계속 버튼. 중복 설명 서술 축소.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "낮은 화면의 긴 예시는 카드 안에서 스크롤해 읽음. 본문 14px 유지."
+  },
+  {
+    "id": "U-02",
+    "priority": "P1",
+    "status": "완료",
+    "files": "game.js, review-ui.js, review-update.css",
+    "change": "“요청 복사하고 서비스 열기” 한 개 주버튼. 나머지는 다른 선택 아래로. 복사·장면 저장·새 탭 열기 순서와 실패 시 직접 복사 링크 제공.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "없음"
+  },
+  {
+    "id": "U-03",
+    "priority": "P1",
+    "status": "완료",
+    "files": "linear-tutorial.js, install-preview.js, lesson-ui.js",
+    "change": "Claude 켜짐 스위치 그림, 실제 ZIP 파일명·배포 해시 확인. ChatGPT 설치 확인 동사와 중복 CareerPilot 입력 정리.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "계정 내부 메뉴 경로의 확정 여부는 E-03 참조."
+  },
+  {
+    "id": "U-04",
+    "priority": "P1",
+    "status": "완료",
+    "files": "linear-tutorial.js",
+    "change": "파일 받기 도움말을 다운로드·폴더 찾기로 변경. 메뉴·업로드·활성화 도움말 분리, 서비스 용어 한국어 병기.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "경로 자체는 바꾸지 않았으며 E-03 실제 계정 검증은 남음."
+  },
+  {
+    "id": "U-05",
+    "priority": "P1",
+    "status": "완료",
+    "files": "review-ui.js, review-update.css",
+    "change": "상단 기록·내 준비·더보기 세 요소. 소리·설정·받기·저장·그림 보기는 더보기. 기록 독립 모달. 375px 한 줄 라벨.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "없음"
+  },
+  {
+    "id": "U-06",
+    "priority": "P1",
+    "status": "완료",
+    "files": "review-ui.js, review-update.css",
+    "change": "지금 할 두 카드 우선, 나머지는 접기. 아직 이야기에서 다루지 않은 준비 표시와 Bridge·기록 전환 풀이.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "없음"
+  },
+  {
+    "id": "U-07",
+    "priority": "P2",
+    "status": "완료",
+    "files": "index.html",
+    "change": "“회상 건너뛰기 ▸”로 결과를 표시. 실제 클릭 시 알림 시작으로 이동.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "없음"
+  },
+  {
+    "id": "U-08",
+    "priority": "P2",
+    "status": "완료",
+    "files": "review-update.css",
+    "change": "휴대폰 메시지·카드 본문 최소 14px. 낮은 화면에서 대사창 축소, 공지 폭 확장·장식 축소.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "작은 화면의 긴 내용은 내부 스크롤 사용. 상태바·보조 라벨은 본문보다 작음."
+  },
+  {
+    "id": "U-09",
+    "priority": "P2",
+    "status": "완료",
+    "files": "review-ui.js, review-update.css",
+    "change": "모바일 미리 보기 탭 대신 이전·다음과 1/6 표시. 양 끝 이동 제한 확인.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "없음"
+  },
+  {
+    "id": "U-10",
+    "priority": "P2",
+    "status": "완료",
+    "files": "review-ui.js, review-update.css",
+    "change": "폰에는 공지 전문, 아래에는 “연봉 동결에, 매각이라.” 반응만 표시.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "없음"
+  },
+  {
+    "id": "U-11",
+    "priority": "P2",
+    "status": "완료",
+    "files": "review-update.css",
+    "change": "선택지를 대사창 바로 위 전용 영역에 고정하고 인물·CG를 어둡게. 엔딩 답장은 폰 안 영역.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "없음"
+  },
+  {
+    "id": "C-01",
+    "priority": "P1",
+    "status": "에셋 목록 정리",
+    "files": "ASSET_PLAN.md",
+    "change": "네 인물의 얼굴·실루엣·기본 표정 구분 기준과 필요한 시트 정리.",
+    "sizes": "현재 화면 3종 검토 · 신규 에셋 미검수",
+    "remaining": "새 그림 미생성. 현행 타이틀 아트는 유지."
+  },
+  {
+    "id": "C-02",
+    "priority": "P1",
+    "status": "부분 완료",
+    "files": "story.js, linear-tutorial.js, review-ui.js, ASSET_PLAN.md",
+    "change": "장면별 표정·포즈 키와 개발 모드의 같은 표정 4줄 초과 경고. 필요한 차분 6종 목록.",
+    "sizes": "코드·현행 화면 3종 확인 · 신규 에셋 미검수",
+    "remaining": "새 놀람·쑥스러움·창밖 옆모습 등 원화 미생성. 임시 기존 포즈를 사용."
+  },
+  {
+    "id": "C-03",
+    "priority": "P2",
+    "status": "완료",
+    "files": "story.js",
+    "change": "펍 입장에 주인공이 재킷을 벗어 의자에 거는 서술 추가. 집의 외투 벗기 서술 유지.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "없음"
+  },
+  {
+    "id": "C-04",
+    "priority": "P2",
+    "status": "에셋 목록 정리",
+    "files": "ASSET_PLAN.md",
+    "change": "첫 사무실 동료의 베이지 외투를 다른 색으로 바꾸는 수정 사양.",
+    "sizes": "현재 화면 3종 검토 · 신규 에셋 미검수",
+    "remaining": "신규 사무실 원화 미생성. 주인공 뒷모습 첫 표시 유지."
+  },
+  {
+    "id": "C-05",
+    "priority": "P2",
+    "status": "에셋 목록 정리",
+    "files": "ASSET_PLAN.md",
+    "change": "서안의 어깨 길이 갈색 머리 마스터와 조명 변화 기준 정리.",
+    "sizes": "현재 화면 3종 검토 · 신규 에셋 미검수",
+    "remaining": "모든 원화의 머리 실루엣·기본색 일괄 수정 미실시."
+  },
+  {
+    "id": "C-06",
+    "priority": "P1",
+    "status": "완료",
+    "files": "game.js, review-update.css, linear-tutorial.js",
+    "change": "원격 인물은 작은 고정 프로필 카드·이름으로. 모바일은 폰 안 프로필만 사용. 이서 대화 중 실제 현장 서안은 펍 착석 구도 유지.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "없음"
+  },
+  {
+    "id": "D-01",
+    "priority": "P1",
+    "status": "완료",
+    "files": "story.js, game.js, review-ui.js",
+    "change": "주머니에 넣고 걷기 → 독립 노크·효과음·짧은 흔들림 → “…어?” → 돌아봄. 중복 내리기 서술 제거.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "없음"
+  },
+  {
+    "id": "D-02",
+    "priority": "P1",
+    "status": "완료",
+    "files": "review-ui.js, review-update.css, ASSET_PLAN.md",
+    "change": "기존 동일 스프라이트로 먼 중경부터 보여주고 첫 대사에서 가까운 구도로 전환. 대사창 위 인물 배치.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "손을 거두는 전용 포즈는 선택적 추가 원화 목록에 포함."
+  },
+  {
+    "id": "D-03",
+    "priority": "P1",
+    "status": "완료",
+    "files": "story.js, game.js, review-ui.js, review-update.css",
+    "change": "폰은 정보, 대사는 반응. 공지·급여 중복 제거, 이서 배너 위쪽, 메시지 폰을 서안 옆으로. 달력 대신 일정 알림으로 서술 수정.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "없음"
+  },
+  {
+    "id": "D-04",
+    "priority": "P1",
+    "status": "부분 완료",
+    "files": "story.js, game.js, linear-tutorial.js, ASSET_PLAN.md",
+    "change": "컵을 내려놓는 줄과 턱 괸 포즈 동기화. 앉는 서술과 착석 그림 정리. 재무 설명 중 기존 탄산수 잔 인서트 추가.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "창밖을 보는 3개 줄의 전용 옆모습 원화는 아직 없음. 해당 포즈 키와 사양만 준비."
+  },
+  {
+    "id": "D-05",
+    "priority": "P2",
+    "status": "완료",
+    "files": "story.js, game.js",
+    "change": "펍 진입에 1화 제목 약 2초와 호숫가 펍·저녁 장소 문구. 퇴근길·집 장소 카드 유지. 움직임 줄이기에서는 긴 전환 생략.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "없음"
+  },
+  {
+    "id": "D-06",
+    "priority": "P2",
+    "status": "완료",
+    "files": "game.js",
+    "change": "어깨가 닿음·벌써 지원했어?·약속 답 지연 세 순간만 짧은 대사 강조와 0.3초 호흡. 환경음 잠시 낮추기.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "새 표정 차분은 C-02 범위로 대기."
+  },
+  {
+    "id": "D-07",
+    "priority": "P2",
+    "status": "부분 완료",
+    "files": "game.js, index.html",
+    "change": "노크·급여·Teams·이서·서안 수신 큐, 펍의 잔잔한 합성 환경음과 집의 냉장고 저음 전환. 브라우저 AudioContext 실행·노드 재생·음소거 일시 정지 확인.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "실제 스피커 청감 미검증. 현재는 합성 환경음이며 별도 녹음·완성 BGM 트랙은 아님."
+  },
+  {
+    "id": "V-01",
+    "priority": "P1",
+    "status": "완료",
+    "files": "review-ui.js, review-update.css",
+    "change": "이름·선택한 답을 포함한 독립 백로그. 상단/대사 도구 기록·휠 위·위 화살표로 열기.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "선택 사항인 백로그 롤백은 미구현."
+  },
+  {
+    "id": "V-02",
+    "priority": "P1",
+    "status": "완료",
+    "files": "review-ui.js, review-update.css",
+    "change": "자동·읽은 문장만 스킵 토글과 속도 설정. 선택지·모달·설치/첫 사용 카드에서 멈춤.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "모바일의 폰 전용 장면에서는 가림을 피하려 읽기 도구를 숨기고 폰의 계속 버튼 사용."
+  },
+  {
+    "id": "V-03",
+    "priority": "P2",
+    "status": "완료",
+    "files": "review-ui.js, review-update.css",
+    "change": "수동 3슬롯+퀵슬롯. 썸네일·위치·시각, 덮어쓰기 확인. F5 퀵세이브·F9 퀵로드. 모바일 더보기에서 슬롯 접근.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "없음"
+  },
+  {
+    "id": "V-04",
+    "priority": "P2",
+    "status": "완료",
+    "files": "review-ui.js, review-update.css",
+    "change": "H·우클릭·버튼으로 그림 보기/복귀. 타이틀 장면 감상에서 기존 이벤트 CG 세 장 확인.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "갤러리는 잠금 없이 공개된 장면 감상 방식."
+  },
+  {
+    "id": "V-05",
+    "priority": "P1",
+    "status": "완료",
+    "files": "story.js, review-ui.js",
+    "change": "기존 세 선택의 아홉 답을 모두 눌러 직후 다른 반응 확인. 세 크기에서 주인공 선택 대사·기록 확인.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "2화 누적 결과는 아직 구현 대상 아님. 기억 알림은 선택 사항으로 추가하지 않음."
+  },
+  {
+    "id": "V-06",
+    "priority": "P2",
+    "status": "제품 결정 대기",
+    "files": "DECISIONS.md",
+    "change": "타이틀 서안 중심 배치 vs 다른 인물 훅 추가 비교. (a) 추천.",
+    "sizes": "선택지·추천안만 작성",
+    "remaining": "사용자 결정 전 타이틀 인물 비중 변경 안 함."
+  },
+  {
+    "id": "V-07",
+    "priority": "P1",
+    "status": "제품 결정 대기",
+    "files": "DECISIONS.md",
+    "change": "이야기/따라 하기 모드 vs 나중에 보기 비교. (b) 추천.",
+    "sizes": "선택지·추천안만 작성",
+    "remaining": "새 모드·튜토리얼 건너뛰기 구조는 구현하지 않음. U-01의 카드 크기·복사·계속만 개선."
+  },
+  {
+    "id": "J-01",
+    "priority": "P1",
+    "status": "완료",
+    "files": "linear-tutorial.js, review-ui.js",
+    "change": "설치 전과 엔딩에 지금 하는 일 / 바꿀 것 / 지킬 조건 정리가 남는다는 결과 안내. 이력서 없이 시작 가능.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "질문 수·소요 시간은 측정하지 않아 수치 약속을 넣지 않음."
+  },
+  {
+    "id": "J-02",
+    "priority": "P1",
+    "status": "완료",
+    "files": "linear-tutorial.js",
+    "change": "다운로드 전에 서비스별 시작 전 확인. Claude 메뉴 존재, ChatGPT 계정·업로드 권한, 컴퓨터 권장·모바일 미확인 안내.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "실제 계정 경로·권한 확정은 E-03 미완료 범위. 조건을 검증했다고 주장하지 않음."
+  },
+  {
+    "id": "J-03",
+    "priority": "P1",
+    "status": "제품 결정 대기",
+    "files": "DECISIONS.md",
+    "change": "맛보기 요청 vs 설치 계정 한정 vs 문의/대기 목록. (a) 추천.",
+    "sizes": "선택지·추천안만 작성",
+    "remaining": "설치 없는 맛보기나 대기 목록을 새로 구현하지 않음."
+  },
+  {
+    "id": "J-04",
+    "priority": "P2",
+    "status": "완료",
+    "files": "review-ui.js",
+    "change": "첫 요청 바로 아래 회사 기밀·고객 개인정보 제외, 숫자는 대략 범위로 말하기 안내.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "없음"
+  },
+  {
+    "id": "J-05",
+    "priority": "P2",
+    "status": "완료",
+    "files": "cards.js, game.js",
+    "change": "기존 두 요청은 유지하고 탐색·면접 확정·경력 기술 한 줄 세 상황 추가. 드롭다운에서 선택·복사 확인.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "없음"
+  },
+  {
+    "id": "J-06",
+    "priority": "P1",
+    "status": "완료",
+    "files": "review-ui.js, review-update.css",
+    "change": "엔딩 별도 정리 카드에 서비스에 맞춘 한 개 주버튼. 예고·다시 보기·타이틀은 보조 링크. 다음 화 준비 중임을 함께 표시.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "없음"
+  },
+  {
+    "id": "E-01",
+    "priority": "P1",
+    "status": "완료",
+    "files": "index.html, linear-tutorial.js",
+    "change": "공통 버튼·제목 CareerPilot 받기, 서비스 내 스킬/플러그인, 배포 파일 CareerPilot ZIP 파일로 정리.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "레거시 복원용 대본의 서비스 메뉴 경로 문구는 E-03 지시에 따라 유지."
+  },
+  {
+    "id": "E-02",
+    "priority": "P2",
+    "status": "완료",
+    "files": "index.html",
+    "change": "배포 타이틀의 레이아웃 비교 링크 제거.",
+    "sizes": "1280×720 · 800×450 · 375×812",
+    "remaining": "없음"
+  },
+  {
+    "id": "E-03",
+    "priority": "P1",
+    "status": "부분 완료",
+    "files": "SERVICE_PATH_VERIFICATION.md, linear-tutorial.js",
+    "change": "현재 공식 문서와 파일 배포 정보를 확인. Claude 실제 웹은 로그인 화면까지만 접근. 계정별 경로 불확실 안내 유지.",
+    "sizes": "공식 문서·로그인 화면 확인 · 실제 계정 내부 미확인",
+    "remaining": "실제 로그인 계정의 Claude·ChatGPT 업로드 메뉴 미검증. 기존 경로 자체는 변경하지 않음."
+  }
+]

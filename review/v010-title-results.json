@@ -1,0 +1,216 @@
+{
+  "date": "2026-10-22",
+  "version": "0.10.0",
+  "results": [
+    {
+      "width": 1440,
+      "height": 900,
+      "overflow": false,
+      "font": true,
+      "logoWithin": true,
+      "headsWithin": true,
+      "logoOverHeads": false,
+      "buttons": [
+        {
+          "id": "start",
+          "clipped": false,
+          "height": 56,
+          "right": 383.515625
+        },
+        {
+          "id": "title-download",
+          "clipped": false,
+          "height": 56,
+          "right": 383.515625
+        },
+        {
+          "id": "title-tutorial",
+          "clipped": false,
+          "height": 56,
+          "right": 383.515625
+        },
+        {
+          "id": "title-settings",
+          "clipped": false,
+          "height": 56,
+          "right": 383.515625
+        }
+      ],
+      "scrollHeight": 936,
+      "menus": true,
+      "start": true,
+      "saveAndResume": true,
+      "returnToTitle": true
+    },
+    {
+      "width": 1280,
+      "height": 720,
+      "overflow": false,
+      "font": true,
+      "logoWithin": true,
+      "headsWithin": true,
+      "logoOverHeads": false,
+      "buttons": [
+        {
+          "id": "start",
+          "clipped": false,
+          "height": 56,
+          "right": 374.234375
+        },
+        {
+          "id": "title-download",
+          "clipped": false,
+          "height": 56,
+          "right": 374.234375
+        },
+        {
+          "id": "title-tutorial",
+          "clipped": false,
+          "height": 56,
+          "right": 374.234375
+        },
+        {
+          "id": "title-settings",
+          "clipped": false,
+          "height": 56,
+          "right": 374.234375
+        }
+      ],
+      "scrollHeight": 749,
+      "menus": true,
+      "start": true,
+      "saveAndResume": true,
+      "returnToTitle": true
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "font": true,
+      "logoWithin": true,
+      "headsWithin": true,
+      "logoOverHeads": false,
+      "buttons": [
+        {
+          "id": "start",
+          "clipped": false,
+          "height": 44,
+          "right": 360
+        },
+        {
+          "id": "title-download",
+          "clipped": false,
+          "height": 44,
+          "right": 360
+        },
+        {
+          "id": "title-tutorial",
+          "clipped": false,
+          "height": 44,
+          "right": 360
+        },
+        {
+          "id": "title-settings",
+          "clipped": false,
+          "height": 44,
+          "right": 360
+        }
+      ],
+      "scrollHeight": 844,
+      "menus": true,
+      "start": true,
+      "saveAndResume": true,
+      "returnToTitle": true
+    },
+    {
+      "width": 320,
+      "height": 780,
+      "overflow": false,
+      "font": true,
+      "logoWithin": true,
+      "headsWithin": true,
+      "logoOverHeads": false,
+      "buttons": [
+        {
+          "id": "start",
+          "clipped": false,
+          "height": 44,
+          "right": 302
+        },
+        {
+          "id": "title-download",
+          "clipped": false,
+          "height": 44,
+          "right": 302
+        },
+        {
+          "id": "title-tutorial",
+          "clipped": false,
+          "height": 44,
+          "right": 302
+        },
+        {
+          "id": "title-settings",
+          "clipped": false,
+          "height": 44,
+          "right": 302
+        }
+      ],
+      "scrollHeight": 780,
+      "menus": true,
+      "start": true,
+      "saveAndResume": true,
+      "returnToTitle": true
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "overflow": false,
+      "font": true,
+      "logoWithin": true,
+      "headsWithin": true,
+      "logoOverHeads": false,
+      "buttons": [
+        {
+          "id": "start",
+          "clipped": false,
+          "height": 42,
+          "right": 335.890625
+        },
+        {
+          "id": "title-download",
+          "clipped": false,
+          "height": 42,
+          "right": 335.890625
+        },
+        {
+          "id": "title-tutorial",
+          "clipped": false,
+          "height": 42,
+          "right": 335.890625
+        },
+        {
+          "id": "title-settings",
+          "clipped": false,
+          "height": 42,
+          "right": 335.890625
+        }
+      ],
+      "scrollHeight": 672,
+      "menus": true,
+      "start": true,
+      "saveAndResume": true,
+      "returnToTitle": true
+    },
+    {
+      "comparison": "A/B/C render actual title with working controls",
+      "passed": true
+    },
+    {
+      "motion": "title layers settle opaque",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

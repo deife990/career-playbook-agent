@@ -1,0 +1,89 @@
+{
+  "results": [
+    {
+      "width": 1280,
+      "height": 720,
+      "startTimeMs": 996,
+      "typingOnce": true,
+      "audio": {
+        "state": "running",
+        "scheduled": 8,
+        "pub": {
+          "scene": "pub",
+          "nodes": 3,
+          "gain": 0.006000000052154064
+        },
+        "home": {
+          "scene": "home",
+          "nodes": 2,
+          "gain": 0.004000000189989805
+        }
+      },
+      "compat": {
+        "v8": 259,
+        "v9": 263,
+        "failures": []
+      },
+      "knockSeparate": true,
+      "muteSuspends": true,
+      "physicalAudioListening": "not verified"
+    },
+    {
+      "width": 800,
+      "height": 450,
+      "startTimeMs": 1017,
+      "typingOnce": true,
+      "audio": {
+        "state": "running",
+        "scheduled": 8,
+        "pub": {
+          "scene": "pub",
+          "nodes": 3,
+          "gain": 0.006000000052154064
+        },
+        "home": {
+          "scene": "home",
+          "nodes": 2,
+          "gain": 0.004000000189989805
+        }
+      },
+      "compat": {
+        "v8": 259,
+        "v9": 263,
+        "failures": []
+      },
+      "knockSeparate": true,
+      "muteSuspends": true,
+      "physicalAudioListening": "not verified"
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "startTimeMs": 1017,
+      "typingOnce": true,
+      "audio": {
+        "state": "running",
+        "scheduled": 8,
+        "pub": {
+          "scene": "pub",
+          "nodes": 3,
+          "gain": 0.006000000052154064
+        },
+        "home": {
+          "scene": "home",
+          "nodes": 2,
+          "gain": 0.004000000189989805
+        }
+      },
+      "compat": {
+        "v8": 259,
+        "v9": 263,
+        "failures": []
+      },
+      "knockSeparate": true,
+      "muteSuspends": true,
+      "physicalAudioListening": "not verified"
+    }
+  ],
+  "errors": []
+}

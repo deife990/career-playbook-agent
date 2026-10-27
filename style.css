@@ -1,35 +1,21 @@
-:root{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;color:#293847;background:#151e2c}*{box-sizing:border-box}body{margin:0}button,select,textarea{font:inherit}button,a#external{min-height:44px;border:1px solid #af9278;border-radius:10px;background:#fffaf1;color:#273846;padding:10px 18px;cursor:pointer}button:hover,a#external:hover{background:#f5dfc8}button:focus-visible,a:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #3b7e95;outline-offset:3px}button:disabled{opacity:.5;cursor:wait}[hidden]{display:none!important}visual-novel{font-family:inherit}main-screen{background:linear-gradient(90deg,#14202ce8,#14202c77),url(assets/lake-cafe.png) center/cover}main-menu{display:none!important}.toolbar{position:fixed;top:0;left:0;right:0;z-index:15;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 24px;background:#14202cd9;color:#fffaf1;font-size:14px}.toolbar small{display:block;font-size:11px;opacity:.7}.toolbar button{min-width:90px}.welcome{position:fixed;inset:20% auto auto 8%;z-index:12;max-width:550px;color:#fffaf1}.welcome h1{font-family:Georgia,"AppleMyungjo",serif;font-size:clamp(30px,4vw,56px);line-height:1.4;margin:12px 0}.eyebrow{letter-spacing:.13em;font-size:13px}.small{font-size:13px;line-height:1.7}.welcome button{margin:16px 10px 0 0}#notice{position:fixed;top:82px;left:24px;right:24px;z-index:15;color:#fffaf1;font-size:13px;pointer-events:none;text-shadow:0 1px 4px #000}#recovery{max-width:450px;background:#482e26;padding:14px;line-height:1.7}game-screen{background:#273340}game-screen [data-character]{max-height:90%;height:90%;object-fit:contain;bottom:0!important}text-box{background:#fffaf1f2!important;color:#293847!important;min-height:185px!important;padding:20px 32px 68px!important;font-size:19px;line-height:1.8;border-top:1px solid #bea17f}text-box [data-content="name"]{color:#86563d!important;font-weight:700}text-box [data-content="text"]{color:#293847!important}choice-container{bottom:235px!important;top:auto!important;left:50%!important;transform:translateX(-50%)!important;width:min(620px,90%)!important;padding:0!important;gap:10px}choice-container button{width:100%;white-space:normal;line-height:1.5;background:#fffaf1f5!important;color:#293847!important;font-size:16px!important;padding:12px 18px!important;margin:5px 0!important;border:1px solid #ad8c6f!important;border-radius:10px!important}#play-controls{position:fixed;right:24px;bottom:16px;z-index:14}dialog{width:min(540px,calc(100% - 28px));max-height:calc(100dvh - 32px);overflow-y:auto;border:1px solid #ad9276;border-radius:18px;padding:24px;color:#293847;background:#fffaf3;box-shadow:0 25px 90px #0008}dialog::backdrop{background:#101b2bbd}.panel-head{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:12px;letter-spacing:.04em}dialog h2{font-family:Georgia,"AppleMyungjo",serif;line-height:1.5;font-size:28px}dialog p{line-height:1.7}dialog label{display:block;font-size:13px;margin:12px 0 6px}dialog select,textarea{width:100%;border:1px solid #ae9b89;background:white;border-radius:8px;padding:12px;line-height:1.7;color:#293847}textarea{resize:vertical}dialog>button,dialog>a{display:block;width:100%;margin-top:12px;text-align:center}#external{background:#263f51!important;color:white!important;text-decoration:none}#panel-status{font-size:13px}#example-text{padding:14px;background:#eee4d6;border-radius:10px}#recovery{font-size:14px}@media(max-width:600px){.toolbar{padding:10px 14px}.toolbar>span{max-width:230px;font-size:12px}#notice{left:14px;right:14px;font-size:11px}.welcome{inset:24% 22px auto}.welcome h1{font-size:32px}.welcome>p{font-size:14px}text-box{min-height:218px!important;font-size:16px;padding:16px 20px 66px!important}choice-container{bottom:246px!important;width:calc(100% - 28px)!important}choice-container button{font-size:14px!important;padding:10px 12px!important}#play-controls{right:14px;bottom:14px}dialog{padding:18px}dialog h2{font-size:25px}game-screen [data-character]{height:80%;max-height:80%;max-width:110%!important}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+:root{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;color:#293847;background:#151e2c}*{box-sizing:border-box}body{margin:0}button,select,textarea{font:inherit}button,a#external{min-height:44px;border:1px solid #af9278;border-radius:10px;background:#fffaf1;color:#273846;padding:10px 18px;cursor:pointer}button:hover,a#external:hover{background:#f5dfc8}button:focus-visible,a:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #3b7e95;outline-offset:3px}button:disabled{opacity:.5;cursor:wait}[hidden]{display:none!important}visual-novel{font-family:inherit}main-screen{background:linear-gradient(90deg,#14202ce8,#14202c77),url(assets/lake-cafe.png) center/cover}main-menu{display:none!important}.welcome{position:fixed;inset:20% auto auto 8%;z-index:12;max-width:550px;color:#fffaf1}.welcome h1{font-family:Georgia,"AppleMyungjo",serif;font-size:clamp(30px,4vw,56px);line-height:1.4;margin:12px 0}.eyebrow{letter-spacing:.13em;font-size:13px}.small{font-size:13px;line-height:1.7}.welcome button{margin:16px 10px 0 0}#notice{position:fixed;top:82px;left:24px;right:24px;z-index:15;color:#fffaf1;font-size:13px;pointer-events:none;text-shadow:0 1px 4px #000}#recovery{max-width:450px;background:#482e26;padding:14px;line-height:1.7}game-screen{background:#273340}game-screen [data-character]{max-height:90%;height:90%;object-fit:contain;bottom:0!important}dialog{width:min(540px,calc(100% - 28px));max-height:calc(100dvh - 32px);overflow-y:auto;border:1px solid #ad9276;border-radius:18px;padding:24px;color:#293847;background:#fffaf3;box-shadow:0 25px 90px #0008}dialog::backdrop{background:#101b2bbd}.panel-head{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:12px;letter-spacing:.04em}dialog h2{font-family:Georgia,"AppleMyungjo",serif;line-height:1.5;font-size:28px}dialog p{line-height:1.7}dialog label{display:block;font-size:13px;margin:12px 0 6px}dialog select,textarea{width:100%;border:1px solid #ae9b89;background:white;border-radius:8px;padding:12px;line-height:1.7;color:#293847}textarea{resize:vertical}dialog>button,dialog>a{display:block;width:100%;margin-top:12px;text-align:center}#external{background:#263f51!important;color:white!important;text-decoration:none}#panel-status{font-size:13px}#example-text{padding:14px;background:#eee4d6;border-radius:10px}#recovery{font-size:14px}@media(max-width:600px){#notice{left:14px;right:14px;font-size:11px}.welcome{inset:24% 22px auto}.welcome h1{font-size:32px}.welcome>p{font-size:14px}dialog{padding:18px}dialog h2{font-size:25px}game-screen [data-character]{height:80%;max-height:80%;max-width:110%!important}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 
 /* Contain engine sprite margins so a narrow viewport never expands. */
 html,body{width:100%;max-width:100%;overflow-x:clip}
-body>.toolbar{width:100%;text-align:left;box-sizing:border-box}
 game-screen{overflow:hidden}
 game-screen img[data-character]{left:50%!important;right:auto!important;margin:0!important;transform:translateX(-50%)!important;width:auto!important;max-width:none!important}
 .welcome,dialog{text-align:left}
-body>.toolbar button,dialog button,#play-controls button{background:#fffaf1;color:#293847}
-
-body>.toolbar{max-width:100vw;min-width:0;gap:8px}
-body>.toolbar>span{min-width:0;flex:1}
-body>.toolbar button{flex:0 0 auto;width:auto;margin:0;max-width:110px}
 visual-novel,game-screen,game-screen [data-content="visuals"]{max-width:100vw;overflow:hidden}
 
 /* Episode reader and shared preparation panel. */
 :root{--read-size:18px;--dialog-height:220px}
 main-screen{background:linear-gradient(90deg,#14202cf0,#14202c66),url(assets/gate-night.png) center/cover}
-.toolbar nav{display:flex;align-items:center;justify-content:flex-end;gap:8px;flex-wrap:wrap;margin:0;width:auto}
-body>.toolbar button{max-width:none;font-size:13px;padding:9px 12px}
-body>.toolbar>.brand{min-width:180px}
 .welcome{top:22%;right:24px;max-height:calc(100dvh - 170px);overflow-y:auto}
 .welcome h1{font-size:clamp(32px,4vw,54px)}
 .welcome .intro{margin-top:26px;line-height:1.9;font-size:16px}
-.welcome .title-actions{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 18px}
-.welcome .title-actions button{margin:0;width:auto;max-width:100%}
 .welcome .small{font-size:12px;opacity:.8}
 #notice{top:84px;left:24px;text-align:left;font-size:12px}
 #story-hint{position:fixed;top:114px;left:24px;right:24px;z-index:14;background:#fffaf1ed;color:#293847;border-radius:8px;padding:9px 14px;text-align:center;font-size:12px;pointer-events:none}
-text-box{font-size:var(--read-size)!important;max-height:46dvh;overflow-y:auto;overscroll-behavior:contain}
-choice-container{bottom:calc(var(--dialog-height) + 26px)!important;max-height:calc(100dvh - var(--dialog-height) - 160px);overflow-y:auto}
-body[data-message="true"] text-box{background:#f7ede2f5!important;border-top:3px solid #ad8c6f}
 #end-actions{position:fixed;right:24px;bottom:calc(var(--dialog-height) + 26px);z-index:14;display:flex;gap:10px;flex-wrap:wrap}
 #end-actions button{background:#fffaf1;color:#293847;min-height:44px;margin:0}
 dialog{width:min(580px,calc(100% - 28px));max-height:calc(100dvh - 28px)}
@@ -47,12 +33,8 @@ dialog a.primary{background:#283f50;color:#fffaf1}
 #history-list p{white-space:pre-line;padding:12px 0;border-bottom:1px solid #d2bfaa;font-size:14px}
 #font-size{width:100%;min-height:44px;margin:20px 0}#font-value{display:block}
 @media(max-width:600px){
- .toolbar{padding:8px 14px;display:block}.toolbar nav{justify-content:space-between;gap:4px;margin-top:6px}.toolbar .brand{display:block;font-size:11px}
- body>.toolbar button{font-size:11px;min-width:0;padding:8px 9px;flex:1}
  #notice{top:104px;left:14px;right:14px;font-size:10px}#story-hint{top:126px;left:14px;right:14px;padding:7px 9px}
  .welcome{inset:18% 22px auto;max-height:calc(100dvh - 155px)}.welcome h1{font-size:31px}.welcome p{font-size:13px}.welcome .intro{font-size:14px;margin-top:16px}.welcome .small{font-size:11px}
- .welcome .title-actions{margin:18px 0;gap:8px}.welcome .title-actions button{font-size:13px;padding:10px 12px}
- text-box{font-size:var(--read-size)!important;min-height:240px!important}
  #end-actions{left:14px;right:14px;justify-content:center;bottom:calc(var(--dialog-height) + 20px);gap:6px}#end-actions button{font-size:12px;padding:9px 10px}
  dialog{padding:18px}dialog h2{font-size:23px}dialog .panel-nav button{padding:9px 6px}
 }
@@ -64,11 +46,8 @@ dialog{font-size:15px}dialog p,dialog li,dialog select,dialog textarea{font-size
 @media(max-width:600px){#story-phone{left:14px;top:128px;width:190px;padding:28px 12px 14px;border-width:5px;border-radius:24px;max-height:calc(100dvh - var(--dialog-height) - 145px)}#phone-body{font-size:12px;padding:9px}#phone-person{font-size:12px;margin:12px 0 8px}#phone-avatar{width:32px;height:32px}body[data-phone="true"] game-screen [data-character="s"]{right:-70px!important;opacity:.65}game-screen [data-character="n"]{left:-60px!important;height:72%!important}body[data-duo="true"] game-screen [data-character="s"]{left:auto!important;right:-90px!important;margin:0!important;transform:none!important}}
 #remote-person{position:fixed;right:10%;bottom:var(--dialog-height);width:32%;height:calc(100dvh - var(--dialog-height) - 125px);z-index:10;margin:0;pointer-events:none}#remote-image{width:100%;height:100%;object-fit:contain;object-position:center bottom}#remote-caption{position:absolute;bottom:12px;left:0;right:0;text-align:center;background:#172536de;color:#fffaf1;padding:6px 12px;border-radius:10px;font-size:12px}body:has(#remote-person:not([hidden])) game-screen [data-character="s"]{opacity:.15}
 @media(max-width:600px){#remote-person{right:-38px;width:58%;height:calc(100dvh - var(--dialog-height) - 150px)}#remote-caption{font-size:10px;left:20px;right:35px}}
-.guide-figure{margin:20px 0}.guide-figure img{display:block;width:100%;height:auto;border:1px solid #c9b7a4;border-radius:12px}.guide-figure figcaption{font-size:12px;line-height:1.7;color:#71635b;margin-top:8px}.guide-badge{padding:10px 14px;background:#e5eee8;border-radius:10px;font-size:12px!important}.guide-controls{display:flex;gap:10px}.guide-controls button{flex:1}#first-lesson{background:#eee5d9;border-radius:12px;padding:12px 16px}#play-controls{display:flex;gap:8px}#tutorial-watch{font-size:13px;padding:8px 12px}game-screen [data-character="s"][data-sprite="avert"]{rotate:-1deg;transform-origin:50% 90%}game-screen [data-character="s"][data-sprite="serious"]{translate:0 -3px}
+.guide-figure{margin:20px 0}.guide-figure img{display:block;width:100%;height:auto;border:1px solid #c9b7a4;border-radius:12px}.guide-figure figcaption{font-size:12px;line-height:1.7;color:#71635b;margin-top:8px}.guide-badge{padding:10px 14px;background:#e5eee8;border-radius:10px;font-size:12px!important}.guide-controls{display:flex;gap:10px}.guide-controls button{flex:1}#first-lesson{background:#eee5d9;border-radius:12px;padding:12px 16px}#tutorial-watch{font-size:13px;padding:8px 12px}game-screen [data-character="s"][data-sprite="avert"]{rotate:-1deg;transform-origin:50% 90%}game-screen [data-character="s"][data-sprite="serious"]{translate:0 -3px}
 #story-phone{height:480px;display:flex;flex-direction:column}.phone-home{flex:none;margin-top:auto;min-height:4px}#phone-body{flex:0 0 auto}.phone-home:before{content:'';display:block;height:15px;transform:translateY(-15px)}@media(max-width:600px){#story-phone{height:350px}}
-
-/* V03: illustrated hand-held prop. Screen coordinates match the generated art. */
-text-box{z-index:13!important}
 #story-phone{top:122px;bottom:auto;left:5%;height:min(720px,calc((100dvh - var(--dialog-height) - 145px)*1.43));width:auto;aspect-ratio:2/3;max-height:none;display:block;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;overflow:visible;filter:drop-shadow(0 12px 20px #0005)}
 .phone-art{width:100%;height:100%;object-fit:contain;position:absolute;inset:0}
 .phone-screen{position:absolute;left:27.8%;top:9.8%;width:41%;height:54.3%;padding:14px 10px;display:flex;flex-direction:column;text-align:left;overflow:hidden;border-radius:6px;color:#263547}
@@ -118,7 +97,6 @@ body[data-thread="true"] #phone-body{background:transparent;padding:0;display:bl
 #scene-transition{inset:0;width:100vw;height:100dvh;max-width:100vw;z-index:40;background:#101723;display:flex;align-items:center;justify-content:center;color:#f1e5d7;pointer-events:none}
 #scene-transition-title{font:18px/1.8 Georgia,"AppleMyungjo",serif;letter-spacing:.18em}
 body[data-transitioning="true"] #scene-transition{pointer-events:auto}
-body[data-transitioning="true"] text-box,body[data-transitioning="true"] #play-controls{visibility:hidden}
 /* Match painted eye line and face width, rather than mismatched image crops.
    Seoan face width ~300/1024, Nari ~235/1024; Nari at 1.28x, top aligned. */
 body[data-duo="true"] game-screen img[data-character="n"]{object-fit:cover!important;object-position:50% 0%!important;--nari-slot:43vw;width:var(--nari-slot)!important;max-width:var(--nari-slot)!important}
@@ -164,8 +142,6 @@ body[data-use="true"] game-screen [data-character="s"]{opacity:1!important}
 #service-picker-note{position:fixed;inset:128px 5vw auto;z-index:10;text-align:center;color:#fff7ea;text-shadow:0 2px 10px #000;background:#142330bd;border:1px solid #b9a38b55;border-radius:18px;padding:18px;pointer-events:none}
 #service-picker-note h2{font:22px/1.6 Georgia,"AppleMyungjo",serif;margin:5px}#service-picker-note p{font-size:14px;line-height:1.8;margin:4px}#service-picker-note small{font-size:11px}
 body[data-service-picker="true"] game-screen [data-character="s"]{opacity:1!important}
-body[data-service-picker="true"]:has(choice-container) #service-picker-note{display:none}
-body[data-service-picker="true"] choice-container{z-index:18!important;background:#fff9f0f5;padding:14px;border-radius:16px}
 #story-install,#story-use{inset:122px 5vw calc(var(--dialog-height) + 18px);width:auto;max-height:none;max-width:1100px;margin:0 auto;padding:24px 30px;box-sizing:border-box;overflow:auto;overscroll-behavior:contain;pointer-events:auto;background:#fffaf3f7;border:1px solid #cbbba5;border-radius:16px;z-index:11}
 #story-install h2,#story-use h2{font-size:clamp(19px,2.2vw,27px);line-height:1.6;margin:8px 0 14px}
 #story-install p,#story-use p{font-size:17px;line-height:1.85;margin:12px 0}
@@ -205,8 +181,6 @@ body[data-object="true"] game-screen [data-character="s"]{opacity:0!important}
 #story-install-image{display:block;width:100%;max-height:none!important;border:0;margin:0;border-radius:0;object-fit:contain}
 #story-install-download{display:inline-block;padding:10px 16px;margin:8px 12px 0 0;background:#e3ece6;color:#214438;border:1px solid #8ea99a;border-radius:10px;text-decoration:none;font-size:15px}
 #story-install-open{display:inline-block;margin:8px 0 0}
-/* Native dialogue has a 40px bottom gutter on desktop. Keep choices above it. */
-choice-container{bottom:calc(var(--dialog-height) + 66px)!important}
 /* Keep scrollable tutorial and event frames entirely above the native dialogue. */
 #story-install,#story-use{bottom:calc(var(--dialog-height) + 58px)}
 #object-insert{bottom:calc(var(--dialog-height) + 54px)}

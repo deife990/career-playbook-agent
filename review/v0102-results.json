@@ -1,0 +1,175 @@
+{
+  "version": "0.10.2",
+  "results": [
+    {
+      "width": 1440,
+      "label": "WalkHome",
+      "step": 0,
+      "walker": "assets/protagonist-back-v0102.png",
+      "memory": "assets/recall-service-v0102.png",
+      "narrative": null,
+      "avatar": null,
+      "overflow": false,
+      "schema": "ep01-script-v9",
+      "home": "false"
+    },
+    {
+      "width": 1440,
+      "label": "RecallDesk",
+      "step": 0,
+      "walker": "assets/protagonist-back-v0102.png",
+      "memory": "assets/recall-service-v0102.png",
+      "narrative": null,
+      "avatar": null,
+      "overflow": false,
+      "schema": "ep01-script-v9",
+      "home": "false"
+    },
+    {
+      "width": 1440,
+      "label": "RecallPeople",
+      "step": 0,
+      "walker": "assets/protagonist-back-v0102.png",
+      "memory": "assets/recall-closing-v0102.png",
+      "narrative": null,
+      "avatar": null,
+      "overflow": false,
+      "schema": "ep01-script-v9",
+      "home": "false"
+    },
+    {
+      "width": 1440,
+      "label": "P02",
+      "step": 0,
+      "walker": "assets/protagonist-back-v0102.png",
+      "memory": "assets/recall-service-v0102.png",
+      "narrative": "assets/gate-together-v0102.png",
+      "avatar": null,
+      "overflow": false,
+      "schema": "ep01-script-v9",
+      "home": "false"
+    },
+    {
+      "width": 1440,
+      "label": "E05Messages",
+      "step": 4,
+      "walker": "assets/protagonist-back-v0102.png",
+      "memory": "assets/recall-service-v0102.png",
+      "narrative": "assets/home-protagonist-v0102.png",
+      "avatar": null,
+      "overflow": false,
+      "schema": "ep01-script-v9",
+      "home": "true"
+    },
+    {
+      "width": 1440,
+      "label": "E05Last",
+      "step": 0,
+      "walker": "assets/protagonist-back-v0102.png",
+      "memory": "assets/recall-service-v0102.png",
+      "narrative": "assets/home-protagonist-v0102.png",
+      "avatar": "assets/seoan-profile-selfie-v0102.png",
+      "overflow": false,
+      "schema": "ep01-script-v9",
+      "home": "true"
+    },
+    {
+      "width": 1440,
+      "installScreens": 5,
+      "firstPerson": true,
+      "stableLessonNode": true,
+      "resume": true,
+      "mobileExample": true,
+      "choiceAfterExample": true,
+      "profile": true
+    },
+    {
+      "width": 390,
+      "label": "WalkHome",
+      "step": 0,
+      "walker": "assets/protagonist-back-v0102.png",
+      "memory": "assets/recall-service-v0102.png",
+      "narrative": null,
+      "avatar": null,
+      "overflow": false,
+      "schema": "ep01-script-v9",
+      "home": "false"
+    },
+    {
+      "width": 390,
+      "label": "RecallDesk",
+      "step": 0,
+      "walker": "assets/protagonist-back-v0102.png",
+      "memory": "assets/recall-service-v0102.png",
+      "narrative": null,
+      "avatar": null,
+      "overflow": false,
+      "schema": "ep01-script-v9",
+      "home": "false"
+    },
+    {
+      "width": 390,
+      "label": "RecallPeople",
+      "step": 0,
+      "walker": "assets/protagonist-back-v0102.png",
+      "memory": "assets/recall-closing-v0102.png",
+      "narrative": null,
+      "avatar": null,
+      "overflow": false,
+      "schema": "ep01-script-v9",
+      "home": "false"
+    },
+    {
+      "width": 390,
+      "label": "P02",
+      "step": 0,
+      "walker": "assets/protagonist-back-v0102.png",
+      "memory": "assets/recall-service-v0102.png",
+      "narrative": "assets/gate-together-v0102.png",
+      "avatar": null,
+      "overflow": false,
+      "schema": "ep01-script-v9",
+      "home": "false"
+    },
+    {
+      "width": 390,
+      "label": "E05Messages",
+      "step": 4,
+      "walker": "assets/protagonist-back-v0102.png",
+      "memory": "assets/recall-service-v0102.png",
+      "narrative": "assets/home-protagonist-v0102.png",
+      "avatar": null,
+      "overflow": false,
+      "schema": "ep01-script-v9",
+      "home": "true"
+    },
+    {
+      "width": 390,
+      "label": "E05Last",
+      "step": 0,
+      "walker": "assets/protagonist-back-v0102.png",
+      "memory": "assets/recall-service-v0102.png",
+      "narrative": "assets/home-protagonist-v0102.png",
+      "avatar": "assets/seoan-profile-selfie-v0102.png",
+      "overflow": false,
+      "schema": "ep01-script-v9",
+      "home": "true"
+    },
+    {
+      "width": 390,
+      "installScreens": 5,
+      "firstPerson": true,
+      "stableLessonNode": true,
+      "resume": true,
+      "mobileExample": true,
+      "choiceAfterExample": true,
+      "profile": true
+    },
+    {
+      "typingOnce": true,
+      "animation": true
+    }
+  ],
+  "errors": [],
+  "passed": true
+}

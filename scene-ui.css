@@ -12,33 +12,12 @@
 #memory-notice .mail-from small{display:block}
 #workday-stage{top:var(--office-top,80px);bottom:var(--dialog-reserve,var(--dialog-height,180px))}
 #memory-notice{pointer-events:auto;overscroll-behavior:contain;scrollbar-width:thin}
-/* Thoughts have their own name plate and quieter dark surface. Dialogue retains cream. */
-body[data-voice="thought"] text-box{background:linear-gradient(100deg,#112637f5,#1a3042f0)!important;border-top:1px solid #a5c4d34d;box-shadow:0 -8px 34px #08132122}
-body[data-voice="thought"] text-box [data-content="name"]{color:#aed3d9!important;letter-spacing:.05em;font-size:.85em}
-body[data-voice="thought"] text-box [data-content="text"]{color:#edf1f0!important;border-left:2px solid #a6c7ce66;padding-left:14px}
 body[data-voice="thought"] .phone-reaction{color:#edf1f0}
 body[data-voice="thought"] .phone-reaction:before{content:'나 · 속마음';display:block;color:#aed3d9;font-size:.85em;font-weight:650;margin-bottom:10px}
-/* One geometry for every phone, including the transition into full conversation. */
-body[data-device="true"] #story-phone{--phone-headroom:0px;--phone-bottom:var(--dialog-reserve,220px);--phone-edge:clamp(8px,2.5dvh,28px);--phone-space:calc(100dvh - var(--office-top,80px) - var(--phone-headroom) - var(--phone-bottom));--room:min(900px,calc(var(--phone-space) - 2*var(--phone-edge)));--phone-ratio:.65;--phone-width:370px;left:50%!important;top:calc(var(--office-top,80px) + var(--phone-headroom) + (var(--phone-space) - var(--room))/2);translate:-50% 0!important;transform:none;transform-origin:50% 0;width:min(var(--phone-width),calc(var(--room)*var(--phone-ratio)),calc(100vw - 24px));height:var(--room);max-height:900px;min-height:0;animation:none;z-index:11}
-body[data-message-only="true"] #story-phone{--phone-bottom:40px;--phone-ratio:.64;--phone-width:390px}
 body[data-device="true"] .phone-owner{display:none!important}
-body[data-device="true"] #phone-body{font-size:14px!important;line-height:1.7;overscroll-behavior:contain}
-body[data-device="true"] #phone-person{margin:5px 0 12px}
-/* Lock screen, with wallpaper and a push from the fictional finance app Toz. */
-body[data-lock-screen="true"] .phone-screen{background:radial-gradient(ellipse at 90% 23%,#8fadd9 0,transparent 48%),radial-gradient(ellipse at 15% 85%,#6d647f 0,transparent 65%),linear-gradient(155deg,#283b5a,#546c8e 60%,#192d47);color:#fff}
-body[data-lock-screen="true"] .phone-status{color:#fff}
-body[data-lock-screen="true"] #phone-person{display:none!important}
-body[data-lock-screen="true"] .phone-home-line{background:#fff}
-body[data-device="true"] #phone-body.lockscreen{background:none!important;color:#fff;padding:24px 0!important;border-radius:0}
 .lock-date{margin:0 0 3px;font-weight:500;font-size:14px}.lock-time{font-size:64px!important;font-weight:650;line-height:1.2;letter-spacing:-.06em;color:#fff}
 .bank-notification{margin-top:38px;padding:14px 16px;background:#f1f5f8d9;backdrop-filter:blur(18px);border:1px solid #ffffff80;border-radius:20px;color:#233142;text-align:left}
 .push-app{display:flex;align-items:center;gap:7px;font-size:12px}.push-app time{margin-left:auto;font-size:11px;color:#677382}.bank-app-icon{display:grid;place-items:center;width:23px;height:23px;border-radius:7px;background:#3979f6;color:#fff;font:bold 20px/1 sans-serif}.bank-notification strong{font-size:15px;margin:9px 0 4px}.bank-notification p{font-size:12px;color:#556270}
-/* Mobile Offlook reads like an open message, not a generic system card. */
-body[data-messenger="mail"] .phone-screen{background:#fff}
-body[data-messenger="mail"] #phone-person{flex-direction:row!important;justify-content:center;background:#1666a7;color:#fff;border:0;border-radius:9px;padding:10px 8px!important;margin:7px 0 10px}
-body[data-messenger="mail"] #phone-person:before{content:'‹';position:absolute;left:24px;font-size:25px;font-weight:400}
-body[data-messenger="mail"] #phone-person:after{content:'⋯';margin-left:auto;font-size:22px}
-body[data-messenger="mail"] #phone-app{margin:auto}
 .mail-folder{color:#186caf;font-size:12px}.mobile-mail h3{font-size:18px;line-height:1.5;margin:12px 0 18px;letter-spacing:-.02em}.mobile-mail-sender{display:flex;align-items:center;gap:8px;border-bottom:1px solid #e6e9ed;padding-bottom:15px;margin-bottom:17px}.mobile-mail-sender img{width:32px;height:32px;background:#edf4f7;border-radius:50%;padding:4px;flex:none}.mobile-mail-sender strong{font-size:12px;display:block}.mobile-mail-sender small{font-size:10px;color:#78818b;display:block;margin-top:4px}.mobile-mail p{font-size:14px;line-height:1.9;margin:14px 0}
 /* translate (individual property) used to combine with left:18px and clip the banner. */
 #message-arrival{left:50%!important;right:auto!important;translate:-50% 0!important;transform:none;top:auto!important;bottom:calc(var(--dialog-reserve,220px) + clamp(20px,5dvh,64px));width:min(360px,calc(100vw - 28px));max-height:none;padding:12px 17px;animation:arrival-in .42s cubic-bezier(.2,.75,.25,1) both}
@@ -55,21 +34,12 @@ body[data-messenger="mail"] #phone-app{margin:auto}
 #message-cast .message-seoan{right:0;width:30vw}
 .message-seoan img{height:100%;width:100%;object-fit:contain;object-position:50% 100%;filter:drop-shadow(0 12px 25px #0004)}
 body[data-iseo-conversation="true"] #narrative-image{object-position:50% 50%;filter:brightness(.72)}
-body[data-message-only="true"] .vn-controls{top:auto!important;bottom:8px!important;left:12px!important;display:flex!important;max-width:calc(100vw - 24px);z-index:14}
 /* Decorative, locally bundled logos keep the button's accessible name intact. */
 button[data-service-brand]{display:inline-grid!important;grid-template-columns:25px minmax(0,1fr);align-items:center;justify-content:initial;gap:12px;text-align:left}
 button[data-service-brand] .service-logo{display:block;width:25px;height:25px;background:center/contain no-repeat url('assets/service-logos/openai.svg')}
 button[data-service-brand] .service-label{min-width:0;line-height:1.5}
-choice-container button[data-service-brand]{width:min(220px,100%);margin-left:auto!important;margin-right:auto!important}
 button[data-service-brand="claude"] .service-logo{background-image:url('assets/service-logos/claude.svg')}
-@media(max-height:600px){
- body[data-device="true"] #story-phone{--phone-edge:8px;--phone-ratio:.95;--phone-width:300px;padding:6px;border-radius:28px}
- body[data-message-only="true"] #story-phone{--phone-ratio:.79}
- body[data-device="true"] .phone-screen{padding:6px 11px!important;border-radius:20px}
- body[data-device="true"] .phone-status{height:19px}
- body[data-device="true"] #phone-person{font-size:13px;padding:4px 0!important;margin:3px 0 7px}
- body[data-device="true"] #phone-avatar{width:26px;height:26px}
- body[data-lock-screen="true"] #phone-body.lockscreen{padding:4px 0!important}.lock-date{font-size:12px}.lock-time{font-size:46px!important}.bank-notification{margin-top:12px;padding:10px 12px}.bank-notification strong{font-size:14px}
+@media(max-height:600px){.lock-date{font-size:12px}.lock-time{font-size:46px!important}.bank-notification{margin-top:12px;padding:10px 12px}.bank-notification strong{font-size:14px}
  #memory-notice .outlook-bar{min-height:38px;padding:8px 12px}.outlook-content h3{font-size:17px}.outlook-content .mail-from{padding-bottom:8px!important}.mobile-mail h3{font-size:16px;margin:8px 0 12px}.mobile-mail p{margin:10px 0}.mobile-mail-sender{margin-bottom:10px;padding-bottom:10px}
  #message-cast .message-iseo{height:81%;bottom:8%}#message-cast .message-seoan{height:98%}
  #memory-notice .outlook-content{padding:10px 16px}
@@ -89,11 +59,6 @@ button[data-service-brand="claude"] .service-logo{background-image:url('assets/s
  #message-cast .remote-frame{inset:0 auto 0 0;width:40px;border-radius:50%;border:2px solid #d9c9ec}.remote-frame img{object-fit:cover;object-position:50% 2%}
  #message-cast .message-seoan img{width:40px;height:40px;margin:0;border-radius:50%;background:#7a6554;object-fit:cover;object-position:50% 0}
  #message-cast figcaption{display:block;bottom:10px;left:48px;text-align:left;font-size:12px}#message-cast .remote-channel{display:none}
- body[data-device="true"] #story-phone{width:min(340px,calc(100vw - 24px));--phone-edge:10px;border-radius:34px}
- body[data-message-only="true"] #story-phone{--phone-bottom:40px;width:min(390px,calc(100vw - 24px))}
- body[data-iseo-conversation="true"] #story-phone{--phone-headroom:50px}
- body[data-message-only="true"] .vn-controls button{min-height:27px;font-size:10px}
- body[data-device="true"] .phone-screen{border-radius:24px}
  .mobile-mail h3{font-size:18px}
 }
 @media(prefers-reduced-motion:reduce){#message-arrival{animation:none!important}}
@@ -120,7 +85,6 @@ body[data-cast-layout="portraits"] #message-cast .remote-frame img{display:block
 body[data-cast-layout="portraits"] #message-cast .seated-frame{position:absolute;inset:0 0 32px;overflow:hidden;mask-image:linear-gradient(#000 90%,transparent 100%)}
 body[data-cast-layout="portraits"] #message-cast .message-seoan img{position:absolute;top:0;display:block;width:100%;height:100%;object-fit:contain;object-position:50% 0}
 body[data-cast-layout="portraits"] #message-cast figcaption{bottom:0;height:26px;line-height:26px}
-body[data-cast-layout="compact"] #story-phone{--phone-headroom:50px}
 body[data-cast-layout="compact"] #message-cast{z-index:12;bottom:auto;height:50px;overflow:visible}
 body[data-cast-layout="compact"] #message-cast .message-iseo,body[data-cast-layout="compact"] #message-cast .message-seoan{top:5px;bottom:auto;translate:0 0;height:40px;width:140px;overflow:visible}
 body[data-cast-layout="compact"] #message-cast .message-iseo{left:16px}
@@ -130,12 +94,83 @@ body[data-cast-layout="compact"] #message-cast .remote-frame{border:2px solid #d
 body[data-cast-layout="compact"] #message-cast figure img{position:absolute;left:0;top:0;width:40px;height:40px;margin:0;object-fit:cover;object-position:50% 0;transform:none}
 body[data-cast-layout="compact"] #message-cast figcaption{display:block;bottom:10px;left:48px;right:auto;white-space:nowrap;text-align:left;font-size:12px}
 body[data-cast-layout="compact"] #message-cast .remote-channel{display:none}
-
-/* Original message stickers remain separate from the text bubble. */
-body[data-messenger="kakao"] #phone-body .chat-sticker{width:128px;max-width:60%;margin:4px 0 12px 6px;background:none;border:0;padding:0}
 .chat-sticker img{display:block;width:100%;height:auto;aspect-ratio:1}
 .sticker-message-group{display:flow-root}
-@media(max-height:600px){body[data-messenger="kakao"] #phone-body .chat-sticker{width:96px;margin-bottom:8px}}
 
-/* Keep the original group art intact; overlay generated eyes only on Iseo and Yoon. */
-#welcome .title-cast .title-eye-refinements{position:absolute;inset:0;width:100%;height:auto;aspect-ratio:1450/1088;display:block;overflow:visible;pointer-events:none}
+/* v0.14 · UI/UX v1. Engine geometry is measured by syncDialogLayout. */
+body>.toolbar{position:fixed;inset:16px 24px auto auto;z-index:18;display:flex;align-items:center;justify-content:flex-end;gap:12px;width:auto;max-width:calc(100vw - 32px);min-height:48px;padding:0;border:0;background:transparent;box-shadow:none;color:var(--cp-white);font-family:var(--cp-font);pointer-events:none}
+.toolbar .brand{display:none}.toolbar nav{display:flex;gap:8px;align-items:flex-start;pointer-events:auto;width:auto;margin:0}
+body>.toolbar button,.game-more>summary{display:flex;align-items:center;justify-content:center;width:auto;margin:0;min-height:48px;min-width:48px;padding:10px 16px;border:1px solid #e6ead02b;background:#182124c9;color:var(--cp-white);border-radius:24px;font:15px/1.5 var(--cp-font);cursor:pointer;white-space:normal}
+.toolbar nav>#history{display:none}.game-more{position:relative}.game-more>summary{list-style:none;font-size:0}.game-more>summary::before{content:'메뉴';font-size:15px}.game-more>summary::-webkit-details-marker{display:none}
+.more-items{position:absolute;right:0;top:60px;min-width:230px;max-height:calc(100dvh - 100px);overflow:auto;padding:12px;background:var(--cp-night);border:1px solid #bec8b66b;border-radius:12px;box-shadow:0 12px 36px #0004;display:grid;gap:8px}
+body>.toolbar .more-items button{width:100%;justify-content:flex-start;border-radius:6px;border-color:transparent}
+/* Specific declarations override vendor custom-element defaults only. */
+text-box{position:fixed!important;inset:auto 0 0!important;width:100%!important;height:auto!important;min-height:0!important;max-height:50dvh;box-sizing:border-box;padding:36px max(8vw,calc((100vw - 1040px)/2)) 82px!important;margin:0!important;border:0!important;border-radius:0!important;background:linear-gradient(#182124ec,#182124)!important;color:var(--cp-white)!important;box-shadow:0 -24px 60px #18212466;font:var(--read-size,20px)/1.9 var(--cp-font)!important;word-break:keep-all;overflow-wrap:anywhere;overflow-y:auto;overscroll-behavior:contain;z-index:13!important;text-align:left}
+text-box [data-content=name]{display:block;color:#e6d4b6!important;background:none!important;font:600 15px/1.6 var(--cp-font)!important;margin:0 0 12px!important;letter-spacing:.03em;padding:0!important}
+text-box [data-content=text]{font:inherit!important;line-height:1.9!important;color:inherit!important;max-width:880px;white-space:normal!important;margin:0!important;padding:0!important;border:0!important}
+text-box [data-content=text] p{font:inherit!important;line-height:inherit!important;margin:0!important;color:inherit!important;white-space:normal!important}
+body[data-voice=thought] text-box [data-content=name]{color:#c3cebd!important}
+body[data-starting=true] text-box,text-box:not(:has([data-content=text]:not(:empty))){visibility:hidden}
+#play-controls{position:fixed;right:max(7vw,24px);bottom:max(18px,env(safe-area-inset-bottom));z-index:16;display:flex;gap:8px;margin:0;width:auto}
+#play-controls button{width:auto;margin:0;min-height:48px;padding:10px 16px;color:var(--cp-white);background:transparent;border:0;font:15px/1.5 var(--cp-font);border-radius:8px}
+body .vn-controls{position:fixed;left:max(7vw,24px);bottom:max(18px,env(safe-area-inset-bottom));z-index:16;display:flex;gap:4px;width:auto;height:auto;max-width:calc(100vw - 260px);margin:0;padding:0;flex-wrap:wrap}
+body .vn-controls button{width:auto!important;min-width:0;min-height:44px;padding:8px 12px;font:14px/1.5 var(--cp-font);background:transparent;border:0;color:#e5e6d9;border-radius:8px;margin:0}
+.vn-controls button[aria-pressed=true]{background:#496354;color:white}body .vn-controls[hidden]{display:none}
+#vn-skip,#vn-hide{display:none}body[data-device=true] .vn-controls{display:none}
+/* All hidden controls remain reachable in the visible Menu disclosure. */
+body[data-ui-hidden=true] :is(.toolbar,text-box,#play-controls,.vn-controls){visibility:hidden!important;pointer-events:none}
+body:has(choice-container) #narrative-image,body:has(choice-container) game-screen [data-character]{filter:brightness(.62)}
+choice-container{position:fixed!important;left:7vw!important;right:auto!important;bottom:calc(var(--dialog-height,180px) + 24px)!important;top:auto!important;transform:none!important;translate:none!important;width:min(620px,86vw)!important;max-width:none!important;max-height:calc(100dvh - var(--dialog-height,180px) - 110px)!important;overflow:auto!important;padding:12px 24px!important;margin:0!important;background:#182124f5;border:1px solid #c6cfb633;border-radius:12px;box-shadow:0 12px 48px #0004;z-index:17!important;counter-reset:response}
+choice-container button{display:flex!important;align-items:center;gap:20px;width:100%!important;min-height:64px!important;margin:0!important;padding:16px 8px!important;color:var(--cp-white)!important;background:transparent!important;border:0!important;border-bottom:1px solid #c6cfb647!important;border-radius:0!important;font:17px/1.7 var(--cp-font)!important;white-space:normal!important;text-align:left!important;word-break:keep-all;overflow-wrap:anywhere}
+body[data-choice-kind=relationship] choice-container button::before{counter-increment:response;content:'0' counter(response);font-size:13px;color:#c4cdb5;flex:none}
+choice-container button:last-child{border-bottom:0!important}
+body[data-reply-choice=true] choice-container{left:7vw!important;bottom:28px!important;width:min(560px,86vw)!important;max-height:45dvh!important}
+body[data-reply-choice=true] #phone-next{display:none!important}
+/* Messages: a readable conversation next to the scene, rather than a device mockup. */
+body[data-device=true] #story-phone{position:fixed;left:5vw!important;top:90px;bottom:calc(var(--dialog-height,180px) + 20px);width:min(510px,46vw);height:auto;max-height:none;min-height:0;margin:0;padding:0;translate:none!important;transform:none;aspect-ratio:auto;border:1px solid #d8ddcd;border-radius:16px;background:#e9ede6;box-shadow:0 16px 50px #14221b55;z-index:12;overflow:hidden}
+body[data-message-only=true] #story-phone{bottom:28px}
+body[data-device=true] #story-phone .phone-art,body[data-device=true] .phone-status,body[data-device=true] .phone-home-line{display:none}
+body[data-device=true] #story-phone .phone-screen{position:static;display:flex;flex-direction:column;inset:auto;width:100%;height:100%;padding:0!important;background:#e9ede6;border-radius:0;overflow:hidden;color:var(--cp-ink)}
+body[data-device=true] #phone-person{display:flex!important;align-items:center;gap:12px;flex-direction:row!important;flex:none;padding:18px 24px!important;margin:0;border:0;border-bottom:1px solid var(--cp-line);background:transparent;font:600 18px/1.5 var(--cp-font)}
+body[data-device=true] #phone-avatar{display:none!important}
+body[data-device=true] #phone-body{min-height:0;flex:1;overflow:auto;overscroll-behavior:contain;padding:24px!important;font:16px/1.8 var(--cp-font)!important;background:transparent!important;border:0!important;border-radius:0}
+body[data-device=true] #phone-body .chat-bubble{font:16px/1.8 var(--cp-font)!important;background:#fffdf7;border:1px solid #dce0d4;max-width:94%;padding:14px 18px;border-radius:4px 14px 14px;margin:0 28px 18px 0;color:var(--cp-ink);word-break:keep-all;overflow-wrap:anywhere;box-shadow:none}
+body[data-device=true] #phone-body .sent{background:#dce6d7;margin-left:28px;margin-right:0;border-radius:14px 4px 14px 14px}
+body[data-device=true] .phone-date{font-size:13px;text-align:center;color:var(--cp-muted);margin:0 0 24px}
+body[data-device=true] .phone-next{flex:none;min-height:56px;margin:0!important;padding:12px 24px;width:100%;background:transparent;border:0;border-top:1px solid var(--cp-line);border-radius:0;color:var(--cp-green);font:16px/1.5 var(--cp-font);text-align:right}
+body[data-iseo-conversation=true] #message-cast .message-iseo{display:none}
+body[data-iseo-conversation=true] #message-cast .message-seoan{top:6%!important;left:auto;right:2vw!important;width:43vw!important;height:94%!important}
+body[data-iseo-conversation=true] #message-cast .seated-frame{inset:0!important}
+body[data-iseo-conversation=true] #message-cast figcaption{display:none}
+body[data-lock-screen=true] .phone-screen{background:#243b4b!important;color:var(--cp-white)!important}
+body[data-lock-screen=true] #phone-body{color:var(--cp-white)}
+body[data-lock-screen=true] #phone-person{display:none!important}
+body[data-transitioning=true] :is(text-box,#play-controls){visibility:hidden}
+@media(hover:hover){choice-container button:hover{background:#f7f4e215!important}.toolbar button:hover,.vn-controls button:hover,#play-controls button:hover{background:#f7f4e215}}
+@media(max-width:700px){
+ body>.toolbar{top:max(12px,env(safe-area-inset-top));right:12px}.toolbar nav{gap:8px}body>.toolbar button,.game-more>summary{min-height:48px;padding:10px 14px}
+ text-box{padding:28px 24px 82px!important;max-height:52dvh;font-size:max(18px,var(--read-size,20px))!important}
+ text-box [data-content=name]{margin-bottom:12px!important}
+ #play-controls{right:12px;bottom:max(14px,env(safe-area-inset-bottom))}body .vn-controls{left:12px;max-width:calc(100vw - 148px);bottom:max(14px,env(safe-area-inset-bottom));gap:0}
+ body .vn-controls button{font-size:13px;padding:8px}#vn-auto{display:none}
+ choice-container{left:12px!important;width:calc(100vw - 24px)!important;padding:6px 16px!important;max-height:calc(100dvh - var(--dialog-height,180px) - 100px)!important;bottom:calc(var(--dialog-height,180px) + 12px)!important}
+ choice-container button{font-size:16px!important;padding:14px 4px!important;gap:12px}
+ body[data-device=true] #story-phone{left:12px!important;right:12px!important;top:78px;width:calc(100vw - 24px);bottom:calc(var(--dialog-height,180px) + 12px)}
+ body[data-message-only=true] #story-phone{bottom:max(16px,env(safe-area-inset-bottom))}
+ body[data-device=true] #phone-person{padding:14px 18px!important;font-size:17px}body[data-device=true] #phone-body{padding:18px 16px!important}
+ body[data-iseo-conversation=true] #message-cast{display:none}
+ body[data-reply-choice=true] choice-container{left:12px!important;bottom:16px!important;width:calc(100vw - 24px)!important}
+ body[data-reply-choice=true] #phone-body{padding-bottom:240px!important}
+}
+@media(max-height:600px){
+ body>.toolbar{top:8px}text-box{padding:18px 24px 64px!important;max-height:52dvh;font-size:var(--read-size,18px)!important}text-box [data-content=name]{margin-bottom:4px!important}
+ #play-controls,body .vn-controls{bottom:8px}choice-container{left:12px!important;bottom:12px!important;top:70px!important;width:min(620px,calc(100vw - 24px))!important;max-height:none!important;overflow:auto!important}
+ body:has(choice-container) text-box{visibility:hidden}
+ body[data-device=true] #story-phone{top:70px;bottom:16px;width:min(500px,calc(100vw - 24px))}body[data-device=true]:not([data-message-only=true]) #story-phone{bottom:calc(var(--dialog-height,150px) + 8px)}
+}
+/* Monogatari writes the speaker color inline; the reading surface supplies the accessible color. */
+text-box [data-content=character-name]{color:#e6d4b6!important;font:inherit!important}
+body[data-voice=thought] text-box [data-content=character-name]{color:#c3cebd!important}
+#story-hint{position:fixed;top:88px;left:7vw;right:auto;bottom:auto;width:min(620px,86vw);padding:10px 16px;border:0;border-radius:8px;background:#182124dc;color:#e4e7db;font:14px/1.7 var(--cp-font);z-index:14;text-align:left}
+@media(max-width:700px){#story-hint{top:78px;left:12px;width:calc(100vw - 24px);font-size:14px}}
+@media(max-height:600px){#story-hint{display:none}}

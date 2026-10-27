@@ -1,0 +1,38 @@
+{
+  "results": [
+    {
+      "width": 1280,
+      "height": 720,
+      "scenes": "recall/mail/push/notice/Teams/Iseo/service/save-resume",
+      "passed": true
+    },
+    {
+      "width": 800,
+      "height": 450,
+      "scenes": "recall/mail/push/notice/Teams/Iseo/service/save-resume",
+      "passed": true
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "scenes": "recall/mail/push/notice/Teams/Iseo/service/save-resume",
+      "passed": true
+    },
+    {
+      "motion": "no-preference",
+      "frames": [
+        [
+          "translate(130px, 48px) scale(0.84)",
+          "translate(0px, 0px) scale(1)"
+        ]
+      ],
+      "passed": true
+    },
+    {
+      "motion": "reduce",
+      "frames": [],
+      "passed": true
+    }
+  ],
+  "errors": []
+}

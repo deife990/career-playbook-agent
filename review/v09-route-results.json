@@ -1,0 +1,28 @@
+{
+  "desktop": {
+    "viewport": [
+      1440,
+      1000
+    ],
+    "services": [
+      "ChatGPT",
+      "Claude"
+    ],
+    "reachedEnding": true,
+    "labelsEach": 35,
+    "javascriptErrors": []
+  },
+  "mobile": {
+    "viewport": [
+      390,
+      844
+    ],
+    "services": [
+      "ChatGPT",
+      "Claude"
+    ],
+    "reachedEnding": true,
+    "labelsEach": 35,
+    "javascriptErrors": []
+  }
+}

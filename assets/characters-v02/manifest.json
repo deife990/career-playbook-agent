@@ -1,0 +1,12 @@
+{
+  "version": "0.2",
+  "application": "v0.14.0-dev",
+  "method": "CSS viewports over unchanged sheets; original scene illustrations preserved",
+  "files": {
+    "seoan": "8314b2ba2d3984cc713826b48176d9c29c56a59fcbce48841eb11efe112e2132",
+    "iseo": "7113621cb36b01b97d4fa04fc7331895edc6552d5ebc462732f955a5b6ee25bb",
+    "nari": "e564cc926995246a3fa61258c6dc05031c41f4961106fc903bd0514aedcee768",
+    "yoon": "8dce770a1d9a64753da6c962f9fab5b6bf91078cab6e81e2f2c8ad056cb65454",
+    "player": "5819021ea750002af9efc9c5b054672f7d5c7eeca626329fca60962a9b348edd"
+  }
+}

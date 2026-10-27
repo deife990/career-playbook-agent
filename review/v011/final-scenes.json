@@ -1,0 +1,38 @@
+{
+  "results": [
+    {
+      "width": 1280,
+      "height": 720,
+      "oneClickOneLine": true,
+      "skipRecall": true,
+      "chatgptExample": true,
+      "interviewBesideFace": "yes",
+      "downloadAccessible": true,
+      "storyServiceRemembered": true,
+      "popupFallback": true
+    },
+    {
+      "width": 800,
+      "height": 450,
+      "oneClickOneLine": true,
+      "skipRecall": true,
+      "chatgptExample": true,
+      "interviewBesideFace": "yes",
+      "downloadAccessible": true,
+      "storyServiceRemembered": true,
+      "popupFallback": true
+    },
+    {
+      "width": 375,
+      "height": 812,
+      "oneClickOneLine": true,
+      "skipRecall": true,
+      "chatgptExample": true,
+      "interviewBesideFace": "phone-focus",
+      "downloadAccessible": true,
+      "storyServiceRemembered": true,
+      "popupFallback": true
+    }
+  ],
+  "errors": []
+}
