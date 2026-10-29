@@ -10,7 +10,7 @@ body[data-duo=true]:not([data-narrative-art=true]) game-screen img[data-characte
 body[data-duo=true]:not([data-narrative-art=true]) game-screen img[data-character]{visibility:visible!important}
 body[data-duo=true] game-screen img[data-character=n]{left:24%!important;right:auto!important;top:auto!important;bottom:0!important;height:76dvh!important;max-height:76dvh!important;width:auto!important;transform:translateX(-50%)!important;object-fit:contain}
 #message-cast .remote-frame img{object-position:50% 0;object-fit:contain}
-#narrative-art::after{content:'';position:absolute;inset:0;background:#101626;opacity:0;pointer-events:none;transition:opacity var(--cp-motion-normal) var(--cp-ease-out)}
+#narrative-art::after{content:'';position:absolute;inset:0;background:var(--p-blue-11);opacity:0;pointer-events:none;transition:opacity var(--cp-motion-normal) var(--cp-ease-out)}
 body[data-confession=true] #narrative-art::after{opacity:.15}
 .cp-image-crossfade{position:fixed!important;pointer-events:none!important;margin:0!important;max-width:none!important;max-height:none!important;z-index:11;object-fit:contain}
 @media(max-width:700px){

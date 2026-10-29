@@ -1,13 +1,13 @@
 /* Shared controls on explicit product roots. Native modal/top-layer behavior stays intact. */
 html{color-scheme:light;background:var(--cp-night)}
-:is(#preparation,#backlog,#save-slots,#cg-gallery,#restart-confirm,#character-book){font-family:var(--cp-font);background:var(--cp-paper);color:var(--cp-ink);border:1px solid var(--cp-line);border-radius:16px;box-shadow:0 24px 80px #101b2455;line-height:1.8;font-size:16px}
-:is(#preparation,#backlog,#save-slots,#cg-gallery,#restart-confirm,#character-book)::backdrop{background:#182124b8;backdrop-filter:blur(4px)}
+:is(#preparation,#backlog,#save-slots,#cg-gallery,#restart-confirm,#character-book){font-family:var(--cp-font);background:var(--cp-paper);color:var(--cp-ink);border:1px solid var(--cp-line);border-radius:16px;box-shadow:0 24px 80px var(--p-blue-10-a33);line-height:1.8;font-size:16px}
+:is(#preparation,#backlog,#save-slots,#cg-gallery,#restart-confirm,#character-book)::backdrop{background:var(--p-teal-12-a72);backdrop-filter:blur(4px)}
 :is(#preparation,#backlog,#save-slots,#cg-gallery,#restart-confirm,#character-book) :is(button,a.primary){min-height:48px;max-width:100%;font:inherit;line-height:1.5;padding:10px 16px;border:1px solid var(--cp-line);border-radius:8px;color:var(--cp-ink);background:transparent;white-space:normal;cursor:pointer}
 :is(#preparation,#backlog,#save-slots,#cg-gallery,#restart-confirm,#character-book) :is(input,select,textarea){font:inherit;color:var(--cp-ink);max-width:100%;accent-color:var(--cp-green)}
 :is(#preparation,#backlog,#save-slots,#cg-gallery,#restart-confirm,#character-book) p{font-size:inherit;line-height:1.8}
 :is(#preparation,#backlog,#save-slots,#cg-gallery,#restart-confirm,#character-book) :is(h2,h3){font-family:var(--cp-serif);font-weight:500;color:var(--cp-ink);line-height:1.5}
 :is(#preparation,#backlog,#save-slots,#cg-gallery,#restart-confirm,#character-book) summary{min-height:48px;padding-block:10px;cursor:pointer;line-height:1.7}
-:is(#preparation,#tutorial-dialog,#backlog,#save-slots,#cg-gallery,#character-book,.toolbar,.vn-controls,#welcome) :focus-visible{outline:3px solid #47735d;outline-offset:4px}
+:is(#preparation,#tutorial-dialog,#backlog,#save-slots,#cg-gallery,#character-book,.toolbar,.vn-controls,#welcome) :focus-visible{outline:3px solid var(--p-green-36-2);outline-offset:4px}
 .cp-portrait{display:inline-block;flex:none;width:48px;height:48px;border-radius:50%;background-image:var(--portrait-source);background-repeat:no-repeat;background-size:var(--portrait-size);background-position:var(--portrait-position);vertical-align:middle}
 .cp-portrait[data-character=seoan]{--portrait-source:url('assets/characters-v02/seoan.png');--portrait-size:433.8% 289.3%;--portrait-position:48.3% 75.2%}
 .cp-portrait[data-character=iseo]{--portrait-source:url('assets/characters-v02/iseo.png');--portrait-size:297.7% 446.5%;--portrait-position:77.4% 58.6%}
