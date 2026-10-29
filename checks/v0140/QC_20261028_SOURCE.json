@@ -1,0 +1,87 @@
+{
+  "date": "2026-10-28",
+  "game_version": "v0.14.0-dev",
+  "ui_ux_baseline": "v1",
+  "published": false,
+  "branch": "implementation/v014-ui-v1",
+  "head": "d1e67909786722db122ff3b078cc52685002e4d3",
+  "protected_sources": {
+    "story.js": {
+      "before_sha256": "7a5803685c7f8c03082b275f0bb49f8806797fcdb1ef981bf92b62ccbc14cac2",
+      "after_sha256": "7a5803685c7f8c03082b275f0bb49f8806797fcdb1ef981bf92b62ccbc14cac2",
+      "unchanged_from_qc_start": true
+    },
+    "request-data.js": {
+      "before_sha256": "fac1f95cf9614c0593a901f06b426867076e84c362e1c0f9b9fa984024afc9b3",
+      "after_sha256": "fac1f95cf9614c0593a901f06b426867076e84c362e1c0f9b9fa984024afc9b3",
+      "unchanged_from_qc_start": true
+    },
+    "cards.js": {
+      "before_sha256": "c7a247af1c52d1374b46a84ba8be73d429e749952195027e9b2721f6c1757e2f",
+      "after_sha256": "c7a247af1c52d1374b46a84ba8be73d429e749952195027e9b2721f6c1757e2f",
+      "unchanged_from_qc_start": true
+    },
+    "save-v9-anchors.js": {
+      "before_sha256": "08d1be0f4a811b4ca289f59ce0b693d7569d46b340cb9c81da88d0ae8933f10d",
+      "after_sha256": "08d1be0f4a811b4ca289f59ce0b693d7569d46b340cb9c81da88d0ae8933f10d",
+      "unchanged_from_qc_start": true
+    },
+    "save-v10-anchors.js": {
+      "before_sha256": "ef018ceee8c2daec94e6884c2709be1790124eba841962eba8b05787fd41375c",
+      "after_sha256": "ef018ceee8c2daec94e6884c2709be1790124eba841962eba8b05787fd41375c",
+      "unchanged_from_qc_start": true
+    },
+    "tutorial-content.js": {
+      "before_sha256": "d96e0c9129fc43fdfb07264c892473a71f9cb7a172a1a351f0574d47071e0150",
+      "after_sha256": "d96e0c9129fc43fdfb07264c892473a71f9cb7a172a1a351f0574d47071e0150",
+      "unchanged_from_qc_start": true
+    },
+    "ai-handoff.js": {
+      "before_sha256": "e6e8451aa47be24e679863519fffc0cdcaa0037d80f2a00f1b3993c72e6f8031",
+      "after_sha256": "e6e8451aa47be24e679863519fffc0cdcaa0037d80f2a00f1b3993c72e6f8031",
+      "unchanged_from_qc_start": true
+    },
+    "practice-ui.js": {
+      "before_sha256": "06ab35a9609bf7bdf45a2c2a19d1d7eb9548191562377f69f43ac743331e4798",
+      "after_sha256": "06ab35a9609bf7bdf45a2c2a19d1d7eb9548191562377f69f43ac743331e4798",
+      "unchanged_from_qc_start": true
+    },
+    "game.js": {
+      "before_sha256": "f99bf6c3586a6de41b644b322b8bcc4e065254a6202c1999b1b71e74d7052774",
+      "after_sha256": "f99bf6c3586a6de41b644b322b8bcc4e065254a6202c1999b1b71e74d7052774",
+      "unchanged_from_qc_start": true
+    }
+  },
+  "qc_changed_sources": {
+    "guide-panel.js": {
+      "before_sha256": "b4e0d7207f22cf8faa6a74f991db54b7ca3d11772e7fb9c74c10cecccc2dce68",
+      "after_sha256": "1a6fea408f93d6aaf7c2f7ae4f6caee16ffe332366ec43e062cdc1785c55e2b9",
+      "unchanged_from_qc_start": false
+    },
+    "guide-panel.css": {
+      "before_sha256": "d02be49f227272804412ea46333d3d15a510434396f61bdcf2ea63ceebae53c8",
+      "after_sha256": "351c3e05755842d3d15b82d0aae801202d2814a798cbd2be4ccc09d7a33df6dc",
+      "unchanged_from_qc_start": false
+    },
+    "scene-ui.css": {
+      "before_sha256": "7d08d6910c0d05a5e5c8b733ab4b130388e0154b7960299aa6456ca975fb7ac3",
+      "after_sha256": "41d7377af13692380aac717f5c27dca2a5a866ef8cce1e684201dd776031dd8c",
+      "unchanged_from_qc_start": false
+    },
+    "review-update.css": {
+      "before_sha256": "1506ca3604cb14560fcbc3c14d2e757534ec93c182a567b4794316d2d52bfb74",
+      "after_sha256": "ac852fa993529f5fc92b98f5d69a73b562806792864711d5d6e3a793503cb33d",
+      "unchanged_from_qc_start": false
+    },
+    "review-ui.js": {
+      "before_sha256": "ce5241c2c8f4efef8b0b7e557abac84c20662a76fe1151075a536d3c8c01f00b",
+      "after_sha256": "3b47970b8c4e1064e892c169d26a98acf28811fcc2a61e0d96300d254eccc056",
+      "unchanged_from_qc_start": false
+    },
+    "title-screen.css": {
+      "before_sha256": "79a1c0974a503ca8245a40170563554c7de0d4cb233ed3b241c347cdffcb8f56",
+      "after_sha256": "fe0fe4789ec48bd7aac663fb11045c7ccc1daa29aa3f138c6740a4c6dd99b224",
+      "unchanged_from_qc_start": false
+    }
+  }
+}

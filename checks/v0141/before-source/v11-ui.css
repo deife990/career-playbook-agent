@@ -1,0 +1,113 @@
+/* UI/UX v1.1: production adaptation, 2026-10-28. Approved mockups stay frozen. */
+:root{--dialogue-panel-height:clamp(200px,26dvh,280px)}
+/* Keep the bottom reading surface stable across typing, narration and thought.
+   Separate device views and authored reaction bubbles retain their layouts. */
+body:not([data-device=true]) text-box:not(.reaction-bubble){height:var(--dialogue-panel-height)!important;max-height:var(--dialogue-panel-height)!important;flex-shrink:0}
+.game-more>summary::before,.game-more>summary::after{content:none!important}
+.game-more>summary{width:48px;height:48px;padding:0!important;border-radius:50%}
+:is(.game-more>summary,#next,#story-back) svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.more-items{max-height:calc(100dvh - 100px);overflow:auto;overscroll-behavior:contain}
+#play-controls{right:6%;bottom:max(20px,env(safe-area-inset-bottom))}
+#play-controls #next,#story-back{display:grid;place-items:center;width:48px;min-width:48px;height:48px;min-height:48px;padding:0;margin:0;border:1px solid #ffffff24;border-radius:50%;background:#182124b3;color:#f6f2e8;transform:none;transition:background 140ms ease-out}
+#story-back{position:fixed;z-index:18;left:6%;bottom:max(20px,env(safe-area-inset-bottom))}
+#story-back:disabled{opacity:.3;cursor:default}
+body:is([data-ui-hidden=true],[data-transitioning=true]) #story-back{visibility:hidden;pointer-events:none}
+body[data-device=true] #play-controls{display:flex}
+body[data-message-only=true] #play-controls{display:flex!important}
+body:has(choice-container) #play-controls{visibility:hidden}
+#dialogue-shade{position:fixed;inset:0;z-index:12;pointer-events:none}
+body[data-presentation=caption] text-box{background:transparent!important;box-shadow:none!important}
+text-box.reaction-bubble{inset:auto!important;display:block!important;width:max-content!important;min-width:180px!important;max-width:270px!important;height:auto!important;min-height:0!important;max-height:none!important;padding:14px 17px!important;overflow:visible!important;background:var(--cp-paper)!important;border:1px solid #e5ddc9!important;border-radius:12px!important;box-shadow:0 6px 20px #10181724!important;color:var(--cp-ink)!important;font:max(20px,var(--read-size,20px))/1.5 var(--cp-font)!important;grid-template-columns:none!important}
+/* The JS owns the actual positioned edges; do not stretch the original full-width caption. */
+text-box.reaction-bubble[style]{inset:unset!important;left:var(--reaction-x)!important;top:var(--reaction-y)!important;right:auto!important;bottom:auto!important}
+text-box.reaction-bubble [data-content=name]{display:block!important;font:500 12px/1.25 var(--cp-font)!important;color:var(--cp-green)!important;margin:0 0 6px!important;padding:0!important}
+text-box.reaction-bubble [data-content=character-name]{font:inherit!important;color:var(--cp-green)!important}
+text-box.reaction-bubble [data-content=text],text-box.reaction-bubble [data-content=text] p{font:inherit!important;line-height:1.5!important;text-shadow:none!important;color:inherit!important;max-width:none!important;letter-spacing:-.01em}
+text-box.reaction-bubble :is([data-content=side-image],.phone-reaction){display:none!important}
+/* Narrative answer choices retain the illustration and put context beside it. */
+body[data-narrative-choice=true]::after{content:'';position:fixed;inset:0;z-index:14;pointer-events:none;background:linear-gradient(90deg,#101b20ed 0%,#111b20d9 25%,#131c207d 54%,#131c2000 85%)}
+body[data-narrative-choice=true] #narrative-image,body[data-narrative-choice=true] game-screen [data-character]{filter:none;translate:none}
+body[data-narrative-choice=true] choice-container{left:8%!important;top:18%!important;bottom:84px!important;width:min(510px,44vw)!important;max-height:calc(100dvh - 170px)!important;padding:0 4px 0 0!important;background:transparent!important;overflow:auto!important;scrollbar-width:thin}
+body[data-narrative-choice=true] .choice-context{padding:0;border:0;font-size:32px;line-height:1.6;letter-spacing:-.02em}
+body[data-narrative-choice=true] .choice-context strong{font:600 15px/1.6 var(--cp-font);margin-bottom:16px}
+body[data-narrative-choice=true] .choice-context p{font-size:max(24px,var(--read-size,20px));line-height:1.6;font-weight:450}
+.choice-instruction{font:13px/1.7 var(--cp-font);margin:24px 0 12px;color:#d4dbd3}
+body[data-narrative-choice=true] choice-container button{min-height:80px!important;padding:16px 12px!important;font-size:max(17px,var(--read-size,18px))!important;border-bottom:1px solid #dce1d136!important;gap:20px}
+body[data-narrative-choice=true] choice-container button:first-of-type{border-top:1px solid #dce1d136!important}
+body[data-narrative-choice=true] choice-container button::after{content:'›';font:28px/1 sans-serif;margin-left:auto;flex:none;color:#d4dbd3}
+body[data-narrative-choice=true] choice-container button:focus-visible{outline-offset:-4px}
+.choice-note{font:12px/1.8 var(--cp-font);margin:20px 0 8px;color:#cbd4cb}
+/* Shared message geometry; relationship colors do not change the reading frame. */
+body[data-message-only=true] #story-phone{left:7%!important;top:9%;bottom:110px;width:min(490px,45vw);border:1px solid var(--message-border);background:var(--message-canvas);border-radius:18px}
+body[data-message-only=true]{--message-canvas:#fff;--message-header:#f8f8fa;--message-ink:#202124;--message-secondary:#59616c;--message-in:#e9e9eb;--message-out:#0072e3;--message-out-ink:#fff;--message-border:#dadddf;--message-accent:#0068ce}
+body[data-messenger=teams]{--message-canvas:#f3f2f1;--message-header:#fff;--message-ink:#252423;--message-secondary:#605e5c;--message-in:#fff;--message-out:#e9e8f5;--message-out-ink:#252423;--message-border:#e1dfdd;--message-accent:#6264a7}
+body[data-messenger=kakao]{--message-canvas:#bacee0;--message-header:#bacee0;--message-ink:#202a33;--message-secondary:#4b5d6d;--message-in:#fff;--message-out:#fee500;--message-out-ink:#292517;--message-border:#9eb5c8;--message-accent:#3c2b20}
+body[data-message-only=true] #story-phone .phone-screen{background:var(--message-canvas);color:var(--message-ink)}
+#message-channel{display:flex;align-items:center;flex:none;gap:8px;padding:10px 24px;font:11px/1.5 var(--cp-font);border-bottom:1px solid var(--message-border);color:var(--message-secondary);background:var(--message-header)}
+body[data-messenger=teams] #message-channel{background:#6264a7;color:#fff}
+body[data-message-only=true] #phone-person{background:var(--message-header);border-color:var(--message-border);color:var(--message-ink)}
+body[data-message-only=true] #phone-app{color:var(--message-ink)}
+body[data-message-only=true] #phone-body{padding:20px 24px 8px!important;scrollbar-width:thin;scrollbar-color:#91a1aa transparent}
+body[data-message-only=true] #phone-body .chat-bubble{background:var(--message-in);color:var(--message-ink);border:0;border-radius:17px 17px 17px 4px;font: max(16px,var(--read-size,18px))/1.7 var(--cp-font)!important;padding:12px 16px;margin:0 20px 20px 0;max-width:90%}
+body[data-message-only=true] #phone-body .chat-bubble::before{content:attr(data-sender);display:block;font:11px/1.6 var(--cp-font);opacity:.8;margin-bottom:5px}
+body[data-message-only=true] #phone-body .chat-bubble.sent{background:var(--message-out);color:var(--message-out-ink);border-radius:17px 17px 4px 17px;margin-left:20px;margin-right:0}
+body[data-messenger=teams] #phone-body .chat-bubble{border-radius:4px 12px 12px 12px;border:1px solid #e6e5e3}
+body[data-messenger=kakao] #phone-body .chat-bubble{border-radius:3px 12px 12px 12px}
+body[data-messenger=kakao] #phone-body .chat-bubble.sent{border-radius:12px 3px 12px 12px}
+/* Personal chat uses the conversation owner's right edge for sent messages.
+   Auto margins also override the compact reply-choice margin shorthand. */
+body[data-message-only=true][data-messenger=kakao] #phone-body .chat-bubble:not(.sent){margin-left:0!important;margin-right:auto!important}
+body[data-message-only=true][data-messenger=kakao] #phone-body .chat-bubble.sent{margin-left:auto!important;margin-right:0!important}
+body[data-messenger=kakao] #phone-body .chat-sticker{width:128px;max-width:65%;margin:4px auto 20px 0}
+body[data-messenger=kakao] #phone-body .sticker-message-group[data-direction=outgoing] .chat-sticker{margin-left:auto;margin-right:0}
+body[data-message-only=true] .phone-date{color:var(--message-secondary)}
+body[data-message-only=true] .phone-next{background:var(--message-header);color:var(--message-accent);border-color:var(--message-border);min-height:48px}
+#conversation-cast{position:fixed;z-index:10;left:54%;right:9%;top:14%;bottom:14%;margin:0;display:flex;align-items:center;justify-content:center;flex-direction:column;pointer-events:none}
+#conversation-cast img{display:block;width:100%;height:calc(100% - 44px);min-height:0;object-fit:contain;object-position:center}
+#conversation-cast figcaption{font:14px/1.8 var(--cp-font);color:#fff6e9;margin-top:14px;text-align:center;text-shadow:0 2px 6px #000}
+body[data-reply-choice=true] #story-phone{bottom:110px}
+body[data-reply-choice=true] choice-container{top:auto!important;bottom:110px!important;max-height:45dvh!important;background:#182124f5}
+body[data-ui-hidden=true] :is(#story-back,#dialogue-shade,#conversation-cast){visibility:hidden!important;pointer-events:none!important}
+/* Native engine entrances used to zoom/slide entire sprites. Only the scene controller animates. */
+game-screen img[data-character]{animation:none!important;transition:none!important}
+body[data-first-distance] game-screen img[data-character=s]{transition:none!important}
+@media(hover:hover){:is(#story-back,#play-controls #next):hover{background:#182124e6}body[data-narrative-choice=true] choice-container button:hover{background:#e5e5cc14!important}}
+@media(max-width:700px){
+ #play-controls{right:16px;bottom:max(16px,env(safe-area-inset-bottom))}#story-back{left:16px;bottom:max(16px,env(safe-area-inset-bottom))}
+ text-box.reaction-bubble{max-width:min(270px,calc(100vw - 40px))!important}
+ body[data-narrative-choice=true]::after{background:linear-gradient(transparent 12%,#13202390 32%,#132023f5 46%,#132023)}
+ body[data-narrative-choice=true] choice-container{left:24px!important;right:24px!important;top:auto!important;bottom:84px!important;width:auto!important;max-height:calc(100dvh - 330px)!important}
+ body[data-narrative-choice=true] .choice-context p{font-size:max(23px,var(--read-size,20px))}
+ .choice-instruction{margin-top:18px}.choice-note{margin-top:14px}
+ body[data-narrative-choice=true] choice-container button{font-size:max(16px,var(--read-size,18px))!important;gap:14px}
+ body[data-message-only=true] #story-phone{left:16px!important;right:16px!important;top:82px;bottom:84px;width:auto}
+ body[data-message-only=true] #phone-person{padding:14px 16px!important}
+ #message-channel{padding:9px 16px}body[data-message-only=true] #phone-body{padding:18px 16px 8px!important}
+ body[data-message-only=true] #phone-body .chat-bubble{max-width:93%;padding:11px 14px}
+ #conversation-cast{display:none}
+ body[data-reply-choice=true] choice-container{left:16px!important;width:calc(100vw - 32px)!important;bottom:84px!important}
+}
+@media(max-height:600px){
+ #play-controls,#story-back{bottom:12px}
+ body[data-narrative-choice=true] choice-container{top:76px!important;bottom:76px!important;max-height:none!important;width:min(510px,calc(100vw - 48px))!important;left:24px!important;right:auto!important}
+ body[data-narrative-choice=true] .choice-context p{font-size:max(23px,var(--read-size,18px))}
+ .choice-instruction{margin-top:14px}body[data-narrative-choice=true] choice-container button{min-height:64px!important}
+ body[data-message-only=true] #story-phone{top:76px;bottom:76px}
+ body[data-message-only=true] #phone-person{padding:8px 16px!important}#message-channel{padding:6px 16px}
+ body[data-message-only=true] .phone-next{display:none!important}
+ body[data-reply-choice=true] choice-container{top:auto!important;bottom:76px!important}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+body[data-message-only=true] #play-controls{visibility:visible;pointer-events:auto}
+body:has(choice-container) #play-controls{visibility:hidden;pointer-events:none}
+body[data-message-only=true] #phone-next{display:none!important}
+#message-footnote{flex:none;padding:12px 24px;font:11px/1.6 var(--cp-font);color:var(--message-secondary);background:var(--message-header);border-top:1px solid var(--message-border)}
+body[data-message-only=true] #phone-person::before{content:none!important}
+body[data-narrative-choice=true] :is(.choice-context,.choice-instruction,.choice-note){text-align:left!important}
+body[data-narrative-choice=true] choice-container button{font-weight:400!important}
+@media(max-height:600px){#message-footnote{display:none}}
+/* Keep the first encounter at a stable distance instead of zooming the cutout. */
+body[data-first-distance]:not([data-duo=true]):not([data-narrative-art=true]) game-screen img[data-character=s]{height:76%!important;max-height:76%!important;left:62%!important}
+@media(max-width:700px){body[data-first-distance]:not([data-duo=true]):not([data-narrative-art=true]) game-screen img[data-character=s]{height:68%!important;max-height:68%!important}}
+body[data-narrative-choice=true][data-choice-kind=relationship] #narrative-image{translate:none!important;filter:none}
+@media(min-width:701px) and (max-height:600px){body[data-narrative-choice=true][data-choice-kind=relationship] choice-container{top:76px!important;bottom:76px!important;padding:0 4px 0 0!important;width:min(510px,51vw)!important}}

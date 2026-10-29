@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-28",
+  "version": "0.14.0-dev",
+  "designBaseline": "UI/UX v1",
+  "worktree": "/Users/jhwang/Desktop/AI Career 전자책/planning/careerpilot-game-2026-10-27/implementation/worktrees/v014-ui-v1",
+  "head": "d1e67909786722db122ff3b078cc52685002e4d3",
+  "startingSnapshot": "/private/tmp/careerpilot-alerts-iseo-start/",
+  "priorUncommittedChangesPreserved": true,
+  "changesFromStartingRootSnapshot": {
+    "game.js": {
+      "before": "f99bf6c3586a6de41b644b322b8bcc4e065254a6202c1999b1b71e74d7052774",
+      "after": "cd5299c0f38d2280953c00655f7adc696b4fc553fb60d70dbcb442d924ac9753"
+    },
+    "index.html": {
+      "before": "5885e1a7df99206859922160ee13ee8976d71898efcb2a1feada0fd5f4c24228",
+      "after": "b0f602cd0bb89a8e94285ee07a1f23030c06698124f9841b2fe2c17aeaa50bae"
+    },
+    "scene-ui.js": {
+      "before": "55237aca5f491af63becbe0f9eb9cf34c077857d9d2151e1ff9dc3d59adbe5e8",
+      "after": "c9234a7ebefbb1c3efc5277c5dc45d681e1672cf1eb64c1a5cebc31a3a1ba96f"
+    },
+    "lesson-ui.js": {
+      "before": "1a1522fdc22f1591e7d5b668b24269e05e07f18b6576791ef2b4a9e51f1d35ef",
+      "after": "2d86af64d308e0047d28c23d83276155884ae09d38853ec073939f7321348245"
+    },
+    "review-ui.js": {
+      "before": "3b47970b8c4e1064e892c169d26a98acf28811fcc2a61e0d96300d254eccc056",
+      "after": "2c52287544a6059b5370e4b881f7b8973d9155624c9f6fe9d216990368d8ab35"
+    },
+    "README.md": {
+      "before": "82f77f8bac287a5f33e7b26c698714215e24a7d34c5a1fc5fbc58f6adb2e3103",
+      "after": "baf4697da110bdf88d9bafe4954f117c9fe8a24d0f372ab0356ad00936dca0eb"
+    },
+    "scene-ui.css": {
+      "before": "41d7377af13692380aac717f5c27dca2a5a866ef8cce1e684201dd776031dd8c",
+      "after": "c7c1b72c6c70d500d75035fd6c77e780c7131ae84cd9e9ad69de29d1856162be"
+    }
+  },
+  "newModule": {
+    "notification-ui.js": "f688c7d95ff032aca2b0d99f08d01f3b93f651fc783edd850555cfbc57343198"
+  },
+  "unchangedFromStartingSnapshot": {
+    "story.js": "7a5803685c7f8c03082b275f0bb49f8806797fcdb1ef981bf92b62ccbc14cac2",
+    "request-data.js": "fac1f95cf9614c0593a901f06b426867076e84c362e1c0f9b9fa984024afc9b3",
+    "cards.js": "c7a247af1c52d1374b46a84ba8be73d429e749952195027e9b2721f6c1757e2f",
+    "tutorial.js": "3fa2773aa296e93fb2d8ca4eb46bf563f67457c1f3ff688943621527e5714287",
+    "tutorial-content.js": "d96e0c9129fc43fdfb07264c892473a71f9cb7a172a1a351f0574d47071e0150",
+    "tutorial-state.js": "16236ac537f8b3d5854f4b1d5658d8000aaa2203462d8b3dc198f813fa808526",
+    "save-compat.js": "e2853533c6bad2c82e2bef4380d8cae8e77008c5349195ceebd3e219d91a83b3",
+    "save-v9-anchors.js": "08d1be0f4a811b4ca289f59ce0b693d7569d46b340cb9c81da88d0ae8933f10d",
+    "save-v10-anchors.js": "ef018ceee8c2daec94e6884c2709be1790124eba841962eba8b05787fd41375c",
+    "linear-tutorial.js": "f278073aae4d33f087233cd097a2cc1bfe03d88422b7529dda41ad7a4aad4348",
+    "guide-panel.js": "1a6fea408f93d6aaf7c2f7ae4f6caee16ffe332366ec43e062cdc1785c55e2b9",
+    "guide-panel.css": "351c3e05755842d3d15b82d0aae801202d2814a798cbd2be4ccc09d7a33df6dc",
+    "practice-ui.js": "06ab35a9609bf7bdf45a2c2a19d1d7eb9548191562377f69f43ac743331e4798",
+    "character-ui.js": "626b3dd2aed2386ff66c96776634a2330eec0c0e081099b4e93eaf9461bf58e4",
+    "title-screen.css": "fe0fe4789ec48bd7aac663fb11045c7ccc1daa29aa3f138c6740a4c6dd99b224",
+    "opening.css": "4f7796cb62a236a5ececc5988a3cae86a1f1b443f15f87a18e71026f071423e6",
+    "revision-v09.css": "27dde708de3cbba943d4a297d45dd1c0be043feb13c2607c614416eb125d6d07",
+    "review-update.css": "ac852fa993529f5fc92b98f5d69a73b562806792864711d5d6e3a793503cb33d"
+  },
+  "checks": {
+    "checks/v0140/alerts-iseo.cjs": "46cde8ae3c0bd197603959dafe44531d1b7d0c16c3e1ce874788ea1038940877",
+    "checks/v0140/alerts-iseo-capture.cjs": "6933a7b0326afaf234a92287ff1b09e38b7fbc4c3116232ca6ae76e95a96226a",
+    "checks/v0140/qc-regressions.cjs": "eced8b0e1772dd85ad78a0641cdf9d87f8be2015926a6fdc2c345ec99ddb0528",
+    "checks/v0140/qc-capture.cjs": "9fa29999db5acf2d2227d62f92e8ae210d45251f533d71e176a48d9955abc016"
+  },
+  "captures": {
+    "before": 96,
+    "after": 96
+  }
+}

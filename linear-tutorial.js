@@ -19,7 +19,6 @@ const CP_WIZARD=(()=>{
  return {render,actions};
 })();
 
-const CP_PUB_POSES={E01:[['호숫가 펍.','chin'],['창밖으로','seated'],['소매','chin']],E01Talk:[['공지에 매각','chin'],['설명회 때','chin'],['아침에 같은','seated'],['컵을 내려놓','chin'],['창밖','window']],E04:[['내려놓는다. 서안은 컵','chin']],E05:[['벌써 지원','chin'],['창밖','window']]};
 const CP_STAGE=(()=>{
  const pubLabels=new Set(['E01','E01Talk','E02','E04','Promise','E05','C1_CALL_A','C1_CALL_B','C1_CALL_C','C2_A','C2_B','C2_C','C2_CALL_A','C2_CALL_B','C2_CALL_C','C3_A','C3_B','C3_C']);
  function render(label,statement){
@@ -27,13 +26,14 @@ const CP_STAGE=(()=>{
   const home=active&&(['E05Messages','E05Last','CardLesson','Finish','ReplyA','ReplyB','ReplyC','EndQuiet'].includes(label)||/^C3_CALL_/.test(label));
   document.body.dataset.home=String(home);
   const art=document.getElementById('narrative-art'),img=document.getElementById('narrative-image');art.hidden=!(gate||pub||home);document.body.dataset.narrativeArt=String(gate||pub||home);document.body.dataset.linear=String(active&&label==='TutorLinear');
+  document.body.dataset.confession=String(pub&&label==='E05');
   if(gate||pub||home){
-   const pose=typeof statement==='string'?CP_PUB_POSES[label]?.find(([prefix])=>statement.includes(prefix))?.[1]:null;document.body.dataset.pubPose=pose||'';
-   const actionPose=pose==='chin'||pose==='window'||typeof statement==='string'&&/杯|컵을 내려놓|소매|팔을 테이블|설명회|본사가|본사 돈|창밖|시선을 내렸다/.test(statement);
-   const reflective=actionPose||(label==='E01Talk'||label==='E05'||(typeof statement==='string'&&/이력서|모르겠|막막|망설|무섭|뭘 바꾸고/.test(statement)))&&!(typeof statement==='string'&&/잔에 맺힌|컵을|잔을/.test(statement));
-   const laugh=pose==='laugh'||label==='C1_CALL_C'||(typeof statement==='string'&&/웃는다|성실했네|약속할까/.test(statement));
+   // One shot per authored conversation block; no keyword-driven camera cuts.
+   const laugh=label==='C1_CALL_C';
+   const reflective=label==='E01Talk';
    const message=label==='E02'&&typeof statement==='string'&&/^(i|out) /.test(statement);
-   const file=message?'lake-pub-night.png':home?'home-protagonist-v0102.png':gate?'gate-together-v0102.png':laugh?'seoan-pub-laugh-v092.png':(pose!=='seated'&&reflective)?'seoan-pub-chin-v091.png':'seoan-pub-seated-v092.png';
+   document.body.dataset.pubPose=laugh?'laugh':reflective?'chin':'seated';
+   const file=message?'lake-pub-night.png':home?'home-protagonist-v0102.png':gate?'gate-together-v0141-sheets.png':laugh?'seoan-pub-laugh-v092.png':reflective?'seoan-pub-chin-v091.png':'seoan-pub-seated-v092.png';
    if(!img.src.endsWith(file))img.src='assets/'+file;
    img.alt=message?'호숫가 야경이 보이는 빈 펍. 이서와 서안의 메시지 대화가 이어진다.':home?'펍에서와 같은 짧은 갈색 머리의 주인공이 집에서 외투를 벗고 책상에 앉아 휴대폰을 본다. 얼굴은 보이지 않는다.':gate?'게이트를 막 나온 두 사람이 호숫가 길에서 헤어지기를 망설이며 마주 선다. 주인공은 뒷모습이다.':laugh?'어깨에 힘을 빼고 앉은 서안이 잔에 한 손을 가볍게 얹은 채 웃는다.':reflective?'아이보리 니트 차림의 서안이 한 손으로 턱을 가볍게 괴고 생각한다.':'테이블 맞은편 서안이 어깨에 힘을 빼고 앉아 한 손은 잔에 가볍게 두고, 다른 팔은 몸 옆으로 내려놓는다.';
   }

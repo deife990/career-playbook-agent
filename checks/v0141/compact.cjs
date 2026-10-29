@@ -1,0 +1,7 @@
+const{setup,start,jump,stable,assert,fs}=require('../v0140/browser.cjs');const out='checks/v0141/output/compact';fs.mkdirSync(out,{recursive:true});
+(async()=>{const rows=[];for(const [width,height]of [[1280,720],[600,800],[390,844],[320,667],[800,450]]){const{browser,page:p,errors}=await setup({viewport:{width,height}});try{
+await p.locator('#title-characters').focus();await p.screenshot({path:`${out}/${width}-title.png`});assert(await p.locator('#title-characters').evaluate(n=>{const r=n.getBoundingClientRect();return r.top>=0&&r.bottom<=innerHeight+1}),'title accessible');
+await start(p);await p.screenshot({path:`${out}/${width}-office.png`});
+await jump(p,'E03Actual');await p.getByRole('button',{name:'설치해뒀어요 · 첫 요청 보기',exact:true}).click();const primary=p.getByRole('button',{name:'요청 복사하고 ChatGPT 열기',exact:true});assert(await primary.evaluate(n=>{const r=n.getBoundingClientRect();return r.top>=0&&r.bottom<=innerHeight+1}),'practice primary visible');await p.screenshot({path:`${out}/${width}-practice.png`});await p.keyboard.press('Escape');await stable(p);
+await jump(p,'E04');await p.screenshot({path:`${out}/${width}-cup.png`});assert.deepEqual(errors,[]);rows.push({width,height,title:true,practicePrimary:true,errors});
+}finally{await browser.close()}}fs.writeFileSync(out+'/result.json',JSON.stringify({passed:true,rows},null,2));console.log('PASS compact')})().catch(e=>{console.error(e);process.exitCode=1});

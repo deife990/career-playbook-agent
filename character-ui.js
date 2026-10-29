@@ -11,9 +11,9 @@ window.CP_CHARACTERS=(()=>{
  book.append(head,tabs,intro,sheet);document.body.append(book);select('seoan');
  function open(){CP_REVIEW.stop();book.showModal();close.focus()}
  const titleButton=document.createElement('button');titleButton.id='title-characters';titleButton.type='button';titleButton.textContent='등장인물';titleButton.onclick=open;document.querySelector('.title-actions').append(titleButton);
- const menu=document.querySelector('.more-items');menu.prepend(document.getElementById('history'));
+ const menu=document.querySelector('.more-items');menu.prepend(document.getElementById('history'));menu.prepend(document.getElementById('prep'));
  const characters=document.createElement('button');characters.textContent='등장인물';characters.onclick=()=>{document.querySelector('.game-more').open=false;open()};menu.append(characters);
- for(const [target,label]of [['vn-auto','자동 진행'],['vn-skip','읽은 문장 스킵']]){const b=document.createElement('button');b.textContent=label;b.dataset.readControl=target;b.onclick=()=>document.getElementById(target).click();menu.append(b)}
+ for(const [target,label]of [['vn-auto','자동 진행'],['vn-skip','읽은 문장 스킵']]){const b=document.createElement('button');b.textContent=label;b.dataset.readControl=target;b.onclick=()=>{document.getElementById(target).click();sync()};menu.append(b)}
  // Notebook index holds secondary help; card/request controllers keep their existing DOM nodes.
  const preparation=document.getElementById('preparation'),layout=document.createElement('div'),index=document.createElement('aside'),main=document.createElement('div');layout.className='prep-notebook';index.className='prep-index';main.className='prep-main';
  const indexTitle=document.createElement('h3'),indexText=document.createElement('p');indexTitle.textContent='오늘 한 가지부터';indexText.textContent='필요한 준비를 고르고, 사용하던 AI에서 내 이야기로 이어가요.';
@@ -25,7 +25,8 @@ window.CP_CHARACTERS=(()=>{
   if(typeof monogatari==='undefined')return;
   const label=monogatari.state('label');document.body.dataset.choiceKind=/^(Start|E01Talk|Promise)$/.test(label)?'relationship':'navigation';
   const holder=document.getElementById('phone-person'),active=document.body.dataset.device==='true';
-  const id=label==='E02'?'iseo':document.body.dataset.messenger==='teams'?'yoon':'seoan';
+  const statement=monogatari.label()?.[monogatari.state('step')],speaker=typeof statement==='string'?statement.split(' ')[0]:'';
+  const id=CP_CONVERSATIONS.resolve({label,speaker})?.peer||'seoan';
   let avatar=holder.querySelector('.cp-portrait');if(active){if(!avatar){avatar=portrait(id);holder.prepend(avatar)}avatar.dataset.character=id}
   for(const b of menu.querySelectorAll('[data-read-control]'))b.setAttribute('aria-pressed',document.getElementById(b.dataset.readControl).getAttribute('aria-pressed')||'false');
   const field=document.getElementById('request');if(field&&document.getElementById('preparation').open&&!field.closest('[hidden]')){field.style.height='auto';field.style.height=field.scrollHeight+4+'px'}

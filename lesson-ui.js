@@ -54,14 +54,15 @@ const CP_LESSON_UI=(()=>{
   let lastMessage='',messageTimer=null,messageAnimation=null,pendingBubble=null;
   function finishMessage(){if(!pendingBubble)return false;clearTimeout(messageTimer);document.querySelector('.typing-indicator')?.remove();pendingBubble.hidden=false;pendingBubble=null;messageAnimation?.finish();return true;}
   function phone({label,speaker,list,step,active}){
+    const conversation=CP_CONVERSATIONS.resolve({label,speaker});
     const thread=active&&(label==='E02'&&['i','out'].includes(speaker)||['msg','replymsg'].includes(speaker)||speaker==='y'&&typeof list[step]==='string'&&list[step].startsWith('y '));
+    document.body.dataset.conversation=thread&&conversation?conversation.id:'';
     document.body.dataset.messageOnly=String(thread);document.body.dataset.device=String(active);
-    document.body.dataset.messenger=['msg','replymsg'].includes(speaker)?'kakao':speaker==='y'?'teams':label==='E02'?'ios':speaker==='notice'?'mail':'notification';
-    const toast=document.getElementById('message-arrival');toast.hidden=!(label==='E02'&&step<=1);
+    document.body.dataset.messenger=conversation?.theme||(speaker==='notice'?'mail':'notification');
     if(!active){lastMessage='';finishMessage();return;}
     const screen=document.querySelector('#story-phone .phone-screen'),body=document.getElementById('phone-body');
     const key=label+':'+step;const changed=lastMessage!==key;
-    document.getElementById('phone-app').textContent=['msg','replymsg'].includes(speaker)?'서안':speaker==='y'?'운영팀 · 윤 팀장':label==='E02'?'이서 언니':speaker==='notice'?'Offlook':'알림 센터';
+    document.getElementById('phone-app').textContent=conversation?.name||(speaker==='notice'?'Offlook':'알림 센터');
     screen.querySelector('.phone-status span').textContent=['msg','replymsg'].includes(speaker)?'22:18':label==='E02'?'19:42':'18:07';
     const next=document.getElementById('phone-next');next.hidden=!thread;
     next.textContent=speaker==='y'&&typeof list[step+1]==='string'&&!list[step+1].startsWith('y ')?'휴대폰 내리기 →':label==='E02'&&typeof list[step+1]==='string'&&!/^(i|out) /.test(list[step+1])?'서안과 대화 계속 ▸':'계속 읽기 ▸';
@@ -95,10 +96,11 @@ const CP_LESSON_UI=(()=>{
     body.append(el('p','phone-date',['msg','replymsg'].includes(speaker)?'오늘 오후 10:18':speaker==='y'?'오늘 오후 6:07':'오늘 오후 7:42'));
     messages.forEach((message,i)=>{
       const bubble=el('p','chat-bubble'+(/^(out|replymsg) /.test(message)?' sent':''),message.slice(message.indexOf(' ')+1));
+      if(conversation){const sender=/^(out|replymsg) /.test(message)?conversation.outgoing:conversation.incoming;bubble.dataset.sender=sender;bubble.setAttribute('aria-label',sender+': '+bubble.textContent);}
       const stickerData=['msg','replymsg'].includes(speaker)?messageStickers.get(message):null;
       let arrival=bubble,sticker=null;
       if(stickerData){
-        arrival=el('div','sticker-message-group');sticker=el('figure','chat-sticker');
+        arrival=el('div','sticker-message-group');arrival.dataset.direction=bubble.classList.contains('sent')?'outgoing':'incoming';sticker=el('figure','chat-sticker');
         const image=el('img');image.src='assets/seoan-sticker-'+stickerData.file+'.svg';image.alt=stickerData.alt;image.width=128;image.height=128;
         sticker.append(image);arrival.append(bubble,sticker);
       }
@@ -106,10 +108,10 @@ const CP_LESSON_UI=(()=>{
       if(i===messages.length-1&&changed&&typeof list[step]==='string'&&/^(msg|replymsg|i|out|y) /.test(list[step])&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
         arrival.hidden=true;pendingBubble=arrival;const typing=el('span','typing-indicator');typing.setAttribute('aria-label','입력 중');typing.innerHTML='<i></i><i></i><i></i>';body.insertBefore(typing,arrival);
         const delay=message.includes('집에 도착했다는 답장')?1200:message==='msg 그리고…'?800:450;
-        messageTimer=setTimeout(()=>{typing.remove();arrival.hidden=false;pendingBubble=null;messageAnimation=arrival.animate([{opacity:0,transform:'translateY(10px) scale(.97)'},{opacity:1,transform:'translateY(0) scale(1)'}],{duration:360,easing:'cubic-bezier(.2,.8,.2,1)'});if(sticker)sticker.animate([{opacity:0,transform:'scale(.88)'},{opacity:1,transform:'scale(1)'}],{duration:280,delay:180,fill:'backwards',easing:'ease-out'});body.scrollTop=body.scrollHeight;},delay);
+        messageTimer=setTimeout(()=>{typing.remove();arrival.hidden=false;pendingBubble=null;messageAnimation=arrival.animate([{opacity:0,transform:'translateY(6px)'},{opacity:1,transform:'translateY(0)'}],{duration:CP_MOTION.duration('normal'),easing:CP_MOTION.ease()});if(sticker)sticker.animate([{opacity:0,transform:'scale(.88)'},{opacity:1,transform:'scale(1)'}],{duration:CP_MOTION.duration('normal'),delay:180,fill:'backwards',easing:'ease-out'});body.scrollTop=body.scrollHeight;},delay);
       }
     });
-    if(label==='E05Last'&&typeof list[step]==='string'&&!list[step].startsWith('msg ')){
+    if(label==='E05Last'&&typeof list[step]==='string'&&!/^(msg|replymsg) /.test(list[step])){
       if(list[step].includes('입력 중')){const typing=el('span','typing-indicator');typing.setAttribute('aria-label','서안이 입력 중');typing.innerHTML='<i></i><i></i><i></i>';body.append(typing);}
       else{const attachment=el('div','resume-attachment');attachment.append(el('small','','서안이 보낸 이력서 일부'),el('strong','','레이크포트 파크 · 운영 7년'),el('p','','주요 업무: 고객 응대, 일일 마감'));body.append(attachment);}
     }

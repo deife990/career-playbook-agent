@@ -1,0 +1,13 @@
+const {setup,start,stable}=require('../v0140/browser.cjs');
+const fs=require('fs');const normal=process.argv.includes('--normal'),noShots=normal||process.argv.includes('--no-shots'),variant=process.env.CP_VARIANT||'A';const phase=process.argv[2]||'after', root=`checks/v0141/output/${phase}`;fs.mkdirSync(root,{recursive:true});
+(async()=>{for(const [width,height]of [[1920,1080],[1440,900]]){const {browser,page:p,errors}=await setup({viewport:{width,height},reducedMotion:normal?'no-preference':'reduce'});p.setDefaultTimeout(20000);const rows=[];try{await start(p);for(let n=0;n<240;n++){
+await stable(p);await p.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))));
+const row=await p.evaluate(()=>{const vis=n=>n&&n.getClientRects().length&&!n.hidden&&getComputedStyle(n).visibility!=='hidden'&&getComputedStyle(n).display!=='none';const box=n=>{const r=n.getBoundingClientRect();return{x:r.x,y:r.y,width:r.width,height:r.height}};return{label:monogatari.state('label'),step:monogatari.state('step'),line:typeof monogatari.label()[monogatari.state('step')]==='string'?monogatari.label()[monogatari.state('step')]:'@choice',sprites:[...document.querySelectorAll('game-screen img[data-character],#duo-stage img,#message-cast img,#conversation-cast img,#narrative-image,#scene-cg img,#object-image,#workday-walker img')].filter(vis).filter(n=>!n.closest('[hidden]')).map(n=>({id:n.id||n.dataset.character,src:n.getAttribute('src'),...box(n)})),notification:document.body.dataset.notificationKind,tutorial:CP_GUIDE.isOpen(),choice:!!document.querySelector('choice-container')}});rows.push(row);
+if(!noShots&&['Start','E01','E02','TutorialStart','TutorNext','E03','E04','Promise','E05','E05Messages','CardLesson'].includes(row.label))await p.screenshot({path:`${root}/${width}x${height}-${row.label}-${row.step}.png`});
+if(row.label==='Finish')break;
+if(row.tutorial){await p.evaluate(async()=>{CP_GUIDE.navigate('example','S05');await CP_GUIDE.close({reason:'complete'})});continue}
+if(row.choice){const choice=p.locator('choice-container button');await (row.label==='E03'?choice.filter({hasText:'지금은 이야기 계속'}):choice.nth('ABC'.indexOf(variant))).click();continue}
+await p.evaluate(()=>advance());const now=await p.evaluate(()=>monogatari.state('label')+':'+monogatari.state('step'));if(now===row.label+':'+row.step){row.doubleClick=true;await p.evaluate(()=>advance())}
+}
+fs.writeFileSync(`${root}/${width}x${height}.json`,JSON.stringify({rows,errors},null,2));console.log(phase,width,rows.length,errors);
+}finally{await browser.close()}}})().catch(e=>{console.error(e);process.exitCode=1});

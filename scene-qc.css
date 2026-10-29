@@ -1,0 +1,40 @@
+/* v0.14.1 scene QC. Stable camera slots, independent of caption measurements. */
+body[data-first-distance]:not([data-narrative-art=true]) game-screen img[data-character=s],
+body[data-duo=true]:not([data-narrative-art=true]) game-screen img[data-character=s]{
+ left:62%!important;right:auto!important;top:auto!important;bottom:0!important;
+ width:auto!important;height:76dvh!important;max-height:76dvh!important;
+ transform:translateX(-50%)!important;translate:none!important;object-fit:contain;
+}
+/* Keep the same engine sprite instead of replacing it with a smaller duo copy. */
+#duo-stage{display:none!important}
+body[data-duo=true]:not([data-narrative-art=true]) game-screen img[data-character]{visibility:visible!important}
+body[data-duo=true] game-screen img[data-character=n]{left:24%!important;right:auto!important;top:auto!important;bottom:0!important;height:76dvh!important;max-height:76dvh!important;width:auto!important;transform:translateX(-50%)!important;object-fit:contain}
+#message-cast .remote-frame img{object-position:50% 0;object-fit:contain}
+#narrative-art::after{content:'';position:absolute;inset:0;background:#101626;opacity:0;pointer-events:none;transition:opacity var(--cp-motion-normal) var(--cp-ease-out)}
+body[data-confession=true] #narrative-art::after{opacity:.15}
+.cp-image-crossfade{position:fixed!important;pointer-events:none!important;margin:0!important;max-width:none!important;max-height:none!important;z-index:11;object-fit:contain}
+@media(max-width:700px){
+ body[data-first-distance]:not([data-narrative-art=true]) game-screen img[data-character=s],body[data-duo=true]:not([data-narrative-art=true]) game-screen img[data-character=s]{height:68dvh!important;max-height:68dvh!important;left:68%!important}
+ body[data-duo=true] game-screen img[data-character=n]{height:68dvh!important;max-height:68dvh!important;left:24%!important}
+}
+@media(min-width:701px) and (max-height:800px){
+ #welcome .title-episode{padding-top:24px}
+ #welcome .title-copy{padding-top:16px;padding-bottom:16px}
+ #welcome h1{font-size:36px;line-height:1.4;margin-bottom:12px}
+ #welcome .title-tagline{margin-bottom:16px}
+ #welcome .title-actions{gap:2px}
+ #welcome #title-settings{margin-top:4px;padding-top:10px}
+ #welcome .title-chapter{margin-top:12px}
+ .office-bubble{font-size:21px;padding:12px 22px}
+ .office-bubble.second{font-size:19px;padding:10px 20px}
+}
+@media(max-width:700px) and (orientation:portrait){
+ body[data-object=true] #object-insert{top:auto!important;bottom:calc(var(--dialogue-panel-height) + 12px)!important;left:12px!important;right:auto!important;width:40vw!important;max-height:22dvh!important;overflow:hidden}
+ body[data-object=true] #object-image{max-height:18dvh;object-fit:contain}
+}
+@media(prefers-reduced-motion:reduce){#narrative-art::after{transition:none!important}.cp-image-crossfade{display:none!important}}
+/* Practice keeps its primary action outside the scrollable request content. */
+#tutorial-dialog[data-flow=practice][open]{display:flex!important;flex-direction:column;overflow:hidden!important}
+#tutorial-dialog[data-flow=practice] .guide-body{min-height:0;overflow-y:auto!important;flex:1 1 auto}
+#tutorial-dialog[data-flow=practice] .guide-footer{flex:none;max-height:40dvh;overflow-y:auto}
+@media(max-width:700px){#tutorial-dialog[data-flow=practice] .guide-footer>.guide-primary{order:-1;width:100%}}

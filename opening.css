@@ -1,11 +1,11 @@
 /* V08.1: visible coworkers, anonymous faces, one greeting at a time. */
-#office-scene{position:fixed;inset:var(--office-top,76px) 0 0;z-index:6;pointer-events:none}
+#office-scene{position:fixed;inset:0;z-index:6;pointer-events:none}
 #office-scene img{display:block;width:100%;height:100%;object-fit:cover}
-#workday-stage{position:fixed;inset:76px 0 var(--dialog-height);z-index:7;pointer-events:none;overflow:hidden;transition:background .45s ease}
-#workday-location{position:absolute;top:28px;left:5%;margin:0;padding:8px 13px;color:#fff7e9;background:#152633b8;border:1px solid #d8c2a540;border-radius:4px;font-size:12px;line-height:1.7;letter-spacing:.06em}
+#workday-stage{position:fixed;inset:76px 0 var(--dialog-height);z-index:7;pointer-events:none;overflow:hidden;transition:background var(--cp-motion-scene) ease}
+#workday-location{position:absolute;top:var(--scene-safe-top,72px);left:5%;margin:0;padding:8px 13px;color:#fff7e9;background:#152633b8;border:1px solid #d8c2a540;border-radius:4px;font-size:12px;line-height:1.7;letter-spacing:.06em}
 body[data-workday^="Recall"] #workday-stage{background:#0c192bc7}
 #office-bubbles{position:absolute;inset:0}
-.office-bubble{position:absolute;left:12%;top:12%;margin:0;padding:22px 35px;max-width:calc(100% - 24px);white-space:nowrap;background:#fffdf8;color:#31333a;border:2px solid #4b4340;border-radius:48% 43% 46% 42% / 48% 47% 44% 48%;box-shadow:4px 6px 0 #30272528;font-size:clamp(21px,2.5vw,34px);font-weight:700;line-height:1.6;animation:workday-pop .45s ease-out both}
+.office-bubble{position:absolute;left:12%;top:12%;margin:0;padding:22px 35px;max-width:calc(100% - 24px);white-space:nowrap;background:#fffdf8;color:#31333a;border:2px solid #4b4340;border-radius:48% 43% 46% 42% / 48% 47% 44% 48%;box-shadow:4px 6px 0 #30272528;font-size:clamp(21px,2.5vw,34px);font-weight:700;line-height:1.6;animation:workday-pop var(--cp-motion-scene) ease-out both}
 .office-bubble::after{content:"";position:absolute;bottom:-11px;left:calc(var(--tail-x,50%) - 10px);width:19px;height:19px;background:#fffdf8;border-right:2px solid #4b4340;border-bottom:2px solid #4b4340;transform:rotate(45deg)}
 .office-bubble.second{font-size:clamp(18px,2vw,26px);padding:17px 30px}
 #workday-walker{position:absolute;left:57%;bottom:5%;height:38%;width:18%;margin:0;opacity:.95}

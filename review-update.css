@@ -6,7 +6,7 @@
 body[data-message-only="true"] #remote-person{left:18px;top:calc(var(--office-top,80px) + 80px);right:auto;bottom:auto;width:170px;height:auto}
 body[data-device="true"] #story-phone{left:25%;width:min(370px,calc((100dvh - var(--office-top,80px) - var(--dialog-height,180px) - 32px)*.6))}body[data-phone-solo="true"] #story-phone{left:50%}body[data-messenger="notification"] #phone-body{overflow:auto;font-size:14px!important;line-height:1.7}body[data-message-only="true"] #phone-body{font-size:14px!important}#phone-body .chat-bubble{font-size:14px!important}.phone-full-text{display:none!important}.phone-reaction{display:none;margin:0}body[data-phone-reaction="true"] .phone-reaction{display:block}
 #message-arrival{top:calc(var(--office-top,80px) + 8px)!important;left:18px!important;right:auto!important;transform:none;width:min(340px,calc(100vw - 36px));max-height:88px;padding:10px 14px;z-index:14}#message-arrival p{margin:4px 0;font-size:12px}
-body[data-first-distance="middle"] game-screen img[data-character="s"]{height:59%!important;max-height:59%!important;left:62%!important;transition:height .6s ease,left .6s ease}body[data-first-distance="close"] game-screen img[data-character="s"]{transition:height .6s ease,left .6s ease}
+body[data-first-distance="middle"] game-screen img[data-character="s"]{height:59%!important;max-height:59%!important;left:62%!important;transition:height var(--cp-motion-scene) ease,left var(--cp-motion-scene) ease}body[data-first-distance="close"] game-screen img[data-character="s"]{transition:height var(--cp-motion-scene) ease,left var(--cp-motion-scene) ease}
 #story-use{inset:auto!important;top:calc(var(--office-top,80px) + 12px)!important;left:24px!important;width:min(660px,52vw)!important;height:auto!important;max-height:calc((100dvh - var(--office-top,80px))* .59)!important;padding:18px 22px!important;overflow-y:auto!important;background:#fffaf2f5!important;z-index:12;border-radius:16px}#story-use h2{font-size:21px!important;line-height:1.45;margin:8px 0}#story-use-prompt{font-size:14px;line-height:1.65;margin:8px 0}#story-use .lesson-topline{font-size:11px}#story-use-viewport{max-height:180px;overflow:auto}#story-use .lesson-reading{padding:14px}#story-use .lesson-answer p,#story-use .lesson-input p{font-size:14px!important;line-height:1.7!important}#story-use-source,#story-use-caption,#story-use-reading-details,#story-use .shot-mobile-hint{display:none!important}#story-use-open{font-size:12px;min-height:34px;padding:7px 10px;background:transparent;margin-top:8px}#story-use .lesson-copy,#story-use .lesson-next{font-size:13px;min-height:38px;margin:8px 8px 0 0;padding:8px 12px}.lesson-copy{background:#315b50;color:#fff}.lesson-next{float:right}
 body[data-use="true"] #narrative-image{object-position:72% 35%}
 .request-extras{border-top:1px solid #d6c5b3;padding-top:12px;margin:16px 0}.request-extras summary{cursor:pointer;padding:8px}.request-extras>button,.request-extras>a{display:block;margin-top:10px;width:100%;text-align:center}#save-external{display:block;width:100%;background:#315b50;color:white;font-weight:700;margin:18px 0}#first-lesson>button{background:none;border:0;text-decoration:underline;min-height:30px;font-size:13px}#first-lesson ol{font-size:14px;padding-left:22px}.current-card{display:block;width:100%;text-align:left;margin-bottom:10px;background:#e9efe9!important}.later-cards{padding:14px 0}.later-cards summary{padding:10px 0;cursor:pointer}.later-cards button{display:block;width:100%;text-align:left;margin:8px 0}.later-cards small{display:block;margin:6px 0 0;color:#6d716b;font-size:12px}.guide-compact{display:none}body[data-reply-choice="true"] #phone-next{display:none!important}
@@ -116,3 +116,33 @@ body[data-device="true"][data-messenger="notification"]:not([data-phone-solo="tr
 #preparation input[type=range]::-webkit-slider-thumb{appearance:none;width:24px;height:24px;border-radius:50%;background:var(--cp-green);border:3px solid var(--cp-paper);box-shadow:0 0 0 1px var(--cp-green);margin-top:-10px}
 #preparation input[type=range]::-moz-range-track{height:4px;background:#b7c0ad;border-radius:4px}
 #preparation input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;background:var(--cp-green);border:2px solid var(--cp-paper)}
+
+/* Request and its next action are kept together; details remain available below. */
+#preparation[data-view=request] .prep-main>h2{margin:16px 0 8px}
+#preparation[data-view=request] .prep-main>section{padding-bottom:16px}
+#preparation[data-view=request] .request-goal{margin:0 0 8px}
+#preparation[data-view=request] label{margin:8px 0 2px}
+#preparation[data-view=request] select{margin:0 0 8px}
+#preparation[data-view=request] textarea{padding:12px 16px;line-height:1.6}
+#preparation[data-view=request] #copy{margin:6px 0}
+#preparation[data-view=request] #save-external{margin:8px 0}
+#preparation[data-view=request] #external:not([hidden]){display:inline-flex;align-items:center;min-height:48px;margin:4px 0}
+#preparation[data-view=request] .request-help{margin:12px 0;padding:0}
+#preparation[data-view=request] .request-extras{margin:0}
+
+/* QC-03: only the compact exit row stays above a scrolling supporting view. */
+:is(#backlog,#save-slots,#cg-gallery,#character-book){scroll-padding-top:88px}
+:is(#backlog,#save-slots,#cg-gallery,#character-book) header{position:sticky;top:-28px;z-index:2;margin:-28px -28px 20px;padding:12px 20px;background:var(--cp-paper);border-bottom:1px solid var(--cp-line)}
+:is(#backlog,#save-slots,#cg-gallery,#character-book) header h2{flex:1;min-width:0;margin:0;font-size:clamp(22px,3vw,28px);line-height:1.45}
+:is(#backlog,#save-slots,#cg-gallery,#character-book) header button,#preparation .panel-head button{width:auto;flex:none;min-width:60px;min-height:48px;margin:0;padding:10px 14px;white-space:nowrap}
+#preparation .panel-head{position:sticky;top:0}
+#character-book .character-tabs{gap:4px 8px;margin:12px 0}
+#character-book .character-tabs button{flex:0 0 auto;width:auto;min-height:44px;margin:0;padding:8px 12px}
+#character-book .character-intro{gap:12px;margin-bottom:16px}
+#character-book .character-intro p{margin:0;font-size:16px;line-height:1.7}
+#character-book .character-intro .cp-portrait{width:48px;height:48px;flex:none}
+
+/* QC-04: this button does not inherit the engine's fixed-size game controls. */
+body>.restore-ui{width:auto;height:auto;min-height:48px;max-width:calc(100vw - 32px);padding:12px 20px;margin:0;border:1px solid #c9d0bf;border-radius:8px;background:var(--cp-paper);color:var(--cp-ink);font:max(16px,var(--read-size,18px))/1.5 var(--cp-font);white-space:normal;overflow-wrap:anywhere;box-shadow:0 4px 20px #0005}
+body>.restore-ui:hover{background:#fffdf7}body>.restore-ui:focus-visible{outline:3px solid var(--cp-paper);outline-offset:3px;box-shadow:0 0 0 6px var(--cp-green)}
+#end-actions button.end-primary{font:600 max(16px,var(--read-size,18px))/1.5 var(--cp-font);font-size:max(16px,var(--read-size,18px))!important;white-space:normal;height:auto;min-height:56px}

@@ -1,6 +1,6 @@
 'use strict';
 const $ = id => document.getElementById(id);
-const SLOT = 'CPEpisode_1', SCHEMA = 'ep01-script-v11';
+const SLOT = 'CPEpisode_1', SCHEMA = 'ep01-script-v12';
 function preferredService(){try{return localStorage.getItem('CPPreferredService')==='Claude'?'Claude':'ChatGPT'}catch{return 'ChatGPT'}}
 const initialBridge = () => ({schema:SCHEMA,panel:false,view:'cards',card:'first',requestIndex:0,service:preferredService(),detail:false,report:null,guideStep:0,guideService:preferredService(),installStep:0,wizardStep:-1,deferredTutorial:null,practice:null,practicePrivacySeen:false,tutorial:CP_TUTORIAL_STATE.fresh(),practiceHistory:CP_TUTORIAL_STATE.history(null,null)});
 let bridge=initialBridge(), ready=false, restoring=false, busy=false, settled=false, saveTimer, returnFocus;
@@ -10,7 +10,7 @@ const finished = () => monogatari.state('label')==='Finish';
 const playing = () => !!monogatari.global('playing') && $('welcome').hidden;
 const card = () => CP_CARDS.find(item=>item.id===bridge.card) || CP_CARDS[0];
 const views=['cards','request','install','history','settings','preview','guide'];
-monogatari.settings({Name:'CareerPilot Office Romance Beta',Version:'0.14.0-dev',Label:'Opening',SaveLabel:'CPEpisode',AutoSave:0,Screenshots:false,ServiceWorkers:false,Orientation:'any',Preload:true,TypeAnimation:false,AllowRollback:false,ShowMainScreen:true,Storage:{Adapter:'LocalStorage',Store:'Story',Endpoint:''},AssetsPath:{root:'assets',scenes:'',characters:''}});
+monogatari.settings({Name:'CareerPilot Office Romance Beta',Version:'0.14.1',Label:'Opening',SaveLabel:'CPEpisode',AutoSave:0,Screenshots:false,ServiceWorkers:false,Orientation:'any',Preload:true,TypeAnimation:false,AllowRollback:false,ShowMainScreen:true,Storage:{Adapter:'LocalStorage',Store:'Story',Endpoint:''},AssetsPath:{root:'assets',scenes:'',characters:''}});
 monogatari.preferences({Language:'한국어',TextSpeed:0});
 monogatari.storage({c1:null,c2:null,c3:null,bridge,selfReason:'나도 회사는 바꾸고 싶은데, 지금 생활까지 전부 바뀔까 봐 망설여져.',log:[]});
 monogatari.assets('scenes',{office:'office-evening-v81.png',gate:'gate-night.png',cafe:'lake-pub-night.png',home:'home-protagonist-v0102.png'});
@@ -49,7 +49,7 @@ function migrateV9(data){
 function migrateSave(data){
   data=migrateV9(data);
   const schema=data?.game?.storage?.bridge?.schema;
-  if(!['ep01-script-v10',SCHEMA].includes(schema))return data;
+  if(!['ep01-script-v10','ep01-script-v11',SCHEMA].includes(schema))return data;
   const copy=structuredClone(data),g=copy.game,b=g.storage.bridge;
   if(schema==='ep01-script-v10'){
     const label=g.state.label,old=CP_V10_ANCHORS[label],line=old?.[g.state.step];
@@ -74,6 +74,21 @@ function migrateSave(data){
       g.state.step=index;
     }
     b.schema=SCHEMA;
+  }
+  if(schema==='ep01-script-v11'){
+    const old=CP_V11_ANCHORS[g.state.label]||[],current=CP_STORY.script[g.state.label]||[],line=old[g.state.step];
+    if(!Number.isInteger(g.state.step)||!(line==='@choice'||typeof line==='string'&&!/^(show |hide |jump |@command)/.test(line)))return data;
+    const aliases={
+      'n 알았어, 엄마. 둘도 조심히 가!':'n 알았어, 알았어. 둘도 조심히 가!',
+      'msg 집에 도착했다는 답장도 좀 줘.':'msg 내일 끝나면 연락할게. 집에 오는 버스 타기 전에.',
+      'replymsg 도착했어. 내일 면접 잘 봐.':'replymsg 응. 면접 잘 봐. 끝나면 얘기해줘.',
+      'replymsg 도착했어. …돌아오는 버스 몇 시 거야?':'replymsg …돌아오는 버스 몇 시 거야?'
+    };
+    const target=aliases[line]||line,ordinal=old.slice(0,g.state.step+1).filter(x=>x===line).length-1;
+    const matches=current.map((x,i)=>(target==='@choice'?!!x?.Choice:x===target)?i:-1).filter(i=>i>=0);
+    if(!matches.length)return data;
+    g.state.step=matches[Math.min(ordinal,matches.length-1)];b.schema=SCHEMA;
+    // Only the script position changes; relationship values, log, practice and history survive.
   }
   b.tutorial=CP_TUTORIAL_STATE.normalize(b.tutorial);
   const prep=b.tutorial.preparationReturn,prepCard=CP_CARDS.find(c=>c.id===prep?.card);
@@ -135,6 +150,7 @@ function syncStoryUI(){
 }
 function renderStoryPhone(){
   const label=monogatari.state('label'),step=monogatari.state('step'),list=monogatari.label()||[];
+  const alert=CP_ALERTS.sync({label,list,step,active:playing()&&!transitioning});
   let statement=list[step],line=typeof statement==='string'?statement:'';
   // Derive the held-phone cut and content from the current script position.
   // This also restores correctly on reload between two notification lines.
@@ -143,10 +159,11 @@ function renderStoryPhone(){
   const pocketAt=list.findIndex(x=>typeof x==='string'&&x.startsWith('휴대폰을 주머니'));
   const opening=label==='Start'&&tapAt>=0&&step<(pocketAt>=0?pocketAt:tapAt);
   const names={phone:'알림',notice:'레이크포트 파크 · 공지',y:'운영팀 채팅 · 윤 팀장',i:'이서',out:'이서와의 대화 · 서안',msg:'서안',replymsg:'서안',ai:'CareerPilot · 가상 예시'};
+  if(label==='Start'&&line.startsWith('입금 알림을 지워도 공지는 남아 있다.'))line=list.find(x=>typeof x==='string'&&x.startsWith('y '))||line;
   if(opening&&!names[line.split(' ')[0]])line=[...list.slice(0,step+1)].reverse().find(x=>typeof x==='string'&&names[x.split(' ')[0]])||(line.startsWith('손안에서 휴대폰')?'phone 새 알림 · 화면을 들어 확인한다.':'');
   if(label==='CardLesson'&&statement?.Choice)line=[...list.slice(0,step)].reverse().find(x=>typeof x==='string'&&x.startsWith('msg '))||'';
-  if(label==='E05Last'&&typeof statement==='string'&&!statement.startsWith('jump ')&&!statement.startsWith('msg '))line='msg '+statement;
-  const speaker=line.split(' ')[0],content=line.slice(speaker.length+1),active=playing()&&(!!names[speaker]||(label==='E03Example'&&speaker==='s'));
+  if(label==='E05Last'&&typeof statement==='string'&&!statement.startsWith('jump ')&&!/^(msg|replymsg) /.test(statement))line='msg '+statement;
+  const speaker=line.split(' ')[0],content=line.slice(speaker.length+1),active=playing()&&!alert?.system&&(!!names[speaker]||(label==='E03Example'&&speaker==='s'));
   $('story-phone').hidden=!active;document.body.dataset.phone=String(active);
   document.body.dataset.phoneSolo=String(opening&&active&&!['y'].includes(speaker));
   const nari=document.querySelector('game-screen img[data-character="n"]'),seoan=document.querySelector('game-screen img[data-character="s"]');
@@ -154,7 +171,7 @@ function renderStoryPhone(){
   document.body.dataset.duo=String(duo);$('duo-stage').hidden=!duo;
   if(duo){$('duo-nari').src=nari.src;$('duo-nari').dataset.sprite=nari.dataset.sprite;$('duo-seoan').src=seoan.src;}
 
-  const cg=playing()&&label==='TutorialStart';$('scene-cg').hidden=!cg;document.body.dataset.cg=String(cg);
+  const cg=playing()&&['TutorialStart','TutorRequest','TutorNext','E03'].includes(label);$('scene-cg').hidden=!cg;document.body.dataset.cg=String(cg);
   const installSteps={
     TutorChatGPTUpload:['2 / 4 · ChatGPT 업로드','Plugins → Personal → 추가 → ZIP 업로드가 제공되는 계정의 예시. 메뉴가 없으면 공식 권한·웹 경로를 확인해요.','guide-chatgpt.webp'],
     TutorChatGPTEnable:['3 / 4 · ChatGPT 설치 확인','내가 올린 CareerPilot 이름을 확인해요. 아래는 과거 실제 설치 후 상세 화면이에요.','reference-ui/careerpilot-chatgpt-installed-20261005.jpg'],
@@ -374,12 +391,12 @@ function showPanel(view='cards',cardId=null){
 async function closePanel(){
   bridge.panel=false;$('preparation').close();
   if(playing())syncStoryUI();
-  const target=returnFocus?.isConnected&&!returnFocus.closest('[hidden]')?returnFocus:$('prep');target.focus();
+  const target=returnFocus?.isConnected&&!returnFocus.closest('[hidden],details:not([open])')?returnFocus:document.querySelector('.game-more>summary');target?.focus();
   await checkpoint();
 }
 async function changePanel(view,cardId=null){if(view==='guide')bridge.guideService=bridge.service;showPanel(view,cardId);await checkpoint();}
 function playingUI(){$('welcome').hidden=true;$('play-controls').hidden=false;}
-async function advance(){if(window.CP_GUIDE?.isOpen())return;if(CP_LESSON_UI.finishMessage()||CP_STAGE.finishTyping())return;if(['TutorRequest','E03Example','E03Actual'].includes(monogatari.state('label')))return;if(transitioning){interruptTransition();return;}if(Date.now()<beatUntil){beatUntil=0;clearTimeout(beatTimer);syncStoryUI();return;}if(!playing()||!monogatari.element().find('[data-screen=game]').isVisible()||!settled||transitioning||Date.now()<beatUntil||busy||finished()||$('preparation').open||document.querySelector('choice-container')||monogatari.action('Choice').blocking)return;await monogatari.proceed({userInitiated:true});}
+async function advance(){if(window.CP_GUIDE?.isOpen())return;CP_LESSON_UI.finishMessage();CP_STAGE.finishTyping();if(['TutorRequest','E03Example','E03Actual'].includes(monogatari.state('label')))return;if(transitioning){interruptTransition();return;}if(Date.now()<beatUntil){beatUntil=0;clearTimeout(beatTimer);syncStoryUI();}if(!playing()||!monogatari.element().find('[data-screen=game]').isVisible()||!settled||transitioning||Date.now()<beatUntil||busy||finished()||$('preparation').open||document.querySelector('choice-container')||monogatari.action('Choice').blocking)return;await monogatari.proceed({userInitiated:true});}
 $('start').onclick=async()=>{
   if(busy)return;busy=true;
   let existing=null;try{existing=await monogatari.Storage.get(SLOT)}catch(error){if(error.name!=='KeyNotFoundError'){busy=false;say('저장소를 확인하지 못했어요. 새로고침 후 다시 시도해주세요.');return;}}
@@ -401,6 +418,7 @@ $('resume').onclick=async()=>{
     await monogatari.Storage.set(SLOT,data);
     window.CP_GUIDE?.reset();await monogatari.loadFromSlot(SLOT);bridge=structuredClone(data.game.storage.bridge);monogatari.storage({bridge});window.CP_PRACTICE?.restore();playingUI();
     // Restore exactly the saved dialog/choice; never replay a whole label.
+    if(typeof CP_V11!=='undefined')await CP_V11.restoreVisuals({label:monogatari.state('label'),step:monogatari.state('step')});
     await monogatari.run(monogatari.label()[monogatari.state('step')],false);
     bridge.panel=false;$('preparation').close();monogatari.storage({bridge});$('prep').focus();
     syncStoryUI();say('저장한 대화와 선택을 이어왔어요.');
@@ -444,14 +462,15 @@ const WORKDAY_LABELS=new Set(['Opening','WalkHome','RecallDesk','RecallPeople','
 let lastWorkdayLabel='';
 function renderWorkday(){
   const label=monogatari.state('label'),step=monogatari.state('step');
-  const active=playing()&&WORKDAY_LABELS.has(label),office=active&&label==='Opening',recall=active&&label.startsWith('Recall');
+  const walkingNotice=playing()&&label==='Start'&&step<=10;
+  const active=playing()&&(WORKDAY_LABELS.has(label)||walkingNotice),office=active&&label==='Opening',recall=active&&label.startsWith('Recall');
   $('workday-stage').hidden=!active;
   document.body.dataset.workday=active?label:'';
   $('office-scene').hidden=!office;$('office-bubbles').hidden=!office;
   $('office-greeting').hidden=!office||step>=2;$('office-reply').hidden=!(office&&step>=2);
   if(office)positionOfficeBubbles();
   $('workday-walker').hidden=!active||office;
-  $('workday-location').hidden=!active||recall||label==='WalkQuestion';
+  $('workday-location').hidden=!active||recall||label==='WalkQuestion'||walkingNotice;
   $('workday-location').textContent=office?'온호시 · 레이크포트 파크 운영 사무실':'레이크포트 파크 · 직원 출입게이트로 가는 길';
   $('workday-memory').hidden=!recall;$('memory-notice').hidden=label!=='RecallHold';
   $('workday-memory').dataset.beat=label;
@@ -461,8 +480,8 @@ function renderWorkday(){
   $('memory-image').alt=label==='RecallDesk'?'오늘 오전. 짧은 짙은 갈색 머리의 주인공이 얼굴을 보이지 않는 뒷모습으로 베이지색 재킷을 입고 이용권 변경 문의 전화를 받으며 안내 자료를 짚는다.':label==='RecallPeople'?'오늘 오후. 같은 짧은 머리와 베이지색 재킷의 주인공이 얼굴을 보이지 않는 뒷모습으로 마감표의 숫자를 확인하며 종이 서류와 컴퓨터 화면을 대조한다.':'새로운 계획을 보류한다는 업무 메일이 떠오른다.';
   if(active&&label!==lastWorkdayLabel&&!restoring&&!reducedMotion()){
     const target=recall?$('workday-memory'):$('workday-walker');
-    if(!target.hidden)target.animate([{opacity:0},{opacity:1}],{duration:recall?420:800,easing:'ease-out'});
-    if(!$('recall-yoon').hidden)$('recall-yoon').animate([{opacity:0,transform:'translateX(24px)'},{opacity:1,transform:'translateX(0)'}],{duration:420,easing:'ease-out'});
+    if(!target.hidden)target.animate([{opacity:0},{opacity:1}],{duration:CP_MOTION.duration('scene'),easing:'ease-out'});
+    if(!$('recall-yoon').hidden)$('recall-yoon').animate([{opacity:0,transform:'translateX(8px)'},{opacity:1,transform:'translateX(0)'}],{duration:CP_MOTION.duration('normal'),easing:CP_MOTION.ease()});
   }
   lastWorkdayLabel=active?label:'';
 }
@@ -475,7 +494,7 @@ function positionOfficeBubbles(){
   const width=img.naturalWidth*scale,height=img.naturalHeight*scale;
   const portrait=img.currentSrc.includes('mobile-v81');
   const anchors=portrait?[[.37,.236],[.72,.283]]:[[.329,.223],[.596,.260]];
-  const minTop=$('workday-location').getBoundingClientRect().bottom-stage.top+12;
+  const minTop=12;
   ['office-greeting','office-reply'].forEach((id,index)=>{
     const bubble=$(id);if(bubble.hidden)return;
     const [x,y]=anchors[index];
@@ -490,7 +509,10 @@ function positionOfficeBubbles(){
 $('office-scene-image').addEventListener('load',positionOfficeBubbles);
 new ResizeObserver(positionOfficeBubbles).observe($('office-scene-image'));
 new ResizeObserver(entries=>{
-  document.documentElement.style.setProperty('--office-top',entries[0].target.getBoundingClientRect().height+'px');
+  const toolbar=entries[0].target.getBoundingClientRect();
+  // Legacy foreground layouts use office-top; full-bleed art does not.
+  document.documentElement.style.setProperty('--office-top',toolbar.height+'px');
+  document.documentElement.style.setProperty('--scene-safe-top',Math.ceil(toolbar.bottom+12)+'px');
   positionOfficeBubbles();
 }).observe(document.querySelector('.toolbar'));
 async function pauseBeforeNotice(){
@@ -507,7 +529,7 @@ async function transitionOut(title){
   $('next').disabled=true;$('scene-transition-title').textContent=title;
   const cover=$('scene-transition');cover.style.opacity='0';
   if(!reducedMotion()){
-    transitionAnimation=cover.animate([{opacity:0},{opacity:1}],{duration:240,easing:'ease-in-out',fill:'forwards'});
+    transitionAnimation=cover.animate([{opacity:0},{opacity:1}],{duration:CP_MOTION.duration('normal'),easing:'ease-in-out',fill:'forwards'});
     await transitionAnimation.finished.catch(()=>{});
   }
   cover.style.opacity='1';transitionAnimation?.cancel();transitionAnimation=null;
@@ -524,7 +546,7 @@ async function transitionIn(){
     await Promise.all([...document.querySelectorAll('game-screen img[data-character]')].map(img=>img.decode().catch(()=>{})));
     if(!reducedMotion()&&!transitionSkipped){
       if(monogatari.state('label')==='E01'){await new Promise(resolve=>setTimeout(resolve,1700));if(!transitionSkipped){$('scene-transition-title').textContent='호숫가 펍 · 저녁';await new Promise(resolve=>setTimeout(resolve,650));}}else await new Promise(resolve=>setTimeout(resolve,150));
-      transitionAnimation=cover.animate([{opacity:1},{opacity:0}],{duration:450,easing:'ease-in-out',fill:'forwards'});
+      transitionAnimation=cover.animate([{opacity:1},{opacity:0}],{duration:CP_MOTION.duration('scene'),easing:'ease-in-out',fill:'forwards'});
       await transitionAnimation.finished.catch(()=>{});
     }
   }finally{
@@ -561,8 +583,8 @@ async function playSighSound(){
   for(let i=0;i<length;i++)data[i]=(Math.random()*2-1)*Math.sin(Math.PI*i/length)*Math.exp(-2*i/length);
   const source=ctx.createBufferSource(),filter=ctx.createBiquadFilter(),gain=ctx.createGain();source.buffer=buffer;filter.type='lowpass';filter.frequency.value=750;gain.gain.value=.08;source.connect(filter);filter.connect(gain);gain.connect(ctx.destination);source.start();source.onended=()=>{source.disconnect();filter.disconnect();gain.disconnect();};
 }
-let ambientScene='',ambientNodes=[],ambientGain=null;
-async function syncAmbience(){const label=monogatari.state('label'),next=!playing()?'':/^E05Messages|E05Last|CardLesson|Reply|EndQuiet|Finish|C3_CALL/.test(label)?'home':/^E01|E02|E03|E04|E05$|Tutor|Promise|C[123]_/.test(label)?'pub':'';if(next===ambientScene&&ambientNodes.length)return;for(const n of ambientNodes){try{n.stop();n.disconnect()}catch{}}ambientNodes=[];ambientGain?.disconnect();ambientGain=null;ambientScene=next;if(!next||!sfxEnabled)return;const ctx=await primeSound();if(!ctx)return;ambientGain=ctx.createGain();ambientGain.gain.value=next==='home'?.004:.006;ambientGain.connect(ctx.destination);for(const f of next==='home'?[60,120]:[146.83,220,293.66]){const tone=ctx.createOscillator();tone.type='sine';tone.frequency.value=f;tone.connect(ambientGain);tone.start();ambientNodes.push(tone);}document.body.dataset.ambience=next;}
+// Continuous synthesized ambience was a prototype; keep only the explicit tap effects.
+async function syncAmbience(){delete document.body.dataset.ambience;}
 async function playNotificationSound(){const ctx=await primeSound();if(!ctx||ctx.state!=='running')return;for(const [i,freq] of [880,1174].entries()){const o=ctx.createOscillator(),g=ctx.createGain(),t=ctx.currentTime+i*.18;o.type='sine';o.frequency.value=freq;g.gain.setValueAtTime(.001,t);g.gain.exponentialRampToValueAtTime(.07,t+.015);g.gain.exponentialRampToValueAtTime(.001,t+.3);o.connect(g);g.connect(ctx.destination);o.start(t);o.stop(t+.32);o.onended=()=>{o.disconnect();g.disconnect();};}}
 $('tap-sound').onchange=async()=>{sfxEnabled=$('tap-sound').checked;syncSoundButton();try{localStorage.setItem('CPEpisodeSfx',sfxEnabled?'on':'off');}catch(error){}if(sfxEnabled){await primeSound();await syncAmbience()}else if(audioContext?.state==='running')await audioContext.suspend();};
 $('sound-preview').onclick=async()=>{if(!sfxEnabled){panelSay('위에서 두드리는 효과음을 켜면 미리 들을 수 있어요.');return;}panelSay(await playTapSound()?'작은 효과음 3회를 재생했어요.':'브라우저에서 소리를 재생하지 못했어요. 이야기는 계속할 수 있어요.');};
@@ -576,11 +598,11 @@ function syncSceneEffects(){
   void syncAmbience();
   if(typeof line==='string'&&/^(y |i |msg )/.test(line))void playNotificationSound();
   const emotional=typeof line==='string'&&(line.includes('어깨가 살짝 닿')||line==='me 벌써 지원했어?'||line.includes('대답이 조금 늦는다'));document.body.dataset.emotional=String(emotional);
-  if(emotional&&!reducedMotion()){beatUntil=Date.now()+300;if(ambientGain&&audioContext){ambientGain.gain.setTargetAtTime(.001,audioContext.currentTime,.08);ambientGain.gain.setTargetAtTime(ambientScene==='home'?.004:.006,audioContext.currentTime+.8,.3)}document.querySelector('text-box').animate([{opacity:.25},{opacity:1}],{duration:450,delay:150});}
+  if(emotional&&!reducedMotion()){beatUntil=Date.now()+300;document.querySelector('text-box').animate([{opacity:.25},{opacity:1}],{duration:CP_MOTION.duration('scene'),delay:150});}
   clearTimeout(beatTimer);beatUntil=emotional&&!reducedMotion()?Date.now()+300:0;
   if(tap){
     setTimeout(()=>{if(monogatari.state('label')===label&&monogatari.state('step')===step)void playTapSound();},reducedMotion()?0:500);
-    if(!reducedMotion())document.querySelector('game-screen').animate([{transform:'translateX(0)'},{transform:'translateX(-3px)'},{transform:'translateX(3px)'},{transform:'translateX(0)'}],{delay:500,duration:240});
+    if(!reducedMotion())document.querySelector('game-screen').animate([{transform:'translateX(0)'},{transform:'translateX(-3px)'},{transform:'translateX(3px)'},{transform:'translateX(0)'}],{delay:500,duration:CP_MOTION.duration('normal')});
     if(!reducedMotion()){beatUntil=Date.now()+1700;beatTimer=setTimeout(()=>{beatUntil=0;if(playing())syncStoryUI();},1700);}
   }
   if(label==='WalkQuestion'&&typeof line==='string'&&line.includes('하아'))void playSighSound();
@@ -594,10 +616,12 @@ function syncSceneEffects(){
 $('font-size').oninput=()=>{const size=$('font-size').value;document.documentElement.style.setProperty('--read-size',size+'px');$('font-value').textContent=size+'px';try{localStorage.setItem('CPEpisodeFont',size);}catch(error){/* Reading settings still apply to this tab. */}};
 try{const font=localStorage.getItem('CPEpisodeFont');if(['16','18','20','22','24'].includes(font)){$('font-size').value=font;$('font-size').oninput();}}catch(error){/* Default font remains available. */}
 document.addEventListener('keydown',event=>{
-  if(document.querySelector('dialog[open]:not(#preparation)')){if(['Enter',' ','ArrowRight'].includes(event.key)&&!event.target.closest('button,input,textarea,select')){event.preventDefault();event.stopImmediatePropagation();}return;}
+  // Reading a focused card uses native scrolling, never the engine's advance shortcut.
+  if(event.target.closest('#message-arrival')&&['Enter',' ','ArrowRight','ArrowLeft','ArrowUp','ArrowDown','PageUp','PageDown','Home','End'].includes(event.key)){event.stopImmediatePropagation();return;}
+  if(document.querySelector('dialog[open]:not(#preparation)')){if(['Enter',' ','ArrowRight'].includes(event.key)&&!event.target.closest('button,a,input,textarea,select,summary,#message-arrival')){event.preventDefault();event.stopImmediatePropagation();}return;}
   if($('preparation').open){event.stopImmediatePropagation();if(event.key==='Escape'){event.preventDefault();closePanel();}return;}
   if(playing()&&transitioning&&['Enter',' ','ArrowRight'].includes(event.key)){event.preventDefault();event.stopImmediatePropagation();interruptTransition();return;}
-  if(playing()&&['Enter',' ','ArrowRight'].includes(event.key)&&!event.target.closest('button,a,input,textarea,select')){event.preventDefault();event.stopImmediatePropagation();advance();}
+  if(playing()&&['Enter',' ','ArrowRight'].includes(event.key)&&!event.target.closest('button,a,input,textarea,select,summary,#message-arrival')){event.preventDefault();event.stopImmediatePropagation();advance();}
 },true);
 $('preparation').addEventListener('cancel',event=>{event.preventDefault();closePanel();});
 monogatari.on('willRunAction',()=>{settled=false;});

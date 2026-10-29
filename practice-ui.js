@@ -23,17 +23,27 @@ window.CP_PRACTICE=(()=>{
  function helpWords(body){const details=el('details','practice-help-words');details.append(el('summary','','막힐 때 쓸 말'));for(const [title,text]of[['시작이 막막함','어디서부터 말할지 모르겠어. 최근 일상을 떠올릴 수 있게 질문 하나씩 해줘.'],['요약이 다름','그 부분은 내 뜻과 달라. 내가 지키고 싶은 건 …야.'],['아직 모름','그 조건은 아직 모르겠어. 미정으로 남겨줘.'],['오늘 멈추기','오늘 나온 내용과 아직 모르는 점을 정리해줘.']]){const row=el('section'),status=el('p');status.setAttribute('role','status');row.append(el('h3','',title),el('p','',text),button('이 문구 복사','guide-outline',async()=>{let timer;const ok=await Promise.race([Promise.resolve().then(()=>navigator.clipboard.writeText(text)).then(()=>true,()=>false),new Promise(r=>timer=setTimeout(()=>r(false),1500))]);clearTimeout(timer);status.textContent=ok?'복사됨':'위 문장을 직접 선택해 복사해주세요.'}),status);details.append(row)}body.append(details)}
  function render(body,footer,s){if(!CP_HANDOFF.validPractice(bridge.practice))bridge.practice=fresh();const p=bridge.practice;
   if(s.stepId==='P01'){servicePicker(body);body.append(el('p','','게임은 설치 상태를 확인할 수 없어요. 메뉴가 없거나 시작이 막히면 도움말을 볼 수 있어요.'));footer.append(button('설치·선택 안내 보기','guide-outline',install),button('설치해뒀어요 · 첫 요청 보기','guide-primary',()=>{CP_GUIDE.navigate('practice','P02');void save()}));return}
-  body.append(el('p','','사용할 서비스: '+p.service));servicePicker(body);
-  body.append(el('p','','이번에는 질문에 답하며 바꾸고 싶은 점이나 지킬 조건의 후보 하나를 찾아보세요. 오늘 모두 정하지 않아도 돼요.'));
-  requestBox(body,'W01_START');
-  const instructions=el('ol');for(const text of['선택한 서비스에서 CareerPilot을 사용할 상태인지 확인해요.','요청을 붙여넣고 직접 보내요.','질문에 한두 문장으로 답해요. 모르면 미정이라고 해요.'])instructions.append(el('li','',text));body.append(instructions,el('p','','AI는 새 탭이나 해당 서비스에서 열려요. 게임은 대화 내용을 읽거나 저장하지 않아요.'));
-  if(p.status==='external_opened'||p.status==='failed'){const msg=p.status==='failed'?'자동으로 열지 못했어요. 아래 링크로 열 수 있어요.':p.copied?'서비스를 열도록 요청했고, 첫 요청을 복사했어요. CareerPilot 선택과 전송은 직접 해주세요.':'서비스 열기를 요청했어요. 요청은 위에서 직접 복사해주세요.';const status=el('p','practice-status',msg);status.setAttribute('role','status');body.append(status);const a=el('a','guide-outline',p.service+' 공식 서비스 열기 ↗');a.href=CP_HANDOFF.urls[p.service];a.target='_blank';a.rel='noopener noreferrer';a.onclick=()=>{p.copied??=false;void state('external_opened')};body.append(a)}
-  if(p.status==='returned'){body.append(el('p','practice-status','대화는 어땠나요? 내용은 공유하지 않아도 돼요.'));const results=el('div','practice-results');results.append(button('아직 상담 중이에요','guide-outline',()=>state('external_opened')),button('설치·실행에서 막혔어요','guide-outline',install),button('지금은 넘어갈게요','guide-outline',()=>leave('skipped')));body.append(results)}
+  const isReturned=p.status==='returned';
+  if(isReturned){
+   body.append(el('p','practice-status','대화는 어땠나요? 내용은 공유하지 않아도 돼요.'));
+   const results=el('div','practice-results');results.append(button(s.owner==='story'?'실습했어요 · 이야기 계속':'실습했어요 · 돌아가기','guide-primary',()=>leave('self_reported_done')),button('아직 상담 중이에요','guide-outline',()=>state('external_opened')),button('지금은 넘어갈게요','guide-text',()=>leave('skipped')),button('설치·실행에서 막혔어요','guide-text',install));body.append(results);
+   const again=el('details','practice-help-words');again.append(el('summary','','요청 다시 보기'));requestBox(again,'W01_START');body.append(again);helpWords(body);
+  }else{
+   body.append(el('p','practice-goal','질문에 답하며 바꾸고 싶은 점이나 지킬 조건의 후보 하나를 찾아보세요.'));
+   requestBox(body,'W01_START');
+   const label=el('p','practice-service-label','사용할 서비스');body.append(label);servicePicker(body);
+   if(p.status==='failed'||p.status==='external_opened'){
+    const msg=p.status==='failed'?'자동으로 열지 못했어요. 아래 링크로 열 수 있어요.':p.copied?'서비스를 열도록 요청했고, 첫 요청을 복사했어요. CareerPilot 선택과 전송은 직접 해주세요.':'서비스 열기를 요청했어요. 요청은 위에서 직접 복사해주세요.';
+    const status=el('p','practice-status',msg);status.setAttribute('role','status');body.append(status);
+    const a=el('a','guide-outline',p.service+' 공식 서비스 열기 ↗');a.href=CP_HANDOFF.urls[p.service];a.target='_blank';a.rel='noopener noreferrer';a.onclick=()=>{p.copied??=false;void state('external_opened')};body.append(a);
+   }
+   const primary=button(launching?'복사 확인 중…':p.status==='external_opened'?'게임으로 돌아왔어요':'요청 복사하고 '+p.service+' 열기','guide-primary',()=>p.status==='external_opened'?state('returned'):start());primary.disabled=launching;footer.append(primary);
+   body.append(el('p','practice-privacy','AI는 별도 화면에서 열려요. 게임은 대화 내용을 읽거나 저장하지 않아요.'));
+   const how=el('details','practice-help-words');how.append(el('summary','','사용법과 설치 확인'));const instructions=el('ol');for(const text of['선택한 서비스에서 CareerPilot을 사용할 상태인지 확인해요.','요청을 붙여넣고 직접 보내요.','질문에 한두 문장으로 답해요. 모르면 미정이라고 해요.'])instructions.append(el('li','',text));how.append(instructions,button('설치·선택 안내','guide-text',install));body.append(how);helpWords(body);
+   const desktop=CP_HANDOFF.desktopURL(p.service,p.requestId);if(desktop){const a=el('a','guide-text','Claude 데스크톱 앱으로 열기');a.href=desktop;a.onclick=()=>{p.copied=false;void state('external_opened')};how.append(a)}
+   footer.append(button(s.owner==='story'?'지금은 이야기 계속':'지금은 넘어갈게요','guide-text',()=>leave('skipped')));
+  }
   if(saveFailed){const warning=el('section','practice-save-warning');warning.setAttribute('role','status');warning.append(el('p','','지금 진행 위치를 저장하지 못했어요. 이 탭을 닫으면 이어 읽을 위치가 남지 않을 수 있어요.'),button('저장 다시 시도','guide-outline',save),el('p','','현재 탭에서는 계속할 수 있어요.'));body.append(warning)}
-  const desktop=CP_HANDOFF.desktopURL(p.service,p.requestId);if(desktop){const a=el('a','guide-text','Claude 데스크톱 앱으로 열기');a.href=desktop;a.onclick=()=>{p.copied=false;void state('external_opened')};body.append(a)}
-  helpWords(body);body.append(button('설치·선택 안내','guide-text',install));
-  footer.append(button(s.owner==='story'?'지금은 이야기 계속':'지금은 넘어갈게요','guide-text',()=>leave('skipped')));
-  if(p.status==='ready'||p.status==='failed'){const primary=button(launching?'복사 확인 중…':'요청 복사하고 '+p.service+' 열기','guide-primary',start);primary.disabled=launching;footer.append(primary)}else footer.append(button(p.status==='returned'?(s.owner==='story'?'실습했어요 · 이야기 계속':'실습했어요 · 돌아가기'):'게임으로 돌아왔어요','guide-primary',()=>p.status==='returned'?leave('self_reported_done'):state('returned')));
  }
  function returned(){if(!current())return;if(launching){returnPending=true;return}if(bridge.practice?.status==='external_opened')void state('returned')}
  document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='hidden'){hidden=true;return}if(hidden){hidden=false;returned()}});window.addEventListener('pageshow',returned);

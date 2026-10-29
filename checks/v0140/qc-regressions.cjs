@@ -1,0 +1,33 @@
+const {assert,setup,start,jump,stable,action,report}=require('./browser.cjs');
+(async()=>{const rows=[];
+ for(const [width,height] of [[1440,900],[390,844],[320,667],[800,450]])for(const font of [18,24]){
+  const {browser,context,page:p,errors}=await setup({viewport:{width,height}});p.setDefaultTimeout(20000);try{
+   await p.evaluate(size=>{document.documentElement.style.setProperty('--read-size',size+'px');localStorage.setItem('CPEpisodeFont',String(size))},font);
+   const frame=()=>p.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))));
+   async function next(){await p.locator('#next').click();await stable(p);await frame()}
+   const rect=selector=>p.locator(selector).evaluate(n=>{const r=n.getBoundingClientRect();return{x:r.x,y:r.y,width:r.width,height:r.height,bottom:r.bottom}});
+   async function exitVisible(){const close=p.locator('dialog[open]').getByRole('button',{name:'닫기',exact:true});const r=await close.boundingBox();assert(r&&r.y>=0&&r.y+r.height<=height+1&&r.height>=44,JSON.stringify({width,height,font,close:r}));await close.click();await p.waitForFunction(()=>!document.querySelector('dialog[open]'))}
+   async function scroll(){await p.locator('dialog[open]').evaluate(n=>{const b=n.querySelector('.guide-body');if(b)b.scrollTop=b.scrollHeight;n.scrollTop=n.scrollHeight})}
+   await p.locator('#title-gallery').click();await scroll();await exitVisible();
+   await p.locator('#title-characters').click();const tabs=await p.locator('.character-tabs button').evaluateAll(nodes=>nodes.map(n=>({w:n.offsetWidth,h:n.offsetHeight,y:n.offsetTop})));assert(tabs.every(n=>n.w<width*.5&&n.h>=44));const sheet=await rect('.character-sheet-image');assert(sheet.y<height*.65,'selected character sheet begins on first screen');await p.getByRole('button',{name:'나',exact:true}).click();assert((await p.locator('.character-sheet-image').getAttribute('src')).endsWith('player.png'));await scroll();await exitVisible();
+   await start(p);
+   const contrast=await p.locator('#next').evaluate(n=>{const lum=s=>s.match(/[\d.]+/g).slice(0,3).map(Number).map(x=>x/255).map(x=>x<=.04045?x/12.92:((x+.055)/1.055)**2.4).reduce((s,x,i)=>s+x*[.2126,.7152,.0722][i],0);const c=getComputedStyle(n),a=lum(c.color),b=lum(c.backgroundColor);return(Math.max(a,b)+.05)/(Math.min(a,b)+.05)});assert(contrast>=4.5);await p.keyboard.press('Tab');await p.locator('#next').focus();assert.notEqual(await p.locator('#next').evaluate(n=>getComputedStyle(n).outlineStyle),'none');
+   await jump(p,'Start');await frame();assert.equal(await p.evaluate(()=>CP_ALERTS.current()?.kind),'bank');
+   const before=await rect('#message-arrival');await next();const after=await rect('#message-arrival'),reaction=await rect('.phone-reaction');const readingWidth=await p.locator('text-box').evaluate(n=>{const s=getComputedStyle(n);return n.clientWidth-parseFloat(s.paddingLeft)-parseFloat(s.paddingRight)});assert(reaction.width>=readingWidth-1,'reaction has full reading width');assert((before.height-after.height)/before.height<.25,'short reaction does not collapse notification by 25%');assert(!await p.locator('#story-phone').isVisible());
+   await next();await next();assert.equal(await p.evaluate(()=>CP_ALERTS.current()?.kind),'company');await p.locator('#message-arrival').evaluate(n=>n.scrollTop=n.scrollHeight);assert((await p.locator('#arrival-body').innerText()).includes('일부 사업장 매각'));const scrollTop=await p.locator('#message-arrival').evaluate(n=>n.scrollTop);assert(scrollTop>=0);
+   // A long ending thread exercises a real overflowing message surface.
+   await p.evaluate(()=>monogatari.storage({c3:'A'}));await jump(p,'C3_CALL_A');await p.locator('#phone-body').evaluate(n=>n.scrollTop=Math.min(70,n.scrollHeight-n.clientHeight));
+   const snapshot=()=>p.evaluate(()=>({label:monogatari.state('label'),step:monogatari.state('step'),content:$('phone-body').innerHTML,scroll:$('phone-body').scrollTop}));const saved=await snapshot();
+   await p.keyboard.press('h');assert.equal(await p.locator('#story-phone').isVisible(),false);assert(await p.locator('.restore-ui').evaluate(n=>document.activeElement===n&&n.scrollHeight<=n.clientHeight+1));
+   await p.keyboard.press('ArrowRight');await p.locator('game-screen').click({position:{x:10,y:10},force:true});assert.deepEqual(await snapshot(),saved,'art mode never advances or rebuilds messages');
+   await p.keyboard.press('Escape');assert.deepEqual(await snapshot(),saved);assert(await p.evaluate(()=>document.activeElement.matches('.game-more summary')));
+   await p.keyboard.press('h');await p.keyboard.press('Space');assert.deepEqual(await snapshot(),saved);assert(await p.locator('#story-phone').isVisible());
+   await p.locator('.game-more summary').click();await p.getByRole('button',{name:'그림만 보기',exact:true}).click();await p.locator('.restore-ui').click();assert.deepEqual(await snapshot(),saved);assert(await p.locator('#story-phone').isVisible());
+   await p.evaluate(()=>CP_GUIDE.open({flow:'install',stepId:'I02',owner:'preparation',returnTarget:'preparation'}));assert.equal(await p.locator('.tutorial-capture img').count(),1);assert.equal(await p.locator('.installation-actions li').count(),2);assert((await p.locator('#tutorial-dialog').innerText()).includes('실제 앱 캡처 아님'));await p.getByText('자료 출처·기록 시점',{exact:true}).click();assert((await p.locator('.tutorial-source').innerText()).includes('2026-10-05/21'));await scroll();await p.locator('#tutorial-dialog').getByRole('button',{name:'닫기',exact:true}).click();await p.waitForFunction(()=>!CP_GUIDE.isOpen());if(await p.locator('#preparation').evaluate(n=>n.open))await p.keyboard.press('Escape');
+   for(const [flow,stepId] of [['example','S01'],['practice','P02']]){await p.evaluate(({flow,stepId})=>CP_GUIDE.open({flow,stepId,owner:'ending',returnTarget:'ending'}),{flow,stepId});await scroll();await exitVisible()}
+   await jump(p,'Finish');assert(parseFloat(await p.locator('#end-primary').evaluate(n=>getComputedStyle(n).fontSize))>=font);
+   assert.deepEqual(errors,[]);rows.push({width,height,font,contrast,notificationBefore:before.height,notificationAfter:after.height,reactionWidth:reaction.width,scrollTop});console.log('PASS qc',width,height,font);
+  }catch(error){console.error(await p.evaluate(()=>({label:monogatari.state('label'),step:monogatari.state('step'),settled,busy,restoring,transitioning,welcome:$('welcome').hidden,dialogs:[...document.querySelectorAll('dialog[open]')].map(n=>n.id)})));throw error}finally{await context.close();await browser.close()}
+ }
+ report('qc-20261028',{passed:true,rows,actualAI:'NOT VERIFIED',Safari:'NOT VERIFIED',realDevices:'NOT VERIFIED'});
+})().catch(e=>{console.error(e);process.exitCode=1});

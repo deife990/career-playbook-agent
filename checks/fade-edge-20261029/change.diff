@@ -1,0 +1,52 @@
+--- before/v11-ui.js
++++ after/v11-ui.js
+@@ -62,10 +62,10 @@
+  function resetCaption(box){box.classList.remove('reaction-bubble');for(const key of ['left','right','top','bottom'])box.style.removeProperty(key);delete document.body.dataset.presentation;box.dataset.presentation='caption'}
+  function caption(label,statement){
+   const box=document.querySelector('text-box'),image=document.getElementById('narrative-image');if(!box)return;resetCaption(box);
+-  const eligible=playing()&&!transitioning&&!CP_GUIDE.isOpen()&&!document.querySelector('dialog[open],choice-container')&&document.body.dataset.narrativeArt==='true'&&document.body.dataset.device!=='true'&&!CP_ALERTS.isOpen();
++  const eligible=playing()&&!transitioning&&!CP_GUIDE.isOpen()&&!document.querySelector('dialog[open],choice-container')&&label!=='Opening'&&document.body.dataset.device!=='true'&&!CP_ALERTS.isOpen();
+   shade.hidden=!eligible||document.body.dataset.uiHidden==='true';if(!eligible)return;
+   const points=faces[image.getAttribute('src')?.split('/').at(-1)];
+-  if(reactions[label]?.has(statement)&&points&&image.naturalWidth){
++  if(document.body.dataset.narrativeArt==='true'&&reactions[label]?.has(statement)&&points&&image.naturalWidth){
+    box.classList.add('reaction-bubble');const bounds=image.getBoundingClientRect(),scale=Math.max(bounds.width/image.naturalWidth,bounds.height/image.naturalHeight),pos=getComputedStyle(image).objectPosition.split(' ').map(x=>parseFloat(x)/100);
+    const origin={x:bounds.left+(bounds.width-image.naturalWidth*scale)*pos[0],y:bounds.top+(bounds.height-image.naturalHeight*scale)*pos[1]};
+    const face={left:origin.x+points[0]*image.naturalWidth*scale,top:origin.y+points[1]*image.naturalHeight*scale,right:origin.x+(points[0]+points[2])*image.naturalWidth*scale,bottom:origin.y+(points[1]+points[3])*image.naturalHeight*scale};
+@@ -78,8 +78,12 @@
+    resetCaption(box);
+   }
+   document.body.dataset.presentation='caption';const r=box.getBoundingClientRect(),text=box.querySelector('[data-content=text]').getBoundingClientRect();
+-  const start=Math.max(0,Math.min(innerHeight-190,r.top-24)),solid=Math.max(start+1,text.top-8);
+-  shade.style.background=`linear-gradient(to bottom,transparent ${start}px,rgba(17,26,32,.64) ${solid}px,rgba(17,26,32,.64) 100%)`;
++  // One full-screen scrim for CGs and sprite scenes. Ease alpha in from zero;
++  // a shadow on the scrollable text box creates a hard seam at its top edge.
++  const start=Math.max(0,r.top-56),solid=Math.max(start+1,text.top-12),span=solid-start;
++  const stops=[[0,0],[.15,.025],[.3,.1],[.45,.25],[.6,.46],[.8,.68],[1,.78]]
++   .map(([at,alpha])=>`rgba(24,33,36,${alpha}) ${start+span*at}px`);
++  shade.style.background=`linear-gradient(to bottom,${stops.join(',')},rgba(24,33,36,.94) 100%)`;
+  }
+  function choices(label){
+   const choice=document.querySelector('choice-container');document.body.dataset.narrativeChoice=String(!!choice&&prompts.has(label));if(!choice||!prompts.has(label))return;
+--- before/v11-ui.css
++++ after/v11-ui.css
+@@ -2,7 +2,7 @@
+ :root{--dialogue-panel-height:clamp(200px,26dvh,280px)}
+ /* Keep the bottom reading surface stable across typing, narration and thought.
+    Separate device views and authored reaction bubbles retain their layouts. */
+-body:not([data-device=true]) text-box:not(.reaction-bubble){height:var(--dialogue-panel-height)!important;max-height:var(--dialogue-panel-height)!important;flex-shrink:0}
++body:not([data-device=true]) text-box:not(.reaction-bubble){height:var(--dialogue-panel-height)!important;max-height:var(--dialogue-panel-height)!important;flex-shrink:0;box-shadow:none!important}
+ .game-more>summary::before,.game-more>summary::after{content:none!important}
+ .game-more>summary{width:48px;height:48px;padding:0!important;border-radius:50%}
+ :is(.game-more>summary,#next,#story-back) svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+--- before/index.html
++++ after/index.html
+@@ -17,7 +17,7 @@
+ <script defer src="guide-panel.js?v=0.14.1"></script>
+ <script defer src="practice-ui.js?v=0.14.1"></script>
+ <script defer src="character-ui.js?v=0.14.1"></script>
+-<link rel="stylesheet" href="v11-ui.css?v=0.14.1"><script defer src="v11-ui.js?v=0.14.1"></script>
++<link rel="stylesheet" href="v11-ui.css?v=0.14.1-fade1"><script defer src="v11-ui.js?v=0.14.1-fade1"></script>
+ <link rel="stylesheet" href="scene-qc.css?v=0.14.1"><script defer src="scene-qc.js?v=0.14.1"></script>
+ </head><body>
+ <div id="monogatari"><visual-novel><loading-screen></loading-screen><main-screen><main-menu></main-menu></main-screen><game-screen><text-box></text-box></game-screen><settings-screen></settings-screen></visual-novel></div>
