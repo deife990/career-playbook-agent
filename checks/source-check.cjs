@@ -2,10 +2,10 @@
 const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),assert=require('node:assert/strict'),crypto=require('node:crypto');
 const root=path.resolve(__dirname,'..'),sourceRoot=path.resolve(root,'docs/story');
 const read=name=>fs.readFileSync(path.join(root,name),'utf8');
-const story=vm.runInNewContext(read('story.js')+';CP_STORY').script;
-const requestData=read('request-data.js');
+const story=vm.runInNewContext(read('src/content/story.js')+';CP_STORY').script;
+const requestData=read('src/content/request-data.js');
 const firstRequest=vm.runInNewContext(requestData+';FIRST_REQUEST');
-const cards=vm.runInNewContext(requestData+read('cards.js')+';CP_CARDS');
+const cards=vm.runInNewContext(requestData+read('src/content/cards.js')+';CP_CARDS');
 const pilot=fs.readFileSync(path.join(sourceRoot,'PILOT_SCRIPT.md'),'utf8');
 const side=fs.readFileSync(path.join(sourceRoot,'SIDE_STORIES.md'),'utf8');
 const originalLines=[...pilot.matchAll(/\*\*나:\*\* “([^”]+)”/g)].map(m=>m[1]);
@@ -29,12 +29,12 @@ assert.equal(cards[0].requests[0],firstRequest);
 assert.equal(cards[0].requests[1],firstRequests[1]);
 assert.equal(cards[0].requests[1],vm.runInNewContext(requestData+';CONTINUE_REQUEST'));
 // FIRST_REQUEST is the single editorial authority for the first request.
-const tutorial=vm.runInNewContext(requestData+read('tutorial.js')+';CP_TUTORIAL');
+const tutorial=vm.runInNewContext(requestData+read('src/tutorial/tutorial.js')+';CP_TUTORIAL');
 assert.equal(tutorial.services.ChatGPT[0].reading,firstRequest);
 assert.equal(tutorial.services.Claude[0].reading,'/careerpilot '+firstRequest);
-for(const name of ['cards.js','tutorial.js','lesson-ui.js']){assert.ok(read(name).includes('FIRST_REQUEST'),name+' must consume FIRST_REQUEST');assert.ok(!read(name).includes('CareerPilot으로 이직을 준비하고 싶어.'),name+' duplicates first request');}
-assert.ok(read('tutorial-content.js').includes("requestId:'W01_START'"));
-assert.ok(!read('tutorial-content.js').includes(firstRequest));
+for(const name of ['src/content/cards.js','src/tutorial/tutorial.js','src/tutorial/lesson-ui.js']){assert.ok(read(name).includes('FIRST_REQUEST'),name+' must consume FIRST_REQUEST');assert.ok(!read(name).includes('CareerPilot으로 이직을 준비하고 싶어.'),name+' duplicates first request');}
+assert.ok(read('src/content/tutorial-content.js').includes("requestId:'W01_START'"));
+assert.ok(!read('src/content/tutorial-content.js').includes(firstRequest));
 assert.equal(cards[0].requests.length,5);
 for(const fragment of ['이직할지부터','면접이 잡혔어','경력 기술 한 줄'])assert.ok(cards[0].requests.some(r=>r.includes(fragment)));
 const sideRequests=cards.slice(1).flatMap(c=>[...c.requests]);

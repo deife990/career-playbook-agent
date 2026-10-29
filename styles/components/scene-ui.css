@@ -34,9 +34,9 @@ body[data-device="true"] .phone-owner{display:none!important}
 body[data-iseo-conversation="true"] #narrative-image{object-position:50% 50%;filter:brightness(.72)}
 /* Decorative, locally bundled logos keep the button's accessible name intact. */
 button[data-service-brand]{display:inline-grid!important;grid-template-columns:25px minmax(0,1fr);align-items:center;justify-content:initial;gap:12px;text-align:left}
-button[data-service-brand] .service-logo{display:block;width:25px;height:25px;background:center/contain no-repeat url('assets/service-logos/openai.svg')}
+button[data-service-brand] .service-logo{display:block;width:25px;height:25px;background:center/contain no-repeat url('../../assets/service-logos/openai.svg')}
 button[data-service-brand] .service-label{min-width:0;line-height:1.5}
-button[data-service-brand="claude"] .service-logo{background-image:url('assets/service-logos/claude.svg')}
+button[data-service-brand="claude"] .service-logo{background-image:url('../../assets/service-logos/claude.svg')}
 @media(max-height:600px){.lock-date{font-size:12px}.lock-time{font-size:46px!important}.bank-notification{margin-top:12px;padding:10px 12px}.bank-notification strong{font-size:14px}
  #memory-notice .outlook-bar{min-height:38px;padding:8px 12px}.outlook-content h3{font-size:17px}.outlook-content .mail-from{padding-bottom:8px!important}.mobile-mail h3{font-size:16px;margin:8px 0 12px}.mobile-mail p{margin:10px 0}.mobile-mail-sender{margin-bottom:10px;padding-bottom:10px}
  #memory-notice .outlook-content{padding:10px 16px}

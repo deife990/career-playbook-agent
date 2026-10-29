@@ -9,10 +9,10 @@ html{color-scheme:light;background:var(--cp-night)}
 :is(#preparation,#backlog,#save-slots,#cg-gallery,#restart-confirm,#character-book) summary{min-height:48px;padding-block:10px;cursor:pointer;line-height:1.7}
 :is(#preparation,#tutorial-dialog,#backlog,#save-slots,#cg-gallery,#character-book,.toolbar,.vn-controls,#welcome) :focus-visible{outline:3px solid var(--p-green-36-2);outline-offset:4px}
 .cp-portrait{display:inline-block;flex:none;width:48px;height:48px;border-radius:50%;background-image:var(--portrait-source);background-repeat:no-repeat;background-size:var(--portrait-size);background-position:var(--portrait-position);vertical-align:middle}
-.cp-portrait[data-character=seoan]{--portrait-source:url('assets/characters-v02/seoan.png');--portrait-size:433.8% 289.3%;--portrait-position:48.3% 75.2%}
-.cp-portrait[data-character=iseo]{--portrait-source:url('assets/characters-v02/iseo.png');--portrait-size:297.7% 446.5%;--portrait-position:77.4% 58.6%}
-.cp-portrait[data-character=nari]{--portrait-source:url('assets/characters-v02/nari.png');--portrait-size:512% 341.3%;--portrait-position:99.4% 46.5%}
-.cp-portrait[data-character=yoon]{--portrait-source:url('assets/characters-v02/yoon.png');--portrait-size:310.3% 465.5%;--portrait-position:76.7% 61.5%}
-.cp-portrait[data-character=player]{--portrait-source:url('assets/characters-v02/player.png');--portrait-size:487.6% 731.4%;--portrait-position:88% 53%}
+.cp-portrait[data-character=seoan]{--portrait-source:url('../../assets/characters-v02/seoan.png');--portrait-size:433.8% 289.3%;--portrait-position:48.3% 75.2%}
+.cp-portrait[data-character=iseo]{--portrait-source:url('../../assets/characters-v02/iseo.png');--portrait-size:297.7% 446.5%;--portrait-position:77.4% 58.6%}
+.cp-portrait[data-character=nari]{--portrait-source:url('../../assets/characters-v02/nari.png');--portrait-size:512% 341.3%;--portrait-position:99.4% 46.5%}
+.cp-portrait[data-character=yoon]{--portrait-source:url('../../assets/characters-v02/yoon.png');--portrait-size:310.3% 465.5%;--portrait-position:76.7% 61.5%}
+.cp-portrait[data-character=player]{--portrait-source:url('../../assets/characters-v02/player.png');--portrait-size:487.6% 731.4%;--portrait-position:88% 53%}
 @media(prefers-reduced-motion:reduce){:is(#welcome,#preparation,#tutorial-dialog,.toolbar,.vn-controls) *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 @media(max-width:600px),(max-height:600px){:is(#preparation,#backlog,#save-slots,#cg-gallery,#character-book){width:100dvw;max-width:none;max-height:100dvh;inset:0;margin:0;border-radius:0;padding:max(20px,env(safe-area-inset-top)) max(20px,env(safe-area-inset-right)) max(20px,env(safe-area-inset-bottom)) max(20px,env(safe-area-inset-left));overflow:auto}}

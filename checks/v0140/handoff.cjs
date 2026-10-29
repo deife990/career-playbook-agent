@@ -1,6 +1,6 @@
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
-const requests=vm.runInNewContext(fs.readFileSync('request-data.js','utf8')+';REQUESTS');
-const context={window:{},navigator:{userAgent:'',maxTouchPoints:0},location:{search:''},URLSearchParams,sessionStorage:{getItem:()=>null},REQUESTS:requests};vm.runInNewContext(fs.readFileSync('ai-handoff.js','utf8'),context);const api=context.window.CP_HANDOFF;
+const requests=vm.runInNewContext(fs.readFileSync('src/content/request-data.js','utf8')+';REQUESTS');
+const context={window:{},navigator:{userAgent:'',maxTouchPoints:0},location:{search:''},URLSearchParams,sessionStorage:{getItem:()=>null},REQUESTS:requests};vm.runInNewContext(fs.readFileSync('src/tutorial/ai-handoff.js','utf8'),context);const api=context.window.CP_HANDOFF;
 const cases=[
  ['Windows Claude',{provider:'Claude',ua:'Windows NT 10.0',width:1280},['standard_web','claude_desktop']],
  ['Mac small window Claude',{provider:'Claude',ua:'Macintosh',width:375},['standard_web','claude_desktop']],

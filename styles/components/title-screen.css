@@ -1,7 +1,7 @@
 /* UI/UX v1 title: a quiet evening scene and a clear starting point. */
 body:has(#welcome:not([hidden]))>.toolbar{display:none}
 body:has(#welcome:not([hidden]))>#notice{top:8px;color:var(--cp-white);background:var(--p-teal-12-a85)}
-#welcome{position:fixed;inset:0;max-width:none;max-height:none;width:100%;height:100dvh;margin:0;padding:0;z-index:20;isolation:isolate;overflow:hidden!important;text-align:left;color:var(--cp-white);background:url('assets/title-onho-evening-v010.png') 50% 50%/cover}
+#welcome{position:fixed;inset:0;max-width:none;max-height:none;width:100%;height:100dvh;margin:0;padding:0;z-index:20;isolation:isolate;overflow:hidden!important;text-align:left;color:var(--cp-white);background:url('../../assets/title-onho-evening-v010.png') 50% 50%/cover}
 #welcome .title-scroll{position:absolute;inset:0;z-index:2;overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain}
 #welcome .title-content{position:relative;display:flex;flex-direction:column;min-height:100%;width:100%}
 #welcome .title-content>*{flex-shrink:0}
